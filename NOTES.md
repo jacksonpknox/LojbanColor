@@ -11,3 +11,16 @@ alias antlr4='java -jar /usr/local/lib/antlr-4.10.1-complete.jar'
 
 alias grun='java org.antlr.v4.runtime.misc.TestRig'
 ```
+- run these tools like this :
+```bash
+antlr4 Grammar.g4
+javac *.java
+grun Grammar $RULE [-gui|-tokens]
+```
+
+## Python
+- build a python parser from Grammar.g4 like this:
+
+```bash
+antlr4 -Dlanguage=Python3 Grammar.g4
+```
