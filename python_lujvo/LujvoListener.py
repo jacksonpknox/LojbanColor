@@ -53,6 +53,15 @@ class LujvoListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by LujvoParser#gismu.
+    def enterGismu(self, ctx:LujvoParser.GismuContext):
+        pass
+
+    # Exit a parse tree produced by LujvoParser#gismu.
+    def exitGismu(self, ctx:LujvoParser.GismuContext):
+        pass
+
+
     # Enter a parse tree produced by LujvoParser#tworafcon.
     def enterTworafcon(self, ctx:LujvoParser.TworafconContext):
         pass
@@ -149,15 +158,6 @@ class LujvoListener(ParseTreeListener):
 
     # Exit a parse tree produced by LujvoParser#vuraf.
     def exitVuraf(self, ctx:LujvoParser.VurafContext):
-        pass
-
-
-    # Enter a parse tree produced by LujvoParser#gismu.
-    def enterGismu(self, ctx:LujvoParser.GismuContext):
-        pass
-
-    # Exit a parse tree produced by LujvoParser#gismu.
-    def exitGismu(self, ctx:LujvoParser.GismuContext):
         pass
 
 

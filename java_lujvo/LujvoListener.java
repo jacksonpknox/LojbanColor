@@ -57,6 +57,16 @@ public interface LujvoListener extends ParseTreeListener {
 	 */
 	void exitFobvo(LujvoParser.FobvoContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link LujvoParser#gismu}.
+	 * @param ctx the parse tree
+	 */
+	void enterGismu(LujvoParser.GismuContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link LujvoParser#gismu}.
+	 * @param ctx the parse tree
+	 */
+	void exitGismu(LujvoParser.GismuContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link LujvoParser#tworafcon}.
 	 * @param ctx the parse tree
 	 */
@@ -166,16 +176,6 @@ public interface LujvoListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitVuraf(LujvoParser.VurafContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link LujvoParser#gismu}.
-	 * @param ctx the parse tree
-	 */
-	void enterGismu(LujvoParser.GismuContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link LujvoParser#gismu}.
-	 * @param ctx the parse tree
-	 */
-	void exitGismu(LujvoParser.GismuContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link LujvoParser#cafourraf}.
 	 * @param ctx the parse tree
