@@ -1,32 +1,35 @@
 grammar Color;
 
 folio : (sentence '\r'? '\n')+ ;
-sentence : word (word)* ;
+
+sentence : word+ ;
+
 word : cmavo | gismu | lujvo ;
+
 cmavo : PA ;
-lujvo : bobvo | lobvo | vobvo | sobvo ;
-bobvo : cabvo y tailvo ;
-lobvo : (cabvo | vabvo) tailvo? ;
-vobvo : fourraf y tailvo ;
-sobvo : (curaf q? fourraf | vuraf q vafourraf | vuraf cafourraf) y tailvo ;
+gismu : C (C V | V C) C V ; //this may be a grave error indeed.. put lujvo after gismu if it breaks
+lujvo : bobvo | cobvo | dobvo | fobvo ;
 
-cabvo : (curaf q? | vuraf q) curaf ;
-tailvo : (curaf y? | fourraf y | vuraf)* (vuraf | gismu) ;
-vabvo : (curaf q? | vuraf q) vuraf ;
-fourraf : vafourraf | cafourraf ;
-curaf : C V C ;
-vuraf : C V V
-      | C C V
-      | C V '\'' V
-      ;
-vafourraf : C V C C ;
-cafourraf : C C V C ;
+bobvo : tworafcon y tailvo ;
+cobvo : (tworafcon | tworafvow) tailvo? ;
+dobvo : fourraf y tailvo ;
+fobvo : (balraf q? fourraf | vuraf q cafourraf | vuraf ckfourraf) y tailvo ; // bug here... vuraf cafourraf does not need q if vuraf is broraf
 
-gismu : C (C V | V C) C V ;
-
-
+tworafcon : (balraf q? | vuraf q) balraf ;
 y : Y ;
+tailvo : (balraf y? | fourraf y | vuraf)* (vuraf | gismu) ;
+tworafvow : (balraf q? | vuraf q) vuraf ;
+fourraf : cafourraf | ckfourraf ;
+balraf : C V C ;
 q : Q ;
+vuraf : bauraf | broraf ;
+cafourraf : C V C C ;
+ckfourraf : C C V C ;
+
+bauraf : C V '\''? V ;
+broraf : C C V ;
+
+
 
 /*
  * Lexer Rules

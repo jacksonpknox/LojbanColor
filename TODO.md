@@ -4,7 +4,6 @@
 - expand grammar
 - contemplate and choose colors
 - fix bug (only 2 rafsi out of 3 are implemented)
-- learn venv
 
 
 ## long term

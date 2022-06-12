@@ -22,5 +22,4 @@ def main(argv):
     walker.walk(printer, tree)
 
 if __name__ == '__main__':
-    #main(sys.argv)
-    main(["dickbutt", "words.txt"])
+    main(sys.argv)
