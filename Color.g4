@@ -1,6 +1,6 @@
 grammar Color;
 
-folio : (sentence '\n')+ ;
+folio : (sentence '\r'? '\n')+ ;
 sentence : word (word)* ;
 word : cmavo | gismu | lujvo ;
 cmavo : PA ;
