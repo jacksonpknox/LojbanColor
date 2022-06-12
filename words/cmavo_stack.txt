@@ -287,7 +287,6 @@ ru'e
 ru'i
 ru'o
 ry
-sa
 sa'a
 sa'ai
 sa'e
@@ -297,21 +296,15 @@ sa'o
 sa'u
 sai
 sau
-se
 se'a
 se'e
 se'i
 se'o
-se'u
-sei
-si
 si'a
 si'au
 si'i
 si'o
 si'u
-soi
-su
 su'a
 su'i
 su'u
@@ -323,7 +316,6 @@ ta'o
 ta'u
 tai
 tai'i
-te
 te'a
 te'ai
 tei
@@ -358,7 +350,6 @@ va'i
 va'o
 va'u
 vau
-ve
 ve'a
 ve'e
 ve'i
@@ -380,9 +371,7 @@ vu'u
 vy
 xa'o
 xai
-xe
 xei
-xi
 xo'a
 xo'ai
 xo'e
@@ -391,7 +380,6 @@ xo'o
 xoi
 xu
 xy
-y
 y'y
 za
 za'a
