@@ -24,3 +24,5 @@ grun Grammar $RULE [-gui|-tokens]
 ```bash
 antlr4 -Dlanguage=Python3 Grammar.g4
 ```
+- [here](https://rich.readthedocs.io/en/stable/appendix/colors.html) are the colors supported by terminals/rich
+- try to use just the first 16

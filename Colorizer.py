@@ -11,19 +11,19 @@ class Colorizer(ColorListener):
         print()
 
     def exitWord(self, ctx):
-        print(end=' ')
+        print(" ", end='')
 
     def enterCmavo(self, ctx):
         put(ctx, "red")
 
     def enterGismu(self, ctx):
-        put(ctx, "green")
+        put(ctx, "green_yellow")
 
     def enterY(self, ctx):
         put(ctx, "purple")
 
     def enterQ(self, ctx):
-        put(ctx, "purple")
+        put(ctx, "white")
 
     def enterVafourraf(self, ctx):
         put(ctx, "black")
