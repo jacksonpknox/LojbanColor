@@ -1,6 +1,4 @@
 from python.ColorListener import ColorListener
-# figure out env...
-# rich is installed using pip
 from rich import print
 
 def put(ctx, color):
