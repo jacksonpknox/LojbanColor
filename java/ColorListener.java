@@ -47,6 +47,16 @@ public interface ColorListener extends ParseTreeListener {
 	 */
 	void exitCmavo(ColorParser.CmavoContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link ColorParser#gismu}.
+	 * @param ctx the parse tree
+	 */
+	void enterGismu(ColorParser.GismuContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link ColorParser#gismu}.
+	 * @param ctx the parse tree
+	 */
+	void exitGismu(ColorParser.GismuContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link ColorParser#lujvo}.
 	 * @param ctx the parse tree
 	 */
@@ -67,125 +77,45 @@ public interface ColorListener extends ParseTreeListener {
 	 */
 	void exitBobvo(ColorParser.BobvoContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ColorParser#lobvo}.
+	 * Enter a parse tree produced by {@link ColorParser#cobvo}.
 	 * @param ctx the parse tree
 	 */
-	void enterLobvo(ColorParser.LobvoContext ctx);
+	void enterCobvo(ColorParser.CobvoContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ColorParser#lobvo}.
+	 * Exit a parse tree produced by {@link ColorParser#cobvo}.
 	 * @param ctx the parse tree
 	 */
-	void exitLobvo(ColorParser.LobvoContext ctx);
+	void exitCobvo(ColorParser.CobvoContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ColorParser#vobvo}.
+	 * Enter a parse tree produced by {@link ColorParser#dobvo}.
 	 * @param ctx the parse tree
 	 */
-	void enterVobvo(ColorParser.VobvoContext ctx);
+	void enterDobvo(ColorParser.DobvoContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ColorParser#vobvo}.
+	 * Exit a parse tree produced by {@link ColorParser#dobvo}.
 	 * @param ctx the parse tree
 	 */
-	void exitVobvo(ColorParser.VobvoContext ctx);
+	void exitDobvo(ColorParser.DobvoContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ColorParser#sobvo}.
+	 * Enter a parse tree produced by {@link ColorParser#fobvo}.
 	 * @param ctx the parse tree
 	 */
-	void enterSobvo(ColorParser.SobvoContext ctx);
+	void enterFobvo(ColorParser.FobvoContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ColorParser#sobvo}.
+	 * Exit a parse tree produced by {@link ColorParser#fobvo}.
 	 * @param ctx the parse tree
 	 */
-	void exitSobvo(ColorParser.SobvoContext ctx);
+	void exitFobvo(ColorParser.FobvoContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ColorParser#cabvo}.
+	 * Enter a parse tree produced by {@link ColorParser#tworafcon}.
 	 * @param ctx the parse tree
 	 */
-	void enterCabvo(ColorParser.CabvoContext ctx);
+	void enterTworafcon(ColorParser.TworafconContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ColorParser#cabvo}.
+	 * Exit a parse tree produced by {@link ColorParser#tworafcon}.
 	 * @param ctx the parse tree
 	 */
-	void exitCabvo(ColorParser.CabvoContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link ColorParser#tailvo}.
-	 * @param ctx the parse tree
-	 */
-	void enterTailvo(ColorParser.TailvoContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link ColorParser#tailvo}.
-	 * @param ctx the parse tree
-	 */
-	void exitTailvo(ColorParser.TailvoContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link ColorParser#vabvo}.
-	 * @param ctx the parse tree
-	 */
-	void enterVabvo(ColorParser.VabvoContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link ColorParser#vabvo}.
-	 * @param ctx the parse tree
-	 */
-	void exitVabvo(ColorParser.VabvoContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link ColorParser#fourraf}.
-	 * @param ctx the parse tree
-	 */
-	void enterFourraf(ColorParser.FourrafContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link ColorParser#fourraf}.
-	 * @param ctx the parse tree
-	 */
-	void exitFourraf(ColorParser.FourrafContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link ColorParser#curaf}.
-	 * @param ctx the parse tree
-	 */
-	void enterCuraf(ColorParser.CurafContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link ColorParser#curaf}.
-	 * @param ctx the parse tree
-	 */
-	void exitCuraf(ColorParser.CurafContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link ColorParser#vuraf}.
-	 * @param ctx the parse tree
-	 */
-	void enterVuraf(ColorParser.VurafContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link ColorParser#vuraf}.
-	 * @param ctx the parse tree
-	 */
-	void exitVuraf(ColorParser.VurafContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link ColorParser#vafourraf}.
-	 * @param ctx the parse tree
-	 */
-	void enterVafourraf(ColorParser.VafourrafContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link ColorParser#vafourraf}.
-	 * @param ctx the parse tree
-	 */
-	void exitVafourraf(ColorParser.VafourrafContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link ColorParser#cafourraf}.
-	 * @param ctx the parse tree
-	 */
-	void enterCafourraf(ColorParser.CafourrafContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link ColorParser#cafourraf}.
-	 * @param ctx the parse tree
-	 */
-	void exitCafourraf(ColorParser.CafourrafContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link ColorParser#gismu}.
-	 * @param ctx the parse tree
-	 */
-	void enterGismu(ColorParser.GismuContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link ColorParser#gismu}.
-	 * @param ctx the parse tree
-	 */
-	void exitGismu(ColorParser.GismuContext ctx);
+	void exitTworafcon(ColorParser.TworafconContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link ColorParser#y}.
 	 * @param ctx the parse tree
@@ -197,6 +127,56 @@ public interface ColorListener extends ParseTreeListener {
 	 */
 	void exitY(ColorParser.YContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link ColorParser#tailvo}.
+	 * @param ctx the parse tree
+	 */
+	void enterTailvo(ColorParser.TailvoContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link ColorParser#tailvo}.
+	 * @param ctx the parse tree
+	 */
+	void exitTailvo(ColorParser.TailvoContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link ColorParser#tworafvow}.
+	 * @param ctx the parse tree
+	 */
+	void enterTworafvow(ColorParser.TworafvowContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link ColorParser#tworafvow}.
+	 * @param ctx the parse tree
+	 */
+	void exitTworafvow(ColorParser.TworafvowContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link ColorParser#stump}.
+	 * @param ctx the parse tree
+	 */
+	void enterStump(ColorParser.StumpContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link ColorParser#stump}.
+	 * @param ctx the parse tree
+	 */
+	void exitStump(ColorParser.StumpContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link ColorParser#rafstump}.
+	 * @param ctx the parse tree
+	 */
+	void enterRafstump(ColorParser.RafstumpContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link ColorParser#rafstump}.
+	 * @param ctx the parse tree
+	 */
+	void exitRafstump(ColorParser.RafstumpContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link ColorParser#balraf}.
+	 * @param ctx the parse tree
+	 */
+	void enterBalraf(ColorParser.BalrafContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link ColorParser#balraf}.
+	 * @param ctx the parse tree
+	 */
+	void exitBalraf(ColorParser.BalrafContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link ColorParser#q}.
 	 * @param ctx the parse tree
 	 */
@@ -206,4 +186,54 @@ public interface ColorListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitQ(ColorParser.QContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link ColorParser#broraf}.
+	 * @param ctx the parse tree
+	 */
+	void enterBroraf(ColorParser.BrorafContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link ColorParser#broraf}.
+	 * @param ctx the parse tree
+	 */
+	void exitBroraf(ColorParser.BrorafContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link ColorParser#bauraf}.
+	 * @param ctx the parse tree
+	 */
+	void enterBauraf(ColorParser.BaurafContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link ColorParser#bauraf}.
+	 * @param ctx the parse tree
+	 */
+	void exitBauraf(ColorParser.BaurafContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link ColorParser#vuraf}.
+	 * @param ctx the parse tree
+	 */
+	void enterVuraf(ColorParser.VurafContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link ColorParser#vuraf}.
+	 * @param ctx the parse tree
+	 */
+	void exitVuraf(ColorParser.VurafContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link ColorParser#cafourraf}.
+	 * @param ctx the parse tree
+	 */
+	void enterCafourraf(ColorParser.CafourrafContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link ColorParser#cafourraf}.
+	 * @param ctx the parse tree
+	 */
+	void exitCafourraf(ColorParser.CafourrafContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link ColorParser#ckfourraf}.
+	 * @param ctx the parse tree
+	 */
+	void enterCkfourraf(ColorParser.CkfourrafContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link ColorParser#ckfourraf}.
+	 * @param ctx the parse tree
+	 */
+	void exitCkfourraf(ColorParser.CkfourrafContext ctx);
 }

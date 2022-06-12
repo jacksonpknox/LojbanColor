@@ -1,14 +1,10 @@
 import sys
 
-# figure out venv...
-# the antlr4 runtime (i.e. the python package)
-# is installed with pip
 from antlr4 import *
 
 from python.ColorLexer import ColorLexer
 from python.ColorParser import ColorParser
 
-# must write the colorizer subclass of ColorListener
 from Colorizer import Colorizer
 
 def main(argv):

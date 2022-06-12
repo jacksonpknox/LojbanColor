@@ -14,25 +14,28 @@ class Colorizer(ColorListener):
         print(" ", end='')
 
     def enterCmavo(self, ctx):
-        put(ctx, "red")
+        put(ctx, "magenta")
 
     def enterGismu(self, ctx):
-        put(ctx, "green_yellow")
+        put(ctx, "bright_red")
 
     def enterY(self, ctx):
-        put(ctx, "purple")
+        put(ctx, "yellow")
 
     def enterQ(self, ctx):
-        put(ctx, "white")
+        put(ctx, "yellow")
 
-    def enterVafourraf(self, ctx):
-        put(ctx, "black")
-
-    def enterCafourraf(self, ctx):
-        put(ctx, "bright blue")
+    def enterStump(self, ctx):
+        put(ctx, "red")
 
     def enterCuraf(self, ctx):
         put(ctx, "dark_orange3")
 
-    def enterVuraf(self, ctx):
-        put(ctx, "hot_pink2")
+    def enterBalraf(self, ctx):
+        put(ctx, "blue")
+
+    def enterBauraf(self, ctx):
+        put(ctx, "green")
+        
+    def enterBroraf(self, ctx):
+        put(ctx, "bright_cyan")

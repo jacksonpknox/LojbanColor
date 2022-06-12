@@ -44,6 +44,15 @@ class ColorListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by ColorParser#gismu.
+    def enterGismu(self, ctx:ColorParser.GismuContext):
+        pass
+
+    # Exit a parse tree produced by ColorParser#gismu.
+    def exitGismu(self, ctx:ColorParser.GismuContext):
+        pass
+
+
     # Enter a parse tree produced by ColorParser#lujvo.
     def enterLujvo(self, ctx:ColorParser.LujvoContext):
         pass
@@ -62,111 +71,39 @@ class ColorListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by ColorParser#lobvo.
-    def enterLobvo(self, ctx:ColorParser.LobvoContext):
+    # Enter a parse tree produced by ColorParser#cobvo.
+    def enterCobvo(self, ctx:ColorParser.CobvoContext):
         pass
 
-    # Exit a parse tree produced by ColorParser#lobvo.
-    def exitLobvo(self, ctx:ColorParser.LobvoContext):
-        pass
-
-
-    # Enter a parse tree produced by ColorParser#vobvo.
-    def enterVobvo(self, ctx:ColorParser.VobvoContext):
-        pass
-
-    # Exit a parse tree produced by ColorParser#vobvo.
-    def exitVobvo(self, ctx:ColorParser.VobvoContext):
+    # Exit a parse tree produced by ColorParser#cobvo.
+    def exitCobvo(self, ctx:ColorParser.CobvoContext):
         pass
 
 
-    # Enter a parse tree produced by ColorParser#sobvo.
-    def enterSobvo(self, ctx:ColorParser.SobvoContext):
+    # Enter a parse tree produced by ColorParser#dobvo.
+    def enterDobvo(self, ctx:ColorParser.DobvoContext):
         pass
 
-    # Exit a parse tree produced by ColorParser#sobvo.
-    def exitSobvo(self, ctx:ColorParser.SobvoContext):
-        pass
-
-
-    # Enter a parse tree produced by ColorParser#cabvo.
-    def enterCabvo(self, ctx:ColorParser.CabvoContext):
-        pass
-
-    # Exit a parse tree produced by ColorParser#cabvo.
-    def exitCabvo(self, ctx:ColorParser.CabvoContext):
+    # Exit a parse tree produced by ColorParser#dobvo.
+    def exitDobvo(self, ctx:ColorParser.DobvoContext):
         pass
 
 
-    # Enter a parse tree produced by ColorParser#tailvo.
-    def enterTailvo(self, ctx:ColorParser.TailvoContext):
+    # Enter a parse tree produced by ColorParser#fobvo.
+    def enterFobvo(self, ctx:ColorParser.FobvoContext):
         pass
 
-    # Exit a parse tree produced by ColorParser#tailvo.
-    def exitTailvo(self, ctx:ColorParser.TailvoContext):
-        pass
-
-
-    # Enter a parse tree produced by ColorParser#vabvo.
-    def enterVabvo(self, ctx:ColorParser.VabvoContext):
-        pass
-
-    # Exit a parse tree produced by ColorParser#vabvo.
-    def exitVabvo(self, ctx:ColorParser.VabvoContext):
+    # Exit a parse tree produced by ColorParser#fobvo.
+    def exitFobvo(self, ctx:ColorParser.FobvoContext):
         pass
 
 
-    # Enter a parse tree produced by ColorParser#fourraf.
-    def enterFourraf(self, ctx:ColorParser.FourrafContext):
+    # Enter a parse tree produced by ColorParser#tworafcon.
+    def enterTworafcon(self, ctx:ColorParser.TworafconContext):
         pass
 
-    # Exit a parse tree produced by ColorParser#fourraf.
-    def exitFourraf(self, ctx:ColorParser.FourrafContext):
-        pass
-
-
-    # Enter a parse tree produced by ColorParser#curaf.
-    def enterCuraf(self, ctx:ColorParser.CurafContext):
-        pass
-
-    # Exit a parse tree produced by ColorParser#curaf.
-    def exitCuraf(self, ctx:ColorParser.CurafContext):
-        pass
-
-
-    # Enter a parse tree produced by ColorParser#vuraf.
-    def enterVuraf(self, ctx:ColorParser.VurafContext):
-        pass
-
-    # Exit a parse tree produced by ColorParser#vuraf.
-    def exitVuraf(self, ctx:ColorParser.VurafContext):
-        pass
-
-
-    # Enter a parse tree produced by ColorParser#vafourraf.
-    def enterVafourraf(self, ctx:ColorParser.VafourrafContext):
-        pass
-
-    # Exit a parse tree produced by ColorParser#vafourraf.
-    def exitVafourraf(self, ctx:ColorParser.VafourrafContext):
-        pass
-
-
-    # Enter a parse tree produced by ColorParser#cafourraf.
-    def enterCafourraf(self, ctx:ColorParser.CafourrafContext):
-        pass
-
-    # Exit a parse tree produced by ColorParser#cafourraf.
-    def exitCafourraf(self, ctx:ColorParser.CafourrafContext):
-        pass
-
-
-    # Enter a parse tree produced by ColorParser#gismu.
-    def enterGismu(self, ctx:ColorParser.GismuContext):
-        pass
-
-    # Exit a parse tree produced by ColorParser#gismu.
-    def exitGismu(self, ctx:ColorParser.GismuContext):
+    # Exit a parse tree produced by ColorParser#tworafcon.
+    def exitTworafcon(self, ctx:ColorParser.TworafconContext):
         pass
 
 
@@ -179,12 +116,102 @@ class ColorListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by ColorParser#tailvo.
+    def enterTailvo(self, ctx:ColorParser.TailvoContext):
+        pass
+
+    # Exit a parse tree produced by ColorParser#tailvo.
+    def exitTailvo(self, ctx:ColorParser.TailvoContext):
+        pass
+
+
+    # Enter a parse tree produced by ColorParser#tworafvow.
+    def enterTworafvow(self, ctx:ColorParser.TworafvowContext):
+        pass
+
+    # Exit a parse tree produced by ColorParser#tworafvow.
+    def exitTworafvow(self, ctx:ColorParser.TworafvowContext):
+        pass
+
+
+    # Enter a parse tree produced by ColorParser#stump.
+    def enterStump(self, ctx:ColorParser.StumpContext):
+        pass
+
+    # Exit a parse tree produced by ColorParser#stump.
+    def exitStump(self, ctx:ColorParser.StumpContext):
+        pass
+
+
+    # Enter a parse tree produced by ColorParser#rafstump.
+    def enterRafstump(self, ctx:ColorParser.RafstumpContext):
+        pass
+
+    # Exit a parse tree produced by ColorParser#rafstump.
+    def exitRafstump(self, ctx:ColorParser.RafstumpContext):
+        pass
+
+
+    # Enter a parse tree produced by ColorParser#balraf.
+    def enterBalraf(self, ctx:ColorParser.BalrafContext):
+        pass
+
+    # Exit a parse tree produced by ColorParser#balraf.
+    def exitBalraf(self, ctx:ColorParser.BalrafContext):
+        pass
+
+
     # Enter a parse tree produced by ColorParser#q.
     def enterQ(self, ctx:ColorParser.QContext):
         pass
 
     # Exit a parse tree produced by ColorParser#q.
     def exitQ(self, ctx:ColorParser.QContext):
+        pass
+
+
+    # Enter a parse tree produced by ColorParser#broraf.
+    def enterBroraf(self, ctx:ColorParser.BrorafContext):
+        pass
+
+    # Exit a parse tree produced by ColorParser#broraf.
+    def exitBroraf(self, ctx:ColorParser.BrorafContext):
+        pass
+
+
+    # Enter a parse tree produced by ColorParser#bauraf.
+    def enterBauraf(self, ctx:ColorParser.BaurafContext):
+        pass
+
+    # Exit a parse tree produced by ColorParser#bauraf.
+    def exitBauraf(self, ctx:ColorParser.BaurafContext):
+        pass
+
+
+    # Enter a parse tree produced by ColorParser#vuraf.
+    def enterVuraf(self, ctx:ColorParser.VurafContext):
+        pass
+
+    # Exit a parse tree produced by ColorParser#vuraf.
+    def exitVuraf(self, ctx:ColorParser.VurafContext):
+        pass
+
+
+    # Enter a parse tree produced by ColorParser#cafourraf.
+    def enterCafourraf(self, ctx:ColorParser.CafourrafContext):
+        pass
+
+    # Exit a parse tree produced by ColorParser#cafourraf.
+    def exitCafourraf(self, ctx:ColorParser.CafourrafContext):
+        pass
+
+
+    # Enter a parse tree produced by ColorParser#ckfourraf.
+    def enterCkfourraf(self, ctx:ColorParser.CkfourrafContext):
+        pass
+
+    # Exit a parse tree produced by ColorParser#ckfourraf.
+    def exitCkfourraf(self, ctx:ColorParser.CkfourrafContext):
         pass
 
 

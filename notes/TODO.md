@@ -1,9 +1,6 @@
 - collect selma'o
 - (meta) collect word lists in this repository
-- improve grammar
 - expand grammar
-- contemplate and choose colors
-- fix bug (only 2 rafsi out of 3 are implemented)
 
 
 ## long term

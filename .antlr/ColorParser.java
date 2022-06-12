@@ -21,13 +21,13 @@ public class ColorParser extends Parser {
 		RULE_folio = 0, RULE_sentence = 1, RULE_word = 2, RULE_cmavo = 3, RULE_gismu = 4, 
 		RULE_lujvo = 5, RULE_bobvo = 6, RULE_cobvo = 7, RULE_dobvo = 8, RULE_fobvo = 9, 
 		RULE_tworafcon = 10, RULE_y = 11, RULE_tailvo = 12, RULE_tworafvow = 13, 
-		RULE_fourraf = 14, RULE_balraf = 15, RULE_q = 16, RULE_vuraf = 17, RULE_cafourraf = 18, 
-		RULE_ckfourraf = 19, RULE_bauraf = 20, RULE_broraf = 21;
+		RULE_stump = 14, RULE_rafstump = 15, RULE_balraf = 16, RULE_q = 17, RULE_broraf = 18, 
+		RULE_bauraf = 19, RULE_vuraf = 20, RULE_cafourraf = 21, RULE_ckfourraf = 22;
 	private static String[] makeRuleNames() {
 		return new String[] {
 			"folio", "sentence", "word", "cmavo", "gismu", "lujvo", "bobvo", "cobvo", 
-			"dobvo", "fobvo", "tworafcon", "y", "tailvo", "tworafvow", "fourraf", 
-			"balraf", "q", "vuraf", "cafourraf", "ckfourraf", "bauraf", "broraf"
+			"dobvo", "fobvo", "tworafcon", "y", "tailvo", "tworafvow", "stump", "rafstump", 
+			"balraf", "q", "broraf", "bauraf", "vuraf", "cafourraf", "ckfourraf"
 		};
 	}
 	public static final String[] ruleNames = makeRuleNames();
@@ -114,29 +114,29 @@ public class ColorParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(50); 
+			setState(52); 
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			do {
 				{
 				{
-				setState(44);
-				sentence();
 				setState(46);
+				sentence();
+				setState(48);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 				if (_la==T__0) {
 					{
-					setState(45);
+					setState(47);
 					match(T__0);
 					}
 				}
 
-				setState(48);
+				setState(50);
 				match(T__1);
 				}
 				}
-				setState(52); 
+				setState(54); 
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			} while ( _la==PA || _la==C );
@@ -173,17 +173,17 @@ public class ColorParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(55); 
+			setState(57); 
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			do {
 				{
 				{
-				setState(54);
+				setState(56);
 				word();
 				}
 				}
-				setState(57); 
+				setState(59); 
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			} while ( _la==PA || _la==C );
@@ -220,27 +220,27 @@ public class ColorParser extends Parser {
 		WordContext _localctx = new WordContext(_ctx, getState());
 		enterRule(_localctx, 4, RULE_word);
 		try {
-			setState(62);
+			setState(64);
 			_errHandler.sync(this);
 			switch ( getInterpreter().adaptivePredict(_input,3,_ctx) ) {
 			case 1:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(59);
+				setState(61);
 				cmavo();
 				}
 				break;
 			case 2:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(60);
+				setState(62);
 				gismu();
 				}
 				break;
 			case 3:
 				enterOuterAlt(_localctx, 3);
 				{
-				setState(61);
+				setState(63);
 				lujvo();
 				}
 				break;
@@ -271,7 +271,7 @@ public class ColorParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(64);
+			setState(66);
 			match(PA);
 			}
 		}
@@ -307,33 +307,33 @@ public class ColorParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(66);
+			setState(68);
 			match(C);
-			setState(71);
+			setState(73);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case C:
 				{
-				setState(67);
+				setState(69);
 				match(C);
-				setState(68);
+				setState(70);
 				match(V);
 				}
 				break;
 			case V:
 				{
-				setState(69);
+				setState(71);
 				match(V);
-				setState(70);
+				setState(72);
 				match(C);
 				}
 				break;
 			default:
 				throw new NoViableAltException(this);
 			}
-			setState(73);
+			setState(75);
 			match(C);
-			setState(74);
+			setState(76);
 			match(V);
 			}
 		}
@@ -371,34 +371,34 @@ public class ColorParser extends Parser {
 		LujvoContext _localctx = new LujvoContext(_ctx, getState());
 		enterRule(_localctx, 10, RULE_lujvo);
 		try {
-			setState(80);
+			setState(82);
 			_errHandler.sync(this);
 			switch ( getInterpreter().adaptivePredict(_input,5,_ctx) ) {
 			case 1:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(76);
+				setState(78);
 				bobvo();
 				}
 				break;
 			case 2:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(77);
+				setState(79);
 				cobvo();
 				}
 				break;
 			case 3:
 				enterOuterAlt(_localctx, 3);
 				{
-				setState(78);
+				setState(80);
 				dobvo();
 				}
 				break;
 			case 4:
 				enterOuterAlt(_localctx, 4);
 				{
-				setState(79);
+				setState(81);
 				fobvo();
 				}
 				break;
@@ -437,11 +437,11 @@ public class ColorParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(82);
-			tworafcon();
-			setState(83);
-			y();
 			setState(84);
+			tworafcon();
+			setState(85);
+			y();
+			setState(86);
 			tailvo();
 			}
 		}
@@ -478,28 +478,28 @@ public class ColorParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(88);
+			setState(90);
 			_errHandler.sync(this);
 			switch ( getInterpreter().adaptivePredict(_input,6,_ctx) ) {
 			case 1:
 				{
-				setState(86);
+				setState(88);
 				tworafcon();
 				}
 				break;
 			case 2:
 				{
-				setState(87);
+				setState(89);
 				tworafvow();
 				}
 				break;
 			}
-			setState(91);
+			setState(93);
 			_errHandler.sync(this);
 			switch ( getInterpreter().adaptivePredict(_input,7,_ctx) ) {
 			case 1:
 				{
-				setState(90);
+				setState(92);
 				tailvo();
 				}
 				break;
@@ -518,8 +518,8 @@ public class ColorParser extends Parser {
 	}
 
 	public static class DobvoContext extends ParserRuleContext {
-		public FourrafContext fourraf() {
-			return getRuleContext(FourrafContext.class,0);
+		public StumpContext stump() {
+			return getRuleContext(StumpContext.class,0);
 		}
 		public YContext y() {
 			return getRuleContext(YContext.class,0);
@@ -539,11 +539,11 @@ public class ColorParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(93);
-			fourraf();
-			setState(94);
-			y();
 			setState(95);
+			stump();
+			setState(96);
+			y();
+			setState(97);
 			tailvo();
 			}
 		}
@@ -559,29 +559,14 @@ public class ColorParser extends Parser {
 	}
 
 	public static class FobvoContext extends ParserRuleContext {
+		public RafstumpContext rafstump() {
+			return getRuleContext(RafstumpContext.class,0);
+		}
 		public YContext y() {
 			return getRuleContext(YContext.class,0);
 		}
 		public TailvoContext tailvo() {
 			return getRuleContext(TailvoContext.class,0);
-		}
-		public BalrafContext balraf() {
-			return getRuleContext(BalrafContext.class,0);
-		}
-		public FourrafContext fourraf() {
-			return getRuleContext(FourrafContext.class,0);
-		}
-		public VurafContext vuraf() {
-			return getRuleContext(VurafContext.class,0);
-		}
-		public QContext q() {
-			return getRuleContext(QContext.class,0);
-		}
-		public CafourrafContext cafourraf() {
-			return getRuleContext(CafourrafContext.class,0);
-		}
-		public CkfourrafContext ckfourraf() {
-			return getRuleContext(CkfourrafContext.class,0);
 		}
 		public FobvoContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -592,53 +577,14 @@ public class ColorParser extends Parser {
 	public final FobvoContext fobvo() throws RecognitionException {
 		FobvoContext _localctx = new FobvoContext(_ctx, getState());
 		enterRule(_localctx, 18, RULE_fobvo);
-		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(110);
-			_errHandler.sync(this);
-			switch ( getInterpreter().adaptivePredict(_input,9,_ctx) ) {
-			case 1:
-				{
-				setState(97);
-				balraf();
-				setState(99);
-				_errHandler.sync(this);
-				_la = _input.LA(1);
-				if (_la==Q) {
-					{
-					setState(98);
-					q();
-					}
-				}
-
-				setState(101);
-				fourraf();
-				}
-				break;
-			case 2:
-				{
-				setState(103);
-				vuraf();
-				setState(104);
-				q();
-				setState(105);
-				cafourraf();
-				}
-				break;
-			case 3:
-				{
-				setState(107);
-				vuraf();
-				setState(108);
-				ckfourraf();
-				}
-				break;
-			}
-			setState(112);
+			setState(99);
+			rafstump();
+			setState(100);
 			y();
-			setState(113);
+			setState(101);
 			tailvo();
 			}
 		}
@@ -660,8 +606,11 @@ public class ColorParser extends Parser {
 		public BalrafContext balraf(int i) {
 			return getRuleContext(BalrafContext.class,i);
 		}
-		public VurafContext vuraf() {
-			return getRuleContext(VurafContext.class,0);
+		public BrorafContext broraf() {
+			return getRuleContext(BrorafContext.class,0);
+		}
+		public BaurafContext bauraf() {
+			return getRuleContext(BaurafContext.class,0);
 		}
 		public QContext q() {
 			return getRuleContext(QContext.class,0);
@@ -679,19 +628,19 @@ public class ColorParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(122);
+			setState(111);
 			_errHandler.sync(this);
-			switch ( getInterpreter().adaptivePredict(_input,11,_ctx) ) {
+			switch ( getInterpreter().adaptivePredict(_input,9,_ctx) ) {
 			case 1:
 				{
-				setState(115);
+				setState(103);
 				balraf();
-				setState(117);
+				setState(105);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 				if (_la==Q) {
 					{
-					setState(116);
+					setState(104);
 					q();
 					}
 				}
@@ -700,14 +649,20 @@ public class ColorParser extends Parser {
 				break;
 			case 2:
 				{
-				setState(119);
-				vuraf();
-				setState(120);
+				setState(107);
+				broraf();
+				}
+				break;
+			case 3:
+				{
+				setState(108);
+				bauraf();
+				setState(109);
 				q();
 				}
 				break;
 			}
-			setState(124);
+			setState(113);
 			balraf();
 			}
 		}
@@ -736,7 +691,7 @@ public class ColorParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(126);
+			setState(115);
 			match(Y);
 			}
 		}
@@ -767,11 +722,11 @@ public class ColorParser extends Parser {
 		public BalrafContext balraf(int i) {
 			return getRuleContext(BalrafContext.class,i);
 		}
-		public List<FourrafContext> fourraf() {
-			return getRuleContexts(FourrafContext.class);
+		public List<StumpContext> stump() {
+			return getRuleContexts(StumpContext.class);
 		}
-		public FourrafContext fourraf(int i) {
-			return getRuleContext(FourrafContext.class,i);
+		public StumpContext stump(int i) {
+			return getRuleContext(StumpContext.class,i);
 		}
 		public List<YContext> y() {
 			return getRuleContexts(YContext.class);
@@ -793,25 +748,25 @@ public class ColorParser extends Parser {
 			int _alt;
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(138);
+			setState(127);
 			_errHandler.sync(this);
-			_alt = getInterpreter().adaptivePredict(_input,14,_ctx);
+			_alt = getInterpreter().adaptivePredict(_input,12,_ctx);
 			while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
 				if ( _alt==1 ) {
 					{
-					setState(136);
+					setState(125);
 					_errHandler.sync(this);
-					switch ( getInterpreter().adaptivePredict(_input,13,_ctx) ) {
+					switch ( getInterpreter().adaptivePredict(_input,11,_ctx) ) {
 					case 1:
 						{
-						setState(128);
+						setState(117);
 						balraf();
-						setState(130);
+						setState(119);
 						_errHandler.sync(this);
 						_la = _input.LA(1);
 						if (_la==Y) {
 							{
-							setState(129);
+							setState(118);
 							y();
 							}
 						}
@@ -820,37 +775,37 @@ public class ColorParser extends Parser {
 						break;
 					case 2:
 						{
-						setState(132);
-						fourraf();
-						setState(133);
+						setState(121);
+						stump();
+						setState(122);
 						y();
 						}
 						break;
 					case 3:
 						{
-						setState(135);
+						setState(124);
 						vuraf();
 						}
 						break;
 					}
 					} 
 				}
-				setState(140);
+				setState(129);
 				_errHandler.sync(this);
-				_alt = getInterpreter().adaptivePredict(_input,14,_ctx);
+				_alt = getInterpreter().adaptivePredict(_input,12,_ctx);
 			}
-			setState(143);
+			setState(132);
 			_errHandler.sync(this);
-			switch ( getInterpreter().adaptivePredict(_input,15,_ctx) ) {
+			switch ( getInterpreter().adaptivePredict(_input,13,_ctx) ) {
 			case 1:
 				{
-				setState(141);
+				setState(130);
 				vuraf();
 				}
 				break;
 			case 2:
 				{
-				setState(142);
+				setState(131);
 				gismu();
 				}
 				break;
@@ -869,17 +824,23 @@ public class ColorParser extends Parser {
 	}
 
 	public static class TworafvowContext extends ParserRuleContext {
-		public List<VurafContext> vuraf() {
-			return getRuleContexts(VurafContext.class);
+		public List<BrorafContext> broraf() {
+			return getRuleContexts(BrorafContext.class);
 		}
-		public VurafContext vuraf(int i) {
-			return getRuleContext(VurafContext.class,i);
+		public BrorafContext broraf(int i) {
+			return getRuleContext(BrorafContext.class,i);
 		}
 		public BalrafContext balraf() {
 			return getRuleContext(BalrafContext.class,0);
 		}
+		public BaurafContext bauraf() {
+			return getRuleContext(BaurafContext.class,0);
+		}
 		public QContext q() {
 			return getRuleContext(QContext.class,0);
+		}
+		public VurafContext vuraf() {
+			return getRuleContext(VurafContext.class,0);
 		}
 		public TworafvowContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -892,38 +853,83 @@ public class ColorParser extends Parser {
 		enterRule(_localctx, 26, RULE_tworafvow);
 		int _la;
 		try {
-			enterOuterAlt(_localctx, 1);
-			{
-			setState(152);
+			setState(155);
 			_errHandler.sync(this);
-			switch ( getInterpreter().adaptivePredict(_input,17,_ctx) ) {
+			switch ( getInterpreter().adaptivePredict(_input,18,_ctx) ) {
 			case 1:
+				enterOuterAlt(_localctx, 1);
 				{
-				setState(145);
-				balraf();
-				setState(147);
+				setState(137);
+				_errHandler.sync(this);
+				switch ( getInterpreter().adaptivePredict(_input,14,_ctx) ) {
+				case 1:
+					{
+					setState(134);
+					balraf();
+					}
+					break;
+				case 2:
+					{
+					setState(135);
+					broraf();
+					}
+					break;
+				case 3:
+					{
+					setState(136);
+					bauraf();
+					}
+					break;
+				}
+				setState(140);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 				if (_la==Q) {
 					{
-					setState(146);
+					setState(139);
 					q();
 					}
 				}
 
+				setState(142);
+				broraf();
 				}
 				break;
 			case 2:
+				enterOuterAlt(_localctx, 2);
 				{
-				setState(149);
-				vuraf();
-				setState(150);
-				q();
+				setState(151);
+				_errHandler.sync(this);
+				switch ( getInterpreter().adaptivePredict(_input,17,_ctx) ) {
+				case 1:
+					{
+					setState(144);
+					balraf();
+					setState(146);
+					_errHandler.sync(this);
+					_la = _input.LA(1);
+					if (_la==Q) {
+						{
+						setState(145);
+						q();
+						}
+					}
+
+					}
+					break;
+				case 2:
+					{
+					setState(148);
+					vuraf();
+					setState(149);
+					q();
+					}
+					break;
+				}
+				setState(153);
+				bauraf();
 				}
 				break;
-			}
-			setState(154);
-			vuraf();
 			}
 		}
 		catch (RecognitionException re) {
@@ -937,37 +943,122 @@ public class ColorParser extends Parser {
 		return _localctx;
 	}
 
-	public static class FourrafContext extends ParserRuleContext {
+	public static class StumpContext extends ParserRuleContext {
 		public CafourrafContext cafourraf() {
 			return getRuleContext(CafourrafContext.class,0);
 		}
 		public CkfourrafContext ckfourraf() {
 			return getRuleContext(CkfourrafContext.class,0);
 		}
-		public FourrafContext(ParserRuleContext parent, int invokingState) {
+		public StumpContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_fourraf; }
+		@Override public int getRuleIndex() { return RULE_stump; }
 	}
 
-	public final FourrafContext fourraf() throws RecognitionException {
-		FourrafContext _localctx = new FourrafContext(_ctx, getState());
-		enterRule(_localctx, 28, RULE_fourraf);
+	public final StumpContext stump() throws RecognitionException {
+		StumpContext _localctx = new StumpContext(_ctx, getState());
+		enterRule(_localctx, 28, RULE_stump);
 		try {
-			setState(158);
+			setState(159);
 			_errHandler.sync(this);
-			switch ( getInterpreter().adaptivePredict(_input,18,_ctx) ) {
+			switch ( getInterpreter().adaptivePredict(_input,19,_ctx) ) {
 			case 1:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(156);
+				setState(157);
 				cafourraf();
 				}
 				break;
 			case 2:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(157);
+				setState(158);
+				ckfourraf();
+				}
+				break;
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	public static class RafstumpContext extends ParserRuleContext {
+		public BalrafContext balraf() {
+			return getRuleContext(BalrafContext.class,0);
+		}
+		public StumpContext stump() {
+			return getRuleContext(StumpContext.class,0);
+		}
+		public QContext q() {
+			return getRuleContext(QContext.class,0);
+		}
+		public VurafContext vuraf() {
+			return getRuleContext(VurafContext.class,0);
+		}
+		public CafourrafContext cafourraf() {
+			return getRuleContext(CafourrafContext.class,0);
+		}
+		public CkfourrafContext ckfourraf() {
+			return getRuleContext(CkfourrafContext.class,0);
+		}
+		public RafstumpContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_rafstump; }
+	}
+
+	public final RafstumpContext rafstump() throws RecognitionException {
+		RafstumpContext _localctx = new RafstumpContext(_ctx, getState());
+		enterRule(_localctx, 30, RULE_rafstump);
+		int _la;
+		try {
+			setState(174);
+			_errHandler.sync(this);
+			switch ( getInterpreter().adaptivePredict(_input,21,_ctx) ) {
+			case 1:
+				enterOuterAlt(_localctx, 1);
+				{
+				setState(161);
+				balraf();
+				setState(163);
+				_errHandler.sync(this);
+				_la = _input.LA(1);
+				if (_la==Q) {
+					{
+					setState(162);
+					q();
+					}
+				}
+
+				setState(165);
+				stump();
+				}
+				break;
+			case 2:
+				enterOuterAlt(_localctx, 2);
+				{
+				setState(167);
+				vuraf();
+				setState(168);
+				q();
+				setState(169);
+				cafourraf();
+				}
+				break;
+			case 3:
+				enterOuterAlt(_localctx, 3);
+				{
+				setState(171);
+				vuraf();
+				setState(172);
 				ckfourraf();
 				}
 				break;
@@ -998,15 +1089,15 @@ public class ColorParser extends Parser {
 
 	public final BalrafContext balraf() throws RecognitionException {
 		BalrafContext _localctx = new BalrafContext(_ctx, getState());
-		enterRule(_localctx, 30, RULE_balraf);
+		enterRule(_localctx, 32, RULE_balraf);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(160);
+			setState(176);
 			match(C);
-			setState(161);
+			setState(177);
 			match(V);
-			setState(162);
+			setState(178);
 			match(C);
 			}
 		}
@@ -1031,12 +1122,97 @@ public class ColorParser extends Parser {
 
 	public final QContext q() throws RecognitionException {
 		QContext _localctx = new QContext(_ctx, getState());
-		enterRule(_localctx, 32, RULE_q);
+		enterRule(_localctx, 34, RULE_q);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(164);
+			setState(180);
 			match(Q);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	public static class BrorafContext extends ParserRuleContext {
+		public List<TerminalNode> C() { return getTokens(ColorParser.C); }
+		public TerminalNode C(int i) {
+			return getToken(ColorParser.C, i);
+		}
+		public TerminalNode V() { return getToken(ColorParser.V, 0); }
+		public BrorafContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_broraf; }
+	}
+
+	public final BrorafContext broraf() throws RecognitionException {
+		BrorafContext _localctx = new BrorafContext(_ctx, getState());
+		enterRule(_localctx, 36, RULE_broraf);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(182);
+			match(C);
+			setState(183);
+			match(C);
+			setState(184);
+			match(V);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	public static class BaurafContext extends ParserRuleContext {
+		public TerminalNode C() { return getToken(ColorParser.C, 0); }
+		public List<TerminalNode> V() { return getTokens(ColorParser.V); }
+		public TerminalNode V(int i) {
+			return getToken(ColorParser.V, i);
+		}
+		public BaurafContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_bauraf; }
+	}
+
+	public final BaurafContext bauraf() throws RecognitionException {
+		BaurafContext _localctx = new BaurafContext(_ctx, getState());
+		enterRule(_localctx, 38, RULE_bauraf);
+		int _la;
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(186);
+			match(C);
+			setState(187);
+			match(V);
+			setState(189);
+			_errHandler.sync(this);
+			_la = _input.LA(1);
+			if (_la==T__2) {
+				{
+				setState(188);
+				match(T__2);
+				}
+			}
+
+			setState(191);
+			match(V);
 			}
 		}
 		catch (RecognitionException re) {
@@ -1065,22 +1241,22 @@ public class ColorParser extends Parser {
 
 	public final VurafContext vuraf() throws RecognitionException {
 		VurafContext _localctx = new VurafContext(_ctx, getState());
-		enterRule(_localctx, 34, RULE_vuraf);
+		enterRule(_localctx, 40, RULE_vuraf);
 		try {
-			setState(168);
+			setState(195);
 			_errHandler.sync(this);
-			switch ( getInterpreter().adaptivePredict(_input,19,_ctx) ) {
+			switch ( getInterpreter().adaptivePredict(_input,23,_ctx) ) {
 			case 1:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(166);
+				setState(193);
 				bauraf();
 				}
 				break;
 			case 2:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(167);
+				setState(194);
 				broraf();
 				}
 				break;
@@ -1111,17 +1287,17 @@ public class ColorParser extends Parser {
 
 	public final CafourrafContext cafourraf() throws RecognitionException {
 		CafourrafContext _localctx = new CafourrafContext(_ctx, getState());
-		enterRule(_localctx, 36, RULE_cafourraf);
+		enterRule(_localctx, 42, RULE_cafourraf);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(170);
+			setState(197);
 			match(C);
-			setState(171);
+			setState(198);
 			match(V);
-			setState(172);
+			setState(199);
 			match(C);
-			setState(173);
+			setState(200);
 			match(C);
 			}
 		}
@@ -1150,103 +1326,18 @@ public class ColorParser extends Parser {
 
 	public final CkfourrafContext ckfourraf() throws RecognitionException {
 		CkfourrafContext _localctx = new CkfourrafContext(_ctx, getState());
-		enterRule(_localctx, 38, RULE_ckfourraf);
+		enterRule(_localctx, 44, RULE_ckfourraf);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(175);
+			setState(202);
 			match(C);
-			setState(176);
+			setState(203);
 			match(C);
-			setState(177);
+			setState(204);
 			match(V);
-			setState(178);
+			setState(205);
 			match(C);
-			}
-		}
-		catch (RecognitionException re) {
-			_localctx.exception = re;
-			_errHandler.reportError(this, re);
-			_errHandler.recover(this, re);
-		}
-		finally {
-			exitRule();
-		}
-		return _localctx;
-	}
-
-	public static class BaurafContext extends ParserRuleContext {
-		public TerminalNode C() { return getToken(ColorParser.C, 0); }
-		public List<TerminalNode> V() { return getTokens(ColorParser.V); }
-		public TerminalNode V(int i) {
-			return getToken(ColorParser.V, i);
-		}
-		public BaurafContext(ParserRuleContext parent, int invokingState) {
-			super(parent, invokingState);
-		}
-		@Override public int getRuleIndex() { return RULE_bauraf; }
-	}
-
-	public final BaurafContext bauraf() throws RecognitionException {
-		BaurafContext _localctx = new BaurafContext(_ctx, getState());
-		enterRule(_localctx, 40, RULE_bauraf);
-		int _la;
-		try {
-			enterOuterAlt(_localctx, 1);
-			{
-			setState(180);
-			match(C);
-			setState(181);
-			match(V);
-			setState(183);
-			_errHandler.sync(this);
-			_la = _input.LA(1);
-			if (_la==T__2) {
-				{
-				setState(182);
-				match(T__2);
-				}
-			}
-
-			setState(185);
-			match(V);
-			}
-		}
-		catch (RecognitionException re) {
-			_localctx.exception = re;
-			_errHandler.reportError(this, re);
-			_errHandler.recover(this, re);
-		}
-		finally {
-			exitRule();
-		}
-		return _localctx;
-	}
-
-	public static class BrorafContext extends ParserRuleContext {
-		public List<TerminalNode> C() { return getTokens(ColorParser.C); }
-		public TerminalNode C(int i) {
-			return getToken(ColorParser.C, i);
-		}
-		public TerminalNode V() { return getToken(ColorParser.V, 0); }
-		public BrorafContext(ParserRuleContext parent, int invokingState) {
-			super(parent, invokingState);
-		}
-		@Override public int getRuleIndex() { return RULE_broraf; }
-	}
-
-	public final BrorafContext broraf() throws RecognitionException {
-		BrorafContext _localctx = new BrorafContext(_ctx, getState());
-		enterRule(_localctx, 42, RULE_broraf);
-		try {
-			enterOuterAlt(_localctx, 1);
-			{
-			setState(187);
-			match(C);
-			setState(188);
-			match(C);
-			setState(189);
-			match(V);
 			}
 		}
 		catch (RecognitionException re) {
@@ -1261,64 +1352,71 @@ public class ColorParser extends Parser {
 	}
 
 	public static final String _serializedATN =
-		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\13\u00c2\4\2\t\2"+
+		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\13\u00d2\4\2\t\2"+
 		"\4\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7\4\b\t\b\4\t\t\t\4\n\t\n\4\13"+
 		"\t\13\4\f\t\f\4\r\t\r\4\16\t\16\4\17\t\17\4\20\t\20\4\21\t\21\4\22\t\22"+
-		"\4\23\t\23\4\24\t\24\4\25\t\25\4\26\t\26\4\27\t\27\3\2\3\2\5\2\61\n\2"+
-		"\3\2\3\2\6\2\65\n\2\r\2\16\2\66\3\3\6\3:\n\3\r\3\16\3;\3\4\3\4\3\4\5\4"+
-		"A\n\4\3\5\3\5\3\6\3\6\3\6\3\6\3\6\5\6J\n\6\3\6\3\6\3\6\3\7\3\7\3\7\3\7"+
-		"\5\7S\n\7\3\b\3\b\3\b\3\b\3\t\3\t\5\t[\n\t\3\t\5\t^\n\t\3\n\3\n\3\n\3"+
-		"\n\3\13\3\13\5\13f\n\13\3\13\3\13\3\13\3\13\3\13\3\13\3\13\3\13\3\13\5"+
-		"\13q\n\13\3\13\3\13\3\13\3\f\3\f\5\fx\n\f\3\f\3\f\3\f\5\f}\n\f\3\f\3\f"+
-		"\3\r\3\r\3\16\3\16\5\16\u0085\n\16\3\16\3\16\3\16\3\16\7\16\u008b\n\16"+
-		"\f\16\16\16\u008e\13\16\3\16\3\16\5\16\u0092\n\16\3\17\3\17\5\17\u0096"+
-		"\n\17\3\17\3\17\3\17\5\17\u009b\n\17\3\17\3\17\3\20\3\20\5\20\u00a1\n"+
-		"\20\3\21\3\21\3\21\3\21\3\22\3\22\3\23\3\23\5\23\u00ab\n\23\3\24\3\24"+
-		"\3\24\3\24\3\24\3\25\3\25\3\25\3\25\3\25\3\26\3\26\3\26\5\26\u00ba\n\26"+
-		"\3\26\3\26\3\27\3\27\3\27\3\27\3\27\2\2\30\2\4\6\b\n\f\16\20\22\24\26"+
-		"\30\32\34\36 \"$&(*,\2\2\2\u00c5\2\64\3\2\2\2\49\3\2\2\2\6@\3\2\2\2\b"+
-		"B\3\2\2\2\nD\3\2\2\2\fR\3\2\2\2\16T\3\2\2\2\20Z\3\2\2\2\22_\3\2\2\2\24"+
-		"p\3\2\2\2\26|\3\2\2\2\30\u0080\3\2\2\2\32\u008c\3\2\2\2\34\u009a\3\2\2"+
-		"\2\36\u00a0\3\2\2\2 \u00a2\3\2\2\2\"\u00a6\3\2\2\2$\u00aa\3\2\2\2&\u00ac"+
-		"\3\2\2\2(\u00b1\3\2\2\2*\u00b6\3\2\2\2,\u00bd\3\2\2\2.\60\5\4\3\2/\61"+
-		"\7\3\2\2\60/\3\2\2\2\60\61\3\2\2\2\61\62\3\2\2\2\62\63\7\4\2\2\63\65\3"+
-		"\2\2\2\64.\3\2\2\2\65\66\3\2\2\2\66\64\3\2\2\2\66\67\3\2\2\2\67\3\3\2"+
-		"\2\28:\5\6\4\298\3\2\2\2:;\3\2\2\2;9\3\2\2\2;<\3\2\2\2<\5\3\2\2\2=A\5"+
-		"\b\5\2>A\5\n\6\2?A\5\f\7\2@=\3\2\2\2@>\3\2\2\2@?\3\2\2\2A\7\3\2\2\2BC"+
-		"\7\7\2\2C\t\3\2\2\2DI\7\n\2\2EF\7\n\2\2FJ\7\13\2\2GH\7\13\2\2HJ\7\n\2"+
-		"\2IE\3\2\2\2IG\3\2\2\2JK\3\2\2\2KL\7\n\2\2LM\7\13\2\2M\13\3\2\2\2NS\5"+
-		"\16\b\2OS\5\20\t\2PS\5\22\n\2QS\5\24\13\2RN\3\2\2\2RO\3\2\2\2RP\3\2\2"+
-		"\2RQ\3\2\2\2S\r\3\2\2\2TU\5\26\f\2UV\5\30\r\2VW\5\32\16\2W\17\3\2\2\2"+
-		"X[\5\26\f\2Y[\5\34\17\2ZX\3\2\2\2ZY\3\2\2\2[]\3\2\2\2\\^\5\32\16\2]\\"+
-		"\3\2\2\2]^\3\2\2\2^\21\3\2\2\2_`\5\36\20\2`a\5\30\r\2ab\5\32\16\2b\23"+
-		"\3\2\2\2ce\5 \21\2df\5\"\22\2ed\3\2\2\2ef\3\2\2\2fg\3\2\2\2gh\5\36\20"+
-		"\2hq\3\2\2\2ij\5$\23\2jk\5\"\22\2kl\5&\24\2lq\3\2\2\2mn\5$\23\2no\5(\25"+
-		"\2oq\3\2\2\2pc\3\2\2\2pi\3\2\2\2pm\3\2\2\2qr\3\2\2\2rs\5\30\r\2st\5\32"+
-		"\16\2t\25\3\2\2\2uw\5 \21\2vx\5\"\22\2wv\3\2\2\2wx\3\2\2\2x}\3\2\2\2y"+
-		"z\5$\23\2z{\5\"\22\2{}\3\2\2\2|u\3\2\2\2|y\3\2\2\2}~\3\2\2\2~\177\5 \21"+
-		"\2\177\27\3\2\2\2\u0080\u0081\7\b\2\2\u0081\31\3\2\2\2\u0082\u0084\5 "+
-		"\21\2\u0083\u0085\5\30\r\2\u0084\u0083\3\2\2\2\u0084\u0085\3\2\2\2\u0085"+
-		"\u008b\3\2\2\2\u0086\u0087\5\36\20\2\u0087\u0088\5\30\r\2\u0088\u008b"+
-		"\3\2\2\2\u0089\u008b\5$\23\2\u008a\u0082\3\2\2\2\u008a\u0086\3\2\2\2\u008a"+
-		"\u0089\3\2\2\2\u008b\u008e\3\2\2\2\u008c\u008a\3\2\2\2\u008c\u008d\3\2"+
-		"\2\2\u008d\u0091\3\2\2\2\u008e\u008c\3\2\2\2\u008f\u0092\5$\23\2\u0090"+
-		"\u0092\5\n\6\2\u0091\u008f\3\2\2\2\u0091\u0090\3\2\2\2\u0092\33\3\2\2"+
-		"\2\u0093\u0095\5 \21\2\u0094\u0096\5\"\22\2\u0095\u0094\3\2\2\2\u0095"+
-		"\u0096\3\2\2\2\u0096\u009b\3\2\2\2\u0097\u0098\5$\23\2\u0098\u0099\5\""+
-		"\22\2\u0099\u009b\3\2\2\2\u009a\u0093\3\2\2\2\u009a\u0097\3\2\2\2\u009b"+
-		"\u009c\3\2\2\2\u009c\u009d\5$\23\2\u009d\35\3\2\2\2\u009e\u00a1\5&\24"+
-		"\2\u009f\u00a1\5(\25\2\u00a0\u009e\3\2\2\2\u00a0\u009f\3\2\2\2\u00a1\37"+
-		"\3\2\2\2\u00a2\u00a3\7\n\2\2\u00a3\u00a4\7\13\2\2\u00a4\u00a5\7\n\2\2"+
-		"\u00a5!\3\2\2\2\u00a6\u00a7\7\t\2\2\u00a7#\3\2\2\2\u00a8\u00ab\5*\26\2"+
-		"\u00a9\u00ab\5,\27\2\u00aa\u00a8\3\2\2\2\u00aa\u00a9\3\2\2\2\u00ab%\3"+
-		"\2\2\2\u00ac\u00ad\7\n\2\2\u00ad\u00ae\7\13\2\2\u00ae\u00af\7\n\2\2\u00af"+
-		"\u00b0\7\n\2\2\u00b0\'\3\2\2\2\u00b1\u00b2\7\n\2\2\u00b2\u00b3\7\n\2\2"+
-		"\u00b3\u00b4\7\13\2\2\u00b4\u00b5\7\n\2\2\u00b5)\3\2\2\2\u00b6\u00b7\7"+
-		"\n\2\2\u00b7\u00b9\7\13\2\2\u00b8\u00ba\7\5\2\2\u00b9\u00b8\3\2\2\2\u00b9"+
-		"\u00ba\3\2\2\2\u00ba\u00bb\3\2\2\2\u00bb\u00bc\7\13\2\2\u00bc+\3\2\2\2"+
-		"\u00bd\u00be\7\n\2\2\u00be\u00bf\7\n\2\2\u00bf\u00c0\7\13\2\2\u00c0-\3"+
-		"\2\2\2\27\60\66;@IRZ]epw|\u0084\u008a\u008c\u0091\u0095\u009a\u00a0\u00aa"+
-		"\u00b9";
+		"\4\23\t\23\4\24\t\24\4\25\t\25\4\26\t\26\4\27\t\27\4\30\t\30\3\2\3\2\5"+
+		"\2\63\n\2\3\2\3\2\6\2\67\n\2\r\2\16\28\3\3\6\3<\n\3\r\3\16\3=\3\4\3\4"+
+		"\3\4\5\4C\n\4\3\5\3\5\3\6\3\6\3\6\3\6\3\6\5\6L\n\6\3\6\3\6\3\6\3\7\3\7"+
+		"\3\7\3\7\5\7U\n\7\3\b\3\b\3\b\3\b\3\t\3\t\5\t]\n\t\3\t\5\t`\n\t\3\n\3"+
+		"\n\3\n\3\n\3\13\3\13\3\13\3\13\3\f\3\f\5\fl\n\f\3\f\3\f\3\f\3\f\5\fr\n"+
+		"\f\3\f\3\f\3\r\3\r\3\16\3\16\5\16z\n\16\3\16\3\16\3\16\3\16\7\16\u0080"+
+		"\n\16\f\16\16\16\u0083\13\16\3\16\3\16\5\16\u0087\n\16\3\17\3\17\3\17"+
+		"\5\17\u008c\n\17\3\17\5\17\u008f\n\17\3\17\3\17\3\17\3\17\5\17\u0095\n"+
+		"\17\3\17\3\17\3\17\5\17\u009a\n\17\3\17\3\17\5\17\u009e\n\17\3\20\3\20"+
+		"\5\20\u00a2\n\20\3\21\3\21\5\21\u00a6\n\21\3\21\3\21\3\21\3\21\3\21\3"+
+		"\21\3\21\3\21\3\21\5\21\u00b1\n\21\3\22\3\22\3\22\3\22\3\23\3\23\3\24"+
+		"\3\24\3\24\3\24\3\25\3\25\3\25\5\25\u00c0\n\25\3\25\3\25\3\26\3\26\5\26"+
+		"\u00c6\n\26\3\27\3\27\3\27\3\27\3\27\3\30\3\30\3\30\3\30\3\30\3\30\2\2"+
+		"\31\2\4\6\b\n\f\16\20\22\24\26\30\32\34\36 \"$&(*,.\2\2\2\u00d9\2\66\3"+
+		"\2\2\2\4;\3\2\2\2\6B\3\2\2\2\bD\3\2\2\2\nF\3\2\2\2\fT\3\2\2\2\16V\3\2"+
+		"\2\2\20\\\3\2\2\2\22a\3\2\2\2\24e\3\2\2\2\26q\3\2\2\2\30u\3\2\2\2\32\u0081"+
+		"\3\2\2\2\34\u009d\3\2\2\2\36\u00a1\3\2\2\2 \u00b0\3\2\2\2\"\u00b2\3\2"+
+		"\2\2$\u00b6\3\2\2\2&\u00b8\3\2\2\2(\u00bc\3\2\2\2*\u00c5\3\2\2\2,\u00c7"+
+		"\3\2\2\2.\u00cc\3\2\2\2\60\62\5\4\3\2\61\63\7\3\2\2\62\61\3\2\2\2\62\63"+
+		"\3\2\2\2\63\64\3\2\2\2\64\65\7\4\2\2\65\67\3\2\2\2\66\60\3\2\2\2\678\3"+
+		"\2\2\28\66\3\2\2\289\3\2\2\29\3\3\2\2\2:<\5\6\4\2;:\3\2\2\2<=\3\2\2\2"+
+		"=;\3\2\2\2=>\3\2\2\2>\5\3\2\2\2?C\5\b\5\2@C\5\n\6\2AC\5\f\7\2B?\3\2\2"+
+		"\2B@\3\2\2\2BA\3\2\2\2C\7\3\2\2\2DE\7\7\2\2E\t\3\2\2\2FK\7\n\2\2GH\7\n"+
+		"\2\2HL\7\13\2\2IJ\7\13\2\2JL\7\n\2\2KG\3\2\2\2KI\3\2\2\2LM\3\2\2\2MN\7"+
+		"\n\2\2NO\7\13\2\2O\13\3\2\2\2PU\5\16\b\2QU\5\20\t\2RU\5\22\n\2SU\5\24"+
+		"\13\2TP\3\2\2\2TQ\3\2\2\2TR\3\2\2\2TS\3\2\2\2U\r\3\2\2\2VW\5\26\f\2WX"+
+		"\5\30\r\2XY\5\32\16\2Y\17\3\2\2\2Z]\5\26\f\2[]\5\34\17\2\\Z\3\2\2\2\\"+
+		"[\3\2\2\2]_\3\2\2\2^`\5\32\16\2_^\3\2\2\2_`\3\2\2\2`\21\3\2\2\2ab\5\36"+
+		"\20\2bc\5\30\r\2cd\5\32\16\2d\23\3\2\2\2ef\5 \21\2fg\5\30\r\2gh\5\32\16"+
+		"\2h\25\3\2\2\2ik\5\"\22\2jl\5$\23\2kj\3\2\2\2kl\3\2\2\2lr\3\2\2\2mr\5"+
+		"&\24\2no\5(\25\2op\5$\23\2pr\3\2\2\2qi\3\2\2\2qm\3\2\2\2qn\3\2\2\2rs\3"+
+		"\2\2\2st\5\"\22\2t\27\3\2\2\2uv\7\b\2\2v\31\3\2\2\2wy\5\"\22\2xz\5\30"+
+		"\r\2yx\3\2\2\2yz\3\2\2\2z\u0080\3\2\2\2{|\5\36\20\2|}\5\30\r\2}\u0080"+
+		"\3\2\2\2~\u0080\5*\26\2\177w\3\2\2\2\177{\3\2\2\2\177~\3\2\2\2\u0080\u0083"+
+		"\3\2\2\2\u0081\177\3\2\2\2\u0081\u0082\3\2\2\2\u0082\u0086\3\2\2\2\u0083"+
+		"\u0081\3\2\2\2\u0084\u0087\5*\26\2\u0085\u0087\5\n\6\2\u0086\u0084\3\2"+
+		"\2\2\u0086\u0085\3\2\2\2\u0087\33\3\2\2\2\u0088\u008c\5\"\22\2\u0089\u008c"+
+		"\5&\24\2\u008a\u008c\5(\25\2\u008b\u0088\3\2\2\2\u008b\u0089\3\2\2\2\u008b"+
+		"\u008a\3\2\2\2\u008c\u008e\3\2\2\2\u008d\u008f\5$\23\2\u008e\u008d\3\2"+
+		"\2\2\u008e\u008f\3\2\2\2\u008f\u0090\3\2\2\2\u0090\u0091\5&\24\2\u0091"+
+		"\u009e\3\2\2\2\u0092\u0094\5\"\22\2\u0093\u0095\5$\23\2\u0094\u0093\3"+
+		"\2\2\2\u0094\u0095\3\2\2\2\u0095\u009a\3\2\2\2\u0096\u0097\5*\26\2\u0097"+
+		"\u0098\5$\23\2\u0098\u009a\3\2\2\2\u0099\u0092\3\2\2\2\u0099\u0096\3\2"+
+		"\2\2\u009a\u009b\3\2\2\2\u009b\u009c\5(\25\2\u009c\u009e\3\2\2\2\u009d"+
+		"\u008b\3\2\2\2\u009d\u0099\3\2\2\2\u009e\35\3\2\2\2\u009f\u00a2\5,\27"+
+		"\2\u00a0\u00a2\5.\30\2\u00a1\u009f\3\2\2\2\u00a1\u00a0\3\2\2\2\u00a2\37"+
+		"\3\2\2\2\u00a3\u00a5\5\"\22\2\u00a4\u00a6\5$\23\2\u00a5\u00a4\3\2\2\2"+
+		"\u00a5\u00a6\3\2\2\2\u00a6\u00a7\3\2\2\2\u00a7\u00a8\5\36\20\2\u00a8\u00b1"+
+		"\3\2\2\2\u00a9\u00aa\5*\26\2\u00aa\u00ab\5$\23\2\u00ab\u00ac\5,\27\2\u00ac"+
+		"\u00b1\3\2\2\2\u00ad\u00ae\5*\26\2\u00ae\u00af\5.\30\2\u00af\u00b1\3\2"+
+		"\2\2\u00b0\u00a3\3\2\2\2\u00b0\u00a9\3\2\2\2\u00b0\u00ad\3\2\2\2\u00b1"+
+		"!\3\2\2\2\u00b2\u00b3\7\n\2\2\u00b3\u00b4\7\13\2\2\u00b4\u00b5\7\n\2\2"+
+		"\u00b5#\3\2\2\2\u00b6\u00b7\7\t\2\2\u00b7%\3\2\2\2\u00b8\u00b9\7\n\2\2"+
+		"\u00b9\u00ba\7\n\2\2\u00ba\u00bb\7\13\2\2\u00bb\'\3\2\2\2\u00bc\u00bd"+
+		"\7\n\2\2\u00bd\u00bf\7\13\2\2\u00be\u00c0\7\5\2\2\u00bf\u00be\3\2\2\2"+
+		"\u00bf\u00c0\3\2\2\2\u00c0\u00c1\3\2\2\2\u00c1\u00c2\7\13\2\2\u00c2)\3"+
+		"\2\2\2\u00c3\u00c6\5(\25\2\u00c4\u00c6\5&\24\2\u00c5\u00c3\3\2\2\2\u00c5"+
+		"\u00c4\3\2\2\2\u00c6+\3\2\2\2\u00c7\u00c8\7\n\2\2\u00c8\u00c9\7\13\2\2"+
+		"\u00c9\u00ca\7\n\2\2\u00ca\u00cb\7\n\2\2\u00cb-\3\2\2\2\u00cc\u00cd\7"+
+		"\n\2\2\u00cd\u00ce\7\n\2\2\u00ce\u00cf\7\13\2\2\u00cf\u00d0\7\n\2\2\u00d0"+
+		"/\3\2\2\2\32\628=BKT\\_kqy\177\u0081\u0086\u008b\u008e\u0094\u0099\u009d"+
+		"\u00a1\u00a5\u00b0\u00bf\u00c5";
 	public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());
 	static {
