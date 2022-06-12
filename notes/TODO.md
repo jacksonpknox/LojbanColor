@@ -1,7 +1,3 @@
 - collect selma'o
-- (meta) collect word lists in this repository
+- put gismu list in this repository (for funzies)
 - expand grammar
-
-
-## long term
-- next generation of this project is using pygmentize to render html with colors
