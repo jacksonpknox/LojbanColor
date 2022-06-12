@@ -1,6 +1,3 @@
 - collect selma'o
-- (meta) collect word lists in this repository
 - expand grammar
 - put gismu list in this repository (for funzies)
-- expand grammar
-- we absolutely must use words (separated by spaces) as tokens...
