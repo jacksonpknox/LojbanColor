@@ -1,0 +1,14 @@
+{
+    "name" : "CmavoEF",
+    "root_rule" : "cmavoef",
+    "first_one" : "lucky_selmaho",
+    "remainers" : [
+        "some_other_selmaho",
+        "another_one"
+    ],
+    "selmahos" : [
+        {"little": "lucky_selmaho", "big": "LUCKY_SELMAHO", "firstmaho" : "pa", "remainmaho" : []},
+        {"little": "some_other_selmaho", "big": "SOME_OTHER_SELMAHO", "firstmaho" : "cu", "remainmaho" : []},
+        {"little": "another_one", "big": "ANOTHER_ONE", "firstmaho" : "luo", "remainmaho" : [{"name": "dio"}]}
+    ]
+}

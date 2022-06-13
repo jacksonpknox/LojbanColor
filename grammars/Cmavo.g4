@@ -1,8 +1,15 @@
 grammar Cmavo;
 import CmavoAB;
+import CmavoCD;
+import CmavoF;
+import CmavoGI;
 
 cmavo : pa 
-      | cmavoab;
+      | cmavoab
+      | cmavocd
+      | cmavof
+      | cmavogi
+      ;
 
 pa : PA ;
 
