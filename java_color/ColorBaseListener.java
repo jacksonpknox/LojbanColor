@@ -1,4 +1,4 @@
-// Generated from Color.g4 by ANTLR 4.10.1
+// Generated from grammars/Color.g4 by ANTLR 4.10.1
 
 import org.antlr.v4.runtime.ParserRuleContext;
 import org.antlr.v4.runtime.tree.ErrorNode;
@@ -51,18 +51,6 @@ public class ColorBaseListener implements ColorListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterCmavo(ColorParser.CmavoContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitCmavo(ColorParser.CmavoContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
 	@Override public void enterLujvo(ColorParser.LujvoContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -70,6 +58,18 @@ public class ColorBaseListener implements ColorListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitLujvo(ColorParser.LujvoContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterCmavo(ColorParser.CmavoContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitCmavo(ColorParser.CmavoContext ctx) { }
 
 	/**
 	 * {@inheritDoc}

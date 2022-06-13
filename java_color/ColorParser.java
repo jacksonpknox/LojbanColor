@@ -1,4 +1,4 @@
-// Generated from Color.g4 by ANTLR 4.10.1
+// Generated from grammars/Color.g4 by ANTLR 4.10.1
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.*;
@@ -16,12 +16,12 @@ public class ColorParser extends Parser {
 	protected static final PredictionContextCache _sharedContextCache =
 		new PredictionContextCache();
 	public static final int
-		T__0=1, T__1=2, WS=3, PA=4, LUJVO=5;
+		T__0=1, T__1=2, WS=3, LUJVO=4, PA=5, CMAVOAB=6;
 	public static final int
-		RULE_folio = 0, RULE_sentence = 1, RULE_word = 2, RULE_cmavo = 3, RULE_lujvo = 4;
+		RULE_folio = 0, RULE_sentence = 1, RULE_word = 2, RULE_lujvo = 3, RULE_cmavo = 4;
 	private static String[] makeRuleNames() {
 		return new String[] {
-			"folio", "sentence", "word", "cmavo", "lujvo"
+			"folio", "sentence", "word", "lujvo", "cmavo"
 		};
 	}
 	public static final String[] ruleNames = makeRuleNames();
@@ -34,7 +34,7 @@ public class ColorParser extends Parser {
 	private static final String[] _LITERAL_NAMES = makeLiteralNames();
 	private static String[] makeSymbolicNames() {
 		return new String[] {
-			null, null, null, "WS", "PA", "LUJVO"
+			null, null, null, "WS", "LUJVO", "PA", "CMAVOAB"
 		};
 	}
 	private static final String[] _SYMBOLIC_NAMES = makeSymbolicNames();
@@ -141,7 +141,7 @@ public class ColorParser extends Parser {
 				setState(18); 
 				_errHandler.sync(this);
 				_la = _input.LA(1);
-			} while ( _la==PA || _la==LUJVO );
+			} while ( (((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << LUJVO) | (1L << PA) | (1L << CMAVOAB))) != 0) );
 			}
 		}
 		catch (RecognitionException re) {
@@ -196,7 +196,7 @@ public class ColorParser extends Parser {
 				setState(23); 
 				_errHandler.sync(this);
 				_la = _input.LA(1);
-			} while ( _la==PA || _la==LUJVO );
+			} while ( (((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << LUJVO) | (1L << PA) | (1L << CMAVOAB))) != 0) );
 			}
 		}
 		catch (RecognitionException re) {
@@ -239,6 +239,7 @@ public class ColorParser extends Parser {
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case PA:
+			case CMAVOAB:
 				enterOuterAlt(_localctx, 1);
 				{
 				setState(25);
@@ -254,43 +255,6 @@ public class ColorParser extends Parser {
 				break;
 			default:
 				throw new NoViableAltException(this);
-			}
-		}
-		catch (RecognitionException re) {
-			_localctx.exception = re;
-			_errHandler.reportError(this, re);
-			_errHandler.recover(this, re);
-		}
-		finally {
-			exitRule();
-		}
-		return _localctx;
-	}
-
-	public static class CmavoContext extends ParserRuleContext {
-		public TerminalNode PA() { return getToken(ColorParser.PA, 0); }
-		public CmavoContext(ParserRuleContext parent, int invokingState) {
-			super(parent, invokingState);
-		}
-		@Override public int getRuleIndex() { return RULE_cmavo; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof ColorListener ) ((ColorListener)listener).enterCmavo(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof ColorListener ) ((ColorListener)listener).exitCmavo(this);
-		}
-	}
-
-	public final CmavoContext cmavo() throws RecognitionException {
-		CmavoContext _localctx = new CmavoContext(_ctx, getState());
-		enterRule(_localctx, 6, RULE_cmavo);
-		try {
-			enterOuterAlt(_localctx, 1);
-			{
-			setState(29);
-			match(PA);
 			}
 		}
 		catch (RecognitionException re) {
@@ -322,11 +286,11 @@ public class ColorParser extends Parser {
 
 	public final LujvoContext lujvo() throws RecognitionException {
 		LujvoContext _localctx = new LujvoContext(_ctx, getState());
-		enterRule(_localctx, 8, RULE_lujvo);
+		enterRule(_localctx, 6, RULE_lujvo);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(31);
+			setState(29);
 			match(LUJVO);
 			}
 		}
@@ -341,30 +305,77 @@ public class ColorParser extends Parser {
 		return _localctx;
 	}
 
+	public static class CmavoContext extends ParserRuleContext {
+		public TerminalNode PA() { return getToken(ColorParser.PA, 0); }
+		public TerminalNode CMAVOAB() { return getToken(ColorParser.CMAVOAB, 0); }
+		public CmavoContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_cmavo; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof ColorListener ) ((ColorListener)listener).enterCmavo(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof ColorListener ) ((ColorListener)listener).exitCmavo(this);
+		}
+	}
+
+	public final CmavoContext cmavo() throws RecognitionException {
+		CmavoContext _localctx = new CmavoContext(_ctx, getState());
+		enterRule(_localctx, 8, RULE_cmavo);
+		int _la;
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(31);
+			_la = _input.LA(1);
+			if ( !(_la==PA || _la==CMAVOAB) ) {
+			_errHandler.recoverInline(this);
+			}
+			else {
+				if ( _input.LA(1)==Token.EOF ) matchedEOF = true;
+				_errHandler.reportMatch(this);
+				consume();
+			}
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
 	public static final String _serializedATN =
-		"\u0004\u0001\u0005\"\u0002\u0000\u0007\u0000\u0002\u0001\u0007\u0001\u0002"+
+		"\u0004\u0001\u0006\"\u0002\u0000\u0007\u0000\u0002\u0001\u0007\u0001\u0002"+
 		"\u0002\u0007\u0002\u0002\u0003\u0007\u0003\u0002\u0004\u0007\u0004\u0001"+
 		"\u0000\u0001\u0000\u0003\u0000\r\b\u0000\u0001\u0000\u0001\u0000\u0004"+
 		"\u0000\u0011\b\u0000\u000b\u0000\f\u0000\u0012\u0001\u0001\u0004\u0001"+
 		"\u0016\b\u0001\u000b\u0001\f\u0001\u0017\u0001\u0002\u0001\u0002\u0003"+
 		"\u0002\u001c\b\u0002\u0001\u0003\u0001\u0003\u0001\u0004\u0001\u0004\u0001"+
-		"\u0004\u0000\u0000\u0005\u0000\u0002\u0004\u0006\b\u0000\u0000 \u0000"+
-		"\u0010\u0001\u0000\u0000\u0000\u0002\u0015\u0001\u0000\u0000\u0000\u0004"+
-		"\u001b\u0001\u0000\u0000\u0000\u0006\u001d\u0001\u0000\u0000\u0000\b\u001f"+
-		"\u0001\u0000\u0000\u0000\n\f\u0003\u0002\u0001\u0000\u000b\r\u0005\u0001"+
-		"\u0000\u0000\f\u000b\u0001\u0000\u0000\u0000\f\r\u0001\u0000\u0000\u0000"+
-		"\r\u000e\u0001\u0000\u0000\u0000\u000e\u000f\u0005\u0002\u0000\u0000\u000f"+
-		"\u0011\u0001\u0000\u0000\u0000\u0010\n\u0001\u0000\u0000\u0000\u0011\u0012"+
-		"\u0001\u0000\u0000\u0000\u0012\u0010\u0001\u0000\u0000\u0000\u0012\u0013"+
-		"\u0001\u0000\u0000\u0000\u0013\u0001\u0001\u0000\u0000\u0000\u0014\u0016"+
-		"\u0003\u0004\u0002\u0000\u0015\u0014\u0001\u0000\u0000\u0000\u0016\u0017"+
-		"\u0001\u0000\u0000\u0000\u0017\u0015\u0001\u0000\u0000\u0000\u0017\u0018"+
-		"\u0001\u0000\u0000\u0000\u0018\u0003\u0001\u0000\u0000\u0000\u0019\u001c"+
-		"\u0003\u0006\u0003\u0000\u001a\u001c\u0003\b\u0004\u0000\u001b\u0019\u0001"+
-		"\u0000\u0000\u0000\u001b\u001a\u0001\u0000\u0000\u0000\u001c\u0005\u0001"+
-		"\u0000\u0000\u0000\u001d\u001e\u0005\u0004\u0000\u0000\u001e\u0007\u0001"+
-		"\u0000\u0000\u0000\u001f \u0005\u0005\u0000\u0000 \t\u0001\u0000\u0000"+
-		"\u0000\u0004\f\u0012\u0017\u001b";
+		"\u0004\u0000\u0000\u0005\u0000\u0002\u0004\u0006\b\u0000\u0001\u0001\u0000"+
+		"\u0005\u0006 \u0000\u0010\u0001\u0000\u0000\u0000\u0002\u0015\u0001\u0000"+
+		"\u0000\u0000\u0004\u001b\u0001\u0000\u0000\u0000\u0006\u001d\u0001\u0000"+
+		"\u0000\u0000\b\u001f\u0001\u0000\u0000\u0000\n\f\u0003\u0002\u0001\u0000"+
+		"\u000b\r\u0005\u0001\u0000\u0000\f\u000b\u0001\u0000\u0000\u0000\f\r\u0001"+
+		"\u0000\u0000\u0000\r\u000e\u0001\u0000\u0000\u0000\u000e\u000f\u0005\u0002"+
+		"\u0000\u0000\u000f\u0011\u0001\u0000\u0000\u0000\u0010\n\u0001\u0000\u0000"+
+		"\u0000\u0011\u0012\u0001\u0000\u0000\u0000\u0012\u0010\u0001\u0000\u0000"+
+		"\u0000\u0012\u0013\u0001\u0000\u0000\u0000\u0013\u0001\u0001\u0000\u0000"+
+		"\u0000\u0014\u0016\u0003\u0004\u0002\u0000\u0015\u0014\u0001\u0000\u0000"+
+		"\u0000\u0016\u0017\u0001\u0000\u0000\u0000\u0017\u0015\u0001\u0000\u0000"+
+		"\u0000\u0017\u0018\u0001\u0000\u0000\u0000\u0018\u0003\u0001\u0000\u0000"+
+		"\u0000\u0019\u001c\u0003\b\u0004\u0000\u001a\u001c\u0003\u0006\u0003\u0000"+
+		"\u001b\u0019\u0001\u0000\u0000\u0000\u001b\u001a\u0001\u0000\u0000\u0000"+
+		"\u001c\u0005\u0001\u0000\u0000\u0000\u001d\u001e\u0005\u0004\u0000\u0000"+
+		"\u001e\u0007\u0001\u0000\u0000\u0000\u001f \u0007\u0000\u0000\u0000 \t"+
+		"\u0001\u0000\u0000\u0000\u0004\f\u0012\u0017\u001b";
 	public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());
 	static {

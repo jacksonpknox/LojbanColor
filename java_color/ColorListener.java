@@ -1,4 +1,4 @@
-// Generated from Color.g4 by ANTLR 4.10.1
+// Generated from grammars/Color.g4 by ANTLR 4.10.1
 import org.antlr.v4.runtime.tree.ParseTreeListener;
 
 /**
@@ -37,16 +37,6 @@ public interface ColorListener extends ParseTreeListener {
 	 */
 	void exitWord(ColorParser.WordContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ColorParser#cmavo}.
-	 * @param ctx the parse tree
-	 */
-	void enterCmavo(ColorParser.CmavoContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link ColorParser#cmavo}.
-	 * @param ctx the parse tree
-	 */
-	void exitCmavo(ColorParser.CmavoContext ctx);
-	/**
 	 * Enter a parse tree produced by {@link ColorParser#lujvo}.
 	 * @param ctx the parse tree
 	 */
@@ -56,4 +46,14 @@ public interface ColorListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitLujvo(ColorParser.LujvoContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link ColorParser#cmavo}.
+	 * @param ctx the parse tree
+	 */
+	void enterCmavo(ColorParser.CmavoContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link ColorParser#cmavo}.
+	 * @param ctx the parse tree
+	 */
+	void exitCmavo(ColorParser.CmavoContext ctx);
 }

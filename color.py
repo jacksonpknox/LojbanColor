@@ -55,8 +55,11 @@ class Colorizer(ColorListener):
     def exitWord(self, ctx):
         print(" ", end='')
         
-    def enterCmavo(self, ctx):
+    def enterPa(self, ctx):
         put(ctx, "magenta")
+
+    def enterCmavoab(self, ctx):
+        put(ctx, "bright_yellow")
         
     def enterLujvo(self, ctx):
         process_lujvo(ctx.getText())

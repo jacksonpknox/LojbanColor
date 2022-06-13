@@ -1,4 +1,5 @@
 grammar Color;
+import Cmavo;
 
 folio : (sentence '\r'? '\n')+ ;
 
@@ -6,7 +7,6 @@ sentence : word+ ;
 
 word : cmavo | lujvo ;
 
-cmavo : PA ;
 lujvo : LUJVO ;
 
 /*
@@ -14,7 +14,6 @@ lujvo : LUJVO ;
  */
 WS : (' ' | '\t') -> skip ;
 
-PA : ('pa' | 're' | 'ci' | 'vo' | 'mu' | 'xa' | 'ze' | 'bi' | 'so' | 'no') ;
 LUJVO : BOBVO | COBVO | DOBVO | FOBVO | GISMU ;
 
 fragment BOBVO : RAFPAIRCON Y TAILVO ;
