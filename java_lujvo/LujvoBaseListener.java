@@ -75,6 +75,18 @@ public class LujvoBaseListener implements LujvoListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterGismu(LujvoParser.GismuContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitGismu(LujvoParser.GismuContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterTworafcon(LujvoParser.TworafconContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -202,18 +214,6 @@ public class LujvoBaseListener implements LujvoListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitVuraf(LujvoParser.VurafContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterGismu(LujvoParser.GismuContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitGismu(LujvoParser.GismuContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
