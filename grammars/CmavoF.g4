@@ -58,6 +58,7 @@ FAHA : 'ca\'u'
         | 'ne\'u'
         | 'du\'a'
         | 'vu\'a'
+        | 'bu\'u'
     ;
 
 FAHO : 'fa\'o'

@@ -63,7 +63,7 @@ class Colorizer(ColorListener):
         put(ctx, "bright_yellow")
 
     def enterBy(self, ctx):
-        purt(ctx, "bright_red")
+        put(ctx, "bright_red")
 
     def enterUi(self, ctx):
         put(ctx, "white")

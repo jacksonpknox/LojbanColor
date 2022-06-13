@@ -27,11 +27,10 @@ bu : BU ;
 /*
  * Lexer Rules
  */
-A : 'a' 
-  | 'e'
-  | 'i'
-  | 'o'
-  | 'u'
+A : '.a' 
+  | '.e'
+  | '.o'
+  | '.u'
   ;
 
 BAHE : 'ba\'e'

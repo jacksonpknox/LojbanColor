@@ -271,7 +271,7 @@ class ColorParser ( Parser ):
                      "'fa'o'", "'fe'e'", "'fe'u'", "'fi'o'", "'foi'", "'fu'a'", 
                      "'fu'e'", "'fu'o'", "<INVALID>", "<INVALID>", "'ge'u'", 
                      "'gi'", "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
-                     "'i'", "'jai'", "<INVALID>", "'jo'i'", "<INVALID>", 
+                     "'.i'", "'jai'", "<INVALID>", "'jo'i'", "<INVALID>", 
                      "'ke'e'", "'kei'", "'ke'", "'ki'", "<INVALID>", "'ku'e'", 
                      "'ku'o'", "'ku'", "<INVALID>", "'la'", "<INVALID>", 
                      "'le'u'", "<INVALID>", "'li'u'", "'li'", "'lo'o'", 
