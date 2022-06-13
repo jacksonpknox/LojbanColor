@@ -25,7 +25,7 @@ fragment GISMU : C (C V | V C) C V ;
 fragment C : [bcdfgjklmnprstvxz] ;
 fragment V : [aeiou] ;
 fragment RAFPAIRCON : (BALRAF Q? | BRORAF | BAURAF Q) BALRAF ;
-fragment Y : 'y' ;
+fragment Y : 'y';
 fragment TAILVO : (BALRAF Y? | STUMP Y | VURAF)* (VURAF | GISMU) ;
 fragment RAFPAIRVOW : (BALRAF | BRORAF | BAURAF) Q? BRORAF
                     | (BALRAF Q? | VURAF Q) BAURAF

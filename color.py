@@ -59,11 +59,53 @@ class Colorizer(ColorListener):
     def exitWord(self, ctx):
         print(" ", end="")
 
-    def enterPa(self, ctx):
-        put(ctx, "magenta")
+    def enterBai(self, ctx):
+        put(ctx, "bright_yellow")
+
+    def enterBy(self, ctx):
+        purt(ctx, "bright_red")
+
+    def enterUi(self, ctx):
+        put(ctx, "white")
 
     def enterCmavoab(self, ctx):
+        put(ctx, "black")
+
+    def enterCmavocd(self, ctx):
+        put(ctx, "red")
+
+    def enterCmavocd(self, ctx):
+        put(ctx, "green")
+
+    def enterCmavof(self, ctx):
+        put(ctx, "yellow")
+
+    def enterCmavogi(self, ctx):
+        put(ctx, "blue")
+
+    def enterCmavojk(self, ctx):
+        put(ctx, "magenta")
+
+    def enterCmavol(self, ctx):
+        put(ctx, "cyan")
+
+    def enterCmavof(self, ctx):
+        put(ctx, "white")
+
+    def enterCmavop(self, ctx):
+        put(ctx, "bright_magenta")
+
+    def enterCmavors(self, ctx):
+        put(ctx, "bright_red")
+
+    def enterCmavot(self, ctx):
+        put(ctx, "bright_green")
+
+    def enterCmavovy(self, ctx):
         put(ctx, "bright_yellow")
+
+    def enterCmavoz(self, ctx):
+        put(ctx, "bright_blue")
 
     def enterLujvo(self, ctx):
         process_lujvo(ctx.getText())

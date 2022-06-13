@@ -1,3 +1,4 @@
+- finish the longers
 - expand grammar
 - put gismu list in this repository (for funzies)
 

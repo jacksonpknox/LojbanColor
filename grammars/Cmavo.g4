@@ -1,8 +1,10 @@
 grammar Cmavo;
 
-import CmavoAB,CmavoCD,CmavoF,CmavoGI,CmavoJK,CmavoL,CmavoMN,CmavoP,CmavoRS,CmavoT,CmavoVY,CmavoZ;
+import CmavoAB,BAI,BY,UI,CmavoCD,CmavoF,CmavoGI,CmavoJK,CmavoL,CmavoMN,CmavoP,CmavoRS,CmavoT,CmavoVY,CmavoZ;
 
 cmavo : cmavoab
+      | bai
+      | by
       | cmavocd
       | cmavof
       | cmavogi
@@ -12,6 +14,7 @@ cmavo : cmavoab
       | cmavop
       | cmavors
       | cmavot
+      | ui
       | cmavovy
       | cmavoz
       ;
