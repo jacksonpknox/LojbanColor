@@ -1,30 +1,17 @@
 grammar Cmavo;
 
-import CmavoAB;
-import CmavoCD;
-import CmavoF;
-import CmavoGI;
+import CmavoAB,CmavoCD,CmavoF,CmavoGI,CmavoJK,CmavoL,CmavoMN,CmavoP,CmavoRS,CmavoT,CmavoVY,CmavoZ;
 
-cmavo : pa 
-      | cmavoab
+cmavo : cmavoab
       | cmavocd
       | cmavof
       | cmavogi
+      | cmavojk
+      | cmavol
+      | cmavomn
+      | cmavop
+      | cmavors
+      | cmavot
+      | cmavovy
+      | cmavoz
       ;
-
-pa : PA ;
-
-/*
- * Lexer Rules
- */
-PA : 'pa'
-   | 're'
-   | 'ci'
-   | 'vo'
-   | 'mu'
-   | 'xa'
-   | 'ze'
-   | 'bi'
-   | 'so'
-   | 'no'
-   ;

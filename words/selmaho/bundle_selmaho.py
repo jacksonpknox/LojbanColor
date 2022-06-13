@@ -8,7 +8,7 @@ def fix_cmavo(cmavo: str) -> str:
 
 
 def contemplate(selmaho: str):
-    with open(selmaho.upper() + ".txt", "r") as g:
+    with open(selmaho + ".txt", "r") as g:
         cmavo_list = [fix_cmavo(cmavo) for cmavo in g.read().splitlines()]
     return {
         "little": selmaho.lower(),
