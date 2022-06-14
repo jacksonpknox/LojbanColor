@@ -26,3 +26,24 @@ antlr4 -Dlanguage=Python3 Grammar.g4
 ```
 - [here](https://rich.readthedocs.io/en/stable/appendix/colors.html) are the colors supported by terminals/rich
 - try to use just the first 16
+
+## Colors
+### brivla
+| token | color |
+| --- | --- |
+| Gismu | #FF0000 | 
+| cafourraf | #FF8000 |
+| vafourraf | #FF8080 |
+| broraf | #FFC080 |
+| balraf | #FFC0C0 |
+| bauraf | #FFFFC0 |
+
+### cmavo
+| token | color |
+| --- | --- |
+| | #0000FF |
+| | #0080FF |
+| | #8080FF |
+| | #80C0FF |
+| | #C0C0FF |
+| | #C0FFFF |
