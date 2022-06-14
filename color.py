@@ -24,20 +24,23 @@ class LujvoColorizer(LujvoListener):
     def enterQ(self, ctx):
         put(ctx, "yellow")
 
-    def enterStump(self, ctx):
-        put(ctx, "red")
+    def enterCafourraf(self, ctx):
+        put(ctx, "#FF8000 on #222222")
+
+    def enterCkfourraf(self, ctx):
+        put(ctx, "#FF8080 on #222222")
 
     def enterBalraf(self, ctx):
-        put(ctx, "blue")
+        put(ctx, "#FFC0C0 on #222222")
 
     def enterBauraf(self, ctx):
-        put(ctx, "green")
+        put(ctx, "#FFFFC0 on #222222")
 
     def enterBroraf(self, ctx):
-        put(ctx, "bright_cyan")
+        put(ctx, "#FFC080 on #222222")
 
     def enterGismu(self, ctx):
-        put(ctx, "bright_red")
+        put(ctx, "#FF0000 on #222222")
 
 
 def process_lujvo(lujvo: str):
@@ -60,58 +63,55 @@ class Colorizer(ColorListener):
         print(" ", end="")
 
     def enterBai(self, ctx):
-        put(ctx, "bright_yellow")
+        put(ctx, "#0000FF")
 
     def enterBy(self, ctx):
-        put(ctx, "bright_red")
+        put(ctx, "#8080FF")
 
     def enterUi(self, ctx):
-        put(ctx, "white")
+        put(ctx, "#8080FF")
 
     def enterCmavoab(self, ctx):
-        put(ctx, "black")
+        put(ctx, "#8080FF")
 
     def enterCmavocd(self, ctx):
-        put(ctx, "red")
-
-    def enterCmavocd(self, ctx):
-        put(ctx, "green")
+        put(ctx, "#80C0FF")
 
     def enterCmavof(self, ctx):
-        put(ctx, "yellow")
+        put(ctx, "#C0C0FF")
 
     def enterCmavogi(self, ctx):
-        put(ctx, "blue")
+        put(ctx, "#C0FFFF")
 
     def enterCmavojk(self, ctx):
-        put(ctx, "magenta")
+        put(ctx, "#8080FF")
 
     def enterCmavol(self, ctx):
-        put(ctx, "cyan")
+        put(ctx, "#80C0FF")
 
     def enterCmavomn(self, ctx):
-        put(ctx, "white")
+        put(ctx, "#C0C0FF")
 
     def enterCmavop(self, ctx):
-        put(ctx, "bright_magenta")
+        put(ctx, "#C0FFFF")
 
     def enterCmavors(self, ctx):
-        put(ctx, "bright_red")
+        put(ctx, "#8080FF")
 
     def enterCmavot(self, ctx):
-        put(ctx, "bright_green")
+        put(ctx, "#80C0FF")
 
     def enterCmavovy(self, ctx):
-        put(ctx, "bright_yellow")
+        put(ctx, "#C0C0FF")
 
     def enterCmavoz(self, ctx):
-        put(ctx, "bright_blue")
+        put(ctx, "#C0FFFF")
 
     def enterLujvo(self, ctx):
         process_lujvo(ctx.getText())
 
     def enterGismu(self, ctx):
-        put(ctx, "bright_red")
+        put(ctx, "#FF0000 on #222222")
 
 
 def main(argv):

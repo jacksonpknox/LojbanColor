@@ -33,17 +33,17 @@ antlr4 -Dlanguage=Python3 Grammar.g4
 | --- | --- |
 | Gismu | #FF0000 | 
 | cafourraf | #FF8000 |
-| vafourraf | #FF8080 |
-| broraf | #FFC080 |
-| balraf | #FFC0C0 |
-| bauraf | #FFFFC0 |
+| ckfourraf | #FF8000 |
+| broraf | #FFC000 |
+| balraf | #FFFF00 |
+| bauraf | #C0FF00 |
 
 ### cmavo
 | token | color |
 | --- | --- |
-| | #0000FF |
-| | #0080FF |
-| | #8080FF |
-| | #80C0FF |
-| | #C0C0FF |
-| | #C0FFFF |
+| bai | #0000FF |
+| by | #0080FF |
+| cmavoab, cmavojk, cmavors | #8080FF |
+| cmavocd, cmavol, cmavot | #80C0FF |
+| cmavof, cmavomn, vy | #C0C0FF |
+| cmavogi, cmavop, z | #C0FFFF |

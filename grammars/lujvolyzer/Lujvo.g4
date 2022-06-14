@@ -1,4 +1,4 @@
-grammar LujvoForLex;
+grammar Lujvo;
 
 lujvo : bobvo | cobvo | dobvo | fobvo | gismu;
 
