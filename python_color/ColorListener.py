@@ -35,12 +35,30 @@ class ColorListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by ColorParser#brivla.
+    def enterBrivla(self, ctx:ColorParser.BrivlaContext):
+        pass
+
+    # Exit a parse tree produced by ColorParser#brivla.
+    def exitBrivla(self, ctx:ColorParser.BrivlaContext):
+        pass
+
+
     # Enter a parse tree produced by ColorParser#lujvo.
     def enterLujvo(self, ctx:ColorParser.LujvoContext):
         pass
 
     # Exit a parse tree produced by ColorParser#lujvo.
     def exitLujvo(self, ctx:ColorParser.LujvoContext):
+        pass
+
+
+    # Enter a parse tree produced by ColorParser#gismu.
+    def enterGismu(self, ctx:ColorParser.GismuContext):
+        pass
+
+    # Exit a parse tree produced by ColorParser#gismu.
+    def exitGismu(self, ctx:ColorParser.GismuContext):
         pass
 
 

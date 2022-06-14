@@ -89,7 +89,7 @@ class Colorizer(ColorListener):
     def enterCmavol(self, ctx):
         put(ctx, "cyan")
 
-    def enterCmavof(self, ctx):
+    def enterCmavomn(self, ctx):
         put(ctx, "white")
 
     def enterCmavop(self, ctx):
@@ -109,6 +109,9 @@ class Colorizer(ColorListener):
 
     def enterLujvo(self, ctx):
         process_lujvo(ctx.getText())
+
+    def enterGismu(self, ctx):
+        put(ctx, "bright_red")
 
 
 def main(argv):

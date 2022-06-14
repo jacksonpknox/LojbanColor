@@ -1,4 +1,4 @@
-grammar Lujvo;
+grammar LujvoForLex;
 
 lujvo : bobvo | cobvo | dobvo | fobvo | gismu;
 
@@ -12,7 +12,7 @@ tworafcon : (balraf q? | broraf | bauraf q) balraf ;
 y : Y ;
 tailvo : (balraf y? | stump y | vuraf)* (vuraf | gismu) ;
 tworafvow : (balraf | broraf | bauraf) q? broraf
-          | (balraf q? | vuraf q) bauraf
+          | ((balraf | broraf) q? | bauraf q) bauraf
           ;
 stump : cafourraf | ckfourraf ;
 rafstump : balraf q? stump
