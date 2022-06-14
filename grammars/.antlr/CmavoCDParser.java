@@ -16,27 +16,31 @@ public class CmavoCDParser extends Parser {
 	protected static final PredictionContextCache _sharedContextCache =
 		new PredictionContextCache();
 	public static final int
-		CAHA=1, CEHE=2, CEI=3, CO=4, CU=5, CUHE=6, DAHO=7, DOHU=8, DOI=9;
+		CAHA=1, CAI=2, CEHE=3, CEI=4, CO=5, COI=6, CU=7, CUHE=8, DAHO=9, DOHU=10, 
+		DOI=11;
 	public static final int
-		RULE_cmavocd = 0, RULE_caha = 1, RULE_cehe = 2, RULE_cei = 3, RULE_co = 4, 
-		RULE_cu = 5, RULE_cuhe = 6, RULE_daho = 7, RULE_doi = 8;
+		RULE_cmavocd = 0, RULE_caha = 1, RULE_cai = 2, RULE_cehe = 3, RULE_cei = 4, 
+		RULE_co = 5, RULE_coi = 6, RULE_cu = 7, RULE_cuhe = 8, RULE_daho = 9, 
+		RULE_doi = 10;
 	private static String[] makeRuleNames() {
 		return new String[] {
-			"cmavocd", "caha", "cehe", "cei", "co", "cu", "cuhe", "daho", "doi"
+			"cmavocd", "caha", "cai", "cehe", "cei", "co", "coi", "cu", "cuhe", "daho", 
+			"doi"
 		};
 	}
 	public static final String[] ruleNames = makeRuleNames();
 
 	private static String[] makeLiteralNames() {
 		return new String[] {
-			null, null, "'ce'e'", "'cei'", "'co'", "'cu'", null, "'da'o'", "'do'u'", 
-			"'doi'"
+			null, null, null, "'ce'e'", "'cei'", "'co'", null, "'cu'", null, "'da'o'", 
+			"'do'u'", "'doi'"
 		};
 	}
 	private static final String[] _LITERAL_NAMES = makeLiteralNames();
 	private static String[] makeSymbolicNames() {
 		return new String[] {
-			null, "CAHA", "CEHE", "CEI", "CO", "CU", "CUHE", "DAHO", "DOHU", "DOI"
+			null, "CAHA", "CAI", "CEHE", "CEI", "CO", "COI", "CU", "CUHE", "DAHO", 
+			"DOHU", "DOI"
 		};
 	}
 	private static final String[] _SYMBOLIC_NAMES = makeSymbolicNames();
@@ -94,6 +98,9 @@ public class CmavoCDParser extends Parser {
 		public CahaContext caha() {
 			return getRuleContext(CahaContext.class,0);
 		}
+		public CaiContext cai() {
+			return getRuleContext(CaiContext.class,0);
+		}
 		public CeheContext cehe() {
 			return getRuleContext(CeheContext.class,0);
 		}
@@ -102,6 +109,9 @@ public class CmavoCDParser extends Parser {
 		}
 		public CoContext co() {
 			return getRuleContext(CoContext.class,0);
+		}
+		public CoiContext coi() {
+			return getRuleContext(CoiContext.class,0);
 		}
 		public CuContext cu() {
 			return getRuleContext(CuContext.class,0);
@@ -125,62 +135,76 @@ public class CmavoCDParser extends Parser {
 		CmavocdContext _localctx = new CmavocdContext(_ctx, getState());
 		enterRule(_localctx, 0, RULE_cmavocd);
 		try {
-			setState(26);
+			setState(32);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case CAHA:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(18);
+				setState(22);
 				caha();
 				}
 				break;
-			case CEHE:
+			case CAI:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(19);
+				setState(23);
+				cai();
+				}
+				break;
+			case CEHE:
+				enterOuterAlt(_localctx, 3);
+				{
+				setState(24);
 				cehe();
 				}
 				break;
 			case CEI:
-				enterOuterAlt(_localctx, 3);
+				enterOuterAlt(_localctx, 4);
 				{
-				setState(20);
+				setState(25);
 				cei();
 				}
 				break;
 			case CO:
-				enterOuterAlt(_localctx, 4);
+				enterOuterAlt(_localctx, 5);
 				{
-				setState(21);
+				setState(26);
 				co();
 				}
 				break;
-			case CU:
-				enterOuterAlt(_localctx, 5);
+			case COI:
+				enterOuterAlt(_localctx, 6);
 				{
-				setState(22);
+				setState(27);
+				coi();
+				}
+				break;
+			case CU:
+				enterOuterAlt(_localctx, 7);
+				{
+				setState(28);
 				cu();
 				}
 				break;
 			case CUHE:
-				enterOuterAlt(_localctx, 6);
+				enterOuterAlt(_localctx, 8);
 				{
-				setState(23);
+				setState(29);
 				cuhe();
 				}
 				break;
 			case DAHO:
-				enterOuterAlt(_localctx, 7);
+				enterOuterAlt(_localctx, 9);
 				{
-				setState(24);
+				setState(30);
 				daho();
 				}
 				break;
 			case DOI:
-				enterOuterAlt(_localctx, 8);
+				enterOuterAlt(_localctx, 10);
 				{
-				setState(25);
+				setState(31);
 				doi();
 				}
 				break;
@@ -213,8 +237,37 @@ public class CmavoCDParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(28);
+			setState(34);
 			match(CAHA);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	public static class CaiContext extends ParserRuleContext {
+		public TerminalNode CAI() { return getToken(CmavoCDParser.CAI, 0); }
+		public CaiContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_cai; }
+	}
+
+	public final CaiContext cai() throws RecognitionException {
+		CaiContext _localctx = new CaiContext(_ctx, getState());
+		enterRule(_localctx, 4, RULE_cai);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(36);
+			match(CAI);
 			}
 		}
 		catch (RecognitionException re) {
@@ -238,11 +291,11 @@ public class CmavoCDParser extends Parser {
 
 	public final CeheContext cehe() throws RecognitionException {
 		CeheContext _localctx = new CeheContext(_ctx, getState());
-		enterRule(_localctx, 4, RULE_cehe);
+		enterRule(_localctx, 6, RULE_cehe);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(30);
+			setState(38);
 			match(CEHE);
 			}
 		}
@@ -267,11 +320,11 @@ public class CmavoCDParser extends Parser {
 
 	public final CeiContext cei() throws RecognitionException {
 		CeiContext _localctx = new CeiContext(_ctx, getState());
-		enterRule(_localctx, 6, RULE_cei);
+		enterRule(_localctx, 8, RULE_cei);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(32);
+			setState(40);
 			match(CEI);
 			}
 		}
@@ -296,12 +349,41 @@ public class CmavoCDParser extends Parser {
 
 	public final CoContext co() throws RecognitionException {
 		CoContext _localctx = new CoContext(_ctx, getState());
-		enterRule(_localctx, 8, RULE_co);
+		enterRule(_localctx, 10, RULE_co);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(34);
+			setState(42);
 			match(CO);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	public static class CoiContext extends ParserRuleContext {
+		public TerminalNode COI() { return getToken(CmavoCDParser.COI, 0); }
+		public CoiContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_coi; }
+	}
+
+	public final CoiContext coi() throws RecognitionException {
+		CoiContext _localctx = new CoiContext(_ctx, getState());
+		enterRule(_localctx, 12, RULE_coi);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(44);
+			match(COI);
 			}
 		}
 		catch (RecognitionException re) {
@@ -325,11 +407,11 @@ public class CmavoCDParser extends Parser {
 
 	public final CuContext cu() throws RecognitionException {
 		CuContext _localctx = new CuContext(_ctx, getState());
-		enterRule(_localctx, 10, RULE_cu);
+		enterRule(_localctx, 14, RULE_cu);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(36);
+			setState(46);
 			match(CU);
 			}
 		}
@@ -354,11 +436,11 @@ public class CmavoCDParser extends Parser {
 
 	public final CuheContext cuhe() throws RecognitionException {
 		CuheContext _localctx = new CuheContext(_ctx, getState());
-		enterRule(_localctx, 12, RULE_cuhe);
+		enterRule(_localctx, 16, RULE_cuhe);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(38);
+			setState(48);
 			match(CUHE);
 			}
 		}
@@ -383,11 +465,11 @@ public class CmavoCDParser extends Parser {
 
 	public final DahoContext daho() throws RecognitionException {
 		DahoContext _localctx = new DahoContext(_ctx, getState());
-		enterRule(_localctx, 14, RULE_daho);
+		enterRule(_localctx, 18, RULE_daho);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(40);
+			setState(50);
 			match(DAHO);
 			}
 		}
@@ -412,11 +494,11 @@ public class CmavoCDParser extends Parser {
 
 	public final DoiContext doi() throws RecognitionException {
 		DoiContext _localctx = new DoiContext(_ctx, getState());
-		enterRule(_localctx, 16, RULE_doi);
+		enterRule(_localctx, 20, RULE_doi);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(42);
+			setState(52);
 			match(DOI);
 			}
 		}
@@ -432,18 +514,20 @@ public class CmavoCDParser extends Parser {
 	}
 
 	public static final String _serializedATN =
-		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\13/\4\2\t\2\4\3\t"+
-		"\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7\4\b\t\b\4\t\t\t\4\n\t\n\3\2\3\2\3\2"+
-		"\3\2\3\2\3\2\3\2\3\2\5\2\35\n\2\3\3\3\3\3\4\3\4\3\5\3\5\3\6\3\6\3\7\3"+
-		"\7\3\b\3\b\3\t\3\t\3\n\3\n\3\n\2\2\13\2\4\6\b\n\f\16\20\22\2\2\2,\2\34"+
-		"\3\2\2\2\4\36\3\2\2\2\6 \3\2\2\2\b\"\3\2\2\2\n$\3\2\2\2\f&\3\2\2\2\16"+
-		"(\3\2\2\2\20*\3\2\2\2\22,\3\2\2\2\24\35\5\4\3\2\25\35\5\6\4\2\26\35\5"+
-		"\b\5\2\27\35\5\n\6\2\30\35\5\f\7\2\31\35\5\16\b\2\32\35\5\20\t\2\33\35"+
-		"\5\22\n\2\34\24\3\2\2\2\34\25\3\2\2\2\34\26\3\2\2\2\34\27\3\2\2\2\34\30"+
-		"\3\2\2\2\34\31\3\2\2\2\34\32\3\2\2\2\34\33\3\2\2\2\35\3\3\2\2\2\36\37"+
-		"\7\3\2\2\37\5\3\2\2\2 !\7\4\2\2!\7\3\2\2\2\"#\7\5\2\2#\t\3\2\2\2$%\7\6"+
-		"\2\2%\13\3\2\2\2&\'\7\7\2\2\'\r\3\2\2\2()\7\b\2\2)\17\3\2\2\2*+\7\t\2"+
-		"\2+\21\3\2\2\2,-\7\13\2\2-\23\3\2\2\2\3\34";
+		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\r9\4\2\t\2\4\3\t"+
+		"\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7\4\b\t\b\4\t\t\t\4\n\t\n\4\13\t\13\4"+
+		"\f\t\f\3\2\3\2\3\2\3\2\3\2\3\2\3\2\3\2\3\2\3\2\5\2#\n\2\3\3\3\3\3\4\3"+
+		"\4\3\5\3\5\3\6\3\6\3\7\3\7\3\b\3\b\3\t\3\t\3\n\3\n\3\13\3\13\3\f\3\f\3"+
+		"\f\2\2\r\2\4\6\b\n\f\16\20\22\24\26\2\2\2\66\2\"\3\2\2\2\4$\3\2\2\2\6"+
+		"&\3\2\2\2\b(\3\2\2\2\n*\3\2\2\2\f,\3\2\2\2\16.\3\2\2\2\20\60\3\2\2\2\22"+
+		"\62\3\2\2\2\24\64\3\2\2\2\26\66\3\2\2\2\30#\5\4\3\2\31#\5\6\4\2\32#\5"+
+		"\b\5\2\33#\5\n\6\2\34#\5\f\7\2\35#\5\16\b\2\36#\5\20\t\2\37#\5\22\n\2"+
+		" #\5\24\13\2!#\5\26\f\2\"\30\3\2\2\2\"\31\3\2\2\2\"\32\3\2\2\2\"\33\3"+
+		"\2\2\2\"\34\3\2\2\2\"\35\3\2\2\2\"\36\3\2\2\2\"\37\3\2\2\2\" \3\2\2\2"+
+		"\"!\3\2\2\2#\3\3\2\2\2$%\7\3\2\2%\5\3\2\2\2&\'\7\4\2\2\'\7\3\2\2\2()\7"+
+		"\5\2\2)\t\3\2\2\2*+\7\6\2\2+\13\3\2\2\2,-\7\7\2\2-\r\3\2\2\2./\7\b\2\2"+
+		"/\17\3\2\2\2\60\61\7\t\2\2\61\21\3\2\2\2\62\63\7\n\2\2\63\23\3\2\2\2\64"+
+		"\65\7\13\2\2\65\25\3\2\2\2\66\67\7\r\2\2\67\27\3\2\2\2\3\"";
 	public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());
 	static {

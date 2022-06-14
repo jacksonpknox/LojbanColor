@@ -33,7 +33,7 @@ fragment RAFSTUMP : BALRAF Q? STUMP
                   ;
 
 fragment BALRAF : C V C ;
-fragment Q : 'q' ;
+fragment Q : 'q' | 'r' | 'l' ;
 fragment BRORAF : C C V ;
 fragment BAURAF : C V '\''? V ;
 fragment VURAF : BAURAF | BRORAF ;

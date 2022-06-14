@@ -16,7 +16,7 @@ public class LujvoParser extends Parser {
 	protected static final PredictionContextCache _sharedContextCache =
 		new PredictionContextCache();
 	public static final int
-		T__0=1, Y=2, Q=3, C=4, V=5;
+		T__0=1, Y=2, C=3, V=4;
 	public static final int
 		RULE_lujvo = 0, RULE_bobvo = 1, RULE_cobvo = 2, RULE_dobvo = 3, RULE_fobvo = 4, 
 		RULE_gismu = 5, RULE_tworafcon = 6, RULE_y = 7, RULE_tailvo = 8, RULE_tworafvow = 9, 
@@ -33,13 +33,13 @@ public class LujvoParser extends Parser {
 
 	private static String[] makeLiteralNames() {
 		return new String[] {
-			null, "'''", "'y'", "'q'"
+			null, "'''", "'y'"
 		};
 	}
 	private static final String[] _LITERAL_NAMES = makeLiteralNames();
 	private static String[] makeSymbolicNames() {
 		return new String[] {
-			null, null, "Y", "Q", "C", "V"
+			null, null, "Y", "C", "V"
 		};
 	}
 	private static final String[] _SYMBOLIC_NAMES = makeSymbolicNames();
@@ -442,7 +442,6 @@ public class LujvoParser extends Parser {
 	public final TworafconContext tworafcon() throws RecognitionException {
 		TworafconContext _localctx = new TworafconContext(_ctx, getState());
 		enterRule(_localctx, 12, RULE_tworafcon);
-		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
@@ -455,14 +454,14 @@ public class LujvoParser extends Parser {
 				balraf();
 				setState(76);
 				_errHandler.sync(this);
-				_la = _input.LA(1);
-				if (_la==Q) {
+				switch ( getInterpreter().adaptivePredict(_input,4,_ctx) ) {
+				case 1:
 					{
 					setState(75);
 					q();
 					}
+					break;
 				}
-
 				}
 				break;
 			case 2:
@@ -669,7 +668,6 @@ public class LujvoParser extends Parser {
 	public final TworafvowContext tworafvow() throws RecognitionException {
 		TworafvowContext _localctx = new TworafvowContext(_ctx, getState());
 		enterRule(_localctx, 18, RULE_tworafvow);
-		int _la;
 		try {
 			setState(129);
 			_errHandler.sync(this);
@@ -701,14 +699,14 @@ public class LujvoParser extends Parser {
 				}
 				setState(111);
 				_errHandler.sync(this);
-				_la = _input.LA(1);
-				if (_la==Q) {
+				switch ( getInterpreter().adaptivePredict(_input,11,_ctx) ) {
+				case 1:
 					{
 					setState(110);
 					q();
 					}
+					break;
 				}
-
 				setState(113);
 				broraf();
 				}
@@ -739,14 +737,14 @@ public class LujvoParser extends Parser {
 					}
 					setState(120);
 					_errHandler.sync(this);
-					_la = _input.LA(1);
-					if (_la==Q) {
+					switch ( getInterpreter().adaptivePredict(_input,13,_ctx) ) {
+					case 1:
 						{
 						setState(119);
 						q();
 						}
+						break;
 					}
-
 					}
 					break;
 				case 2:
@@ -850,7 +848,6 @@ public class LujvoParser extends Parser {
 	public final RafstumpContext rafstump() throws RecognitionException {
 		RafstumpContext _localctx = new RafstumpContext(_ctx, getState());
 		enterRule(_localctx, 22, RULE_rafstump);
-		int _la;
 		try {
 			setState(148);
 			_errHandler.sync(this);
@@ -862,14 +859,14 @@ public class LujvoParser extends Parser {
 				balraf();
 				setState(137);
 				_errHandler.sync(this);
-				_la = _input.LA(1);
-				if (_la==Q) {
+				switch ( getInterpreter().adaptivePredict(_input,17,_ctx) ) {
+				case 1:
 					{
 					setState(136);
 					q();
 					}
+					break;
 				}
-
 				setState(139);
 				stump();
 				}
@@ -945,7 +942,7 @@ public class LujvoParser extends Parser {
 	}
 
 	public static class QContext extends ParserRuleContext {
-		public TerminalNode Q() { return getToken(LujvoParser.Q, 0); }
+		public TerminalNode C() { return getToken(LujvoParser.C, 0); }
 		public QContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
@@ -959,7 +956,7 @@ public class LujvoParser extends Parser {
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(154);
-			match(Q);
+			match(C);
 			}
 		}
 		catch (RecognitionException re) {
@@ -1184,7 +1181,7 @@ public class LujvoParser extends Parser {
 	}
 
 	public static final String _serializedATN =
-		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\7\u00b8\4\2\t\2\4"+
+		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\6\u00b8\4\2\t\2\4"+
 		"\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7\4\b\t\b\4\t\t\t\4\n\t\n\4\13\t"+
 		"\13\4\f\t\f\4\r\t\r\4\16\t\16\4\17\t\17\4\20\t\20\4\21\t\21\4\22\t\22"+
 		"\4\23\t\23\4\24\t\24\3\2\3\2\3\2\3\2\3\2\5\2.\n\2\3\3\3\3\3\3\3\3\3\4"+
@@ -1207,8 +1204,8 @@ public class LujvoParser extends Parser {
 		"\5\22\n\2\62\5\3\2\2\2\63\66\5\16\b\2\64\66\5\24\13\2\65\63\3\2\2\2\65"+
 		"\64\3\2\2\2\668\3\2\2\2\679\5\22\n\28\67\3\2\2\289\3\2\2\29\7\3\2\2\2"+
 		":;\5\26\f\2;<\5\20\t\2<=\5\22\n\2=\t\3\2\2\2>?\5\30\r\2?@\5\20\t\2@A\5"+
-		"\22\n\2A\13\3\2\2\2BG\7\6\2\2CD\7\6\2\2DH\7\7\2\2EF\7\7\2\2FH\7\6\2\2"+
-		"GC\3\2\2\2GE\3\2\2\2HI\3\2\2\2IJ\7\6\2\2JK\7\7\2\2K\r\3\2\2\2LN\5\32\16"+
+		"\22\n\2A\13\3\2\2\2BG\7\5\2\2CD\7\5\2\2DH\7\6\2\2EF\7\6\2\2FH\7\5\2\2"+
+		"GC\3\2\2\2GE\3\2\2\2HI\3\2\2\2IJ\7\5\2\2JK\7\6\2\2K\r\3\2\2\2LN\5\32\16"+
 		"\2MO\5\34\17\2NM\3\2\2\2NO\3\2\2\2OU\3\2\2\2PU\5\36\20\2QR\5 \21\2RS\5"+
 		"\34\17\2SU\3\2\2\2TL\3\2\2\2TP\3\2\2\2TQ\3\2\2\2UV\3\2\2\2VW\5\32\16\2"+
 		"W\17\3\2\2\2XY\7\4\2\2Y\21\3\2\2\2Z\\\5\32\16\2[]\5\20\t\2\\[\3\2\2\2"+
@@ -1227,15 +1224,15 @@ public class LujvoParser extends Parser {
 		"\u0097\3\2\2\2\u008f\u0090\5\"\22\2\u0090\u0091\5\34\17\2\u0091\u0092"+
 		"\5$\23\2\u0092\u0097\3\2\2\2\u0093\u0094\5\"\22\2\u0094\u0095\5&\24\2"+
 		"\u0095\u0097\3\2\2\2\u0096\u0089\3\2\2\2\u0096\u008f\3\2\2\2\u0096\u0093"+
-		"\3\2\2\2\u0097\31\3\2\2\2\u0098\u0099\7\6\2\2\u0099\u009a\7\7\2\2\u009a"+
-		"\u009b\7\6\2\2\u009b\33\3\2\2\2\u009c\u009d\7\5\2\2\u009d\35\3\2\2\2\u009e"+
-		"\u009f\7\6\2\2\u009f\u00a0\7\6\2\2\u00a0\u00a1\7\7\2\2\u00a1\37\3\2\2"+
-		"\2\u00a2\u00a3\7\6\2\2\u00a3\u00a5\7\7\2\2\u00a4\u00a6\7\3\2\2\u00a5\u00a4"+
-		"\3\2\2\2\u00a5\u00a6\3\2\2\2\u00a6\u00a7\3\2\2\2\u00a7\u00a8\7\7\2\2\u00a8"+
+		"\3\2\2\2\u0097\31\3\2\2\2\u0098\u0099\7\5\2\2\u0099\u009a\7\6\2\2\u009a"+
+		"\u009b\7\5\2\2\u009b\33\3\2\2\2\u009c\u009d\7\5\2\2\u009d\35\3\2\2\2\u009e"+
+		"\u009f\7\5\2\2\u009f\u00a0\7\5\2\2\u00a0\u00a1\7\6\2\2\u00a1\37\3\2\2"+
+		"\2\u00a2\u00a3\7\5\2\2\u00a3\u00a5\7\6\2\2\u00a4\u00a6\7\3\2\2\u00a5\u00a4"+
+		"\3\2\2\2\u00a5\u00a6\3\2\2\2\u00a6\u00a7\3\2\2\2\u00a7\u00a8\7\6\2\2\u00a8"+
 		"!\3\2\2\2\u00a9\u00ac\5 \21\2\u00aa\u00ac\5\36\20\2\u00ab\u00a9\3\2\2"+
-		"\2\u00ab\u00aa\3\2\2\2\u00ac#\3\2\2\2\u00ad\u00ae\7\6\2\2\u00ae\u00af"+
-		"\7\7\2\2\u00af\u00b0\7\6\2\2\u00b0\u00b1\7\6\2\2\u00b1%\3\2\2\2\u00b2"+
-		"\u00b3\7\6\2\2\u00b3\u00b4\7\6\2\2\u00b4\u00b5\7\7\2\2\u00b5\u00b6\7\6"+
+		"\2\u00ab\u00aa\3\2\2\2\u00ac#\3\2\2\2\u00ad\u00ae\7\5\2\2\u00ae\u00af"+
+		"\7\6\2\2\u00af\u00b0\7\5\2\2\u00b0\u00b1\7\5\2\2\u00b1%\3\2\2\2\u00b2"+
+		"\u00b3\7\5\2\2\u00b3\u00b4\7\5\2\2\u00b4\u00b5\7\6\2\2\u00b5\u00b6\7\5"+
 		"\2\2\u00b6\'\3\2\2\2\27-\658GNT\\bdinqwz\177\u0083\u0087\u008b\u0096\u00a5"+
 		"\u00ab";
 	public static final ATN _ATN =

@@ -21,7 +21,7 @@ rafstump : balraf q? stump
          ;
 
 balraf : C V C ;
-q : Q ;
+q : C ;
 broraf : C C V ;
 bauraf : C V '\''? V ;
 vuraf : bauraf | broraf ;
@@ -32,8 +32,6 @@ ckfourraf : C C V C ;
  * Lexer Rules
  */
 Y : 'y' ;
-
-Q : 'q' ;
 
 C : [bcdfgjklmnprstvxz] ;
 

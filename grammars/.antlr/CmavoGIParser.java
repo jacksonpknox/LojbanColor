@@ -30,7 +30,7 @@ public class CmavoGIParser extends Parser {
 
 	private static String[] makeLiteralNames() {
 		return new String[] {
-			null, null, null, "'ge'u'", "'gi'", null, null, null, null, "'i'"
+			null, null, null, "'ge'u'", "'gi'", null, null, null, null, "'.i'"
 		};
 	}
 	private static final String[] _LITERAL_NAMES = makeLiteralNames();

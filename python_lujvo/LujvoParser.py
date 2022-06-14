@@ -10,7 +10,7 @@ else:
 
 def serializedATN():
     return [
-        4,1,5,182,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,
+        4,1,4,182,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,
         6,2,7,7,7,2,8,7,8,2,9,7,9,2,10,7,10,2,11,7,11,2,12,7,12,2,13,7,13,
         2,14,7,14,2,15,7,15,2,16,7,16,2,17,7,17,2,18,7,18,1,0,1,0,1,0,1,
         0,1,0,3,0,44,8,0,1,1,1,1,1,1,1,1,1,2,1,2,3,2,52,8,2,1,2,3,2,55,8,
@@ -36,9 +36,9 @@ def serializedATN():
         0,52,54,1,0,0,0,53,55,3,16,8,0,54,53,1,0,0,0,54,55,1,0,0,0,55,5,
         1,0,0,0,56,57,3,20,10,0,57,58,3,14,7,0,58,59,3,16,8,0,59,7,1,0,0,
         0,60,61,3,22,11,0,61,62,3,14,7,0,62,63,3,16,8,0,63,9,1,0,0,0,64,
-        69,5,4,0,0,65,66,5,4,0,0,66,70,5,5,0,0,67,68,5,5,0,0,68,70,5,4,0,
-        0,69,65,1,0,0,0,69,67,1,0,0,0,70,71,1,0,0,0,71,72,5,4,0,0,72,73,
-        5,5,0,0,73,11,1,0,0,0,74,76,3,24,12,0,75,77,3,26,13,0,76,75,1,0,
+        69,5,3,0,0,65,66,5,3,0,0,66,70,5,4,0,0,67,68,5,4,0,0,68,70,5,3,0,
+        0,69,65,1,0,0,0,69,67,1,0,0,0,70,71,1,0,0,0,71,72,5,3,0,0,72,73,
+        5,4,0,0,73,11,1,0,0,0,74,76,3,24,12,0,75,77,3,26,13,0,76,75,1,0,
         0,0,76,77,1,0,0,0,77,83,1,0,0,0,78,83,3,28,14,0,79,80,3,30,15,0,
         80,81,3,26,13,0,81,83,1,0,0,0,82,74,1,0,0,0,82,78,1,0,0,0,82,79,
         1,0,0,0,83,84,1,0,0,0,84,85,3,24,12,0,85,13,1,0,0,0,86,87,5,2,0,
@@ -61,15 +61,15 @@ def serializedATN():
         0,0,0,138,139,1,0,0,0,139,140,3,20,10,0,140,149,1,0,0,0,141,142,
         3,32,16,0,142,143,3,26,13,0,143,144,3,34,17,0,144,149,1,0,0,0,145,
         146,3,32,16,0,146,147,3,36,18,0,147,149,1,0,0,0,148,135,1,0,0,0,
-        148,141,1,0,0,0,148,145,1,0,0,0,149,23,1,0,0,0,150,151,5,4,0,0,151,
-        152,5,5,0,0,152,153,5,4,0,0,153,25,1,0,0,0,154,155,5,3,0,0,155,27,
-        1,0,0,0,156,157,5,4,0,0,157,158,5,4,0,0,158,159,5,5,0,0,159,29,1,
-        0,0,0,160,161,5,4,0,0,161,163,5,5,0,0,162,164,5,1,0,0,163,162,1,
-        0,0,0,163,164,1,0,0,0,164,165,1,0,0,0,165,166,5,5,0,0,166,31,1,0,
+        148,141,1,0,0,0,148,145,1,0,0,0,149,23,1,0,0,0,150,151,5,3,0,0,151,
+        152,5,4,0,0,152,153,5,3,0,0,153,25,1,0,0,0,154,155,5,3,0,0,155,27,
+        1,0,0,0,156,157,5,3,0,0,157,158,5,3,0,0,158,159,5,4,0,0,159,29,1,
+        0,0,0,160,161,5,3,0,0,161,163,5,4,0,0,162,164,5,1,0,0,163,162,1,
+        0,0,0,163,164,1,0,0,0,164,165,1,0,0,0,165,166,5,4,0,0,166,31,1,0,
         0,0,167,170,3,30,15,0,168,170,3,28,14,0,169,167,1,0,0,0,169,168,
-        1,0,0,0,170,33,1,0,0,0,171,172,5,4,0,0,172,173,5,5,0,0,173,174,5,
-        4,0,0,174,175,5,4,0,0,175,35,1,0,0,0,176,177,5,4,0,0,177,178,5,4,
-        0,0,178,179,5,5,0,0,179,180,5,4,0,0,180,37,1,0,0,0,21,43,51,54,69,
+        1,0,0,0,170,33,1,0,0,0,171,172,5,3,0,0,172,173,5,4,0,0,173,174,5,
+        3,0,0,174,175,5,3,0,0,175,35,1,0,0,0,176,177,5,3,0,0,177,178,5,3,
+        0,0,178,179,5,4,0,0,179,180,5,3,0,0,180,37,1,0,0,0,21,43,51,54,69,
         76,82,90,96,98,103,108,111,117,120,125,129,133,137,148,163,169
     ]
 
@@ -83,9 +83,9 @@ class LujvoParser ( Parser ):
 
     sharedContextCache = PredictionContextCache()
 
-    literalNames = [ "<INVALID>", "'''", "'y'", "'q'" ]
+    literalNames = [ "<INVALID>", "'''", "'y'" ]
 
-    symbolicNames = [ "<INVALID>", "<INVALID>", "Y", "Q", "C", "V" ]
+    symbolicNames = [ "<INVALID>", "<INVALID>", "Y", "C", "V" ]
 
     RULE_lujvo = 0
     RULE_bobvo = 1
@@ -115,9 +115,8 @@ class LujvoParser ( Parser ):
     EOF = Token.EOF
     T__0=1
     Y=2
-    Q=3
-    C=4
-    V=5
+    C=3
+    V=4
 
     def __init__(self, input:TokenStream, output:TextIO = sys.stdout):
         super().__init__(input, output)
@@ -566,7 +565,6 @@ class LujvoParser ( Parser ):
 
         localctx = LujvoParser.TworafconContext(self, self._ctx, self.state)
         self.enterRule(localctx, 12, self.RULE_tworafcon)
-        self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 82
@@ -577,8 +575,8 @@ class LujvoParser ( Parser ):
                 self.balraf()
                 self.state = 76
                 self._errHandler.sync(self)
-                _la = self._input.LA(1)
-                if _la==LujvoParser.Q:
+                la_ = self._interp.adaptivePredict(self._input,4,self._ctx)
+                if la_ == 1:
                     self.state = 75
                     self.q()
 
@@ -818,7 +816,6 @@ class LujvoParser ( Parser ):
 
         localctx = LujvoParser.TworafvowContext(self, self._ctx, self.state)
         self.enterRule(localctx, 18, self.RULE_tworafvow)
-        self._la = 0 # Token type
         try:
             self.state = 129
             self._errHandler.sync(self)
@@ -846,8 +843,8 @@ class LujvoParser ( Parser ):
 
                 self.state = 111
                 self._errHandler.sync(self)
-                _la = self._input.LA(1)
-                if _la==LujvoParser.Q:
+                la_ = self._interp.adaptivePredict(self._input,11,self._ctx)
+                if la_ == 1:
                     self.state = 110
                     self.q()
 
@@ -878,8 +875,8 @@ class LujvoParser ( Parser ):
 
                     self.state = 120
                     self._errHandler.sync(self)
-                    _la = self._input.LA(1)
-                    if _la==LujvoParser.Q:
+                    la_ = self._interp.adaptivePredict(self._input,13,self._ctx)
+                    if la_ == 1:
                         self.state = 119
                         self.q()
 
@@ -1016,7 +1013,6 @@ class LujvoParser ( Parser ):
 
         localctx = LujvoParser.RafstumpContext(self, self._ctx, self.state)
         self.enterRule(localctx, 22, self.RULE_rafstump)
-        self._la = 0 # Token type
         try:
             self.state = 148
             self._errHandler.sync(self)
@@ -1027,8 +1023,8 @@ class LujvoParser ( Parser ):
                 self.balraf()
                 self.state = 137
                 self._errHandler.sync(self)
-                _la = self._input.LA(1)
-                if _la==LujvoParser.Q:
+                la_ = self._interp.adaptivePredict(self._input,17,self._ctx)
+                if la_ == 1:
                     self.state = 136
                     self.q()
 
@@ -1123,8 +1119,8 @@ class LujvoParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def Q(self):
-            return self.getToken(LujvoParser.Q, 0)
+        def C(self):
+            return self.getToken(LujvoParser.C, 0)
 
         def getRuleIndex(self):
             return LujvoParser.RULE_q
@@ -1147,7 +1143,7 @@ class LujvoParser ( Parser ):
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 154
-            self.match(LujvoParser.Q)
+            self.match(LujvoParser.C)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
