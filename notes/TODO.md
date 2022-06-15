@@ -5,3 +5,4 @@
 
 ## long term goals
 - semantically group selmaho instead of alphabetically
+- grammar competition website

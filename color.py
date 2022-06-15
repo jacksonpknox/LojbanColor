@@ -18,6 +18,14 @@ def put(ctx, color):
 
 
 class LujvoColorizer(LujvoListener):
+    def __init__(self):
+        self.background = "#222255"
+        self.booler = False
+
+    def flop(self):
+        self.booler = not self.booler
+        self.background = "#552222" if self.booler else "#222255"
+        
     def enterY(self, ctx):
         put(ctx, "yellow")
 
@@ -31,13 +39,16 @@ class LujvoColorizer(LujvoListener):
         put(ctx, "#FF8080 on #222222")
 
     def enterBalraf(self, ctx):
-        put(ctx, "#FFC0C0 on #222222")
+        self.flop()
+        put(ctx, f"#FFC0C0 on {self.background}")
 
     def enterBauraf(self, ctx):
-        put(ctx, "#FFFFC0 on #222222")
+        self.flop()
+        put(ctx, f"#FFFFC0 on {self.background}")
 
     def enterBroraf(self, ctx):
-        put(ctx, "#FFC080 on #222222")
+        self.flop()
+        put(ctx, f"#FFC080 on {self.background}")
 
     def enterGismu(self, ctx):
         put(ctx, "#FF0000 on #222222")
@@ -61,6 +72,9 @@ class Colorizer(ColorListener):
 
     def exitWord(self, ctx):
         print(" ", end="")
+    
+    def enterFuhivla(self, ctx):
+        put(ctx, "#008700 on #222222")
 
     def enterBai(self, ctx):
         put(ctx, "#0000FF")

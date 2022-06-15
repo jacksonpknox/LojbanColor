@@ -16,74 +16,74 @@ public class ColorParser extends Parser {
 	protected static final PredictionContextCache _sharedContextCache =
 		new PredictionContextCache();
 	public static final int
-		T__0=1, T__1=2, WS=3, GISMU=4, LUJVO=5, A=6, BAHE=7, BEHO=8, BEI=9, BE=10, 
-		BIHE=11, BIHI=12, BOI=13, BO=14, BU=15, BAI=16, BY=17, UI=18, CAHA=19, 
-		CAI=20, CEHE=21, CEI=22, CO=23, COI=24, CU=25, CUHE=26, DAHO=27, DOHU=28, 
-		DOI=29, FA=30, FAHA=31, FAHO=32, FEHE=33, FEHU=34, FIHO=35, FOI=36, FUHA=37, 
-		FUHE=38, FUHO=39, GA=40, GAHO=41, GEHU=42, GI=43, GIHA=44, GOHA=45, GOI=46, 
-		GUHA=47, I=48, JAI=49, JA=50, JOHI=51, JOI=52, KEHE=53, KEI=54, KE=55, 
-		KI=56, KOHA=57, KUHE=58, KUHO=59, KU=60, LAHE=61, LA=62, LAU=63, LEHU=64, 
-		LE=65, LIHU=66, LI=67, LOHO=68, LOHU=69, LUHU=70, LU=71, MAHO=72, MAI=73, 
-		MEHU=74, ME=75, MOHE=76, MOHI=77, MOI=78, NAHE=79, NAHU=80, NAI=81, NA=82, 
-		NIHE=83, NIHO=84, NOI=85, NUHA=86, NUHI=87, NUHU=88, NU=89, PA=90, PEHE=91, 
-		PEHO=92, PU=93, RAHO=94, ROI=95, SA=96, SEHU=97, SEI=98, SE=99, SI=100, 
-		SOI=101, SU=102, TAHE=103, TEHU=104, TEI=105, TOI=106, TO=107, TUHE=108, 
-		TUHU=109, VA=110, VAU=111, VEHA=112, VEHO=113, VEI=114, VIHA=115, VUHO=116, 
-		VUHU=117, XI=118, ZAHO=119, ZEHA=120, ZEI=121, ZIHE=122, ZI=123, ZOHU=124, 
-		ZOI=125, ZO=126, Y=127;
+		T__0=1, T__1=2, FUHIVLA=3, WS=4, GISMU=5, LUJVO=6, A=7, BAHE=8, BEHO=9, 
+		BEI=10, BE=11, BIHE=12, BIHI=13, BOI=14, BO=15, BU=16, BAI=17, BY=18, 
+		UI=19, CAHA=20, CAI=21, CEHE=22, CEI=23, CO=24, COI=25, CU=26, CUHE=27, 
+		DAHO=28, DOHU=29, DOI=30, FA=31, FAHA=32, FAHO=33, FEHE=34, FEHU=35, FIHO=36, 
+		FOI=37, FUHA=38, FUHE=39, FUHO=40, GA=41, GAHO=42, GEHU=43, GI=44, GIHA=45, 
+		GOHA=46, GOI=47, GUHA=48, I=49, JAI=50, JA=51, JOHI=52, JOI=53, KEHE=54, 
+		KEI=55, KE=56, KI=57, KOHA=58, KUHE=59, KUHO=60, KU=61, LAHE=62, LA=63, 
+		LAU=64, LEHU=65, LE=66, LIHU=67, LI=68, LOHO=69, LOHU=70, LUHU=71, LU=72, 
+		MAHO=73, MAI=74, MEHU=75, ME=76, MOHE=77, MOHI=78, MOI=79, NAHE=80, NAHU=81, 
+		NAI=82, NA=83, NIHE=84, NIHO=85, NOI=86, NUHA=87, NUHI=88, NUHU=89, NU=90, 
+		PA=91, PEHE=92, PEHO=93, PU=94, RAHO=95, ROI=96, SA=97, SEHU=98, SEI=99, 
+		SE=100, SI=101, SOI=102, SU=103, TAHE=104, TEHU=105, TEI=106, TOI=107, 
+		TO=108, TUHE=109, TUHU=110, VA=111, VAU=112, VEHA=113, VEHO=114, VEI=115, 
+		VIHA=116, VUHO=117, VUHU=118, XI=119, ZAHO=120, ZEHA=121, ZEI=122, ZIHE=123, 
+		ZI=124, ZOHU=125, ZOI=126, ZO=127, Y=128;
 	public static final int
-		RULE_folio = 0, RULE_sentence = 1, RULE_word = 2, RULE_brivla = 3, RULE_lujvo = 4, 
-		RULE_gismu = 5, RULE_cmavo = 6, RULE_cmavoab = 7, RULE_a = 8, RULE_bahe = 9, 
-		RULE_beho = 10, RULE_bei = 11, RULE_be = 12, RULE_bihe = 13, RULE_boi = 14, 
-		RULE_bo = 15, RULE_bu = 16, RULE_bai = 17, RULE_by = 18, RULE_ui = 19, 
-		RULE_cmavocd = 20, RULE_caha = 21, RULE_cai = 22, RULE_cehe = 23, RULE_cei = 24, 
-		RULE_co = 25, RULE_coi = 26, RULE_cu = 27, RULE_cuhe = 28, RULE_daho = 29, 
-		RULE_doi = 30, RULE_cmavof = 31, RULE_fa = 32, RULE_faha = 33, RULE_faho = 34, 
-		RULE_fehe = 35, RULE_fehu = 36, RULE_fiho = 37, RULE_foi = 38, RULE_fuha = 39, 
-		RULE_fuhe = 40, RULE_fuho = 41, RULE_cmavogi = 42, RULE_ga = 43, RULE_gaho = 44, 
-		RULE_gehu = 45, RULE_gi = 46, RULE_giha = 47, RULE_goha = 48, RULE_goi = 49, 
-		RULE_guha = 50, RULE_i = 51, RULE_cmavojk = 52, RULE_jai = 53, RULE_ja = 54, 
-		RULE_johi = 55, RULE_joi = 56, RULE_kehe = 57, RULE_kei = 58, RULE_ke = 59, 
-		RULE_ki = 60, RULE_koha = 61, RULE_kuhe = 62, RULE_kuho = 63, RULE_ku = 64, 
-		RULE_cmavol = 65, RULE_lahe = 66, RULE_la = 67, RULE_lau = 68, RULE_lehu = 69, 
-		RULE_le = 70, RULE_lihu = 71, RULE_li = 72, RULE_loho = 73, RULE_lohu = 74, 
-		RULE_luhu = 75, RULE_lu = 76, RULE_cmavomn = 77, RULE_maho = 78, RULE_mai = 79, 
-		RULE_mehu = 80, RULE_me = 81, RULE_mohe = 82, RULE_mohi = 83, RULE_moi = 84, 
-		RULE_nahe = 85, RULE_nahu = 86, RULE_nai = 87, RULE_na = 88, RULE_nihe = 89, 
-		RULE_niho = 90, RULE_noi = 91, RULE_nuha = 92, RULE_nuhi = 93, RULE_nuhu = 94, 
-		RULE_nu = 95, RULE_cmavop = 96, RULE_pa = 97, RULE_pehe = 98, RULE_peho = 99, 
-		RULE_pu = 100, RULE_cmavors = 101, RULE_raho = 102, RULE_roi = 103, RULE_sa = 104, 
-		RULE_sehu = 105, RULE_sei = 106, RULE_se = 107, RULE_si = 108, RULE_soi = 109, 
-		RULE_su = 110, RULE_cmavot = 111, RULE_tahe = 112, RULE_tehu = 113, RULE_tei = 114, 
-		RULE_toi = 115, RULE_to = 116, RULE_tuhe = 117, RULE_tuhu = 118, RULE_cmavovy = 119, 
-		RULE_va = 120, RULE_vau = 121, RULE_veha = 122, RULE_veho = 123, RULE_vei = 124, 
-		RULE_viha = 125, RULE_vuho = 126, RULE_vuhu = 127, RULE_xi = 128, RULE_y = 129, 
-		RULE_cmavoz = 130, RULE_zaho = 131, RULE_zeha = 132, RULE_zei = 133, RULE_zihe = 134, 
-		RULE_zi = 135, RULE_zohu = 136, RULE_zoi = 137, RULE_zo = 138;
+		RULE_folio = 0, RULE_sentence = 1, RULE_word = 2, RULE_fuhivla = 3, RULE_brivla = 4, 
+		RULE_lujvo = 5, RULE_gismu = 6, RULE_cmavo = 7, RULE_cmavoab = 8, RULE_a = 9, 
+		RULE_bahe = 10, RULE_beho = 11, RULE_bei = 12, RULE_be = 13, RULE_bihe = 14, 
+		RULE_boi = 15, RULE_bo = 16, RULE_bu = 17, RULE_bai = 18, RULE_by = 19, 
+		RULE_ui = 20, RULE_cmavocd = 21, RULE_caha = 22, RULE_cai = 23, RULE_cehe = 24, 
+		RULE_cei = 25, RULE_co = 26, RULE_coi = 27, RULE_cu = 28, RULE_cuhe = 29, 
+		RULE_daho = 30, RULE_doi = 31, RULE_cmavof = 32, RULE_fa = 33, RULE_faha = 34, 
+		RULE_faho = 35, RULE_fehe = 36, RULE_fehu = 37, RULE_fiho = 38, RULE_foi = 39, 
+		RULE_fuha = 40, RULE_fuhe = 41, RULE_fuho = 42, RULE_cmavogi = 43, RULE_ga = 44, 
+		RULE_gaho = 45, RULE_gehu = 46, RULE_gi = 47, RULE_giha = 48, RULE_goha = 49, 
+		RULE_goi = 50, RULE_guha = 51, RULE_i = 52, RULE_cmavojk = 53, RULE_jai = 54, 
+		RULE_ja = 55, RULE_johi = 56, RULE_joi = 57, RULE_kehe = 58, RULE_kei = 59, 
+		RULE_ke = 60, RULE_ki = 61, RULE_koha = 62, RULE_kuhe = 63, RULE_kuho = 64, 
+		RULE_ku = 65, RULE_cmavol = 66, RULE_lahe = 67, RULE_la = 68, RULE_lau = 69, 
+		RULE_lehu = 70, RULE_le = 71, RULE_lihu = 72, RULE_li = 73, RULE_loho = 74, 
+		RULE_lohu = 75, RULE_luhu = 76, RULE_lu = 77, RULE_cmavomn = 78, RULE_maho = 79, 
+		RULE_mai = 80, RULE_mehu = 81, RULE_me = 82, RULE_mohe = 83, RULE_mohi = 84, 
+		RULE_moi = 85, RULE_nahe = 86, RULE_nahu = 87, RULE_nai = 88, RULE_na = 89, 
+		RULE_nihe = 90, RULE_niho = 91, RULE_noi = 92, RULE_nuha = 93, RULE_nuhi = 94, 
+		RULE_nuhu = 95, RULE_nu = 96, RULE_cmavop = 97, RULE_pa = 98, RULE_pehe = 99, 
+		RULE_peho = 100, RULE_pu = 101, RULE_cmavors = 102, RULE_raho = 103, RULE_roi = 104, 
+		RULE_sa = 105, RULE_sehu = 106, RULE_sei = 107, RULE_se = 108, RULE_si = 109, 
+		RULE_soi = 110, RULE_su = 111, RULE_cmavot = 112, RULE_tahe = 113, RULE_tehu = 114, 
+		RULE_tei = 115, RULE_toi = 116, RULE_to = 117, RULE_tuhe = 118, RULE_tuhu = 119, 
+		RULE_cmavovy = 120, RULE_va = 121, RULE_vau = 122, RULE_veha = 123, RULE_veho = 124, 
+		RULE_vei = 125, RULE_viha = 126, RULE_vuho = 127, RULE_vuhu = 128, RULE_xi = 129, 
+		RULE_y = 130, RULE_cmavoz = 131, RULE_zaho = 132, RULE_zeha = 133, RULE_zei = 134, 
+		RULE_zihe = 135, RULE_zi = 136, RULE_zohu = 137, RULE_zoi = 138, RULE_zo = 139;
 	private static String[] makeRuleNames() {
 		return new String[] {
-			"folio", "sentence", "word", "brivla", "lujvo", "gismu", "cmavo", "cmavoab", 
-			"a", "bahe", "beho", "bei", "be", "bihe", "boi", "bo", "bu", "bai", "by", 
-			"ui", "cmavocd", "caha", "cai", "cehe", "cei", "co", "coi", "cu", "cuhe", 
-			"daho", "doi", "cmavof", "fa", "faha", "faho", "fehe", "fehu", "fiho", 
-			"foi", "fuha", "fuhe", "fuho", "cmavogi", "ga", "gaho", "gehu", "gi", 
-			"giha", "goha", "goi", "guha", "i", "cmavojk", "jai", "ja", "johi", "joi", 
-			"kehe", "kei", "ke", "ki", "koha", "kuhe", "kuho", "ku", "cmavol", "lahe", 
-			"la", "lau", "lehu", "le", "lihu", "li", "loho", "lohu", "luhu", "lu", 
-			"cmavomn", "maho", "mai", "mehu", "me", "mohe", "mohi", "moi", "nahe", 
-			"nahu", "nai", "na", "nihe", "niho", "noi", "nuha", "nuhi", "nuhu", "nu", 
-			"cmavop", "pa", "pehe", "peho", "pu", "cmavors", "raho", "roi", "sa", 
-			"sehu", "sei", "se", "si", "soi", "su", "cmavot", "tahe", "tehu", "tei", 
-			"toi", "to", "tuhe", "tuhu", "cmavovy", "va", "vau", "veha", "veho", 
-			"vei", "viha", "vuho", "vuhu", "xi", "y", "cmavoz", "zaho", "zeha", "zei", 
-			"zihe", "zi", "zohu", "zoi", "zo"
+			"folio", "sentence", "word", "fuhivla", "brivla", "lujvo", "gismu", "cmavo", 
+			"cmavoab", "a", "bahe", "beho", "bei", "be", "bihe", "boi", "bo", "bu", 
+			"bai", "by", "ui", "cmavocd", "caha", "cai", "cehe", "cei", "co", "coi", 
+			"cu", "cuhe", "daho", "doi", "cmavof", "fa", "faha", "faho", "fehe", 
+			"fehu", "fiho", "foi", "fuha", "fuhe", "fuho", "cmavogi", "ga", "gaho", 
+			"gehu", "gi", "giha", "goha", "goi", "guha", "i", "cmavojk", "jai", "ja", 
+			"johi", "joi", "kehe", "kei", "ke", "ki", "koha", "kuhe", "kuho", "ku", 
+			"cmavol", "lahe", "la", "lau", "lehu", "le", "lihu", "li", "loho", "lohu", 
+			"luhu", "lu", "cmavomn", "maho", "mai", "mehu", "me", "mohe", "mohi", 
+			"moi", "nahe", "nahu", "nai", "na", "nihe", "niho", "noi", "nuha", "nuhi", 
+			"nuhu", "nu", "cmavop", "pa", "pehe", "peho", "pu", "cmavors", "raho", 
+			"roi", "sa", "sehu", "sei", "se", "si", "soi", "su", "cmavot", "tahe", 
+			"tehu", "tei", "toi", "to", "tuhe", "tuhu", "cmavovy", "va", "vau", "veha", 
+			"veho", "vei", "viha", "vuho", "vuhu", "xi", "y", "cmavoz", "zaho", "zeha", 
+			"zei", "zihe", "zi", "zohu", "zoi", "zo"
 		};
 	}
 	public static final String[] ruleNames = makeRuleNames();
 
 	private static String[] makeLiteralNames() {
 		return new String[] {
-			null, "'\r'", "'\n'", null, null, null, null, null, "'be'o'", "'bei'", 
+			null, "'\r'", "'\n'", null, null, null, null, null, null, "'be'o'", "'bei'", 
 			"'be'", "'bi'e'", null, "'boi'", "'bo'", "'bu'", null, null, null, null, 
 			null, "'ce'e'", "'cei'", "'co'", null, "'cu'", null, "'da'o'", "'do'u'", 
 			"'doi'", null, null, "'fa'o'", "'fe'e'", "'fe'u'", "'fi'o'", "'foi'", 
@@ -103,19 +103,19 @@ public class ColorParser extends Parser {
 	private static final String[] _LITERAL_NAMES = makeLiteralNames();
 	private static String[] makeSymbolicNames() {
 		return new String[] {
-			null, null, null, "WS", "GISMU", "LUJVO", "A", "BAHE", "BEHO", "BEI", 
-			"BE", "BIHE", "BIHI", "BOI", "BO", "BU", "BAI", "BY", "UI", "CAHA", "CAI", 
-			"CEHE", "CEI", "CO", "COI", "CU", "CUHE", "DAHO", "DOHU", "DOI", "FA", 
-			"FAHA", "FAHO", "FEHE", "FEHU", "FIHO", "FOI", "FUHA", "FUHE", "FUHO", 
-			"GA", "GAHO", "GEHU", "GI", "GIHA", "GOHA", "GOI", "GUHA", "I", "JAI", 
-			"JA", "JOHI", "JOI", "KEHE", "KEI", "KE", "KI", "KOHA", "KUHE", "KUHO", 
-			"KU", "LAHE", "LA", "LAU", "LEHU", "LE", "LIHU", "LI", "LOHO", "LOHU", 
-			"LUHU", "LU", "MAHO", "MAI", "MEHU", "ME", "MOHE", "MOHI", "MOI", "NAHE", 
-			"NAHU", "NAI", "NA", "NIHE", "NIHO", "NOI", "NUHA", "NUHI", "NUHU", "NU", 
-			"PA", "PEHE", "PEHO", "PU", "RAHO", "ROI", "SA", "SEHU", "SEI", "SE", 
-			"SI", "SOI", "SU", "TAHE", "TEHU", "TEI", "TOI", "TO", "TUHE", "TUHU", 
-			"VA", "VAU", "VEHA", "VEHO", "VEI", "VIHA", "VUHO", "VUHU", "XI", "ZAHO", 
-			"ZEHA", "ZEI", "ZIHE", "ZI", "ZOHU", "ZOI", "ZO", "Y"
+			null, null, null, "FUHIVLA", "WS", "GISMU", "LUJVO", "A", "BAHE", "BEHO", 
+			"BEI", "BE", "BIHE", "BIHI", "BOI", "BO", "BU", "BAI", "BY", "UI", "CAHA", 
+			"CAI", "CEHE", "CEI", "CO", "COI", "CU", "CUHE", "DAHO", "DOHU", "DOI", 
+			"FA", "FAHA", "FAHO", "FEHE", "FEHU", "FIHO", "FOI", "FUHA", "FUHE", 
+			"FUHO", "GA", "GAHO", "GEHU", "GI", "GIHA", "GOHA", "GOI", "GUHA", "I", 
+			"JAI", "JA", "JOHI", "JOI", "KEHE", "KEI", "KE", "KI", "KOHA", "KUHE", 
+			"KUHO", "KU", "LAHE", "LA", "LAU", "LEHU", "LE", "LIHU", "LI", "LOHO", 
+			"LOHU", "LUHU", "LU", "MAHO", "MAI", "MEHU", "ME", "MOHE", "MOHI", "MOI", 
+			"NAHE", "NAHU", "NAI", "NA", "NIHE", "NIHO", "NOI", "NUHA", "NUHI", "NUHU", 
+			"NU", "PA", "PEHE", "PEHO", "PU", "RAHO", "ROI", "SA", "SEHU", "SEI", 
+			"SE", "SI", "SOI", "SU", "TAHE", "TEHU", "TEI", "TOI", "TO", "TUHE", 
+			"TUHU", "VA", "VAU", "VEHA", "VEHO", "VEI", "VIHA", "VUHO", "VUHU", "XI", 
+			"ZAHO", "ZEHA", "ZEI", "ZIHE", "ZI", "ZOHU", "ZOI", "ZO", "Y"
 		};
 	}
 	private static final String[] _SYMBOLIC_NAMES = makeSymbolicNames();
@@ -170,6 +170,7 @@ public class ColorParser extends Parser {
 	}
 
 	public static class FolioContext extends ParserRuleContext {
+		public TerminalNode EOF() { return getToken(ColorParser.EOF, 0); }
 		public List<SentenceContext> sentence() {
 			return getRuleContexts(SentenceContext.class);
 		}
@@ -189,32 +190,34 @@ public class ColorParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(284); 
+			setState(286); 
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			do {
 				{
 				{
-				setState(278);
-				sentence();
 				setState(280);
+				sentence();
+				setState(282);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 				if (_la==T__0) {
 					{
-					setState(279);
+					setState(281);
 					match(T__0);
 					}
 				}
 
-				setState(282);
+				setState(284);
 				match(T__1);
 				}
 				}
-				setState(286); 
+				setState(288); 
 				_errHandler.sync(this);
 				_la = _input.LA(1);
-			} while ( (((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << GISMU) | (1L << LUJVO) | (1L << A) | (1L << BAHE) | (1L << BEHO) | (1L << BEI) | (1L << BE) | (1L << BIHE) | (1L << BOI) | (1L << BO) | (1L << BU) | (1L << BAI) | (1L << BY) | (1L << UI) | (1L << CAHA) | (1L << CAI) | (1L << CEHE) | (1L << CEI) | (1L << CO) | (1L << COI) | (1L << CU) | (1L << CUHE) | (1L << DAHO) | (1L << DOI) | (1L << FA) | (1L << FAHA) | (1L << FAHO) | (1L << FEHE) | (1L << FEHU) | (1L << FIHO) | (1L << FOI) | (1L << FUHA) | (1L << FUHE) | (1L << FUHO) | (1L << GA) | (1L << GAHO) | (1L << GEHU) | (1L << GI) | (1L << GIHA) | (1L << GOHA) | (1L << GOI) | (1L << GUHA) | (1L << I) | (1L << JAI) | (1L << JA) | (1L << JOHI) | (1L << JOI) | (1L << KEHE) | (1L << KEI) | (1L << KE) | (1L << KI) | (1L << KOHA) | (1L << KUHE) | (1L << KUHO) | (1L << KU) | (1L << LAHE) | (1L << LA) | (1L << LAU))) != 0) || ((((_la - 64)) & ~0x3f) == 0 && ((1L << (_la - 64)) & ((1L << (LEHU - 64)) | (1L << (LE - 64)) | (1L << (LIHU - 64)) | (1L << (LI - 64)) | (1L << (LOHO - 64)) | (1L << (LOHU - 64)) | (1L << (LUHU - 64)) | (1L << (LU - 64)) | (1L << (MAHO - 64)) | (1L << (MAI - 64)) | (1L << (MEHU - 64)) | (1L << (ME - 64)) | (1L << (MOHE - 64)) | (1L << (MOHI - 64)) | (1L << (MOI - 64)) | (1L << (NAHE - 64)) | (1L << (NAHU - 64)) | (1L << (NAI - 64)) | (1L << (NA - 64)) | (1L << (NIHE - 64)) | (1L << (NIHO - 64)) | (1L << (NOI - 64)) | (1L << (NUHA - 64)) | (1L << (NUHI - 64)) | (1L << (NUHU - 64)) | (1L << (NU - 64)) | (1L << (PA - 64)) | (1L << (PEHE - 64)) | (1L << (PEHO - 64)) | (1L << (PU - 64)) | (1L << (RAHO - 64)) | (1L << (ROI - 64)) | (1L << (SA - 64)) | (1L << (SEHU - 64)) | (1L << (SEI - 64)) | (1L << (SE - 64)) | (1L << (SI - 64)) | (1L << (SOI - 64)) | (1L << (SU - 64)) | (1L << (TAHE - 64)) | (1L << (TEHU - 64)) | (1L << (TEI - 64)) | (1L << (TOI - 64)) | (1L << (TO - 64)) | (1L << (TUHE - 64)) | (1L << (TUHU - 64)) | (1L << (VA - 64)) | (1L << (VAU - 64)) | (1L << (VEHA - 64)) | (1L << (VEHO - 64)) | (1L << (VEI - 64)) | (1L << (VIHA - 64)) | (1L << (VUHO - 64)) | (1L << (VUHU - 64)) | (1L << (XI - 64)) | (1L << (ZAHO - 64)) | (1L << (ZEHA - 64)) | (1L << (ZEI - 64)) | (1L << (ZIHE - 64)) | (1L << (ZI - 64)) | (1L << (ZOHU - 64)) | (1L << (ZOI - 64)) | (1L << (ZO - 64)) | (1L << (Y - 64)))) != 0) );
+			} while ( ((((_la - 1)) & ~0x3f) == 0 && ((1L << (_la - 1)) & ((1L << (T__0 - 1)) | (1L << (T__1 - 1)) | (1L << (FUHIVLA - 1)) | (1L << (GISMU - 1)) | (1L << (LUJVO - 1)) | (1L << (A - 1)) | (1L << (BAHE - 1)) | (1L << (BEHO - 1)) | (1L << (BEI - 1)) | (1L << (BE - 1)) | (1L << (BIHE - 1)) | (1L << (BOI - 1)) | (1L << (BO - 1)) | (1L << (BU - 1)) | (1L << (BAI - 1)) | (1L << (BY - 1)) | (1L << (UI - 1)) | (1L << (CAHA - 1)) | (1L << (CAI - 1)) | (1L << (CEHE - 1)) | (1L << (CEI - 1)) | (1L << (CO - 1)) | (1L << (COI - 1)) | (1L << (CU - 1)) | (1L << (CUHE - 1)) | (1L << (DAHO - 1)) | (1L << (DOI - 1)) | (1L << (FA - 1)) | (1L << (FAHA - 1)) | (1L << (FAHO - 1)) | (1L << (FEHE - 1)) | (1L << (FEHU - 1)) | (1L << (FIHO - 1)) | (1L << (FOI - 1)) | (1L << (FUHA - 1)) | (1L << (FUHE - 1)) | (1L << (FUHO - 1)) | (1L << (GA - 1)) | (1L << (GAHO - 1)) | (1L << (GEHU - 1)) | (1L << (GI - 1)) | (1L << (GIHA - 1)) | (1L << (GOHA - 1)) | (1L << (GOI - 1)) | (1L << (GUHA - 1)) | (1L << (I - 1)) | (1L << (JAI - 1)) | (1L << (JA - 1)) | (1L << (JOHI - 1)) | (1L << (JOI - 1)) | (1L << (KEHE - 1)) | (1L << (KEI - 1)) | (1L << (KE - 1)) | (1L << (KI - 1)) | (1L << (KOHA - 1)) | (1L << (KUHE - 1)) | (1L << (KUHO - 1)) | (1L << (KU - 1)) | (1L << (LAHE - 1)) | (1L << (LA - 1)) | (1L << (LAU - 1)))) != 0) || ((((_la - 65)) & ~0x3f) == 0 && ((1L << (_la - 65)) & ((1L << (LEHU - 65)) | (1L << (LE - 65)) | (1L << (LIHU - 65)) | (1L << (LI - 65)) | (1L << (LOHO - 65)) | (1L << (LOHU - 65)) | (1L << (LUHU - 65)) | (1L << (LU - 65)) | (1L << (MAHO - 65)) | (1L << (MAI - 65)) | (1L << (MEHU - 65)) | (1L << (ME - 65)) | (1L << (MOHE - 65)) | (1L << (MOHI - 65)) | (1L << (MOI - 65)) | (1L << (NAHE - 65)) | (1L << (NAHU - 65)) | (1L << (NAI - 65)) | (1L << (NA - 65)) | (1L << (NIHE - 65)) | (1L << (NIHO - 65)) | (1L << (NOI - 65)) | (1L << (NUHA - 65)) | (1L << (NUHI - 65)) | (1L << (NUHU - 65)) | (1L << (NU - 65)) | (1L << (PA - 65)) | (1L << (PEHE - 65)) | (1L << (PEHO - 65)) | (1L << (PU - 65)) | (1L << (RAHO - 65)) | (1L << (ROI - 65)) | (1L << (SA - 65)) | (1L << (SEHU - 65)) | (1L << (SEI - 65)) | (1L << (SE - 65)) | (1L << (SI - 65)) | (1L << (SOI - 65)) | (1L << (SU - 65)) | (1L << (TAHE - 65)) | (1L << (TEHU - 65)) | (1L << (TEI - 65)) | (1L << (TOI - 65)) | (1L << (TO - 65)) | (1L << (TUHE - 65)) | (1L << (TUHU - 65)) | (1L << (VA - 65)) | (1L << (VAU - 65)) | (1L << (VEHA - 65)) | (1L << (VEHO - 65)) | (1L << (VEI - 65)) | (1L << (VIHA - 65)) | (1L << (VUHO - 65)) | (1L << (VUHU - 65)) | (1L << (XI - 65)) | (1L << (ZAHO - 65)) | (1L << (ZEHA - 65)) | (1L << (ZEI - 65)) | (1L << (ZIHE - 65)) | (1L << (ZI - 65)) | (1L << (ZOHU - 65)) | (1L << (ZOI - 65)) | (1L << (ZO - 65)) | (1L << (Y - 65)))) != 0) );
+			setState(290);
+			match(EOF);
 			}
 		}
 		catch (RecognitionException re) {
@@ -248,20 +251,20 @@ public class ColorParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(289); 
+			setState(295);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
-			do {
+			while (((((_la - 3)) & ~0x3f) == 0 && ((1L << (_la - 3)) & ((1L << (FUHIVLA - 3)) | (1L << (GISMU - 3)) | (1L << (LUJVO - 3)) | (1L << (A - 3)) | (1L << (BAHE - 3)) | (1L << (BEHO - 3)) | (1L << (BEI - 3)) | (1L << (BE - 3)) | (1L << (BIHE - 3)) | (1L << (BOI - 3)) | (1L << (BO - 3)) | (1L << (BU - 3)) | (1L << (BAI - 3)) | (1L << (BY - 3)) | (1L << (UI - 3)) | (1L << (CAHA - 3)) | (1L << (CAI - 3)) | (1L << (CEHE - 3)) | (1L << (CEI - 3)) | (1L << (CO - 3)) | (1L << (COI - 3)) | (1L << (CU - 3)) | (1L << (CUHE - 3)) | (1L << (DAHO - 3)) | (1L << (DOI - 3)) | (1L << (FA - 3)) | (1L << (FAHA - 3)) | (1L << (FAHO - 3)) | (1L << (FEHE - 3)) | (1L << (FEHU - 3)) | (1L << (FIHO - 3)) | (1L << (FOI - 3)) | (1L << (FUHA - 3)) | (1L << (FUHE - 3)) | (1L << (FUHO - 3)) | (1L << (GA - 3)) | (1L << (GAHO - 3)) | (1L << (GEHU - 3)) | (1L << (GI - 3)) | (1L << (GIHA - 3)) | (1L << (GOHA - 3)) | (1L << (GOI - 3)) | (1L << (GUHA - 3)) | (1L << (I - 3)) | (1L << (JAI - 3)) | (1L << (JA - 3)) | (1L << (JOHI - 3)) | (1L << (JOI - 3)) | (1L << (KEHE - 3)) | (1L << (KEI - 3)) | (1L << (KE - 3)) | (1L << (KI - 3)) | (1L << (KOHA - 3)) | (1L << (KUHE - 3)) | (1L << (KUHO - 3)) | (1L << (KU - 3)) | (1L << (LAHE - 3)) | (1L << (LA - 3)) | (1L << (LAU - 3)) | (1L << (LEHU - 3)) | (1L << (LE - 3)))) != 0) || ((((_la - 67)) & ~0x3f) == 0 && ((1L << (_la - 67)) & ((1L << (LIHU - 67)) | (1L << (LI - 67)) | (1L << (LOHO - 67)) | (1L << (LOHU - 67)) | (1L << (LUHU - 67)) | (1L << (LU - 67)) | (1L << (MAHO - 67)) | (1L << (MAI - 67)) | (1L << (MEHU - 67)) | (1L << (ME - 67)) | (1L << (MOHE - 67)) | (1L << (MOHI - 67)) | (1L << (MOI - 67)) | (1L << (NAHE - 67)) | (1L << (NAHU - 67)) | (1L << (NAI - 67)) | (1L << (NA - 67)) | (1L << (NIHE - 67)) | (1L << (NIHO - 67)) | (1L << (NOI - 67)) | (1L << (NUHA - 67)) | (1L << (NUHI - 67)) | (1L << (NUHU - 67)) | (1L << (NU - 67)) | (1L << (PA - 67)) | (1L << (PEHE - 67)) | (1L << (PEHO - 67)) | (1L << (PU - 67)) | (1L << (RAHO - 67)) | (1L << (ROI - 67)) | (1L << (SA - 67)) | (1L << (SEHU - 67)) | (1L << (SEI - 67)) | (1L << (SE - 67)) | (1L << (SI - 67)) | (1L << (SOI - 67)) | (1L << (SU - 67)) | (1L << (TAHE - 67)) | (1L << (TEHU - 67)) | (1L << (TEI - 67)) | (1L << (TOI - 67)) | (1L << (TO - 67)) | (1L << (TUHE - 67)) | (1L << (TUHU - 67)) | (1L << (VA - 67)) | (1L << (VAU - 67)) | (1L << (VEHA - 67)) | (1L << (VEHO - 67)) | (1L << (VEI - 67)) | (1L << (VIHA - 67)) | (1L << (VUHO - 67)) | (1L << (VUHU - 67)) | (1L << (XI - 67)) | (1L << (ZAHO - 67)) | (1L << (ZEHA - 67)) | (1L << (ZEI - 67)) | (1L << (ZIHE - 67)) | (1L << (ZI - 67)) | (1L << (ZOHU - 67)) | (1L << (ZOI - 67)) | (1L << (ZO - 67)) | (1L << (Y - 67)))) != 0)) {
 				{
 				{
-				setState(288);
+				setState(292);
 				word();
 				}
 				}
-				setState(291); 
+				setState(297);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
-			} while ( (((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << GISMU) | (1L << LUJVO) | (1L << A) | (1L << BAHE) | (1L << BEHO) | (1L << BEI) | (1L << BE) | (1L << BIHE) | (1L << BOI) | (1L << BO) | (1L << BU) | (1L << BAI) | (1L << BY) | (1L << UI) | (1L << CAHA) | (1L << CAI) | (1L << CEHE) | (1L << CEI) | (1L << CO) | (1L << COI) | (1L << CU) | (1L << CUHE) | (1L << DAHO) | (1L << DOI) | (1L << FA) | (1L << FAHA) | (1L << FAHO) | (1L << FEHE) | (1L << FEHU) | (1L << FIHO) | (1L << FOI) | (1L << FUHA) | (1L << FUHE) | (1L << FUHO) | (1L << GA) | (1L << GAHO) | (1L << GEHU) | (1L << GI) | (1L << GIHA) | (1L << GOHA) | (1L << GOI) | (1L << GUHA) | (1L << I) | (1L << JAI) | (1L << JA) | (1L << JOHI) | (1L << JOI) | (1L << KEHE) | (1L << KEI) | (1L << KE) | (1L << KI) | (1L << KOHA) | (1L << KUHE) | (1L << KUHO) | (1L << KU) | (1L << LAHE) | (1L << LA) | (1L << LAU))) != 0) || ((((_la - 64)) & ~0x3f) == 0 && ((1L << (_la - 64)) & ((1L << (LEHU - 64)) | (1L << (LE - 64)) | (1L << (LIHU - 64)) | (1L << (LI - 64)) | (1L << (LOHO - 64)) | (1L << (LOHU - 64)) | (1L << (LUHU - 64)) | (1L << (LU - 64)) | (1L << (MAHO - 64)) | (1L << (MAI - 64)) | (1L << (MEHU - 64)) | (1L << (ME - 64)) | (1L << (MOHE - 64)) | (1L << (MOHI - 64)) | (1L << (MOI - 64)) | (1L << (NAHE - 64)) | (1L << (NAHU - 64)) | (1L << (NAI - 64)) | (1L << (NA - 64)) | (1L << (NIHE - 64)) | (1L << (NIHO - 64)) | (1L << (NOI - 64)) | (1L << (NUHA - 64)) | (1L << (NUHI - 64)) | (1L << (NUHU - 64)) | (1L << (NU - 64)) | (1L << (PA - 64)) | (1L << (PEHE - 64)) | (1L << (PEHO - 64)) | (1L << (PU - 64)) | (1L << (RAHO - 64)) | (1L << (ROI - 64)) | (1L << (SA - 64)) | (1L << (SEHU - 64)) | (1L << (SEI - 64)) | (1L << (SE - 64)) | (1L << (SI - 64)) | (1L << (SOI - 64)) | (1L << (SU - 64)) | (1L << (TAHE - 64)) | (1L << (TEHU - 64)) | (1L << (TEI - 64)) | (1L << (TOI - 64)) | (1L << (TO - 64)) | (1L << (TUHE - 64)) | (1L << (TUHU - 64)) | (1L << (VA - 64)) | (1L << (VAU - 64)) | (1L << (VEHA - 64)) | (1L << (VEHO - 64)) | (1L << (VEI - 64)) | (1L << (VIHA - 64)) | (1L << (VUHO - 64)) | (1L << (VUHU - 64)) | (1L << (XI - 64)) | (1L << (ZAHO - 64)) | (1L << (ZEHA - 64)) | (1L << (ZEI - 64)) | (1L << (ZIHE - 64)) | (1L << (ZI - 64)) | (1L << (ZOHU - 64)) | (1L << (ZOI - 64)) | (1L << (ZO - 64)) | (1L << (Y - 64)))) != 0) );
+			}
 			}
 		}
 		catch (RecognitionException re) {
@@ -282,6 +285,9 @@ public class ColorParser extends Parser {
 		public BrivlaContext brivla() {
 			return getRuleContext(BrivlaContext.class,0);
 		}
+		public FuhivlaContext fuhivla() {
+			return getRuleContext(FuhivlaContext.class,0);
+		}
 		public WordContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
@@ -292,7 +298,7 @@ public class ColorParser extends Parser {
 		WordContext _localctx = new WordContext(_ctx, getState());
 		enterRule(_localctx, 4, RULE_word);
 		try {
-			setState(295);
+			setState(301);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case A:
@@ -417,7 +423,7 @@ public class ColorParser extends Parser {
 			case Y:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(293);
+				setState(298);
 				cmavo();
 				}
 				break;
@@ -425,12 +431,48 @@ public class ColorParser extends Parser {
 			case LUJVO:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(294);
+				setState(299);
 				brivla();
+				}
+				break;
+			case FUHIVLA:
+				enterOuterAlt(_localctx, 3);
+				{
+				setState(300);
+				fuhivla();
 				}
 				break;
 			default:
 				throw new NoViableAltException(this);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	public static class FuhivlaContext extends ParserRuleContext {
+		public TerminalNode FUHIVLA() { return getToken(ColorParser.FUHIVLA, 0); }
+		public FuhivlaContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_fuhivla; }
+	}
+
+	public final FuhivlaContext fuhivla() throws RecognitionException {
+		FuhivlaContext _localctx = new FuhivlaContext(_ctx, getState());
+		enterRule(_localctx, 6, RULE_fuhivla);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(303);
+			match(FUHIVLA);
 			}
 		}
 		catch (RecognitionException re) {
@@ -459,22 +501,22 @@ public class ColorParser extends Parser {
 
 	public final BrivlaContext brivla() throws RecognitionException {
 		BrivlaContext _localctx = new BrivlaContext(_ctx, getState());
-		enterRule(_localctx, 6, RULE_brivla);
+		enterRule(_localctx, 8, RULE_brivla);
 		try {
-			setState(299);
+			setState(307);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case LUJVO:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(297);
+				setState(305);
 				lujvo();
 				}
 				break;
 			case GISMU:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(298);
+				setState(306);
 				gismu();
 				}
 				break;
@@ -503,11 +545,11 @@ public class ColorParser extends Parser {
 
 	public final LujvoContext lujvo() throws RecognitionException {
 		LujvoContext _localctx = new LujvoContext(_ctx, getState());
-		enterRule(_localctx, 8, RULE_lujvo);
+		enterRule(_localctx, 10, RULE_lujvo);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(301);
+			setState(309);
 			match(LUJVO);
 			}
 		}
@@ -532,11 +574,11 @@ public class ColorParser extends Parser {
 
 	public final GismuContext gismu() throws RecognitionException {
 		GismuContext _localctx = new GismuContext(_ctx, getState());
-		enterRule(_localctx, 10, RULE_gismu);
+		enterRule(_localctx, 12, RULE_gismu);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(303);
+			setState(311);
 			match(GISMU);
 			}
 		}
@@ -605,9 +647,9 @@ public class ColorParser extends Parser {
 
 	public final CmavoContext cmavo() throws RecognitionException {
 		CmavoContext _localctx = new CmavoContext(_ctx, getState());
-		enterRule(_localctx, 12, RULE_cmavo);
+		enterRule(_localctx, 14, RULE_cmavo);
 		try {
-			setState(320);
+			setState(328);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case A:
@@ -621,21 +663,21 @@ public class ColorParser extends Parser {
 			case BU:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(305);
+				setState(313);
 				cmavoab();
 				}
 				break;
 			case BAI:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(306);
+				setState(314);
 				bai();
 				}
 				break;
 			case BY:
 				enterOuterAlt(_localctx, 3);
 				{
-				setState(307);
+				setState(315);
 				by();
 				}
 				break;
@@ -651,7 +693,7 @@ public class ColorParser extends Parser {
 			case DOI:
 				enterOuterAlt(_localctx, 4);
 				{
-				setState(308);
+				setState(316);
 				cmavocd();
 				}
 				break;
@@ -667,7 +709,7 @@ public class ColorParser extends Parser {
 			case FUHO:
 				enterOuterAlt(_localctx, 5);
 				{
-				setState(309);
+				setState(317);
 				cmavof();
 				}
 				break;
@@ -682,7 +724,7 @@ public class ColorParser extends Parser {
 			case I:
 				enterOuterAlt(_localctx, 6);
 				{
-				setState(310);
+				setState(318);
 				cmavogi();
 				}
 				break;
@@ -700,7 +742,7 @@ public class ColorParser extends Parser {
 			case KU:
 				enterOuterAlt(_localctx, 7);
 				{
-				setState(311);
+				setState(319);
 				cmavojk();
 				}
 				break;
@@ -717,7 +759,7 @@ public class ColorParser extends Parser {
 			case LU:
 				enterOuterAlt(_localctx, 8);
 				{
-				setState(312);
+				setState(320);
 				cmavol();
 				}
 				break;
@@ -741,7 +783,7 @@ public class ColorParser extends Parser {
 			case NU:
 				enterOuterAlt(_localctx, 9);
 				{
-				setState(313);
+				setState(321);
 				cmavomn();
 				}
 				break;
@@ -751,7 +793,7 @@ public class ColorParser extends Parser {
 			case PU:
 				enterOuterAlt(_localctx, 10);
 				{
-				setState(314);
+				setState(322);
 				cmavop();
 				}
 				break;
@@ -766,7 +808,7 @@ public class ColorParser extends Parser {
 			case SU:
 				enterOuterAlt(_localctx, 11);
 				{
-				setState(315);
+				setState(323);
 				cmavors();
 				}
 				break;
@@ -779,14 +821,14 @@ public class ColorParser extends Parser {
 			case TUHU:
 				enterOuterAlt(_localctx, 12);
 				{
-				setState(316);
+				setState(324);
 				cmavot();
 				}
 				break;
 			case UI:
 				enterOuterAlt(_localctx, 13);
 				{
-				setState(317);
+				setState(325);
 				ui();
 				}
 				break;
@@ -802,7 +844,7 @@ public class ColorParser extends Parser {
 			case Y:
 				enterOuterAlt(_localctx, 14);
 				{
-				setState(318);
+				setState(326);
 				cmavovy();
 				}
 				break;
@@ -816,7 +858,7 @@ public class ColorParser extends Parser {
 			case ZO:
 				enterOuterAlt(_localctx, 15);
 				{
-				setState(319);
+				setState(327);
 				cmavoz();
 				}
 				break;
@@ -871,71 +913,71 @@ public class ColorParser extends Parser {
 
 	public final CmavoabContext cmavoab() throws RecognitionException {
 		CmavoabContext _localctx = new CmavoabContext(_ctx, getState());
-		enterRule(_localctx, 14, RULE_cmavoab);
+		enterRule(_localctx, 16, RULE_cmavoab);
 		try {
-			setState(331);
+			setState(339);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case A:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(322);
+				setState(330);
 				a();
 				}
 				break;
 			case BAHE:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(323);
+				setState(331);
 				bahe();
 				}
 				break;
 			case BEHO:
 				enterOuterAlt(_localctx, 3);
 				{
-				setState(324);
+				setState(332);
 				beho();
 				}
 				break;
 			case BEI:
 				enterOuterAlt(_localctx, 4);
 				{
-				setState(325);
+				setState(333);
 				bei();
 				}
 				break;
 			case BE:
 				enterOuterAlt(_localctx, 5);
 				{
-				setState(326);
+				setState(334);
 				be();
 				}
 				break;
 			case BIHE:
 				enterOuterAlt(_localctx, 6);
 				{
-				setState(327);
+				setState(335);
 				bihe();
 				}
 				break;
 			case BOI:
 				enterOuterAlt(_localctx, 7);
 				{
-				setState(328);
+				setState(336);
 				boi();
 				}
 				break;
 			case BO:
 				enterOuterAlt(_localctx, 8);
 				{
-				setState(329);
+				setState(337);
 				bo();
 				}
 				break;
 			case BU:
 				enterOuterAlt(_localctx, 9);
 				{
-				setState(330);
+				setState(338);
 				bu();
 				}
 				break;
@@ -964,11 +1006,11 @@ public class ColorParser extends Parser {
 
 	public final AContext a() throws RecognitionException {
 		AContext _localctx = new AContext(_ctx, getState());
-		enterRule(_localctx, 16, RULE_a);
+		enterRule(_localctx, 18, RULE_a);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(333);
+			setState(341);
 			match(A);
 			}
 		}
@@ -993,11 +1035,11 @@ public class ColorParser extends Parser {
 
 	public final BaheContext bahe() throws RecognitionException {
 		BaheContext _localctx = new BaheContext(_ctx, getState());
-		enterRule(_localctx, 18, RULE_bahe);
+		enterRule(_localctx, 20, RULE_bahe);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(335);
+			setState(343);
 			match(BAHE);
 			}
 		}
@@ -1022,11 +1064,11 @@ public class ColorParser extends Parser {
 
 	public final BehoContext beho() throws RecognitionException {
 		BehoContext _localctx = new BehoContext(_ctx, getState());
-		enterRule(_localctx, 20, RULE_beho);
+		enterRule(_localctx, 22, RULE_beho);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(337);
+			setState(345);
 			match(BEHO);
 			}
 		}
@@ -1051,11 +1093,11 @@ public class ColorParser extends Parser {
 
 	public final BeiContext bei() throws RecognitionException {
 		BeiContext _localctx = new BeiContext(_ctx, getState());
-		enterRule(_localctx, 22, RULE_bei);
+		enterRule(_localctx, 24, RULE_bei);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(339);
+			setState(347);
 			match(BEI);
 			}
 		}
@@ -1080,11 +1122,11 @@ public class ColorParser extends Parser {
 
 	public final BeContext be() throws RecognitionException {
 		BeContext _localctx = new BeContext(_ctx, getState());
-		enterRule(_localctx, 24, RULE_be);
+		enterRule(_localctx, 26, RULE_be);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(341);
+			setState(349);
 			match(BE);
 			}
 		}
@@ -1109,11 +1151,11 @@ public class ColorParser extends Parser {
 
 	public final BiheContext bihe() throws RecognitionException {
 		BiheContext _localctx = new BiheContext(_ctx, getState());
-		enterRule(_localctx, 26, RULE_bihe);
+		enterRule(_localctx, 28, RULE_bihe);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(343);
+			setState(351);
 			match(BIHE);
 			}
 		}
@@ -1138,11 +1180,11 @@ public class ColorParser extends Parser {
 
 	public final BoiContext boi() throws RecognitionException {
 		BoiContext _localctx = new BoiContext(_ctx, getState());
-		enterRule(_localctx, 28, RULE_boi);
+		enterRule(_localctx, 30, RULE_boi);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(345);
+			setState(353);
 			match(BOI);
 			}
 		}
@@ -1167,11 +1209,11 @@ public class ColorParser extends Parser {
 
 	public final BoContext bo() throws RecognitionException {
 		BoContext _localctx = new BoContext(_ctx, getState());
-		enterRule(_localctx, 30, RULE_bo);
+		enterRule(_localctx, 32, RULE_bo);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(347);
+			setState(355);
 			match(BO);
 			}
 		}
@@ -1196,11 +1238,11 @@ public class ColorParser extends Parser {
 
 	public final BuContext bu() throws RecognitionException {
 		BuContext _localctx = new BuContext(_ctx, getState());
-		enterRule(_localctx, 32, RULE_bu);
+		enterRule(_localctx, 34, RULE_bu);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(349);
+			setState(357);
 			match(BU);
 			}
 		}
@@ -1225,11 +1267,11 @@ public class ColorParser extends Parser {
 
 	public final BaiContext bai() throws RecognitionException {
 		BaiContext _localctx = new BaiContext(_ctx, getState());
-		enterRule(_localctx, 34, RULE_bai);
+		enterRule(_localctx, 36, RULE_bai);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(351);
+			setState(359);
 			match(BAI);
 			}
 		}
@@ -1254,11 +1296,11 @@ public class ColorParser extends Parser {
 
 	public final ByContext by() throws RecognitionException {
 		ByContext _localctx = new ByContext(_ctx, getState());
-		enterRule(_localctx, 36, RULE_by);
+		enterRule(_localctx, 38, RULE_by);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(353);
+			setState(361);
 			match(BY);
 			}
 		}
@@ -1283,11 +1325,11 @@ public class ColorParser extends Parser {
 
 	public final UiContext ui() throws RecognitionException {
 		UiContext _localctx = new UiContext(_ctx, getState());
-		enterRule(_localctx, 38, RULE_ui);
+		enterRule(_localctx, 40, RULE_ui);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(355);
+			setState(363);
 			match(UI);
 			}
 		}
@@ -1341,78 +1383,78 @@ public class ColorParser extends Parser {
 
 	public final CmavocdContext cmavocd() throws RecognitionException {
 		CmavocdContext _localctx = new CmavocdContext(_ctx, getState());
-		enterRule(_localctx, 40, RULE_cmavocd);
+		enterRule(_localctx, 42, RULE_cmavocd);
 		try {
-			setState(367);
+			setState(375);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case CAHA:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(357);
+				setState(365);
 				caha();
 				}
 				break;
 			case CAI:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(358);
+				setState(366);
 				cai();
 				}
 				break;
 			case CEHE:
 				enterOuterAlt(_localctx, 3);
 				{
-				setState(359);
+				setState(367);
 				cehe();
 				}
 				break;
 			case CEI:
 				enterOuterAlt(_localctx, 4);
 				{
-				setState(360);
+				setState(368);
 				cei();
 				}
 				break;
 			case CO:
 				enterOuterAlt(_localctx, 5);
 				{
-				setState(361);
+				setState(369);
 				co();
 				}
 				break;
 			case COI:
 				enterOuterAlt(_localctx, 6);
 				{
-				setState(362);
+				setState(370);
 				coi();
 				}
 				break;
 			case CU:
 				enterOuterAlt(_localctx, 7);
 				{
-				setState(363);
+				setState(371);
 				cu();
 				}
 				break;
 			case CUHE:
 				enterOuterAlt(_localctx, 8);
 				{
-				setState(364);
+				setState(372);
 				cuhe();
 				}
 				break;
 			case DAHO:
 				enterOuterAlt(_localctx, 9);
 				{
-				setState(365);
+				setState(373);
 				daho();
 				}
 				break;
 			case DOI:
 				enterOuterAlt(_localctx, 10);
 				{
-				setState(366);
+				setState(374);
 				doi();
 				}
 				break;
@@ -1441,11 +1483,11 @@ public class ColorParser extends Parser {
 
 	public final CahaContext caha() throws RecognitionException {
 		CahaContext _localctx = new CahaContext(_ctx, getState());
-		enterRule(_localctx, 42, RULE_caha);
+		enterRule(_localctx, 44, RULE_caha);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(369);
+			setState(377);
 			match(CAHA);
 			}
 		}
@@ -1470,11 +1512,11 @@ public class ColorParser extends Parser {
 
 	public final CaiContext cai() throws RecognitionException {
 		CaiContext _localctx = new CaiContext(_ctx, getState());
-		enterRule(_localctx, 44, RULE_cai);
+		enterRule(_localctx, 46, RULE_cai);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(371);
+			setState(379);
 			match(CAI);
 			}
 		}
@@ -1499,11 +1541,11 @@ public class ColorParser extends Parser {
 
 	public final CeheContext cehe() throws RecognitionException {
 		CeheContext _localctx = new CeheContext(_ctx, getState());
-		enterRule(_localctx, 46, RULE_cehe);
+		enterRule(_localctx, 48, RULE_cehe);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(373);
+			setState(381);
 			match(CEHE);
 			}
 		}
@@ -1528,11 +1570,11 @@ public class ColorParser extends Parser {
 
 	public final CeiContext cei() throws RecognitionException {
 		CeiContext _localctx = new CeiContext(_ctx, getState());
-		enterRule(_localctx, 48, RULE_cei);
+		enterRule(_localctx, 50, RULE_cei);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(375);
+			setState(383);
 			match(CEI);
 			}
 		}
@@ -1557,11 +1599,11 @@ public class ColorParser extends Parser {
 
 	public final CoContext co() throws RecognitionException {
 		CoContext _localctx = new CoContext(_ctx, getState());
-		enterRule(_localctx, 50, RULE_co);
+		enterRule(_localctx, 52, RULE_co);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(377);
+			setState(385);
 			match(CO);
 			}
 		}
@@ -1586,11 +1628,11 @@ public class ColorParser extends Parser {
 
 	public final CoiContext coi() throws RecognitionException {
 		CoiContext _localctx = new CoiContext(_ctx, getState());
-		enterRule(_localctx, 52, RULE_coi);
+		enterRule(_localctx, 54, RULE_coi);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(379);
+			setState(387);
 			match(COI);
 			}
 		}
@@ -1615,11 +1657,11 @@ public class ColorParser extends Parser {
 
 	public final CuContext cu() throws RecognitionException {
 		CuContext _localctx = new CuContext(_ctx, getState());
-		enterRule(_localctx, 54, RULE_cu);
+		enterRule(_localctx, 56, RULE_cu);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(381);
+			setState(389);
 			match(CU);
 			}
 		}
@@ -1644,11 +1686,11 @@ public class ColorParser extends Parser {
 
 	public final CuheContext cuhe() throws RecognitionException {
 		CuheContext _localctx = new CuheContext(_ctx, getState());
-		enterRule(_localctx, 56, RULE_cuhe);
+		enterRule(_localctx, 58, RULE_cuhe);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(383);
+			setState(391);
 			match(CUHE);
 			}
 		}
@@ -1673,11 +1715,11 @@ public class ColorParser extends Parser {
 
 	public final DahoContext daho() throws RecognitionException {
 		DahoContext _localctx = new DahoContext(_ctx, getState());
-		enterRule(_localctx, 58, RULE_daho);
+		enterRule(_localctx, 60, RULE_daho);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(385);
+			setState(393);
 			match(DAHO);
 			}
 		}
@@ -1702,11 +1744,11 @@ public class ColorParser extends Parser {
 
 	public final DoiContext doi() throws RecognitionException {
 		DoiContext _localctx = new DoiContext(_ctx, getState());
-		enterRule(_localctx, 60, RULE_doi);
+		enterRule(_localctx, 62, RULE_doi);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(387);
+			setState(395);
 			match(DOI);
 			}
 		}
@@ -1760,78 +1802,78 @@ public class ColorParser extends Parser {
 
 	public final CmavofContext cmavof() throws RecognitionException {
 		CmavofContext _localctx = new CmavofContext(_ctx, getState());
-		enterRule(_localctx, 62, RULE_cmavof);
+		enterRule(_localctx, 64, RULE_cmavof);
 		try {
-			setState(399);
+			setState(407);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case FA:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(389);
+				setState(397);
 				fa();
 				}
 				break;
 			case FAHA:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(390);
+				setState(398);
 				faha();
 				}
 				break;
 			case FAHO:
 				enterOuterAlt(_localctx, 3);
 				{
-				setState(391);
+				setState(399);
 				faho();
 				}
 				break;
 			case FEHE:
 				enterOuterAlt(_localctx, 4);
 				{
-				setState(392);
+				setState(400);
 				fehe();
 				}
 				break;
 			case FEHU:
 				enterOuterAlt(_localctx, 5);
 				{
-				setState(393);
+				setState(401);
 				fehu();
 				}
 				break;
 			case FIHO:
 				enterOuterAlt(_localctx, 6);
 				{
-				setState(394);
+				setState(402);
 				fiho();
 				}
 				break;
 			case FOI:
 				enterOuterAlt(_localctx, 7);
 				{
-				setState(395);
+				setState(403);
 				foi();
 				}
 				break;
 			case FUHA:
 				enterOuterAlt(_localctx, 8);
 				{
-				setState(396);
+				setState(404);
 				fuha();
 				}
 				break;
 			case FUHE:
 				enterOuterAlt(_localctx, 9);
 				{
-				setState(397);
+				setState(405);
 				fuhe();
 				}
 				break;
 			case FUHO:
 				enterOuterAlt(_localctx, 10);
 				{
-				setState(398);
+				setState(406);
 				fuho();
 				}
 				break;
@@ -1860,11 +1902,11 @@ public class ColorParser extends Parser {
 
 	public final FaContext fa() throws RecognitionException {
 		FaContext _localctx = new FaContext(_ctx, getState());
-		enterRule(_localctx, 64, RULE_fa);
+		enterRule(_localctx, 66, RULE_fa);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(401);
+			setState(409);
 			match(FA);
 			}
 		}
@@ -1889,11 +1931,11 @@ public class ColorParser extends Parser {
 
 	public final FahaContext faha() throws RecognitionException {
 		FahaContext _localctx = new FahaContext(_ctx, getState());
-		enterRule(_localctx, 66, RULE_faha);
+		enterRule(_localctx, 68, RULE_faha);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(403);
+			setState(411);
 			match(FAHA);
 			}
 		}
@@ -1918,11 +1960,11 @@ public class ColorParser extends Parser {
 
 	public final FahoContext faho() throws RecognitionException {
 		FahoContext _localctx = new FahoContext(_ctx, getState());
-		enterRule(_localctx, 68, RULE_faho);
+		enterRule(_localctx, 70, RULE_faho);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(405);
+			setState(413);
 			match(FAHO);
 			}
 		}
@@ -1947,11 +1989,11 @@ public class ColorParser extends Parser {
 
 	public final FeheContext fehe() throws RecognitionException {
 		FeheContext _localctx = new FeheContext(_ctx, getState());
-		enterRule(_localctx, 70, RULE_fehe);
+		enterRule(_localctx, 72, RULE_fehe);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(407);
+			setState(415);
 			match(FEHE);
 			}
 		}
@@ -1976,11 +2018,11 @@ public class ColorParser extends Parser {
 
 	public final FehuContext fehu() throws RecognitionException {
 		FehuContext _localctx = new FehuContext(_ctx, getState());
-		enterRule(_localctx, 72, RULE_fehu);
+		enterRule(_localctx, 74, RULE_fehu);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(409);
+			setState(417);
 			match(FEHU);
 			}
 		}
@@ -2005,11 +2047,11 @@ public class ColorParser extends Parser {
 
 	public final FihoContext fiho() throws RecognitionException {
 		FihoContext _localctx = new FihoContext(_ctx, getState());
-		enterRule(_localctx, 74, RULE_fiho);
+		enterRule(_localctx, 76, RULE_fiho);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(411);
+			setState(419);
 			match(FIHO);
 			}
 		}
@@ -2034,11 +2076,11 @@ public class ColorParser extends Parser {
 
 	public final FoiContext foi() throws RecognitionException {
 		FoiContext _localctx = new FoiContext(_ctx, getState());
-		enterRule(_localctx, 76, RULE_foi);
+		enterRule(_localctx, 78, RULE_foi);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(413);
+			setState(421);
 			match(FOI);
 			}
 		}
@@ -2063,11 +2105,11 @@ public class ColorParser extends Parser {
 
 	public final FuhaContext fuha() throws RecognitionException {
 		FuhaContext _localctx = new FuhaContext(_ctx, getState());
-		enterRule(_localctx, 78, RULE_fuha);
+		enterRule(_localctx, 80, RULE_fuha);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(415);
+			setState(423);
 			match(FUHA);
 			}
 		}
@@ -2092,11 +2134,11 @@ public class ColorParser extends Parser {
 
 	public final FuheContext fuhe() throws RecognitionException {
 		FuheContext _localctx = new FuheContext(_ctx, getState());
-		enterRule(_localctx, 80, RULE_fuhe);
+		enterRule(_localctx, 82, RULE_fuhe);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(417);
+			setState(425);
 			match(FUHE);
 			}
 		}
@@ -2121,11 +2163,11 @@ public class ColorParser extends Parser {
 
 	public final FuhoContext fuho() throws RecognitionException {
 		FuhoContext _localctx = new FuhoContext(_ctx, getState());
-		enterRule(_localctx, 82, RULE_fuho);
+		enterRule(_localctx, 84, RULE_fuho);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(419);
+			setState(427);
 			match(FUHO);
 			}
 		}
@@ -2176,71 +2218,71 @@ public class ColorParser extends Parser {
 
 	public final CmavogiContext cmavogi() throws RecognitionException {
 		CmavogiContext _localctx = new CmavogiContext(_ctx, getState());
-		enterRule(_localctx, 84, RULE_cmavogi);
+		enterRule(_localctx, 86, RULE_cmavogi);
 		try {
-			setState(430);
+			setState(438);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case GA:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(421);
+				setState(429);
 				ga();
 				}
 				break;
 			case GAHO:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(422);
+				setState(430);
 				gaho();
 				}
 				break;
 			case GEHU:
 				enterOuterAlt(_localctx, 3);
 				{
-				setState(423);
+				setState(431);
 				gehu();
 				}
 				break;
 			case GI:
 				enterOuterAlt(_localctx, 4);
 				{
-				setState(424);
+				setState(432);
 				gi();
 				}
 				break;
 			case GIHA:
 				enterOuterAlt(_localctx, 5);
 				{
-				setState(425);
+				setState(433);
 				giha();
 				}
 				break;
 			case GOHA:
 				enterOuterAlt(_localctx, 6);
 				{
-				setState(426);
+				setState(434);
 				goha();
 				}
 				break;
 			case GOI:
 				enterOuterAlt(_localctx, 7);
 				{
-				setState(427);
+				setState(435);
 				goi();
 				}
 				break;
 			case GUHA:
 				enterOuterAlt(_localctx, 8);
 				{
-				setState(428);
+				setState(436);
 				guha();
 				}
 				break;
 			case I:
 				enterOuterAlt(_localctx, 9);
 				{
-				setState(429);
+				setState(437);
 				i();
 				}
 				break;
@@ -2269,11 +2311,11 @@ public class ColorParser extends Parser {
 
 	public final GaContext ga() throws RecognitionException {
 		GaContext _localctx = new GaContext(_ctx, getState());
-		enterRule(_localctx, 86, RULE_ga);
+		enterRule(_localctx, 88, RULE_ga);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(432);
+			setState(440);
 			match(GA);
 			}
 		}
@@ -2298,11 +2340,11 @@ public class ColorParser extends Parser {
 
 	public final GahoContext gaho() throws RecognitionException {
 		GahoContext _localctx = new GahoContext(_ctx, getState());
-		enterRule(_localctx, 88, RULE_gaho);
+		enterRule(_localctx, 90, RULE_gaho);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(434);
+			setState(442);
 			match(GAHO);
 			}
 		}
@@ -2327,11 +2369,11 @@ public class ColorParser extends Parser {
 
 	public final GehuContext gehu() throws RecognitionException {
 		GehuContext _localctx = new GehuContext(_ctx, getState());
-		enterRule(_localctx, 90, RULE_gehu);
+		enterRule(_localctx, 92, RULE_gehu);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(436);
+			setState(444);
 			match(GEHU);
 			}
 		}
@@ -2356,11 +2398,11 @@ public class ColorParser extends Parser {
 
 	public final GiContext gi() throws RecognitionException {
 		GiContext _localctx = new GiContext(_ctx, getState());
-		enterRule(_localctx, 92, RULE_gi);
+		enterRule(_localctx, 94, RULE_gi);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(438);
+			setState(446);
 			match(GI);
 			}
 		}
@@ -2385,11 +2427,11 @@ public class ColorParser extends Parser {
 
 	public final GihaContext giha() throws RecognitionException {
 		GihaContext _localctx = new GihaContext(_ctx, getState());
-		enterRule(_localctx, 94, RULE_giha);
+		enterRule(_localctx, 96, RULE_giha);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(440);
+			setState(448);
 			match(GIHA);
 			}
 		}
@@ -2414,11 +2456,11 @@ public class ColorParser extends Parser {
 
 	public final GohaContext goha() throws RecognitionException {
 		GohaContext _localctx = new GohaContext(_ctx, getState());
-		enterRule(_localctx, 96, RULE_goha);
+		enterRule(_localctx, 98, RULE_goha);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(442);
+			setState(450);
 			match(GOHA);
 			}
 		}
@@ -2443,11 +2485,11 @@ public class ColorParser extends Parser {
 
 	public final GoiContext goi() throws RecognitionException {
 		GoiContext _localctx = new GoiContext(_ctx, getState());
-		enterRule(_localctx, 98, RULE_goi);
+		enterRule(_localctx, 100, RULE_goi);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(444);
+			setState(452);
 			match(GOI);
 			}
 		}
@@ -2472,11 +2514,11 @@ public class ColorParser extends Parser {
 
 	public final GuhaContext guha() throws RecognitionException {
 		GuhaContext _localctx = new GuhaContext(_ctx, getState());
-		enterRule(_localctx, 100, RULE_guha);
+		enterRule(_localctx, 102, RULE_guha);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(446);
+			setState(454);
 			match(GUHA);
 			}
 		}
@@ -2501,11 +2543,11 @@ public class ColorParser extends Parser {
 
 	public final IContext i() throws RecognitionException {
 		IContext _localctx = new IContext(_ctx, getState());
-		enterRule(_localctx, 102, RULE_i);
+		enterRule(_localctx, 104, RULE_i);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(448);
+			setState(456);
 			match(I);
 			}
 		}
@@ -2565,92 +2607,92 @@ public class ColorParser extends Parser {
 
 	public final CmavojkContext cmavojk() throws RecognitionException {
 		CmavojkContext _localctx = new CmavojkContext(_ctx, getState());
-		enterRule(_localctx, 104, RULE_cmavojk);
+		enterRule(_localctx, 106, RULE_cmavojk);
 		try {
-			setState(462);
+			setState(470);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case JAI:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(450);
+				setState(458);
 				jai();
 				}
 				break;
 			case JA:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(451);
+				setState(459);
 				ja();
 				}
 				break;
 			case JOHI:
 				enterOuterAlt(_localctx, 3);
 				{
-				setState(452);
+				setState(460);
 				johi();
 				}
 				break;
 			case JOI:
 				enterOuterAlt(_localctx, 4);
 				{
-				setState(453);
+				setState(461);
 				joi();
 				}
 				break;
 			case KEHE:
 				enterOuterAlt(_localctx, 5);
 				{
-				setState(454);
+				setState(462);
 				kehe();
 				}
 				break;
 			case KEI:
 				enterOuterAlt(_localctx, 6);
 				{
-				setState(455);
+				setState(463);
 				kei();
 				}
 				break;
 			case KE:
 				enterOuterAlt(_localctx, 7);
 				{
-				setState(456);
+				setState(464);
 				ke();
 				}
 				break;
 			case KI:
 				enterOuterAlt(_localctx, 8);
 				{
-				setState(457);
+				setState(465);
 				ki();
 				}
 				break;
 			case KOHA:
 				enterOuterAlt(_localctx, 9);
 				{
-				setState(458);
+				setState(466);
 				koha();
 				}
 				break;
 			case KUHE:
 				enterOuterAlt(_localctx, 10);
 				{
-				setState(459);
+				setState(467);
 				kuhe();
 				}
 				break;
 			case KUHO:
 				enterOuterAlt(_localctx, 11);
 				{
-				setState(460);
+				setState(468);
 				kuho();
 				}
 				break;
 			case KU:
 				enterOuterAlt(_localctx, 12);
 				{
-				setState(461);
+				setState(469);
 				ku();
 				}
 				break;
@@ -2679,11 +2721,11 @@ public class ColorParser extends Parser {
 
 	public final JaiContext jai() throws RecognitionException {
 		JaiContext _localctx = new JaiContext(_ctx, getState());
-		enterRule(_localctx, 106, RULE_jai);
+		enterRule(_localctx, 108, RULE_jai);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(464);
+			setState(472);
 			match(JAI);
 			}
 		}
@@ -2708,11 +2750,11 @@ public class ColorParser extends Parser {
 
 	public final JaContext ja() throws RecognitionException {
 		JaContext _localctx = new JaContext(_ctx, getState());
-		enterRule(_localctx, 108, RULE_ja);
+		enterRule(_localctx, 110, RULE_ja);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(466);
+			setState(474);
 			match(JA);
 			}
 		}
@@ -2737,11 +2779,11 @@ public class ColorParser extends Parser {
 
 	public final JohiContext johi() throws RecognitionException {
 		JohiContext _localctx = new JohiContext(_ctx, getState());
-		enterRule(_localctx, 110, RULE_johi);
+		enterRule(_localctx, 112, RULE_johi);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(468);
+			setState(476);
 			match(JOHI);
 			}
 		}
@@ -2766,11 +2808,11 @@ public class ColorParser extends Parser {
 
 	public final JoiContext joi() throws RecognitionException {
 		JoiContext _localctx = new JoiContext(_ctx, getState());
-		enterRule(_localctx, 112, RULE_joi);
+		enterRule(_localctx, 114, RULE_joi);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(470);
+			setState(478);
 			match(JOI);
 			}
 		}
@@ -2795,11 +2837,11 @@ public class ColorParser extends Parser {
 
 	public final KeheContext kehe() throws RecognitionException {
 		KeheContext _localctx = new KeheContext(_ctx, getState());
-		enterRule(_localctx, 114, RULE_kehe);
+		enterRule(_localctx, 116, RULE_kehe);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(472);
+			setState(480);
 			match(KEHE);
 			}
 		}
@@ -2824,11 +2866,11 @@ public class ColorParser extends Parser {
 
 	public final KeiContext kei() throws RecognitionException {
 		KeiContext _localctx = new KeiContext(_ctx, getState());
-		enterRule(_localctx, 116, RULE_kei);
+		enterRule(_localctx, 118, RULE_kei);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(474);
+			setState(482);
 			match(KEI);
 			}
 		}
@@ -2853,11 +2895,11 @@ public class ColorParser extends Parser {
 
 	public final KeContext ke() throws RecognitionException {
 		KeContext _localctx = new KeContext(_ctx, getState());
-		enterRule(_localctx, 118, RULE_ke);
+		enterRule(_localctx, 120, RULE_ke);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(476);
+			setState(484);
 			match(KE);
 			}
 		}
@@ -2882,11 +2924,11 @@ public class ColorParser extends Parser {
 
 	public final KiContext ki() throws RecognitionException {
 		KiContext _localctx = new KiContext(_ctx, getState());
-		enterRule(_localctx, 120, RULE_ki);
+		enterRule(_localctx, 122, RULE_ki);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(478);
+			setState(486);
 			match(KI);
 			}
 		}
@@ -2911,11 +2953,11 @@ public class ColorParser extends Parser {
 
 	public final KohaContext koha() throws RecognitionException {
 		KohaContext _localctx = new KohaContext(_ctx, getState());
-		enterRule(_localctx, 122, RULE_koha);
+		enterRule(_localctx, 124, RULE_koha);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(480);
+			setState(488);
 			match(KOHA);
 			}
 		}
@@ -2940,11 +2982,11 @@ public class ColorParser extends Parser {
 
 	public final KuheContext kuhe() throws RecognitionException {
 		KuheContext _localctx = new KuheContext(_ctx, getState());
-		enterRule(_localctx, 124, RULE_kuhe);
+		enterRule(_localctx, 126, RULE_kuhe);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(482);
+			setState(490);
 			match(KUHE);
 			}
 		}
@@ -2969,11 +3011,11 @@ public class ColorParser extends Parser {
 
 	public final KuhoContext kuho() throws RecognitionException {
 		KuhoContext _localctx = new KuhoContext(_ctx, getState());
-		enterRule(_localctx, 126, RULE_kuho);
+		enterRule(_localctx, 128, RULE_kuho);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(484);
+			setState(492);
 			match(KUHO);
 			}
 		}
@@ -2998,11 +3040,11 @@ public class ColorParser extends Parser {
 
 	public final KuContext ku() throws RecognitionException {
 		KuContext _localctx = new KuContext(_ctx, getState());
-		enterRule(_localctx, 128, RULE_ku);
+		enterRule(_localctx, 130, RULE_ku);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(486);
+			setState(494);
 			match(KU);
 			}
 		}
@@ -3059,85 +3101,85 @@ public class ColorParser extends Parser {
 
 	public final CmavolContext cmavol() throws RecognitionException {
 		CmavolContext _localctx = new CmavolContext(_ctx, getState());
-		enterRule(_localctx, 130, RULE_cmavol);
+		enterRule(_localctx, 132, RULE_cmavol);
 		try {
-			setState(499);
+			setState(507);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case LAHE:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(488);
+				setState(496);
 				lahe();
 				}
 				break;
 			case LA:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(489);
+				setState(497);
 				la();
 				}
 				break;
 			case LAU:
 				enterOuterAlt(_localctx, 3);
 				{
-				setState(490);
+				setState(498);
 				lau();
 				}
 				break;
 			case LEHU:
 				enterOuterAlt(_localctx, 4);
 				{
-				setState(491);
+				setState(499);
 				lehu();
 				}
 				break;
 			case LE:
 				enterOuterAlt(_localctx, 5);
 				{
-				setState(492);
+				setState(500);
 				le();
 				}
 				break;
 			case LIHU:
 				enterOuterAlt(_localctx, 6);
 				{
-				setState(493);
+				setState(501);
 				lihu();
 				}
 				break;
 			case LI:
 				enterOuterAlt(_localctx, 7);
 				{
-				setState(494);
+				setState(502);
 				li();
 				}
 				break;
 			case LOHO:
 				enterOuterAlt(_localctx, 8);
 				{
-				setState(495);
+				setState(503);
 				loho();
 				}
 				break;
 			case LOHU:
 				enterOuterAlt(_localctx, 9);
 				{
-				setState(496);
+				setState(504);
 				lohu();
 				}
 				break;
 			case LUHU:
 				enterOuterAlt(_localctx, 10);
 				{
-				setState(497);
+				setState(505);
 				luhu();
 				}
 				break;
 			case LU:
 				enterOuterAlt(_localctx, 11);
 				{
-				setState(498);
+				setState(506);
 				lu();
 				}
 				break;
@@ -3166,11 +3208,11 @@ public class ColorParser extends Parser {
 
 	public final LaheContext lahe() throws RecognitionException {
 		LaheContext _localctx = new LaheContext(_ctx, getState());
-		enterRule(_localctx, 132, RULE_lahe);
+		enterRule(_localctx, 134, RULE_lahe);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(501);
+			setState(509);
 			match(LAHE);
 			}
 		}
@@ -3195,11 +3237,11 @@ public class ColorParser extends Parser {
 
 	public final LaContext la() throws RecognitionException {
 		LaContext _localctx = new LaContext(_ctx, getState());
-		enterRule(_localctx, 134, RULE_la);
+		enterRule(_localctx, 136, RULE_la);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(503);
+			setState(511);
 			match(LA);
 			}
 		}
@@ -3224,11 +3266,11 @@ public class ColorParser extends Parser {
 
 	public final LauContext lau() throws RecognitionException {
 		LauContext _localctx = new LauContext(_ctx, getState());
-		enterRule(_localctx, 136, RULE_lau);
+		enterRule(_localctx, 138, RULE_lau);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(505);
+			setState(513);
 			match(LAU);
 			}
 		}
@@ -3253,11 +3295,11 @@ public class ColorParser extends Parser {
 
 	public final LehuContext lehu() throws RecognitionException {
 		LehuContext _localctx = new LehuContext(_ctx, getState());
-		enterRule(_localctx, 138, RULE_lehu);
+		enterRule(_localctx, 140, RULE_lehu);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(507);
+			setState(515);
 			match(LEHU);
 			}
 		}
@@ -3282,11 +3324,11 @@ public class ColorParser extends Parser {
 
 	public final LeContext le() throws RecognitionException {
 		LeContext _localctx = new LeContext(_ctx, getState());
-		enterRule(_localctx, 140, RULE_le);
+		enterRule(_localctx, 142, RULE_le);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(509);
+			setState(517);
 			match(LE);
 			}
 		}
@@ -3311,11 +3353,11 @@ public class ColorParser extends Parser {
 
 	public final LihuContext lihu() throws RecognitionException {
 		LihuContext _localctx = new LihuContext(_ctx, getState());
-		enterRule(_localctx, 142, RULE_lihu);
+		enterRule(_localctx, 144, RULE_lihu);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(511);
+			setState(519);
 			match(LIHU);
 			}
 		}
@@ -3340,11 +3382,11 @@ public class ColorParser extends Parser {
 
 	public final LiContext li() throws RecognitionException {
 		LiContext _localctx = new LiContext(_ctx, getState());
-		enterRule(_localctx, 144, RULE_li);
+		enterRule(_localctx, 146, RULE_li);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(513);
+			setState(521);
 			match(LI);
 			}
 		}
@@ -3369,11 +3411,11 @@ public class ColorParser extends Parser {
 
 	public final LohoContext loho() throws RecognitionException {
 		LohoContext _localctx = new LohoContext(_ctx, getState());
-		enterRule(_localctx, 146, RULE_loho);
+		enterRule(_localctx, 148, RULE_loho);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(515);
+			setState(523);
 			match(LOHO);
 			}
 		}
@@ -3398,11 +3440,11 @@ public class ColorParser extends Parser {
 
 	public final LohuContext lohu() throws RecognitionException {
 		LohuContext _localctx = new LohuContext(_ctx, getState());
-		enterRule(_localctx, 148, RULE_lohu);
+		enterRule(_localctx, 150, RULE_lohu);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(517);
+			setState(525);
 			match(LOHU);
 			}
 		}
@@ -3427,11 +3469,11 @@ public class ColorParser extends Parser {
 
 	public final LuhuContext luhu() throws RecognitionException {
 		LuhuContext _localctx = new LuhuContext(_ctx, getState());
-		enterRule(_localctx, 150, RULE_luhu);
+		enterRule(_localctx, 152, RULE_luhu);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(519);
+			setState(527);
 			match(LUHU);
 			}
 		}
@@ -3456,11 +3498,11 @@ public class ColorParser extends Parser {
 
 	public final LuContext lu() throws RecognitionException {
 		LuContext _localctx = new LuContext(_ctx, getState());
-		enterRule(_localctx, 152, RULE_lu);
+		enterRule(_localctx, 154, RULE_lu);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(521);
+			setState(529);
 			match(LU);
 			}
 		}
@@ -3538,134 +3580,134 @@ public class ColorParser extends Parser {
 
 	public final CmavomnContext cmavomn() throws RecognitionException {
 		CmavomnContext _localctx = new CmavomnContext(_ctx, getState());
-		enterRule(_localctx, 154, RULE_cmavomn);
+		enterRule(_localctx, 156, RULE_cmavomn);
 		try {
-			setState(541);
+			setState(549);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case MAHO:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(523);
+				setState(531);
 				maho();
 				}
 				break;
 			case MAI:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(524);
+				setState(532);
 				mai();
 				}
 				break;
 			case MEHU:
 				enterOuterAlt(_localctx, 3);
 				{
-				setState(525);
+				setState(533);
 				mehu();
 				}
 				break;
 			case ME:
 				enterOuterAlt(_localctx, 4);
 				{
-				setState(526);
+				setState(534);
 				me();
 				}
 				break;
 			case MOHE:
 				enterOuterAlt(_localctx, 5);
 				{
-				setState(527);
+				setState(535);
 				mohe();
 				}
 				break;
 			case MOHI:
 				enterOuterAlt(_localctx, 6);
 				{
-				setState(528);
+				setState(536);
 				mohi();
 				}
 				break;
 			case MOI:
 				enterOuterAlt(_localctx, 7);
 				{
-				setState(529);
+				setState(537);
 				moi();
 				}
 				break;
 			case NAHE:
 				enterOuterAlt(_localctx, 8);
 				{
-				setState(530);
+				setState(538);
 				nahe();
 				}
 				break;
 			case NAHU:
 				enterOuterAlt(_localctx, 9);
 				{
-				setState(531);
+				setState(539);
 				nahu();
 				}
 				break;
 			case NAI:
 				enterOuterAlt(_localctx, 10);
 				{
-				setState(532);
+				setState(540);
 				nai();
 				}
 				break;
 			case NA:
 				enterOuterAlt(_localctx, 11);
 				{
-				setState(533);
+				setState(541);
 				na();
 				}
 				break;
 			case NIHE:
 				enterOuterAlt(_localctx, 12);
 				{
-				setState(534);
+				setState(542);
 				nihe();
 				}
 				break;
 			case NIHO:
 				enterOuterAlt(_localctx, 13);
 				{
-				setState(535);
+				setState(543);
 				niho();
 				}
 				break;
 			case NOI:
 				enterOuterAlt(_localctx, 14);
 				{
-				setState(536);
+				setState(544);
 				noi();
 				}
 				break;
 			case NUHA:
 				enterOuterAlt(_localctx, 15);
 				{
-				setState(537);
+				setState(545);
 				nuha();
 				}
 				break;
 			case NUHI:
 				enterOuterAlt(_localctx, 16);
 				{
-				setState(538);
+				setState(546);
 				nuhi();
 				}
 				break;
 			case NUHU:
 				enterOuterAlt(_localctx, 17);
 				{
-				setState(539);
+				setState(547);
 				nuhu();
 				}
 				break;
 			case NU:
 				enterOuterAlt(_localctx, 18);
 				{
-				setState(540);
+				setState(548);
 				nu();
 				}
 				break;
@@ -3694,11 +3736,11 @@ public class ColorParser extends Parser {
 
 	public final MahoContext maho() throws RecognitionException {
 		MahoContext _localctx = new MahoContext(_ctx, getState());
-		enterRule(_localctx, 156, RULE_maho);
+		enterRule(_localctx, 158, RULE_maho);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(543);
+			setState(551);
 			match(MAHO);
 			}
 		}
@@ -3723,11 +3765,11 @@ public class ColorParser extends Parser {
 
 	public final MaiContext mai() throws RecognitionException {
 		MaiContext _localctx = new MaiContext(_ctx, getState());
-		enterRule(_localctx, 158, RULE_mai);
+		enterRule(_localctx, 160, RULE_mai);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(545);
+			setState(553);
 			match(MAI);
 			}
 		}
@@ -3752,11 +3794,11 @@ public class ColorParser extends Parser {
 
 	public final MehuContext mehu() throws RecognitionException {
 		MehuContext _localctx = new MehuContext(_ctx, getState());
-		enterRule(_localctx, 160, RULE_mehu);
+		enterRule(_localctx, 162, RULE_mehu);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(547);
+			setState(555);
 			match(MEHU);
 			}
 		}
@@ -3781,11 +3823,11 @@ public class ColorParser extends Parser {
 
 	public final MeContext me() throws RecognitionException {
 		MeContext _localctx = new MeContext(_ctx, getState());
-		enterRule(_localctx, 162, RULE_me);
+		enterRule(_localctx, 164, RULE_me);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(549);
+			setState(557);
 			match(ME);
 			}
 		}
@@ -3810,11 +3852,11 @@ public class ColorParser extends Parser {
 
 	public final MoheContext mohe() throws RecognitionException {
 		MoheContext _localctx = new MoheContext(_ctx, getState());
-		enterRule(_localctx, 164, RULE_mohe);
+		enterRule(_localctx, 166, RULE_mohe);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(551);
+			setState(559);
 			match(MOHE);
 			}
 		}
@@ -3839,11 +3881,11 @@ public class ColorParser extends Parser {
 
 	public final MohiContext mohi() throws RecognitionException {
 		MohiContext _localctx = new MohiContext(_ctx, getState());
-		enterRule(_localctx, 166, RULE_mohi);
+		enterRule(_localctx, 168, RULE_mohi);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(553);
+			setState(561);
 			match(MOHI);
 			}
 		}
@@ -3868,11 +3910,11 @@ public class ColorParser extends Parser {
 
 	public final MoiContext moi() throws RecognitionException {
 		MoiContext _localctx = new MoiContext(_ctx, getState());
-		enterRule(_localctx, 168, RULE_moi);
+		enterRule(_localctx, 170, RULE_moi);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(555);
+			setState(563);
 			match(MOI);
 			}
 		}
@@ -3897,11 +3939,11 @@ public class ColorParser extends Parser {
 
 	public final NaheContext nahe() throws RecognitionException {
 		NaheContext _localctx = new NaheContext(_ctx, getState());
-		enterRule(_localctx, 170, RULE_nahe);
+		enterRule(_localctx, 172, RULE_nahe);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(557);
+			setState(565);
 			match(NAHE);
 			}
 		}
@@ -3926,11 +3968,11 @@ public class ColorParser extends Parser {
 
 	public final NahuContext nahu() throws RecognitionException {
 		NahuContext _localctx = new NahuContext(_ctx, getState());
-		enterRule(_localctx, 172, RULE_nahu);
+		enterRule(_localctx, 174, RULE_nahu);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(559);
+			setState(567);
 			match(NAHU);
 			}
 		}
@@ -3955,11 +3997,11 @@ public class ColorParser extends Parser {
 
 	public final NaiContext nai() throws RecognitionException {
 		NaiContext _localctx = new NaiContext(_ctx, getState());
-		enterRule(_localctx, 174, RULE_nai);
+		enterRule(_localctx, 176, RULE_nai);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(561);
+			setState(569);
 			match(NAI);
 			}
 		}
@@ -3984,11 +4026,11 @@ public class ColorParser extends Parser {
 
 	public final NaContext na() throws RecognitionException {
 		NaContext _localctx = new NaContext(_ctx, getState());
-		enterRule(_localctx, 176, RULE_na);
+		enterRule(_localctx, 178, RULE_na);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(563);
+			setState(571);
 			match(NA);
 			}
 		}
@@ -4013,11 +4055,11 @@ public class ColorParser extends Parser {
 
 	public final NiheContext nihe() throws RecognitionException {
 		NiheContext _localctx = new NiheContext(_ctx, getState());
-		enterRule(_localctx, 178, RULE_nihe);
+		enterRule(_localctx, 180, RULE_nihe);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(565);
+			setState(573);
 			match(NIHE);
 			}
 		}
@@ -4042,11 +4084,11 @@ public class ColorParser extends Parser {
 
 	public final NihoContext niho() throws RecognitionException {
 		NihoContext _localctx = new NihoContext(_ctx, getState());
-		enterRule(_localctx, 180, RULE_niho);
+		enterRule(_localctx, 182, RULE_niho);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(567);
+			setState(575);
 			match(NIHO);
 			}
 		}
@@ -4071,11 +4113,11 @@ public class ColorParser extends Parser {
 
 	public final NoiContext noi() throws RecognitionException {
 		NoiContext _localctx = new NoiContext(_ctx, getState());
-		enterRule(_localctx, 182, RULE_noi);
+		enterRule(_localctx, 184, RULE_noi);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(569);
+			setState(577);
 			match(NOI);
 			}
 		}
@@ -4100,11 +4142,11 @@ public class ColorParser extends Parser {
 
 	public final NuhaContext nuha() throws RecognitionException {
 		NuhaContext _localctx = new NuhaContext(_ctx, getState());
-		enterRule(_localctx, 184, RULE_nuha);
+		enterRule(_localctx, 186, RULE_nuha);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(571);
+			setState(579);
 			match(NUHA);
 			}
 		}
@@ -4129,11 +4171,11 @@ public class ColorParser extends Parser {
 
 	public final NuhiContext nuhi() throws RecognitionException {
 		NuhiContext _localctx = new NuhiContext(_ctx, getState());
-		enterRule(_localctx, 186, RULE_nuhi);
+		enterRule(_localctx, 188, RULE_nuhi);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(573);
+			setState(581);
 			match(NUHI);
 			}
 		}
@@ -4158,11 +4200,11 @@ public class ColorParser extends Parser {
 
 	public final NuhuContext nuhu() throws RecognitionException {
 		NuhuContext _localctx = new NuhuContext(_ctx, getState());
-		enterRule(_localctx, 188, RULE_nuhu);
+		enterRule(_localctx, 190, RULE_nuhu);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(575);
+			setState(583);
 			match(NUHU);
 			}
 		}
@@ -4187,11 +4229,11 @@ public class ColorParser extends Parser {
 
 	public final NuContext nu() throws RecognitionException {
 		NuContext _localctx = new NuContext(_ctx, getState());
-		enterRule(_localctx, 190, RULE_nu);
+		enterRule(_localctx, 192, RULE_nu);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(577);
+			setState(585);
 			match(NU);
 			}
 		}
@@ -4227,36 +4269,36 @@ public class ColorParser extends Parser {
 
 	public final CmavopContext cmavop() throws RecognitionException {
 		CmavopContext _localctx = new CmavopContext(_ctx, getState());
-		enterRule(_localctx, 192, RULE_cmavop);
+		enterRule(_localctx, 194, RULE_cmavop);
 		try {
-			setState(583);
+			setState(591);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case PA:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(579);
+				setState(587);
 				pa();
 				}
 				break;
 			case PEHE:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(580);
+				setState(588);
 				pehe();
 				}
 				break;
 			case PEHO:
 				enterOuterAlt(_localctx, 3);
 				{
-				setState(581);
+				setState(589);
 				peho();
 				}
 				break;
 			case PU:
 				enterOuterAlt(_localctx, 4);
 				{
-				setState(582);
+				setState(590);
 				pu();
 				}
 				break;
@@ -4285,11 +4327,11 @@ public class ColorParser extends Parser {
 
 	public final PaContext pa() throws RecognitionException {
 		PaContext _localctx = new PaContext(_ctx, getState());
-		enterRule(_localctx, 194, RULE_pa);
+		enterRule(_localctx, 196, RULE_pa);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(585);
+			setState(593);
 			match(PA);
 			}
 		}
@@ -4314,11 +4356,11 @@ public class ColorParser extends Parser {
 
 	public final PeheContext pehe() throws RecognitionException {
 		PeheContext _localctx = new PeheContext(_ctx, getState());
-		enterRule(_localctx, 196, RULE_pehe);
+		enterRule(_localctx, 198, RULE_pehe);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(587);
+			setState(595);
 			match(PEHE);
 			}
 		}
@@ -4343,11 +4385,11 @@ public class ColorParser extends Parser {
 
 	public final PehoContext peho() throws RecognitionException {
 		PehoContext _localctx = new PehoContext(_ctx, getState());
-		enterRule(_localctx, 198, RULE_peho);
+		enterRule(_localctx, 200, RULE_peho);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(589);
+			setState(597);
 			match(PEHO);
 			}
 		}
@@ -4372,11 +4414,11 @@ public class ColorParser extends Parser {
 
 	public final PuContext pu() throws RecognitionException {
 		PuContext _localctx = new PuContext(_ctx, getState());
-		enterRule(_localctx, 200, RULE_pu);
+		enterRule(_localctx, 202, RULE_pu);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(591);
+			setState(599);
 			match(PU);
 			}
 		}
@@ -4427,71 +4469,71 @@ public class ColorParser extends Parser {
 
 	public final CmavorsContext cmavors() throws RecognitionException {
 		CmavorsContext _localctx = new CmavorsContext(_ctx, getState());
-		enterRule(_localctx, 202, RULE_cmavors);
+		enterRule(_localctx, 204, RULE_cmavors);
 		try {
-			setState(602);
+			setState(610);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case RAHO:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(593);
+				setState(601);
 				raho();
 				}
 				break;
 			case ROI:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(594);
+				setState(602);
 				roi();
 				}
 				break;
 			case SA:
 				enterOuterAlt(_localctx, 3);
 				{
-				setState(595);
+				setState(603);
 				sa();
 				}
 				break;
 			case SEHU:
 				enterOuterAlt(_localctx, 4);
 				{
-				setState(596);
+				setState(604);
 				sehu();
 				}
 				break;
 			case SEI:
 				enterOuterAlt(_localctx, 5);
 				{
-				setState(597);
+				setState(605);
 				sei();
 				}
 				break;
 			case SE:
 				enterOuterAlt(_localctx, 6);
 				{
-				setState(598);
+				setState(606);
 				se();
 				}
 				break;
 			case SI:
 				enterOuterAlt(_localctx, 7);
 				{
-				setState(599);
+				setState(607);
 				si();
 				}
 				break;
 			case SOI:
 				enterOuterAlt(_localctx, 8);
 				{
-				setState(600);
+				setState(608);
 				soi();
 				}
 				break;
 			case SU:
 				enterOuterAlt(_localctx, 9);
 				{
-				setState(601);
+				setState(609);
 				su();
 				}
 				break;
@@ -4520,11 +4562,11 @@ public class ColorParser extends Parser {
 
 	public final RahoContext raho() throws RecognitionException {
 		RahoContext _localctx = new RahoContext(_ctx, getState());
-		enterRule(_localctx, 204, RULE_raho);
+		enterRule(_localctx, 206, RULE_raho);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(604);
+			setState(612);
 			match(RAHO);
 			}
 		}
@@ -4549,11 +4591,11 @@ public class ColorParser extends Parser {
 
 	public final RoiContext roi() throws RecognitionException {
 		RoiContext _localctx = new RoiContext(_ctx, getState());
-		enterRule(_localctx, 206, RULE_roi);
+		enterRule(_localctx, 208, RULE_roi);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(606);
+			setState(614);
 			match(ROI);
 			}
 		}
@@ -4578,11 +4620,11 @@ public class ColorParser extends Parser {
 
 	public final SaContext sa() throws RecognitionException {
 		SaContext _localctx = new SaContext(_ctx, getState());
-		enterRule(_localctx, 208, RULE_sa);
+		enterRule(_localctx, 210, RULE_sa);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(608);
+			setState(616);
 			match(SA);
 			}
 		}
@@ -4607,11 +4649,11 @@ public class ColorParser extends Parser {
 
 	public final SehuContext sehu() throws RecognitionException {
 		SehuContext _localctx = new SehuContext(_ctx, getState());
-		enterRule(_localctx, 210, RULE_sehu);
+		enterRule(_localctx, 212, RULE_sehu);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(610);
+			setState(618);
 			match(SEHU);
 			}
 		}
@@ -4636,11 +4678,11 @@ public class ColorParser extends Parser {
 
 	public final SeiContext sei() throws RecognitionException {
 		SeiContext _localctx = new SeiContext(_ctx, getState());
-		enterRule(_localctx, 212, RULE_sei);
+		enterRule(_localctx, 214, RULE_sei);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(612);
+			setState(620);
 			match(SEI);
 			}
 		}
@@ -4665,11 +4707,11 @@ public class ColorParser extends Parser {
 
 	public final SeContext se() throws RecognitionException {
 		SeContext _localctx = new SeContext(_ctx, getState());
-		enterRule(_localctx, 214, RULE_se);
+		enterRule(_localctx, 216, RULE_se);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(614);
+			setState(622);
 			match(SE);
 			}
 		}
@@ -4694,11 +4736,11 @@ public class ColorParser extends Parser {
 
 	public final SiContext si() throws RecognitionException {
 		SiContext _localctx = new SiContext(_ctx, getState());
-		enterRule(_localctx, 216, RULE_si);
+		enterRule(_localctx, 218, RULE_si);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(616);
+			setState(624);
 			match(SI);
 			}
 		}
@@ -4723,11 +4765,11 @@ public class ColorParser extends Parser {
 
 	public final SoiContext soi() throws RecognitionException {
 		SoiContext _localctx = new SoiContext(_ctx, getState());
-		enterRule(_localctx, 218, RULE_soi);
+		enterRule(_localctx, 220, RULE_soi);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(618);
+			setState(626);
 			match(SOI);
 			}
 		}
@@ -4752,11 +4794,11 @@ public class ColorParser extends Parser {
 
 	public final SuContext su() throws RecognitionException {
 		SuContext _localctx = new SuContext(_ctx, getState());
-		enterRule(_localctx, 220, RULE_su);
+		enterRule(_localctx, 222, RULE_su);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(620);
+			setState(628);
 			match(SU);
 			}
 		}
@@ -4801,57 +4843,57 @@ public class ColorParser extends Parser {
 
 	public final CmavotContext cmavot() throws RecognitionException {
 		CmavotContext _localctx = new CmavotContext(_ctx, getState());
-		enterRule(_localctx, 222, RULE_cmavot);
+		enterRule(_localctx, 224, RULE_cmavot);
 		try {
-			setState(629);
+			setState(637);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case TAHE:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(622);
+				setState(630);
 				tahe();
 				}
 				break;
 			case TEHU:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(623);
+				setState(631);
 				tehu();
 				}
 				break;
 			case TEI:
 				enterOuterAlt(_localctx, 3);
 				{
-				setState(624);
+				setState(632);
 				tei();
 				}
 				break;
 			case TOI:
 				enterOuterAlt(_localctx, 4);
 				{
-				setState(625);
+				setState(633);
 				toi();
 				}
 				break;
 			case TO:
 				enterOuterAlt(_localctx, 5);
 				{
-				setState(626);
+				setState(634);
 				to();
 				}
 				break;
 			case TUHE:
 				enterOuterAlt(_localctx, 6);
 				{
-				setState(627);
+				setState(635);
 				tuhe();
 				}
 				break;
 			case TUHU:
 				enterOuterAlt(_localctx, 7);
 				{
-				setState(628);
+				setState(636);
 				tuhu();
 				}
 				break;
@@ -4880,11 +4922,11 @@ public class ColorParser extends Parser {
 
 	public final TaheContext tahe() throws RecognitionException {
 		TaheContext _localctx = new TaheContext(_ctx, getState());
-		enterRule(_localctx, 224, RULE_tahe);
+		enterRule(_localctx, 226, RULE_tahe);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(631);
+			setState(639);
 			match(TAHE);
 			}
 		}
@@ -4909,11 +4951,11 @@ public class ColorParser extends Parser {
 
 	public final TehuContext tehu() throws RecognitionException {
 		TehuContext _localctx = new TehuContext(_ctx, getState());
-		enterRule(_localctx, 226, RULE_tehu);
+		enterRule(_localctx, 228, RULE_tehu);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(633);
+			setState(641);
 			match(TEHU);
 			}
 		}
@@ -4938,11 +4980,11 @@ public class ColorParser extends Parser {
 
 	public final TeiContext tei() throws RecognitionException {
 		TeiContext _localctx = new TeiContext(_ctx, getState());
-		enterRule(_localctx, 228, RULE_tei);
+		enterRule(_localctx, 230, RULE_tei);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(635);
+			setState(643);
 			match(TEI);
 			}
 		}
@@ -4967,11 +5009,11 @@ public class ColorParser extends Parser {
 
 	public final ToiContext toi() throws RecognitionException {
 		ToiContext _localctx = new ToiContext(_ctx, getState());
-		enterRule(_localctx, 230, RULE_toi);
+		enterRule(_localctx, 232, RULE_toi);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(637);
+			setState(645);
 			match(TOI);
 			}
 		}
@@ -4996,11 +5038,11 @@ public class ColorParser extends Parser {
 
 	public final ToContext to() throws RecognitionException {
 		ToContext _localctx = new ToContext(_ctx, getState());
-		enterRule(_localctx, 232, RULE_to);
+		enterRule(_localctx, 234, RULE_to);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(639);
+			setState(647);
 			match(TO);
 			}
 		}
@@ -5025,11 +5067,11 @@ public class ColorParser extends Parser {
 
 	public final TuheContext tuhe() throws RecognitionException {
 		TuheContext _localctx = new TuheContext(_ctx, getState());
-		enterRule(_localctx, 234, RULE_tuhe);
+		enterRule(_localctx, 236, RULE_tuhe);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(641);
+			setState(649);
 			match(TUHE);
 			}
 		}
@@ -5054,11 +5096,11 @@ public class ColorParser extends Parser {
 
 	public final TuhuContext tuhu() throws RecognitionException {
 		TuhuContext _localctx = new TuhuContext(_ctx, getState());
-		enterRule(_localctx, 236, RULE_tuhu);
+		enterRule(_localctx, 238, RULE_tuhu);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(643);
+			setState(651);
 			match(TUHU);
 			}
 		}
@@ -5112,78 +5154,78 @@ public class ColorParser extends Parser {
 
 	public final CmavovyContext cmavovy() throws RecognitionException {
 		CmavovyContext _localctx = new CmavovyContext(_ctx, getState());
-		enterRule(_localctx, 238, RULE_cmavovy);
+		enterRule(_localctx, 240, RULE_cmavovy);
 		try {
-			setState(655);
+			setState(663);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case VA:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(645);
+				setState(653);
 				va();
 				}
 				break;
 			case VAU:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(646);
+				setState(654);
 				vau();
 				}
 				break;
 			case VEHA:
 				enterOuterAlt(_localctx, 3);
 				{
-				setState(647);
+				setState(655);
 				veha();
 				}
 				break;
 			case VEHO:
 				enterOuterAlt(_localctx, 4);
 				{
-				setState(648);
+				setState(656);
 				veho();
 				}
 				break;
 			case VEI:
 				enterOuterAlt(_localctx, 5);
 				{
-				setState(649);
+				setState(657);
 				vei();
 				}
 				break;
 			case VIHA:
 				enterOuterAlt(_localctx, 6);
 				{
-				setState(650);
+				setState(658);
 				viha();
 				}
 				break;
 			case VUHO:
 				enterOuterAlt(_localctx, 7);
 				{
-				setState(651);
+				setState(659);
 				vuho();
 				}
 				break;
 			case VUHU:
 				enterOuterAlt(_localctx, 8);
 				{
-				setState(652);
+				setState(660);
 				vuhu();
 				}
 				break;
 			case XI:
 				enterOuterAlt(_localctx, 9);
 				{
-				setState(653);
+				setState(661);
 				xi();
 				}
 				break;
 			case Y:
 				enterOuterAlt(_localctx, 10);
 				{
-				setState(654);
+				setState(662);
 				y();
 				}
 				break;
@@ -5212,11 +5254,11 @@ public class ColorParser extends Parser {
 
 	public final VaContext va() throws RecognitionException {
 		VaContext _localctx = new VaContext(_ctx, getState());
-		enterRule(_localctx, 240, RULE_va);
+		enterRule(_localctx, 242, RULE_va);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(657);
+			setState(665);
 			match(VA);
 			}
 		}
@@ -5241,11 +5283,11 @@ public class ColorParser extends Parser {
 
 	public final VauContext vau() throws RecognitionException {
 		VauContext _localctx = new VauContext(_ctx, getState());
-		enterRule(_localctx, 242, RULE_vau);
+		enterRule(_localctx, 244, RULE_vau);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(659);
+			setState(667);
 			match(VAU);
 			}
 		}
@@ -5270,11 +5312,11 @@ public class ColorParser extends Parser {
 
 	public final VehaContext veha() throws RecognitionException {
 		VehaContext _localctx = new VehaContext(_ctx, getState());
-		enterRule(_localctx, 244, RULE_veha);
+		enterRule(_localctx, 246, RULE_veha);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(661);
+			setState(669);
 			match(VEHA);
 			}
 		}
@@ -5299,11 +5341,11 @@ public class ColorParser extends Parser {
 
 	public final VehoContext veho() throws RecognitionException {
 		VehoContext _localctx = new VehoContext(_ctx, getState());
-		enterRule(_localctx, 246, RULE_veho);
+		enterRule(_localctx, 248, RULE_veho);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(663);
+			setState(671);
 			match(VEHO);
 			}
 		}
@@ -5328,11 +5370,11 @@ public class ColorParser extends Parser {
 
 	public final VeiContext vei() throws RecognitionException {
 		VeiContext _localctx = new VeiContext(_ctx, getState());
-		enterRule(_localctx, 248, RULE_vei);
+		enterRule(_localctx, 250, RULE_vei);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(665);
+			setState(673);
 			match(VEI);
 			}
 		}
@@ -5357,11 +5399,11 @@ public class ColorParser extends Parser {
 
 	public final VihaContext viha() throws RecognitionException {
 		VihaContext _localctx = new VihaContext(_ctx, getState());
-		enterRule(_localctx, 250, RULE_viha);
+		enterRule(_localctx, 252, RULE_viha);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(667);
+			setState(675);
 			match(VIHA);
 			}
 		}
@@ -5386,11 +5428,11 @@ public class ColorParser extends Parser {
 
 	public final VuhoContext vuho() throws RecognitionException {
 		VuhoContext _localctx = new VuhoContext(_ctx, getState());
-		enterRule(_localctx, 252, RULE_vuho);
+		enterRule(_localctx, 254, RULE_vuho);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(669);
+			setState(677);
 			match(VUHO);
 			}
 		}
@@ -5415,11 +5457,11 @@ public class ColorParser extends Parser {
 
 	public final VuhuContext vuhu() throws RecognitionException {
 		VuhuContext _localctx = new VuhuContext(_ctx, getState());
-		enterRule(_localctx, 254, RULE_vuhu);
+		enterRule(_localctx, 256, RULE_vuhu);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(671);
+			setState(679);
 			match(VUHU);
 			}
 		}
@@ -5444,11 +5486,11 @@ public class ColorParser extends Parser {
 
 	public final XiContext xi() throws RecognitionException {
 		XiContext _localctx = new XiContext(_ctx, getState());
-		enterRule(_localctx, 256, RULE_xi);
+		enterRule(_localctx, 258, RULE_xi);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(673);
+			setState(681);
 			match(XI);
 			}
 		}
@@ -5473,11 +5515,11 @@ public class ColorParser extends Parser {
 
 	public final YContext y() throws RecognitionException {
 		YContext _localctx = new YContext(_ctx, getState());
-		enterRule(_localctx, 258, RULE_y);
+		enterRule(_localctx, 260, RULE_y);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(675);
+			setState(683);
 			match(Y);
 			}
 		}
@@ -5525,64 +5567,64 @@ public class ColorParser extends Parser {
 
 	public final CmavozContext cmavoz() throws RecognitionException {
 		CmavozContext _localctx = new CmavozContext(_ctx, getState());
-		enterRule(_localctx, 260, RULE_cmavoz);
+		enterRule(_localctx, 262, RULE_cmavoz);
 		try {
-			setState(685);
+			setState(693);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case ZAHO:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(677);
+				setState(685);
 				zaho();
 				}
 				break;
 			case ZEHA:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(678);
+				setState(686);
 				zeha();
 				}
 				break;
 			case ZEI:
 				enterOuterAlt(_localctx, 3);
 				{
-				setState(679);
+				setState(687);
 				zei();
 				}
 				break;
 			case ZIHE:
 				enterOuterAlt(_localctx, 4);
 				{
-				setState(680);
+				setState(688);
 				zihe();
 				}
 				break;
 			case ZI:
 				enterOuterAlt(_localctx, 5);
 				{
-				setState(681);
+				setState(689);
 				zi();
 				}
 				break;
 			case ZOHU:
 				enterOuterAlt(_localctx, 6);
 				{
-				setState(682);
+				setState(690);
 				zohu();
 				}
 				break;
 			case ZOI:
 				enterOuterAlt(_localctx, 7);
 				{
-				setState(683);
+				setState(691);
 				zoi();
 				}
 				break;
 			case ZO:
 				enterOuterAlt(_localctx, 8);
 				{
-				setState(684);
+				setState(692);
 				zo();
 				}
 				break;
@@ -5611,11 +5653,11 @@ public class ColorParser extends Parser {
 
 	public final ZahoContext zaho() throws RecognitionException {
 		ZahoContext _localctx = new ZahoContext(_ctx, getState());
-		enterRule(_localctx, 262, RULE_zaho);
+		enterRule(_localctx, 264, RULE_zaho);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(687);
+			setState(695);
 			match(ZAHO);
 			}
 		}
@@ -5640,11 +5682,11 @@ public class ColorParser extends Parser {
 
 	public final ZehaContext zeha() throws RecognitionException {
 		ZehaContext _localctx = new ZehaContext(_ctx, getState());
-		enterRule(_localctx, 264, RULE_zeha);
+		enterRule(_localctx, 266, RULE_zeha);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(689);
+			setState(697);
 			match(ZEHA);
 			}
 		}
@@ -5669,11 +5711,11 @@ public class ColorParser extends Parser {
 
 	public final ZeiContext zei() throws RecognitionException {
 		ZeiContext _localctx = new ZeiContext(_ctx, getState());
-		enterRule(_localctx, 266, RULE_zei);
+		enterRule(_localctx, 268, RULE_zei);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(691);
+			setState(699);
 			match(ZEI);
 			}
 		}
@@ -5698,11 +5740,11 @@ public class ColorParser extends Parser {
 
 	public final ZiheContext zihe() throws RecognitionException {
 		ZiheContext _localctx = new ZiheContext(_ctx, getState());
-		enterRule(_localctx, 268, RULE_zihe);
+		enterRule(_localctx, 270, RULE_zihe);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(693);
+			setState(701);
 			match(ZIHE);
 			}
 		}
@@ -5727,11 +5769,11 @@ public class ColorParser extends Parser {
 
 	public final ZiContext zi() throws RecognitionException {
 		ZiContext _localctx = new ZiContext(_ctx, getState());
-		enterRule(_localctx, 270, RULE_zi);
+		enterRule(_localctx, 272, RULE_zi);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(695);
+			setState(703);
 			match(ZI);
 			}
 		}
@@ -5756,11 +5798,11 @@ public class ColorParser extends Parser {
 
 	public final ZohuContext zohu() throws RecognitionException {
 		ZohuContext _localctx = new ZohuContext(_ctx, getState());
-		enterRule(_localctx, 272, RULE_zohu);
+		enterRule(_localctx, 274, RULE_zohu);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(697);
+			setState(705);
 			match(ZOHU);
 			}
 		}
@@ -5785,11 +5827,11 @@ public class ColorParser extends Parser {
 
 	public final ZoiContext zoi() throws RecognitionException {
 		ZoiContext _localctx = new ZoiContext(_ctx, getState());
-		enterRule(_localctx, 274, RULE_zoi);
+		enterRule(_localctx, 276, RULE_zoi);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(699);
+			setState(707);
 			match(ZOI);
 			}
 		}
@@ -5814,11 +5856,11 @@ public class ColorParser extends Parser {
 
 	public final ZoContext zo() throws RecognitionException {
 		ZoContext _localctx = new ZoContext(_ctx, getState());
-		enterRule(_localctx, 276, RULE_zo);
+		enterRule(_localctx, 278, RULE_zo);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(701);
+			setState(709);
 			match(ZO);
 			}
 		}
@@ -5834,7 +5876,7 @@ public class ColorParser extends Parser {
 	}
 
 	public static final String _serializedATN =
-		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\u0081\u02c2\4\2\t"+
+		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\u0082\u02ca\4\2\t"+
 		"\2\4\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7\4\b\t\b\4\t\t\t\4\n\t\n\4\13"+
 		"\t\13\4\f\t\f\4\r\t\r\4\16\t\16\4\17\t\17\4\20\t\20\4\21\t\21\4\22\t\22"+
 		"\4\23\t\23\4\24\t\24\4\25\t\25\4\26\t\26\4\27\t\27\4\30\t\30\4\31\t\31"+
@@ -5850,232 +5892,236 @@ public class ColorParser extends Parser {
 		"w\tw\4x\tx\4y\ty\4z\tz\4{\t{\4|\t|\4}\t}\4~\t~\4\177\t\177\4\u0080\t\u0080"+
 		"\4\u0081\t\u0081\4\u0082\t\u0082\4\u0083\t\u0083\4\u0084\t\u0084\4\u0085"+
 		"\t\u0085\4\u0086\t\u0086\4\u0087\t\u0087\4\u0088\t\u0088\4\u0089\t\u0089"+
-		"\4\u008a\t\u008a\4\u008b\t\u008b\4\u008c\t\u008c\3\2\3\2\5\2\u011b\n\2"+
-		"\3\2\3\2\6\2\u011f\n\2\r\2\16\2\u0120\3\3\6\3\u0124\n\3\r\3\16\3\u0125"+
-		"\3\4\3\4\5\4\u012a\n\4\3\5\3\5\5\5\u012e\n\5\3\6\3\6\3\7\3\7\3\b\3\b\3"+
-		"\b\3\b\3\b\3\b\3\b\3\b\3\b\3\b\3\b\3\b\3\b\3\b\3\b\5\b\u0143\n\b\3\t\3"+
-		"\t\3\t\3\t\3\t\3\t\3\t\3\t\3\t\5\t\u014e\n\t\3\n\3\n\3\13\3\13\3\f\3\f"+
-		"\3\r\3\r\3\16\3\16\3\17\3\17\3\20\3\20\3\21\3\21\3\22\3\22\3\23\3\23\3"+
-		"\24\3\24\3\25\3\25\3\26\3\26\3\26\3\26\3\26\3\26\3\26\3\26\3\26\3\26\5"+
-		"\26\u0172\n\26\3\27\3\27\3\30\3\30\3\31\3\31\3\32\3\32\3\33\3\33\3\34"+
-		"\3\34\3\35\3\35\3\36\3\36\3\37\3\37\3 \3 \3!\3!\3!\3!\3!\3!\3!\3!\3!\3"+
-		"!\5!\u0192\n!\3\"\3\"\3#\3#\3$\3$\3%\3%\3&\3&\3\'\3\'\3(\3(\3)\3)\3*\3"+
-		"*\3+\3+\3,\3,\3,\3,\3,\3,\3,\3,\3,\5,\u01b1\n,\3-\3-\3.\3.\3/\3/\3\60"+
-		"\3\60\3\61\3\61\3\62\3\62\3\63\3\63\3\64\3\64\3\65\3\65\3\66\3\66\3\66"+
-		"\3\66\3\66\3\66\3\66\3\66\3\66\3\66\3\66\3\66\5\66\u01d1\n\66\3\67\3\67"+
-		"\38\38\39\39\3:\3:\3;\3;\3<\3<\3=\3=\3>\3>\3?\3?\3@\3@\3A\3A\3B\3B\3C"+
-		"\3C\3C\3C\3C\3C\3C\3C\3C\3C\3C\5C\u01f6\nC\3D\3D\3E\3E\3F\3F\3G\3G\3H"+
-		"\3H\3I\3I\3J\3J\3K\3K\3L\3L\3M\3M\3N\3N\3O\3O\3O\3O\3O\3O\3O\3O\3O\3O"+
-		"\3O\3O\3O\3O\3O\3O\3O\3O\5O\u0220\nO\3P\3P\3Q\3Q\3R\3R\3S\3S\3T\3T\3U"+
-		"\3U\3V\3V\3W\3W\3X\3X\3Y\3Y\3Z\3Z\3[\3[\3\\\3\\\3]\3]\3^\3^\3_\3_\3`\3"+
-		"`\3a\3a\3b\3b\3b\3b\5b\u024a\nb\3c\3c\3d\3d\3e\3e\3f\3f\3g\3g\3g\3g\3"+
-		"g\3g\3g\3g\3g\5g\u025d\ng\3h\3h\3i\3i\3j\3j\3k\3k\3l\3l\3m\3m\3n\3n\3"+
-		"o\3o\3p\3p\3q\3q\3q\3q\3q\3q\3q\5q\u0278\nq\3r\3r\3s\3s\3t\3t\3u\3u\3"+
-		"v\3v\3w\3w\3x\3x\3y\3y\3y\3y\3y\3y\3y\3y\3y\3y\5y\u0292\ny\3z\3z\3{\3"+
-		"{\3|\3|\3}\3}\3~\3~\3\177\3\177\3\u0080\3\u0080\3\u0081\3\u0081\3\u0082"+
-		"\3\u0082\3\u0083\3\u0083\3\u0084\3\u0084\3\u0084\3\u0084\3\u0084\3\u0084"+
-		"\3\u0084\3\u0084\5\u0084\u02b0\n\u0084\3\u0085\3\u0085\3\u0086\3\u0086"+
-		"\3\u0087\3\u0087\3\u0088\3\u0088\3\u0089\3\u0089\3\u008a\3\u008a\3\u008b"+
-		"\3\u008b\3\u008c\3\u008c\3\u008c\2\2\u008d\2\4\6\b\n\f\16\20\22\24\26"+
-		"\30\32\34\36 \"$&(*,.\60\62\64\668:<>@BDFHJLNPRTVXZ\\^`bdfhjlnprtvxz|"+
-		"~\u0080\u0082\u0084\u0086\u0088\u008a\u008c\u008e\u0090\u0092\u0094\u0096"+
-		"\u0098\u009a\u009c\u009e\u00a0\u00a2\u00a4\u00a6\u00a8\u00aa\u00ac\u00ae"+
-		"\u00b0\u00b2\u00b4\u00b6\u00b8\u00ba\u00bc\u00be\u00c0\u00c2\u00c4\u00c6"+
-		"\u00c8\u00ca\u00cc\u00ce\u00d0\u00d2\u00d4\u00d6\u00d8\u00da\u00dc\u00de"+
-		"\u00e0\u00e2\u00e4\u00e6\u00e8\u00ea\u00ec\u00ee\u00f0\u00f2\u00f4\u00f6"+
-		"\u00f8\u00fa\u00fc\u00fe\u0100\u0102\u0104\u0106\u0108\u010a\u010c\u010e"+
-		"\u0110\u0112\u0114\u0116\2\2\2\u02b2\2\u011e\3\2\2\2\4\u0123\3\2\2\2\6"+
-		"\u0129\3\2\2\2\b\u012d\3\2\2\2\n\u012f\3\2\2\2\f\u0131\3\2\2\2\16\u0142"+
-		"\3\2\2\2\20\u014d\3\2\2\2\22\u014f\3\2\2\2\24\u0151\3\2\2\2\26\u0153\3"+
-		"\2\2\2\30\u0155\3\2\2\2\32\u0157\3\2\2\2\34\u0159\3\2\2\2\36\u015b\3\2"+
-		"\2\2 \u015d\3\2\2\2\"\u015f\3\2\2\2$\u0161\3\2\2\2&\u0163\3\2\2\2(\u0165"+
-		"\3\2\2\2*\u0171\3\2\2\2,\u0173\3\2\2\2.\u0175\3\2\2\2\60\u0177\3\2\2\2"+
-		"\62\u0179\3\2\2\2\64\u017b\3\2\2\2\66\u017d\3\2\2\28\u017f\3\2\2\2:\u0181"+
-		"\3\2\2\2<\u0183\3\2\2\2>\u0185\3\2\2\2@\u0191\3\2\2\2B\u0193\3\2\2\2D"+
-		"\u0195\3\2\2\2F\u0197\3\2\2\2H\u0199\3\2\2\2J\u019b\3\2\2\2L\u019d\3\2"+
-		"\2\2N\u019f\3\2\2\2P\u01a1\3\2\2\2R\u01a3\3\2\2\2T\u01a5\3\2\2\2V\u01b0"+
-		"\3\2\2\2X\u01b2\3\2\2\2Z\u01b4\3\2\2\2\\\u01b6\3\2\2\2^\u01b8\3\2\2\2"+
-		"`\u01ba\3\2\2\2b\u01bc\3\2\2\2d\u01be\3\2\2\2f\u01c0\3\2\2\2h\u01c2\3"+
-		"\2\2\2j\u01d0\3\2\2\2l\u01d2\3\2\2\2n\u01d4\3\2\2\2p\u01d6\3\2\2\2r\u01d8"+
-		"\3\2\2\2t\u01da\3\2\2\2v\u01dc\3\2\2\2x\u01de\3\2\2\2z\u01e0\3\2\2\2|"+
-		"\u01e2\3\2\2\2~\u01e4\3\2\2\2\u0080\u01e6\3\2\2\2\u0082\u01e8\3\2\2\2"+
-		"\u0084\u01f5\3\2\2\2\u0086\u01f7\3\2\2\2\u0088\u01f9\3\2\2\2\u008a\u01fb"+
-		"\3\2\2\2\u008c\u01fd\3\2\2\2\u008e\u01ff\3\2\2\2\u0090\u0201\3\2\2\2\u0092"+
-		"\u0203\3\2\2\2\u0094\u0205\3\2\2\2\u0096\u0207\3\2\2\2\u0098\u0209\3\2"+
-		"\2\2\u009a\u020b\3\2\2\2\u009c\u021f\3\2\2\2\u009e\u0221\3\2\2\2\u00a0"+
-		"\u0223\3\2\2\2\u00a2\u0225\3\2\2\2\u00a4\u0227\3\2\2\2\u00a6\u0229\3\2"+
-		"\2\2\u00a8\u022b\3\2\2\2\u00aa\u022d\3\2\2\2\u00ac\u022f\3\2\2\2\u00ae"+
-		"\u0231\3\2\2\2\u00b0\u0233\3\2\2\2\u00b2\u0235\3\2\2\2\u00b4\u0237\3\2"+
-		"\2\2\u00b6\u0239\3\2\2\2\u00b8\u023b\3\2\2\2\u00ba\u023d\3\2\2\2\u00bc"+
-		"\u023f\3\2\2\2\u00be\u0241\3\2\2\2\u00c0\u0243\3\2\2\2\u00c2\u0249\3\2"+
-		"\2\2\u00c4\u024b\3\2\2\2\u00c6\u024d\3\2\2\2\u00c8\u024f\3\2\2\2\u00ca"+
-		"\u0251\3\2\2\2\u00cc\u025c\3\2\2\2\u00ce\u025e\3\2\2\2\u00d0\u0260\3\2"+
-		"\2\2\u00d2\u0262\3\2\2\2\u00d4\u0264\3\2\2\2\u00d6\u0266\3\2\2\2\u00d8"+
-		"\u0268\3\2\2\2\u00da\u026a\3\2\2\2\u00dc\u026c\3\2\2\2\u00de\u026e\3\2"+
-		"\2\2\u00e0\u0277\3\2\2\2\u00e2\u0279\3\2\2\2\u00e4\u027b\3\2\2\2\u00e6"+
-		"\u027d\3\2\2\2\u00e8\u027f\3\2\2\2\u00ea\u0281\3\2\2\2\u00ec\u0283\3\2"+
-		"\2\2\u00ee\u0285\3\2\2\2\u00f0\u0291\3\2\2\2\u00f2\u0293\3\2\2\2\u00f4"+
-		"\u0295\3\2\2\2\u00f6\u0297\3\2\2\2\u00f8\u0299\3\2\2\2\u00fa\u029b\3\2"+
-		"\2\2\u00fc\u029d\3\2\2\2\u00fe\u029f\3\2\2\2\u0100\u02a1\3\2\2\2\u0102"+
-		"\u02a3\3\2\2\2\u0104\u02a5\3\2\2\2\u0106\u02af\3\2\2\2\u0108\u02b1\3\2"+
-		"\2\2\u010a\u02b3\3\2\2\2\u010c\u02b5\3\2\2\2\u010e\u02b7\3\2\2\2\u0110"+
-		"\u02b9\3\2\2\2\u0112\u02bb\3\2\2\2\u0114\u02bd\3\2\2\2\u0116\u02bf\3\2"+
-		"\2\2\u0118\u011a\5\4\3\2\u0119\u011b\7\3\2\2\u011a\u0119\3\2\2\2\u011a"+
-		"\u011b\3\2\2\2\u011b\u011c\3\2\2\2\u011c\u011d\7\4\2\2\u011d\u011f\3\2"+
-		"\2\2\u011e\u0118\3\2\2\2\u011f\u0120\3\2\2\2\u0120\u011e\3\2\2\2\u0120"+
-		"\u0121\3\2\2\2\u0121\3\3\2\2\2\u0122\u0124\5\6\4\2\u0123\u0122\3\2\2\2"+
-		"\u0124\u0125\3\2\2\2\u0125\u0123\3\2\2\2\u0125\u0126\3\2\2\2\u0126\5\3"+
-		"\2\2\2\u0127\u012a\5\16\b\2\u0128\u012a\5\b\5\2\u0129\u0127\3\2\2\2\u0129"+
-		"\u0128\3\2\2\2\u012a\7\3\2\2\2\u012b\u012e\5\n\6\2\u012c\u012e\5\f\7\2"+
-		"\u012d\u012b\3\2\2\2\u012d\u012c\3\2\2\2\u012e\t\3\2\2\2\u012f\u0130\7"+
-		"\7\2\2\u0130\13\3\2\2\2\u0131\u0132\7\6\2\2\u0132\r\3\2\2\2\u0133\u0143"+
-		"\5\20\t\2\u0134\u0143\5$\23\2\u0135\u0143\5&\24\2\u0136\u0143\5*\26\2"+
-		"\u0137\u0143\5@!\2\u0138\u0143\5V,\2\u0139\u0143\5j\66\2\u013a\u0143\5"+
-		"\u0084C\2\u013b\u0143\5\u009cO\2\u013c\u0143\5\u00c2b\2\u013d\u0143\5"+
-		"\u00ccg\2\u013e\u0143\5\u00e0q\2\u013f\u0143\5(\25\2\u0140\u0143\5\u00f0"+
-		"y\2\u0141\u0143\5\u0106\u0084\2\u0142\u0133\3\2\2\2\u0142\u0134\3\2\2"+
-		"\2\u0142\u0135\3\2\2\2\u0142\u0136\3\2\2\2\u0142\u0137\3\2\2\2\u0142\u0138"+
-		"\3\2\2\2\u0142\u0139\3\2\2\2\u0142\u013a\3\2\2\2\u0142\u013b\3\2\2\2\u0142"+
-		"\u013c\3\2\2\2\u0142\u013d\3\2\2\2\u0142\u013e\3\2\2\2\u0142\u013f\3\2"+
-		"\2\2\u0142\u0140\3\2\2\2\u0142\u0141\3\2\2\2\u0143\17\3\2\2\2\u0144\u014e"+
-		"\5\22\n\2\u0145\u014e\5\24\13\2\u0146\u014e\5\26\f\2\u0147\u014e\5\30"+
-		"\r\2\u0148\u014e\5\32\16\2\u0149\u014e\5\34\17\2\u014a\u014e\5\36\20\2"+
-		"\u014b\u014e\5 \21\2\u014c\u014e\5\"\22\2\u014d\u0144\3\2\2\2\u014d\u0145"+
-		"\3\2\2\2\u014d\u0146\3\2\2\2\u014d\u0147\3\2\2\2\u014d\u0148\3\2\2\2\u014d"+
-		"\u0149\3\2\2\2\u014d\u014a\3\2\2\2\u014d\u014b\3\2\2\2\u014d\u014c\3\2"+
-		"\2\2\u014e\21\3\2\2\2\u014f\u0150\7\b\2\2\u0150\23\3\2\2\2\u0151\u0152"+
-		"\7\t\2\2\u0152\25\3\2\2\2\u0153\u0154\7\n\2\2\u0154\27\3\2\2\2\u0155\u0156"+
-		"\7\13\2\2\u0156\31\3\2\2\2\u0157\u0158\7\f\2\2\u0158\33\3\2\2\2\u0159"+
-		"\u015a\7\r\2\2\u015a\35\3\2\2\2\u015b\u015c\7\17\2\2\u015c\37\3\2\2\2"+
-		"\u015d\u015e\7\20\2\2\u015e!\3\2\2\2\u015f\u0160\7\21\2\2\u0160#\3\2\2"+
-		"\2\u0161\u0162\7\22\2\2\u0162%\3\2\2\2\u0163\u0164\7\23\2\2\u0164\'\3"+
-		"\2\2\2\u0165\u0166\7\24\2\2\u0166)\3\2\2\2\u0167\u0172\5,\27\2\u0168\u0172"+
-		"\5.\30\2\u0169\u0172\5\60\31\2\u016a\u0172\5\62\32\2\u016b\u0172\5\64"+
-		"\33\2\u016c\u0172\5\66\34\2\u016d\u0172\58\35\2\u016e\u0172\5:\36\2\u016f"+
-		"\u0172\5<\37\2\u0170\u0172\5> \2\u0171\u0167\3\2\2\2\u0171\u0168\3\2\2"+
-		"\2\u0171\u0169\3\2\2\2\u0171\u016a\3\2\2\2\u0171\u016b\3\2\2\2\u0171\u016c"+
-		"\3\2\2\2\u0171\u016d\3\2\2\2\u0171\u016e\3\2\2\2\u0171\u016f\3\2\2\2\u0171"+
-		"\u0170\3\2\2\2\u0172+\3\2\2\2\u0173\u0174\7\25\2\2\u0174-\3\2\2\2\u0175"+
-		"\u0176\7\26\2\2\u0176/\3\2\2\2\u0177\u0178\7\27\2\2\u0178\61\3\2\2\2\u0179"+
-		"\u017a\7\30\2\2\u017a\63\3\2\2\2\u017b\u017c\7\31\2\2\u017c\65\3\2\2\2"+
-		"\u017d\u017e\7\32\2\2\u017e\67\3\2\2\2\u017f\u0180\7\33\2\2\u01809\3\2"+
-		"\2\2\u0181\u0182\7\34\2\2\u0182;\3\2\2\2\u0183\u0184\7\35\2\2\u0184=\3"+
-		"\2\2\2\u0185\u0186\7\37\2\2\u0186?\3\2\2\2\u0187\u0192\5B\"\2\u0188\u0192"+
-		"\5D#\2\u0189\u0192\5F$\2\u018a\u0192\5H%\2\u018b\u0192\5J&\2\u018c\u0192"+
-		"\5L\'\2\u018d\u0192\5N(\2\u018e\u0192\5P)\2\u018f\u0192\5R*\2\u0190\u0192"+
-		"\5T+\2\u0191\u0187\3\2\2\2\u0191\u0188\3\2\2\2\u0191\u0189\3\2\2\2\u0191"+
-		"\u018a\3\2\2\2\u0191\u018b\3\2\2\2\u0191\u018c\3\2\2\2\u0191\u018d\3\2"+
-		"\2\2\u0191\u018e\3\2\2\2\u0191\u018f\3\2\2\2\u0191\u0190\3\2\2\2\u0192"+
-		"A\3\2\2\2\u0193\u0194\7 \2\2\u0194C\3\2\2\2\u0195\u0196\7!\2\2\u0196E"+
-		"\3\2\2\2\u0197\u0198\7\"\2\2\u0198G\3\2\2\2\u0199\u019a\7#\2\2\u019aI"+
-		"\3\2\2\2\u019b\u019c\7$\2\2\u019cK\3\2\2\2\u019d\u019e\7%\2\2\u019eM\3"+
-		"\2\2\2\u019f\u01a0\7&\2\2\u01a0O\3\2\2\2\u01a1\u01a2\7\'\2\2\u01a2Q\3"+
-		"\2\2\2\u01a3\u01a4\7(\2\2\u01a4S\3\2\2\2\u01a5\u01a6\7)\2\2\u01a6U\3\2"+
-		"\2\2\u01a7\u01b1\5X-\2\u01a8\u01b1\5Z.\2\u01a9\u01b1\5\\/\2\u01aa\u01b1"+
-		"\5^\60\2\u01ab\u01b1\5`\61\2\u01ac\u01b1\5b\62\2\u01ad\u01b1\5d\63\2\u01ae"+
-		"\u01b1\5f\64\2\u01af\u01b1\5h\65\2\u01b0\u01a7\3\2\2\2\u01b0\u01a8\3\2"+
-		"\2\2\u01b0\u01a9\3\2\2\2\u01b0\u01aa\3\2\2\2\u01b0\u01ab\3\2\2\2\u01b0"+
-		"\u01ac\3\2\2\2\u01b0\u01ad\3\2\2\2\u01b0\u01ae\3\2\2\2\u01b0\u01af\3\2"+
-		"\2\2\u01b1W\3\2\2\2\u01b2\u01b3\7*\2\2\u01b3Y\3\2\2\2\u01b4\u01b5\7+\2"+
-		"\2\u01b5[\3\2\2\2\u01b6\u01b7\7,\2\2\u01b7]\3\2\2\2\u01b8\u01b9\7-\2\2"+
-		"\u01b9_\3\2\2\2\u01ba\u01bb\7.\2\2\u01bba\3\2\2\2\u01bc\u01bd\7/\2\2\u01bd"+
-		"c\3\2\2\2\u01be\u01bf\7\60\2\2\u01bfe\3\2\2\2\u01c0\u01c1\7\61\2\2\u01c1"+
-		"g\3\2\2\2\u01c2\u01c3\7\62\2\2\u01c3i\3\2\2\2\u01c4\u01d1\5l\67\2\u01c5"+
-		"\u01d1\5n8\2\u01c6\u01d1\5p9\2\u01c7\u01d1\5r:\2\u01c8\u01d1\5t;\2\u01c9"+
-		"\u01d1\5v<\2\u01ca\u01d1\5x=\2\u01cb\u01d1\5z>\2\u01cc\u01d1\5|?\2\u01cd"+
-		"\u01d1\5~@\2\u01ce\u01d1\5\u0080A\2\u01cf\u01d1\5\u0082B\2\u01d0\u01c4"+
-		"\3\2\2\2\u01d0\u01c5\3\2\2\2\u01d0\u01c6\3\2\2\2\u01d0\u01c7\3\2\2\2\u01d0"+
-		"\u01c8\3\2\2\2\u01d0\u01c9\3\2\2\2\u01d0\u01ca\3\2\2\2\u01d0\u01cb\3\2"+
-		"\2\2\u01d0\u01cc\3\2\2\2\u01d0\u01cd\3\2\2\2\u01d0\u01ce\3\2\2\2\u01d0"+
-		"\u01cf\3\2\2\2\u01d1k\3\2\2\2\u01d2\u01d3\7\63\2\2\u01d3m\3\2\2\2\u01d4"+
-		"\u01d5\7\64\2\2\u01d5o\3\2\2\2\u01d6\u01d7\7\65\2\2\u01d7q\3\2\2\2\u01d8"+
-		"\u01d9\7\66\2\2\u01d9s\3\2\2\2\u01da\u01db\7\67\2\2\u01dbu\3\2\2\2\u01dc"+
-		"\u01dd\78\2\2\u01ddw\3\2\2\2\u01de\u01df\79\2\2\u01dfy\3\2\2\2\u01e0\u01e1"+
-		"\7:\2\2\u01e1{\3\2\2\2\u01e2\u01e3\7;\2\2\u01e3}\3\2\2\2\u01e4\u01e5\7"+
-		"<\2\2\u01e5\177\3\2\2\2\u01e6\u01e7\7=\2\2\u01e7\u0081\3\2\2\2\u01e8\u01e9"+
-		"\7>\2\2\u01e9\u0083\3\2\2\2\u01ea\u01f6\5\u0086D\2\u01eb\u01f6\5\u0088"+
-		"E\2\u01ec\u01f6\5\u008aF\2\u01ed\u01f6\5\u008cG\2\u01ee\u01f6\5\u008e"+
-		"H\2\u01ef\u01f6\5\u0090I\2\u01f0\u01f6\5\u0092J\2\u01f1\u01f6\5\u0094"+
-		"K\2\u01f2\u01f6\5\u0096L\2\u01f3\u01f6\5\u0098M\2\u01f4\u01f6\5\u009a"+
-		"N\2\u01f5\u01ea\3\2\2\2\u01f5\u01eb\3\2\2\2\u01f5\u01ec\3\2\2\2\u01f5"+
-		"\u01ed\3\2\2\2\u01f5\u01ee\3\2\2\2\u01f5\u01ef\3\2\2\2\u01f5\u01f0\3\2"+
-		"\2\2\u01f5\u01f1\3\2\2\2\u01f5\u01f2\3\2\2\2\u01f5\u01f3\3\2\2\2\u01f5"+
-		"\u01f4\3\2\2\2\u01f6\u0085\3\2\2\2\u01f7\u01f8\7?\2\2\u01f8\u0087\3\2"+
-		"\2\2\u01f9\u01fa\7@\2\2\u01fa\u0089\3\2\2\2\u01fb\u01fc\7A\2\2\u01fc\u008b"+
-		"\3\2\2\2\u01fd\u01fe\7B\2\2\u01fe\u008d\3\2\2\2\u01ff\u0200\7C\2\2\u0200"+
-		"\u008f\3\2\2\2\u0201\u0202\7D\2\2\u0202\u0091\3\2\2\2\u0203\u0204\7E\2"+
-		"\2\u0204\u0093\3\2\2\2\u0205\u0206\7F\2\2\u0206\u0095\3\2\2\2\u0207\u0208"+
-		"\7G\2\2\u0208\u0097\3\2\2\2\u0209\u020a\7H\2\2\u020a\u0099\3\2\2\2\u020b"+
-		"\u020c\7I\2\2\u020c\u009b\3\2\2\2\u020d\u0220\5\u009eP\2\u020e\u0220\5"+
-		"\u00a0Q\2\u020f\u0220\5\u00a2R\2\u0210\u0220\5\u00a4S\2\u0211\u0220\5"+
-		"\u00a6T\2\u0212\u0220\5\u00a8U\2\u0213\u0220\5\u00aaV\2\u0214\u0220\5"+
-		"\u00acW\2\u0215\u0220\5\u00aeX\2\u0216\u0220\5\u00b0Y\2\u0217\u0220\5"+
-		"\u00b2Z\2\u0218\u0220\5\u00b4[\2\u0219\u0220\5\u00b6\\\2\u021a\u0220\5"+
-		"\u00b8]\2\u021b\u0220\5\u00ba^\2\u021c\u0220\5\u00bc_\2\u021d\u0220\5"+
-		"\u00be`\2\u021e\u0220\5\u00c0a\2\u021f\u020d\3\2\2\2\u021f\u020e\3\2\2"+
-		"\2\u021f\u020f\3\2\2\2\u021f\u0210\3\2\2\2\u021f\u0211\3\2\2\2\u021f\u0212"+
-		"\3\2\2\2\u021f\u0213\3\2\2\2\u021f\u0214\3\2\2\2\u021f\u0215\3\2\2\2\u021f"+
-		"\u0216\3\2\2\2\u021f\u0217\3\2\2\2\u021f\u0218\3\2\2\2\u021f\u0219\3\2"+
-		"\2\2\u021f\u021a\3\2\2\2\u021f\u021b\3\2\2\2\u021f\u021c\3\2\2\2\u021f"+
-		"\u021d\3\2\2\2\u021f\u021e\3\2\2\2\u0220\u009d\3\2\2\2\u0221\u0222\7J"+
-		"\2\2\u0222\u009f\3\2\2\2\u0223\u0224\7K\2\2\u0224\u00a1\3\2\2\2\u0225"+
-		"\u0226\7L\2\2\u0226\u00a3\3\2\2\2\u0227\u0228\7M\2\2\u0228\u00a5\3\2\2"+
-		"\2\u0229\u022a\7N\2\2\u022a\u00a7\3\2\2\2\u022b\u022c\7O\2\2\u022c\u00a9"+
-		"\3\2\2\2\u022d\u022e\7P\2\2\u022e\u00ab\3\2\2\2\u022f\u0230\7Q\2\2\u0230"+
-		"\u00ad\3\2\2\2\u0231\u0232\7R\2\2\u0232\u00af\3\2\2\2\u0233\u0234\7S\2"+
-		"\2\u0234\u00b1\3\2\2\2\u0235\u0236\7T\2\2\u0236\u00b3\3\2\2\2\u0237\u0238"+
-		"\7U\2\2\u0238\u00b5\3\2\2\2\u0239\u023a\7V\2\2\u023a\u00b7\3\2\2\2\u023b"+
-		"\u023c\7W\2\2\u023c\u00b9\3\2\2\2\u023d\u023e\7X\2\2\u023e\u00bb\3\2\2"+
-		"\2\u023f\u0240\7Y\2\2\u0240\u00bd\3\2\2\2\u0241\u0242\7Z\2\2\u0242\u00bf"+
-		"\3\2\2\2\u0243\u0244\7[\2\2\u0244\u00c1\3\2\2\2\u0245\u024a\5\u00c4c\2"+
-		"\u0246\u024a\5\u00c6d\2\u0247\u024a\5\u00c8e\2\u0248\u024a\5\u00caf\2"+
-		"\u0249\u0245\3\2\2\2\u0249\u0246\3\2\2\2\u0249\u0247\3\2\2\2\u0249\u0248"+
-		"\3\2\2\2\u024a\u00c3\3\2\2\2\u024b\u024c\7\\\2\2\u024c\u00c5\3\2\2\2\u024d"+
-		"\u024e\7]\2\2\u024e\u00c7\3\2\2\2\u024f\u0250\7^\2\2\u0250\u00c9\3\2\2"+
-		"\2\u0251\u0252\7_\2\2\u0252\u00cb\3\2\2\2\u0253\u025d\5\u00ceh\2\u0254"+
-		"\u025d\5\u00d0i\2\u0255\u025d\5\u00d2j\2\u0256\u025d\5\u00d4k\2\u0257"+
-		"\u025d\5\u00d6l\2\u0258\u025d\5\u00d8m\2\u0259\u025d\5\u00dan\2\u025a"+
-		"\u025d\5\u00dco\2\u025b\u025d\5\u00dep\2\u025c\u0253\3\2\2\2\u025c\u0254"+
-		"\3\2\2\2\u025c\u0255\3\2\2\2\u025c\u0256\3\2\2\2\u025c\u0257\3\2\2\2\u025c"+
-		"\u0258\3\2\2\2\u025c\u0259\3\2\2\2\u025c\u025a\3\2\2\2\u025c\u025b\3\2"+
-		"\2\2\u025d\u00cd\3\2\2\2\u025e\u025f\7`\2\2\u025f\u00cf\3\2\2\2\u0260"+
-		"\u0261\7a\2\2\u0261\u00d1\3\2\2\2\u0262\u0263\7b\2\2\u0263\u00d3\3\2\2"+
-		"\2\u0264\u0265\7c\2\2\u0265\u00d5\3\2\2\2\u0266\u0267\7d\2\2\u0267\u00d7"+
-		"\3\2\2\2\u0268\u0269\7e\2\2\u0269\u00d9\3\2\2\2\u026a\u026b\7f\2\2\u026b"+
-		"\u00db\3\2\2\2\u026c\u026d\7g\2\2\u026d\u00dd\3\2\2\2\u026e\u026f\7h\2"+
-		"\2\u026f\u00df\3\2\2\2\u0270\u0278\5\u00e2r\2\u0271\u0278\5\u00e4s\2\u0272"+
-		"\u0278\5\u00e6t\2\u0273\u0278\5\u00e8u\2\u0274\u0278\5\u00eav\2\u0275"+
-		"\u0278\5\u00ecw\2\u0276\u0278\5\u00eex\2\u0277\u0270\3\2\2\2\u0277\u0271"+
-		"\3\2\2\2\u0277\u0272\3\2\2\2\u0277\u0273\3\2\2\2\u0277\u0274\3\2\2\2\u0277"+
-		"\u0275\3\2\2\2\u0277\u0276\3\2\2\2\u0278\u00e1\3\2\2\2\u0279\u027a\7i"+
-		"\2\2\u027a\u00e3\3\2\2\2\u027b\u027c\7j\2\2\u027c\u00e5\3\2\2\2\u027d"+
-		"\u027e\7k\2\2\u027e\u00e7\3\2\2\2\u027f\u0280\7l\2\2\u0280\u00e9\3\2\2"+
-		"\2\u0281\u0282\7m\2\2\u0282\u00eb\3\2\2\2\u0283\u0284\7n\2\2\u0284\u00ed"+
-		"\3\2\2\2\u0285\u0286\7o\2\2\u0286\u00ef\3\2\2\2\u0287\u0292\5\u00f2z\2"+
-		"\u0288\u0292\5\u00f4{\2\u0289\u0292\5\u00f6|\2\u028a\u0292\5\u00f8}\2"+
-		"\u028b\u0292\5\u00fa~\2\u028c\u0292\5\u00fc\177\2\u028d\u0292\5\u00fe"+
-		"\u0080\2\u028e\u0292\5\u0100\u0081\2\u028f\u0292\5\u0102\u0082\2\u0290"+
-		"\u0292\5\u0104\u0083\2\u0291\u0287\3\2\2\2\u0291\u0288\3\2\2\2\u0291\u0289"+
-		"\3\2\2\2\u0291\u028a\3\2\2\2\u0291\u028b\3\2\2\2\u0291\u028c\3\2\2\2\u0291"+
-		"\u028d\3\2\2\2\u0291\u028e\3\2\2\2\u0291\u028f\3\2\2\2\u0291\u0290\3\2"+
-		"\2\2\u0292\u00f1\3\2\2\2\u0293\u0294\7p\2\2\u0294\u00f3\3\2\2\2\u0295"+
-		"\u0296\7q\2\2\u0296\u00f5\3\2\2\2\u0297\u0298\7r\2\2\u0298\u00f7\3\2\2"+
-		"\2\u0299\u029a\7s\2\2\u029a\u00f9\3\2\2\2\u029b\u029c\7t\2\2\u029c\u00fb"+
-		"\3\2\2\2\u029d\u029e\7u\2\2\u029e\u00fd\3\2\2\2\u029f\u02a0\7v\2\2\u02a0"+
-		"\u00ff\3\2\2\2\u02a1\u02a2\7w\2\2\u02a2\u0101\3\2\2\2\u02a3\u02a4\7x\2"+
-		"\2\u02a4\u0103\3\2\2\2\u02a5\u02a6\7\u0081\2\2\u02a6\u0105\3\2\2\2\u02a7"+
-		"\u02b0\5\u0108\u0085\2\u02a8\u02b0\5\u010a\u0086\2\u02a9\u02b0\5\u010c"+
-		"\u0087\2\u02aa\u02b0\5\u010e\u0088\2\u02ab\u02b0\5\u0110\u0089\2\u02ac"+
-		"\u02b0\5\u0112\u008a\2\u02ad\u02b0\5\u0114\u008b\2\u02ae\u02b0\5\u0116"+
-		"\u008c\2\u02af\u02a7\3\2\2\2\u02af\u02a8\3\2\2\2\u02af\u02a9\3\2\2\2\u02af"+
-		"\u02aa\3\2\2\2\u02af\u02ab\3\2\2\2\u02af\u02ac\3\2\2\2\u02af\u02ad\3\2"+
-		"\2\2\u02af\u02ae\3\2\2\2\u02b0\u0107\3\2\2\2\u02b1\u02b2\7y\2\2\u02b2"+
-		"\u0109\3\2\2\2\u02b3\u02b4\7z\2\2\u02b4\u010b\3\2\2\2\u02b5\u02b6\7{\2"+
-		"\2\u02b6\u010d\3\2\2\2\u02b7\u02b8\7|\2\2\u02b8\u010f\3\2\2\2\u02b9\u02ba"+
-		"\7}\2\2\u02ba\u0111\3\2\2\2\u02bb\u02bc\7~\2\2\u02bc\u0113\3\2\2\2\u02bd"+
-		"\u02be\7\177\2\2\u02be\u0115\3\2\2\2\u02bf\u02c0\7\u0080\2\2\u02c0\u0117"+
-		"\3\2\2\2\24\u011a\u0120\u0125\u0129\u012d\u0142\u014d\u0171\u0191\u01b0"+
-		"\u01d0\u01f5\u021f\u0249\u025c\u0277\u0291\u02af";
+		"\4\u008a\t\u008a\4\u008b\t\u008b\4\u008c\t\u008c\4\u008d\t\u008d\3\2\3"+
+		"\2\5\2\u011d\n\2\3\2\3\2\6\2\u0121\n\2\r\2\16\2\u0122\3\2\3\2\3\3\7\3"+
+		"\u0128\n\3\f\3\16\3\u012b\13\3\3\4\3\4\3\4\5\4\u0130\n\4\3\5\3\5\3\6\3"+
+		"\6\5\6\u0136\n\6\3\7\3\7\3\b\3\b\3\t\3\t\3\t\3\t\3\t\3\t\3\t\3\t\3\t\3"+
+		"\t\3\t\3\t\3\t\3\t\3\t\5\t\u014b\n\t\3\n\3\n\3\n\3\n\3\n\3\n\3\n\3\n\3"+
+		"\n\5\n\u0156\n\n\3\13\3\13\3\f\3\f\3\r\3\r\3\16\3\16\3\17\3\17\3\20\3"+
+		"\20\3\21\3\21\3\22\3\22\3\23\3\23\3\24\3\24\3\25\3\25\3\26\3\26\3\27\3"+
+		"\27\3\27\3\27\3\27\3\27\3\27\3\27\3\27\3\27\5\27\u017a\n\27\3\30\3\30"+
+		"\3\31\3\31\3\32\3\32\3\33\3\33\3\34\3\34\3\35\3\35\3\36\3\36\3\37\3\37"+
+		"\3 \3 \3!\3!\3\"\3\"\3\"\3\"\3\"\3\"\3\"\3\"\3\"\3\"\5\"\u019a\n\"\3#"+
+		"\3#\3$\3$\3%\3%\3&\3&\3\'\3\'\3(\3(\3)\3)\3*\3*\3+\3+\3,\3,\3-\3-\3-\3"+
+		"-\3-\3-\3-\3-\3-\5-\u01b9\n-\3.\3.\3/\3/\3\60\3\60\3\61\3\61\3\62\3\62"+
+		"\3\63\3\63\3\64\3\64\3\65\3\65\3\66\3\66\3\67\3\67\3\67\3\67\3\67\3\67"+
+		"\3\67\3\67\3\67\3\67\3\67\3\67\5\67\u01d9\n\67\38\38\39\39\3:\3:\3;\3"+
+		";\3<\3<\3=\3=\3>\3>\3?\3?\3@\3@\3A\3A\3B\3B\3C\3C\3D\3D\3D\3D\3D\3D\3"+
+		"D\3D\3D\3D\3D\5D\u01fe\nD\3E\3E\3F\3F\3G\3G\3H\3H\3I\3I\3J\3J\3K\3K\3"+
+		"L\3L\3M\3M\3N\3N\3O\3O\3P\3P\3P\3P\3P\3P\3P\3P\3P\3P\3P\3P\3P\3P\3P\3"+
+		"P\3P\3P\5P\u0228\nP\3Q\3Q\3R\3R\3S\3S\3T\3T\3U\3U\3V\3V\3W\3W\3X\3X\3"+
+		"Y\3Y\3Z\3Z\3[\3[\3\\\3\\\3]\3]\3^\3^\3_\3_\3`\3`\3a\3a\3b\3b\3c\3c\3c"+
+		"\3c\5c\u0252\nc\3d\3d\3e\3e\3f\3f\3g\3g\3h\3h\3h\3h\3h\3h\3h\3h\3h\5h"+
+		"\u0265\nh\3i\3i\3j\3j\3k\3k\3l\3l\3m\3m\3n\3n\3o\3o\3p\3p\3q\3q\3r\3r"+
+		"\3r\3r\3r\3r\3r\5r\u0280\nr\3s\3s\3t\3t\3u\3u\3v\3v\3w\3w\3x\3x\3y\3y"+
+		"\3z\3z\3z\3z\3z\3z\3z\3z\3z\3z\5z\u029a\nz\3{\3{\3|\3|\3}\3}\3~\3~\3\177"+
+		"\3\177\3\u0080\3\u0080\3\u0081\3\u0081\3\u0082\3\u0082\3\u0083\3\u0083"+
+		"\3\u0084\3\u0084\3\u0085\3\u0085\3\u0085\3\u0085\3\u0085\3\u0085\3\u0085"+
+		"\3\u0085\5\u0085\u02b8\n\u0085\3\u0086\3\u0086\3\u0087\3\u0087\3\u0088"+
+		"\3\u0088\3\u0089\3\u0089\3\u008a\3\u008a\3\u008b\3\u008b\3\u008c\3\u008c"+
+		"\3\u008d\3\u008d\3\u008d\2\2\u008e\2\4\6\b\n\f\16\20\22\24\26\30\32\34"+
+		"\36 \"$&(*,.\60\62\64\668:<>@BDFHJLNPRTVXZ\\^`bdfhjlnprtvxz|~\u0080\u0082"+
+		"\u0084\u0086\u0088\u008a\u008c\u008e\u0090\u0092\u0094\u0096\u0098\u009a"+
+		"\u009c\u009e\u00a0\u00a2\u00a4\u00a6\u00a8\u00aa\u00ac\u00ae\u00b0\u00b2"+
+		"\u00b4\u00b6\u00b8\u00ba\u00bc\u00be\u00c0\u00c2\u00c4\u00c6\u00c8\u00ca"+
+		"\u00cc\u00ce\u00d0\u00d2\u00d4\u00d6\u00d8\u00da\u00dc\u00de\u00e0\u00e2"+
+		"\u00e4\u00e6\u00e8\u00ea\u00ec\u00ee\u00f0\u00f2\u00f4\u00f6\u00f8\u00fa"+
+		"\u00fc\u00fe\u0100\u0102\u0104\u0106\u0108\u010a\u010c\u010e\u0110\u0112"+
+		"\u0114\u0116\u0118\2\2\2\u02ba\2\u0120\3\2\2\2\4\u0129\3\2\2\2\6\u012f"+
+		"\3\2\2\2\b\u0131\3\2\2\2\n\u0135\3\2\2\2\f\u0137\3\2\2\2\16\u0139\3\2"+
+		"\2\2\20\u014a\3\2\2\2\22\u0155\3\2\2\2\24\u0157\3\2\2\2\26\u0159\3\2\2"+
+		"\2\30\u015b\3\2\2\2\32\u015d\3\2\2\2\34\u015f\3\2\2\2\36\u0161\3\2\2\2"+
+		" \u0163\3\2\2\2\"\u0165\3\2\2\2$\u0167\3\2\2\2&\u0169\3\2\2\2(\u016b\3"+
+		"\2\2\2*\u016d\3\2\2\2,\u0179\3\2\2\2.\u017b\3\2\2\2\60\u017d\3\2\2\2\62"+
+		"\u017f\3\2\2\2\64\u0181\3\2\2\2\66\u0183\3\2\2\28\u0185\3\2\2\2:\u0187"+
+		"\3\2\2\2<\u0189\3\2\2\2>\u018b\3\2\2\2@\u018d\3\2\2\2B\u0199\3\2\2\2D"+
+		"\u019b\3\2\2\2F\u019d\3\2\2\2H\u019f\3\2\2\2J\u01a1\3\2\2\2L\u01a3\3\2"+
+		"\2\2N\u01a5\3\2\2\2P\u01a7\3\2\2\2R\u01a9\3\2\2\2T\u01ab\3\2\2\2V\u01ad"+
+		"\3\2\2\2X\u01b8\3\2\2\2Z\u01ba\3\2\2\2\\\u01bc\3\2\2\2^\u01be\3\2\2\2"+
+		"`\u01c0\3\2\2\2b\u01c2\3\2\2\2d\u01c4\3\2\2\2f\u01c6\3\2\2\2h\u01c8\3"+
+		"\2\2\2j\u01ca\3\2\2\2l\u01d8\3\2\2\2n\u01da\3\2\2\2p\u01dc\3\2\2\2r\u01de"+
+		"\3\2\2\2t\u01e0\3\2\2\2v\u01e2\3\2\2\2x\u01e4\3\2\2\2z\u01e6\3\2\2\2|"+
+		"\u01e8\3\2\2\2~\u01ea\3\2\2\2\u0080\u01ec\3\2\2\2\u0082\u01ee\3\2\2\2"+
+		"\u0084\u01f0\3\2\2\2\u0086\u01fd\3\2\2\2\u0088\u01ff\3\2\2\2\u008a\u0201"+
+		"\3\2\2\2\u008c\u0203\3\2\2\2\u008e\u0205\3\2\2\2\u0090\u0207\3\2\2\2\u0092"+
+		"\u0209\3\2\2\2\u0094\u020b\3\2\2\2\u0096\u020d\3\2\2\2\u0098\u020f\3\2"+
+		"\2\2\u009a\u0211\3\2\2\2\u009c\u0213\3\2\2\2\u009e\u0227\3\2\2\2\u00a0"+
+		"\u0229\3\2\2\2\u00a2\u022b\3\2\2\2\u00a4\u022d\3\2\2\2\u00a6\u022f\3\2"+
+		"\2\2\u00a8\u0231\3\2\2\2\u00aa\u0233\3\2\2\2\u00ac\u0235\3\2\2\2\u00ae"+
+		"\u0237\3\2\2\2\u00b0\u0239\3\2\2\2\u00b2\u023b\3\2\2\2\u00b4\u023d\3\2"+
+		"\2\2\u00b6\u023f\3\2\2\2\u00b8\u0241\3\2\2\2\u00ba\u0243\3\2\2\2\u00bc"+
+		"\u0245\3\2\2\2\u00be\u0247\3\2\2\2\u00c0\u0249\3\2\2\2\u00c2\u024b\3\2"+
+		"\2\2\u00c4\u0251\3\2\2\2\u00c6\u0253\3\2\2\2\u00c8\u0255\3\2\2\2\u00ca"+
+		"\u0257\3\2\2\2\u00cc\u0259\3\2\2\2\u00ce\u0264\3\2\2\2\u00d0\u0266\3\2"+
+		"\2\2\u00d2\u0268\3\2\2\2\u00d4\u026a\3\2\2\2\u00d6\u026c\3\2\2\2\u00d8"+
+		"\u026e\3\2\2\2\u00da\u0270\3\2\2\2\u00dc\u0272\3\2\2\2\u00de\u0274\3\2"+
+		"\2\2\u00e0\u0276\3\2\2\2\u00e2\u027f\3\2\2\2\u00e4\u0281\3\2\2\2\u00e6"+
+		"\u0283\3\2\2\2\u00e8\u0285\3\2\2\2\u00ea\u0287\3\2\2\2\u00ec\u0289\3\2"+
+		"\2\2\u00ee\u028b\3\2\2\2\u00f0\u028d\3\2\2\2\u00f2\u0299\3\2\2\2\u00f4"+
+		"\u029b\3\2\2\2\u00f6\u029d\3\2\2\2\u00f8\u029f\3\2\2\2\u00fa\u02a1\3\2"+
+		"\2\2\u00fc\u02a3\3\2\2\2\u00fe\u02a5\3\2\2\2\u0100\u02a7\3\2\2\2\u0102"+
+		"\u02a9\3\2\2\2\u0104\u02ab\3\2\2\2\u0106\u02ad\3\2\2\2\u0108\u02b7\3\2"+
+		"\2\2\u010a\u02b9\3\2\2\2\u010c\u02bb\3\2\2\2\u010e\u02bd\3\2\2\2\u0110"+
+		"\u02bf\3\2\2\2\u0112\u02c1\3\2\2\2\u0114\u02c3\3\2\2\2\u0116\u02c5\3\2"+
+		"\2\2\u0118\u02c7\3\2\2\2\u011a\u011c\5\4\3\2\u011b\u011d\7\3\2\2\u011c"+
+		"\u011b\3\2\2\2\u011c\u011d\3\2\2\2\u011d\u011e\3\2\2\2\u011e\u011f\7\4"+
+		"\2\2\u011f\u0121\3\2\2\2\u0120\u011a\3\2\2\2\u0121\u0122\3\2\2\2\u0122"+
+		"\u0120\3\2\2\2\u0122\u0123\3\2\2\2\u0123\u0124\3\2\2\2\u0124\u0125\7\2"+
+		"\2\3\u0125\3\3\2\2\2\u0126\u0128\5\6\4\2\u0127\u0126\3\2\2\2\u0128\u012b"+
+		"\3\2\2\2\u0129\u0127\3\2\2\2\u0129\u012a\3\2\2\2\u012a\5\3\2\2\2\u012b"+
+		"\u0129\3\2\2\2\u012c\u0130\5\20\t\2\u012d\u0130\5\n\6\2\u012e\u0130\5"+
+		"\b\5\2\u012f\u012c\3\2\2\2\u012f\u012d\3\2\2\2\u012f\u012e\3\2\2\2\u0130"+
+		"\7\3\2\2\2\u0131\u0132\7\5\2\2\u0132\t\3\2\2\2\u0133\u0136\5\f\7\2\u0134"+
+		"\u0136\5\16\b\2\u0135\u0133\3\2\2\2\u0135\u0134\3\2\2\2\u0136\13\3\2\2"+
+		"\2\u0137\u0138\7\b\2\2\u0138\r\3\2\2\2\u0139\u013a\7\7\2\2\u013a\17\3"+
+		"\2\2\2\u013b\u014b\5\22\n\2\u013c\u014b\5&\24\2\u013d\u014b\5(\25\2\u013e"+
+		"\u014b\5,\27\2\u013f\u014b\5B\"\2\u0140\u014b\5X-\2\u0141\u014b\5l\67"+
+		"\2\u0142\u014b\5\u0086D\2\u0143\u014b\5\u009eP\2\u0144\u014b\5\u00c4c"+
+		"\2\u0145\u014b\5\u00ceh\2\u0146\u014b\5\u00e2r\2\u0147\u014b\5*\26\2\u0148"+
+		"\u014b\5\u00f2z\2\u0149\u014b\5\u0108\u0085\2\u014a\u013b\3\2\2\2\u014a"+
+		"\u013c\3\2\2\2\u014a\u013d\3\2\2\2\u014a\u013e\3\2\2\2\u014a\u013f\3\2"+
+		"\2\2\u014a\u0140\3\2\2\2\u014a\u0141\3\2\2\2\u014a\u0142\3\2\2\2\u014a"+
+		"\u0143\3\2\2\2\u014a\u0144\3\2\2\2\u014a\u0145\3\2\2\2\u014a\u0146\3\2"+
+		"\2\2\u014a\u0147\3\2\2\2\u014a\u0148\3\2\2\2\u014a\u0149\3\2\2\2\u014b"+
+		"\21\3\2\2\2\u014c\u0156\5\24\13\2\u014d\u0156\5\26\f\2\u014e\u0156\5\30"+
+		"\r\2\u014f\u0156\5\32\16\2\u0150\u0156\5\34\17\2\u0151\u0156\5\36\20\2"+
+		"\u0152\u0156\5 \21\2\u0153\u0156\5\"\22\2\u0154\u0156\5$\23\2\u0155\u014c"+
+		"\3\2\2\2\u0155\u014d\3\2\2\2\u0155\u014e\3\2\2\2\u0155\u014f\3\2\2\2\u0155"+
+		"\u0150\3\2\2\2\u0155\u0151\3\2\2\2\u0155\u0152\3\2\2\2\u0155\u0153\3\2"+
+		"\2\2\u0155\u0154\3\2\2\2\u0156\23\3\2\2\2\u0157\u0158\7\t\2\2\u0158\25"+
+		"\3\2\2\2\u0159\u015a\7\n\2\2\u015a\27\3\2\2\2\u015b\u015c\7\13\2\2\u015c"+
+		"\31\3\2\2\2\u015d\u015e\7\f\2\2\u015e\33\3\2\2\2\u015f\u0160\7\r\2\2\u0160"+
+		"\35\3\2\2\2\u0161\u0162\7\16\2\2\u0162\37\3\2\2\2\u0163\u0164\7\20\2\2"+
+		"\u0164!\3\2\2\2\u0165\u0166\7\21\2\2\u0166#\3\2\2\2\u0167\u0168\7\22\2"+
+		"\2\u0168%\3\2\2\2\u0169\u016a\7\23\2\2\u016a\'\3\2\2\2\u016b\u016c\7\24"+
+		"\2\2\u016c)\3\2\2\2\u016d\u016e\7\25\2\2\u016e+\3\2\2\2\u016f\u017a\5"+
+		".\30\2\u0170\u017a\5\60\31\2\u0171\u017a\5\62\32\2\u0172\u017a\5\64\33"+
+		"\2\u0173\u017a\5\66\34\2\u0174\u017a\58\35\2\u0175\u017a\5:\36\2\u0176"+
+		"\u017a\5<\37\2\u0177\u017a\5> \2\u0178\u017a\5@!\2\u0179\u016f\3\2\2\2"+
+		"\u0179\u0170\3\2\2\2\u0179\u0171\3\2\2\2\u0179\u0172\3\2\2\2\u0179\u0173"+
+		"\3\2\2\2\u0179\u0174\3\2\2\2\u0179\u0175\3\2\2\2\u0179\u0176\3\2\2\2\u0179"+
+		"\u0177\3\2\2\2\u0179\u0178\3\2\2\2\u017a-\3\2\2\2\u017b\u017c\7\26\2\2"+
+		"\u017c/\3\2\2\2\u017d\u017e\7\27\2\2\u017e\61\3\2\2\2\u017f\u0180\7\30"+
+		"\2\2\u0180\63\3\2\2\2\u0181\u0182\7\31\2\2\u0182\65\3\2\2\2\u0183\u0184"+
+		"\7\32\2\2\u0184\67\3\2\2\2\u0185\u0186\7\33\2\2\u01869\3\2\2\2\u0187\u0188"+
+		"\7\34\2\2\u0188;\3\2\2\2\u0189\u018a\7\35\2\2\u018a=\3\2\2\2\u018b\u018c"+
+		"\7\36\2\2\u018c?\3\2\2\2\u018d\u018e\7 \2\2\u018eA\3\2\2\2\u018f\u019a"+
+		"\5D#\2\u0190\u019a\5F$\2\u0191\u019a\5H%\2\u0192\u019a\5J&\2\u0193\u019a"+
+		"\5L\'\2\u0194\u019a\5N(\2\u0195\u019a\5P)\2\u0196\u019a\5R*\2\u0197\u019a"+
+		"\5T+\2\u0198\u019a\5V,\2\u0199\u018f\3\2\2\2\u0199\u0190\3\2\2\2\u0199"+
+		"\u0191\3\2\2\2\u0199\u0192\3\2\2\2\u0199\u0193\3\2\2\2\u0199\u0194\3\2"+
+		"\2\2\u0199\u0195\3\2\2\2\u0199\u0196\3\2\2\2\u0199\u0197\3\2\2\2\u0199"+
+		"\u0198\3\2\2\2\u019aC\3\2\2\2\u019b\u019c\7!\2\2\u019cE\3\2\2\2\u019d"+
+		"\u019e\7\"\2\2\u019eG\3\2\2\2\u019f\u01a0\7#\2\2\u01a0I\3\2\2\2\u01a1"+
+		"\u01a2\7$\2\2\u01a2K\3\2\2\2\u01a3\u01a4\7%\2\2\u01a4M\3\2\2\2\u01a5\u01a6"+
+		"\7&\2\2\u01a6O\3\2\2\2\u01a7\u01a8\7\'\2\2\u01a8Q\3\2\2\2\u01a9\u01aa"+
+		"\7(\2\2\u01aaS\3\2\2\2\u01ab\u01ac\7)\2\2\u01acU\3\2\2\2\u01ad\u01ae\7"+
+		"*\2\2\u01aeW\3\2\2\2\u01af\u01b9\5Z.\2\u01b0\u01b9\5\\/\2\u01b1\u01b9"+
+		"\5^\60\2\u01b2\u01b9\5`\61\2\u01b3\u01b9\5b\62\2\u01b4\u01b9\5d\63\2\u01b5"+
+		"\u01b9\5f\64\2\u01b6\u01b9\5h\65\2\u01b7\u01b9\5j\66\2\u01b8\u01af\3\2"+
+		"\2\2\u01b8\u01b0\3\2\2\2\u01b8\u01b1\3\2\2\2\u01b8\u01b2\3\2\2\2\u01b8"+
+		"\u01b3\3\2\2\2\u01b8\u01b4\3\2\2\2\u01b8\u01b5\3\2\2\2\u01b8\u01b6\3\2"+
+		"\2\2\u01b8\u01b7\3\2\2\2\u01b9Y\3\2\2\2\u01ba\u01bb\7+\2\2\u01bb[\3\2"+
+		"\2\2\u01bc\u01bd\7,\2\2\u01bd]\3\2\2\2\u01be\u01bf\7-\2\2\u01bf_\3\2\2"+
+		"\2\u01c0\u01c1\7.\2\2\u01c1a\3\2\2\2\u01c2\u01c3\7/\2\2\u01c3c\3\2\2\2"+
+		"\u01c4\u01c5\7\60\2\2\u01c5e\3\2\2\2\u01c6\u01c7\7\61\2\2\u01c7g\3\2\2"+
+		"\2\u01c8\u01c9\7\62\2\2\u01c9i\3\2\2\2\u01ca\u01cb\7\63\2\2\u01cbk\3\2"+
+		"\2\2\u01cc\u01d9\5n8\2\u01cd\u01d9\5p9\2\u01ce\u01d9\5r:\2\u01cf\u01d9"+
+		"\5t;\2\u01d0\u01d9\5v<\2\u01d1\u01d9\5x=\2\u01d2\u01d9\5z>\2\u01d3\u01d9"+
+		"\5|?\2\u01d4\u01d9\5~@\2\u01d5\u01d9\5\u0080A\2\u01d6\u01d9\5\u0082B\2"+
+		"\u01d7\u01d9\5\u0084C\2\u01d8\u01cc\3\2\2\2\u01d8\u01cd\3\2\2\2\u01d8"+
+		"\u01ce\3\2\2\2\u01d8\u01cf\3\2\2\2\u01d8\u01d0\3\2\2\2\u01d8\u01d1\3\2"+
+		"\2\2\u01d8\u01d2\3\2\2\2\u01d8\u01d3\3\2\2\2\u01d8\u01d4\3\2\2\2\u01d8"+
+		"\u01d5\3\2\2\2\u01d8\u01d6\3\2\2\2\u01d8\u01d7\3\2\2\2\u01d9m\3\2\2\2"+
+		"\u01da\u01db\7\64\2\2\u01dbo\3\2\2\2\u01dc\u01dd\7\65\2\2\u01ddq\3\2\2"+
+		"\2\u01de\u01df\7\66\2\2\u01dfs\3\2\2\2\u01e0\u01e1\7\67\2\2\u01e1u\3\2"+
+		"\2\2\u01e2\u01e3\78\2\2\u01e3w\3\2\2\2\u01e4\u01e5\79\2\2\u01e5y\3\2\2"+
+		"\2\u01e6\u01e7\7:\2\2\u01e7{\3\2\2\2\u01e8\u01e9\7;\2\2\u01e9}\3\2\2\2"+
+		"\u01ea\u01eb\7<\2\2\u01eb\177\3\2\2\2\u01ec\u01ed\7=\2\2\u01ed\u0081\3"+
+		"\2\2\2\u01ee\u01ef\7>\2\2\u01ef\u0083\3\2\2\2\u01f0\u01f1\7?\2\2\u01f1"+
+		"\u0085\3\2\2\2\u01f2\u01fe\5\u0088E\2\u01f3\u01fe\5\u008aF\2\u01f4\u01fe"+
+		"\5\u008cG\2\u01f5\u01fe\5\u008eH\2\u01f6\u01fe\5\u0090I\2\u01f7\u01fe"+
+		"\5\u0092J\2\u01f8\u01fe\5\u0094K\2\u01f9\u01fe\5\u0096L\2\u01fa\u01fe"+
+		"\5\u0098M\2\u01fb\u01fe\5\u009aN\2\u01fc\u01fe\5\u009cO\2\u01fd\u01f2"+
+		"\3\2\2\2\u01fd\u01f3\3\2\2\2\u01fd\u01f4\3\2\2\2\u01fd\u01f5\3\2\2\2\u01fd"+
+		"\u01f6\3\2\2\2\u01fd\u01f7\3\2\2\2\u01fd\u01f8\3\2\2\2\u01fd\u01f9\3\2"+
+		"\2\2\u01fd\u01fa\3\2\2\2\u01fd\u01fb\3\2\2\2\u01fd\u01fc\3\2\2\2\u01fe"+
+		"\u0087\3\2\2\2\u01ff\u0200\7@\2\2\u0200\u0089\3\2\2\2\u0201\u0202\7A\2"+
+		"\2\u0202\u008b\3\2\2\2\u0203\u0204\7B\2\2\u0204\u008d\3\2\2\2\u0205\u0206"+
+		"\7C\2\2\u0206\u008f\3\2\2\2\u0207\u0208\7D\2\2\u0208\u0091\3\2\2\2\u0209"+
+		"\u020a\7E\2\2\u020a\u0093\3\2\2\2\u020b\u020c\7F\2\2\u020c\u0095\3\2\2"+
+		"\2\u020d\u020e\7G\2\2\u020e\u0097\3\2\2\2\u020f\u0210\7H\2\2\u0210\u0099"+
+		"\3\2\2\2\u0211\u0212\7I\2\2\u0212\u009b\3\2\2\2\u0213\u0214\7J\2\2\u0214"+
+		"\u009d\3\2\2\2\u0215\u0228\5\u00a0Q\2\u0216\u0228\5\u00a2R\2\u0217\u0228"+
+		"\5\u00a4S\2\u0218\u0228\5\u00a6T\2\u0219\u0228\5\u00a8U\2\u021a\u0228"+
+		"\5\u00aaV\2\u021b\u0228\5\u00acW\2\u021c\u0228\5\u00aeX\2\u021d\u0228"+
+		"\5\u00b0Y\2\u021e\u0228\5\u00b2Z\2\u021f\u0228\5\u00b4[\2\u0220\u0228"+
+		"\5\u00b6\\\2\u0221\u0228\5\u00b8]\2\u0222\u0228\5\u00ba^\2\u0223\u0228"+
+		"\5\u00bc_\2\u0224\u0228\5\u00be`\2\u0225\u0228\5\u00c0a\2\u0226\u0228"+
+		"\5\u00c2b\2\u0227\u0215\3\2\2\2\u0227\u0216\3\2\2\2\u0227\u0217\3\2\2"+
+		"\2\u0227\u0218\3\2\2\2\u0227\u0219\3\2\2\2\u0227\u021a\3\2\2\2\u0227\u021b"+
+		"\3\2\2\2\u0227\u021c\3\2\2\2\u0227\u021d\3\2\2\2\u0227\u021e\3\2\2\2\u0227"+
+		"\u021f\3\2\2\2\u0227\u0220\3\2\2\2\u0227\u0221\3\2\2\2\u0227\u0222\3\2"+
+		"\2\2\u0227\u0223\3\2\2\2\u0227\u0224\3\2\2\2\u0227\u0225\3\2\2\2\u0227"+
+		"\u0226\3\2\2\2\u0228\u009f\3\2\2\2\u0229\u022a\7K\2\2\u022a\u00a1\3\2"+
+		"\2\2\u022b\u022c\7L\2\2\u022c\u00a3\3\2\2\2\u022d\u022e\7M\2\2\u022e\u00a5"+
+		"\3\2\2\2\u022f\u0230\7N\2\2\u0230\u00a7\3\2\2\2\u0231\u0232\7O\2\2\u0232"+
+		"\u00a9\3\2\2\2\u0233\u0234\7P\2\2\u0234\u00ab\3\2\2\2\u0235\u0236\7Q\2"+
+		"\2\u0236\u00ad\3\2\2\2\u0237\u0238\7R\2\2\u0238\u00af\3\2\2\2\u0239\u023a"+
+		"\7S\2\2\u023a\u00b1\3\2\2\2\u023b\u023c\7T\2\2\u023c\u00b3\3\2\2\2\u023d"+
+		"\u023e\7U\2\2\u023e\u00b5\3\2\2\2\u023f\u0240\7V\2\2\u0240\u00b7\3\2\2"+
+		"\2\u0241\u0242\7W\2\2\u0242\u00b9\3\2\2\2\u0243\u0244\7X\2\2\u0244\u00bb"+
+		"\3\2\2\2\u0245\u0246\7Y\2\2\u0246\u00bd\3\2\2\2\u0247\u0248\7Z\2\2\u0248"+
+		"\u00bf\3\2\2\2\u0249\u024a\7[\2\2\u024a\u00c1\3\2\2\2\u024b\u024c\7\\"+
+		"\2\2\u024c\u00c3\3\2\2\2\u024d\u0252\5\u00c6d\2\u024e\u0252\5\u00c8e\2"+
+		"\u024f\u0252\5\u00caf\2\u0250\u0252\5\u00ccg\2\u0251\u024d\3\2\2\2\u0251"+
+		"\u024e\3\2\2\2\u0251\u024f\3\2\2\2\u0251\u0250\3\2\2\2\u0252\u00c5\3\2"+
+		"\2\2\u0253\u0254\7]\2\2\u0254\u00c7\3\2\2\2\u0255\u0256\7^\2\2\u0256\u00c9"+
+		"\3\2\2\2\u0257\u0258\7_\2\2\u0258\u00cb\3\2\2\2\u0259\u025a\7`\2\2\u025a"+
+		"\u00cd\3\2\2\2\u025b\u0265\5\u00d0i\2\u025c\u0265\5\u00d2j\2\u025d\u0265"+
+		"\5\u00d4k\2\u025e\u0265\5\u00d6l\2\u025f\u0265\5\u00d8m\2\u0260\u0265"+
+		"\5\u00dan\2\u0261\u0265\5\u00dco\2\u0262\u0265\5\u00dep\2\u0263\u0265"+
+		"\5\u00e0q\2\u0264\u025b\3\2\2\2\u0264\u025c\3\2\2\2\u0264\u025d\3\2\2"+
+		"\2\u0264\u025e\3\2\2\2\u0264\u025f\3\2\2\2\u0264\u0260\3\2\2\2\u0264\u0261"+
+		"\3\2\2\2\u0264\u0262\3\2\2\2\u0264\u0263\3\2\2\2\u0265\u00cf\3\2\2\2\u0266"+
+		"\u0267\7a\2\2\u0267\u00d1\3\2\2\2\u0268\u0269\7b\2\2\u0269\u00d3\3\2\2"+
+		"\2\u026a\u026b\7c\2\2\u026b\u00d5\3\2\2\2\u026c\u026d\7d\2\2\u026d\u00d7"+
+		"\3\2\2\2\u026e\u026f\7e\2\2\u026f\u00d9\3\2\2\2\u0270\u0271\7f\2\2\u0271"+
+		"\u00db\3\2\2\2\u0272\u0273\7g\2\2\u0273\u00dd\3\2\2\2\u0274\u0275\7h\2"+
+		"\2\u0275\u00df\3\2\2\2\u0276\u0277\7i\2\2\u0277\u00e1\3\2\2\2\u0278\u0280"+
+		"\5\u00e4s\2\u0279\u0280\5\u00e6t\2\u027a\u0280\5\u00e8u\2\u027b\u0280"+
+		"\5\u00eav\2\u027c\u0280\5\u00ecw\2\u027d\u0280\5\u00eex\2\u027e\u0280"+
+		"\5\u00f0y\2\u027f\u0278\3\2\2\2\u027f\u0279\3\2\2\2\u027f\u027a\3\2\2"+
+		"\2\u027f\u027b\3\2\2\2\u027f\u027c\3\2\2\2\u027f\u027d\3\2\2\2\u027f\u027e"+
+		"\3\2\2\2\u0280\u00e3\3\2\2\2\u0281\u0282\7j\2\2\u0282\u00e5\3\2\2\2\u0283"+
+		"\u0284\7k\2\2\u0284\u00e7\3\2\2\2\u0285\u0286\7l\2\2\u0286\u00e9\3\2\2"+
+		"\2\u0287\u0288\7m\2\2\u0288\u00eb\3\2\2\2\u0289\u028a\7n\2\2\u028a\u00ed"+
+		"\3\2\2\2\u028b\u028c\7o\2\2\u028c\u00ef\3\2\2\2\u028d\u028e\7p\2\2\u028e"+
+		"\u00f1\3\2\2\2\u028f\u029a\5\u00f4{\2\u0290\u029a\5\u00f6|\2\u0291\u029a"+
+		"\5\u00f8}\2\u0292\u029a\5\u00fa~\2\u0293\u029a\5\u00fc\177\2\u0294\u029a"+
+		"\5\u00fe\u0080\2\u0295\u029a\5\u0100\u0081\2\u0296\u029a\5\u0102\u0082"+
+		"\2\u0297\u029a\5\u0104\u0083\2\u0298\u029a\5\u0106\u0084\2\u0299\u028f"+
+		"\3\2\2\2\u0299\u0290\3\2\2\2\u0299\u0291\3\2\2\2\u0299\u0292\3\2\2\2\u0299"+
+		"\u0293\3\2\2\2\u0299\u0294\3\2\2\2\u0299\u0295\3\2\2\2\u0299\u0296\3\2"+
+		"\2\2\u0299\u0297\3\2\2\2\u0299\u0298\3\2\2\2\u029a\u00f3\3\2\2\2\u029b"+
+		"\u029c\7q\2\2\u029c\u00f5\3\2\2\2\u029d\u029e\7r\2\2\u029e\u00f7\3\2\2"+
+		"\2\u029f\u02a0\7s\2\2\u02a0\u00f9\3\2\2\2\u02a1\u02a2\7t\2\2\u02a2\u00fb"+
+		"\3\2\2\2\u02a3\u02a4\7u\2\2\u02a4\u00fd\3\2\2\2\u02a5\u02a6\7v\2\2\u02a6"+
+		"\u00ff\3\2\2\2\u02a7\u02a8\7w\2\2\u02a8\u0101\3\2\2\2\u02a9\u02aa\7x\2"+
+		"\2\u02aa\u0103\3\2\2\2\u02ab\u02ac\7y\2\2\u02ac\u0105\3\2\2\2\u02ad\u02ae"+
+		"\7\u0082\2\2\u02ae\u0107\3\2\2\2\u02af\u02b8\5\u010a\u0086\2\u02b0\u02b8"+
+		"\5\u010c\u0087\2\u02b1\u02b8\5\u010e\u0088\2\u02b2\u02b8\5\u0110\u0089"+
+		"\2\u02b3\u02b8\5\u0112\u008a\2\u02b4\u02b8\5\u0114\u008b\2\u02b5\u02b8"+
+		"\5\u0116\u008c\2\u02b6\u02b8\5\u0118\u008d\2\u02b7\u02af\3\2\2\2\u02b7"+
+		"\u02b0\3\2\2\2\u02b7\u02b1\3\2\2\2\u02b7\u02b2\3\2\2\2\u02b7\u02b3\3\2"+
+		"\2\2\u02b7\u02b4\3\2\2\2\u02b7\u02b5\3\2\2\2\u02b7\u02b6\3\2\2\2\u02b8"+
+		"\u0109\3\2\2\2\u02b9\u02ba\7z\2\2\u02ba\u010b\3\2\2\2\u02bb\u02bc\7{\2"+
+		"\2\u02bc\u010d\3\2\2\2\u02bd\u02be\7|\2\2\u02be\u010f\3\2\2\2\u02bf\u02c0"+
+		"\7}\2\2\u02c0\u0111\3\2\2\2\u02c1\u02c2\7~\2\2\u02c2\u0113\3\2\2\2\u02c3"+
+		"\u02c4\7\177\2\2\u02c4\u0115\3\2\2\2\u02c5\u02c6\7\u0080\2\2\u02c6\u0117"+
+		"\3\2\2\2\u02c7\u02c8\7\u0081\2\2\u02c8\u0119\3\2\2\2\24\u011c\u0122\u0129"+
+		"\u012f\u0135\u014a\u0155\u0179\u0199\u01b8\u01d8\u01fd\u0227\u0251\u0264"+
+		"\u027f\u0299\u02b7";
 	public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());
 	static {

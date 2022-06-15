@@ -1259,5 +1259,14 @@ class ColorListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by ColorParser#fuhivla.
+    def enterFuhivla(self, ctx:ColorParser.FuhivlaContext):
+        pass
+
+    # Exit a parse tree produced by ColorParser#fuhivla.
+    def exitFuhivla(self, ctx:ColorParser.FuhivlaContext):
+        pass
+
+
 
 del ColorParser

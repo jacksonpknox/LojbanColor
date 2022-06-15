@@ -1,8 +1,8 @@
 grammar Color;
-import Brivla,Cmavo;
+import Brivla,Cmavo,Fuhivla;
 
-folio : (sentence '\r'? '\n')+ ;
+folio : (sentence '\r'? '\n')+ EOF;
 
-sentence : word+ ;
+sentence : word* ;
 
-word : cmavo | brivla ;
+word : cmavo | brivla | fuhivla ;
