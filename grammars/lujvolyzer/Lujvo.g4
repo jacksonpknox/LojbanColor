@@ -1,12 +1,17 @@
 grammar Lujvo;
 
-lujvo : bobvo | cobvo | dobvo | fobvo | gismu;
+lujvo : bobvo | cobvo | dobvo | fobvo | gobvo | jobvo | kobvo;
 
 bobvo : tworafcon y tailvo ; // tworaf root with bridge to tail
 cobvo : (tworafcon | tworafvow) tailvo? ; // tworaf root with no bridge to tail (if tail)
 dobvo : stump y tailvo ; // fourraf root
 fobvo : rafstump y tailvo ; // rafstump root
-gismu : C (C V | V C) C V ;
+gobvo : (balraf | broraf) q? gismu ; 
+jobvo : bauraf q cagismu ;
+kobvo : bauraf q? ckagismu ;
+gismu : cagismu | ckagismu ;
+cagismu : C V C C V ;
+ckagismu : C C V C V ;
 
 tworafcon : (balraf q? | broraf | bauraf q) balraf ;
 y : Y ;

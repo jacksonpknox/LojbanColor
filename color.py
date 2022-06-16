@@ -24,7 +24,8 @@ class LujvoColorizer(LujvoListener):
 
     def flop(self):
         self.booler = not self.booler
-        self.background = "#552222" if self.booler else "#222255"
+        self.background = "#222222"
+        #self.background = "#442222" if self.booler else "#222244"
         
     def enterY(self, ctx):
         put(ctx, "yellow")
@@ -50,8 +51,12 @@ class LujvoColorizer(LujvoListener):
         self.flop()
         put(ctx, f"#FFC080 on {self.background}")
 
-    def enterGismu(self, ctx):
+    def enterCagismu(self, ctx):
         put(ctx, "#FF0000 on #222222")
+
+    def enterCkagismu(self, ctx):
+        put(ctx, "#FF0000 on #222222")
+
 
 
 def process_lujvo(lujvo: str):
@@ -126,6 +131,9 @@ class Colorizer(ColorListener):
 
     def enterGismu(self, ctx):
         put(ctx, "#FF0000 on #222222")
+
+    def enterCmene(self, ctx):
+        put(ctx, "#FFFF00 on #222222")
 
 
 def main(argv):

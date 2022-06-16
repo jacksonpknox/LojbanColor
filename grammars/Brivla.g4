@@ -10,17 +10,27 @@ gismu : GISMU ;
 WS : (' ' | '\t') -> skip ;
 
 GISMU : GISUM ;
-fragment GISUM : C (C V | V C) C V ;
+fragment GISUM : CAGISMU | CKAGISMU ;
+fragment CAGISMU : C V C C V ;
+fragment CKAGISMU : C C V C V ;
+fragment C : [bcdfgjklmnprstvxz] ;
+fragment V : [aeiou] ;
 
-LUJVO : BOBVO | COBVO | DOBVO | FOBVO ;
+LUJVO : BOBVO | COBVO | DOBVO | FOBVO | GOBVO | JOBVO | KOBVO;
 
+// we split the lujvo in to whatever most elegant small family of disjoint family
+// of sets can be constructed.
+// in this case we are aiming at the structure of the root.
 fragment BOBVO : RAFPAIRCON Y TAILVO ;
 fragment COBVO : (RAFPAIRCON | RAFPAIRVOW) TAILVO? ;
 fragment DOBVO : STUMP Y TAILVO ;
 fragment FOBVO : RAFSTUMP Y TAILVO ;
+fragment GOBVO : (BALRAF | BRORAF) Q? GISMU ;
+// trolling
+fragment JOBVO : BAURAF Q CAGISMU ;
+fragment KOBVO : BAURAF Q? CKAGISMU ;
+// you can think about the ones with no tailvo separately since their lenghts will be finite
 
-fragment C : [bcdfgjklmnprstvxz] ;
-fragment V : [aeiou] ;
 fragment RAFPAIRCON : (BALRAF Q? | BRORAF | BAURAF Q) BALRAF ;
 fragment TAILVO : (BALRAF Y? | STUMP Y | VURAF)* (VURAF | GISUM) ;
 fragment RAFPAIRVOW : (BALRAF | BRORAF | BAURAF) Q? BRORAF

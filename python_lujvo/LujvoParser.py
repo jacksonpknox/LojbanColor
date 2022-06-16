@@ -10,67 +10,81 @@ else:
 
 def serializedATN():
     return [
-        4,1,4,182,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,
+        4,1,4,219,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,
         6,2,7,7,7,2,8,7,8,2,9,7,9,2,10,7,10,2,11,7,11,2,12,7,12,2,13,7,13,
-        2,14,7,14,2,15,7,15,2,16,7,16,2,17,7,17,2,18,7,18,1,0,1,0,1,0,1,
-        0,1,0,3,0,44,8,0,1,1,1,1,1,1,1,1,1,2,1,2,3,2,52,8,2,1,2,3,2,55,8,
-        2,1,3,1,3,1,3,1,3,1,4,1,4,1,4,1,4,1,5,1,5,1,5,1,5,1,5,3,5,70,8,5,
-        1,5,1,5,1,5,1,6,1,6,3,6,77,8,6,1,6,1,6,1,6,1,6,3,6,83,8,6,1,6,1,
-        6,1,7,1,7,1,8,1,8,3,8,91,8,8,1,8,1,8,1,8,1,8,5,8,97,8,8,10,8,12,
-        8,100,9,8,1,8,1,8,3,8,104,8,8,1,9,1,9,1,9,3,9,109,8,9,1,9,3,9,112,
-        8,9,1,9,1,9,1,9,1,9,3,9,118,8,9,1,9,3,9,121,8,9,1,9,1,9,1,9,3,9,
-        126,8,9,1,9,1,9,3,9,130,8,9,1,10,1,10,3,10,134,8,10,1,11,1,11,3,
-        11,138,8,11,1,11,1,11,1,11,1,11,1,11,1,11,1,11,1,11,1,11,3,11,149,
-        8,11,1,12,1,12,1,12,1,12,1,13,1,13,1,14,1,14,1,14,1,14,1,15,1,15,
-        1,15,3,15,164,8,15,1,15,1,15,1,16,1,16,3,16,170,8,16,1,17,1,17,1,
-        17,1,17,1,17,1,18,1,18,1,18,1,18,1,18,1,18,0,0,19,0,2,4,6,8,10,12,
-        14,16,18,20,22,24,26,28,30,32,34,36,0,0,190,0,43,1,0,0,0,2,45,1,
-        0,0,0,4,51,1,0,0,0,6,56,1,0,0,0,8,60,1,0,0,0,10,64,1,0,0,0,12,82,
-        1,0,0,0,14,86,1,0,0,0,16,98,1,0,0,0,18,129,1,0,0,0,20,133,1,0,0,
-        0,22,148,1,0,0,0,24,150,1,0,0,0,26,154,1,0,0,0,28,156,1,0,0,0,30,
-        160,1,0,0,0,32,169,1,0,0,0,34,171,1,0,0,0,36,176,1,0,0,0,38,44,3,
-        2,1,0,39,44,3,4,2,0,40,44,3,6,3,0,41,44,3,8,4,0,42,44,3,10,5,0,43,
-        38,1,0,0,0,43,39,1,0,0,0,43,40,1,0,0,0,43,41,1,0,0,0,43,42,1,0,0,
-        0,44,1,1,0,0,0,45,46,3,12,6,0,46,47,3,14,7,0,47,48,3,16,8,0,48,3,
-        1,0,0,0,49,52,3,12,6,0,50,52,3,18,9,0,51,49,1,0,0,0,51,50,1,0,0,
-        0,52,54,1,0,0,0,53,55,3,16,8,0,54,53,1,0,0,0,54,55,1,0,0,0,55,5,
-        1,0,0,0,56,57,3,20,10,0,57,58,3,14,7,0,58,59,3,16,8,0,59,7,1,0,0,
-        0,60,61,3,22,11,0,61,62,3,14,7,0,62,63,3,16,8,0,63,9,1,0,0,0,64,
-        69,5,3,0,0,65,66,5,3,0,0,66,70,5,4,0,0,67,68,5,4,0,0,68,70,5,3,0,
-        0,69,65,1,0,0,0,69,67,1,0,0,0,70,71,1,0,0,0,71,72,5,3,0,0,72,73,
-        5,4,0,0,73,11,1,0,0,0,74,76,3,24,12,0,75,77,3,26,13,0,76,75,1,0,
-        0,0,76,77,1,0,0,0,77,83,1,0,0,0,78,83,3,28,14,0,79,80,3,30,15,0,
-        80,81,3,26,13,0,81,83,1,0,0,0,82,74,1,0,0,0,82,78,1,0,0,0,82,79,
-        1,0,0,0,83,84,1,0,0,0,84,85,3,24,12,0,85,13,1,0,0,0,86,87,5,2,0,
-        0,87,15,1,0,0,0,88,90,3,24,12,0,89,91,3,14,7,0,90,89,1,0,0,0,90,
-        91,1,0,0,0,91,97,1,0,0,0,92,93,3,20,10,0,93,94,3,14,7,0,94,97,1,
-        0,0,0,95,97,3,32,16,0,96,88,1,0,0,0,96,92,1,0,0,0,96,95,1,0,0,0,
-        97,100,1,0,0,0,98,96,1,0,0,0,98,99,1,0,0,0,99,103,1,0,0,0,100,98,
-        1,0,0,0,101,104,3,32,16,0,102,104,3,10,5,0,103,101,1,0,0,0,103,102,
-        1,0,0,0,104,17,1,0,0,0,105,109,3,24,12,0,106,109,3,28,14,0,107,109,
-        3,30,15,0,108,105,1,0,0,0,108,106,1,0,0,0,108,107,1,0,0,0,109,111,
-        1,0,0,0,110,112,3,26,13,0,111,110,1,0,0,0,111,112,1,0,0,0,112,113,
-        1,0,0,0,113,114,3,28,14,0,114,130,1,0,0,0,115,118,3,24,12,0,116,
-        118,3,28,14,0,117,115,1,0,0,0,117,116,1,0,0,0,118,120,1,0,0,0,119,
-        121,3,26,13,0,120,119,1,0,0,0,120,121,1,0,0,0,121,126,1,0,0,0,122,
-        123,3,30,15,0,123,124,3,26,13,0,124,126,1,0,0,0,125,117,1,0,0,0,
-        125,122,1,0,0,0,126,127,1,0,0,0,127,128,3,30,15,0,128,130,1,0,0,
-        0,129,108,1,0,0,0,129,125,1,0,0,0,130,19,1,0,0,0,131,134,3,34,17,
-        0,132,134,3,36,18,0,133,131,1,0,0,0,133,132,1,0,0,0,134,21,1,0,0,
-        0,135,137,3,24,12,0,136,138,3,26,13,0,137,136,1,0,0,0,137,138,1,
-        0,0,0,138,139,1,0,0,0,139,140,3,20,10,0,140,149,1,0,0,0,141,142,
-        3,32,16,0,142,143,3,26,13,0,143,144,3,34,17,0,144,149,1,0,0,0,145,
-        146,3,32,16,0,146,147,3,36,18,0,147,149,1,0,0,0,148,135,1,0,0,0,
-        148,141,1,0,0,0,148,145,1,0,0,0,149,23,1,0,0,0,150,151,5,3,0,0,151,
-        152,5,4,0,0,152,153,5,3,0,0,153,25,1,0,0,0,154,155,5,3,0,0,155,27,
-        1,0,0,0,156,157,5,3,0,0,157,158,5,3,0,0,158,159,5,4,0,0,159,29,1,
-        0,0,0,160,161,5,3,0,0,161,163,5,4,0,0,162,164,5,1,0,0,163,162,1,
-        0,0,0,163,164,1,0,0,0,164,165,1,0,0,0,165,166,5,4,0,0,166,31,1,0,
-        0,0,167,170,3,30,15,0,168,170,3,28,14,0,169,167,1,0,0,0,169,168,
-        1,0,0,0,170,33,1,0,0,0,171,172,5,3,0,0,172,173,5,4,0,0,173,174,5,
-        3,0,0,174,175,5,3,0,0,175,35,1,0,0,0,176,177,5,3,0,0,177,178,5,3,
-        0,0,178,179,5,4,0,0,179,180,5,3,0,0,180,37,1,0,0,0,21,43,51,54,69,
-        76,82,90,96,98,103,108,111,117,120,125,129,133,137,148,163,169
+        2,14,7,14,2,15,7,15,2,16,7,16,2,17,7,17,2,18,7,18,2,19,7,19,2,20,
+        7,20,2,21,7,21,2,22,7,22,2,23,7,23,1,0,1,0,1,0,1,0,1,0,1,0,1,0,3,
+        0,56,8,0,1,1,1,1,1,1,1,1,1,2,1,2,3,2,64,8,2,1,2,3,2,67,8,2,1,3,1,
+        3,1,3,1,3,1,4,1,4,1,4,1,4,1,5,1,5,3,5,79,8,5,1,5,3,5,82,8,5,1,5,
+        1,5,1,6,1,6,1,6,1,6,1,7,1,7,3,7,92,8,7,1,7,1,7,1,8,1,8,3,8,98,8,
+        8,1,9,1,9,1,9,1,9,1,9,1,9,1,10,1,10,1,10,1,10,1,10,1,10,1,11,1,11,
+        3,11,114,8,11,1,11,1,11,1,11,1,11,3,11,120,8,11,1,11,1,11,1,12,1,
+        12,1,13,1,13,3,13,128,8,13,1,13,1,13,1,13,1,13,5,13,134,8,13,10,
+        13,12,13,137,9,13,1,13,1,13,3,13,141,8,13,1,14,1,14,1,14,3,14,146,
+        8,14,1,14,3,14,149,8,14,1,14,1,14,1,14,1,14,3,14,155,8,14,1,14,3,
+        14,158,8,14,1,14,1,14,1,14,3,14,163,8,14,1,14,1,14,3,14,167,8,14,
+        1,15,1,15,3,15,171,8,15,1,16,1,16,3,16,175,8,16,1,16,1,16,1,16,1,
+        16,1,16,1,16,1,16,1,16,1,16,3,16,186,8,16,1,17,1,17,1,17,1,17,1,
+        18,1,18,1,19,1,19,1,19,1,19,1,20,1,20,1,20,3,20,201,8,20,1,20,1,
+        20,1,21,1,21,3,21,207,8,21,1,22,1,22,1,22,1,22,1,22,1,23,1,23,1,
+        23,1,23,1,23,1,23,0,0,24,0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,
+        30,32,34,36,38,40,42,44,46,0,0,227,0,55,1,0,0,0,2,57,1,0,0,0,4,63,
+        1,0,0,0,6,68,1,0,0,0,8,72,1,0,0,0,10,78,1,0,0,0,12,85,1,0,0,0,14,
+        89,1,0,0,0,16,97,1,0,0,0,18,99,1,0,0,0,20,105,1,0,0,0,22,119,1,0,
+        0,0,24,123,1,0,0,0,26,135,1,0,0,0,28,166,1,0,0,0,30,170,1,0,0,0,
+        32,185,1,0,0,0,34,187,1,0,0,0,36,191,1,0,0,0,38,193,1,0,0,0,40,197,
+        1,0,0,0,42,206,1,0,0,0,44,208,1,0,0,0,46,213,1,0,0,0,48,56,3,2,1,
+        0,49,56,3,4,2,0,50,56,3,6,3,0,51,56,3,8,4,0,52,56,3,10,5,0,53,56,
+        3,12,6,0,54,56,3,14,7,0,55,48,1,0,0,0,55,49,1,0,0,0,55,50,1,0,0,
+        0,55,51,1,0,0,0,55,52,1,0,0,0,55,53,1,0,0,0,55,54,1,0,0,0,56,1,1,
+        0,0,0,57,58,3,22,11,0,58,59,3,24,12,0,59,60,3,26,13,0,60,3,1,0,0,
+        0,61,64,3,22,11,0,62,64,3,28,14,0,63,61,1,0,0,0,63,62,1,0,0,0,64,
+        66,1,0,0,0,65,67,3,26,13,0,66,65,1,0,0,0,66,67,1,0,0,0,67,5,1,0,
+        0,0,68,69,3,30,15,0,69,70,3,24,12,0,70,71,3,26,13,0,71,7,1,0,0,0,
+        72,73,3,32,16,0,73,74,3,24,12,0,74,75,3,26,13,0,75,9,1,0,0,0,76,
+        79,3,34,17,0,77,79,3,38,19,0,78,76,1,0,0,0,78,77,1,0,0,0,79,81,1,
+        0,0,0,80,82,3,36,18,0,81,80,1,0,0,0,81,82,1,0,0,0,82,83,1,0,0,0,
+        83,84,3,16,8,0,84,11,1,0,0,0,85,86,3,40,20,0,86,87,3,36,18,0,87,
+        88,3,18,9,0,88,13,1,0,0,0,89,91,3,40,20,0,90,92,3,36,18,0,91,90,
+        1,0,0,0,91,92,1,0,0,0,92,93,1,0,0,0,93,94,3,20,10,0,94,15,1,0,0,
+        0,95,98,3,18,9,0,96,98,3,20,10,0,97,95,1,0,0,0,97,96,1,0,0,0,98,
+        17,1,0,0,0,99,100,5,3,0,0,100,101,5,4,0,0,101,102,5,3,0,0,102,103,
+        5,3,0,0,103,104,5,4,0,0,104,19,1,0,0,0,105,106,5,3,0,0,106,107,5,
+        3,0,0,107,108,5,4,0,0,108,109,5,3,0,0,109,110,5,4,0,0,110,21,1,0,
+        0,0,111,113,3,34,17,0,112,114,3,36,18,0,113,112,1,0,0,0,113,114,
+        1,0,0,0,114,120,1,0,0,0,115,120,3,38,19,0,116,117,3,40,20,0,117,
+        118,3,36,18,0,118,120,1,0,0,0,119,111,1,0,0,0,119,115,1,0,0,0,119,
+        116,1,0,0,0,120,121,1,0,0,0,121,122,3,34,17,0,122,23,1,0,0,0,123,
+        124,5,2,0,0,124,25,1,0,0,0,125,127,3,34,17,0,126,128,3,24,12,0,127,
+        126,1,0,0,0,127,128,1,0,0,0,128,134,1,0,0,0,129,130,3,30,15,0,130,
+        131,3,24,12,0,131,134,1,0,0,0,132,134,3,42,21,0,133,125,1,0,0,0,
+        133,129,1,0,0,0,133,132,1,0,0,0,134,137,1,0,0,0,135,133,1,0,0,0,
+        135,136,1,0,0,0,136,140,1,0,0,0,137,135,1,0,0,0,138,141,3,42,21,
+        0,139,141,3,16,8,0,140,138,1,0,0,0,140,139,1,0,0,0,141,27,1,0,0,
+        0,142,146,3,34,17,0,143,146,3,38,19,0,144,146,3,40,20,0,145,142,
+        1,0,0,0,145,143,1,0,0,0,145,144,1,0,0,0,146,148,1,0,0,0,147,149,
+        3,36,18,0,148,147,1,0,0,0,148,149,1,0,0,0,149,150,1,0,0,0,150,151,
+        3,38,19,0,151,167,1,0,0,0,152,155,3,34,17,0,153,155,3,38,19,0,154,
+        152,1,0,0,0,154,153,1,0,0,0,155,157,1,0,0,0,156,158,3,36,18,0,157,
+        156,1,0,0,0,157,158,1,0,0,0,158,163,1,0,0,0,159,160,3,40,20,0,160,
+        161,3,36,18,0,161,163,1,0,0,0,162,154,1,0,0,0,162,159,1,0,0,0,163,
+        164,1,0,0,0,164,165,3,40,20,0,165,167,1,0,0,0,166,145,1,0,0,0,166,
+        162,1,0,0,0,167,29,1,0,0,0,168,171,3,44,22,0,169,171,3,46,23,0,170,
+        168,1,0,0,0,170,169,1,0,0,0,171,31,1,0,0,0,172,174,3,34,17,0,173,
+        175,3,36,18,0,174,173,1,0,0,0,174,175,1,0,0,0,175,176,1,0,0,0,176,
+        177,3,30,15,0,177,186,1,0,0,0,178,179,3,42,21,0,179,180,3,36,18,
+        0,180,181,3,44,22,0,181,186,1,0,0,0,182,183,3,42,21,0,183,184,3,
+        46,23,0,184,186,1,0,0,0,185,172,1,0,0,0,185,178,1,0,0,0,185,182,
+        1,0,0,0,186,33,1,0,0,0,187,188,5,3,0,0,188,189,5,4,0,0,189,190,5,
+        3,0,0,190,35,1,0,0,0,191,192,5,3,0,0,192,37,1,0,0,0,193,194,5,3,
+        0,0,194,195,5,3,0,0,195,196,5,4,0,0,196,39,1,0,0,0,197,198,5,3,0,
+        0,198,200,5,4,0,0,199,201,5,1,0,0,200,199,1,0,0,0,200,201,1,0,0,
+        0,201,202,1,0,0,0,202,203,5,4,0,0,203,41,1,0,0,0,204,207,3,40,20,
+        0,205,207,3,38,19,0,206,204,1,0,0,0,206,205,1,0,0,0,207,43,1,0,0,
+        0,208,209,5,3,0,0,209,210,5,4,0,0,210,211,5,3,0,0,211,212,5,3,0,
+        0,212,45,1,0,0,0,213,214,5,3,0,0,214,215,5,3,0,0,215,216,5,4,0,0,
+        216,217,5,3,0,0,217,47,1,0,0,0,24,55,63,66,78,81,91,97,113,119,127,
+        133,135,140,145,148,154,157,162,166,170,174,185,200,206
     ]
 
 class LujvoParser ( Parser ):
@@ -92,25 +106,30 @@ class LujvoParser ( Parser ):
     RULE_cobvo = 2
     RULE_dobvo = 3
     RULE_fobvo = 4
-    RULE_gismu = 5
-    RULE_tworafcon = 6
-    RULE_y = 7
-    RULE_tailvo = 8
-    RULE_tworafvow = 9
-    RULE_stump = 10
-    RULE_rafstump = 11
-    RULE_balraf = 12
-    RULE_q = 13
-    RULE_broraf = 14
-    RULE_bauraf = 15
-    RULE_vuraf = 16
-    RULE_cafourraf = 17
-    RULE_ckfourraf = 18
+    RULE_gobvo = 5
+    RULE_jobvo = 6
+    RULE_kobvo = 7
+    RULE_gismu = 8
+    RULE_cagismu = 9
+    RULE_ckagismu = 10
+    RULE_tworafcon = 11
+    RULE_y = 12
+    RULE_tailvo = 13
+    RULE_tworafvow = 14
+    RULE_stump = 15
+    RULE_rafstump = 16
+    RULE_balraf = 17
+    RULE_q = 18
+    RULE_broraf = 19
+    RULE_bauraf = 20
+    RULE_vuraf = 21
+    RULE_cafourraf = 22
+    RULE_ckfourraf = 23
 
-    ruleNames =  [ "lujvo", "bobvo", "cobvo", "dobvo", "fobvo", "gismu", 
-                   "tworafcon", "y", "tailvo", "tworafvow", "stump", "rafstump", 
-                   "balraf", "q", "broraf", "bauraf", "vuraf", "cafourraf", 
-                   "ckfourraf" ]
+    ruleNames =  [ "lujvo", "bobvo", "cobvo", "dobvo", "fobvo", "gobvo", 
+                   "jobvo", "kobvo", "gismu", "cagismu", "ckagismu", "tworafcon", 
+                   "y", "tailvo", "tworafvow", "stump", "rafstump", "balraf", 
+                   "q", "broraf", "bauraf", "vuraf", "cafourraf", "ckfourraf" ]
 
     EOF = Token.EOF
     T__0=1
@@ -150,8 +169,16 @@ class LujvoParser ( Parser ):
             return self.getTypedRuleContext(LujvoParser.FobvoContext,0)
 
 
-        def gismu(self):
-            return self.getTypedRuleContext(LujvoParser.GismuContext,0)
+        def gobvo(self):
+            return self.getTypedRuleContext(LujvoParser.GobvoContext,0)
+
+
+        def jobvo(self):
+            return self.getTypedRuleContext(LujvoParser.JobvoContext,0)
+
+
+        def kobvo(self):
+            return self.getTypedRuleContext(LujvoParser.KobvoContext,0)
 
 
         def getRuleIndex(self):
@@ -173,37 +200,49 @@ class LujvoParser ( Parser ):
         localctx = LujvoParser.LujvoContext(self, self._ctx, self.state)
         self.enterRule(localctx, 0, self.RULE_lujvo)
         try:
-            self.state = 43
+            self.state = 55
             self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,0,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 38
+                self.state = 48
                 self.bobvo()
                 pass
 
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 39
+                self.state = 49
                 self.cobvo()
                 pass
 
             elif la_ == 3:
                 self.enterOuterAlt(localctx, 3)
-                self.state = 40
+                self.state = 50
                 self.dobvo()
                 pass
 
             elif la_ == 4:
                 self.enterOuterAlt(localctx, 4)
-                self.state = 41
+                self.state = 51
                 self.fobvo()
                 pass
 
             elif la_ == 5:
                 self.enterOuterAlt(localctx, 5)
-                self.state = 42
-                self.gismu()
+                self.state = 52
+                self.gobvo()
+                pass
+
+            elif la_ == 6:
+                self.enterOuterAlt(localctx, 6)
+                self.state = 53
+                self.jobvo()
+                pass
+
+            elif la_ == 7:
+                self.enterOuterAlt(localctx, 7)
+                self.state = 54
+                self.kobvo()
                 pass
 
 
@@ -255,11 +294,11 @@ class LujvoParser ( Parser ):
         self.enterRule(localctx, 2, self.RULE_bobvo)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 45
+            self.state = 57
             self.tworafcon()
-            self.state = 46
+            self.state = 58
             self.y()
-            self.state = 47
+            self.state = 59
             self.tailvo()
         except RecognitionException as re:
             localctx.exception = re
@@ -310,25 +349,25 @@ class LujvoParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 51
+            self.state = 63
             self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,1,self._ctx)
             if la_ == 1:
-                self.state = 49
+                self.state = 61
                 self.tworafcon()
                 pass
 
             elif la_ == 2:
-                self.state = 50
+                self.state = 62
                 self.tworafvow()
                 pass
 
 
-            self.state = 54
+            self.state = 66
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if _la==LujvoParser.C:
-                self.state = 53
+                self.state = 65
                 self.tailvo()
 
 
@@ -380,11 +419,11 @@ class LujvoParser ( Parser ):
         self.enterRule(localctx, 6, self.RULE_dobvo)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 56
+            self.state = 68
             self.stump()
-            self.state = 57
+            self.state = 69
             self.y()
-            self.state = 58
+            self.state = 70
             self.tailvo()
         except RecognitionException as re:
             localctx.exception = re
@@ -434,11 +473,11 @@ class LujvoParser ( Parser ):
         self.enterRule(localctx, 8, self.RULE_fobvo)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 60
+            self.state = 72
             self.rafstump()
-            self.state = 61
+            self.state = 73
             self.y()
-            self.state = 62
+            self.state = 74
             self.tailvo()
         except RecognitionException as re:
             localctx.exception = re
@@ -449,7 +488,256 @@ class LujvoParser ( Parser ):
         return localctx
 
 
+    class GobvoContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def gismu(self):
+            return self.getTypedRuleContext(LujvoParser.GismuContext,0)
+
+
+        def balraf(self):
+            return self.getTypedRuleContext(LujvoParser.BalrafContext,0)
+
+
+        def broraf(self):
+            return self.getTypedRuleContext(LujvoParser.BrorafContext,0)
+
+
+        def q(self):
+            return self.getTypedRuleContext(LujvoParser.QContext,0)
+
+
+        def getRuleIndex(self):
+            return LujvoParser.RULE_gobvo
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterGobvo" ):
+                listener.enterGobvo(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitGobvo" ):
+                listener.exitGobvo(self)
+
+
+
+
+    def gobvo(self):
+
+        localctx = LujvoParser.GobvoContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 10, self.RULE_gobvo)
+        try:
+            self.enterOuterAlt(localctx, 1)
+            self.state = 78
+            self._errHandler.sync(self)
+            la_ = self._interp.adaptivePredict(self._input,3,self._ctx)
+            if la_ == 1:
+                self.state = 76
+                self.balraf()
+                pass
+
+            elif la_ == 2:
+                self.state = 77
+                self.broraf()
+                pass
+
+
+            self.state = 81
+            self._errHandler.sync(self)
+            la_ = self._interp.adaptivePredict(self._input,4,self._ctx)
+            if la_ == 1:
+                self.state = 80
+                self.q()
+
+
+            self.state = 83
+            self.gismu()
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
+    class JobvoContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def bauraf(self):
+            return self.getTypedRuleContext(LujvoParser.BaurafContext,0)
+
+
+        def q(self):
+            return self.getTypedRuleContext(LujvoParser.QContext,0)
+
+
+        def cagismu(self):
+            return self.getTypedRuleContext(LujvoParser.CagismuContext,0)
+
+
+        def getRuleIndex(self):
+            return LujvoParser.RULE_jobvo
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterJobvo" ):
+                listener.enterJobvo(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitJobvo" ):
+                listener.exitJobvo(self)
+
+
+
+
+    def jobvo(self):
+
+        localctx = LujvoParser.JobvoContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 12, self.RULE_jobvo)
+        try:
+            self.enterOuterAlt(localctx, 1)
+            self.state = 85
+            self.bauraf()
+            self.state = 86
+            self.q()
+            self.state = 87
+            self.cagismu()
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
+    class KobvoContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def bauraf(self):
+            return self.getTypedRuleContext(LujvoParser.BaurafContext,0)
+
+
+        def ckagismu(self):
+            return self.getTypedRuleContext(LujvoParser.CkagismuContext,0)
+
+
+        def q(self):
+            return self.getTypedRuleContext(LujvoParser.QContext,0)
+
+
+        def getRuleIndex(self):
+            return LujvoParser.RULE_kobvo
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterKobvo" ):
+                listener.enterKobvo(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitKobvo" ):
+                listener.exitKobvo(self)
+
+
+
+
+    def kobvo(self):
+
+        localctx = LujvoParser.KobvoContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 14, self.RULE_kobvo)
+        try:
+            self.enterOuterAlt(localctx, 1)
+            self.state = 89
+            self.bauraf()
+            self.state = 91
+            self._errHandler.sync(self)
+            la_ = self._interp.adaptivePredict(self._input,5,self._ctx)
+            if la_ == 1:
+                self.state = 90
+                self.q()
+
+
+            self.state = 93
+            self.ckagismu()
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
     class GismuContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def cagismu(self):
+            return self.getTypedRuleContext(LujvoParser.CagismuContext,0)
+
+
+        def ckagismu(self):
+            return self.getTypedRuleContext(LujvoParser.CkagismuContext,0)
+
+
+        def getRuleIndex(self):
+            return LujvoParser.RULE_gismu
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterGismu" ):
+                listener.enterGismu(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitGismu" ):
+                listener.exitGismu(self)
+
+
+
+
+    def gismu(self):
+
+        localctx = LujvoParser.GismuContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 16, self.RULE_gismu)
+        try:
+            self.state = 97
+            self._errHandler.sync(self)
+            la_ = self._interp.adaptivePredict(self._input,6,self._ctx)
+            if la_ == 1:
+                self.enterOuterAlt(localctx, 1)
+                self.state = 95
+                self.cagismu()
+                pass
+
+            elif la_ == 2:
+                self.enterOuterAlt(localctx, 2)
+                self.state = 96
+                self.ckagismu()
+                pass
+
+
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
+    class CagismuContext(ParserRuleContext):
         __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
@@ -469,48 +757,92 @@ class LujvoParser ( Parser ):
                 return self.getToken(LujvoParser.V, i)
 
         def getRuleIndex(self):
-            return LujvoParser.RULE_gismu
+            return LujvoParser.RULE_cagismu
 
         def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterGismu" ):
-                listener.enterGismu(self)
+            if hasattr( listener, "enterCagismu" ):
+                listener.enterCagismu(self)
 
         def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitGismu" ):
-                listener.exitGismu(self)
+            if hasattr( listener, "exitCagismu" ):
+                listener.exitCagismu(self)
 
 
 
 
-    def gismu(self):
+    def cagismu(self):
 
-        localctx = LujvoParser.GismuContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 10, self.RULE_gismu)
+        localctx = LujvoParser.CagismuContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 18, self.RULE_cagismu)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 64
+            self.state = 99
             self.match(LujvoParser.C)
-            self.state = 69
-            self._errHandler.sync(self)
-            token = self._input.LA(1)
-            if token in [LujvoParser.C]:
-                self.state = 65
-                self.match(LujvoParser.C)
-                self.state = 66
-                self.match(LujvoParser.V)
-                pass
-            elif token in [LujvoParser.V]:
-                self.state = 67
-                self.match(LujvoParser.V)
-                self.state = 68
-                self.match(LujvoParser.C)
-                pass
-            else:
-                raise NoViableAltException(self)
+            self.state = 100
+            self.match(LujvoParser.V)
+            self.state = 101
+            self.match(LujvoParser.C)
+            self.state = 102
+            self.match(LujvoParser.C)
+            self.state = 103
+            self.match(LujvoParser.V)
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
 
-            self.state = 71
+
+    class CkagismuContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def C(self, i:int=None):
+            if i is None:
+                return self.getTokens(LujvoParser.C)
+            else:
+                return self.getToken(LujvoParser.C, i)
+
+        def V(self, i:int=None):
+            if i is None:
+                return self.getTokens(LujvoParser.V)
+            else:
+                return self.getToken(LujvoParser.V, i)
+
+        def getRuleIndex(self):
+            return LujvoParser.RULE_ckagismu
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterCkagismu" ):
+                listener.enterCkagismu(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitCkagismu" ):
+                listener.exitCkagismu(self)
+
+
+
+
+    def ckagismu(self):
+
+        localctx = LujvoParser.CkagismuContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 20, self.RULE_ckagismu)
+        try:
+            self.enterOuterAlt(localctx, 1)
+            self.state = 105
             self.match(LujvoParser.C)
-            self.state = 72
+            self.state = 106
+            self.match(LujvoParser.C)
+            self.state = 107
+            self.match(LujvoParser.V)
+            self.state = 108
+            self.match(LujvoParser.C)
+            self.state = 109
             self.match(LujvoParser.V)
         except RecognitionException as re:
             localctx.exception = re
@@ -564,39 +896,39 @@ class LujvoParser ( Parser ):
     def tworafcon(self):
 
         localctx = LujvoParser.TworafconContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 12, self.RULE_tworafcon)
+        self.enterRule(localctx, 22, self.RULE_tworafcon)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 82
+            self.state = 119
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,5,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input,8,self._ctx)
             if la_ == 1:
-                self.state = 74
+                self.state = 111
                 self.balraf()
-                self.state = 76
+                self.state = 113
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,4,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input,7,self._ctx)
                 if la_ == 1:
-                    self.state = 75
+                    self.state = 112
                     self.q()
 
 
                 pass
 
             elif la_ == 2:
-                self.state = 78
+                self.state = 115
                 self.broraf()
                 pass
 
             elif la_ == 3:
-                self.state = 79
+                self.state = 116
                 self.bauraf()
-                self.state = 80
+                self.state = 117
                 self.q()
                 pass
 
 
-            self.state = 84
+            self.state = 121
             self.balraf()
         except RecognitionException as re:
             localctx.exception = re
@@ -634,10 +966,10 @@ class LujvoParser ( Parser ):
     def y(self):
 
         localctx = LujvoParser.YContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 14, self.RULE_y)
+        self.enterRule(localctx, 24, self.RULE_y)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 86
+            self.state = 123
             self.match(LujvoParser.Y)
         except RecognitionException as re:
             localctx.exception = re
@@ -704,58 +1036,58 @@ class LujvoParser ( Parser ):
     def tailvo(self):
 
         localctx = LujvoParser.TailvoContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 16, self.RULE_tailvo)
+        self.enterRule(localctx, 26, self.RULE_tailvo)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 98
+            self.state = 135
             self._errHandler.sync(self)
-            _alt = self._interp.adaptivePredict(self._input,8,self._ctx)
+            _alt = self._interp.adaptivePredict(self._input,11,self._ctx)
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                 if _alt==1:
-                    self.state = 96
+                    self.state = 133
                     self._errHandler.sync(self)
-                    la_ = self._interp.adaptivePredict(self._input,7,self._ctx)
+                    la_ = self._interp.adaptivePredict(self._input,10,self._ctx)
                     if la_ == 1:
-                        self.state = 88
+                        self.state = 125
                         self.balraf()
-                        self.state = 90
+                        self.state = 127
                         self._errHandler.sync(self)
                         _la = self._input.LA(1)
                         if _la==LujvoParser.Y:
-                            self.state = 89
+                            self.state = 126
                             self.y()
 
 
                         pass
 
                     elif la_ == 2:
-                        self.state = 92
+                        self.state = 129
                         self.stump()
-                        self.state = 93
+                        self.state = 130
                         self.y()
                         pass
 
                     elif la_ == 3:
-                        self.state = 95
+                        self.state = 132
                         self.vuraf()
                         pass
 
              
-                self.state = 100
+                self.state = 137
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,8,self._ctx)
+                _alt = self._interp.adaptivePredict(self._input,11,self._ctx)
 
-            self.state = 103
+            self.state = 140
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,9,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input,12,self._ctx)
             if la_ == 1:
-                self.state = 101
+                self.state = 138
                 self.vuraf()
                 pass
 
             elif la_ == 2:
-                self.state = 102
+                self.state = 139
                 self.gismu()
                 pass
 
@@ -815,83 +1147,83 @@ class LujvoParser ( Parser ):
     def tworafvow(self):
 
         localctx = LujvoParser.TworafvowContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 18, self.RULE_tworafvow)
+        self.enterRule(localctx, 28, self.RULE_tworafvow)
         try:
-            self.state = 129
+            self.state = 166
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,15,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input,18,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 108
+                self.state = 145
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,10,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input,13,self._ctx)
                 if la_ == 1:
-                    self.state = 105
+                    self.state = 142
                     self.balraf()
                     pass
 
                 elif la_ == 2:
-                    self.state = 106
+                    self.state = 143
                     self.broraf()
                     pass
 
                 elif la_ == 3:
-                    self.state = 107
+                    self.state = 144
                     self.bauraf()
                     pass
 
 
-                self.state = 111
+                self.state = 148
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,11,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input,14,self._ctx)
                 if la_ == 1:
-                    self.state = 110
+                    self.state = 147
                     self.q()
 
 
-                self.state = 113
+                self.state = 150
                 self.broraf()
                 pass
 
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 125
+                self.state = 162
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,14,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input,17,self._ctx)
                 if la_ == 1:
-                    self.state = 117
+                    self.state = 154
                     self._errHandler.sync(self)
-                    la_ = self._interp.adaptivePredict(self._input,12,self._ctx)
+                    la_ = self._interp.adaptivePredict(self._input,15,self._ctx)
                     if la_ == 1:
-                        self.state = 115
+                        self.state = 152
                         self.balraf()
                         pass
 
                     elif la_ == 2:
-                        self.state = 116
+                        self.state = 153
                         self.broraf()
                         pass
 
 
-                    self.state = 120
+                    self.state = 157
                     self._errHandler.sync(self)
-                    la_ = self._interp.adaptivePredict(self._input,13,self._ctx)
+                    la_ = self._interp.adaptivePredict(self._input,16,self._ctx)
                     if la_ == 1:
-                        self.state = 119
+                        self.state = 156
                         self.q()
 
 
                     pass
 
                 elif la_ == 2:
-                    self.state = 122
+                    self.state = 159
                     self.bauraf()
-                    self.state = 123
+                    self.state = 160
                     self.q()
                     pass
 
 
-                self.state = 127
+                self.state = 164
                 self.bauraf()
                 pass
 
@@ -937,20 +1269,20 @@ class LujvoParser ( Parser ):
     def stump(self):
 
         localctx = LujvoParser.StumpContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 20, self.RULE_stump)
+        self.enterRule(localctx, 30, self.RULE_stump)
         try:
-            self.state = 133
+            self.state = 170
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,16,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input,19,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 131
+                self.state = 168
                 self.cafourraf()
                 pass
 
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 132
+                self.state = 169
                 self.ckfourraf()
                 pass
 
@@ -1012,42 +1344,42 @@ class LujvoParser ( Parser ):
     def rafstump(self):
 
         localctx = LujvoParser.RafstumpContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 22, self.RULE_rafstump)
+        self.enterRule(localctx, 32, self.RULE_rafstump)
         try:
-            self.state = 148
+            self.state = 185
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,18,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input,21,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 135
+                self.state = 172
                 self.balraf()
-                self.state = 137
+                self.state = 174
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,17,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input,20,self._ctx)
                 if la_ == 1:
-                    self.state = 136
+                    self.state = 173
                     self.q()
 
 
-                self.state = 139
+                self.state = 176
                 self.stump()
                 pass
 
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 141
+                self.state = 178
                 self.vuraf()
-                self.state = 142
+                self.state = 179
                 self.q()
-                self.state = 143
+                self.state = 180
                 self.cafourraf()
                 pass
 
             elif la_ == 3:
                 self.enterOuterAlt(localctx, 3)
-                self.state = 145
+                self.state = 182
                 self.vuraf()
-                self.state = 146
+                self.state = 183
                 self.ckfourraf()
                 pass
 
@@ -1094,14 +1426,14 @@ class LujvoParser ( Parser ):
     def balraf(self):
 
         localctx = LujvoParser.BalrafContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 24, self.RULE_balraf)
+        self.enterRule(localctx, 34, self.RULE_balraf)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 150
+            self.state = 187
             self.match(LujvoParser.C)
-            self.state = 151
+            self.state = 188
             self.match(LujvoParser.V)
-            self.state = 152
+            self.state = 189
             self.match(LujvoParser.C)
         except RecognitionException as re:
             localctx.exception = re
@@ -1139,10 +1471,10 @@ class LujvoParser ( Parser ):
     def q(self):
 
         localctx = LujvoParser.QContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 26, self.RULE_q)
+        self.enterRule(localctx, 36, self.RULE_q)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 154
+            self.state = 191
             self.match(LujvoParser.C)
         except RecognitionException as re:
             localctx.exception = re
@@ -1186,14 +1518,14 @@ class LujvoParser ( Parser ):
     def broraf(self):
 
         localctx = LujvoParser.BrorafContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 28, self.RULE_broraf)
+        self.enterRule(localctx, 38, self.RULE_broraf)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 156
+            self.state = 193
             self.match(LujvoParser.C)
-            self.state = 157
+            self.state = 194
             self.match(LujvoParser.C)
-            self.state = 158
+            self.state = 195
             self.match(LujvoParser.V)
         except RecognitionException as re:
             localctx.exception = re
@@ -1237,23 +1569,23 @@ class LujvoParser ( Parser ):
     def bauraf(self):
 
         localctx = LujvoParser.BaurafContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 30, self.RULE_bauraf)
+        self.enterRule(localctx, 40, self.RULE_bauraf)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 160
+            self.state = 197
             self.match(LujvoParser.C)
-            self.state = 161
+            self.state = 198
             self.match(LujvoParser.V)
-            self.state = 163
+            self.state = 200
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if _la==LujvoParser.T__0:
-                self.state = 162
+                self.state = 199
                 self.match(LujvoParser.T__0)
 
 
-            self.state = 165
+            self.state = 202
             self.match(LujvoParser.V)
         except RecognitionException as re:
             localctx.exception = re
@@ -1296,20 +1628,20 @@ class LujvoParser ( Parser ):
     def vuraf(self):
 
         localctx = LujvoParser.VurafContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 32, self.RULE_vuraf)
+        self.enterRule(localctx, 42, self.RULE_vuraf)
         try:
-            self.state = 169
+            self.state = 206
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,20,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input,23,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 167
+                self.state = 204
                 self.bauraf()
                 pass
 
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 168
+                self.state = 205
                 self.broraf()
                 pass
 
@@ -1356,16 +1688,16 @@ class LujvoParser ( Parser ):
     def cafourraf(self):
 
         localctx = LujvoParser.CafourrafContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 34, self.RULE_cafourraf)
+        self.enterRule(localctx, 44, self.RULE_cafourraf)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 171
+            self.state = 208
             self.match(LujvoParser.C)
-            self.state = 172
+            self.state = 209
             self.match(LujvoParser.V)
-            self.state = 173
+            self.state = 210
             self.match(LujvoParser.C)
-            self.state = 174
+            self.state = 211
             self.match(LujvoParser.C)
         except RecognitionException as re:
             localctx.exception = re
@@ -1409,16 +1741,16 @@ class LujvoParser ( Parser ):
     def ckfourraf(self):
 
         localctx = LujvoParser.CkfourrafContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 36, self.RULE_ckfourraf)
+        self.enterRule(localctx, 46, self.RULE_ckfourraf)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 176
+            self.state = 213
             self.match(LujvoParser.C)
-            self.state = 177
+            self.state = 214
             self.match(LujvoParser.C)
-            self.state = 178
+            self.state = 215
             self.match(LujvoParser.V)
-            self.state = 179
+            self.state = 216
             self.match(LujvoParser.C)
         except RecognitionException as re:
             localctx.exception = re

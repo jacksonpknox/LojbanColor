@@ -35,6 +35,15 @@ class ColorListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by ColorParser#cmene.
+    def enterCmene(self, ctx:ColorParser.CmeneContext):
+        pass
+
+    # Exit a parse tree produced by ColorParser#cmene.
+    def exitCmene(self, ctx:ColorParser.CmeneContext):
+        pass
+
+
     # Enter a parse tree produced by ColorParser#brivla.
     def enterBrivla(self, ctx:ColorParser.BrivlaContext):
         pass

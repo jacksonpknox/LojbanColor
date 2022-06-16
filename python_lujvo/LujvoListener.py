@@ -53,12 +53,57 @@ class LujvoListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by LujvoParser#gobvo.
+    def enterGobvo(self, ctx:LujvoParser.GobvoContext):
+        pass
+
+    # Exit a parse tree produced by LujvoParser#gobvo.
+    def exitGobvo(self, ctx:LujvoParser.GobvoContext):
+        pass
+
+
+    # Enter a parse tree produced by LujvoParser#jobvo.
+    def enterJobvo(self, ctx:LujvoParser.JobvoContext):
+        pass
+
+    # Exit a parse tree produced by LujvoParser#jobvo.
+    def exitJobvo(self, ctx:LujvoParser.JobvoContext):
+        pass
+
+
+    # Enter a parse tree produced by LujvoParser#kobvo.
+    def enterKobvo(self, ctx:LujvoParser.KobvoContext):
+        pass
+
+    # Exit a parse tree produced by LujvoParser#kobvo.
+    def exitKobvo(self, ctx:LujvoParser.KobvoContext):
+        pass
+
+
     # Enter a parse tree produced by LujvoParser#gismu.
     def enterGismu(self, ctx:LujvoParser.GismuContext):
         pass
 
     # Exit a parse tree produced by LujvoParser#gismu.
     def exitGismu(self, ctx:LujvoParser.GismuContext):
+        pass
+
+
+    # Enter a parse tree produced by LujvoParser#cagismu.
+    def enterCagismu(self, ctx:LujvoParser.CagismuContext):
+        pass
+
+    # Exit a parse tree produced by LujvoParser#cagismu.
+    def exitCagismu(self, ctx:LujvoParser.CagismuContext):
+        pass
+
+
+    # Enter a parse tree produced by LujvoParser#ckagismu.
+    def enterCkagismu(self, ctx:LujvoParser.CkagismuContext):
+        pass
+
+    # Exit a parse tree produced by LujvoParser#ckagismu.
+    def exitCkagismu(self, ctx:LujvoParser.CkagismuContext):
         pass
 
 
