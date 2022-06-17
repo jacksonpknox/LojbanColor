@@ -2,7 +2,10 @@ import sys
 
 from antlr4 import *
 
+# attempt to import rich
 from rich import print
+from rich.text import Text
+from rich.panel import Panel
 
 from python_color.ColorLexer import ColorLexer
 from python_color.ColorParser import ColorParser
@@ -12,21 +15,35 @@ from python_lujvo.LujvoLexer import LujvoLexer
 from python_lujvo.LujvoParser import LujvoParser
 from python_lujvo.LujvoListener import LujvoListener
 
+#t = Text()
 
+class space_ctx:
+    def getText():
+        return " "
+
+class newline_ctx:
+    def getText():
+        return "\n"
+
+def put_one(ctx, color):
+    print(Text(ctx.getText(), style=color), end="")
+
+put = put_one
+
+def put_two(ctx, color):
+    t.append(ctx.getText(), style=color)
+
+"""
 def put(ctx, color):
-    print(f"[{color}]{ctx.getText()}[/{color}]", end="")
+    print(Text(ctx.getText(), style=color), end="")
+    t.append(ctx.getText(), style=color)
+"""
 
 
 class LujvoColorizer(LujvoListener):
     def __init__(self):
         self.background = "#222255"
-        self.booler = False
 
-    def flop(self):
-        self.booler = not self.booler
-        self.background = "#222222"
-        #self.background = "#442222" if self.booler else "#222244"
-        
     def enterY(self, ctx):
         put(ctx, "yellow")
 
@@ -40,15 +57,12 @@ class LujvoColorizer(LujvoListener):
         put(ctx, "#FF8080 on #222222")
 
     def enterBalraf(self, ctx):
-        self.flop()
         put(ctx, f"#FFC0C0 on {self.background}")
 
     def enterBauraf(self, ctx):
-        self.flop()
         put(ctx, f"#FFFFC0 on {self.background}")
 
     def enterBroraf(self, ctx):
-        self.flop()
         put(ctx, f"#FFC080 on {self.background}")
 
     def enterCagismu(self, ctx):
@@ -73,10 +87,12 @@ def process_lujvo(lujvo: str):
 
 class Colorizer(ColorListener):
     def exitSentence(self, ctx):
-        print()
+        #print()
+        put(newline_ctx, None)
 
     def exitWord(self, ctx):
-        print(" ", end="")
+        #print(" ", end="")
+        put(space_ctx, None)
     
     def enterFuhivla(self, ctx):
         put(ctx, "#008700 on #222222")
@@ -137,6 +153,13 @@ class Colorizer(ColorListener):
 
 
 def main(argv):
+    # if using rich, make text object
+    global t 
+    t = Text()
+    # if using rich, change put function
+    global put
+    put = put_two
+
     input_stream = FileStream(argv[1])
     lexer = ColorLexer(input_stream)  # lexer generated from grammar
     stream = CommonTokenStream(lexer)  # token stream from library
@@ -146,6 +169,11 @@ def main(argv):
     printer = Colorizer()
     walker = ParseTreeWalker()
     walker.walk(printer, tree)
+
+    # if using rich, print panel now
+    t.rstrip()
+    p = Panel(t)
+    print(p)
 
 
 if __name__ == "__main__":
