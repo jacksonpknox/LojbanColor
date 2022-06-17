@@ -23,7 +23,7 @@ def put(txt, color):
 
 class LujvoColorizer(LujvoListener):
     def __init__(self):
-        self.background = "#222255"
+        self.background = "#000000"
 
     def enterY(self, ctx):
         put(ctx.getText(), "yellow")
@@ -32,10 +32,10 @@ class LujvoColorizer(LujvoListener):
         put(ctx.getText(), "yellow")
 
     def enterCafourraf(self, ctx):
-        put(ctx.getText(), "#FF8000 on #222222")
+        put(ctx.getText(), "#FF8000")
 
     def enterCkfourraf(self, ctx):
-        put(ctx.getText(), "#FF8080 on #222222")
+        put(ctx.getText(), "#FF8080")
 
     def enterBalraf(self, ctx):
         put(ctx.getText(), f"#FFC0C0 on {self.background}")
@@ -47,10 +47,10 @@ class LujvoColorizer(LujvoListener):
         put(ctx.getText(), f"#FFC080 on {self.background}")
 
     def enterCagismu(self, ctx):
-        put(ctx.getText(), "#FF0000 on #222222")
+        put(ctx.getText(), "#FF0000")
 
     def enterCkagismu(self, ctx):
-        put(ctx.getText(), "#FF0000 on #222222")
+        put(ctx.getText(), "#FF0000")
 
 
 def process_lujvo(lujvo: str):
@@ -73,7 +73,7 @@ class Colorizer(ColorListener):
         put(" ", None)
     
     def enterFuhivla(self, ctx):
-        put(ctx.getText(), "#008700 on #222222")
+        put(ctx.getText(), "#008700")
 
     def enterBai(self, ctx):
         put(ctx.getText(), "#0000FF")
@@ -124,10 +124,10 @@ class Colorizer(ColorListener):
         process_lujvo(ctx.getText())
 
     def enterGismu(self, ctx):
-        put(ctx.getText(), "#FF0000 on #222222")
+        put(ctx.getText(), "#FF0000")
 
     def enterCmene(self, ctx):
-        put(ctx.getText(), "#FFFF00 on #222222")
+        put(ctx.getText(), "#FFFF00")
 
 
 def main(argv):

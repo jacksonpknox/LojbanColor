@@ -64,7 +64,8 @@ GOHA : 'go\'i'
         | 'du'
     ;
 
-GOI : 'pe'
+GOI : 'goi'
+    | 'pe'
         | 'po'
         | 'po\'e'
         | 'po\'u'

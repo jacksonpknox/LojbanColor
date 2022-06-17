@@ -5,11 +5,15 @@
 ## long term goals
 - semantically group selmaho instead of alphabetically
 - grammar competition website
+- color selection tool
+
+
+## special selma'o (for special colors)
+- cu
+- i
+- by
+- koha / goha
 
 asyoucanseenaturallanguagesalsonecessitatetheuseofspacestoseparatewordshoweverthespacesneednotbespokenasglotalstopsinfacttheyalmostneverare
 
 you can some times remove spaces and the parser doesnt care. there are only finitely many cases to check.
-
-
-- replace ctx in puts with just strings xd
-- try except import rich
