@@ -2,7 +2,6 @@ import sys
 
 from antlr4 import *
 
-# attempt to import rich
 from rich import print
 from rich.text import Text
 from rich.panel import Panel
@@ -15,29 +14,11 @@ from python_lujvo.LujvoLexer import LujvoLexer
 from python_lujvo.LujvoParser import LujvoParser
 from python_lujvo.LujvoListener import LujvoListener
 
-#t = Text()
+t = Text()
 
-class space_ctx:
-    def getText():
-        return " "
 
-class newline_ctx:
-    def getText():
-        return "\n"
-
-def put_one(ctx, color):
-    print(Text(ctx.getText(), style=color), end="")
-
-put = put_one
-
-def put_two(ctx, color):
-    t.append(ctx.getText(), style=color)
-
-"""
-def put(ctx, color):
-    print(Text(ctx.getText(), style=color), end="")
-    t.append(ctx.getText(), style=color)
-"""
+def put(txt, color):
+    t.append(txt, style=color)
 
 
 class LujvoColorizer(LujvoListener):
@@ -45,32 +26,31 @@ class LujvoColorizer(LujvoListener):
         self.background = "#222255"
 
     def enterY(self, ctx):
-        put(ctx, "yellow")
+        put(ctx.getText(), "yellow")
 
     def enterQ(self, ctx):
-        put(ctx, "yellow")
+        put(ctx.getText(), "yellow")
 
     def enterCafourraf(self, ctx):
-        put(ctx, "#FF8000 on #222222")
+        put(ctx.getText(), "#FF8000 on #222222")
 
     def enterCkfourraf(self, ctx):
-        put(ctx, "#FF8080 on #222222")
+        put(ctx.getText(), "#FF8080 on #222222")
 
     def enterBalraf(self, ctx):
-        put(ctx, f"#FFC0C0 on {self.background}")
+        put(ctx.getText(), f"#FFC0C0 on {self.background}")
 
     def enterBauraf(self, ctx):
-        put(ctx, f"#FFFFC0 on {self.background}")
+        put(ctx.getText(), f"#FFFFC0 on {self.background}")
 
     def enterBroraf(self, ctx):
-        put(ctx, f"#FFC080 on {self.background}")
+        put(ctx.getText(), f"#FFC080 on {self.background}")
 
     def enterCagismu(self, ctx):
-        put(ctx, "#FF0000 on #222222")
+        put(ctx.getText(), "#FF0000 on #222222")
 
     def enterCkagismu(self, ctx):
-        put(ctx, "#FF0000 on #222222")
-
+        put(ctx.getText(), "#FF0000 on #222222")
 
 
 def process_lujvo(lujvo: str):
@@ -87,79 +67,70 @@ def process_lujvo(lujvo: str):
 
 class Colorizer(ColorListener):
     def exitSentence(self, ctx):
-        #print()
-        put(newline_ctx, None)
+        put("\n", None)
 
     def exitWord(self, ctx):
-        #print(" ", end="")
-        put(space_ctx, None)
+        put(" ", None)
     
     def enterFuhivla(self, ctx):
-        put(ctx, "#008700 on #222222")
+        put(ctx.getText(), "#008700 on #222222")
 
     def enterBai(self, ctx):
-        put(ctx, "#0000FF")
+        put(ctx.getText(), "#0000FF")
 
     def enterBy(self, ctx):
-        put(ctx, "#8080FF")
+        put(ctx.getText(), "#8080FF")
 
     def enterUi(self, ctx):
-        put(ctx, "#8080FF")
+        put(ctx.getText(), "#8080FF")
 
     def enterCmavoab(self, ctx):
-        put(ctx, "#8080FF")
+        put(ctx.getText(), "#8080FF")
 
     def enterCmavocd(self, ctx):
-        put(ctx, "#80C0FF")
+        put(ctx.getText(), "#80C0FF")
 
     def enterCmavof(self, ctx):
-        put(ctx, "#C0C0FF")
+        put(ctx.getText(), "#C0C0FF")
 
     def enterCmavogi(self, ctx):
-        put(ctx, "#C0FFFF")
+        put(ctx.getText(), "#C0FFFF")
 
     def enterCmavojk(self, ctx):
-        put(ctx, "#8080FF")
+        put(ctx.getText(), "#8080FF")
 
     def enterCmavol(self, ctx):
-        put(ctx, "#80C0FF")
+        put(ctx.getText(), "#80C0FF")
 
     def enterCmavomn(self, ctx):
-        put(ctx, "#C0C0FF")
+        put(ctx.getText(), "#C0C0FF")
 
     def enterCmavop(self, ctx):
-        put(ctx, "#C0FFFF")
+        put(ctx.getText(), "#C0FFFF")
 
     def enterCmavors(self, ctx):
-        put(ctx, "#8080FF")
+        put(ctx.getText(), "#8080FF")
 
     def enterCmavot(self, ctx):
-        put(ctx, "#80C0FF")
+        put(ctx.getText(), "#80C0FF")
 
     def enterCmavovy(self, ctx):
-        put(ctx, "#C0C0FF")
+        put(ctx.getText(), "#C0C0FF")
 
     def enterCmavoz(self, ctx):
-        put(ctx, "#C0FFFF")
+        put(ctx.getText(), "#C0FFFF")
 
     def enterLujvo(self, ctx):
         process_lujvo(ctx.getText())
 
     def enterGismu(self, ctx):
-        put(ctx, "#FF0000 on #222222")
+        put(ctx.getText(), "#FF0000 on #222222")
 
     def enterCmene(self, ctx):
-        put(ctx, "#FFFF00 on #222222")
+        put(ctx.getText(), "#FFFF00 on #222222")
 
 
 def main(argv):
-    # if using rich, make text object
-    global t 
-    t = Text()
-    # if using rich, change put function
-    global put
-    put = put_two
-
     input_stream = FileStream(argv[1])
     lexer = ColorLexer(input_stream)  # lexer generated from grammar
     stream = CommonTokenStream(lexer)  # token stream from library
@@ -170,7 +141,6 @@ def main(argv):
     walker = ParseTreeWalker()
     walker.walk(printer, tree)
 
-    # if using rich, print panel now
     t.rstrip()
     p = Panel(t)
     print(p)
