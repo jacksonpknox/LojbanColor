@@ -1,11 +1,11 @@
 grammar Color;
-import Brivla,Cmavo,Fuhivla;
+import Brivla,Cmavo,Compmo,Fuhivla;
 
 folio : (sentence '\r'? '\n')+ EOF;
 
 sentence : word* ;
 
-word : cmavo | brivla | cmene | fuhivla ;
+word : cmavo | brivla | cmene | compmo | fuhivla ;
 
 cmene : CMENE ;
 

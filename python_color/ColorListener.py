@@ -1277,6 +1277,15 @@ class ColorListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by ColorParser#compmo.
+    def enterCompmo(self, ctx:ColorParser.CompmoContext):
+        pass
+
+    # Exit a parse tree produced by ColorParser#compmo.
+    def exitCompmo(self, ctx:ColorParser.CompmoContext):
+        pass
+
+
     # Enter a parse tree produced by ColorParser#fuhivla.
     def enterFuhivla(self, ctx:ColorParser.FuhivlaContext):
         pass
