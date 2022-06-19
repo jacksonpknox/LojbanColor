@@ -40,6 +40,7 @@ ZAHO : 'pu\'o'
 ZEHA : 'ze\'i'
         | 'ze\'a'
         | 'ze\'u'
+        | 'ze\'e'
     ;
 
 ZEI : 'zei'

@@ -54,6 +54,7 @@ LEHU : 'le\'u'
 
 LE : 'le'
         | 'lo'
+        | 'lo\'e'
     ;
 
 LIHU : 'li\'u'

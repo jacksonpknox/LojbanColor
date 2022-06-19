@@ -161,7 +161,6 @@ li'e
 li'o
 lo'a
 lo'ai
-lo'e
 lo'i
 loi
 lu'au
@@ -317,7 +316,6 @@ za'ai
 zai'a
 zau
 ze'ai
-ze'e
 ze'ei
 zi'a
 zo'au
