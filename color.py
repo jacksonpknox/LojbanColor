@@ -14,11 +14,62 @@ from python_lujvo.LujvoLexer import LujvoLexer
 from python_lujvo.LujvoParser import LujvoParser
 from python_lujvo.LujvoListener import LujvoListener
 
+from python_compoundmo.CompoundmoLexer import CompoundmoLexer
+from python_compoundmo.CompoundmoParser import CompoundmoParser
+from python_compoundmo.CompoundmoListener import CompoundmoListener
+
 t = Text()
 
 
 def put(txt, color):
     t.append(txt, style=color)
+
+
+class CompoundmoColorizer(CompoundmoListener):
+    def enterBai(self, ctx):
+        put(ctx.getText(), "#0000FF")
+
+    def enterBy(self, ctx):
+        put(ctx.getText(), "#8080FF")
+
+    def enterUi(self, ctx):
+        put(ctx.getText(), "#8080FF")
+
+    def enterCmavoab(self, ctx):
+        put(ctx.getText(), "#8080FF")
+
+    def enterCmavocd(self, ctx):
+        put(ctx.getText(), "#80C0FF")
+
+    def enterCmavof(self, ctx):
+        put(ctx.getText(), "#C0C0FF")
+
+    def enterCmavogi(self, ctx):
+        put(ctx.getText(), "#C0FFFF")
+
+    def enterCmavojk(self, ctx):
+        put(ctx.getText(), "#8080FF")
+
+    def enterCmavol(self, ctx):
+        put(ctx.getText(), "#80C0FF")
+
+    def enterCmavomn(self, ctx):
+        put(ctx.getText(), "#C0C0FF")
+
+    def enterCmavop(self, ctx):
+        put(ctx.getText(), "#C0FFFF")
+
+    def enterCmavors(self, ctx):
+        put(ctx.getText(), "#8080FF")
+
+    def enterCmavot(self, ctx):
+        put(ctx.getText(), "#80C0FF")
+
+    def enterCmavovy(self, ctx):
+        put(ctx.getText(), "#C0C0FF")
+
+    def enterCmavoz(self, ctx):
+        put(ctx.getText(), "#C0FFFF")
 
 
 class LujvoColorizer(LujvoListener):
@@ -51,6 +102,18 @@ class LujvoColorizer(LujvoListener):
 
     def enterCkagismu(self, ctx):
         put(ctx.getText(), "#FF0000")
+
+
+def process_compmo(compmo: str):
+    input_stream = InputStream(compmo)
+    lexer = CompoundmoLexer(input_stream)
+    stream = CommonTokenStream(lexer)
+    parser = CompoundmoParser(stream)
+    tree = parser.compoundmo()
+    
+    printer = CompoundmoColorizer()
+    walker = ParseTreeWalker()
+    walker.walk(printer, tree)
 
 
 def process_lujvo(lujvo: str):
@@ -120,6 +183,9 @@ class Colorizer(ColorListener):
     def enterCmavoz(self, ctx):
         put(ctx.getText(), "#C0FFFF")
 
+    def enterUncat(self, ctx):
+        put(ctx.getText(), "#FFFF22")
+
     def enterLujvo(self, ctx):
         process_lujvo(ctx.getText())
 
@@ -129,11 +195,8 @@ class Colorizer(ColorListener):
     def enterCmene(self, ctx):
         put(ctx.getText(), "#FFFF00")
 
-    def enterUncat(self, ctx):
-        put(ctx.getText(), "#FFFF22")
-
     def enterCompmo(self, ctx):
-        put(ctx.getText(), "#FF00FF")
+        process_compmo(ctx.getText())
 
 
 def main(argv):
