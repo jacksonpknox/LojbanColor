@@ -134,7 +134,7 @@ class Colorizer(ColorListener):
 
 
 def main(argv):
-    input_stream = FileStream(argv[1])
+    input_stream = FileStream(argv[1], encoding="utf8")
     lexer = ColorLexer(input_stream)  # lexer generated from grammar
     stream = CommonTokenStream(lexer)  # token stream from library
     parser = ColorParser(stream)  # parser generated from grammar
