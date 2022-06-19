@@ -17,4 +17,14 @@ cmavo : cmavoab
       | ui
       | cmavovy
       | cmavoz
+      | UNCAT
       ;
+
+/*
+ * Lexer rules
+ */
+
+UNCAT : ('.' | C) V ('\''? V)* ;
+
+fragment C : [bcdfgjklmnprstvxz] ;
+fragment V : [aeiou] ;

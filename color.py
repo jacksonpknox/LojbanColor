@@ -129,6 +129,9 @@ class Colorizer(ColorListener):
     def enterCmene(self, ctx):
         put(ctx.getText(), "#FFFF00")
 
+    def enterUncat(self, ctx):
+        put(ctx.getText(), "#FFFF22")
+
 
 def main(argv):
     input_stream = FileStream(argv[1])
