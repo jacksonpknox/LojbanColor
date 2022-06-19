@@ -1,6 +1,6 @@
 grammar Cmavo;
 
-import CmavoAB,BAI,BY,UI,CmavoCD,CmavoF,CmavoGI,CmavoJK,CmavoL,CmavoMN,CmavoP,CmavoRS,CmavoT,CmavoVY,CmavoZ;
+import CmavoAB,BAI,BY,UI,CmavoCD,CmavoF,CmavoGI,CmavoJK,CmavoL,CmavoMN,CmavoP,CmavoRS,CmavoT,CmavoVY,CmavoZ,CmavoUncat;
 
 cmavo : cmavoab
       | bai
@@ -17,14 +17,5 @@ cmavo : cmavoab
       | ui
       | cmavovy
       | cmavoz
-      | UNCAT
+      | uncat
       ;
-
-/*
- * Lexer rules
- */
-
-UNCAT : ('.' | C) V ('\''? V)* ;
-
-fragment C : [bcdfgjklmnprstvxz] ;
-fragment V : [aeiou] ;

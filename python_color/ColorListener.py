@@ -1268,6 +1268,15 @@ class ColorListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by ColorParser#uncat.
+    def enterUncat(self, ctx:ColorParser.UncatContext):
+        pass
+
+    # Exit a parse tree produced by ColorParser#uncat.
+    def exitUncat(self, ctx:ColorParser.UncatContext):
+        pass
+
+
     # Enter a parse tree produced by ColorParser#fuhivla.
     def enterFuhivla(self, ctx:ColorParser.FuhivlaContext):
         pass
