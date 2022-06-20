@@ -14,68 +14,13 @@ from python_lujvo.LujvoLexer import LujvoLexer
 from python_lujvo.LujvoParser import LujvoParser
 from python_lujvo.LujvoListener import LujvoListener
 
-from python_compoundmo.CompoundmoLexer import CompoundmoLexer
-from python_compoundmo.CompoundmoParser import CompoundmoParser
-from python_compoundmo.CompoundmoListener import CompoundmoListener
+from indices import selmaho_to_color, selmaho_to_dic
 
 t = Text()
 
 
 def put(txt, color):
     t.append(txt, style=color)
-
-
-class CompoundmoColorizer(CompoundmoListener):
-    def __init__(self) -> None:
-        self.background = "#440000"
-
-    def enterBai(self, ctx):
-        put(ctx.getText(), "#0000FF on {0}".format(self.background))
-
-    def enterBy(self, ctx):
-        put(ctx.getText(), "#8080FF on {0}".format(self.background))
-
-    def enterUi(self, ctx):
-        put(ctx.getText(), "#8080FF on {0}".format(self.background))
-
-    def enterCmavoab(self, ctx):
-        put(ctx.getText(), "#8080FF on {0}".format(self.background))
-
-    def enterCmavocd(self, ctx):
-        put(ctx.getText(), "#80C0FF on {0}".format(self.background))
-
-    def enterCmavof(self, ctx):
-        put(ctx.getText(), "#C0C0FF on {0}".format(self.background))
-
-    def enterCmavogi(self, ctx):
-        put(ctx.getText(), "#C0FFFF on {0}".format(self.background))
-
-    def enterCmavojk(self, ctx):
-        put(ctx.getText(), "#8080FF on {0}".format(self.background))
-
-    def enterCmavol(self, ctx):
-        put(ctx.getText(), "#80C0FF on {0}".format(self.background))
-
-    def enterCmavomn(self, ctx):
-        put(ctx.getText(), "#C0C0FF on {0}".format(self.background))
-
-    def enterCmavop(self, ctx):
-        put(ctx.getText(), "#C0FFFF on {0}".format(self.background))
-
-    def enterCmavors(self, ctx):
-        put(ctx.getText(), "#8080FF on {0}".format(self.background))
-
-    def enterCmavot(self, ctx):
-        put(ctx.getText(), "#80C0FF on {0}".format(self.background))
-
-    def enterCmavovy(self, ctx):
-        put(ctx.getText(), "#C0C0FF on {0}".format(self.background))
-
-    def enterCmavoz(self, ctx):
-        put(ctx.getText(), "#C0FFFF on {0}".format(self.background))
-
-    def enterUncat(self, ctx):
-        put(ctx.getText(), "#FFFF22 on {0}".format("#0000FF"))
 
 
 class LujvoColorizer(LujvoListener):
@@ -106,17 +51,35 @@ class LujvoColorizer(LujvoListener):
     def enterCkagismu(self, ctx):
         put(ctx.getText(), "#FF0000")
 
+    
+def get_selmaho(cmavo: str):
+    for selmaho, dic in selmaho_to_dic.items():
+        if cmavo in dic:
+            return selmaho
+    return "UNCAT"
+
+def process_cmavo(cmavo: str):
+    color = selmaho_to_color[get_selmaho(cmavo)]
+    put(cmavo, color)
+
 
 def process_compmo(compmo: str):
-    input_stream = InputStream(compmo)
-    lexer = CompoundmoLexer(input_stream)
-    stream = CommonTokenStream(lexer)
-    parser = CompoundmoParser(stream)
-    tree = parser.compoundmo()
-    
-    printer = CompoundmoColorizer()
-    walker = ParseTreeWalker()
-    walker.walk(printer, tree)
+    # split the compmo into cmavos
+    i = 0
+    j = 2
+    e = len(compmo)
+    compy = [c for c in compmo]
+    cons = {".", "b", "c", "d", "f", "g", "j", "k", "l", "m", "n", "p", "r", "s", "t", "v", "z"}
+    cmavos = []
+    while j < e:
+        if compy[j] in cons:
+            cmavos.append("".join(compy[i:j]))
+            i = j
+        j += 1
+    cmavos.append("".join(compy[i:j]))
+    for cmavo in cmavos:
+        process_cmavo(cmavo)
+        
 
 
 def process_lujvo(lujvo: str):
@@ -137,57 +100,12 @@ class Colorizer(ColorListener):
 
     def exitWord(self, ctx):
         put(" ", None)
+
+    def enterCmavo(self, ctx):
+        process_cmavo(ctx.getText())
     
     def enterFuhivla(self, ctx):
         put(ctx.getText(), "#008700")
-
-    def enterBai(self, ctx):
-        put(ctx.getText(), "#0000FF")
-
-    def enterBy(self, ctx):
-        put(ctx.getText(), "#8080FF")
-
-    def enterUi(self, ctx):
-        put(ctx.getText(), "#8080FF")
-
-    def enterCmavoab(self, ctx):
-        put(ctx.getText(), "#8080FF")
-
-    def enterCmavocd(self, ctx):
-        put(ctx.getText(), "#80C0FF")
-
-    def enterCmavof(self, ctx):
-        put(ctx.getText(), "#C0C0FF")
-
-    def enterCmavogi(self, ctx):
-        put(ctx.getText(), "#C0FFFF")
-
-    def enterCmavojk(self, ctx):
-        put(ctx.getText(), "#8080FF")
-
-    def enterCmavol(self, ctx):
-        put(ctx.getText(), "#80C0FF")
-
-    def enterCmavomn(self, ctx):
-        put(ctx.getText(), "#C0C0FF")
-
-    def enterCmavop(self, ctx):
-        put(ctx.getText(), "#C0FFFF")
-
-    def enterCmavors(self, ctx):
-        put(ctx.getText(), "#8080FF")
-
-    def enterCmavot(self, ctx):
-        put(ctx.getText(), "#80C0FF")
-
-    def enterCmavovy(self, ctx):
-        put(ctx.getText(), "#C0C0FF")
-
-    def enterCmavoz(self, ctx):
-        put(ctx.getText(), "#C0FFFF")
-
-    def enterUncat(self, ctx):
-        put(ctx.getText(), "#FFFF22 on #0000FF")
 
     def enterLujvo(self, ctx):
         process_lujvo(ctx.getText())
