@@ -25,16 +25,17 @@ fragment BOBVO : RAFPAIRCON Y TAILVO ;
 fragment COBVO : (RAFPAIRCON | RAFPAIRVOW) TAILVO? ;
 fragment DOBVO : STUMP Y TAILVO ;
 fragment FOBVO : RAFSTUMP Y TAILVO ;
-fragment GOBVO : (BALRAF | BRORAF) Q? GISMU ;
+fragment GOBVO : BALRAF (Q | Y)? GISMU
+               | BRORAF Q? GISMU ;
 // trolling
 fragment JOBVO : BAURAF Q CAGISMU ;
 fragment KOBVO : BAURAF Q? CKAGISMU ;
 // you can think about the ones with no tailvo separately since their lenghts will be finite
 
-fragment RAFPAIRCON : (BALRAF Q? | BRORAF | BAURAF Q) BALRAF ;
+fragment RAFPAIRCON : (BALRAF (Q | Y)? | BRORAF Q? | BAURAF Q) BALRAF ;
 fragment TAILVO : (BALRAF Y? | STUMP Y | VURAF)* (VURAF | GISUM) ;
-fragment RAFPAIRVOW : (BALRAF | BRORAF | BAURAF) Q? BRORAF
-                    | ((BALRAF | BRORAF) Q? | BAURAF Q) BAURAF
+fragment RAFPAIRVOW : (BALRAF (Q | Y)? | BRORAF Q? | BAURAF Q?) BRORAF
+                    | (BALRAF (Q | Y)? | BRORAF Q? | BAURAF Q) BAURAF
                     ;
 fragment STUMP : CASTUMP | CKSTUMP ;
 fragment RAFSTUMP : BALRAF Q? STUMP
