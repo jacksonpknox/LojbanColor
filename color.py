@@ -2,6 +2,8 @@ import sys
 
 from antlr4 import *
 
+import black 
+
 from rich import print
 from rich.text import Text
 from rich.panel import Panel
@@ -14,7 +16,8 @@ from python_lujvo.LujvoLexer import LujvoLexer
 from python_lujvo.LujvoParser import LujvoParser
 from python_lujvo.LujvoListener import LujvoListener
 
-from indices import selmaho_to_color, selmaho_to_dic
+from indices import selmaho_to_color
+from selm import selmaho_to_dic
 
 t = Text()
 
@@ -118,6 +121,14 @@ class Colorizer(ColorListener):
 
     def enterCompmo(self, ctx):
         process_compmo(ctx.getText())
+
+        
+def add_cmavo(cmavo: str, selmaho: str) -> None:
+    selmaho_to_dic[selmaho].add(cmavo)
+    # write the changes
+    with open("selm.py", "w") as f:
+        f.write('selmaho_to_dic = ' + str(selmaho_to_dic))
+    black.main(["selm.py"])
 
 
 def main(argv):
