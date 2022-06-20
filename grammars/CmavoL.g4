@@ -55,6 +55,7 @@ LEHU : 'le\'u'
 LE : 'le'
         | 'lo'
         | 'lo\'e'
+        | 'loi'
     ;
 
 LIHU : 'li\'u'

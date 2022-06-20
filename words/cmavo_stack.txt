@@ -162,7 +162,6 @@ li'o
 lo'a
 lo'ai
 lo'i
-loi
 lu'au
 ly
 ma'e
@@ -292,7 +291,6 @@ ue
 ui
 uo
 uu
-va'i
 va'o
 va'u
 vi'o

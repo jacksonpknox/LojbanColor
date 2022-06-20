@@ -26,56 +26,59 @@ def put(txt, color):
 
 
 class CompoundmoColorizer(CompoundmoListener):
+    def __init__(self) -> None:
+        self.background = "#440000"
+
     def enterBai(self, ctx):
-        put(ctx.getText(), "#0000FF")
+        put(ctx.getText(), "#0000FF on {0}".format(self.background))
 
     def enterBy(self, ctx):
-        put(ctx.getText(), "#8080FF")
+        put(ctx.getText(), "#8080FF on {0}".format(self.background))
 
     def enterUi(self, ctx):
-        put(ctx.getText(), "#8080FF")
+        put(ctx.getText(), "#8080FF on {0}".format(self.background))
 
     def enterCmavoab(self, ctx):
-        put(ctx.getText(), "#8080FF")
+        put(ctx.getText(), "#8080FF on {0}".format(self.background))
 
     def enterCmavocd(self, ctx):
-        put(ctx.getText(), "#80C0FF")
+        put(ctx.getText(), "#80C0FF on {0}".format(self.background))
 
     def enterCmavof(self, ctx):
-        put(ctx.getText(), "#C0C0FF")
+        put(ctx.getText(), "#C0C0FF on {0}".format(self.background))
 
     def enterCmavogi(self, ctx):
-        put(ctx.getText(), "#C0FFFF")
+        put(ctx.getText(), "#C0FFFF on {0}".format(self.background))
 
     def enterCmavojk(self, ctx):
-        put(ctx.getText(), "#8080FF")
+        put(ctx.getText(), "#8080FF on {0}".format(self.background))
 
     def enterCmavol(self, ctx):
-        put(ctx.getText(), "#80C0FF")
+        put(ctx.getText(), "#80C0FF on {0}".format(self.background))
 
     def enterCmavomn(self, ctx):
-        put(ctx.getText(), "#C0C0FF")
+        put(ctx.getText(), "#C0C0FF on {0}".format(self.background))
 
     def enterCmavop(self, ctx):
-        put(ctx.getText(), "#C0FFFF")
+        put(ctx.getText(), "#C0FFFF on {0}".format(self.background))
 
     def enterCmavors(self, ctx):
-        put(ctx.getText(), "#8080FF")
+        put(ctx.getText(), "#8080FF on {0}".format(self.background))
 
     def enterCmavot(self, ctx):
-        put(ctx.getText(), "#80C0FF")
+        put(ctx.getText(), "#80C0FF on {0}".format(self.background))
 
     def enterCmavovy(self, ctx):
-        put(ctx.getText(), "#C0C0FF")
+        put(ctx.getText(), "#C0C0FF on {0}".format(self.background))
 
     def enterCmavoz(self, ctx):
-        put(ctx.getText(), "#C0FFFF")
+        put(ctx.getText(), "#C0FFFF on {0}".format(self.background))
+
+    def enterUncat(self, ctx):
+        put(ctx.getText(), "#FFFF22 on {0}".format("#0000FF"))
 
 
 class LujvoColorizer(LujvoListener):
-    def __init__(self):
-        self.background = "#000000"
-
     def enterY(self, ctx):
         put(ctx.getText(), "yellow")
 
@@ -89,13 +92,13 @@ class LujvoColorizer(LujvoListener):
         put(ctx.getText(), "#FF8080")
 
     def enterBalraf(self, ctx):
-        put(ctx.getText(), f"#FFC0C0 on {self.background}")
+        put(ctx.getText(), f"#FFC0C0")
 
     def enterBauraf(self, ctx):
-        put(ctx.getText(), f"#FFFFC0 on {self.background}")
+        put(ctx.getText(), f"#FFFFC0")
 
     def enterBroraf(self, ctx):
-        put(ctx.getText(), f"#FFC080 on {self.background}")
+        put(ctx.getText(), f"#FFC080")
 
     def enterCagismu(self, ctx):
         put(ctx.getText(), "#FF0000")
@@ -184,7 +187,7 @@ class Colorizer(ColorListener):
         put(ctx.getText(), "#C0FFFF")
 
     def enterUncat(self, ctx):
-        put(ctx.getText(), "#FFFF22")
+        put(ctx.getText(), "#FFFF22 on #0000FF")
 
     def enterLujvo(self, ctx):
         process_lujvo(ctx.getText())
