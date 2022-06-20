@@ -13,9 +13,9 @@ cmene : CMENE ;
  * Lexer Rules
  */
 
-CMENE : L* C '.' ;
+CMENE : '.'? L* C '.' ;
 
 fragment L : C | V ;
-fragment C : [bcdfgjklmnprstvxz] ;
-fragment V : [aeiou] ;
+fragment C : [bcdfgjklmnprstvxz,] ;
+fragment V : [aeiouy] ;
 

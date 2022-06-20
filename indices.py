@@ -11,7 +11,7 @@ selmaho_to_color = {
     "BO" : "#0000FF",
     "BOI" : "#0000FF",
     "BU" : "#0000FF",
-    "BY" : "#8090FF",
+    "BY" : "#33FFFF",
     "CAI" : "#0000FF",
     "CAhA" : "#0000FF",
     "CEI" : "#0000FF",
@@ -123,14 +123,3 @@ selmaho_to_color = {
     "ZOhU" : "#0000FF",
     "UNCAT" : "#FF00FF",
 }
-
-
-# random helper function
-def selm_to_dic(selmaho: str):
-    with open("meta/selmaho/" + selmaho + ".txt", "r") as f:
-        cmavos = f.read().split("\n")
-    line_0 = selmaho + " : {"
-    lines = ['    "{0}",'.format(cmavo) for cmavo in cmavos if cmavo != ""]
-    line_n1 = "}"
-    return line_0 + "\n" + "\n".join(lines) + "\n" + line_n1
-    

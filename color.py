@@ -72,7 +72,7 @@ def process_compmo(compmo: str):
     j = 2
     e = len(compmo)
     compy = [c for c in compmo]
-    cons = {".", "b", "c", "d", "f", "g", "j", "k", "l", "m", "n", "p", "r", "s", "t", "v", "z"}
+    cons = {"b", "c", "d", "f", "g", "j", "k", "l", "m", "n", "p", "r", "s", "t", "v", "z"}
     cmavos = []
     while j < e:
         if compy[j] in cons:
