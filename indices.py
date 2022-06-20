@@ -67,6 +67,7 @@ selmaho_to_color = {
     "LUhU" : "#0000FF",
     "MAI" : "#0000FF",
     "MAhO" : "#0000FF",
+    "ME" : "#0000FF",
     "MEhU" : "#0000FF",
     "MOI" : "#0000FF",
     "MOhE" : "#0000FF",

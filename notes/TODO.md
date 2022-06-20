@@ -1,4 +1,4 @@
-- permit clusterless lujvo due to y
+- allow adding new selmaho
 - possibly make a script that converts Lujvo parser grammar into Lujvo lexer grammar
 - cmavo stack ?
 
