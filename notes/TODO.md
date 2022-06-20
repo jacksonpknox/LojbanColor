@@ -1,3 +1,4 @@
+- permit clusterless lujvo due to y
 - possibly make a script that converts Lujvo parser grammar into Lujvo lexer grammar
 - cmavo stack ?
 
