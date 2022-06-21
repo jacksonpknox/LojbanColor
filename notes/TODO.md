@@ -1,6 +1,5 @@
-- allow adding new selmaho
+- argparse
 - possibly make a script that converts Lujvo parser grammar into Lujvo lexer grammar
-- cmavo stack ?
 
 ## long term goals
 - semantically group selmaho instead of alphabetically
