@@ -123,9 +123,17 @@ class Colorizer(ColorListener):
         process_compmo(ctx.getText())
 
         
-def add_cmavo(cmavo: str, selmaho: str) -> None:
-    selmaho_to_dic[selmaho].add(cmavo)
+def add_cmavo(cmavo: str, selmaho: str, selmaho_to_dic: dict, selmaho_to_color: dict) -> None:
+    try:
+        selmaho_to_dic[selmaho].add(cmavo)
+    except KeyError:
+        selmaho_to_dic[selmaho] = {cmavo}
+        selmaho_to_color[selmaho] = "#0000FF"
+        selmaho_to_color = {key: value for key, value in sorted(selmaho_to_color.items())}
+        with open("indices.py", "w") as f:
+            f.write('selmaho_to_color = ' + str(selmaho_to_color)) 
     # write the changes
+    selmaho_to_dic = {key: value for key, value in sorted(selmaho_to_dic.items())}
     with open("selm.py", "w") as f:
         f.write('selmaho_to_dic = ' + str(selmaho_to_dic))
     black.main(["selm.py"])
