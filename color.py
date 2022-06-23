@@ -2,7 +2,8 @@ import sys
 
 from antlr4 import *
 
-import black 
+import json
+import yaml
 
 from rich import print
 from rich.text import Text
@@ -16,8 +17,14 @@ from python_lujvo.LujvoLexer import LujvoLexer
 from python_lujvo.LujvoParser import LujvoParser
 from python_lujvo.LujvoListener import LujvoListener
 
-from indices import selmaho_to_color
-from selm import selmaho_to_dic
+with open("idk.json", "r") as f:
+    selmaho_to_color = json.load(f)
+    
+with open("xd.yaml", "r") as f:
+    selmaho_to_dic = yaml.safe_load(f)
+
+#from indices import selmaho_to_color
+#from selm import selmaho_to_dic
 
 t = Text()
 
@@ -123,21 +130,40 @@ class Colorizer(ColorListener):
         process_compmo(ctx.getText())
 
         
-def add_cmavo(cmavo: str, selmaho: str, selmaho_to_dic: dict, selmaho_to_color: dict) -> None:
-    try:
-        selmaho_to_dic[selmaho].add(cmavo)
-    except KeyError:
-        selmaho_to_dic[selmaho] = {cmavo}
-        selmaho_to_color[selmaho] = "#0000FF"
-        selmaho_to_color = {key: value for key, value in sorted(selmaho_to_color.items())}
-        with open("indices.py", "w") as f:
-            f.write('selmaho_to_color = ' + str(selmaho_to_color)) 
-    # write the changes
-    selmaho_to_dic = {key: value for key, value in sorted(selmaho_to_dic.items())}
-    with open("selm.py", "w") as f:
-        f.write('selmaho_to_dic = ' + str(selmaho_to_dic))
-    black.main(["selm.py"])
+def add_selmaho(selmaho: str, color: str = "#0000FF"):
+    # make sure this selmaho has a color
+    with open("idk.json", "r") as f:
+        colors = json.load(f)
+    if selmaho not in colors:
+        colors[selmaho] = color
+    with open("idk.json", "w") as f:
+        json.dump(colors, f, indent=4)
 
+    # make sure this selmaho has a word-set
+    with open("xd.yaml", "r") as f:
+        wordsets = yaml.safe_load(f)
+    if selmaho not in wordsets:
+        wordsets[selmaho] = set()
+    with open("xd.yaml", "w") as f:
+        yaml.dump(wordsets, f)
+        
+
+def add_cmavo(cmavo: str, selmaho: str) -> None:
+    # open the wordsets
+    with open("xd.yaml", "r") as f:
+        wordsets = yaml.safe_load(f)
+    if selmaho not in wordsets:
+        # observe the laziness.. we only have to add the color
+        add_selmaho(selmaho)
+        # we use the following line instead of universally .add(cmavo)
+        #  because add_selmaho does not affect our local copy of wordsets
+        wordsets[selmaho] = {cmavo}
+    else:
+        wordsets[selmaho].add(cmavo)
+    with open("xd.yaml", "w") as f:
+        yaml.dump(wordsets, f)
+    
+        
 
 def main(argv):
     input_stream = FileStream(argv[1], encoding="utf8")
