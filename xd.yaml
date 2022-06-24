@@ -348,6 +348,7 @@ LAhE: !!set
   vu'i: null
 LE: !!set
   le: null
+  le'e: null
   lei: null
   lo: null
   lo'e: null
@@ -396,6 +397,7 @@ NA: !!set
 NAI: !!set
   nai: null
 NAhE: !!set
+  cau'e: null
   na'e: null
   no'e: null
   to'e: null
