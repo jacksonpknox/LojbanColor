@@ -5,9 +5,13 @@ from antlr4 import *
 import json
 import yaml
 
+import argparse
+
 from rich import print
 from rich.text import Text
 from rich.panel import Panel
+
+from rich_argparse import RichHelpFormatter
 
 from python_color.ColorLexer import ColorLexer
 from python_color.ColorParser import ColorParser
@@ -165,8 +169,8 @@ def add_cmavo(cmavo: str, selmaho: str) -> None:
     
         
 
-def main(argv):
-    input_stream = FileStream(argv[1], encoding="utf8")
+def color_prt(filepath: str):
+    input_stream = FileStream(filepath, encoding="utf8")
     lexer = ColorLexer(input_stream)  # lexer generated from grammar
     stream = CommonTokenStream(lexer)  # token stream from library
     parser = ColorParser(stream)  # parser generated from grammar
@@ -180,6 +184,21 @@ def main(argv):
     p = Panel(t)
     print(p)
 
+def main():
+    parser = argparse.ArgumentParser(formatter_class=RichHelpFormatter)
+    parser.add_argument('filepath', action='store', default=None, nargs='?')
+    parser.add_argument('-a', '--add', action='store', nargs=2)
+    args = parser.parse_args()
+    if a := args.add:
+        if args.filepath:
+            print("warning! ignoring filepath argument")
+        print("adding... cmavo {} to selmaho {}".format(a[0],a[1]))
+        add_cmavo(a[0], a[1])
+    elif f := args.filepath:
+        color_prt(f)
+    else:
+        print("error... no args")
+
 
 if __name__ == "__main__":
-    main(sys.argv)
+    main()
