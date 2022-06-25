@@ -1,5 +1,4 @@
 - git
-- refactor
 - possibly make a script that converts Lujvo parser grammar into Lujvo lexer grammar
 
 ## long term goals

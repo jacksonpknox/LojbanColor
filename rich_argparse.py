@@ -12,7 +12,16 @@
 # greater good.
 
 import argparse
-from typing import TYPE_CHECKING, Callable, Dict, Generator, Iterable, List, Optional, cast
+from typing import (
+    TYPE_CHECKING,
+    Callable,
+    Dict,
+    Generator,
+    Iterable,
+    List,
+    Optional,
+    cast,
+)
 
 # rich is only used to display help. It is imported inside the functions in order
 # not to add delays to command line tools that use this formatter.
@@ -25,7 +34,9 @@ if TYPE_CHECKING:
 __all__ = ["RichHelpFormatter"]
 
 
-class RichHelpFormatter(argparse.RawTextHelpFormatter, argparse.RawDescriptionHelpFormatter):
+class RichHelpFormatter(
+    argparse.RawTextHelpFormatter, argparse.RawDescriptionHelpFormatter
+):
     """An argparse HelpFormatter class that renders using rich."""
 
     group_name_formatter: Callable[[str], str] = str.upper
@@ -87,7 +98,9 @@ class RichHelpFormatter(argparse.RawTextHelpFormatter, argparse.RawDescriptionHe
         super().add_text(text)
 
         if text is not argparse.SUPPRESS and text is not None:
-            self.renderables.append(self._pad(Text.from_markup(text + "\n", style="argparse.text")))
+            self.renderables.append(
+                self._pad(Text.from_markup(text + "\n", style="argparse.text"))
+            )
 
     def add_usage(
         self,
@@ -174,7 +187,9 @@ class RichHelpFormatter(argparse.RawTextHelpFormatter, argparse.RawDescriptionHe
         for table in iter_tables(renderables):  # compute a unified width of all tables
             get = Measurement.get
             cells = table.columns[0].cells
-            table_col1_width = max(get(console, console.options, c).maximum for c in cells)
+            table_col1_width = max(
+                get(console, console.options, c).maximum for c in cells
+            )
             col1_width = max(col1_width, table_col1_width)
         col1_width = min(col1_width, self._max_help_position)
         col2_width = self._width - col1_width
@@ -191,7 +206,9 @@ if __name__ == "__main__":
 
     from rich import get_console
 
-    RichHelpFormatter.highlights.append(r"'(?P<help>[^']*)'")  # disable colors inside single quotes
+    RichHelpFormatter.highlights.append(
+        r"'(?P<help>[^']*)'"
+    )  # disable colors inside single quotes
     parser = argparse.ArgumentParser(
         prog="python -m rich_argparse",
         formatter_class=RichHelpFormatter,
@@ -204,7 +221,9 @@ if __name__ == "__main__":
     )
     parser.add_argument("-V", "--version", action="version", version="version 0.1.0")
     parser.add_argument(
-        "pos-args", nargs="*", help="This is a positional argument that expects zero or more args"
+        "pos-args",
+        nargs="*",
+        help="This is a positional argument that expects zero or more args",
     )
     if sys.version_info[:2] >= (3, 9):
         parser.add_argument(
@@ -264,7 +283,9 @@ if __name__ == "__main__":
     mutex.add_argument(
         "--poor", action="store_false", dest="rich", help="Does poor mean --not-rich 😉?"
     )
-    mutex.add_argument("--not-rich", action="store_false", dest="rich", help=argparse.SUPPRESS)
+    mutex.add_argument(
+        "--not-rich", action="store_false", dest="rich", help=argparse.SUPPRESS
+    )
 
     console = get_console()
     args = parser.parse_args()
