@@ -1,6 +1,6 @@
 - test driven development
 - test: check selmaho disjointness
-- accept standard input
+- solve state
 - selmaho dataclass
 - file that shows off all color choices
 - choose colors

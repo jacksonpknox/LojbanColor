@@ -177,6 +177,7 @@ def set_color(selmaho: str, color: str) -> None:
         
 
 def color_prt(content: str) -> Text:
+    # very sus to return the global variable t
     input_stream = InputStream(content)
     lexer = ColorLexer(input_stream)  # lexer generated from grammar
     stream = CommonTokenStream(lexer)  # token stream from library
