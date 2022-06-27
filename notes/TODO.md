@@ -1,6 +1,6 @@
+- remove global config
 - test driven development
 - test: check selmaho disjointness
-- solve state
 - selmaho dataclass
 - file that shows off all color choices
 - choose colors

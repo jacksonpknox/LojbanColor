@@ -22,14 +22,6 @@ from python_lujvo.LujvoParser import LujvoParser
 from python_lujvo.LujvoListener import LujvoListener
 
 
-with open("selmaho_colors.json", "r") as f:
-    selmaho_to_color = json.load(f)
-
-    
-with open("selmaho_wordsets.yaml", "r") as f:
-    selmaho_to_dic = yaml.safe_load(f)
-
-
 def put(t: Text, txt: str, color: str=None):
     t.append(txt, style=color)
 
@@ -66,22 +58,22 @@ class LujvoColorizer(LujvoListener):
         put(self.t, ctx.getText(), "#FF0000")
 
     
-def get_selmaho(cmavo: str):
-    for selmaho, dic in selmaho_to_dic.items():
-        if cmavo in dic:
+def get_selmaho(cmavo: str, selmaho_to_cmavos: dict):
+    for selmaho, cmavos in selmaho_to_cmavos.items():
+        if cmavo in cmavos:
             return selmaho
     return "UNCAT"
 
 
-def get_cmavo_color(cmavo: str) -> str:
-    return selmaho_to_color[get_selmaho(cmavo)]
+def get_cmavo_color(cmavo: str, selmaho_to_color: dict, selmaho_to_cmavos: dict) -> str:
+    return selmaho_to_color[get_selmaho(cmavo, selmaho_to_cmavos)]
 
 
-def put_cmavo(t: Text, cmavo: str) -> None:
-    put(t, cmavo, get_cmavo_color(cmavo))
+def put_cmavo(t: Text, cmavo: str, selmaho_to_color: dict, selmaho_to_cmavos: dict) -> None:
+    put(t, cmavo, get_cmavo_color(cmavo, selmaho_to_color, selmaho_to_cmavos))
 
 
-def process_compmo(t: Text, compmo: str) -> None:
+def process_compmo(t: Text, compmo: str, selmaho_to_color: dict, selmaho_to_cmavos: dict) -> None:
     # split the compmo into cmavos
     i = 0
     j = 2
@@ -96,7 +88,7 @@ def process_compmo(t: Text, compmo: str) -> None:
         j += 1
     cmavos.append("".join(compy[i:j]))
     for cmavo in cmavos:
-        put_cmavo(t, cmavo)
+        put_cmavo(t, cmavo, selmaho_to_color, selmaho_to_cmavos)
         
 
 
@@ -115,6 +107,10 @@ def process_lujvo(t: Text, lujvo: str) -> None:
 class Colorizer(ColorListener):
     def __init__(self, t: Text):
         self.t = t
+        with open("selmaho_colors.json", "r") as f:
+            self.selmaho_to_color = json.load(f)
+        with open("selmaho_wordsets.yaml", "r") as f:
+            self.selmaho_to_cmavos = yaml.safe_load(f)
 
     def exitSentence(self, ctx):
         put(self.t, "\n", None)
@@ -123,7 +119,7 @@ class Colorizer(ColorListener):
         put(self.t, " ", None)
 
     def enterCmavo(self, ctx):
-        put_cmavo(self.t, ctx.getText())
+        put_cmavo(self.t, ctx.getText(), self.selmaho_to_color, self.selmaho_to_cmavos)
     
     def enterFuhivla(self, ctx):
         put(self.t, ctx.getText(), "#008700")
@@ -138,7 +134,7 @@ class Colorizer(ColorListener):
         put(self.t, ctx.getText(), "#FFFF00")
 
     def enterCompmo(self, ctx):
-        process_compmo(self.t, ctx.getText())
+        process_compmo(self.t, ctx.getText(), self.selmaho_to_color, self.selmaho_to_cmavos)
 
         
 def add_selmaho(selmaho: str, color: str = "#0000FF"):
