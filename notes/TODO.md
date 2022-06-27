@@ -1,4 +1,5 @@
 - accept standard input
+- selmaho dataclass
 - file that shows off all color choices
 - choose colors
 - possibly make a script that converts Lujvo parser grammar into Lujvo lexer grammar
