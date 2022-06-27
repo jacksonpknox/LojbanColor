@@ -176,10 +176,8 @@ def set_color(selmaho: str, color: str) -> None:
         json.dump(colors, f, indent=4)
         
 
-def color_prt(filepath: str, raw: bool=False):
-    #TODO: better to preemptively read file as a string
-    # and process string bydefeault probably
-    input_stream = InputStream(filepath) if raw else FileStream(filepath, encoding="utf8")
+def color_prt(content: str) -> Text:
+    input_stream = InputStream(content)
     lexer = ColorLexer(input_stream)  # lexer generated from grammar
     stream = CommonTokenStream(lexer)  # token stream from library
     parser = ColorParser(stream)  # parser generated from grammar
@@ -190,8 +188,9 @@ def color_prt(filepath: str, raw: bool=False):
     walker.walk(printer, tree)
 
     t.rstrip()
-    p = Panel(t)
-    print(p)
+
+    return t
+
 
 def main():
     # very buggy parser
@@ -212,9 +211,10 @@ def main():
         set_color(c[0], c[1])
     if args.input:
         print("Type the input:")
-        color_prt(sys.stdin.read(), raw=True)
-    elif f := args.filepath:
-        color_prt(f)
+        print(Panel(color_prt(sys.stdin.read())))
+    elif p := args.filepath:
+        with open(p, "r") as f:
+            print(Panel(color_prt(f.read())))
     else:
         print("error... no args")
 
