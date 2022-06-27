@@ -167,6 +167,13 @@ def add_cmavo(cmavo: str, selmaho: str) -> None:
     with open("selmaho_wordsets.yaml", "w") as f:
         yaml.dump(wordsets, f)
     
+
+def set_color(selmaho: str, color: str) -> None:
+    with open("selmaho_colors.json", "r") as f:
+        colors = json.load(f)
+    colors[selmaho] = "#" + color
+    with open("selmaho_colors.json", "w") as f:
+        json.dump(colors, f, indent=4)
         
 
 def color_prt(filepath: str):
@@ -185,15 +192,21 @@ def color_prt(filepath: str):
     print(p)
 
 def main():
+    # very buggy parser
     parser = argparse.ArgumentParser(formatter_class=RichHelpFormatter)
     parser.add_argument('filepath', action='store', default=None, nargs='?')
     parser.add_argument('-a', '--add', action='store', nargs=2)
+    parser.add_argument('-c', '--color', action='store', nargs=2)
     args = parser.parse_args()
     if a := args.add:
+        # just make a command mandatory
         if args.filepath:
             print("warning! ignoring filepath argument")
         print("adding... cmavo {} to selmaho {}".format(a[0],a[1]))
         add_cmavo(a[0], a[1])
+    if c := args.color:
+        print("setting color of selmaho {} to {}".format(c[0], c[1]))
+        set_color(c[0], c[1])
     elif f := args.filepath:
         color_prt(f)
     else:

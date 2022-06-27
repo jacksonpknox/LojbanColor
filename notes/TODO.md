@@ -1,5 +1,4 @@
-- file that shows off all color choices
-- choose colors
+- test driven development
 - possibly make a script that converts Lujvo parser grammar into Lujvo lexer grammar
 - function that generates a list of ocurrences of a word type, especially fuhivla
 
