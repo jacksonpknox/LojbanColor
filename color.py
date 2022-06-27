@@ -176,8 +176,10 @@ def set_color(selmaho: str, color: str) -> None:
         json.dump(colors, f, indent=4)
         
 
-def color_prt(filepath: str):
-    input_stream = FileStream(filepath, encoding="utf8")
+def color_prt(filepath: str, raw: bool=False):
+    #TODO: better to preemptively read file as a string
+    # and process string bydefeault probably
+    input_stream = InputStream(filepath) if raw else FileStream(filepath, encoding="utf8")
     lexer = ColorLexer(input_stream)  # lexer generated from grammar
     stream = CommonTokenStream(lexer)  # token stream from library
     parser = ColorParser(stream)  # parser generated from grammar
@@ -197,6 +199,7 @@ def main():
     parser.add_argument('filepath', action='store', default=None, nargs='?')
     parser.add_argument('-a', '--add', action='store', nargs=2)
     parser.add_argument('-c', '--color', action='store', nargs=2)
+    parser.add_argument('-i', '--input', action='store_true')
     args = parser.parse_args()
     if a := args.add:
         # just make a command mandatory
@@ -207,6 +210,9 @@ def main():
     if c := args.color:
         print("setting color of selmaho {} to {}".format(c[0], c[1]))
         set_color(c[0], c[1])
+    if args.input:
+        print("Type the input:")
+        color_prt(sys.stdin.read(), raw=True)
     elif f := args.filepath:
         color_prt(f)
     else:
