@@ -21,10 +21,10 @@ from python_lujvo.LujvoLexer import LujvoLexer
 from python_lujvo.LujvoParser import LujvoParser
 from python_lujvo.LujvoListener import LujvoListener
 
-with open("idk.json", "r") as f:
+with open("selmaho_colors.json", "r") as f:
     selmaho_to_color = json.load(f)
     
-with open("xd.yaml", "r") as f:
+with open("selmaho_wordsets.yaml", "r") as f:
     selmaho_to_dic = yaml.safe_load(f)
 
 #from indices import selmaho_to_color
@@ -136,25 +136,25 @@ class Colorizer(ColorListener):
         
 def add_selmaho(selmaho: str, color: str = "#0000FF"):
     # make sure this selmaho has a color
-    with open("idk.json", "r") as f:
+    with open("selmaho_colors.json", "r") as f:
         colors = json.load(f)
     if selmaho not in colors:
         colors[selmaho] = color
-    with open("idk.json", "w") as f:
+    with open("selmaho_colors.json", "w") as f:
         json.dump(colors, f, indent=4)
 
     # make sure this selmaho has a word-set
-    with open("xd.yaml", "r") as f:
+    with open("selmaho_wordsets.yaml", "r") as f:
         wordsets = yaml.safe_load(f)
     if selmaho not in wordsets:
         wordsets[selmaho] = set()
-    with open("xd.yaml", "w") as f:
+    with open("selmaho_wordsets.yaml", "w") as f:
         yaml.dump(wordsets, f)
         
 
 def add_cmavo(cmavo: str, selmaho: str) -> None:
     # open the wordsets
-    with open("xd.yaml", "r") as f:
+    with open("selmaho_wordsets.yaml", "r") as f:
         wordsets = yaml.safe_load(f)
     if selmaho not in wordsets:
         # observe the laziness.. we only have to add the color
@@ -164,7 +164,7 @@ def add_cmavo(cmavo: str, selmaho: str) -> None:
         wordsets[selmaho] = {cmavo}
     else:
         wordsets[selmaho].add(cmavo)
-    with open("xd.yaml", "w") as f:
+    with open("selmaho_wordsets.yaml", "w") as f:
         yaml.dump(wordsets, f)
     
         
