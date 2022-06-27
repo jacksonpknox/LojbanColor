@@ -5,6 +5,7 @@
 - function that generates a list of ocurrences of a word type, especially fuhivla
 
 ## long term goals
+- single character lexer
 - semantically group selmaho instead of alphabetically
 - grammar competition website
 - color selection tool
