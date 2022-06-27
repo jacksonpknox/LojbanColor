@@ -14,7 +14,7 @@ from python_lujvo.LujvoListener import LujvoListener
 import yaml
 
 
-with open("xd.yaml", "r") as f:
+with open("wordsets.yaml", "r") as f:
     selmaho_to_wordset = yaml.safe_load(f)
 
 
@@ -150,23 +150,23 @@ def add_selmaho(selmaho: str, color: str = "#0000FF"):
         json.dump(colors, f, indent=4)
 
     # make sure this selmaho has a word-set
-    with open("xd.yaml", "r") as f:
+    with open("wordsets.yaml", "r") as f:
         wordsets = yaml.safe_load(f)
     if selmaho not in wordsets:
         wordsets[selmaho] = set()
-    with open("xd.yaml", "w") as f:
+    with open("wordsets.yaml", "w") as f:
         yaml.dump(wordsets, f)
 
     
 def add_cmavo(cmavo: str, selmaho: str) -> None:
-    with open("xd.yaml", "r") as f:
+    with open("wordsets.yaml", "r") as f:
         wordsets = yaml.safe_load(f)
     if selmaho not in wordsets:
         add_selmaho(selmaho)
         wordsets[selmaho] = {cmavo}
     else:
         wordsets[selmaho].add(cmavo)
-    with open("xd.yaml", "w") as f:
+    with open("wordsets.yaml", "w") as f:
         yaml.dump(wordsets, f)
 
 
