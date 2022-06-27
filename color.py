@@ -21,49 +21,49 @@ from python_lujvo.LujvoLexer import LujvoLexer
 from python_lujvo.LujvoParser import LujvoParser
 from python_lujvo.LujvoListener import LujvoListener
 
+
 with open("selmaho_colors.json", "r") as f:
     selmaho_to_color = json.load(f)
+
     
 with open("selmaho_wordsets.yaml", "r") as f:
     selmaho_to_dic = yaml.safe_load(f)
 
-#from indices import selmaho_to_color
-#from selm import selmaho_to_dic
 
-t = Text()
-
-
-def put(txt, color):
+def put(t: Text, txt: str, color: str=None):
     t.append(txt, style=color)
 
 
 class LujvoColorizer(LujvoListener):
+    def __init__(self, t: Text):
+        self.t = t
+
     def enterY(self, ctx):
-        put(ctx.getText(), "yellow")
+        put(self.t, ctx.getText(), "yellow")
 
     def enterQ(self, ctx):
-        put(ctx.getText(), "yellow")
+        put(self.t, ctx.getText(), "yellow")
 
     def enterCafourraf(self, ctx):
-        put(ctx.getText(), "#FF8000")
+        put(self.t, ctx.getText(), "#FF8000")
 
     def enterCkfourraf(self, ctx):
-        put(ctx.getText(), "#FF8080")
+        put(self.t, ctx.getText(), "#FF8080")
 
     def enterBalraf(self, ctx):
-        put(ctx.getText(), f"#FFC0C0")
+        put(self.t, ctx.getText(), f"#FFC0C0")
 
     def enterBauraf(self, ctx):
-        put(ctx.getText(), f"#FFFFC0")
+        put(self.t, ctx.getText(), f"#FFFFC0")
 
     def enterBroraf(self, ctx):
-        put(ctx.getText(), f"#FFC080")
+        put(self.t, ctx.getText(), f"#FFC080")
 
     def enterCagismu(self, ctx):
-        put(ctx.getText(), "#FF0000")
+        put(self.t, ctx.getText(), "#FF0000")
 
     def enterCkagismu(self, ctx):
-        put(ctx.getText(), "#FF0000")
+        put(self.t, ctx.getText(), "#FF0000")
 
     
 def get_selmaho(cmavo: str):
@@ -72,12 +72,16 @@ def get_selmaho(cmavo: str):
             return selmaho
     return "UNCAT"
 
-def process_cmavo(cmavo: str):
-    color = selmaho_to_color[get_selmaho(cmavo)]
-    put(cmavo, color)
+
+def get_cmavo_color(cmavo: str) -> str:
+    return selmaho_to_color[get_selmaho(cmavo)]
 
 
-def process_compmo(compmo: str):
+def put_cmavo(t: Text, cmavo: str) -> None:
+    put(t, cmavo, get_cmavo_color(cmavo))
+
+
+def process_compmo(t: Text, compmo: str) -> None:
     # split the compmo into cmavos
     i = 0
     j = 2
@@ -92,46 +96,49 @@ def process_compmo(compmo: str):
         j += 1
     cmavos.append("".join(compy[i:j]))
     for cmavo in cmavos:
-        process_cmavo(cmavo)
+        put_cmavo(t, cmavo)
         
 
 
-def process_lujvo(lujvo: str):
+def process_lujvo(t: Text, lujvo: str) -> None:
     input_stream = InputStream(lujvo)
     lexer = LujvoLexer(input_stream)
     stream = CommonTokenStream(lexer)
     parser = LujvoParser(stream)
     tree = parser.lujvo()
 
-    printer = LujvoColorizer()
+    printer = LujvoColorizer(t)
     walker = ParseTreeWalker()
     walker.walk(printer, tree)
 
 
 class Colorizer(ColorListener):
+    def __init__(self, t: Text):
+        self.t = t
+
     def exitSentence(self, ctx):
-        put("\n", None)
+        put(self.t, "\n", None)
 
     def exitWord(self, ctx):
-        put(" ", None)
+        put(self.t, " ", None)
 
     def enterCmavo(self, ctx):
-        process_cmavo(ctx.getText())
+        put_cmavo(self.t, ctx.getText())
     
     def enterFuhivla(self, ctx):
-        put(ctx.getText(), "#008700")
+        put(self.t, ctx.getText(), "#008700")
 
     def enterLujvo(self, ctx):
-        process_lujvo(ctx.getText())
+        process_lujvo(self.t, ctx.getText())
 
     def enterGismu(self, ctx):
-        put(ctx.getText(), "#FF0000")
+        put(self.t, ctx.getText(), "#FF0000")
 
     def enterCmene(self, ctx):
-        put(ctx.getText(), "#FFFF00")
+        put(self.t, ctx.getText(), "#FFFF00")
 
     def enterCompmo(self, ctx):
-        process_compmo(ctx.getText())
+        process_compmo(self.t, ctx.getText())
 
         
 def add_selmaho(selmaho: str, color: str = "#0000FF"):
@@ -184,11 +191,12 @@ def color_prt(content: str) -> Text:
     parser = ColorParser(stream)  # parser generated from grammar
     tree = parser.folio()
 
-    printer = Colorizer()
+    t = Text()
+    printer = Colorizer(t)
     walker = ParseTreeWalker()
     walker.walk(printer, tree)
 
-    t.rstrip()
+    printer.t.rstrip()
 
     return t
 
