@@ -27,35 +27,36 @@ def put(t: Text, txt: str, color: str=None):
 
 #TODO: factor out (too long)
 class LujvoColorizer(LujvoListener):
-    def __init__(self, t: Text):
+    def __init__(self, t: Text, palatte: dict):
         self.t = t
+        self.palatte = palatte
 
     def enterY(self, ctx):
-        put(self.t, ctx.getText(), "yellow")
+        put(self.t, ctx.getText(), self.palatte['y'])
 
     def enterQ(self, ctx):
-        put(self.t, ctx.getText(), "yellow")
+        put(self.t, ctx.getText(), self.palatte['q'])
 
     def enterCafourraf(self, ctx):
-        put(self.t, ctx.getText(), "#FF8000")
+        put(self.t, ctx.getText(), self.palatte['cafourraf'])
 
     def enterCkfourraf(self, ctx):
-        put(self.t, ctx.getText(), "#FF8080")
+        put(self.t, ctx.getText(), self.palatte['ckfourraf'])
 
     def enterBalraf(self, ctx):
-        put(self.t, ctx.getText(), f"#FFC0C0")
+        put(self.t, ctx.getText(), self.palatte['balraf'])
 
     def enterBauraf(self, ctx):
-        put(self.t, ctx.getText(), f"#FFFFC0")
+        put(self.t, ctx.getText(), self.palatte['bauraf'])
 
     def enterBroraf(self, ctx):
-        put(self.t, ctx.getText(), f"#FFC080")
+        put(self.t, ctx.getText(), self.palatte['broraf'])
 
     def enterCagismu(self, ctx):
-        put(self.t, ctx.getText(), "#FF0000")
+        put(self.t, ctx.getText(), self.palatte['cagismu'])
 
     def enterCkagismu(self, ctx):
-        put(self.t, ctx.getText(), "#FF0000")
+        put(self.t, ctx.getText(), self.palatte['ckagismu'])
 
 
 def get_selmaho(cmavo: str, selmahos: dict) -> str:
@@ -95,14 +96,14 @@ def process_compmo(t: Text, compmo: str, selmahos: dict) -> None:
         
 
 #TODO: test this
-def process_lujvo(t: Text, lujvo: str) -> None:
+def process_lujvo(t: Text, lujvo: str, config: dict) -> None:
     input_stream = InputStream(lujvo)
     lexer = LujvoLexer(input_stream)
     stream = CommonTokenStream(lexer)
     parser = LujvoParser(stream)
     tree = parser.lujvo()
 
-    printer = LujvoColorizer(t)
+    printer = LujvoColorizer(t, config['rafsi'])
     walker = ParseTreeWalker()
     walker.walk(printer, tree)
 
@@ -110,8 +111,12 @@ def process_lujvo(t: Text, lujvo: str) -> None:
 class Colorizer(ColorListener):
     def __init__(self, t: Text):
         self.t = t
+        #TODO: factor the location of selmaho file out, ideally into the config
         with open("selmahos.json", "r") as f:
             self.selmahos = json.load(f)
+        #TODO: factor location of config out into default, and construct argument for customization
+        with open("config.json", "r") as f:
+            self.config = json.load(f)
 
     def exitSentence(self, ctx):
         put(self.t, "\n", None)
@@ -123,16 +128,16 @@ class Colorizer(ColorListener):
         put_cmavo(self.t, ctx.getText(), self.selmahos)
     
     def enterFuhivla(self, ctx):
-        put(self.t, ctx.getText(), "#008700")
+        put(self.t, ctx.getText(), self.config["fu'ihivla"]["color"])
 
     def enterLujvo(self, ctx):
-        process_lujvo(self.t, ctx.getText())
+        process_lujvo(self.t, ctx.getText(), self.config)
 
     def enterGismu(self, ctx):
-        put(self.t, ctx.getText(), "#FF0000")
+        put(self.t, ctx.getText(), self.config["rafsi"]["gismu"])
 
     def enterCmene(self, ctx):
-        put(self.t, ctx.getText(), "#FFFF00")
+        put(self.t, ctx.getText(), self.config["cmene"]["color"])
 
     def enterCompmo(self, ctx):
         process_compmo(self.t, ctx.getText(), self.selmahos)
@@ -201,6 +206,7 @@ def build_parser():
     parser.add_argument('-a', '--add', action='store', nargs=2)
     parser.add_argument('-c', '--color', action='store', nargs=2)
     parser.add_argument('-i', '--input', action='store_true')
+    return parser
 
 
 def main():

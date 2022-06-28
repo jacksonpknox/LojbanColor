@@ -1,6 +1,7 @@
 - config for non-selmaho word types
 - test? check selmaho disjointness
 - factor out loading and writing config
+- BUG: fix color so it doesnt require hex code (remove '#' from code)
 
 ## long term goals
 - single character lexer
