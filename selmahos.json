@@ -1,0 +1,1199 @@
+{
+  "A": {
+    "color": "#0000FF",
+    "cmavos": [
+      ".u",
+      ".a",
+      ".o",
+      ".e"
+    ]
+  },
+  "BAI": {
+    "color": "#0000FF",
+    "cmavos": [
+      "mu'u",
+      "ma'i",
+      "ki'i",
+      "me'a",
+      "ci'o",
+      "fau",
+      "rai",
+      "ti'u",
+      "pi'o",
+      "du'i",
+      "ga'a",
+      "gau",
+      "la'u",
+      "koi",
+      "ra'i",
+      "li'e",
+      "ji'u",
+      "bau",
+      "sau",
+      "ba'i",
+      "fa'e",
+      "ci'u",
+      "va'u",
+      "cau",
+      "do'e",
+      "ka'a",
+      "ji'o",
+      "pu'a",
+      "zau",
+      "ma'e",
+      "me'e",
+      "cu'u",
+      "de'i",
+      "pu'e",
+      "ki'u",
+      "di'o",
+      "ti'i",
+      "ja'i",
+      "ri'a",
+      "mau",
+      "pa'a",
+      "ca'i",
+      "si'u",
+      "ci'e",
+      "ji'e",
+      "kai",
+      "bai",
+      "le'a",
+      "be'i",
+      "tai",
+      "ku'u",
+      "zu'e",
+      "ka'i",
+      "mu'i",
+      "fi'e",
+      "ni'i",
+      "pa'u",
+      "ta'i",
+      "tu'i",
+      "po'i",
+      "du'o",
+      "va'o",
+      "ra'a",
+      "ja'e"
+    ]
+  },
+  "BAhE": {
+    "color": "#0000FF",
+    "cmavos": [
+      "ba'e",
+      "za'e"
+    ]
+  },
+  "BE": {
+    "color": "#0000FF",
+    "cmavos": [
+      "be"
+    ]
+  },
+  "BEI": {
+    "color": "#0000FF",
+    "cmavos": [
+      "bei"
+    ]
+  },
+  "BEhO": {
+    "color": "#0000FF",
+    "cmavos": [
+      "be'o"
+    ]
+  },
+  "BIhE": {
+    "color": "#0000FF",
+    "cmavos": [
+      "bi'e"
+    ]
+  },
+  "BIhI": {
+    "color": "#0000FF",
+    "cmavos": [
+      "bi'o",
+      "mi'i",
+      "bi'i"
+    ]
+  },
+  "BO": {
+    "color": "#0000FF",
+    "cmavos": [
+      "bo"
+    ]
+  },
+  "BOI": {
+    "color": "#0000FF",
+    "cmavos": [
+      "boi"
+    ]
+  },
+  "BU": {
+    "color": "#0000FF",
+    "cmavos": [
+      "bu"
+    ]
+  },
+  "BY": {
+    "color": "#33FFFF",
+    "cmavos": [
+      "ty.",
+      ".y'y.",
+      "je'o",
+      "xy.",
+      "my.",
+      "ru'o",
+      "zy.",
+      "ry.",
+      "cy.",
+      "jy.",
+      "ly.",
+      "ky.",
+      "py.",
+      "na'a",
+      "gy.",
+      "by.",
+      "lo'a",
+      "dy.",
+      "sy.",
+      "vy.",
+      "jo'o",
+      "fy.",
+      "ny.",
+      "ge'o"
+    ]
+  },
+  "CAI": {
+    "color": "#0000FF",
+    "cmavos": [
+      "ru'e",
+      "pei",
+      "cu'i",
+      "sai",
+      "cai"
+    ]
+  },
+  "CAhA": {
+    "color": "#0000FF",
+    "cmavos": [
+      "ka'e",
+      "pu'i",
+      "nu'o",
+      "ca'a"
+    ]
+  },
+  "CEI": {
+    "color": "#0000FF",
+    "cmavos": [
+      "cei"
+    ]
+  },
+  "CEhE": {
+    "color": "#0000FF",
+    "cmavos": [
+      "ce'e"
+    ]
+  },
+  "CO": {
+    "color": "#0000FF",
+    "cmavos": [
+      "co"
+    ]
+  },
+  "COI": {
+    "color": "#0000FF",
+    "cmavos": [
+      "fi'i",
+      "mu'o",
+      "jo'au",
+      "mi'e",
+      "ju'i",
+      "ki'e",
+      "vi'o",
+      "ke'o",
+      "nu'e",
+      "coi",
+      "co'o",
+      "be'e",
+      "ta'a",
+      "fe'o",
+      "je'e",
+      "re'i",
+      "pe'u"
+    ]
+  },
+  "CU": {
+    "color": "#0000FF",
+    "cmavos": [
+      "cu"
+    ]
+  },
+  "CUhE": {
+    "color": "#0000FF",
+    "cmavos": [
+      "nau",
+      "cu'e"
+    ]
+  },
+  "DAhO": {
+    "color": "#0000FF",
+    "cmavos": [
+      "da'o"
+    ]
+  },
+  "DOI": {
+    "color": "#0000FF",
+    "cmavos": [
+      "doi"
+    ]
+  },
+  "DOhU": {
+    "color": "#0000FF",
+    "cmavos": [
+      "do'u"
+    ]
+  },
+  "FA": {
+    "color": "#0000FF",
+    "cmavos": [
+      "fai",
+      "fa",
+      "fe",
+      "fi'a",
+      "fi",
+      "fu",
+      "fo"
+    ]
+  },
+  "FAhA": {
+    "color": "#0000FF",
+    "cmavos": [
+      "fa'a",
+      "ne'a",
+      "ze'o",
+      "zo'a",
+      "zu'a",
+      "te'e",
+      "ca'u",
+      "zo'i",
+      "ru'u",
+      "du'a",
+      "bu'u",
+      "ga'u",
+      "re'o",
+      "ne'i",
+      "ni'a",
+      "ne'u",
+      "be'a",
+      "to'o",
+      "vu'a",
+      "ti'a",
+      "pa'o"
+    ]
+  },
+  "FAhO": {
+    "color": "#0000FF",
+    "cmavos": [
+      "fa'o"
+    ]
+  },
+  "FEhE": {
+    "color": "#0000FF",
+    "cmavos": [
+      "fe'e"
+    ]
+  },
+  "FEhU": {
+    "color": "#0000FF",
+    "cmavos": [
+      "fe'u"
+    ]
+  },
+  "FIhO": {
+    "color": "#0000FF",
+    "cmavos": [
+      "fi'o"
+    ]
+  },
+  "FOI": {
+    "color": "#0000FF",
+    "cmavos": [
+      "foi"
+    ]
+  },
+  "FUhA": {
+    "color": "#0000FF",
+    "cmavos": [
+      "fu'a"
+    ]
+  },
+  "FUhE": {
+    "color": "#0000FF",
+    "cmavos": [
+      "fu'e"
+    ]
+  },
+  "FUhO": {
+    "color": "#0000FF",
+    "cmavos": [
+      "fu'o"
+    ]
+  },
+  "GA": {
+    "color": "#0000FF",
+    "cmavos": [
+      "ge",
+      "gu",
+      "go",
+      "ga"
+    ]
+  },
+  "GAhO": {
+    "color": "#0000FF",
+    "cmavos": [
+      "ga'o",
+      "ke'i"
+    ]
+  },
+  "GEhU": {
+    "color": "#0000FF",
+    "cmavos": [
+      "ge'u"
+    ]
+  },
+  "GI": {
+    "color": "#0000FF",
+    "cmavos": [
+      "gi"
+    ]
+  },
+  "GIhA": {
+    "color": "#0000FF",
+    "cmavos": [
+      "gi'o",
+      "gi'a",
+      "gi'u",
+      "gi'e"
+    ]
+  },
+  "GOI": {
+    "color": "#0000FF",
+    "cmavos": [
+      "ne",
+      "po'e",
+      "pe",
+      "no'u",
+      "po'u",
+      "goi",
+      "po"
+    ]
+  },
+  "GOhA": {
+    "color": "#0000FF",
+    "cmavos": [
+      "go'o",
+      "go'i",
+      "bu'i",
+      "co'e",
+      "go'u",
+      "go'a",
+      "mo",
+      "nei",
+      "go'e",
+      "no'a",
+      "du",
+      "bu'a",
+      "bu'e"
+    ]
+  },
+  "GUhA": {
+    "color": "#0000FF",
+    "cmavos": [
+      "gu'a",
+      "gu'e",
+      "gu'o",
+      "gu'u"
+    ]
+  },
+  "I": {
+    "color": "#008080",
+    "cmavos": [
+      ".i"
+    ]
+  },
+  "JA": {
+    "color": "#0000FF",
+    "cmavos": [
+      "jo",
+      "ju",
+      "ja",
+      "je"
+    ]
+  },
+  "JAI": {
+    "color": "#0000FF",
+    "cmavos": [
+      "jai"
+    ]
+  },
+  "JOI": {
+    "color": "#0000FF",
+    "cmavos": [
+      "ce",
+      "joi",
+      "jo'e",
+      "ku'a",
+      "ce'o",
+      "fa'u",
+      "jo'u",
+      "pi'u"
+    ]
+  },
+  "JOhI": {
+    "color": "#0000FF",
+    "cmavos": [
+      "jo'i"
+    ]
+  },
+  "KE": {
+    "color": "#0000FF",
+    "cmavos": [
+      "ke"
+    ]
+  },
+  "KEI": {
+    "color": "#0000FF",
+    "cmavos": [
+      "kei"
+    ]
+  },
+  "KEhE": {
+    "color": "#0000FF",
+    "cmavos": [
+      "ke'e"
+    ]
+  },
+  "KI": {
+    "color": "#0000FF",
+    "cmavos": [
+      "ki"
+    ]
+  },
+  "KOhA": {
+    "color": "#0000FF",
+    "cmavos": [
+      "vo'o",
+      "do'i",
+      "tu",
+      "ko'i",
+      "de",
+      "zu'i",
+      "ri",
+      "ce'u",
+      "zo'e",
+      "ko'e",
+      "de'e",
+      "fo'a",
+      "ko'o",
+      "da'u",
+      "da",
+      "ke'a",
+      "vo'a",
+      "vo'u",
+      "ma'a",
+      "dei",
+      "do'o",
+      "ta",
+      "di'u",
+      "di",
+      "vo'e",
+      "ra",
+      "di'e",
+      "ma",
+      "ru",
+      "do",
+      "fo'u",
+      "vo'i",
+      "da'e",
+      "ko'u",
+      "mi'o",
+      "zi'o",
+      "ko'a",
+      "fo'e",
+      "ti'e",
+      "de'u",
+      "ti",
+      "fo'i",
+      "fo'o",
+      "mi'a",
+      "mi",
+      "ko"
+    ]
+  },
+  "KU": {
+    "color": "#0000FF",
+    "cmavos": [
+      "ku"
+    ]
+  },
+  "KUhE": {
+    "color": "#4040FF",
+    "cmavos": [
+      "ku'e"
+    ]
+  },
+  "KUhO": {
+    "color": "#0000FF",
+    "cmavos": [
+      "ku'o"
+    ]
+  },
+  "LA": {
+    "color": "#0000FF",
+    "cmavos": [
+      "la"
+    ]
+  },
+  "LAU": {
+    "color": "#0000FF",
+    "cmavos": [
+      "tau",
+      "zai",
+      "lau",
+      "ce'a"
+    ]
+  },
+  "LAhE": {
+    "color": "#0000FF",
+    "cmavos": [
+      "lu'e",
+      "tu'a",
+      "la'e",
+      "lu'a",
+      "lu'i",
+      "vu'i",
+      "lu'o"
+    ]
+  },
+  "LE": {
+    "color": "#0000FF",
+    "cmavos": [
+      "le",
+      "loi",
+      "lo'e",
+      "ri'oi",
+      "le'e",
+      "lo",
+      "lei"
+    ]
+  },
+  "LEhU": {
+    "color": "#0000FF",
+    "cmavos": [
+      "le'u"
+    ]
+  },
+  "LI": {
+    "color": "#0000FF",
+    "cmavos": [
+      "li"
+    ]
+  },
+  "LIhAU": {
+    "color": "#0000FF",
+    "cmavos": [
+      "li'au"
+    ]
+  },
+  "LIhU": {
+    "color": "#0000FF",
+    "cmavos": [
+      "li'u"
+    ]
+  },
+  "LOhO": {
+    "color": "#0000FF",
+    "cmavos": [
+      "lo'o"
+    ]
+  },
+  "LOhU": {
+    "color": "#0000FF",
+    "cmavos": [
+      "lo'u"
+    ]
+  },
+  "LU": {
+    "color": "#0000FF",
+    "cmavos": [
+      "lu"
+    ]
+  },
+  "LUhEI": {
+    "color": "#0000FF",
+    "cmavos": [
+      "lu'ei"
+    ]
+  },
+  "LUhU": {
+    "color": "#0000FF",
+    "cmavos": [
+      "lu'u"
+    ]
+  },
+  "MAI": {
+    "color": "#0000FF",
+    "cmavos": [
+      "mai",
+      "mo'o"
+    ]
+  },
+  "MAhO": {
+    "color": "#0000FF",
+    "cmavos": [
+      "ma'o"
+    ]
+  },
+  "ME": {
+    "color": "#0000FF",
+    "cmavos": [
+      "me"
+    ]
+  },
+  "MEhU": {
+    "color": "#0000FF",
+    "cmavos": [
+      "me'u"
+    ]
+  },
+  "MOI": {
+    "color": "#0000FF",
+    "cmavos": [
+      "si'e",
+      "mei",
+      "moi",
+      "va'e",
+      "cu'o"
+    ]
+  },
+  "MOhE": {
+    "color": "#0000FF",
+    "cmavos": [
+      "mo'e"
+    ]
+  },
+  "MOhI": {
+    "color": "#0000FF",
+    "cmavos": [
+      "mo'i"
+    ]
+  },
+  "NA": {
+    "color": "#8030FF",
+    "cmavos": [
+      "ja'a",
+      "na"
+    ]
+  },
+  "NAI": {
+    "color": "#8030FF",
+    "cmavos": [
+      "nai"
+    ]
+  },
+  "NAhE": {
+    "color": "#8030FF",
+    "cmavos": [
+      "cau'e",
+      "na'e",
+      "no'e",
+      "to'e"
+    ]
+  },
+  "NAhU": {
+    "color": "#0000FF",
+    "cmavos": [
+      "na'u"
+    ]
+  },
+  "NIhE": {
+    "color": "#0000FF",
+    "cmavos": [
+      "ni'e"
+    ]
+  },
+  "NIhO": {
+    "color": "#0000FF",
+    "cmavos": [
+      "ni'o"
+    ]
+  },
+  "NOI": {
+    "color": "#0000FF",
+    "cmavos": [
+      "voi",
+      "poi",
+      "noi"
+    ]
+  },
+  "NOIhA": {
+    "color": "#0000FF",
+    "cmavos": [
+      "poi'a"
+    ]
+  },
+  "NU": {
+    "color": "#0000FF",
+    "cmavos": [
+      "li'i",
+      "zu'o",
+      "si'o",
+      "za'i",
+      "ni",
+      "ka",
+      "poi'i",
+      "nu",
+      "du'u",
+      "pu'u",
+      "mu'e",
+      "su'u"
+    ]
+  },
+  "NUhA": {
+    "color": "#0000FF",
+    "cmavos": [
+      "nu'a"
+    ]
+  },
+  "NUhI": {
+    "color": "#0000FF",
+    "cmavos": [
+      "nu'i"
+    ]
+  },
+  "NUhU": {
+    "color": "#0000FF",
+    "cmavos": [
+      "nu'u"
+    ]
+  },
+  "PA": {
+    "color": "#8080FF",
+    "cmavos": [
+      "da'a",
+      "fei",
+      "fi'u",
+      "no'o",
+      "pi",
+      "ro",
+      "no",
+      "tu'o",
+      "ji'i",
+      "ci",
+      "ka'o",
+      "rei",
+      "so'u",
+      "me'i",
+      "so'a",
+      "re",
+      "ra'e",
+      "ce'i",
+      "mo'a",
+      "vo",
+      "so",
+      "te'o",
+      "mu",
+      "ni'u",
+      "su'e",
+      "bi",
+      "so'o",
+      "dau",
+      "ma'u",
+      "gai",
+      "du'e",
+      "rau",
+      "xa",
+      "za'u",
+      "jau",
+      "su'o",
+      "xo",
+      "pai",
+      "ci'i",
+      "so'i",
+      "ze",
+      "pi'e",
+      "pa",
+      "so'e",
+      "vai",
+      "ki'o"
+    ]
+  },
+  "PEhE": {
+    "color": "#0000FF",
+    "cmavos": [
+      "pe'e"
+    ]
+  },
+  "PEhO": {
+    "color": "#0000FF",
+    "cmavos": [
+      "pe'o"
+    ]
+  },
+  "PU": {
+    "color": "#0000FF",
+    "cmavos": [
+      "ca",
+      "pu",
+      "ba"
+    ]
+  },
+  "RAhO": {
+    "color": "#0000FF",
+    "cmavos": [
+      "ra'o"
+    ]
+  },
+  "ROI": {
+    "color": "#0000FF",
+    "cmavos": [
+      "roi",
+      "re'u"
+    ]
+  },
+  "SA": {
+    "color": "#0000FF",
+    "cmavos": [
+      "sa"
+    ]
+  },
+  "SE": {
+    "color": "#8080FF",
+    "cmavos": [
+      "xe",
+      "te",
+      "ve",
+      "se"
+    ]
+  },
+  "SEI": {
+    "color": "#0000FF",
+    "cmavos": [
+      "sei"
+    ]
+  },
+  "SEhU": {
+    "color": "#0000FF",
+    "cmavos": [
+      "se'u"
+    ]
+  },
+  "SI": {
+    "color": "#0000FF",
+    "cmavos": [
+      "si"
+    ]
+  },
+  "SOI": {
+    "color": "#0000FF",
+    "cmavos": [
+      "soi"
+    ]
+  },
+  "SU": {
+    "color": "#0000FF",
+    "cmavos": [
+      "su"
+    ]
+  },
+  "TAhE": {
+    "color": "#0000FF",
+    "cmavos": [
+      "na'o",
+      "ru'i",
+      "di'i",
+      "ta'e"
+    ]
+  },
+  "TEI": {
+    "color": "#0000FF",
+    "cmavos": [
+      "tei"
+    ]
+  },
+  "TEhU": {
+    "color": "#0000FF",
+    "cmavos": [
+      "te'u"
+    ]
+  },
+  "TO": {
+    "color": "#0000FF",
+    "cmavos": [
+      "to",
+      "to'i"
+    ]
+  },
+  "TOI": {
+    "color": "#0000FF",
+    "cmavos": [
+      "toi"
+    ]
+  },
+  "TUhE": {
+    "color": "#0000FF",
+    "cmavos": [
+      "tu'e"
+    ]
+  },
+  "TUhU": {
+    "color": "#0000FF",
+    "cmavos": [
+      "tu'u"
+    ]
+  },
+  "UI": {
+    "color": "#8080FF",
+    "cmavos": [
+      "vu'e",
+      "ro'i",
+      ".au",
+      ".i'i",
+      ".o'a",
+      ".ui",
+      "ju'a",
+      ".a'i",
+      ".o'o",
+      ".u'e",
+      "re'e",
+      "ki'a",
+      ".ia",
+      "bu'o",
+      "va'i",
+      ".ue",
+      "jo'a",
+      "ru'a",
+      "mi'u",
+      "kau",
+      "dai",
+      "ja'o",
+      "la'a",
+      ".ai",
+      ".u'i",
+      "mu'a",
+      "be'u",
+      "li'o",
+      ".u'u",
+      ".oi",
+      ".e'i",
+      ".ii",
+      ".i'u",
+      ".a'a",
+      ".io",
+      ".o'i",
+      ".ua",
+      ".iu",
+      "bi'u",
+      "ku'i",
+      "pe'i",
+      "sa'a",
+      ".a'o",
+      "li'a",
+      ".i'a",
+      "ba'u",
+      "se'o",
+      "zu'u",
+      ".ei",
+      ".u'a",
+      "na'i",
+      ".i'e",
+      ".e'a",
+      "do'a",
+      "pa'e",
+      "ro'a",
+      "ca'e",
+      "ge'e",
+      "se'a",
+      "to'u",
+      ".a'u",
+      "ju'o",
+      ".e'u",
+      "fu'i",
+      ".ie",
+      ".u'o",
+      ".a'e",
+      "je'u",
+      "ro'u",
+      "ra'u",
+      "ri'e",
+      "ke'u",
+      "pe'a",
+      ".o'e",
+      "xu",
+      "ba'a",
+      "sa'u",
+      "pau",
+      ".i'o",
+      ".e'o",
+      ".o'u",
+      "ga'i",
+      "ji'a",
+      "po'o",
+      "za'a",
+      "le'o",
+      "ka'u",
+      "ti'e",
+      "zo'o",
+      "da'i",
+      ".e'e",
+      "sa'e",
+      "si'a",
+      "ta'o",
+      "ro'e",
+      "se'i",
+      "su'a",
+      ".uu"
+    ]
+  },
+  "VA": {
+    "color": "#0000FF",
+    "cmavos": [
+      "vi",
+      "vu",
+      "va"
+    ]
+  },
+  "VAU": {
+    "color": "#0000FF",
+    "cmavos": [
+      "vau"
+    ]
+  },
+  "VEI": {
+    "color": "#0000FF",
+    "cmavos": [
+      "vei"
+    ]
+  },
+  "VEhA": {
+    "color": "#0000FF",
+    "cmavos": [
+      "ve'e",
+      "ve'u",
+      "ve'i",
+      "ve'a"
+    ]
+  },
+  "VEhO": {
+    "color": "#0000FF",
+    "cmavos": [
+      "ve'o"
+    ]
+  },
+  "VIhA": {
+    "color": "#0000FF",
+    "cmavos": [
+      "vi'e",
+      "vi'a",
+      "vi'i",
+      "vi'u"
+    ]
+  },
+  "VUhO": {
+    "color": "#0000FF",
+    "cmavos": [
+      "vu'o"
+    ]
+  },
+  "VUhU": {
+    "color": "#0000FF",
+    "cmavos": [
+      "ju'u",
+      "sa'i",
+      "vu'u",
+      "te'a",
+      "su'i",
+      "ge'a",
+      "va'a",
+      "fe'a",
+      "gei",
+      "pi'a",
+      "pi'i"
+    ]
+  },
+  "XI": {
+    "color": "#0000FF",
+    "cmavos": [
+      "xi"
+    ]
+  },
+  "Y": {
+    "color": "#0000FF",
+    "cmavos": [
+      ".y."
+    ]
+  },
+  "ZAhO": {
+    "color": "#0000FF",
+    "cmavos": [
+      "mo'u",
+      "ca'o",
+      "co'u",
+      "pu'o",
+      "co'i",
+      "co'a",
+      "de'a",
+      "ba'o",
+      "di'a",
+      "za'o"
+    ]
+  },
+  "ZEI": {
+    "color": "#0000FF",
+    "cmavos": [
+      "zei"
+    ]
+  },
+  "ZEhA": {
+    "color": "#0000FF",
+    "cmavos": [
+      "ze'e",
+      "ze'i",
+      "ze'u",
+      "ze'a"
+    ]
+  },
+  "ZI": {
+    "color": "#0000FF",
+    "cmavos": [
+      "zi",
+      "za",
+      "zu"
+    ]
+  },
+  "ZIhE": {
+    "color": "#0000FF",
+    "cmavos": [
+      "zi'e"
+    ]
+  },
+  "ZO": {
+    "color": "#0000FF",
+    "cmavos": [
+      "zo"
+    ]
+  },
+  "ZOI": {
+    "color": "#0000FF",
+    "cmavos": [
+      "la'o",
+      "zoi"
+    ]
+  },
+  "ZOhU": {
+    "color": "#0000FF",
+    "cmavos": [
+      "zo'u"
+    ]
+  }
+}

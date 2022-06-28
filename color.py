@@ -21,6 +21,8 @@ from python_lujvo.LujvoLexer import LujvoLexer
 from python_lujvo.LujvoParser import LujvoParser
 from python_lujvo.LujvoListener import LujvoListener
 
+#TODO: 
+
 
 def put(t: Text, txt: str, color: str=None):
     t.append(txt, style=color)
@@ -57,23 +59,23 @@ class LujvoColorizer(LujvoListener):
     def enterCkagismu(self, ctx):
         put(self.t, ctx.getText(), "#FF0000")
 
-    
-def get_selmaho(cmavo: str, selmaho_to_cmavos: dict):
-    for selmaho, cmavos in selmaho_to_cmavos.items():
-        if cmavo in cmavos:
+
+def get_selmaho(cmavo: str, selmahos: dict):
+    for selmaho in selmahos.keys():
+        if cmavo in selmahos[selmaho]["cmavos"]:
             return selmaho
     return "UNCAT"
 
 
-def get_cmavo_color(cmavo: str, selmaho_to_color: dict, selmaho_to_cmavos: dict) -> str:
-    return selmaho_to_color[get_selmaho(cmavo, selmaho_to_cmavos)]
+def get_cmavo_color(cmavo: str, selmahos: dict) -> str:
+    return selmahos[get_selmaho(cmavo, selmahos)]["color"]
 
 
-def put_cmavo(t: Text, cmavo: str, selmaho_to_color: dict, selmaho_to_cmavos: dict) -> None:
-    put(t, cmavo, get_cmavo_color(cmavo, selmaho_to_color, selmaho_to_cmavos))
+def put_cmavo(t: Text, cmavo: str, selmahos: dict) -> None:
+    put(t, cmavo, get_cmavo_color(cmavo, selmahos))
 
 
-def process_compmo(t: Text, compmo: str, selmaho_to_color: dict, selmaho_to_cmavos: dict) -> None:
+def process_compmo(t: Text, compmo: str, selmahos: dict) -> None:
     # split the compmo into cmavos
     i = 0
     j = 2
@@ -88,7 +90,7 @@ def process_compmo(t: Text, compmo: str, selmaho_to_color: dict, selmaho_to_cmav
         j += 1
     cmavos.append("".join(compy[i:j]))
     for cmavo in cmavos:
-        put_cmavo(t, cmavo, selmaho_to_color, selmaho_to_cmavos)
+        put_cmavo(t, cmavo, selmahos)
         
 
 
@@ -107,10 +109,8 @@ def process_lujvo(t: Text, lujvo: str) -> None:
 class Colorizer(ColorListener):
     def __init__(self, t: Text):
         self.t = t
-        with open("selmaho_colors.json", "r") as f:
-            self.selmaho_to_color = json.load(f)
-        with open("selmaho_wordsets.yaml", "r") as f:
-            self.selmaho_to_cmavos = yaml.safe_load(f)
+        with open("selmahos.json", "r") as f:
+            self.selmahos = json.load(f)
 
     def exitSentence(self, ctx):
         put(self.t, "\n", None)
@@ -119,7 +119,7 @@ class Colorizer(ColorListener):
         put(self.t, " ", None)
 
     def enterCmavo(self, ctx):
-        put_cmavo(self.t, ctx.getText(), self.selmaho_to_color, self.selmaho_to_cmavos)
+        put_cmavo(self.t, ctx.getText(), self.selmahos)
     
     def enterFuhivla(self, ctx):
         put(self.t, ctx.getText(), "#008700")
@@ -134,49 +134,26 @@ class Colorizer(ColorListener):
         put(self.t, ctx.getText(), "#FFFF00")
 
     def enterCompmo(self, ctx):
-        process_compmo(self.t, ctx.getText(), self.selmaho_to_color, self.selmaho_to_cmavos)
+        process_compmo(self.t, ctx.getText(), self.selmahos)
 
         
-def add_selmaho(selmaho: str, color: str = "#0000FF"):
-    # make sure this selmaho has a color
-    with open("selmaho_colors.json", "r") as f:
-        colors = json.load(f)
-    if selmaho not in colors:
-        colors[selmaho] = color
-    with open("selmaho_colors.json", "w") as f:
-        json.dump(colors, f, indent=4)
-
-    # make sure this selmaho has a word-set
-    with open("selmaho_wordsets.yaml", "r") as f:
-        wordsets = yaml.safe_load(f)
-    if selmaho not in wordsets:
-        wordsets[selmaho] = set()
-    with open("selmaho_wordsets.yaml", "w") as f:
-        yaml.dump(wordsets, f)
-        
-
 def add_cmavo(cmavo: str, selmaho: str) -> None:
-    # open the wordsets
-    with open("selmaho_wordsets.yaml", "r") as f:
-        wordsets = yaml.safe_load(f)
-    if selmaho not in wordsets:
-        # observe the laziness.. we only have to add the color
-        add_selmaho(selmaho)
-        # we use the following line instead of universally .add(cmavo)
-        #  because add_selmaho does not affect our local copy of wordsets
-        wordsets[selmaho] = {cmavo}
-    else:
-        wordsets[selmaho].add(cmavo)
-    with open("selmaho_wordsets.yaml", "w") as f:
-        yaml.dump(wordsets, f)
-    
+    with open("selmahos.json", "r") as f:
+        selmahos = json.load(f)
+    if selmaho not in selmahos.keys():
+        selmahos[selmaho] = {"color": "#0000FF", "cmavos": []}
+    selmahos[selmaho]["cmavos"].append(cmavo)
+    with open("selmahos.json", "w") as f:
+        json.dump(selmahos, f, indent=2)
+
 
 def set_color(selmaho: str, color: str) -> None:
-    with open("selmaho_colors.json", "r") as f:
-        colors = json.load(f)
-    colors[selmaho] = "#" + color
-    with open("selmaho_colors.json", "w") as f:
-        json.dump(colors, f, indent=4)
+    with open("selmahos.json", "r") as f:
+        selmahos = json.load(f)
+    selmahos[selmaho]["color"] = "#" + color
+    with open("selmahos.json", "w") as f:
+        json.dump(selmahos, f, indent=2)
+         
         
 
 def color_prt(content: str) -> Text:
@@ -217,11 +194,9 @@ def main():
     if args.input:
         print("Type the input:")
         print(Panel(color_prt(sys.stdin.read())))
-    elif p := args.filepath:
+    if p := args.filepath:
         with open(p, "r") as f:
             print(Panel(color_prt(f.read())))
-    else:
-        print("error... no args")
 
 
 if __name__ == "__main__":
