@@ -134,6 +134,13 @@ class Colorizer(ColorListener):
     def enterCompmo(self, ctx):
         process_compmo(self.t, ctx.getText(), self.selmahos)
 
+#TODO: learn some relevant kungfu
+# by which i mean argument packing and unpacking and probably decorators
+def apply_function_to_json() -> None:
+    pass
+    
+        
+
         
 #TODO: refactor then test this
 def add_cmavo(cmavo: str, selmaho: str) -> None:
@@ -141,7 +148,11 @@ def add_cmavo(cmavo: str, selmaho: str) -> None:
         selmahos = json.load(f)
     if selmaho not in selmahos.keys():
         selmahos[selmaho] = {"color": "#0000FF", "cmavos": []}
-    selmahos[selmaho]["cmavos"].append(cmavo)
+    if cmavo in selmahos[selmaho]["cmavos"]:
+        print("ok.. cmavo {} is already in selmaho {}, so i did nothing".format(cmavo, selmaho))
+    else:
+        selmahos[selmaho]["cmavos"].append(cmavo)
+        print("ok... successfully added cmavo {} to selmaho {}".format(cmavo, selmaho))
     with open("selmahos.json", "w") as f:
         json.dump(selmahos, f, indent=2)
 
@@ -150,7 +161,7 @@ def add_cmavo(cmavo: str, selmaho: str) -> None:
 def set_color(selmaho: str, color: str) -> None:
     with open("selmahos.json", "r") as f:
         selmahos = json.load(f)
-    selmahos[selmaho]["color"] = "#" + color
+    selmahos[selmaho]["color"] = color
     with open("selmahos.json", "w") as f:
         json.dump(selmahos, f, indent=2)
         
@@ -201,10 +212,10 @@ def process_args(args):
 def build_parser():
     parser = argparse.ArgumentParser(formatter_class=RichHelpFormatter)
     group = parser.add_mutually_exclusive_group(required=True)
-    group.add_argument('-r', '--read', action='store')
-    group.add_argument('-a', '--add', action='store', nargs=2)
-    group.add_argument('-c', '--color', action='store', nargs=2)
-    group.add_argument('-i', '--input', action='store_true')
+    group.add_argument('-r', '--read', action='store', help="read a text file and color it", metavar="FILEPATH")
+    group.add_argument('-a', '--add', action='store', nargs=2, help="add CMAVO to SELMAHO", metavar=("CMAVO", "SELMAHO"))
+    group.add_argument('-c', '--color', action='store', nargs=2, help="set the color of SELMAHO to COLOR", metavar=("SELMAHO", "COLOR"))
+    group.add_argument('-i', '--input', action='store_true', help="read from standard input and color it")
     return parser
 
 
