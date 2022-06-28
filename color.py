@@ -179,31 +179,32 @@ def color_prt(content: str) -> Text:
 
     return t
 
+
 def process_args(args):
+    if r := args.read:
+        with open(r, "r") as f:
+            print(Panel(color_prt(f.read())))
+
     if a := args.add:
-        if args.filepath:
-            print("warning! ignoring filepath argument")
-        print("adding... cmavo {} to selmaho {}".format(a[0],a[1]))
+        print("adding cmavo {} to selmaho {}".format(a[0], a[1]))
         add_cmavo(a[0], a[1])
+
     if c := args.color:
         print("setting color of selmaho {} to {}".format(c[0], c[1]))
         set_color(c[0], c[1])
-    if args.input:
+
+    if i := args.input:
         print("Type the input:")
         print(Panel(color_prt(sys.stdin.read())))
-    if p := args.filepath:
-        with open(p, "r") as f:
-            print(Panel(color_prt(f.read())))
 
     
-#TODO: put command arguments in dijsoint group
-#TODO: create read file command
 def build_parser():
     parser = argparse.ArgumentParser(formatter_class=RichHelpFormatter)
-    parser.add_argument('filepath', action='store', default=None, nargs='?')
-    parser.add_argument('-a', '--add', action='store', nargs=2)
-    parser.add_argument('-c', '--color', action='store', nargs=2)
-    parser.add_argument('-i', '--input', action='store_true')
+    group = parser.add_mutually_exclusive_group(required=True)
+    group.add_argument('-r', '--read', action='store')
+    group.add_argument('-a', '--add', action='store', nargs=2)
+    group.add_argument('-c', '--color', action='store', nargs=2)
+    group.add_argument('-i', '--input', action='store_true')
     return parser
 
 
