@@ -1,11 +1,10 @@
-- remove global config
+- compress config (selmaho cmavo-set + color)
+    - make every value at level 0 a dict with two keys: color and cmavo-set.
+    - then let the value of color be a string, and let the value of cmavo-set be a list.
 - test driven development
 - test: check selmaho disjointness
-- selmaho dataclass
 - file that shows off all color choices
 - choose colors
-- possibly make a script that converts Lujvo parser grammar into Lujvo lexer grammar
-- function that generates a list of ocurrences of a word type, especially fuhivla
 
 ## long term goals
 - single character lexer
