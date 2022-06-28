@@ -1,5 +1,6 @@
-- test driven development
-- test: check selmaho disjointness
+- config for non-selmaho word types
+- test? check selmaho disjointness
+- factor out loading and writing config
 
 ## long term goals
 - single character lexer

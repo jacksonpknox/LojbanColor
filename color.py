@@ -3,7 +3,6 @@ import sys
 from antlr4 import *
 
 import json
-import yaml
 
 import argparse
 
@@ -21,13 +20,12 @@ from python_lujvo.LujvoLexer import LujvoLexer
 from python_lujvo.LujvoParser import LujvoParser
 from python_lujvo.LujvoListener import LujvoListener
 
-#TODO: 
-
 
 def put(t: Text, txt: str, color: str=None):
     t.append(txt, style=color)
 
 
+#TODO: factor out (too long)
 class LujvoColorizer(LujvoListener):
     def __init__(self, t: Text):
         self.t = t
@@ -60,21 +58,24 @@ class LujvoColorizer(LujvoListener):
         put(self.t, ctx.getText(), "#FF0000")
 
 
-def get_selmaho(cmavo: str, selmahos: dict):
+def get_selmaho(cmavo: str, selmahos: dict) -> str:
     for selmaho in selmahos.keys():
         if cmavo in selmahos[selmaho]["cmavos"]:
             return selmaho
     return "UNCAT"
 
 
+#TODO: test this
 def get_cmavo_color(cmavo: str, selmahos: dict) -> str:
     return selmahos[get_selmaho(cmavo, selmahos)]["color"]
 
 
+#TODO: test this
 def put_cmavo(t: Text, cmavo: str, selmahos: dict) -> None:
     put(t, cmavo, get_cmavo_color(cmavo, selmahos))
 
 
+#TODO: test this
 def process_compmo(t: Text, compmo: str, selmahos: dict) -> None:
     # split the compmo into cmavos
     i = 0
@@ -93,7 +94,7 @@ def process_compmo(t: Text, compmo: str, selmahos: dict) -> None:
         put_cmavo(t, cmavo, selmahos)
         
 
-
+#TODO: test this
 def process_lujvo(t: Text, lujvo: str) -> None:
     input_stream = InputStream(lujvo)
     lexer = LujvoLexer(input_stream)
@@ -137,6 +138,7 @@ class Colorizer(ColorListener):
         process_compmo(self.t, ctx.getText(), self.selmahos)
 
         
+#TODO: refactor then test this
 def add_cmavo(cmavo: str, selmaho: str) -> None:
     with open("selmahos.json", "r") as f:
         selmahos = json.load(f)
@@ -147,6 +149,7 @@ def add_cmavo(cmavo: str, selmaho: str) -> None:
         json.dump(selmahos, f, indent=2)
 
 
+#TODO: refactor then test this
 def set_color(selmaho: str, color: str) -> None:
     with open("selmahos.json", "r") as f:
         selmahos = json.load(f)
@@ -156,8 +159,8 @@ def set_color(selmaho: str, color: str) -> None:
          
         
 
+#TODO: test this, also refactor selmahos into this
 def color_prt(content: str) -> Text:
-    # very sus to return the global variable t
     input_stream = InputStream(content)
     lexer = ColorLexer(input_stream)  # lexer generated from grammar
     stream = CommonTokenStream(lexer)  # token stream from library
@@ -173,17 +176,8 @@ def color_prt(content: str) -> Text:
 
     return t
 
-
-def main():
-    # very buggy parser
-    parser = argparse.ArgumentParser(formatter_class=RichHelpFormatter)
-    parser.add_argument('filepath', action='store', default=None, nargs='?')
-    parser.add_argument('-a', '--add', action='store', nargs=2)
-    parser.add_argument('-c', '--color', action='store', nargs=2)
-    parser.add_argument('-i', '--input', action='store_true')
-    args = parser.parse_args()
+def process_args(args):
     if a := args.add:
-        # just make a command mandatory
         if args.filepath:
             print("warning! ignoring filepath argument")
         print("adding... cmavo {} to selmaho {}".format(a[0],a[1]))
@@ -197,6 +191,22 @@ def main():
     if p := args.filepath:
         with open(p, "r") as f:
             print(Panel(color_prt(f.read())))
+
+    
+#TODO: put command arguments in dijsoint group
+#TODO: create read file command
+def build_parser():
+    parser = argparse.ArgumentParser(formatter_class=RichHelpFormatter)
+    parser.add_argument('filepath', action='store', default=None, nargs='?')
+    parser.add_argument('-a', '--add', action='store', nargs=2)
+    parser.add_argument('-c', '--color', action='store', nargs=2)
+    parser.add_argument('-i', '--input', action='store_true')
+
+
+def main():
+    parser = build_parser()
+    args = parser.parse_args()
+    process_args(args)
 
 
 if __name__ == "__main__":
