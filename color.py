@@ -128,7 +128,7 @@ class Colorizer(ColorListener):
         put_cmavo(self.t, ctx.getText(), self.selmahos)
     
     def enterFuhivla(self, ctx):
-        put(self.t, ctx.getText(), self.config["fu'ihivla"]["color"])
+        put(self.t, ctx.getText(), self.config["fu'ivla"]["color"])
 
     def enterLujvo(self, ctx):
         process_lujvo(self.t, ctx.getText(), self.config)
