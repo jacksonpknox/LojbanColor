@@ -1,5 +1,8 @@
 - refactor config from colorizer back to colorprt
 
+- unjank argparser
+- tests for argparser
+
 - test? check selmaho disjointness
 - factor out loading and writing config
 - BUG: fix color so it doesnt require hex code (remove '#' from code)

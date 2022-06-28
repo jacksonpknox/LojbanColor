@@ -105,14 +105,10 @@ def process_lujvo(t: Text, lujvo: str, config: dict) -> None:
 
 
 class Colorizer(ColorListener):
-    def __init__(self, t: Text):
+    def __init__(self, t: Text, selmahos: dict, config: dict):
         self.t = t
-        #TODO: factor the location of selmaho file out, ideally into the config
-        with open("selmahos.json", "r") as f:
-            self.selmahos = json.load(f)
-        #TODO: factor location of config out into default, and construct argument for customization
-        with open("config.json", "r") as f:
-            self.config = json.load(f)
+        self.selmahos = selmahos
+        self.config = config
 
     def exitSentence(self, ctx):
         put(self.t, "\n", None)
@@ -157,19 +153,25 @@ def set_color(selmaho: str, color: str) -> None:
     selmahos[selmaho]["color"] = "#" + color
     with open("selmahos.json", "w") as f:
         json.dump(selmahos, f, indent=2)
-         
         
 
-#TODO: test this, also refactor selmahos into this
+#TODO: test this (after refactoring)
 def color_prt(content: str) -> Text:
     input_stream = InputStream(content)
-    lexer = ColorLexer(input_stream)  # lexer generated from grammar
-    stream = CommonTokenStream(lexer)  # token stream from library
-    parser = ColorParser(stream)  # parser generated from grammar
+    lexer = ColorLexer(input_stream)
+    stream = CommonTokenStream(lexer)
+    parser = ColorParser(stream)
     tree = parser.folio()
 
+    #TODO: factor the location of selmaho file out, ideally into the config
+    with open("selmahos.json", "r") as f:
+        selmahos = json.load(f)
+    #TODO: factor location of config out into default, and construct argument for customization
+    with open("config.json", "r") as f:
+        config = json.load(f)
+
     t = Text()
-    printer = Colorizer(t)
+    printer = Colorizer(t, selmahos, config)
     walker = ParseTreeWalker()
     walker.walk(printer, tree)
 

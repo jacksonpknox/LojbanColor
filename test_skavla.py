@@ -65,6 +65,11 @@ class TestMethods(unittest.TestCase):
         self.assertEqual(t,s)
 
         
+    #TODO: after color_prt has been refactored, write this test
+    def test_color_prt(self):
+        pass
+
+        
 
 if __name__ == '__main__':
     unittest.main()
