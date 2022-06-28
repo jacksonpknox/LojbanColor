@@ -1,18 +1,26 @@
 ## todo list
-- undo disjointness, just execute commands one after another
+- single character lexer
 
-- subparsers
+- function that converts string to rich tree (naturally must use parse tree as intermediate type)
 
-- factor out loading and writing config
-- test? check selmaho disjointness
+- build (rudimentary) grammar on top of 'lexer' grammar
 
-- tests for argparser
+- argparse
+  - undo disjointness, just execute commands one after another
+  - subparsers
+  - tests for the parser
+
+- decorators/meta
+  - factor out loading and writing config
+
+- toolkit
+  - check selmaho disjointness
+
 
 ## long term goals
 - incorporate rich into cli in an elegant way
   - stating objective phase
   - reporting outcome phase
-- single character lexer
 - semantically group selmaho instead of alphabetically
 - color selection tool
 - make a nice way to show and pick colors for word types
