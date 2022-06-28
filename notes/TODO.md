@@ -1,5 +1,6 @@
 ## todo list
 - single character lexer
+  - study initial pairs *very* carefully
 
 - function that converts string to rich tree (naturally must use parse tree as intermediate type)
 
