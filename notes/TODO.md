@@ -1,4 +1,5 @@
-- config for non-selmaho word types
+- refactor config from colorizer back to colorprt
+
 - test? check selmaho disjointness
 - factor out loading and writing config
 - BUG: fix color so it doesnt require hex code (remove '#' from code)

@@ -66,17 +66,14 @@ def get_selmaho(cmavo: str, selmahos: dict) -> str:
     return "UNCAT"
 
 
-#TODO: test this
 def get_cmavo_color(cmavo: str, selmahos: dict) -> str:
     return selmahos[get_selmaho(cmavo, selmahos)]["color"]
 
 
-#TODO: test this
 def put_cmavo(t: Text, cmavo: str, selmahos: dict) -> None:
     put(t, cmavo, get_cmavo_color(cmavo, selmahos))
 
 
-#TODO: test this
 def process_compmo(t: Text, compmo: str, selmahos: dict) -> None:
     # split the compmo into cmavos
     i = 0
@@ -95,7 +92,6 @@ def process_compmo(t: Text, compmo: str, selmahos: dict) -> None:
         put_cmavo(t, cmavo, selmahos)
         
 
-#TODO: test this
 def process_lujvo(t: Text, lujvo: str, config: dict) -> None:
     input_stream = InputStream(lujvo)
     lexer = LujvoLexer(input_stream)
