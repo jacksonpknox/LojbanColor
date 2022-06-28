@@ -1,9 +1,13 @@
 grammar Cmavo;
 
-cmavo : CMAVO ;
+cmavo : (DOT | C) V (AP | V)*
+      | C Y DOT
+      ;
 
-CMAVO : ('.' | C) V ('\'' | V)* 
-      | C 'y.';
 
-fragment V : [aeiou] ;
-fragment C : [bcdfgjklmnprstvxz] ;
+WS : (' ' | '\t') -> skip ;
+DOT : '.' ;
+C : [bcdfgjklmnprstvxz] ;
+V : [aeiou] ;
+AP : '\'' ;
+Y : 'y' ;

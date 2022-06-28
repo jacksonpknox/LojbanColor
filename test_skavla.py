@@ -55,16 +55,6 @@ class TestMethods(unittest.TestCase):
         self.assertEqual(t, s)
 
         
-    #TODO: should attempt several lujvo-text pairs
-    def test_process_lujvo(self):
-        config = copy.deepcopy(CONFIG)
-
-        t = Text()
-        color.process_lujvo(t, "bacygau", config)
-        s = Text.assemble(("bac", "#FFC0C0"), ("y", "yellow"), ("gau", "#FFFFC0"))
-        self.assertEqual(t,s)
-
-        
     #TODO: after color_prt has been refactored, write this test
     def test_color_prt(self):
         pass

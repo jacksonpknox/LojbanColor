@@ -7,15 +7,14 @@ sentence : word* ;
 
 word : cmavo | brivla | cmene | compmo | fuhivla ;
 
-cmene : CMENE ;
+cmene : DOT? (C | V)* C DOT ;
 
 /*
  * Lexer Rules
  */
 
-CMENE : '.'? L* C '.' ;
-
-fragment L : C | V ;
-fragment C : [bcdfgjklmnprstvxz,] ;
-fragment V : [aeiouy] ;
+WS : (' ' | '\t') -> skip ;
+DOT : '.' ;
+C : [bcdfgjklmnprstvxz,] ;
+V : [aeiouy] ;
 

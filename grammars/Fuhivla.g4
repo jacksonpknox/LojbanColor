@@ -1,9 +1,9 @@
 grammar Fuhivla ;
 
-fuhivla : FUHIVLA ;
+fuhivla : ANYCHAR+ ;
 
 /*
  * Lexer rules
  */
 
-FUHIVLA : ~[ \t\r\n]+ ;
+ANYCHAR : ~[ \t\r\n] ;

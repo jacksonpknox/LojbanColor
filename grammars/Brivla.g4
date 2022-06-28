@@ -1,53 +1,62 @@
 grammar Brivla;
 
-brivla : lujvo | gismu ;
-lujvo : LUJVO ;
-gismu : GISMU ;
+brivla : gismu | lujvo ;
+
+gismu : baugismu | brogismu ;
+lujvo : bobvo | cobvo | dobvo | fobvo | gobvo ;
+
+
+baugismu : C V C C V ;
+brogismu : C C V C V ;
+
+bobvo : balrelraf y jvoreb ;
+cobvo : relraf jvoreb? ;
+dobvo : gimpag y jvoreb ;
+fobvo : rafgimpag y jvoreb ;
+gobvo : balraf (q | y)? gismu
+      | broraf q? gismu
+      | bauraf q baugismu
+      | bauraf q? brogismu
+      ;
+
+
+balrelraf : (balraf (q | y)? | broraf q? | bauraf q) balraf ;
+jvoreb : (balraf y? | gimpag y | karlraf)* (karlraf | gismu) ;
+
+relraf : balrelraf | karlrelraf ;
+
+gimpag : gahorgimpag | kargimpag ;
+
+rafgimpag : balraf q? gimpag
+          | karlraf q kargimpag
+          | karlraf gahorgimpag
+          ;
+
+balraf : C V C ;
+broraf : C C V ;
+bauraf : C V AP? V ;
+
+
+karlraf : broraf | bauraf ;
+
+karlrelraf : (balraf (q | y)? | broraf q? | bauraf q?) broraf
+           | (balraf (q | y)? | broraf q? | bauraf q) bauraf
+           ;
+
+gahorgimpag : C C V C ;
+kargimpag : C V C C ;
+
+
+q : C ; // can be customized by breaking up C into subsets
+y : Y ;
 
 /*
  * Lexer Rules
  */
 WS : (' ' | '\t') -> skip ;
 
-GISMU : GISUM ;
-fragment GISUM : CAGISMU | CKAGISMU ;
-fragment CAGISMU : C V C C V ;
-fragment CKAGISMU : C C V C V ;
-fragment C : [bcdfgjklmnprstvxz] ;
-fragment V : [aeiou] ;
 
-LUJVO : BOBVO | COBVO | DOBVO | FOBVO | GOBVO | JOBVO | KOBVO;
-
-// we split the lujvo in to whatever most elegant small family of disjoint family
-// of sets can be constructed.
-// in this case we are aiming at the structure of the root.
-fragment BOBVO : RAFPAIRCON Y TAILVO ;
-fragment COBVO : (RAFPAIRCON | RAFPAIRVOW) TAILVO? ;
-fragment DOBVO : STUMP Y TAILVO ;
-fragment FOBVO : RAFSTUMP Y TAILVO ;
-fragment GOBVO : BALRAF (Q | Y)? GISMU
-               | BRORAF Q? GISMU ;
-// trolling
-fragment JOBVO : BAURAF Q CAGISMU ;
-fragment KOBVO : BAURAF Q? CKAGISMU ;
-// you can think about the ones with no tailvo separately since their lenghts will be finite
-
-fragment RAFPAIRCON : (BALRAF (Q | Y)? | BRORAF Q? | BAURAF Q) BALRAF ;
-fragment TAILVO : (BALRAF Y? | STUMP Y | VURAF)* (VURAF | GISUM) ;
-fragment RAFPAIRVOW : (BALRAF (Q | Y)? | BRORAF Q? | BAURAF Q?) BRORAF
-                    | (BALRAF (Q | Y)? | BRORAF Q? | BAURAF Q) BAURAF
-                    ;
-fragment STUMP : CASTUMP | CKSTUMP ;
-fragment RAFSTUMP : BALRAF Q? STUMP
-                  | VURAF Q CASTUMP //BUG HERE LOL
-                  | VURAF CKSTUMP
-                  ;
-
-fragment BALRAF : C V C ;
-fragment Q : 'q' | 'r' | 'l' ;
-fragment BRORAF : C C V ;
-fragment BAURAF : C V '\''? V ;
-fragment VURAF : BAURAF | BRORAF ;
-fragment CASTUMP : C V C C ;
-fragment CKSTUMP : C C V C ;
-fragment Y : 'y';
+C : [bcdfgjklmnprstvxz] ;
+V : [aeiou] ;
+Y : 'y' ; 
+AP : '\'' ;
