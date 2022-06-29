@@ -167,7 +167,7 @@ def process_args(args):
 
     
 def build_parser():
-    parser = argparse.ArgumentParser(formatter_class=RichHelpFormatter)
+    parser = argparse.ArgumentParser(formatter_class=RichHelpFormatter, description="This is the skavla program :)", epilog="God bless you !")
     group = parser.add_mutually_exclusive_group(required=True)
     group.add_argument('-r', '--read', action='store', help="read a text file and color it", metavar="FILEPATH")
     group.add_argument('-a', '--add', action='store', nargs=2, help="add CMAVO to SELMAHO", metavar=("CMAVO", "SELMAHO"))

@@ -1,8 +1,8 @@
 ## todo list
-- single character lexer
-  - study initial pairs *very* carefully
-  - bug found in ga'orgismu x2 (e.g. bukpu xamsi) tanru
-  - attempt epic preprocessing spaces hack
+- change action of all arguments to 'extend' (or maybe it's 'append')
+
+- just focus on the script commands
+
 - function that converts string to rich tree (naturally must use parse tree as intermediate type)
 
 - build (rudimentary) grammar on top of 'lexer' grammar
