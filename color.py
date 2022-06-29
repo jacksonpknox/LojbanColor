@@ -16,47 +16,9 @@ from python_color.ColorLexer import ColorLexer
 from python_color.ColorParser import ColorParser
 from python_color.ColorListener import ColorListener
 
-from python_lujvo.LujvoLexer import LujvoLexer
-from python_lujvo.LujvoParser import LujvoParser
-from python_lujvo.LujvoListener import LujvoListener
-
 
 def put(t: Text, txt: str, color: str=None):
     t.append(txt, style=color)
-
-
-#TODO: factor out (too long)
-class LujvoColorizer(LujvoListener):
-    def __init__(self, t: Text, palatte: dict):
-        self.t = t
-        self.palatte = palatte
-
-    def enterY(self, ctx):
-        put(self.t, ctx.getText(), self.palatte['y'])
-
-    def enterQ(self, ctx):
-        put(self.t, ctx.getText(), self.palatte['q'])
-
-    def enterCafourraf(self, ctx):
-        put(self.t, ctx.getText(), self.palatte['cafourraf'])
-
-    def enterCkfourraf(self, ctx):
-        put(self.t, ctx.getText(), self.palatte['ckfourraf'])
-
-    def enterBalraf(self, ctx):
-        put(self.t, ctx.getText(), self.palatte['balraf'])
-
-    def enterBauraf(self, ctx):
-        put(self.t, ctx.getText(), self.palatte['bauraf'])
-
-    def enterBroraf(self, ctx):
-        put(self.t, ctx.getText(), self.palatte['broraf'])
-
-    def enterCagismu(self, ctx):
-        put(self.t, ctx.getText(), self.palatte['cagismu'])
-
-    def enterCkagismu(self, ctx):
-        put(self.t, ctx.getText(), self.palatte['ckagismu'])
 
 
 def get_selmaho(cmavo: str, selmahos: dict) -> str:
@@ -72,37 +34,7 @@ def get_cmavo_color(cmavo: str, selmahos: dict) -> str:
 
 def put_cmavo(t: Text, cmavo: str, selmahos: dict) -> None:
     put(t, cmavo, get_cmavo_color(cmavo, selmahos))
-
-
-def process_compmo(t: Text, compmo: str, selmahos: dict) -> None:
-    # split the compmo into cmavos
-    i = 0
-    j = 2
-    e = len(compmo)
-    compy = [c for c in compmo]
-    cons = {"b", "c", "d", "f", "g", "j", "k", "l", "m", "n", "p", "r", "s", "t", "v", "z"}
-    cmavos = []
-    while j < e:
-        if compy[j] in cons:
-            cmavos.append("".join(compy[i:j]))
-            i = j
-        j += 1
-    cmavos.append("".join(compy[i:j]))
-    for cmavo in cmavos:
-        put_cmavo(t, cmavo, selmahos)
         
-
-def process_lujvo(t: Text, lujvo: str, config: dict) -> None:
-    input_stream = InputStream(lujvo)
-    lexer = LujvoLexer(input_stream)
-    stream = CommonTokenStream(lexer)
-    parser = LujvoParser(stream)
-    tree = parser.lujvo()
-
-    printer = LujvoColorizer(t, config['rafsi'])
-    walker = ParseTreeWalker()
-    walker.walk(printer, tree)
-
 
 class Colorizer(ColorListener):
     def __init__(self, t: Text, selmahos: dict, config: dict):
@@ -110,29 +42,54 @@ class Colorizer(ColorListener):
         self.selmahos = selmahos
         self.config = config
 
-    def exitSentence(self, ctx):
+    def exitLine(self, ctx):
         put(self.t, "\n", None)
 
     def exitWord(self, ctx):
         put(self.t, " ", None)
 
-    def enterCmavo(self, ctx):
+    def enterCat_cmavo(self, ctx: ColorParser.Cat_cmavoContext):
         put_cmavo(self.t, ctx.getText(), self.selmahos)
+
+    def enterLerfu(self, ctx):
+        put(self.t, ctx.getText(), self.config["lerfu"]["color"])
     
     def enterFuhivla(self, ctx):
         put(self.t, ctx.getText(), self.config["fu'ivla"]["color"])
 
-    def enterLujvo(self, ctx):
-        process_lujvo(self.t, ctx.getText(), self.config)
-
-    def enterGismu(self, ctx):
-        put(self.t, ctx.getText(), self.config["rafsi"]["gismu"])
-
     def enterCmene(self, ctx):
         put(self.t, ctx.getText(), self.config["cmene"]["color"])
 
-    def enterCompmo(self, ctx):
-        process_compmo(self.t, ctx.getText(), self.selmahos)
+    def enterY(self, ctx):
+        put(self.t, ctx.getText(), self.config["rafsi"]["y"])
+
+    def enterBaugismu(self, ctx):
+        put(self.t, ctx.getText(), self.config["rafsi"]["baugismu"])
+
+    def enterBrogismu(self, ctx):
+        put(self.t, ctx.getText(), self.config["rafsi"]["brogismu"])
+
+    def enterBalraf(self, ctx):
+        put(self.t, ctx.getText(), self.config["rafsi"]["balraf"])
+
+    def enterBroraf(self, ctx):
+        put(self.t, ctx.getText(), self.config["rafsi"]["broraf"])
+
+    def enterBauraf(self, ctx):
+        put(self.t, ctx.getText(), self.config["rafsi"]["bauraf"])
+
+    def enterGahorgimpag(self, ctx: ColorParser.GahorgimpagContext):
+        put(self.t, ctx.getText(), self.config["rafsi"]["ga'orgimpag"])
+
+    def enterKargimpag(self, ctx: ColorParser.KargimpagContext):
+        put(self.t, ctx.getText(), self.config["rafsi"]["kargimpag"])
+
+    def enterY(self, ctx):
+        put(self.t, ctx.getText(), self.config["rafsi"]["y"])
+    
+    def enterQ(self, ctx):
+        put(self.t, ctx.getText(), self.config["rafsi"]["q"])
+
 
 #TODO: learn some relevant kungfu
 # by which i mean argument packing and unpacking and probably decorators

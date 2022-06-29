@@ -9,12 +9,15 @@
         "gismu": "#FF0000",
         "y": "yellow",
         "q": "yellow",
-        "cafourraf": "#FF8000",
-        "ckfourraf": "#FF8080",
+        "kargimpag": "#FF8000",
+        "ga'orgimpag": "#FF8080",
         "balraf": "#FFC0C0",
         "bauraf": "#FFFFC0",
         "broraf": "#FFC080",
-        "cagismu": "#FF0000",
-        "ckagismu": "#FF0000"
+        "baugismu": "#FF0000",
+        "brogismu": "#FF0000"
+    },
+    "lerfu": {
+        "color": "#00FF33"
     }
 }

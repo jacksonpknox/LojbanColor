@@ -3,7 +3,6 @@
   - study initial pairs *very* carefully
   - bug found in ga'orgismu x2 (e.g. bukpu xamsi) tanru
   - attempt epic preprocessing spaces hack
-
 - function that converts string to rich tree (naturally must use parse tree as intermediate type)
 
 - build (rudimentary) grammar on top of 'lexer' grammar
@@ -18,6 +17,7 @@
 
 - toolkit
   - check selmaho disjointness
+  - print every document in the library
 
 
 ## long term goals

@@ -1,21 +1,15 @@
 grammar Color;
-import Brivla,Cmavo,Compmo,Fuhivla;
+import Brivla,Cmavo,Fuhivla;
 
-folio : (sentence '\r'? '\n')+ EOF;
+folio : line* end ;
 
-sentence : word* ;
+line : flufftence NEWLINE ;
+end : flufftence EOF ;
+
+flufftence : WS? sentence? WS? ;
+sentence : word (WS word)* ;
 
 word : cmavo | brivla | cmene | compmo | fuhivla ;
 
-cmene : CMENE ;
-
-/*
- * Lexer Rules
- */
-
-CMENE : '.'? L* C '.' ;
-
-fragment L : C | V ;
-fragment C : [bcdfgjklmnprstvxz,] ;
-fragment V : [aeiouy] ;
-
+compmo : cmavo cmavo+ ;
+cmene : DOT? (C | V)* C DOT ;
