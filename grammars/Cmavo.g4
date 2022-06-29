@@ -5,7 +5,6 @@ cmavo : (DOT | C) V (AP | V)*
       ;
 
 
-WS : (' ' | '\t') -> skip ;
 DOT : '.' ;
 C : [bcdfgjklmnprstvxz] ;
 V : [aeiou] ;

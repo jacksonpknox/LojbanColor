@@ -53,9 +53,6 @@ y : Y ;
 /*
  * Lexer Rules
  */
-WS : (' ' | '\t') -> skip ;
-
-
 C : [bcdfgjklmnprstvxz] ;
 V : [aeiou] ;
 Y : 'y' ; 

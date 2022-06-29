@@ -34,24 +34,6 @@ def get_cmavo_color(cmavo: str, selmahos: dict) -> str:
 
 def put_cmavo(t: Text, cmavo: str, selmahos: dict) -> None:
     put(t, cmavo, get_cmavo_color(cmavo, selmahos))
-
-
-def process_compmo(t: Text, compmo: str, selmahos: dict) -> None:
-    # split the compmo into cmavos
-    i = 0
-    j = 2
-    e = len(compmo)
-    compy = [c for c in compmo]
-    cons = {"b", "c", "d", "f", "g", "j", "k", "l", "m", "n", "p", "r", "s", "t", "v", "z"}
-    cmavos = []
-    while j < e:
-        if compy[j] in cons:
-            cmavos.append("".join(compy[i:j]))
-            i = j
-        j += 1
-    cmavos.append("".join(compy[i:j]))
-    for cmavo in cmavos:
-        put_cmavo(t, cmavo, selmahos)
         
 
 class Colorizer(ColorListener):
@@ -74,9 +56,6 @@ class Colorizer(ColorListener):
 
     def enterCmene(self, ctx):
         put(self.t, ctx.getText(), self.config["cmene"]["color"])
-
-    def enterCompmo(self, ctx):
-        process_compmo(self.t, ctx.getText(), self.selmahos)
 
     def enterY(self, ctx):
         put(self.t, ctx.getText(), self.config["rafsi"]["y"])
