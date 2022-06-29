@@ -1,4 +1,6 @@
 ## todo list
+- make a 'config' subparser which has the --add and --color options 
+
 - change action of all arguments to 'extend' (or maybe it's 'append')
 
 - just focus on the script commands
@@ -29,6 +31,8 @@
 - make a nice way to show and pick colors for word types
 - grammar competition website
 - tree to visual
+- python normal form
+- 'just sprinkle in '-h' to get a customized message for that option string'
 
 ## plan per command
  - read
