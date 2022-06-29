@@ -51,6 +51,18 @@ public class ColorBaseListener implements ColorListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterCompmo(ColorParser.CompmoContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitCompmo(ColorParser.CompmoContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterCmene(ColorParser.CmeneContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -382,18 +394,6 @@ public class ColorBaseListener implements ColorListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitLerfu(ColorParser.LerfuContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterCompmo(ColorParser.CompmoContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitCompmo(ColorParser.CompmoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *

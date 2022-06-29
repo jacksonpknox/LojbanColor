@@ -37,6 +37,16 @@ public interface ColorListener extends ParseTreeListener {
 	 */
 	void exitWord(ColorParser.WordContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link ColorParser#compmo}.
+	 * @param ctx the parse tree
+	 */
+	void enterCompmo(ColorParser.CompmoContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link ColorParser#compmo}.
+	 * @param ctx the parse tree
+	 */
+	void exitCompmo(ColorParser.CompmoContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link ColorParser#cmene}.
 	 * @param ctx the parse tree
 	 */
@@ -316,16 +326,6 @@ public interface ColorListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitLerfu(ColorParser.LerfuContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link ColorParser#compmo}.
-	 * @param ctx the parse tree
-	 */
-	void enterCompmo(ColorParser.CompmoContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link ColorParser#compmo}.
-	 * @param ctx the parse tree
-	 */
-	void exitCompmo(ColorParser.CompmoContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link ColorParser#fuhivla}.
 	 * @param ctx the parse tree

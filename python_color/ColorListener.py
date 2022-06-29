@@ -35,6 +35,15 @@ class ColorListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by ColorParser#compmo.
+    def enterCompmo(self, ctx:ColorParser.CompmoContext):
+        pass
+
+    # Exit a parse tree produced by ColorParser#compmo.
+    def exitCompmo(self, ctx:ColorParser.CompmoContext):
+        pass
+
+
     # Enter a parse tree produced by ColorParser#cmene.
     def enterCmene(self, ctx:ColorParser.CmeneContext):
         pass
@@ -284,15 +293,6 @@ class ColorListener(ParseTreeListener):
 
     # Exit a parse tree produced by ColorParser#lerfu.
     def exitLerfu(self, ctx:ColorParser.LerfuContext):
-        pass
-
-
-    # Enter a parse tree produced by ColorParser#compmo.
-    def enterCompmo(self, ctx:ColorParser.CompmoContext):
-        pass
-
-    # Exit a parse tree produced by ColorParser#compmo.
-    def exitCompmo(self, ctx:ColorParser.CompmoContext):
         pass
 
 
