@@ -305,5 +305,14 @@ class ColorListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by ColorParser#anychar.
+    def enterAnychar(self, ctx:ColorParser.AnycharContext):
+        pass
+
+    # Exit a parse tree produced by ColorParser#anychar.
+    def exitAnychar(self, ctx:ColorParser.AnycharContext):
+        pass
+
+
 
 del ColorParser

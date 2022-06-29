@@ -1,4 +1,5 @@
 grammar Brivla;
+import Lexer;
 
 brivla : gismu | lujvo ;
 
@@ -49,11 +50,3 @@ kargimpag : C V C C ;
 
 q : C ; // can be customized by breaking up C into subsets
 y : Y ;
-
-/*
- * Lexer Rules
- */
-C : [bcdfgjklmnprstvxz] ;
-V : [aeiou] ;
-Y : 'y' ; 
-AP : '\'' ;
