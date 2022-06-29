@@ -1,6 +1,10 @@
 ## todo list
 - make a 'config' subparser which has the --add and --color options 
 
+- textualize (package)
+
+- game: click a rafsi, get a list of glosses (each preferably one word) one of which is collect. get points
+
 - change action of all arguments to 'extend' (or maybe it's 'append')
 
 - just focus on the script commands
