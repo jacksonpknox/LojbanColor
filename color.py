@@ -48,8 +48,11 @@ class Colorizer(ColorListener):
     def exitWord(self, ctx):
         put(self.t, " ", None)
 
-    def enterCmavo(self, ctx):
+    def enterCat_cmavo(self, ctx: ColorParser.Cat_cmavoContext):
         put_cmavo(self.t, ctx.getText(), self.selmahos)
+
+    def enterLerfu(self, ctx):
+        put(self.t, ctx.getText(), self.config["lerfu"]["color"])
     
     def enterFuhivla(self, ctx):
         put(self.t, ctx.getText(), self.config["fu'ivla"]["color"])

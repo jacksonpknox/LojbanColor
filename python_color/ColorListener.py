@@ -269,6 +269,24 @@ class ColorListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by ColorParser#cat_cmavo.
+    def enterCat_cmavo(self, ctx:ColorParser.Cat_cmavoContext):
+        pass
+
+    # Exit a parse tree produced by ColorParser#cat_cmavo.
+    def exitCat_cmavo(self, ctx:ColorParser.Cat_cmavoContext):
+        pass
+
+
+    # Enter a parse tree produced by ColorParser#lerfu.
+    def enterLerfu(self, ctx:ColorParser.LerfuContext):
+        pass
+
+    # Exit a parse tree produced by ColorParser#lerfu.
+    def exitLerfu(self, ctx:ColorParser.LerfuContext):
+        pass
+
+
     # Enter a parse tree produced by ColorParser#compmo.
     def enterCompmo(self, ctx:ColorParser.CompmoContext):
         pass
