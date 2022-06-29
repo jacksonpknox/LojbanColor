@@ -15,6 +15,7 @@
 
 - toolkit
   - check selmaho disjointness
+  - print every document in the library
 
 
 ## long term goals

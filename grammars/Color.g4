@@ -1,9 +1,13 @@
 grammar Color;
 import Brivla,Cmavo,Fuhivla;
 
-folio : (sentence NEWLINE)+ EOF;
+folio : line* end ;
 
-sentence : word (WS word)* | ;
+line : flufftence NEWLINE ;
+end : flufftence EOF ;
+
+flufftence : WS? sentence? WS? ;
+sentence : word (WS word)* ;
 
 word : cmavo | brivla | cmene | compmo | fuhivla ;
 

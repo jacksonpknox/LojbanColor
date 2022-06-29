@@ -43,17 +43,6 @@ class TestMethods(unittest.TestCase):
         s = Text().append("")
         self.assertEqual(t, Text().append("noi", style="#0022FF"))
 
-
-    #TODO: should attempt several compmo-text pairs
-    # some day in the far future i can make a really big test that
-    # only needs to be run sometimes
-    def test_process_compmo(self):
-        selmahos = {"ZO": {"color": "#0000FF", "cmavos": ["zo"]}, "NOI": {"color": "#0022FF", "cmavos": ["voi", "poi", "noi"]}}
-        t = Text()
-        color.process_compmo(t, "zopoizo", selmahos)
-        s = Text.assemble(("zo", "#0000FF"), ("poi", "#0022FF"), ("zo", "#0000FF"))
-        self.assertEqual(t, s)
-
         
     #TODO: after color_prt has been refactored, write this test
     def test_color_prt(self):

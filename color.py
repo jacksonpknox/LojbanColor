@@ -42,7 +42,7 @@ class Colorizer(ColorListener):
         self.selmahos = selmahos
         self.config = config
 
-    def exitSentence(self, ctx):
+    def exitLine(self, ctx):
         put(self.t, "\n", None)
 
     def exitWord(self, ctx):

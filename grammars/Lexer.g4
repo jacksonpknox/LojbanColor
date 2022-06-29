@@ -10,4 +10,4 @@ C : [bcdfgjklmnprstvxz] ;
 V : [aeiou] ;
 Y : 'y' ;
 AP : '\'' ;
-EXTRA : [hqw!?1234567890] ;
+EXTRA : ~[ \t\r\n] ;

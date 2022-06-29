@@ -17,6 +17,33 @@ class ColorListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by ColorParser#line.
+    def enterLine(self, ctx:ColorParser.LineContext):
+        pass
+
+    # Exit a parse tree produced by ColorParser#line.
+    def exitLine(self, ctx:ColorParser.LineContext):
+        pass
+
+
+    # Enter a parse tree produced by ColorParser#end.
+    def enterEnd(self, ctx:ColorParser.EndContext):
+        pass
+
+    # Exit a parse tree produced by ColorParser#end.
+    def exitEnd(self, ctx:ColorParser.EndContext):
+        pass
+
+
+    # Enter a parse tree produced by ColorParser#flufftence.
+    def enterFlufftence(self, ctx:ColorParser.FlufftenceContext):
+        pass
+
+    # Exit a parse tree produced by ColorParser#flufftence.
+    def exitFlufftence(self, ctx:ColorParser.FlufftenceContext):
+        pass
+
+
     # Enter a parse tree produced by ColorParser#sentence.
     def enterSentence(self, ctx:ColorParser.SentenceContext):
         pass
