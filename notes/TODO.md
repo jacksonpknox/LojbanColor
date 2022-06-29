@@ -1,6 +1,4 @@
 ## todo list
-- single character lexer
-
 - function that converts string to rich tree (naturally must use parse tree as intermediate type)
 
 - build (rudimentary) grammar on top of 'lexer' grammar
