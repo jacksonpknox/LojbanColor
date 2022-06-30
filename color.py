@@ -165,14 +165,31 @@ def process_args(args):
         print("Type the input:")
         print(Panel(color_prt(sys.stdin.read())))
 
+
+def cuxna(args: dict):
+    pass
+
+
+def prigau(args: dict):
+    
+    
+    pass
+
     
 def build_parser():
     parser = argparse.ArgumentParser(formatter_class=RichHelpFormatter, description="This is the skavla program :)", epilog="God bless you !")
-    group = parser.add_mutually_exclusive_group(required=True)
-    group.add_argument('-r', '--read', action='store', help="read a text file and color it", metavar="FILEPATH")
-    group.add_argument('-a', '--add', action='store', nargs=2, help="add CMAVO to SELMAHO", metavar=("CMAVO", "SELMAHO"))
-    group.add_argument('-c', '--color', action='store', nargs=2, help="set the color of SELMAHO to COLOR", metavar=("SELMAHO", "COLOR"))
-    group.add_argument('-i', '--input', action='store_true', help="read from standard input and color it")
+    subparsers = parser.add_subparsers()
+
+    parser_config = subparsers.add_parser('cuxna')
+    parser_config.add_argument('-a', '--add', action='store', nargs=2, help="add CMAVO to SELMAHO", metavar=("CMAVO", "SELMAHO"))
+    parser_config.add_argument('-c', '--color', action='store', nargs=2, help="set the color of SELMAHO to COLOR", metavar=("SELMAHO", "COLOR"))
+    parser_config.set_defaults(func=cuxna)
+
+    parser_read = subparsers.add_parser('prigau')
+    parser_read.add_argument('-i', '--input', action='store_true', help="read from standard input and color it")
+    parser_config.set_defaults(func=prigau)
+    
+    #group.add_argument('-r', '--read', action='store', help="read a text file and color it", metavar="FILEPATH")
     return parser
 
 

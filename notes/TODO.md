@@ -1,29 +1,20 @@
 ## todo list
 - make a 'config' subparser which has the --add and --color options 
 
-- textualize (package)
-
-- game: click a rafsi, get a list of glosses (each preferably one word) one of which is collect. get points
-
-- change action of all arguments to 'extend' (or maybe it's 'append')
-
 - just focus on the script commands
 
-- function that converts string to rich tree (naturally must use parse tree as intermediate type)
 
-- build (rudimentary) grammar on top of 'lexer' grammar
 
-- argparse
-  - undo disjointness, just execute commands one after another
-  - subparsers
-  - tests for the parser
+- textualize (package)
+  - game: click a rafsi, get a list of glosses (each preferably one word) one of which is collect. get points
+  - function that converts string to rich tree (naturally must use parse tree as intermediate type)
+  - build (rudimentary) grammar on top of 'lexer' grammar
 
 - decorators/meta
   - factor out loading and writing config
 
 - toolkit
   - check selmaho disjointness
-  - print every document in the library
 
 
 ## long term goals
