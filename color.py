@@ -171,7 +171,7 @@ def prigau(args: dict):
     
 def build_parser():
     parser = argparse.ArgumentParser(formatter_class=RichHelpFormatter, description="This is the skavla program :)", epilog="God bless you !")
-    subparsers = parser.add_subparsers()
+    subparsers = parser.add_subparsers(title='commands')
 
     parser_config = subparsers.add_parser('cuxna', formatter_class=RichHelpFormatter)
     parser_config.add_argument('-a', '--add', action='store', nargs=2, help="add CMAVO to SELMAHO", metavar=("CMAVO", "SELMAHO"))
