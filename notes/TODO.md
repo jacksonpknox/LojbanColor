@@ -1,4 +1,7 @@
 ## todo list
+- gismu to gloss list
+- rafsi to gismu list
+
 - hunt down usage text and color it 
 
 
