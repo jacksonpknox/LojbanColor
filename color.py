@@ -148,11 +148,7 @@ def color_prt(content: str) -> Text:
     return t
 
 
-def process_args(args):
-    if r := args.read:
-        with open(r, "r") as f:
-            print(Panel(color_prt(f.read())))
-
+def cuxna(args: dict):
     if a := args.add:
         print("adding cmavo {} to selmaho {}".format(a[0], a[1]))
         add_cmavo(a[0], a[1])
@@ -161,42 +157,39 @@ def process_args(args):
         print("setting color of selmaho {} to {}".format(c[0], c[1]))
         set_color(c[0], c[1])
 
+
+def prigau(args: dict):
+    if files := args.filepath:
+        for f in files:
+            with open(f, "r") as file:
+                print(Panel(color_prt(file.read())))
+
     if i := args.input:
         print("Type the input:")
         print(Panel(color_prt(sys.stdin.read())))
-
-
-def cuxna(args: dict):
-    pass
-
-
-def prigau(args: dict):
-    
-    
-    pass
 
     
 def build_parser():
     parser = argparse.ArgumentParser(formatter_class=RichHelpFormatter, description="This is the skavla program :)", epilog="God bless you !")
     subparsers = parser.add_subparsers()
 
-    parser_config = subparsers.add_parser('cuxna')
+    parser_config = subparsers.add_parser('cuxna', formatter_class=RichHelpFormatter)
     parser_config.add_argument('-a', '--add', action='store', nargs=2, help="add CMAVO to SELMAHO", metavar=("CMAVO", "SELMAHO"))
     parser_config.add_argument('-c', '--color', action='store', nargs=2, help="set the color of SELMAHO to COLOR", metavar=("SELMAHO", "COLOR"))
     parser_config.set_defaults(func=cuxna)
 
-    parser_read = subparsers.add_parser('prigau')
+    parser_read = subparsers.add_parser('prigau', formatter_class=RichHelpFormatter)
+    parser_read.add_argument('filepath', action='extend', help="read a text file and color it", metavar="FILEPATH", nargs='*')
     parser_read.add_argument('-i', '--input', action='store_true', help="read from standard input and color it")
-    parser_config.set_defaults(func=prigau)
+    parser_read.set_defaults(func=prigau)
     
-    #group.add_argument('-r', '--read', action='store', help="read a text file and color it", metavar="FILEPATH")
     return parser
 
 
 def main():
     parser = build_parser()
     args = parser.parse_args()
-    process_args(args)
+    args.func(args)
 
 
 if __name__ == "__main__":

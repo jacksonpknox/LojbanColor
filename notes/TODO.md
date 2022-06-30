@@ -1,8 +1,5 @@
 ## todo list
-- make a 'config' subparser which has the --add and --color options 
-
-- just focus on the script commands
-
+- hunt down usage text and color it 
 
 
 - textualize (package)

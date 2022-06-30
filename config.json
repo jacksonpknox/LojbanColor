@@ -11,9 +11,9 @@
         "q": "yellow",
         "kargimpag": "#FF8000",
         "ga'orgimpag": "#FF8080",
-        "balraf": "#FFC0C0",
-        "bauraf": "#FFFFC0",
-        "broraf": "#FFC080",
+        "balraf": "red",
+        "bauraf": "red",
+        "broraf": "red",
         "baugismu": "#FF0000",
         "brogismu": "#FF0000"
     },

@@ -580,7 +580,7 @@
     ]
   },
   "LE": {
-    "color": "#0000FF",
+    "color": "blue",
     "cmavos": [
       "le",
       "loi",
