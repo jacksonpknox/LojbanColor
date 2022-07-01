@@ -16,6 +16,7 @@ from python_color.ColorLexer import ColorLexer
 from python_color.ColorParser import ColorParser
 from python_color.ColorListener import ColorListener
 
+import cuxna
 
 CONFIG_DEFAULTS = {
     "selmahos": "config\selmahos.json",
@@ -118,18 +119,6 @@ def print_gloss(gismu: str) -> None:
     print(Panel(Text(gismu, style=config["rafsi"]["gismu"]) + Text(": ", style="yellow") + Text(gismus[gismu]["gloss"], style="blue")))
 
 
-def sort_config(config: str) -> None:
-    pass
-    
-        
-def add_gismu(gismu: str, gloss: str) -> None:
-    gismu = gismu.lower()
-    with open(CONFIG_DEFAULTS["gismus"], "r") as f:
-        gismus = json.load(f)
-    gismus[gismu] = {"gloss": gloss, "tags": ["standard"]}
-    print("ok... successfully added gloss {} to gismu {}".format(gloss, gismu))
-    with open(CONFIG_DEFAULTS["gismus"], "w") as f:
-        json.dump(gismus, f, indent=2)
 
         
 #TODO: refactor then test this
@@ -147,16 +136,6 @@ def add_cmavo(cmavo: str, selmaho: str) -> None:
     with open(CONFIG_DEFAULTS["selmahos"], "w") as f:
         json.dump(selmahos, f, indent=2)
 
-
-#TODO: refactor then test this
-def set_color(selmaho: str, color: str) -> None:
-    selmaho = selmaho.upper()
-    with open(CONFIG_DEFAULTS["selmahos"], "r") as f:
-        selmahos = json.load(f)
-    selmahos[selmaho]["color"] = color
-    with open(CONFIG_DEFAULTS["selmahos"], "w") as f:
-        json.dump(selmahos, f, indent=2)
-        
 
 #TODO: test this (after refactoring)
 def color_prt(content: str) -> Text:
@@ -192,23 +171,6 @@ def cpedu(args: dict):
         print_selmaho(c[0])
 
 
-def cuxna(args: dict):
-    if a := args.add:
-        print("adding cmavo {} to selmaho {}".format(a[0], a[1]))
-        add_cmavo(a[0], a[1])
-
-    if c := args.color:
-        print("setting color of selmaho {} to {}".format(c[0], c[1]))
-        set_color(c[0], c[1])
-
-    if g := args.gismu:
-        print("assigning gloss {} to gismu {}".format(g[1], g[0]))
-        add_gismu(g[0], g[1])
-        
-    if s := args.sort:
-        sort_config(s)
-
-
 def prigau(args: dict):
     if files := args.filepath:
         for f in files:
@@ -229,7 +191,7 @@ def build_parser():
     parser_config.add_argument('-c', '--color', action='store', nargs=2, help="set the color of SELMAHO to COLOR", metavar=("SELMAHO", "COLOR"))
     parser_config.add_argument('-g', '--gismu', action='store', nargs=2, help="assign gloss PHRASE to GISMU", metavar=("GISMU", "PHRASE"))
     parser_config.add_argument('-s', '--sort', action='store', nargs=1, help="recursively sort a json", choices=['selmahos', 'gismus'])
-    parser_config.set_defaults(func=cuxna)
+    parser_config.set_defaults(func=cuxna.cuxna)
 
     parser_read = subparsers.add_parser('prigau', formatter_class=RichHelpFormatter)
     parser_read.add_argument('filepath', action='extend', help="read a text file and color it", metavar="FILEPATH", nargs='*')
