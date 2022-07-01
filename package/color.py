@@ -139,8 +139,9 @@ def build_parser():
     parser_config = subparsers.add_parser('cuxna', formatter_class=RichHelpFormatter)
     parser_config.add_argument('-a', '--add', action='store', nargs=2, help="add CMAVO to SELMAHO", metavar=("CMAVO", "SELMAHO"))
     parser_config.add_argument('-c', '--color', action='store', nargs=2, help="set the color of SELMAHO to COLOR", metavar=("SELMAHO", "COLOR"))
-    parser_config.add_argument('-g', '--gismu', action='store', nargs=2, help="assign gloss PHRASE to GISMU", metavar=("GISMU", "PHRASE"))
+    parser_config.add_argument('-g', '--gloss', action='store', nargs=2, help="assign gloss PHRASE to GISMU", metavar=("GISMU", "PHRASE"))
     parser_config.add_argument('-s', '--sort', action='store', nargs=1, help="recursively sort a json", choices=['selmahos', 'gismus'])
+    parser_config.add_argument('-r', '--rafsi', dest="cmarafsi", action='store', nargs=2, help="assign cmarafsi CMARAFSI to GISMU", metavar=("GISMU", "CMARAFSI"))
     parser_config.set_defaults(func=cuxna.parse)
 
     parser_read = subparsers.add_parser('prigau', formatter_class=RichHelpFormatter)

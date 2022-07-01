@@ -27,7 +27,6 @@ def print_gloss(gismu: str) -> None:
 
 def parse(args: dict):
     if g := args.gismu:
-        print("printing the gloss of {}...".format(g))
         print_gloss(g[0])
 
     if c := args.cmavo:
