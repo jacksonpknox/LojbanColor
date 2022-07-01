@@ -9,15 +9,12 @@ from antlr4 import ParseTreeWalker
 from python_color.ColorListener import ColorListener
 
 
-class GismuCollector(ColorListener):
+class CmarafsiCollector(ColorListener):
     def __init__(self):
         self.collection = []
-        
-    def enterGismu(self, ctx):
-        self.collection.append(("gismu", ctx.getText()))
 
     def enterBalraf(self, ctx):
-        self.collection.append(("cmarafsi", ctx.getText()))
+        self.collection.append(ctx.getText())
 
     def enterBroraf(self, ctx):
         self.enterBalraf(ctx)
@@ -26,27 +23,43 @@ class GismuCollector(ColorListener):
         self.enterBalraf(ctx)
 
 
-def collect_gismus(content: str) -> dict:
+class GismuCollector(ColorListener):
+    def __init__(self):
+        self.collection = []
+        
+    def enterGismu(self, ctx):
+        self.collection.append(ctx.getText())
+
+
+def collect(content: str, Collector) -> dict:
     tree = color.get_parse_tree(content)
-    collector = GismuCollector()
+    collector = Collector()
     ParseTreeWalker().walk(collector, tree)
     return collector.collection
 
 
-def analyze(content: str) -> Table:
+def analyze_cmarafsi(content: str) -> Table:
     with open(color.CONFIG_DEFAULTS["gismus"], "r") as f:
         gismus = json.load(f)
-    collection = collect_gismus(content)
+    collection = list(set(collect(content, CmarafsiCollector)))
+    table = Table(title="Collected Cmarafsi")
+    table.add_column("cmarafsi", style="yellow")
+    table.add_column("gismu", style="red")
+    table.add_column("gloss", style="cyan")
+    for cmarafsi in collection:
+        table.add_row(cmarafsi, g := color.get_gismu(cmarafsi, gismus), color.get_gloss(g, gismus))
+    return table
+
+    
+def analyze_gismu(content: str) -> Table:
+    with open(color.CONFIG_DEFAULTS["gismus"], "r") as f:
+        gismus = json.load(f)
+    collection = list(set(collect(content, GismuCollector)))
     table = Table(title="Collected Gismus")
     table.add_column("gismu", style="red")
     table.add_column("gloss", style="cyan")
-    table.add_column("cmarafsi", style="yellow")
-
-    for item in collection:
-        if item[0] == "gismu":
-            table.add_row(g := item[1], color.get_gloss(g, gismus), "--O--")
-        elif item[0] == "cmarafsi":
-            table.add_row(g := color.get_gismu(c := item[1], gismus), color.get_gloss(g, gismus), c)
+    for gismu in collection:
+        table.add_row(gismu, color.get_gloss(gismu, gismus))
     return table
 
 
@@ -55,8 +68,10 @@ def parse(args: dict):
         for f in files:
             with open(f, "r") as file:
                 renderables = [Panel(color.color_prt(content := file.read()))]
-                if args.analyze:
-                    renderables.append(Panel(analyze(content)))
+                if args.gismu:
+                    renderables.append(Panel(analyze_gismu(content)))
+                if args.cmarafsi:
+                    renderables.append(Panel(analyze_cmarafsi(content)))
                 print(Panel(Columns(renderables)))
         
 

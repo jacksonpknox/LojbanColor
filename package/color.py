@@ -131,7 +131,6 @@ def get_parse_tree(lojban: str) -> ParserRuleContext:
     return parser.folio()
 
 
-#TODO: test this (after refactoring)
 def color_prt(content: str) -> Text:
     input_stream = InputStream(content)
     lexer = ColorLexer(input_stream)
@@ -139,10 +138,8 @@ def color_prt(content: str) -> Text:
     parser = ColorParser(stream)
     tree = parser.folio()
 
-    #TODO: factor the location of selmaho file out, ideally into the config
     with open(CONFIG_DEFAULTS["selmahos"], "r") as f:
         selmahos = json.load(f)
-    #TODO: factor location of config out into default, and construct argument for customization
     with open(CONFIG_DEFAULTS["config"], "r") as f:
         config = json.load(f)
 
@@ -172,6 +169,8 @@ def build_parser():
     parser_read.add_argument('filepath', action='extend', help="read a text file and color it", metavar="FILEPATH", nargs='*')
     parser_read.add_argument('-i', '--input', action='store_true', help="read from standard input and color it")
     parser_read.add_argument('-a', '--analyze', action='store_true', help="record all gismu that appear in lujvo and print them")
+    parser_read.add_argument('-g', '--gismu', action='store_true', help="record all gismu that appear in brivla and print them")
+    parser_read.add_argument('-c', '--cmarafsi', action='store_true', help="record all cmarafsi that appear in lujvo and print them")
     parser_read.set_defaults(func=prigau.parse)
 
     parser_request = subparsers.add_parser('cpedu', formatter_class=RichHelpFormatter)
