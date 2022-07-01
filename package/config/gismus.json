@@ -1,0 +1,31 @@
+{
+  "bacru": {
+    "gloss": "utter",
+    "tags": [
+      "standard"
+    ]
+  },
+  "tavla": {
+    "gloss": "talk",
+    "tags": [
+      "standard"
+    ]
+  },
+  "cusku": {
+    "gloss": "express",
+    "tags": [
+      "standard"
+    ]
+  },
+  "ckule": {
+    "gloss": "school",
+    "tags": [
+      "standard"
+    ]
+  },
+  "fanva": {
+    "tags": [
+      "standard"
+    ]
+  }
+}
