@@ -46,6 +46,13 @@ def get_cmavo_color(cmavo: str, selmahos: dict) -> str:
 def put_cmavo(t: Text, cmavo: str, selmahos: dict) -> None:
     put(t, cmavo, get_cmavo_color(cmavo, selmahos))
 
+    
+def get_gismu(cmarafsi: str, gismus: dict) -> str:
+    for gismu in gismus.keys():
+        if cmarafsi in gismus[gismu]["cmarafsi"]:
+            return gismu
+    return "UNCAT"
+
 
 class GismuCounter(ColorListener):
     def __init__(self, gismus: dict):
@@ -58,6 +65,20 @@ class GismuCounter(ColorListener):
             self.count["gismus"]["caught"].append((gismu, self.gismus[gismu]["gloss"]))
         else:
             self.count["gismus"]["uncaught"].append(gismu)
+
+    def enterBalraf(self, ctx):
+        cmarafsi = ctx.getText()
+        gismu = get_gismu(cmarafsi, self.gismus)
+        if gismu != "UNCAT":
+            self.count["cmarafsi"]["caught"].append((gismu, cmarafsi))
+        else:
+            self.count["cmarafsi"]["uncaught"].append(cmarafsi)
+
+    def enterBroraf(self, ctx):
+        self.enterBalraf(ctx)
+
+    def enterBauraf(self, ctx):
+        self.enterBalraf(ctx)
         
 
 class Colorizer(ColorListener):
@@ -146,6 +167,11 @@ def lanli(content: str) -> Table:
         table.add_row(gismu, gloss)
     for gismu in counter.count["gismus"]["uncaught"]:
         table.add_row(gismu, "-")
+    
+    for gismu, cmarafsi in counter.count["cmarafsi"]["caught"]:
+        table.add_row(gismu, "-", cmarafsi)
+    for cmarafsi in counter.count["cmarafsi"]["uncaught"]:
+        table.add_row("-", "-", cmarafsi)
 
     return table
 
