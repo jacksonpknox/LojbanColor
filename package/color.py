@@ -28,6 +28,14 @@ CONFIG_DEFAULTS = {
 }
 
 
+def get_gloss(gismu: str, gismus: dict) -> str:
+    if gismu not in gismus.keys():
+        return "UNCAUGHT"
+    if "gloss" not in gismus[gismu].keys():
+        return "UNGLOSSED"
+    return gismus[gismu]["gloss"]
+
+
 def put(t: Text, txt: str, color: str=None):
     t.append(txt, style=color)
 
@@ -53,33 +61,6 @@ def get_gismu(cmarafsi: str, gismus: dict) -> str:
             return gismu
     return "UNCAT"
 
-
-class GismuCounter(ColorListener):
-    def __init__(self, gismus: dict):
-        self.count = {"gismus": {"caught": [], "uncaught": []}, "cmarafsi": {"caught": [], "uncaught": []}}
-        self.gismus = gismus
-
-    def enterGismu(self, ctx):
-        gismu = ctx.getText()
-        if gismu in self.gismus.keys() and "gloss" in self.gismus[gismu].keys():
-            self.count["gismus"]["caught"].append((gismu, self.gismus[gismu]["gloss"]))
-        else:
-            self.count["gismus"]["uncaught"].append(gismu)
-
-    def enterBalraf(self, ctx):
-        cmarafsi = ctx.getText()
-        gismu = get_gismu(cmarafsi, self.gismus)
-        if gismu != "UNCAT":
-            self.count["cmarafsi"]["caught"].append((gismu, cmarafsi))
-        else:
-            self.count["cmarafsi"]["uncaught"].append(cmarafsi)
-
-    def enterBroraf(self, ctx):
-        self.enterBalraf(ctx)
-
-    def enterBauraf(self, ctx):
-        self.enterBalraf(ctx)
-        
 
 class Colorizer(ColorListener):
     def __init__(self, t: Text, selmahos: dict, config: dict):
@@ -142,38 +123,12 @@ def apply_function_to_json() -> None:
     pass
 
 
-def lanli(content: str) -> Table:
-    # can share parse tree with colorizer
-    input_stream = InputStream(content)
+def get_parse_tree(lojban: str) -> ParserRuleContext:
+    input_stream = InputStream(lojban)
     lexer = ColorLexer(input_stream)
     stream = CommonTokenStream(lexer)
     parser = ColorParser(stream)
-    tree = parser.folio()
-
-    with open(CONFIG_DEFAULTS["gismus"], "r") as f:
-        gismus = json.load(f)
-
-    counter = GismuCounter(gismus)
-    walker = ParseTreeWalker()
-    walker.walk(counter, tree)
-
-    table = Table(title="Gismus")
-
-    table.add_column("gismu", style="red")
-    table.add_column("gloss", style="cyan")
-    table.add_column("cmarafsi", style="yellow")
-
-    for gismu, gloss in counter.count["gismus"]["caught"]:
-        table.add_row(gismu, gloss)
-    for gismu in counter.count["gismus"]["uncaught"]:
-        table.add_row(gismu, "-")
-    
-    for gismu, cmarafsi in counter.count["cmarafsi"]["caught"]:
-        table.add_row(gismu, "-", cmarafsi)
-    for cmarafsi in counter.count["cmarafsi"]["uncaught"]:
-        table.add_row("-", "-", cmarafsi)
-
-    return table
+    return parser.folio()
 
 
 #TODO: test this (after refactoring)
@@ -216,7 +171,7 @@ def build_parser():
     parser_read = subparsers.add_parser('prigau', formatter_class=RichHelpFormatter)
     parser_read.add_argument('filepath', action='extend', help="read a text file and color it", metavar="FILEPATH", nargs='*')
     parser_read.add_argument('-i', '--input', action='store_true', help="read from standard input and color it")
-    parser_read.add_argument('-l', '--lanli', action='store_true', help="record all gismu that appear in lujvo and print them")
+    parser_read.add_argument('-a', '--analyze', action='store_true', help="record all gismu that appear in lujvo and print them")
     parser_read.set_defaults(func=prigau.parse)
 
     parser_request = subparsers.add_parser('cpedu', formatter_class=RichHelpFormatter)
