@@ -3,29 +3,47 @@
     "gloss": "utter",
     "tags": [
       "standard"
+    ],
+    "cmarafsi": [
+      "ba'u"
     ]
   },
   "tavla": {
     "gloss": "talk",
     "tags": [
       "standard"
+    ],
+    "cmarafsi": [
+      "tav",
+      "ta'a"
     ]
   },
   "cusku": {
     "gloss": "express",
     "tags": [
       "standard"
+    ],
+    "cmarafsi": [
+      "cus",
+      "sku"
     ]
   },
   "ckule": {
     "gloss": "school",
     "tags": [
       "standard"
+    ],
+    "cmarafsi": [
+      "kul",
+      "cu'e"
     ]
   },
   "fanva": {
+    "gloss": "translate",
     "tags": [
       "standard"
+    ],
+    "cmarafsi": [
     ]
   }
 }
