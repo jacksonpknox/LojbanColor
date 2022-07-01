@@ -1,9 +1,5 @@
 grammar Fuhivla ;
 
-fuhivla : FUHIVLA ;
+fuhivla : anychar+ ;
 
-/*
- * Lexer rules
- */
-
-FUHIVLA : ~[ \t\r\n]+ ;
+anychar : C | V | DOT | Y | AP | EXTRA ;

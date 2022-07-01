@@ -1,17 +1,48 @@
-- test driven development
-- test: check selmaho disjointness
-- solve state
-- selmaho dataclass
-- file that shows off all color choices
-- choose colors
-- possibly make a script that converts Lujvo parser grammar into Lujvo lexer grammar
-- function that generates a list of ocurrences of a word type, especially fuhivla
+## todo list
+- rafsi to gismu list
+
+- json editor (subparser)
+
+- hunt down usage text and color it 
+
+
+- textualize (package)
+  - game: click a rafsi, get a list of glosses (each preferably one word) one of which is collect. get points
+  - function that converts string to rich tree (naturally must use parse tree as intermediate type)
+  - build (rudimentary) grammar on top of 'lexer' grammar
+
+- decorators/meta
+  - factor out loading and writing config
+
+- toolkit
+  - check selmaho disjointness
+
 
 ## long term goals
-- single character lexer
+- incorporate rich into cli in an elegant way
+  - stating objective phase
+  - reporting outcome phase
 - semantically group selmaho instead of alphabetically
-- grammar competition website
 - color selection tool
+- make a nice way to show and pick colors for word types
+- grammar competition website
+- tree to visual
+- python normal form
+- 'just sprinkle in '-h' to get a customized message for that option string'
+
+## plan per command
+ - read
+   - allow multiple files
+   - allow option (per file) to specify panel styling
+ - add
+   - allow multiple cmavo?
+ - color
+   - rework to 'config'
+   - option to launch interactive configuration
+   - options to cli config stuff with additional options
+ - input
+   - option to go one line at a time (maybe complicated)
+
 
 
 ## special selma'o (for special colors)
@@ -19,7 +50,3 @@
 - i
 - by
 - koha / goha
-
-asyoucanseenaturallanguagesalsonecessitatetheuseofspacestoseparatewordshoweverthespacesneednotbespokenasglotalstopsinfacttheyalmostneverare
-
-you can some times remove spaces and the parser doesnt care. there are only finitely many cases to check.

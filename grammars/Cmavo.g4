@@ -1,9 +1,9 @@
 grammar Cmavo;
 
-cmavo : CMAVO ;
+cmavo : cat_cmavo
+      | lerfu
+      ;
 
-CMAVO : ('.' | C) V ('\'' | V)* 
-      | C 'y.';
+cat_cmavo : (DOT | C) V (AP | V)* ;
 
-fragment V : [aeiou] ;
-fragment C : [bcdfgjklmnprstvxz] ;
+lerfu : C Y DOT ;
