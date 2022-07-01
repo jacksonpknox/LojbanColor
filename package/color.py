@@ -9,6 +9,7 @@ import argparse
 from rich import print
 from rich.text import Text
 from rich.panel import Panel
+from rich.table import Table
 
 from rich_argparse import RichHelpFormatter
 
@@ -21,9 +22,9 @@ import subparsers.prigau as prigau
 import subparsers.cpedu as cpedu
 
 CONFIG_DEFAULTS = {
-    "selmahos": "config\selmahos.json",
-    "config": "config\config.json",
-    "gismus": "config\gismus.json"
+    "selmahos": "config/selmahos.json",
+    "config": "config/config.json",
+    "gismus": "config/gismus.json"
 }
 
 
@@ -44,6 +45,19 @@ def get_cmavo_color(cmavo: str, selmahos: dict) -> str:
 
 def put_cmavo(t: Text, cmavo: str, selmahos: dict) -> None:
     put(t, cmavo, get_cmavo_color(cmavo, selmahos))
+
+
+class GismuCounter(ColorListener):
+    def __init__(self, gismus: dict):
+        self.count = {"gismus": {"caught": [], "uncaught": []}, "cmarafsi": {"caught": [], "uncaught": []}}
+        self.gismus = gismus
+
+    def enterGismu(self, ctx):
+        gismu = ctx.getText()
+        if gismu in self.gismus.keys() and "gloss" in self.gismus[gismu].keys():
+            self.count["gismus"]["caught"].append((gismu, self.gismus[gismu]["gloss"]))
+        else:
+            self.count["gismus"]["uncaught"].append(gismu)
         
 
 class Colorizer(ColorListener):
@@ -107,6 +121,35 @@ def apply_function_to_json() -> None:
     pass
 
 
+def lanli(content: str) -> Table:
+    # can share parse tree with colorizer
+    input_stream = InputStream(content)
+    lexer = ColorLexer(input_stream)
+    stream = CommonTokenStream(lexer)
+    parser = ColorParser(stream)
+    tree = parser.folio()
+
+    with open(CONFIG_DEFAULTS["gismus"], "r") as f:
+        gismus = json.load(f)
+
+    counter = GismuCounter(gismus)
+    walker = ParseTreeWalker()
+    walker.walk(counter, tree)
+
+    table = Table(title="Gismus")
+
+    table.add_column("gismu", style="red")
+    table.add_column("gloss", style="cyan")
+    table.add_column("cmarafsi", style="yellow")
+
+    for gismu, gloss in counter.count["gismus"]["caught"]:
+        table.add_row(gismu, gloss)
+    for gismu in counter.count["gismus"]["uncaught"]:
+        table.add_row(gismu, "-")
+
+    return table
+
+
 #TODO: test this (after refactoring)
 def color_prt(content: str) -> Text:
     input_stream = InputStream(content)
@@ -147,6 +190,7 @@ def build_parser():
     parser_read = subparsers.add_parser('prigau', formatter_class=RichHelpFormatter)
     parser_read.add_argument('filepath', action='extend', help="read a text file and color it", metavar="FILEPATH", nargs='*')
     parser_read.add_argument('-i', '--input', action='store_true', help="read from standard input and color it")
+    parser_read.add_argument('-l', '--lanli', action='store_true', help="record all gismu that appear in lujvo and print them")
     parser_read.set_defaults(func=prigau.parse)
 
     parser_request = subparsers.add_parser('cpedu', formatter_class=RichHelpFormatter)
