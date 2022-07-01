@@ -17,6 +17,13 @@ from python_color.ColorParser import ColorParser
 from python_color.ColorListener import ColorListener
 
 
+CONFIG_DEFAULTS = {
+    "selmahos": "config\selmahos.json",
+    "config": "config\config.json",
+    "gismus": "config\gismus.json"
+}
+
+
 def put(t: Text, txt: str, color: str=None):
     t.append(txt, style=color)
 
@@ -101,7 +108,8 @@ def apply_function_to_json() -> None:
         
 #TODO: refactor then test this
 def add_cmavo(cmavo: str, selmaho: str) -> None:
-    with open("selmahos.json", "r") as f:
+    selmaho = selmaho.upper()
+    with open(CONFIG_DEFAULTS["selmahos"], "r") as f:
         selmahos = json.load(f)
     if selmaho not in selmahos.keys():
         selmahos[selmaho] = {"color": "#0000FF", "cmavos": []}
@@ -110,16 +118,17 @@ def add_cmavo(cmavo: str, selmaho: str) -> None:
     else:
         selmahos[selmaho]["cmavos"].append(cmavo)
         print("ok... successfully added cmavo {} to selmaho {}".format(cmavo, selmaho))
-    with open("selmahos.json", "w") as f:
+    with open(CONFIG_DEFAULTS["selmahos"], "w") as f:
         json.dump(selmahos, f, indent=2)
 
 
 #TODO: refactor then test this
 def set_color(selmaho: str, color: str) -> None:
-    with open("selmahos.json", "r") as f:
+    selmaho = selmaho.upper()
+    with open(CONFIG_DEFAULTS["selmahos"], "r") as f:
         selmahos = json.load(f)
     selmahos[selmaho]["color"] = color
-    with open("selmahos.json", "w") as f:
+    with open(CONFIG_DEFAULTS["selmahos"], "w") as f:
         json.dump(selmahos, f, indent=2)
         
 
@@ -132,10 +141,10 @@ def color_prt(content: str) -> Text:
     tree = parser.folio()
 
     #TODO: factor the location of selmaho file out, ideally into the config
-    with open("selmahos.json", "r") as f:
+    with open(CONFIG_DEFAULTS["selmahos"], "r") as f:
         selmahos = json.load(f)
     #TODO: factor location of config out into default, and construct argument for customization
-    with open("config.json", "r") as f:
+    with open(CONFIG_DEFAULTS["config"], "r") as f:
         config = json.load(f)
 
     t = Text()
