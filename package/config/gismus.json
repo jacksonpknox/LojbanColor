@@ -43,7 +43,126 @@
     "tags": [
       "standard"
     ],
-    "cmarafsi": [
+    "cmarafsi": []
+  },
+  "ckana": {
+    "gloss": "bed",
+    "tags": [
+      "standard"
+    ]
+  },
+  "bukpu": {
+    "gloss": "cloth",
+    "tags": [
+      "standard"
+    ]
+  },
+  "xamsi": {
+    "gloss": "sea",
+    "tags": [
+      "standard"
+    ]
+  },
+  "rirxe": {
+    "gloss": "river",
+    "tags": [
+      "standard"
+    ]
+  },
+  "marbi": {
+    "gloss": "shelter",
+    "tags": [
+      "standard"
+    ]
+  },
+  "ckunu": {
+    "gloss": "conifer",
+    "tags": [
+      "standard"
+    ]
+  },
+  "cukta": {
+    "gloss": "book",
+    "tags": [
+      "standard"
+    ]
+  },
+  "kajna": {
+    "gloss": "shelf",
+    "tags": [
+      "standard"
+    ]
+  },
+  "bitmu": {
+    "gloss": "wall",
+    "tags": [
+      "standard"
+    ]
+  },
+  "blabi": {
+    "gloss": "white",
+    "tags": [
+      "standard"
+    ]
+  },
+  "cmana": {
+    "gloss": "mountain",
+    "tags": [
+      "standard"
+    ]
+  },
+  "sarji": {
+    "gloss": "support",
+    "tags": [
+      "standard"
+    ]
+  },
+  "tsani": {
+    "gloss": "sky",
+    "tags": [
+      "standard"
+    ]
+  },
+  "tsina": {
+    "gloss": "stage",
+    "tags": [
+      "standard"
+    ]
+  },
+  "draci": {
+    "gloss": "play",
+    "tags": [
+      "standard"
+    ]
+  },
+  "crida": {
+    "gloss": "goblin",
+    "tags": [
+      "standard"
+    ]
+  },
+  "bartu": {
+    "gloss": "outside",
+    "tags": [
+      "standard"
+    ]
+  },
+  "sligu": {
+    "gloss": "solid",
+    "tags": [
+      "standard"
+    ]
+  },
+  "brife": {
+    "gloss": "wind",
+    "tags": [
+      "standard"
+    ]
+  },
+  "snura": {
+    "gloss": "safe",
+    "tags": [
+      "standard"
     ]
   }
 }

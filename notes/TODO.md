@@ -1,4 +1,6 @@
 ## todo list
+- add rafsi / get rafsi commands
+
 - rafsi to gismu list
 
 - json editor (subparser)
