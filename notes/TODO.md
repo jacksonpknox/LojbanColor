@@ -1,7 +1,7 @@
 ## todo list
-- factor each subparser into a different module
-
 - rafsi to gismu list
+
+- json editor (subparser)
 
 - hunt down usage text and color it 
 
