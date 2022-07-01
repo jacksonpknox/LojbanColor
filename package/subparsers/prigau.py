@@ -1,15 +1,22 @@
 import color
 import sys
 from rich.panel import Panel
-from rich import print
+from rich.console import Console
 
 
 def parse(args: dict):
+    console = Console()
+
     if files := args.filepath:
         for f in files:
             with open(f, "r") as file:
-                print(Panel(color.color_prt(file.read())))
+                console.print(Panel(color.color_prt(content := file.read())))
+                if args.lanli:
+                    console.print(color.lanli(content))
+
+            
+        
 
     if i := args.input:
-        print("Type the input:")
-        print(Panel(color.color_prt(sys.stdin.read())))
+        console.print("Type the input:")
+        console.print(Panel(color.color_prt(sys.stdin.read())))
