@@ -1,6 +1,5 @@
 import unittest
 import color
-import copy
 
 from rich.text import Text
 

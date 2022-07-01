@@ -16,7 +16,8 @@ from python_color.ColorLexer import ColorLexer
 from python_color.ColorParser import ColorParser
 from python_color.ColorListener import ColorListener
 
-import cuxna
+import subparsers.cuxna as cuxna
+import subparsers.prigau as prigau
 
 CONFIG_DEFAULTS = {
     "selmahos": "config\selmahos.json",
@@ -170,17 +171,6 @@ def cpedu(args: dict):
     if c := args.cmavo:
         print_selmaho(c[0])
 
-
-def prigau(args: dict):
-    if files := args.filepath:
-        for f in files:
-            with open(f, "r") as file:
-                print(Panel(color_prt(file.read())))
-
-    if i := args.input:
-        print("Type the input:")
-        print(Panel(color_prt(sys.stdin.read())))
-
     
 def build_parser():
     parser = argparse.ArgumentParser(formatter_class=RichHelpFormatter, description="This is the skavla program :)", epilog="God bless you !")
@@ -191,12 +181,12 @@ def build_parser():
     parser_config.add_argument('-c', '--color', action='store', nargs=2, help="set the color of SELMAHO to COLOR", metavar=("SELMAHO", "COLOR"))
     parser_config.add_argument('-g', '--gismu', action='store', nargs=2, help="assign gloss PHRASE to GISMU", metavar=("GISMU", "PHRASE"))
     parser_config.add_argument('-s', '--sort', action='store', nargs=1, help="recursively sort a json", choices=['selmahos', 'gismus'])
-    parser_config.set_defaults(func=cuxna.cuxna)
+    parser_config.set_defaults(func=cuxna.parse)
 
     parser_read = subparsers.add_parser('prigau', formatter_class=RichHelpFormatter)
     parser_read.add_argument('filepath', action='extend', help="read a text file and color it", metavar="FILEPATH", nargs='*')
     parser_read.add_argument('-i', '--input', action='store_true', help="read from standard input and color it")
-    parser_read.set_defaults(func=prigau)
+    parser_read.set_defaults(func=prigau.parse)
 
     parser_request = subparsers.add_parser('cpedu', formatter_class=RichHelpFormatter)
     parser_request.add_argument('-g', '--gismu', action='store', nargs=1, help="print out the gloss of GISMU", metavar="GISMU")

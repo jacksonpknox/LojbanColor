@@ -14,6 +14,8 @@ def add_gismu(gismu: str, gloss: str) -> None:
     print("ok... successfully added gloss {} to gismu {}".format(gloss, gismu))
     with open(color.CONFIG_DEFAULTS["gismus"], "w") as f:
         json.dump(gismus, f, indent=2)
+
+
 def set_color(selmaho: str, colour: str) -> None:
     selmaho = selmaho.upper()
     with open(color.CONFIG_DEFAULTS["selmahos"], "r") as f:
@@ -25,7 +27,7 @@ def set_color(selmaho: str, colour: str) -> None:
 
 def add_cmavo(cmavo: str, selmaho: str) -> None:
     selmaho = selmaho.upper()
-    with open(color.color.CONFIG_DEFAULTS["selmahos"], "r") as f:
+    with open(color.CONFIG_DEFAULTS["selmahos"], "r") as f:
         selmahos = json.load(f)
     if selmaho not in selmahos.keys():
         selmahos[selmaho] = {"color": "#0000FF", "cmavos": []}
@@ -34,10 +36,11 @@ def add_cmavo(cmavo: str, selmaho: str) -> None:
     else:
         selmahos[selmaho]["cmavos"].append(cmavo)
         print("ok... successfully added cmavo {} to selmaho {}".format(cmavo, selmaho))
-    with open(color.color.CONFIG_DEFAULTS["selmahos"], "w") as f:
+    with open(color.CONFIG_DEFAULTS["selmahos"], "w") as f:
         json.dump(selmahos, f, indent=2)
 
-def cuxna(args: dict):
+
+def parse(args: dict):
     if a := args.add:
         print("adding cmavo {} to selmaho {}".format(a[0], a[1]))
         add_cmavo(a[0], a[1])
