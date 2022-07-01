@@ -186,5 +186,130 @@
       "standard"
     ],
     "cmarafsi": []
+  },
+  "fliba": {
+    "gloss": "fail",
+    "tags": [],
+    "cmarafsi": []
+  },
+  "cmaci": {
+    "gloss": "math",
+    "tags": [],
+    "cmarafsi": []
+  },
+  "gugde": {
+    "gloss": "country",
+    "tags": [],
+    "cmarafsi": []
+  },
+  "carvi": {
+    "gloss": "rain",
+    "tags": [],
+    "cmarafsi": []
+  },
+  "kumfa": {
+    "gloss": "room",
+    "tags": [],
+    "cmarafsi": []
+  },
+  "salci": {
+    "gloss": "celebrate",
+    "tags": [],
+    "cmarafsi": []
+  },
+  "sacrcu": {
+    "gloss": "necessary",
+    "tags": [],
+    "cmarafsi": []
+  },
+  "sanga": {
+    "gloss": "sing",
+    "tags": [],
+    "cmarafsi": []
+  },
+  "merko": {
+    "gloss": "american",
+    "tags": [],
+    "cmarafsi": []
+  },
+  "menli": {
+    "gloss": "mind",
+    "tags": [],
+    "cmarafsi": []
+  },
+  "clani": {
+    "gloss": "long",
+    "tags": [],
+    "cmarafsi": []
+  },
+  "surla": {
+    "gloss": "relax",
+    "tags": [],
+    "cmarafsi": []
+  },
+  "briju": {
+    "gloss": "office",
+    "tags": [],
+    "cmarafsi": []
+  },
+  "lerfu": {
+    "gloss": "symbol",
+    "tags": [],
+    "cmarafsi": []
+  },
+  "stedu": {
+    "gloss": "head",
+    "tags": [],
+    "cmarafsi": []
+  },
+  "voksa": {
+    "gloss": "voice",
+    "tags": [],
+    "cmarafsi": []
+  },
+  "plise": {
+    "gloss": "apple",
+    "tags": [],
+    "cmarafsi": []
+  },
+  "badna": {
+    "gloss": "banana",
+    "tags": [],
+    "cmarafsi": []
+  },
+  "cadzu": {
+    "gloss": "walk",
+    "tags": [],
+    "cmarafsi": []
+  },
+  "lenku": {
+    "gloss": "cold",
+    "tags": [],
+    "cmarafsi": []
+  },
+  "xusra": {
+    "gloss": "assert",
+    "tags": [],
+    "cmarafsi": []
+  },
+  "sampu": {
+    "gloss": "simple",
+    "tags": [],
+    "cmarafsi": []
+  },
+  "dansu": {
+    "gloss": "dance",
+    "tags": [],
+    "cmarafsi": []
+  },
+  "palci": {
+    "gloss": "evil",
+    "tags": [],
+    "cmarafsi": []
+  },
+  "mrilu": {
+    "gloss": "mail",
+    "tags": [],
+    "cmarafsi": []
   }
 }

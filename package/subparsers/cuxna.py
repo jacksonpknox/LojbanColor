@@ -2,6 +2,9 @@ import color
 import json
 
 
+DEFAULT_GISMU_PACKET = {"gloss": None, "tags": [], "cmarafsi": []}
+
+
 def add_cmarafsi(gismu: str, cmarafsi: str) -> None:
     gismu, cmarafsi = gismu.lower(), cmarafsi.lower()
     with open(color.CONFIG_DEFAULTS["gismus"], "r") as f:
@@ -19,8 +22,9 @@ def add_gloss(gismu: str, gloss: str) -> None:
     gismu = gismu.lower()
     with open(color.CONFIG_DEFAULTS["gismus"], "r") as f:
         gismus = json.load(f)
+    if gismu not in gismus.keys():
+        gismus[gismu] = DEFAULT_GISMU_PACKET
     gismus[gismu]["gloss"] = gloss
-    print("ok... successfully added gloss {} to gismu {}".format(gloss, gismu))
     with open(color.CONFIG_DEFAULTS["gismus"], "w") as f:
         json.dump(gismus, f, indent=2)
 
