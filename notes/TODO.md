@@ -1,9 +1,9 @@
 ## todo list
+- maintanance (refactor) mode
+
+- learn Rich, then learn Textual
+
 - add rafsi / get rafsi commands
-
-- rafsi to gismu list
-
-- json editor (subparser)
 
 - hunt down usage text and color it 
 
