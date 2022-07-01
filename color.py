@@ -102,8 +102,34 @@ class Colorizer(ColorListener):
 # by which i mean argument packing and unpacking and probably decorators
 def apply_function_to_json() -> None:
     pass
+
+
+def print_selmaho(cmavo: str) -> None:
+    with open(CONFIG_DEFAULTS["selmahos"], "r") as f:
+        selmahos = json.load(f)
+    print(Panel(color_prt("{} selma'o {}".format(get_selmaho(cmavo, selmahos), cmavo))))
+
+
+def print_gloss(gismu: str) -> None:
+    with open(CONFIG_DEFAULTS["gismus"], "r") as f:
+        gismus = json.load(f)
+    with open(CONFIG_DEFAULTS["config"], "r") as f:
+        config = json.load(f)
+    print(Panel(Text(gismu, style=config["rafsi"]["gismu"]) + Text(": ", style="yellow") + Text(gismus[gismu]["gloss"], style="blue")))
+
+
+def sort_config(config: str) -> None:
+    pass
     
         
+def add_gismu(gismu: str, gloss: str) -> None:
+    gismu = gismu.lower()
+    with open(CONFIG_DEFAULTS["gismus"], "r") as f:
+        gismus = json.load(f)
+    gismus[gismu] = {"gloss": gloss, "tags": ["standard"]}
+    print("ok... successfully added gloss {} to gismu {}".format(gloss, gismu))
+    with open(CONFIG_DEFAULTS["gismus"], "w") as f:
+        json.dump(gismus, f, indent=2)
 
         
 #TODO: refactor then test this
@@ -156,6 +182,15 @@ def color_prt(content: str) -> Text:
 
     return t
 
+    
+def cpedu(args: dict):
+    if g := args.gismu:
+        print("printing the gloss of {}...".format(g))
+        print_gloss(g[0])
+
+    if c := args.cmavo:
+        print_selmaho(c[0])
+
 
 def cuxna(args: dict):
     if a := args.add:
@@ -165,6 +200,13 @@ def cuxna(args: dict):
     if c := args.color:
         print("setting color of selmaho {} to {}".format(c[0], c[1]))
         set_color(c[0], c[1])
+
+    if g := args.gismu:
+        print("assigning gloss {} to gismu {}".format(g[1], g[0]))
+        add_gismu(g[0], g[1])
+        
+    if s := args.sort:
+        sort_config(s)
 
 
 def prigau(args: dict):
@@ -185,12 +227,19 @@ def build_parser():
     parser_config = subparsers.add_parser('cuxna', formatter_class=RichHelpFormatter)
     parser_config.add_argument('-a', '--add', action='store', nargs=2, help="add CMAVO to SELMAHO", metavar=("CMAVO", "SELMAHO"))
     parser_config.add_argument('-c', '--color', action='store', nargs=2, help="set the color of SELMAHO to COLOR", metavar=("SELMAHO", "COLOR"))
+    parser_config.add_argument('-g', '--gismu', action='store', nargs=2, help="assign gloss PHRASE to GISMU", metavar=("GISMU", "PHRASE"))
+    parser_config.add_argument('-s', '--sort', action='store', nargs=1, help="recursively sort a json", choices=['selmahos', 'gismus'])
     parser_config.set_defaults(func=cuxna)
 
     parser_read = subparsers.add_parser('prigau', formatter_class=RichHelpFormatter)
     parser_read.add_argument('filepath', action='extend', help="read a text file and color it", metavar="FILEPATH", nargs='*')
     parser_read.add_argument('-i', '--input', action='store_true', help="read from standard input and color it")
     parser_read.set_defaults(func=prigau)
+
+    parser_request = subparsers.add_parser('cpedu', formatter_class=RichHelpFormatter)
+    parser_request.add_argument('-g', '--gismu', action='store', nargs=1, help="print out the gloss of GISMU", metavar="GISMU")
+    parser_request.add_argument('-c', '--cmavo', action='store', nargs=1, help='print out the selmaho of CMAVO', metavar="CMAVO")
+    parser_request.set_defaults(func=cpedu)
     
     return parser
 

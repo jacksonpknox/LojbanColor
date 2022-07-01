@@ -1,5 +1,6 @@
 ## todo list
-- gismu to gloss list
+- factor each subparser into a different module
+
 - rafsi to gismu list
 
 - hunt down usage text and color it 
