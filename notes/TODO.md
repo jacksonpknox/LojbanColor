@@ -21,6 +21,7 @@
 
 
 ## long term goals
+- exporting prints
 - incorporate rich into cli in an elegant way
   - stating objective phase
   - reporting outcome phase

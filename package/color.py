@@ -168,7 +168,6 @@ def build_parser():
     parser_read = subparsers.add_parser('prigau', formatter_class=RichHelpFormatter)
     parser_read.add_argument('filepath', action='extend', help="read a text file and color it", metavar="FILEPATH", nargs='*')
     parser_read.add_argument('-i', '--input', action='store_true', help="read from standard input and color it")
-    parser_read.add_argument('-a', '--analyze', action='store_true', help="record all gismu that appear in lujvo and print them")
     parser_read.add_argument('-g', '--gismu', action='store_true', help="record all gismu that appear in brivla and print them")
     parser_read.add_argument('-c', '--cmarafsi', action='store_true', help="record all cmarafsi that appear in lujvo and print them")
     parser_read.set_defaults(func=prigau.parse)

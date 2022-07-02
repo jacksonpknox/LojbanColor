@@ -4,6 +4,7 @@ import json
 from rich.panel import Panel
 from rich.table import Table
 from rich.columns import Columns
+from rich.console import Console
 from rich import print
 from antlr4 import ParseTreeWalker
 from python_color.ColorListener import ColorListener
@@ -64,17 +65,19 @@ def analyze_gismu(content: str) -> Table:
 
 
 def parse(args: dict):
+    console = Console()
     if files := args.filepath:
         for f in files:
-            with open(f, "r") as file:
-                renderables = [Panel(color.color_prt(content := file.read()))]
-                if args.gismu:
-                    renderables.append(Panel(analyze_gismu(content)))
-                if args.cmarafsi:
-                    renderables.append(Panel(analyze_cmarafsi(content)))
-                print(Panel(Columns(renderables)))
+            with console.status("coloring the words...", spinner="hearts"):
+                with open(f, "r") as file:
+                    renderables = [Panel(color.color_prt(content := file.read()))]
+                    if args.gismu:
+                        renderables.append(Panel(analyze_gismu(content)))
+                    if args.cmarafsi:
+                        renderables.append(Panel(analyze_cmarafsi(content)))
+                    console.print(Panel(Columns(renderables)))
         
 
     if i := args.input:
-        print("Type the input:")
-        print(Panel(color.color_prt(sys.stdin.read())))
+        console.print("[red]Type the input[/]:")
+        print(Panel(color.color_prt(sys.stdin.read()), expand=False))
