@@ -3,29 +3,313 @@
     "gloss": "utter",
     "tags": [
       "standard"
+    ],
+    "cmarafsi": [
+      "ba'u"
     ]
   },
   "tavla": {
     "gloss": "talk",
     "tags": [
       "standard"
+    ],
+    "cmarafsi": [
+      "tav",
+      "ta'a"
     ]
   },
   "cusku": {
     "gloss": "express",
     "tags": [
       "standard"
+    ],
+    "cmarafsi": [
+      "cus",
+      "sku"
     ]
   },
   "ckule": {
     "gloss": "school",
     "tags": [
       "standard"
+    ],
+    "cmarafsi": [
+      "kul",
+      "cu'e"
     ]
   },
   "fanva": {
+    "gloss": "translate",
     "tags": [
       "standard"
+    ],
+    "cmarafsi": []
+  },
+  "ckana": {
+    "gloss": "bed",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "bukpu": {
+    "gloss": "cloth",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "xamsi": {
+    "gloss": "sea",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "rirxe": {
+    "gloss": "river",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "marbi": {
+    "gloss": "shelter",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "ckunu": {
+    "gloss": "conifer",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "cukta": {
+    "gloss": "book",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": [
+      "cku"
     ]
+  },
+  "kajna": {
+    "gloss": "shelf",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "bitmu": {
+    "gloss": "wall",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "blabi": {
+    "gloss": "white",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "cmana": {
+    "gloss": "mountain",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "sarji": {
+    "gloss": "support",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "tsani": {
+    "gloss": "sky",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "tsina": {
+    "gloss": "stage",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "draci": {
+    "gloss": "play",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "crida": {
+    "gloss": "goblin",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "bartu": {
+    "gloss": "outside",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "sligu": {
+    "gloss": "solid",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "brife": {
+    "gloss": "wind",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "snura": {
+    "gloss": "safe",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "fliba": {
+    "gloss": "fail",
+    "tags": [],
+    "cmarafsi": []
+  },
+  "cmaci": {
+    "gloss": "math",
+    "tags": [],
+    "cmarafsi": []
+  },
+  "gugde": {
+    "gloss": "country",
+    "tags": [],
+    "cmarafsi": []
+  },
+  "carvi": {
+    "gloss": "rain",
+    "tags": [],
+    "cmarafsi": []
+  },
+  "kumfa": {
+    "gloss": "room",
+    "tags": [],
+    "cmarafsi": []
+  },
+  "salci": {
+    "gloss": "celebrate",
+    "tags": [],
+    "cmarafsi": []
+  },
+  "sacrcu": {
+    "gloss": "necessary",
+    "tags": [],
+    "cmarafsi": []
+  },
+  "sanga": {
+    "gloss": "sing",
+    "tags": [],
+    "cmarafsi": []
+  },
+  "merko": {
+    "gloss": "american",
+    "tags": [],
+    "cmarafsi": []
+  },
+  "menli": {
+    "gloss": "mind",
+    "tags": [],
+    "cmarafsi": []
+  },
+  "clani": {
+    "gloss": "long",
+    "tags": [],
+    "cmarafsi": []
+  },
+  "surla": {
+    "gloss": "relax",
+    "tags": [],
+    "cmarafsi": []
+  },
+  "briju": {
+    "gloss": "office",
+    "tags": [],
+    "cmarafsi": []
+  },
+  "lerfu": {
+    "gloss": "symbol",
+    "tags": [],
+    "cmarafsi": []
+  },
+  "stedu": {
+    "gloss": "head",
+    "tags": [],
+    "cmarafsi": []
+  },
+  "voksa": {
+    "gloss": "voice",
+    "tags": [],
+    "cmarafsi": []
+  },
+  "plise": {
+    "gloss": "apple",
+    "tags": [],
+    "cmarafsi": []
+  },
+  "badna": {
+    "gloss": "banana",
+    "tags": [],
+    "cmarafsi": []
+  },
+  "cadzu": {
+    "gloss": "walk",
+    "tags": [],
+    "cmarafsi": []
+  },
+  "lenku": {
+    "gloss": "cold",
+    "tags": [],
+    "cmarafsi": []
+  },
+  "xusra": {
+    "gloss": "assert",
+    "tags": [],
+    "cmarafsi": []
+  },
+  "sampu": {
+    "gloss": "simple",
+    "tags": [],
+    "cmarafsi": []
+  },
+  "dansu": {
+    "gloss": "dance",
+    "tags": [],
+    "cmarafsi": []
+  },
+  "palci": {
+    "gloss": "evil",
+    "tags": [],
+    "cmarafsi": []
+  },
+  "mrilu": {
+    "gloss": "mail",
+    "tags": [],
+    "cmarafsi": []
   }
 }

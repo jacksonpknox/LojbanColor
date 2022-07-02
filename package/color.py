@@ -28,6 +28,14 @@ CONFIG_DEFAULTS = {
 }
 
 
+def get_gloss(gismu: str, gismus: dict) -> str:
+    if gismu not in gismus.keys():
+        return "UNCAUGHT"
+    if "gloss" not in gismus[gismu].keys():
+        return "UNGLOSSED"
+    return gismus[gismu]["gloss"]
+
+
 def put(t: Text, txt: str, color: str=None):
     t.append(txt, style=color)
 
@@ -46,19 +54,13 @@ def get_cmavo_color(cmavo: str, selmahos: dict) -> str:
 def put_cmavo(t: Text, cmavo: str, selmahos: dict) -> None:
     put(t, cmavo, get_cmavo_color(cmavo, selmahos))
 
+    
+def get_gismu(cmarafsi: str, gismus: dict) -> str:
+    for gismu in gismus.keys():
+        if cmarafsi in gismus[gismu]["cmarafsi"]:
+            return gismu
+    return "UNCAT"
 
-class GismuCounter(ColorListener):
-    def __init__(self, gismus: dict):
-        self.count = {"gismus": {"caught": [], "uncaught": []}, "cmarafsi": {"caught": [], "uncaught": []}}
-        self.gismus = gismus
-
-    def enterGismu(self, ctx):
-        gismu = ctx.getText()
-        if gismu in self.gismus.keys() and "gloss" in self.gismus[gismu].keys():
-            self.count["gismus"]["caught"].append((gismu, self.gismus[gismu]["gloss"]))
-        else:
-            self.count["gismus"]["uncaught"].append(gismu)
-        
 
 class Colorizer(ColorListener):
     def __init__(self, t: Text, selmahos: dict, config: dict):
@@ -121,36 +123,14 @@ def apply_function_to_json() -> None:
     pass
 
 
-def lanli(content: str) -> Table:
-    # can share parse tree with colorizer
-    input_stream = InputStream(content)
+def get_parse_tree(lojban: str) -> ParserRuleContext:
+    input_stream = InputStream(lojban)
     lexer = ColorLexer(input_stream)
     stream = CommonTokenStream(lexer)
     parser = ColorParser(stream)
-    tree = parser.folio()
-
-    with open(CONFIG_DEFAULTS["gismus"], "r") as f:
-        gismus = json.load(f)
-
-    counter = GismuCounter(gismus)
-    walker = ParseTreeWalker()
-    walker.walk(counter, tree)
-
-    table = Table(title="Gismus")
-
-    table.add_column("gismu", style="red")
-    table.add_column("gloss", style="cyan")
-    table.add_column("cmarafsi", style="yellow")
-
-    for gismu, gloss in counter.count["gismus"]["caught"]:
-        table.add_row(gismu, gloss)
-    for gismu in counter.count["gismus"]["uncaught"]:
-        table.add_row(gismu, "-")
-
-    return table
+    return parser.folio()
 
 
-#TODO: test this (after refactoring)
 def color_prt(content: str) -> Text:
     input_stream = InputStream(content)
     lexer = ColorLexer(input_stream)
@@ -158,10 +138,8 @@ def color_prt(content: str) -> Text:
     parser = ColorParser(stream)
     tree = parser.folio()
 
-    #TODO: factor the location of selmaho file out, ideally into the config
     with open(CONFIG_DEFAULTS["selmahos"], "r") as f:
         selmahos = json.load(f)
-    #TODO: factor location of config out into default, and construct argument for customization
     with open(CONFIG_DEFAULTS["config"], "r") as f:
         config = json.load(f)
 
@@ -182,14 +160,16 @@ def build_parser():
     parser_config = subparsers.add_parser('cuxna', formatter_class=RichHelpFormatter)
     parser_config.add_argument('-a', '--add', action='store', nargs=2, help="add CMAVO to SELMAHO", metavar=("CMAVO", "SELMAHO"))
     parser_config.add_argument('-c', '--color', action='store', nargs=2, help="set the color of SELMAHO to COLOR", metavar=("SELMAHO", "COLOR"))
-    parser_config.add_argument('-g', '--gismu', action='store', nargs=2, help="assign gloss PHRASE to GISMU", metavar=("GISMU", "PHRASE"))
+    parser_config.add_argument('-g', '--gloss', action='store', nargs=2, help="assign gloss PHRASE to GISMU", metavar=("GISMU", "PHRASE"))
     parser_config.add_argument('-s', '--sort', action='store', nargs=1, help="recursively sort a json", choices=['selmahos', 'gismus'])
+    parser_config.add_argument('-r', '--rafsi', dest="cmarafsi", action='store', nargs=2, help="assign cmarafsi CMARAFSI to GISMU", metavar=("GISMU", "CMARAFSI"))
     parser_config.set_defaults(func=cuxna.parse)
 
     parser_read = subparsers.add_parser('prigau', formatter_class=RichHelpFormatter)
     parser_read.add_argument('filepath', action='extend', help="read a text file and color it", metavar="FILEPATH", nargs='*')
     parser_read.add_argument('-i', '--input', action='store_true', help="read from standard input and color it")
-    parser_read.add_argument('-l', '--lanli', action='store_true', help="record all gismu that appear in lujvo and print them")
+    parser_read.add_argument('-g', '--gismu', action='store_true', help="record all gismu that appear in brivla and print them")
+    parser_read.add_argument('-c', '--cmarafsi', action='store_true', help="record all cmarafsi that appear in lujvo and print them")
     parser_read.set_defaults(func=prigau.parse)
 
     parser_request = subparsers.add_parser('cpedu', formatter_class=RichHelpFormatter)

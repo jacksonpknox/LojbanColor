@@ -1,7 +1,9 @@
 ## todo list
-- rafsi to gismu list
+- maintanance (refactor) mode
 
-- json editor (subparser)
+- learn Rich, then learn Textual
+
+- add rafsi / get rafsi commands
 
 - hunt down usage text and color it 
 
@@ -19,6 +21,7 @@
 
 
 ## long term goals
+- exporting prints
 - incorporate rich into cli in an elegant way
   - stating objective phase
   - reporting outcome phase

@@ -2,6 +2,7 @@ import color
 import json
 from rich.panel import Panel
 from rich.text import Text
+from rich.table import Table
 from rich import print
 
 
@@ -23,11 +24,22 @@ def print_gloss(gismu: str) -> None:
     else:
         t = Text(gismu, style=config["rafsi"]["gismu"]) + Text(": ", style="yellow") + Text(gismus[gismu]["gloss"], style="blue")
     print(Panel(t))
+
+   
+def print_gloss(gismu: str) -> None:
+    with open(color.CONFIG_DEFAULTS["gismus"], "r") as f:
+        gismus = json.load(f) 
+    with open(color.CONFIG_DEFAULTS["config"], "r") as f:
+        config = json.load(f)
+    table = Table()
+    table.add_column("gismu", style=config["rafsi"]["gismu"])
+    table.add_column("gloss", style="yellow")
+    table.add_row(gismu, color.get_gloss(gismu, gismus))
+    print(table)
     
 
 def parse(args: dict):
     if g := args.gismu:
-        print("printing the gloss of {}...".format(g))
         print_gloss(g[0])
 
     if c := args.cmavo:
