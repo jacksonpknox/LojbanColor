@@ -84,6 +84,8 @@ def parse(args: dict):
         gismus = json.load(f)
     with open(color.CONFIG_DEFAULTS["config"]) as f:
         config = json.load(f)
+    with open(color.CONFIG_DEFAULTS["selmahos"]) as f:
+        selmahos = json.load(f)
     if files := args.filepath:
         for f in files:
             with open(f, "r") as file:
@@ -92,7 +94,7 @@ def parse(args: dict):
             renderables = []
 
             if args.prigau:
-                renderables.append(Panel(color.colorize(tree, gismus, config)))
+                renderables.append(Panel(color.colorize(tree, selmahos, config)))
             if args.gismu:
                 renderables.append(Panel(analyze_gismu(tree, gismus, config)))
             if args.cmarafsi:

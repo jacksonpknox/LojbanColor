@@ -120,14 +120,10 @@ class Colorizer(ColorListener):
 
 
 # moves to prigau
-#TODO: factor out parse tree
-#TODO: rename
-#TODO: factor out configs
 def colorize(tree, selmahos, config) -> Text:
     printer = Colorizer(selmahos, config)
     walker = ParseTreeWalker()
     walker.walk(printer, tree)
-
     return printer.t
 
 
