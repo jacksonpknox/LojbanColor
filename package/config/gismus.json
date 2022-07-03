@@ -343,5 +343,21 @@
     "cmarafsi": [
       "ti'o"
     ]
+  },
+  "djedi": {
+    "gloss": "day",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "katna": {
+    "gloss": null,
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": [
+      "ka'a"
+    ]
   }
 }

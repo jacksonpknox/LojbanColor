@@ -1,15 +1,10 @@
-import sys
-
 from antlr4 import *
 
 import json
 
 import argparse
 
-from rich import print
 from rich.text import Text
-from rich.panel import Panel
-from rich.table import Table
 
 from rich_argparse import RichHelpFormatter
 
