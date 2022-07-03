@@ -170,6 +170,8 @@ def build_parser():
     parser_read.add_argument('-i', '--input', action='store_true', help="read from standard input and color it")
     parser_read.add_argument('-g', '--gismu', action='store_true', help="record all gismu that appear in brivla and print them")
     parser_read.add_argument('-c', '--cmarafsi', action='store_true', help="record all cmarafsi that appear in lujvo and print them")
+    parser_read.add_argument('-e', '--export', action='store', help="export the result to an .svg file", metavar="LOCATION")
+    parser_read.add_argument('-r', '--row', action='store_true', help="print panels in a horizontal row")
     parser_read.set_defaults(func=prigau.parse)
 
     parser_request = subparsers.add_parser('cpedu', formatter_class=RichHelpFormatter)
