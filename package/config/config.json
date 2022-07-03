@@ -20,6 +20,11 @@
     "lerfu": {
         "color": "#00FF33"
     },
-    "gloss": "yellow",
-    "cmavo": "blue"
+    "gloss": "cyan",
+    "cmavo": "blue",
+    "gismu": "red",
+    "cmarafsi": "yellow",
+    "system": "bold cyan",
+    "spinner": "star",
+    "prompt": "red"
 }

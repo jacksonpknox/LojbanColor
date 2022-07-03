@@ -120,21 +120,10 @@ class Colorizer(ColorListener):
 
 
 # moves to prigau
-def get_parse_tree(lojban: str) -> ParserRuleContext:
-    input_stream = InputStream(lojban)
-    lexer = ColorLexer(input_stream)
-    stream = CommonTokenStream(lexer)
-    parser = ColorParser(stream)
-    return parser.folio()
-
-
-# moves to prigau
 #TODO: factor out parse tree
 #TODO: rename
 #TODO: factor out configs
-def colorize(content: str) -> Text:
-    tree = get_parse_tree(content)
-
+def colorize(tree, selmahos, config) -> Text:
     with open(CONFIG_DEFAULTS["selmahos"], "r") as f:
         selmahos = json.load(f)
     with open(CONFIG_DEFAULTS["config"], "r") as f:
