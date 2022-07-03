@@ -25,6 +25,8 @@
     "gismu": "red",
     "cmarafsi": "yellow",
     "system": "bold cyan",
+    "ok": "bold cyan",
     "spinner": "star",
-    "prompt": "red"
+    "prompt": "red",
+    "obstacle": "red"
 }

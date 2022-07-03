@@ -1,6 +1,9 @@
 import color
 import json
 
+from rich import print
+from rich.text import Text
+
 
 DEFAULT_GISMU_PACKET = {"gloss": None, "tags": ["standard"], "cmarafsi": []}
 
@@ -60,7 +63,7 @@ def sort_config(config: str) -> None:
     pass
 
 
-def add_cmarafsi(gismu: str, cmarafsi: str) -> None:
+def add_cmarafsi(gismu: str, cmarafsi: str, config: dict) -> None:
     gismu, cmarafsi = gismu.lower(), cmarafsi.lower()
     if not is_gismu(gismu):
         raise Exception("Error!, {} is not a gismu by morhpology.".format(gismu))
@@ -69,30 +72,55 @@ def add_cmarafsi(gismu: str, cmarafsi: str) -> None:
 
     with Config("gismus") as gismus:
         if gismu not in gismus.keys():
-            # TODO: enrich output
-            print("hm... {} is not caught, so I will add it.".format(gismu))
+            print(
+                Text.assemble(
+                    ("hm... ", config["obstacle"]),
+                    (gismu, config["gismu"]),
+                    (" is not caught, so I will add it.", config["system"])
+                )
+            )
             gismus[gismu] = DEFAULT_GISMU_PACKET
-        # TODO: enrich output
         gismus[gismu]["cmarafsi"].append(cmarafsi)
-        print("ok... successfully added {} as a cmarafsi of {}".format(cmarafsi, gismu))
+        print(
+            Text.assemble(
+                ("ok... ", config["ok"]),
+                ("added ", config["system"]),
+                (cmarafsi, config["cmarafsi"]),
+                (" as a cmarafsi of ", gismu),
+                (".", config["system"])
+            )
+        )
 
 
-def set_gloss(gismu: str, gloss: str) -> None:
+def set_gloss(gismu: str, gloss: str, config: dict) -> None:
     gismu = gismu.lower()
     if not is_gismu(gismu):
         raise Exception("Error!, {} is not a gismu by morphology.".format(gismu))
 
     with Config("gismus") as gismus:
         if gismu not in gismus.keys():
-            # TODO: enrich output
-            print("hm... {} is not caught, so I will add it.".format(gismu))
+            print(
+                Text.assemble(
+                    ("hm... ", config["obstacle"]),
+                    (gismu, config["gismu"]),
+                    (" is not caught, so I will add it.", config["system"])
+                )
+            )
             gismus[gismu] = DEFAULT_GISMU_PACKET
         gismus[gismu]["gloss"] = gloss
-        # TODO: enrich output
-        print("ok... set gloss of gismu {} to {}".format(gismu, gloss))
+        print(
+            Text.assemble(
+                ("ok... ", config["ok"]),
+                ("set gloss of gismu ", config["system"]),
+                (gismu, config["gismu"]),
+                (" to ", config["system"]),
+                (gloss, config["gloss"]),
+                (".", config["system"])
+            )
+        )
 
 
-def set_color(selmaho: str, colour: str) -> None:
+def set_color(selmaho: str, colour: str, config: dict) -> None:
     selmaho = selmaho.upper().replace("H", "h")
     if not is_cmavo(selmaho):
         raise Exception("Error!, {} is not a cmavo by morphology.".format(selmaho))
@@ -101,11 +129,19 @@ def set_color(selmaho: str, colour: str) -> None:
         # TODO: ask before adding selmaho
         # TODO: add selmaho if requested and does not exist
         selmahos[selmaho]["color"] = colour
-        # TODO: enrichen output
-        print("ok... set color of selmaho {} to {}".format(selmaho, colour))
+        print(
+            Text.assemble(
+                ("ok... ", config["ok"]),
+                ("set color of selmaho ", config["system"]),
+                (selmaho, colour),
+                (" to ", config["system"]),
+                (colour, colour),
+                (".", config["system"])
+            )
+        )
 
 
-def add_cmavo(cmavo: str, selmaho: str) -> None:
+def add_cmavo(cmavo: str, selmaho: str, config: dict) -> None:
     selmaho = selmaho.upper().replace("H", "h")
     if not is_cmavo(cmavo):
         raise Exception("Error! {} is not a cmavo by morphology.".format(cmavo))
@@ -114,36 +150,54 @@ def add_cmavo(cmavo: str, selmaho: str) -> None:
 
     with Config("selmahos") as selmahos:
         if selmaho not in selmahos.keys():
-            # TODO: enrichen output
-            print("hm... selmaho {} is not caught, so I will add it.".format(selmaho))
-            selmahos[selmaho] = {"olor": "#0000FF", "cmavos": []}
-        if cmavo in selmahos[selmaho]["cmavos"]:
-            # TODO: enrichen output
             print(
-                "ok.. cmavo {} is already in selmaho {}, so i did nothing".format(
-                    cmavo, selmaho
+                Text.assemble(
+                    ("hm... ", config["obstacle"]),
+                    ("selmaho ", config["system"]),
+                    (selmaho, config["cmavo"]),
+                    (" is not caught, so I will add it.", config["system"])
+                )
+            )
+            selmahos[selmaho] = {"color": "#0000FF", "cmavos": []}
+        if cmavo in selmahos[selmaho]["cmavos"]:
+            print(
+                Text.assemble(
+                    ("ok... ", config["ok"]),
+                    ("cmavo ", config["system"]),
+                    (cmavo, config["cmavo"]),
+                    ("is already in selmaho ", config["system"]),
+                    (selmaho, config["cmavo"]),
+                    (", so I did nothing.", config["system"])
                 )
             )
         else:
             selmahos[selmaho]["cmavos"].append(cmavo)
-            # TODO: enrichen output
             print(
-                "ok... successfully added cmavo {} to selmaho {}".format(cmavo, selmaho)
+                Text.assemble(
+                    ("ok... ", config["ok"]),
+                    ("added cmavo ", config["system"]),
+                    (cmavo, config["cmavo"]),
+                    (" to selmaho ", config["system"]),
+                    (selmaho, config["cmavo"]),
+                )
             )
 
 
 def parse(args: dict):
+    with open(color.CONFIG_DEFAULTS["config"], "r") as f:
+        config = json.load(f)
+
     if a := args.add:
-        add_cmavo(a[0], a[1])  # (cmavo, selmaho)
+        add_cmavo(a[0], a[1], config)  # (cmavo, selmaho)
 
     if c := args.color:
-        set_color(c[0], c[1])  # (selmaho, color)
+        set_color(c[0], c[1], config)  # (selmaho, color)
 
     if g := args.gloss:
-        set_gloss(g[0], g[1])  # (gismu, gloss)
+        set_gloss(g[0], g[1], config)  # (gismu, gloss)
 
     if r := args.cmarafsi:
-        add_cmarafsi(r[0], r[1])  # (gismu, cmarafsi)
+        add_cmarafsi(r[0], r[1], config)  # (gismu, cmarafsi)
 
     if s := args.sort:
         sort_config(s)

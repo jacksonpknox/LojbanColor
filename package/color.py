@@ -124,11 +124,6 @@ class Colorizer(ColorListener):
 #TODO: rename
 #TODO: factor out configs
 def colorize(tree, selmahos, config) -> Text:
-    with open(CONFIG_DEFAULTS["selmahos"], "r") as f:
-        selmahos = json.load(f)
-    with open(CONFIG_DEFAULTS["config"], "r") as f:
-        config = json.load(f)
-
     printer = Colorizer(selmahos, config)
     walker = ParseTreeWalker()
     walker.walk(printer, tree)
