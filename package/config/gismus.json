@@ -359,5 +359,21 @@
     "cmarafsi": [
       "ka'a"
     ]
+  },
+  "foldi": {
+    "gloss": null,
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": [
+      "foi"
+    ]
+  },
+  "gunka": {
+    "gloss": "work",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
   }
 }

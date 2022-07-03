@@ -16,7 +16,7 @@ from python_color.ColorListener import ColorListener
 class Collector(ColorListener):
     def __init__(self):
         self.collection = []
-        
+
     def grab(self, s: str):
         if s not in self.collection:
             self.collection.append(s)
@@ -38,6 +38,7 @@ class GismuCollector(Collector):
         self.grab(ctx.getText())
 
 
+# TODO: (important) factor out tree for re-use
 def collect(content: str, Collector) -> list:
     tree = color.get_parse_tree(content)
     collector = Collector()
@@ -45,27 +46,29 @@ def collect(content: str, Collector) -> list:
     return collector.collection
 
 
-#TODO: factor out config (gismus required, config optional)
+# TODO: factor out config (gismus required, config optional)
 def analyze_cmarafsi(content: str) -> Table:
     with open(color.CONFIG_DEFAULTS["gismus"], "r") as f:
         gismus = json.load(f)
     collection = collect(content, CmarafsiCollector)
-    #TODO: factor styles into config
+    # TODO: factor styles into config
     table = Table(title="Collected Cmarafsi", box=box.DOUBLE)
     table.add_column("cmarafsi", style="yellow")
     table.add_column("gismu", style="red")
     table.add_column("gloss", style="cyan")
     for cmarafsi in collection:
-        table.add_row(cmarafsi, g := color.get_gismu(cmarafsi, gismus), color.get_gloss(g, gismus))
+        table.add_row(
+            cmarafsi, g := color.get_gismu(cmarafsi, gismus), color.get_gloss(g, gismus)
+        )
     return table
 
-    
-#TODO: factor out config (gismus required, config optional)
+
+# TODO: factor out config (gismus required, config optional)
 def analyze_gismu(content: str) -> Table:
     with open(color.CONFIG_DEFAULTS["gismus"], "r") as f:
         gismus = json.load(f)
     collection = collect(content, GismuCollector)
-    #TODO: factor styles into config
+    # TODO: factor styles into config
     table = Table(title="Collected Gismus", box=box.MINIMAL)
     table.add_column("gismu", style="red")
     table.add_column("gloss", style="green")
@@ -74,7 +77,7 @@ def analyze_gismu(content: str) -> Table:
     return table
 
 
-#TODO: factor styles into config
+# TODO: factor styles into config
 def parse(args: dict):
     r = bool(e := args.export)
     console = Console(record=r, force_interactive=(not r))
@@ -83,14 +86,21 @@ def parse(args: dict):
             with open(f, "r") as file:
                 content = file.read()
             renderables = []
+            # TODO: option to not print text
             if True:
-                with console.status(Text("coloring the words...", style="bold cyan"), spinner="star"):
-                    renderables.append(Panel(color.color_prt(content)))
+                with console.status(
+                    Text("coloring the words...", style="bold cyan"), spinner="star"
+                ):
+                    renderables.append(Panel(color.colorize(content)))
             if args.gismu:
-                with console.status(Text("catching the gismu...", style="bold cyan"), spinner="star"):
+                with console.status(
+                    Text("catching the gismu...", style="bold cyan"), spinner="star"
+                ):
                     renderables.append(Panel(analyze_gismu(content)))
             if args.cmarafsi:
-                with console.status(Text("catching the cmarafsi...", style="bold cyan"), spinner="star"):
+                with console.status(
+                    Text("catching the cmarafsi...", style="bold cyan"), spinner="star"
+                ):
                     renderables.append(Panel(analyze_cmarafsi(content)))
             if args.row:
                 console.print(Panel(Columns(renderables), box.DOUBLE))
@@ -98,9 +108,9 @@ def parse(args: dict):
                 console.print(Panel(Group(*renderables), box.DOUBLE, expand=False))
 
     if i := args.input:
-        #TODO: use rich prompt ?
+        # TODO: use rich prompt ?
         console.print("Type the input:", style="red")
-        print(Panel(color.color_prt(sys.stdin.read()), expand=False))
+        print(Panel(color.colorize(sys.stdin.read()), expand=False))
 
     if r:
         console.save_svg(e)
