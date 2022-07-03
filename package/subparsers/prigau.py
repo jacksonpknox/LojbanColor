@@ -58,7 +58,7 @@ def analyze_cmarafsi(content: str) -> Table:
     table.add_column("gloss", style="cyan")
     for cmarafsi in collection:
         table.add_row(
-            cmarafsi, g := color.get_gismu(cmarafsi, gismus), color.get_gloss(g, gismus)
+            cmarafsi, (g := color.get_gismu(cmarafsi, gismus)), color.get_gloss(g, gismus)
         )
     return table
 
@@ -87,7 +87,7 @@ def parse(args: dict):
                 content = file.read()
             renderables = []
             # TODO: option to not print text
-            if True:
+            if args.prigau:
                 with console.status(
                     Text("coloring the words...", style="bold cyan"), spinner="star"
                 ):

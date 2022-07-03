@@ -235,6 +235,9 @@ def build_parser():
     parser_read.add_argument(
         "-r", "--row", action="store_true", help="print panels in a horizontal row"
     )
+    parser_read.add_argument(
+        "-n", "--no-prigau", dest="prigau", action="store_false", help="do not print read text"
+    )
     parser_read.set_defaults(func=prigau.parse)
 
     parser_request = subparsers.add_parser("cpedu", formatter_class=RichHelpFormatter)
