@@ -124,6 +124,8 @@ def colorize(tree, selmahos, config) -> Text:
     printer = Colorizer(selmahos, config)
     walker = ParseTreeWalker()
     walker.walk(printer, tree)
+    #TODO: strip whitespace (rstrip currently returns None)
+    printer.t.rstrip()
     return printer.t
 
 
