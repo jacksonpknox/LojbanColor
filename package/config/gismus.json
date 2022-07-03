@@ -311,5 +311,69 @@
     "gloss": "mail",
     "tags": [],
     "cmarafsi": []
+  },
+  "tirxu": {
+    "gloss": "tiger",
+    "tags": [],
+    "cmarafsi": []
+  },
+  "barda": {
+    "gloss": "big",
+    "tags": [],
+    "cmarafsi": []
+  },
+  "pendo": {
+    "gloss": "friend",
+    "tags": [],
+    "cmarafsi": []
+  },
+  "mamta": {
+    "gloss": "mother",
+    "tags": [],
+    "cmarafsi": []
+  },
+  "mirli": {
+    "gloss": "cervid",
+    "tags": [],
+    "cmarafsi": []
+  },
+  "ctino": {
+    "gloss": "shadow",
+    "tags": [],
+    "cmarafsi": [
+      "ti'o"
+    ]
+  },
+  "djedi": {
+    "gloss": "day",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "katna": {
+    "gloss": null,
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": [
+      "ka'a"
+    ]
+  },
+  "foldi": {
+    "gloss": null,
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": [
+      "foi"
+    ]
+  },
+  "gunka": {
+    "gloss": "work",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
   }
 }

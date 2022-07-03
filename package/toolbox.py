@@ -14,6 +14,6 @@ def print_all_documents() -> None:
     print(docs)
     for doc in docs:
         with open(doc, "r") as f:
-            print(color.color_prt(f.read()))
+            print(color.colorize(f.read()))
             print("ok!")
     print('end')

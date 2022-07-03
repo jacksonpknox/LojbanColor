@@ -1,83 +1,116 @@
 import color
 import sys
 import json
+
+from rich import print, box
+from rich.text import Text
 from rich.panel import Panel
 from rich.table import Table
 from rich.columns import Columns
-from rich.console import Console
-from rich import print
+from rich.console import Console, Group
+
 from antlr4 import ParseTreeWalker
 from python_color.ColorListener import ColorListener
 
 
-class CmarafsiCollector(ColorListener):
+class Collector(ColorListener):
     def __init__(self):
         self.collection = []
 
+    def grab(self, s: str):
+        if s not in self.collection:
+            self.collection.append(s)
+
+
+class CmarafsiCollector(Collector):
     def enterBalraf(self, ctx):
-        self.collection.append(ctx.getText())
+        self.grab(ctx.getText())
 
     def enterBroraf(self, ctx):
-        self.enterBalraf(ctx)
+        self.grab(ctx.getText())
 
     def enterBauraf(self, ctx):
-        self.enterBalraf(ctx)
+        self.grab(ctx.getText())
 
 
-class GismuCollector(ColorListener):
-    def __init__(self):
-        self.collection = []
-        
+class GismuCollector(Collector):
     def enterGismu(self, ctx):
-        self.collection.append(ctx.getText())
+        self.grab(ctx.getText())
 
 
-def collect(content: str, Collector) -> dict:
+# TODO: (important) factor out tree for re-use
+def collect(content: str, Collector) -> list:
     tree = color.get_parse_tree(content)
     collector = Collector()
     ParseTreeWalker().walk(collector, tree)
     return collector.collection
 
 
+# TODO: factor out config (gismus required, config optional)
 def analyze_cmarafsi(content: str) -> Table:
     with open(color.CONFIG_DEFAULTS["gismus"], "r") as f:
         gismus = json.load(f)
-    collection = list(set(collect(content, CmarafsiCollector)))
-    table = Table(title="Collected Cmarafsi")
+    collection = collect(content, CmarafsiCollector)
+    # TODO: factor styles into config
+    table = Table(title="Collected Cmarafsi", box=box.DOUBLE)
     table.add_column("cmarafsi", style="yellow")
     table.add_column("gismu", style="red")
     table.add_column("gloss", style="cyan")
     for cmarafsi in collection:
-        table.add_row(cmarafsi, g := color.get_gismu(cmarafsi, gismus), color.get_gloss(g, gismus))
+        table.add_row(
+            cmarafsi, g := color.get_gismu(cmarafsi, gismus), color.get_gloss(g, gismus)
+        )
     return table
 
-    
+
+# TODO: factor out config (gismus required, config optional)
 def analyze_gismu(content: str) -> Table:
     with open(color.CONFIG_DEFAULTS["gismus"], "r") as f:
         gismus = json.load(f)
-    collection = list(set(collect(content, GismuCollector)))
-    table = Table(title="Collected Gismus")
+    collection = collect(content, GismuCollector)
+    # TODO: factor styles into config
+    table = Table(title="Collected Gismus", box=box.MINIMAL)
     table.add_column("gismu", style="red")
-    table.add_column("gloss", style="cyan")
+    table.add_column("gloss", style="green")
     for gismu in collection:
         table.add_row(gismu, color.get_gloss(gismu, gismus))
     return table
 
 
+# TODO: factor styles into config
 def parse(args: dict):
-    console = Console()
+    r = bool(e := args.export)
+    console = Console(record=r, force_interactive=(not r))
     if files := args.filepath:
         for f in files:
-            with console.status("coloring the words...", spinner="hearts"):
-                with open(f, "r") as file:
-                    renderables = [Panel(color.color_prt(content := file.read()))]
-                    if args.gismu:
-                        renderables.append(Panel(analyze_gismu(content)))
-                    if args.cmarafsi:
-                        renderables.append(Panel(analyze_cmarafsi(content)))
-                    console.print(Panel(Columns(renderables)))
-        
+            with open(f, "r") as file:
+                content = file.read()
+            renderables = []
+            # TODO: option to not print text
+            if True:
+                with console.status(
+                    Text("coloring the words...", style="bold cyan"), spinner="star"
+                ):
+                    renderables.append(Panel(color.colorize(content)))
+            if args.gismu:
+                with console.status(
+                    Text("catching the gismu...", style="bold cyan"), spinner="star"
+                ):
+                    renderables.append(Panel(analyze_gismu(content)))
+            if args.cmarafsi:
+                with console.status(
+                    Text("catching the cmarafsi...", style="bold cyan"), spinner="star"
+                ):
+                    renderables.append(Panel(analyze_cmarafsi(content)))
+            if args.row:
+                console.print(Panel(Columns(renderables), box.DOUBLE))
+            else:
+                console.print(Panel(Group(*renderables), box.DOUBLE, expand=False))
 
     if i := args.input:
-        console.print("[red]Type the input[/]:")
-        print(Panel(color.color_prt(sys.stdin.read()), expand=False))
+        # TODO: use rich prompt ?
+        console.print("Type the input:", style="red")
+        print(Panel(color.colorize(sys.stdin.read()), expand=False))
+
+    if r:
+        console.save_svg(e)
