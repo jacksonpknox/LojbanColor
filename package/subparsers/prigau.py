@@ -4,8 +4,8 @@ import json
 from rich.panel import Panel
 from rich.table import Table
 from rich.columns import Columns
-from rich.console import Console
-from rich import print
+from rich.console import Console, Group
+from rich import print, box
 from antlr4 import ParseTreeWalker
 from python_color.ColorListener import ColorListener
 
@@ -42,8 +42,9 @@ def collect(content: str, Collector) -> dict:
 def analyze_cmarafsi(content: str) -> Table:
     with open(color.CONFIG_DEFAULTS["gismus"], "r") as f:
         gismus = json.load(f)
+    #BUG: this dirupts the order of the collection
     collection = list(set(collect(content, CmarafsiCollector)))
-    table = Table(title="Collected Cmarafsi")
+    table = Table(title="Collected Cmarafsi", box=box.DOUBLE)
     table.add_column("cmarafsi", style="yellow")
     table.add_column("gismu", style="red")
     table.add_column("gloss", style="cyan")
@@ -55,17 +56,19 @@ def analyze_cmarafsi(content: str) -> Table:
 def analyze_gismu(content: str) -> Table:
     with open(color.CONFIG_DEFAULTS["gismus"], "r") as f:
         gismus = json.load(f)
+    #BUG: this disrupts the order of the collection
     collection = list(set(collect(content, GismuCollector)))
-    table = Table(title="Collected Gismus")
+    table = Table(title="Collected Gismus", box=box.MINIMAL)
     table.add_column("gismu", style="red")
-    table.add_column("gloss", style="cyan")
+    table.add_column("gloss", style="green")
     for gismu in collection:
         table.add_row(gismu, color.get_gloss(gismu, gismus))
     return table
 
 
 def parse(args: dict):
-    console = Console()
+    r = bool(e := args.export)
+    console = Console(record=r, force_interactive=(not r))
     if files := args.filepath:
         for f in files:
             with console.status("coloring the words...", spinner="hearts"):
@@ -75,7 +78,12 @@ def parse(args: dict):
                         renderables.append(Panel(analyze_gismu(content)))
                     if args.cmarafsi:
                         renderables.append(Panel(analyze_cmarafsi(content)))
-                    console.print(Panel(Columns(renderables)))
+                if args.row:
+                    console.print(Panel(Columns(renderables), box.DOUBLE))
+                else:
+                    console.print(Panel(Group(*renderables), box.DOUBLE, expand=False))
+    if r:
+        console.save_svg(e)
         
 
     if i := args.input:
