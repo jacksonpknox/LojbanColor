@@ -71,7 +71,7 @@ def parse(args: dict):
     console = Console(record=r, force_interactive=(not r))
     if files := args.filepath:
         for f in files:
-            with console.status("coloring the words...", spinner="hearts"):
+            with console.status("coloring the words...", spinner="star"):
                 with open(f, "r") as file:
                     renderables = [Panel(color.color_prt(content := file.read()))]
                     if args.gismu:
