@@ -5,6 +5,7 @@ import json
 DEFAULT_GISMU_PACKET = {"gloss": None, "tags": [], "cmarafsi": []}
 
 
+#TODO: should create gismu if it does not already exist
 def add_cmarafsi(gismu: str, cmarafsi: str) -> None:
     gismu, cmarafsi = gismu.lower(), cmarafsi.lower()
     with open(color.CONFIG_DEFAULTS["gismus"], "r") as f:

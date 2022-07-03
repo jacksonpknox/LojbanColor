@@ -331,5 +331,17 @@
     "gloss": "mother",
     "tags": [],
     "cmarafsi": []
+  },
+  "mirli": {
+    "gloss": "cervid",
+    "tags": [],
+    "cmarafsi": []
+  },
+  "ctino": {
+    "gloss": "shadow",
+    "tags": [],
+    "cmarafsi": [
+      "ti'o"
+    ]
   }
 }

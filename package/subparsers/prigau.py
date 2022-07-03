@@ -1,12 +1,14 @@
 import color
 import sys
 import json
+
+from rich import print, box
+from rich.text import Text
 from rich.panel import Panel
 from rich.table import Table
 from rich.columns import Columns
 from rich.console import Console, Group
-from rich.text import Text
-from rich import print, box
+
 from antlr4 import ParseTreeWalker
 from python_color.ColorListener import ColorListener
 
@@ -96,6 +98,7 @@ def parse(args: dict):
                 console.print(Panel(Group(*renderables), box.DOUBLE, expand=False))
 
     if i := args.input:
+        #TODO: use rich prompt ?
         console.print("Type the input:", style="red")
         print(Panel(color.color_prt(sys.stdin.read()), expand=False))
 

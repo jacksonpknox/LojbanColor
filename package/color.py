@@ -175,8 +175,8 @@ def build_parser():
     parser_read.set_defaults(func=prigau.parse)
 
     parser_request = subparsers.add_parser('cpedu', formatter_class=RichHelpFormatter)
-    parser_request.add_argument('-g', '--gismu', action='store', nargs=1, help="print out the gloss of GISMU", metavar="GISMU")
-    parser_request.add_argument('-c', '--cmavo', action='store', nargs=1, help='print out the selmaho of CMAVO', metavar="CMAVO")
+    parser_request.add_argument('-g', '--gismu', nargs='+', action='extend', help="print out the gloss of GISMU", metavar="GISMU")
+    parser_request.add_argument('-c', '--cmavo', nargs='+', action='extend', help='print out the selmaho of CMAVO', metavar="CMAVO")
     parser_request.set_defaults(func=cpedu.parse)
     
     return parser
