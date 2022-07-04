@@ -8,6 +8,16 @@ from rich.table import Table
 from rich.text import Text
 from rich.console import Console, Group
 
+def tabulate_token_styles(t: list, config: dict):
+    table = Table(box=box.MINIMAL)
+    table.add_column("token", style=config["system"])
+    table.add_column("style", style=config["system"])
+    for token in t:
+        style = config[token]
+        table.add_row(Text(token, style=style), Text(style, style=config["system"]))
+    return table
+        
+
 
 def tabulate_selmaho_styles(s: list, selmahos: dict, config: dict):
     table = Table(box=box.MINIMAL)
@@ -19,12 +29,6 @@ def tabulate_selmaho_styles(s: list, selmahos: dict, config: dict):
     return table
 
 
-def force_selmaho(selmaho: str, selmahos: dict) -> str:
-    if selmaho not in selmahos.keys():
-        selmaho = color.get_selmaho(selmaho.lower(), selmahos)
-    return selmaho
-        
-
 def parse(args: dict):
     with open(color.CONFIG_DEFAULTS["config"], "r") as f:
         config = json.load(f)
@@ -34,11 +38,17 @@ def parse(args: dict):
     if s := args.selmaho_style:
         with open(color.CONFIG_DEFAULTS["selmahos"], "r") as f:
             selmahos = json.load(f)
-        s = [force_selmaho(selmaho, selmahos) for selmaho in s]
+        s = [color.force_selmaho(selmaho, selmahos) for selmaho in s]
         table = tabulate_selmaho_styles(s, selmahos, config)
         renderables.append(Panel(table))
 
-    #TODO: show lexeme style option
+    #TODO: rework config into palette
+    if t := args.token_style:
+        for token in t:
+            if token not in config.keys():
+                raise Exception("!! not a token: " + token)
+        table = tabulate_token_styles(t, config)
+        renderables.append(Panel(table))
 
     if c := args.cmavo:
         with open(color.CONFIG_DEFAULTS["selmahos"], "r") as f:

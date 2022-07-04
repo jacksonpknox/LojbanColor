@@ -159,7 +159,6 @@ def parse(args: dict):
                 console.print(Panel(Group(*renderables), box.DOUBLE, expand=False))
 
     if args.input:
-        # TODO: use rich prompt ?
         console.print("Type the input:", style="red")
         print(Panel(color.colorize(get_parse_tree(sys.stdin.read())), expand=False))
 

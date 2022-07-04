@@ -149,15 +149,9 @@ def add_cmavo(cmavo: str, selmaho: str, config: dict) -> None:
             )
 
 
-#TODO: silently allow cmavos
 def set_selmaho_style(selmaho: str, colour: str, config: dict) -> None:
-    selmaho = selmaho.upper().replace("H", "h")
-    if not color.is_cmavo(selmaho.lower().replace("h",'\'')):
-        raise Exception("Error!, {} is not a cmavo by morphology.".format(selmaho))
-
     with Config("selmahos") as selmahos:
-        # TODO: ask before adding selmaho
-        # TODO: add selmaho if requested and does not exist
+        selmaho = color.force_selmaho(selmaho, selmahos)
         selmahos[selmaho]["color"] = colour
         print(
             Text.assemble(

@@ -48,13 +48,19 @@ def get_selmaho(cmavo: str, selmahos: dict) -> str:
     return "UNCAT"
 
 
+def force_selmaho(selmaho: str, selmahos: dict) -> str:
+    if selmaho not in selmahos.keys():
+        selmaho = get_selmaho(selmaho.lower().replace('h', '\''), selmahos)
+    return selmaho
+
+
 def get_gismu(cmarafsi: str, gismus: dict) -> str:
     for gismu in gismus.keys():
         if cmarafsi in gismus[gismu]["cmarafsi"]:
             return gismu
     return "UNCAT"
 
-    
+ 
 def tabulate_cmarafsi(c, gismus, config) -> Table:
     table = Table(box=box.MINIMAL)
     table.add_column("cmarafsi", style=config["cmarafsi"])
@@ -191,6 +197,14 @@ def build_parser():
         action="extend",
         help="print the style of each SELMAHO",
         metavar="SELMAHO",
+    )
+    parser_request.add_argument(
+        "-t",
+        "--token-style",    
+        dest="token_style",
+        nargs="+",
+        action="extend",
+        help="print the style of each "
     )
     parser_request.add_argument(
         "-c",
