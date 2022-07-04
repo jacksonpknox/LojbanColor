@@ -739,5 +739,40 @@
       "standard"
     ],
     "cmarafsi": []
+  },
+  "sipna": {
+    "gloss": "sleep",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "nupre": {
+    "gloss": "promise",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "canko": {
+    "gloss": "window",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "savru": {
+    "gloss": "noise",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "bajra": {
+    "gloss": "run",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
   }
 }

@@ -1,4 +1,12 @@
 {
+  "mi'iskari": {
+    "gloss": "cyan",
+    "system": "black",
+    "ok": "bold cyan",
+    "prompt": "red",
+    "obstacle": "red"
+  },
+  "valskari": {
     "fu'ivla": "#008700",
     "cmene": "#FFFF00",
     "cmavo": "blue",
@@ -15,4 +23,5 @@
     "balraf": "red",
     "y": "yellow",
     "q": "yellow"
+  }
 }

@@ -12,9 +12,10 @@ from rich import box
 from rich.table import Table
 
 CONFIG_DEFAULTS = {
-    "selmahos": "config/selmahos.json",
     "config": "config/config.json",
     "gismus": "config/gismus.json",
+    "selmahos": "config/selmahos.json",
+    "skari": "config/skari.json",
 }
 
 
@@ -61,11 +62,11 @@ def get_gismu(cmarafsi: str, gismus: dict) -> str:
     return "UNCAT"
 
  
-def tabulate_cmarafsi(c, gismus, config) -> Table:
+def tabulate_cmarafsi(c, gismus, skari: dict) -> Table:
     table = Table(box=box.MINIMAL)
-    table.add_column("cmarafsi", style=config["cmarafsi"])
-    table.add_column("gismu", style=config["gismu"])
-    table.add_column("gloss", style=config["gloss"])
+    table.add_column("cmarafsi", style=skari["valskari"]["cmarafsi"])
+    table.add_column("gismu", style=skari["valskari"]["gismu"])
+    table.add_column("gloss", style=skari["mi'iskari"]["gloss"])
     for cmarafsi in c:
         gismu = get_gismu(cmarafsi, gismus)
         table.add_row(
@@ -74,10 +75,10 @@ def tabulate_cmarafsi(c, gismus, config) -> Table:
     return table
 
 
-def tabulate_selmahos(c, selmahos, config):
+def tabulate_selmahos(c, selmahos, skari: dict):
     table = Table(box=box.MINIMAL)
-    table.add_column("cmavo", style=config["cmavo"])
-    table.add_column("selma'o", style=config["cmavo"])
+    table.add_column("cmavo", style=skari["valskari"]["cmavo"])
+    table.add_column("selma'o", style=skari["valskari"]["cmavo"])
     for cmavo in c:
         s = get_selmaho(cmavo, selmahos)
         colr = selmahos[s]["color"]
@@ -85,10 +86,10 @@ def tabulate_selmahos(c, selmahos, config):
     return table
 
 
-def gloss_gismus(g: list, gismus: dict, config: dict):
+def gloss_gismus(g: list, gismus: dict, skari: dict):
     table = Table(box=box.MINIMAL)
-    table.add_column("gismu", style=config["gismu"])
-    table.add_column("gloss", style=config["gloss"])
+    table.add_column("gismu", style=skari["valskari"]["gismu"])
+    table.add_column("gloss", style=skari["mi'iskari"]["gloss"])
     for gismu in g:
         table.add_row(gismu, get_gloss(gismu, gismus))
     return table

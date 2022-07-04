@@ -1,32 +1,3 @@
 {
-  "fu'ivla": {
-    "color": "#008700"
-  },
-  "cmene": {
-    "color": "#FFFF00"
-  },
-  "rafsi": {
-    "gismu": "#FF0000",
-    "y": "yellow",
-    "q": "yellow",
-    "kargimpag": "#FF8000",
-    "ga'orgimpag": "#FF8080",
-    "balraf": "red",
-    "bauraf": "red",
-    "broraf": "red",
-    "baugismu": "#FF0000",
-    "brogismu": "#FF0000"
-  },
-  "lerfu": {
-    "color": "#00FF33"
-  },
-  "gloss": "cyan",
-  "cmavo": "blue",
-  "gismu": "red",
-  "cmarafsi": "yellow",
-  "system": "black",
-  "ok": "bold cyan",
-  "spinner": "star",
-  "prompt": "red",
-  "obstacle": "red"
+    "spinner": "star"
 }

@@ -8,30 +8,34 @@ from rich.table import Table
 from rich.text import Text
 from rich.console import Console, Group
 
-def tabulate_token_styles(t: list, config: dict):
+def tabulate_token_styles(t: list, skari: dict):
+    s = skari["mi'iskari"]["system"]
     table = Table(box=box.MINIMAL)
-    table.add_column("token", style=config["system"])
-    table.add_column("style", style=config["system"])
+    table.add_column("token", style=s)
+    table.add_column("style", style=s)
     for token in t:
-        style = config[token]
-        table.add_row(Text(token, style=style), Text(style, style=config["system"]))
+        style = ""
+        for _, item in skari.items():
+            if token in item.keys():
+                style = item[token]
+        table.add_row(Text(token, style=style), Text(style, style=s))
     return table
         
 
 
-def tabulate_selmaho_styles(s: list, selmahos: dict, config: dict):
+def tabulate_selmaho_styles(s: list, selmahos: dict, skari: dict):
     table = Table(box=box.MINIMAL)
-    table.add_column("selma'o", style=config["cmavo"])
-    table.add_column("style", style=config["system"])
+    table.add_column("selma'o", style=skari["valskari"]["cmavo"])
+    table.add_column("style", style=skari["mi'iskari"]["system"])
     for selmaho in s:
         style = selmahos[selmaho]["color"]
-        table.add_row(Text(selmaho, style=style), Text(style, style=config["system"]))
+        table.add_row(Text(selmaho, style=style), Text(style, style=skari["mi'iskari"]["system"]))
     return table
 
 
 def parse(args: dict):
-    with open(color.CONFIG_DEFAULTS["config"], "r") as f:
-        config = json.load(f)
+    with open(color.CONFIG_DEFAULTS["skari"], "r") as f:
+        skari = json.load(f)
     renderables = []
     console = Console()
     
@@ -39,33 +43,37 @@ def parse(args: dict):
         with open(color.CONFIG_DEFAULTS["selmahos"], "r") as f:
             selmahos = json.load(f)
         s = [color.force_selmaho(selmaho, selmahos) for selmaho in s]
-        table = tabulate_selmaho_styles(s, selmahos, config)
+        table = tabulate_selmaho_styles(s, selmahos, skari)
         renderables.append(Panel(table))
 
-    #TODO: rework config into palette
     if t := args.token_style:
         for token in t:
-            if token not in config.keys():
+            real_token = False
+            for _, item in skari.items():
+                if token in item.keys():
+                    real_token = True
+            if not real_token:
                 raise Exception("!! not a token: " + token)
-        table = tabulate_token_styles(t, config)
+        table = tabulate_token_styles(t, skari)
         renderables.append(Panel(table))
 
     if c := args.cmavo:
         with open(color.CONFIG_DEFAULTS["selmahos"], "r") as f:
             selmahos = json.load(f)
-        table = color.tabulate_selmahos(c, selmahos, config)
+        c = [cmavo.lower().replace('h', '\'') for cmavo in c]
+        table = color.tabulate_selmahos(c, selmahos, skari)
         renderables.append(Panel(table))
 
     if g := args.gloss:
         with open(color.CONFIG_DEFAULTS["gismus"], "r") as f:
             gismus = json.load(f)
-        table = color.gloss_gismus(g, gismus, config)
+        table = color.gloss_gismus(g, gismus, skari)
         renderables.append(Panel(table))
 
     if r := args.rafsi:
         with open(color.CONFIG_DEFAULTS["gismus"], "r") as f:
             gismus = json.load(f)
-        table = color.tabulate_cmarafsi(r, gismus, config)
+        table = color.tabulate_cmarafsi(r, gismus, skari)
         renderables.append(Panel(table))
 
     console.print(Panel(Group(*renderables), box.DOUBLE, expand=False))

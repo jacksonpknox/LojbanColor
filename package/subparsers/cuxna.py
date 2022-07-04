@@ -51,7 +51,9 @@ def is_gismu(valsi: str) -> bool:
 
 
 
-def add_cmarafsi(gismu: str, cmarafsi: str, config: dict) -> None:
+def add_cmarafsi(gismu: str, cmarafsi: str, skari: dict) -> None:
+    s = skari["mi'iskari"]["system"]
+
     gismu, cmarafsi = gismu.lower(), cmarafsi.lower()
     if not is_gismu(gismu):
         raise Exception("Error!, {} is not a gismu by morhpology.".format(gismu))
@@ -62,25 +64,27 @@ def add_cmarafsi(gismu: str, cmarafsi: str, config: dict) -> None:
         if gismu not in gismus.keys():
             print(
                 Text.assemble(
-                    ("hm... ", config["obstacle"]),
-                    (gismu, config["gismu"]),
-                    (" is not caught, so I will add it.", config["system"])
+                    ("hm... ", skari["mi'iskari"]["obstacle"]),
+                    (gismu, skari["valskari"]["gismu"]),
+                    (" is not caught, so I will add it.", s)
                 )
             )
             gismus[gismu] = DEFAULT_GISMU_PACKET
         gismus[gismu]["cmarafsi"].append(cmarafsi)
         print(
             Text.assemble(
-                ("ok... ", config["ok"]),
-                ("added ", config["system"]),
-                (cmarafsi, config["cmarafsi"]),
+                ("ok... ", skari["mi'iskari"]["ok"]),
+                ("added ", s),
+                (cmarafsi, skari["valskari"]["cmarafsi"]),
                 (" as a cmarafsi of ", gismu),
-                (".", config["system"])
+                (".", s)
             )
         )
 
 
-def set_gloss(gismu: str, gloss: str, config: dict) -> None:
+def set_gloss(gismu: str, gloss: str, skari: dict) -> None:
+    s = skari["mi'iskari"]["system"]
+
     gismu = gismu.lower()
     if not is_gismu(gismu):
         raise Exception("Error!, {} is not a gismu by morphology.".format(gismu))
@@ -89,26 +93,29 @@ def set_gloss(gismu: str, gloss: str, config: dict) -> None:
         if gismu not in gismus.keys():
             print(
                 Text.assemble(
-                    ("hm... ", config["obstacle"]),
-                    (gismu, config["gismu"]),
-                    (" is not caught, so I will add it.", config["system"])
+                    ("hm... ", skari["mi'iskari"]["obstacle"]),
+                    (gismu, skari["valskari"]["gismu"]),
+                    (" is not caught, so I will add it.", s)
                 )
             )
             gismus[gismu] = DEFAULT_GISMU_PACKET
         gismus[gismu]["gloss"] = gloss
         print(
             Text.assemble(
-                ("ok... ", config["ok"]),
-                ("set gloss of gismu ", config["system"]),
-                (gismu, config["gismu"]),
-                (" to ", config["system"]),
-                (gloss, config["gloss"]),
-                (".", config["system"])
+                ("ok... ", skari["mi'iskari"]["ok"]),
+                ("set gloss of gismu ", s),
+                (gismu, skari["mi'iskari"]["gismu"]),
+                (" to ", s),
+                (gloss, skari["mi'iskari"]["gloss"]),
+                (".", s)
             )
         )
 
 
-def add_cmavo(cmavo: str, selmaho: str, config: dict) -> None:
+def add_cmavo(cmavo: str, selmaho: str, skari: dict) -> None:
+    s = skari["mi'iskari"]["system"]
+    c = skari["valskari"]["cmavo"]
+
     selmaho = selmaho.upper().replace("H", "h")
     if not color.is_cmavo(cmavo):
         raise Exception("Error! {} is not a cmavo by morphology.".format(cmavo))
@@ -119,87 +126,91 @@ def add_cmavo(cmavo: str, selmaho: str, config: dict) -> None:
         if selmaho not in selmahos.keys():
             print(
                 Text.assemble(
-                    ("hm... ", config["obstacle"]),
-                    ("selmaho ", config["system"]),
-                    (selmaho, config["cmavo"]),
-                    (" is not caught, so I will add it.", config["system"])
+                    ("hm... ", skari["mi'iskari"]["obstacle"]),
+                    ("selmaho ", s),
+                    (selmaho, c),
+                    (" is not caught, so I will add it.", s)
                 )
             )
-            selmahos[selmaho] = {"color": "#0000FF", "cmavos": []}
+            selmahos[selmaho] = {"color": c, "cmavos": []}
         if cmavo in selmahos[selmaho]["cmavos"]:
             print(
                 Text.assemble(
-                    ("ok... ", config["ok"]),
-                    ("cmavo ", config["system"]),
-                    (cmavo, config["cmavo"]),
-                    ("is already in selmaho ", config["system"]),
-                    (selmaho, config["cmavo"]),
-                    (", so I did nothing.", config["system"])
+                    ("ok... ", skari["mi'iskari"]["ok"]),
+                    ("cmavo ", s),
+                    (cmavo, c),
+                    ("is already in selmaho ", s),
+                    (selmaho, c),
+                    (", so I did nothing.", s)
                 )
             )
         else:
             selmahos[selmaho]["cmavos"].append(cmavo)
             print(
                 Text.assemble(
-                    ("ok... ", config["ok"]),
-                    ("added cmavo ", config["system"]),
-                    (cmavo, config["cmavo"]),
-                    (" to selmaho ", config["system"]),
-                    (selmaho, config["cmavo"]),
+                    ("ok... ", skari["mi'iskari"]["ok"]),
+                    ("added cmavo ", s),
+                    (cmavo, c),
+                    (" to selmaho ", s),
+                    (selmaho, c),
                 )
             )
 
             
 def set_token_style(token: str, style: str) -> None:
-    with Config("config") as conf:
-        if token not in conf.keys():
+    with Config("skari") as skari:
+        if token in skari["mi'iskari"].keys():
+            skari["mi'iskari"][token] = style
+        elif token in skari["valskari"].keys():
+            skari["valskari"][token] = style
+        else:
             raise Exception("Error! not a token: " + token)
-        conf[token] = style
+        s = skari["mi'iskari"]["system"]
         print(
             Text.assemble(
-                ("ok... ", conf["ok"]),
-                ("set style of token ", conf["system"]),
+                ("ok... ", skari["mi'iskari"]["ok"]),
+                ("set style of token ", s),
                 (token, style),
-                (" to ", conf["system"]),
-                (style, conf["system"]),
-                (".", conf["system"])
+                (" to ", s),
+                (style, s),
+                (".", s)
             )
         )
-        
 
 
-def set_selmaho_style(selmaho: str, colour: str, config: dict) -> None:
+def set_selmaho_style(selmaho: str, colour: str, skari: dict) -> None:
+    s = skari["mi'iskari"]["system"]
     with Config("selmahos") as selmahos:
         selmaho = color.force_selmaho(selmaho, selmahos)
         selmahos[selmaho]["color"] = colour
         print(
             Text.assemble(
-                ("ok... ", config["ok"]),
-                ("set color of selmaho ", config["system"]),
+                ("ok... ", skari["mi'iskari"]["ok"]),
+                ("set color of selmaho ", s),
                 (selmaho, colour),
-                (" to ", config["system"]),
-                (colour, colour),
-                (".", config["system"])
+                (" to ", s),
+                (colour, s),
+                (".", s)
             )
         )
 
 
 def parse(args: dict):
-    with open(color.CONFIG_DEFAULTS["config"], "r") as f:
-        config = json.load(f)
+    with open(color.CONFIG_DEFAULTS["skari"], "r") as f:
+        skari = json.load(f)
 
 
     if s := args.selmaho_style:
-        set_selmaho_style(s[0], s[1], config)  # (selmaho, style)
+        set_selmaho_style(s[0], s[1], skari)  # (selmaho, style)
 
     if t := args.token_style:
         set_token_style(t[0], t[1]) # (token, style)
 
     if c := args.cmavo:
-        add_cmavo(c[1], c[0], config)  # (cmavo, selmaho)
+        add_cmavo(c[1], c[0], skari)  # (cmavo, selmaho)
 
     if g := args.gloss:
-        set_gloss(g[0], g[1], config)  # (gismu, gloss)
+        set_gloss(g[0], g[1], skari)  # (gismu, gloss)
 
     if r := args.cmarafsi:
-        add_cmarafsi(r[0], r[1], config)  # (gismu, cmarafsi)
+        add_cmarafsi(r[0], r[1], skari)  # (gismu, cmarafsi)

@@ -52,10 +52,10 @@ def collect(tree, Collector) -> list:
 
 
 class Colorizer(ColorListener):
-    def __init__(self, selmahos: dict, config: dict):
+    def __init__(self, selmahos: dict, valskari: dict):
         self.t = Text()
         self.selmahos = selmahos
-        self.config = config
+        self.valskari = valskari
 
     def exitLine(self, ctx):
         self.t.append("\n")
@@ -67,51 +67,49 @@ class Colorizer(ColorListener):
         self.t.append(text=(cmavo := ctx.getText()), style=self.selmahos[color.get_selmaho(cmavo, self.selmahos)]["color"])
 
     def enterLerfu(self, ctx):
-        self.t.append(text=ctx.getText(), style=self.config["lerfu"]["color"])
+        self.t.append(text=ctx.getText(), style=self.valskari["lerfu"])
     def enterFuhivla(self, ctx):
-        self.t.append(text=ctx.getText(), style=self.config["fu'ivla"]["color"])
+        self.t.append(text=ctx.getText(), style=self.valskari["fu'ivla"])
     def enterCmene(self, ctx):
-        self.t.append(text=ctx.getText(), style=self.config["cmene"]["color"])
-    def enterY(self, ctx):
-        self.t.append(text=ctx.getText(), style=self.config["rafsi"]["y"])
+        self.t.append(text=ctx.getText(), style=self.valskari["cmene"])
     def enterBaugismu(self, ctx):
-        self.t.append(text=ctx.getText(), style=self.config["rafsi"]["baugismu"])
+        self.t.append(text=ctx.getText(), style=self.valskari["baugismu"])
     def enterBrogismu(self, ctx):
-        self.t.append(text=ctx.getText(), style=self.config["rafsi"]["brogismu"])
+        self.t.append(text=ctx.getText(), style=self.valskari["brogismu"])
     def enterBalraf(self, ctx):
-        self.t.append(text=ctx.getText(), style=self.config["rafsi"]["balraf"])
+        self.t.append(text=ctx.getText(), style=self.valskari["balraf"])
     def enterBroraf(self, ctx):
-        self.t.append(text=ctx.getText(), style=self.config["rafsi"]["broraf"])
+        self.t.append(text=ctx.getText(), style=self.valskari["broraf"])
     def enterBauraf(self, ctx):
-        self.t.append(text=ctx.getText(), style=self.config["rafsi"]["bauraf"])
+        self.t.append(text=ctx.getText(), style=self.valskari["bauraf"])
     def enterGahorgimpag(self, ctx: ColorParser.GahorgimpagContext):
-        self.t.append(text=ctx.getText(), style=self.config["rafsi"]["ga'orgimpag"])
+        self.t.append(text=ctx.getText(), style=self.valskari["ga'orgimpag"])
     def enterKargimpag(self, ctx: ColorParser.KargimpagContext):
-        self.t.append(text=ctx.getText(), style=self.config["rafsi"]["kargimpag"])
+        self.t.append(text=ctx.getText(), style=self.valskari["kargimpag"])
     def enterY(self, ctx):
-        self.t.append(text=ctx.getText(), style=self.config["rafsi"]["y"])
+        self.t.append(text=ctx.getText(), style=self.valskari["y"])
     def enterQ(self, ctx):
-        self.t.append(text=ctx.getText(), style=self.config["rafsi"]["q"])
+        self.t.append(text=ctx.getText(), style=self.valskari["q"])
 
 
 
-def analyze_rafsi(tree, gismus, config) -> Table:
+def analyze_rafsi(tree, gismus, skari) -> Table:
     collection = collect(tree, CmarafsiCollector)
-    return color.tabulate_cmarafsi(collection, gismus, config)
+    return color.tabulate_cmarafsi(collection, gismus, skari)
 
 
-def analyze_gismu(tree, gismus, config) -> Table:
+def analyze_gismu(tree, gismus, skari) -> Table:
     collection = collect(tree, GismuCollector)
-    return color.gloss_gismus(collection, gismus, config)
+    return color.gloss_gismus(collection, gismus, skari)
 
     
-def analyze_cmavos(tree, selmahos, config) -> Table:
+def analyze_cmavos(tree, selmahos, skari) -> Table:
     collection = collect(tree, CmavoCollector)
-    return color.tabulate_selmahos(collection, selmahos, config)
+    return color.tabulate_selmahos(collection, selmahos, skari)
 
 
-def colorize(tree, selmahos, config) -> Text:
-    printer = Colorizer(selmahos, config)
+def colorize(tree, selmahos, skari) -> Text:
+    printer = Colorizer(selmahos, skari["valskari"])
     walker = ParseTreeWalker()
     walker.walk(printer, tree)
     printer.t.rstrip()
@@ -131,27 +129,29 @@ def get_parse_tree(lojban: str) -> ParserRuleContext:
 def parse(args: dict):
     rec = bool(e := args.export)
     console = Console(record=rec, force_interactive=(not rec))
-    with open(color.CONFIG_DEFAULTS["gismus"]) as f:
-        gismus = json.load(f)
     with open(color.CONFIG_DEFAULTS["config"]) as f:
         config = json.load(f)
+    with open(color.CONFIG_DEFAULTS["gismus"]) as f:
+        gismus = json.load(f)
     with open(color.CONFIG_DEFAULTS["selmahos"]) as f:
         selmahos = json.load(f)
+    with open(color.CONFIG_DEFAULTS["skari"]) as f:
+        skari = json.load(f)
     if files := args.filepath:
         for f in files:
             with open(f, "r") as file:
-                with console.status(Text("parsing the file...", style=config["system"]), spinner=config["spinner"]):
+                with console.status(Text("parsing the file...", style=skari["mi'iskari"]["system"]), spinner=config["spinner"]):
                     tree = get_parse_tree(file.read())
             renderables = []
 
             if args.prigau:
-                renderables.append(Panel(colorize(tree, selmahos, config)))
+                renderables.append(Panel(colorize(tree, selmahos, skari)))
             if args.cmavo:
-                renderables.append(Panel(analyze_cmavos(tree, selmahos, config), expand=False))
+                renderables.append(Panel(analyze_cmavos(tree, selmahos, skari), expand=False))
             if args.gloss:
-                renderables.append(Panel(analyze_gismu(tree, gismus, config), expand=False))
+                renderables.append(Panel(analyze_gismu(tree, gismus, skari), expand=False))
             if args.rafsi:
-                renderables.append(Panel(analyze_rafsi(tree, gismus, config), expand=False))
+                renderables.append(Panel(analyze_rafsi(tree, gismus, skari), expand=False))
 
             if args.horizontal:
                 console.print(Panel(Columns(renderables), box.DOUBLE))
@@ -159,8 +159,8 @@ def parse(args: dict):
                 console.print(Panel(Group(*renderables), box.DOUBLE, expand=False))
 
     if args.input:
-        console.print("Type the input:", style="red")
-        print(Panel(color.colorize(get_parse_tree(sys.stdin.read())), expand=False))
+        console.print("Type the input:", style=skari["mi'iskari"]["prompt"])
+        print(Panel(colorize(get_parse_tree(sys.stdin.read()), selmahos, skari), expand=False))
 
     if rec:
         console.save_svg(e)
