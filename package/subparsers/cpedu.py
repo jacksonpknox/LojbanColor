@@ -6,12 +6,9 @@ from rich import box
 from rich.panel import Panel
 from rich.table import Table
 from rich.text import Text
+from rich.columns import Columns
 from rich.console import Console, Group
 
-
-def get_selmaho_table(selmaho: str, selmahos: dict, skari: dict):
-    cmavos = selmahos[selmaho]["cmavos"]
-    return color.tabulate_selmahos(cmavos, selmahos, skari)
 
 def tabulate_token_styles(t: list, skari: dict):
     s = skari["mi'iskari"]["system"]
@@ -25,7 +22,6 @@ def tabulate_token_styles(t: list, skari: dict):
                 style = item[token]
         table.add_row(Text(token, style=style), Text(style, style=s))
     return table
-        
 
 
 def tabulate_selmaho_styles(s: list, selmahos: dict, skari: dict):
@@ -38,13 +34,16 @@ def tabulate_selmaho_styles(s: list, selmahos: dict, skari: dict):
     return table
 
 
-#TODO: option to print all token styles
+#TODO: option stack
+# - option to print all mi'iskari
+# - option to print all selmaho tables
 def parse(args: dict):
     with open(color.CONFIG_DEFAULTS["skari"], "r") as f:
         skari = json.load(f)
     renderables = []
     console = Console()
     
+    #TODO: move to selmaho subparser
     if s := args.selmaho_style:
         with open(color.CONFIG_DEFAULTS["selmahos"], "r") as f:
             selmahos = json.load(f)
@@ -64,6 +63,7 @@ def parse(args: dict):
         table = tabulate_token_styles(t, skari)
         renderables.append(Panel(table))
 
+    #TODO: move to selmaho subparser
     if c := args.cmavo:
         with open(color.CONFIG_DEFAULTS["selmahos"], "r") as f:
             selmahos = json.load(f)
@@ -71,26 +71,32 @@ def parse(args: dict):
         table = color.tabulate_selmahos(c, selmahos, skari)
         renderables.append(Panel(table))
 
+    #TODO: move to gismu subparser
     if g := args.gloss:
         with open(color.CONFIG_DEFAULTS["gismus"], "r") as f:
             gismus = json.load(f)
         table = color.gloss_gismus(g, gismus, skari)
         renderables.append(Panel(table))
 
+    #TODO: move to gismu subparser
     if r := args.rafsi:
         with open(color.CONFIG_DEFAULTS["gismus"], "r") as f:
             gismus = json.load(f)
         table = color.tabulate_cmarafsi(r, gismus, skari)
         renderables.append(Panel(table))
 
+    #TODO: move to selmaho subparser
     if args.selmaho:
         with open(color.CONFIG_DEFAULTS["selmahos"], "r") as f:
             selmahos = json.load(f)
+        selmaho_tables = []
         for selm in args.selmaho:
             selm = color.force_selmaho(selm, selmahos)
-            table = get_selmaho_table(selm, selmahos, skari)
-            renderables.append(Panel(table))
+            table = color.get_selmaho_table(selm, selmahos, skari)
+            selmaho_tables.append(Panel(table))
+        renderables.append(Panel(Columns(selmaho_tables)))
 
+    #TODO: refactor with tabulate_token_styles
     if args.tokens:
         tokens = skari["valskari"]
         table = Table(box=box.MINIMAL)

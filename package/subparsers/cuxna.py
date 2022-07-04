@@ -23,10 +23,12 @@ class Config:
             json.dump(self.data, f, indent=2)
 
 
+#TODO: move to plumbing (delete cause its already there)
 C = "bcdfgjklmnprstvxz"
 V = "aeiou"
 
 
+#TODO: move to plumbing 
 def is_gismu(valsi: str) -> bool:
     if len(valsi) != 5:
         return False

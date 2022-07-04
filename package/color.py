@@ -14,6 +14,7 @@ from rich import box
 from rich.text import Text
 from rich.table import Table
 
+#TODO: move to plumbing
 CONFIG_DEFAULTS = {
     "config": "config/config.json",
     "gismus": "config/gismus.json",
@@ -21,15 +22,18 @@ CONFIG_DEFAULTS = {
     "skari": "config/skari.json",
 }
 
+#TODO: move to plumbing
 def get_config(conf: str) -> dict:
     with open(CONFIG_DEFAULTS[conf]) as f:
         return json.load(f)
 
 
+#TODO: move to plumbing
 C = "bcdfgjklmnprstvxz"
 V = "aeiou"
 
 
+#TODO: move to plumbing
 def is_cmavo(valsi: str) -> bool:
     if (z := valsi[0]) not in C and z != ".":
         return False
@@ -39,6 +43,7 @@ def is_cmavo(valsi: str) -> bool:
     return True
 
 
+#TODO: move to plumbing
 def get_gloss(gismu: str, gismus: dict) -> str:
     if gismu not in gismus.keys():
         return "UNCAUGHT"
@@ -47,6 +52,7 @@ def get_gloss(gismu: str, gismus: dict) -> str:
     return gismus[gismu]["gloss"]
 
 
+#TODO: move to plumbing
 def get_selmaho(cmavo: str, selmahos: dict) -> str:
     if not is_cmavo(cmavo):
         raise Exception("Error! not cmav by morphology exception")
@@ -56,6 +62,7 @@ def get_selmaho(cmavo: str, selmahos: dict) -> str:
     return "UNCAT"
 
 
+#TODO: move to plumbing
 def force_selmaho(selmaho: str, selmahos: dict) -> str:
     if selmaho not in selmahos.keys():
         cmavo_form = selmaho.lower().replace('h', '\'')
@@ -65,6 +72,7 @@ def force_selmaho(selmaho: str, selmahos: dict) -> str:
     return selmaho
 
 
+#TODO: move to plumbing
 def get_gismu(cmarafsi: str, gismus: dict) -> str:
     for gismu in gismus.keys():
         if cmarafsi in gismus[gismu]["cmarafsi"]:
@@ -72,6 +80,7 @@ def get_gismu(cmarafsi: str, gismus: dict) -> str:
     return "UNCAT"
 
  
+#TODO: move to tabulate
 def tabulate_cmarafsi(c, gismus, skari: dict) -> Table:
     table = Table(box=box.MINIMAL)
     table.add_column("cmarafsi", style=skari["valskari"]["cmarafsi"])
@@ -85,6 +94,7 @@ def tabulate_cmarafsi(c, gismus, skari: dict) -> Table:
     return table
 
 
+#TODO: move to tabulate
 def tabulate_selmahos(c, selmahos, skari: dict, show_styles: bool=False):
     table = Table(box=box.MINIMAL)
     table.add_column("cmavo", style=skari["valskari"]["cmavo"])
@@ -101,6 +111,13 @@ def tabulate_selmahos(c, selmahos, skari: dict, show_styles: bool=False):
     return table
 
 
+#TODO: move to tabulate
+def get_selmaho_table(selmaho: str, selmahos: dict, skari: dict):
+    cmavos = selmahos[selmaho]["cmavos"]
+    return tabulate_selmahos(cmavos, selmahos, skari)
+
+
+#TODO: move to tabulate
 def gloss_gismus(g: list, gismus: dict, skari: dict):
     table = Table(box=box.MINIMAL)
     table.add_column("gismu", style=skari["valskari"]["gismu"])
@@ -215,6 +232,12 @@ def build_parser():
         action="store_true",
         dest="selmaho_style",
         help="show selmaho styles (when using --cmavo)",
+    )
+    parser_read.add_argument(
+        "-s",
+        "--selmaho",
+        action="store_true",
+        help="print the table of every selmaho that shows up"
     )
     parser_read.set_defaults(func=tcidu.parse)
 
