@@ -50,6 +50,7 @@ def is_gismu(valsi: str) -> bool:
     return True
 
 
+
 def add_cmarafsi(gismu: str, cmarafsi: str, config: dict) -> None:
     gismu, cmarafsi = gismu.lower(), cmarafsi.lower()
     if not is_gismu(gismu):
@@ -148,6 +149,24 @@ def add_cmavo(cmavo: str, selmaho: str, config: dict) -> None:
                 )
             )
 
+            
+def set_token_style(token: str, style: str) -> None:
+    with Config("config") as conf:
+        if token not in conf.keys():
+            raise Exception("Error! not a token: " + token)
+        conf[token] = style
+        print(
+            Text.assemble(
+                ("ok... ", conf["ok"]),
+                ("set style of token ", conf["system"]),
+                (token, style),
+                (" to ", conf["system"]),
+                (style, conf["system"]),
+                (".", conf["system"])
+            )
+        )
+        
+
 
 def set_selmaho_style(selmaho: str, colour: str, config: dict) -> None:
     with Config("selmahos") as selmahos:
@@ -169,10 +188,12 @@ def parse(args: dict):
     with open(color.CONFIG_DEFAULTS["config"], "r") as f:
         config = json.load(f)
 
-    #TODO: style lexeme option
 
     if s := args.selmaho_style:
         set_selmaho_style(s[0], s[1], config)  # (selmaho, style)
+
+    if t := args.token_style:
+        set_token_style(t[0], t[1]) # (token, style)
 
     if c := args.cmavo:
         add_cmavo(c[1], c[0], config)  # (cmavo, selmaho)

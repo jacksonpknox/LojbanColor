@@ -104,6 +104,24 @@ def build_parser():
 
     parser_config = subparsers.add_parser("cuxna", formatter_class=RichHelpFormatter)
     parser_config.add_argument(
+        "-s",
+        "--selmaho-style",
+        dest="selmaho_style",
+        action="store",
+        nargs=2,
+        help="stylize SELMAHO with STYLE",
+        metavar=("SELMAHO", "STYLE")
+    )
+    parser_config.add_argument(
+        "-t",
+        "--token-style",
+        dest="token_style",
+        action="store",
+        nargs=2,
+        help="stylize TOKEN with style",
+        metavar=("TOKEN", "STYLE")
+    )
+    parser_config.add_argument(
         "-c",
         "--cmavo",
         action="store",
@@ -127,15 +145,6 @@ def build_parser():
         nargs=2,
         help="attribute GISMU with CMARAFSI",
         metavar=("GISMU", "CMARAFSI"),
-    )
-    parser_config.add_argument(
-        "-s",
-        "--selmaho-style",
-        dest="selmaho_style",
-        action="store",
-        nargs=2,
-        help="stylize SELMAHO with STYLE",
-        metavar=("SELMAHO", "STYLE")
     )
     parser_config.set_defaults(func=cuxna.parse)
 
@@ -204,7 +213,8 @@ def build_parser():
         dest="token_style",
         nargs="+",
         action="extend",
-        help="print the style of each "
+        help="print the style of each TOKEN",
+        metavar="TOKEN",
     )
     parser_request.add_argument(
         "-c",
