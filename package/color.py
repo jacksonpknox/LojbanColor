@@ -7,7 +7,7 @@ import json
 from rich_argparse import RichHelpFormatter
 
 import subparsers.cuxna as cuxna
-import subparsers.prigau as prigau
+import subparsers.tcidu as tcidu
 import subparsers.cpedu as cpedu
 
 from rich import box
@@ -165,7 +165,7 @@ def build_parser():
     parser_config.set_defaults(func=cuxna.parse)
 
 
-    parser_read = subparsers.add_parser("prigau", formatter_class=RichHelpFormatter)
+    parser_read = subparsers.add_parser("tcidu", formatter_class=RichHelpFormatter)
     parser_read.add_argument(
         "filepath",
         action="extend",
@@ -216,7 +216,7 @@ def build_parser():
         dest="selmaho_style",
         help="show selmaho styles (when using --cmavo)",
     )
-    parser_read.set_defaults(func=prigau.parse)
+    parser_read.set_defaults(func=tcidu.parse)
 
 
     parser_request = subparsers.add_parser("cpedu", formatter_class=RichHelpFormatter)
