@@ -46,6 +46,13 @@ def collect(tree, Collector) -> list:
     return collector.collection
 
 
+def get_gismu(cmarafsi: str, gismus: dict) -> str:
+    for gismu in gismus.keys():
+        if cmarafsi in gismus[gismu]["cmarafsi"]:
+            return gismu
+    return "UNCAT"
+
+
 def analyze_cmarafsi(tree, gismus, config) -> Table:
     collection = collect(tree, CmarafsiCollector)
     table = Table(box=box.DOUBLE)
@@ -54,7 +61,7 @@ def analyze_cmarafsi(tree, gismus, config) -> Table:
     table.add_column("gloss", style=config["gloss"])
     for cmarafsi in collection:
         table.add_row(
-            cmarafsi, (g := color.get_gismu(cmarafsi, gismus)), color.get_gloss(g, gismus)
+            cmarafsi, (g := get_gismu(cmarafsi, gismus)), color.get_gloss(g, gismus)
         )
     return table
 
@@ -69,32 +76,6 @@ def analyze_gismu(tree, gismus, config) -> Table:
     return table
 
 
-#TODO: 
-# probably an object method of Colorizer
-# or better yet just eliminate ?
-def put(t: Text, txt: str, color: str = None):
-    t.append(txt, style=color)
-
-
-# moves to prigau
-def get_cmavo_color(cmavo: str, selmahos: dict) -> str:
-    return selmahos[color.get_selmaho(cmavo, selmahos)]["color"]
-
-
-# moves to prigau
-def put_cmavo(t: Text, cmavo: str, selmahos: dict) -> None:
-    put(t, cmavo, get_cmavo_color(cmavo, selmahos))
-
-
-# moves to prigau
-def get_gismu(cmarafsi: str, gismus: dict) -> str:
-    for gismu in gismus.keys():
-        if cmarafsi in gismus[gismu]["cmarafsi"]:
-            return gismu
-    return "UNCAT"
-
-
-# moves to prigau
 class Colorizer(ColorListener):
     def __init__(self, selmahos: dict, config: dict):
         self.t = Text()
@@ -102,52 +83,40 @@ class Colorizer(ColorListener):
         self.config = config
 
     def exitLine(self, ctx):
-        put(self.t, "\n", None)
+        self.t.append("\n")
 
     def exitWord(self, ctx):
-        put(self.t, " ", None)
+        self.t.append(" ")
 
     def enterCat_cmavo(self, ctx: ColorParser.Cat_cmavoContext):
-        put_cmavo(self.t, ctx.getText(), self.selmahos)
+        self.t.append(text=(cmavo := ctx.getText()), style=self.selmahos[color.get_selmaho(cmavo, self.selmahos)]["color"])
 
     def enterLerfu(self, ctx):
-        put(self.t, ctx.getText(), self.config["lerfu"]["color"])
-
+        self.t.append(text=ctx.getText(), style=self.config["lerfu"]["color"])
     def enterFuhivla(self, ctx):
-        put(self.t, ctx.getText(), self.config["fu'ivla"]["color"])
-
+        self.t.append(text=ctx.getText(), style=self.config["fu'ivla"]["color"])
     def enterCmene(self, ctx):
-        put(self.t, ctx.getText(), self.config["cmene"]["color"])
-
+        self.t.append(text=ctx.getText(), style=self.config["cmene"]["color"])
     def enterY(self, ctx):
-        put(self.t, ctx.getText(), self.config["rafsi"]["y"])
-
+        self.t.append(text=ctx.getText(), style=self.config["rafsi"]["y"])
     def enterBaugismu(self, ctx):
-        put(self.t, ctx.getText(), self.config["rafsi"]["baugismu"])
-
+        self.t.append(text=ctx.getText(), style=self.config["rafsi"]["baugismu"])
     def enterBrogismu(self, ctx):
-        put(self.t, ctx.getText(), self.config["rafsi"]["brogismu"])
-
+        self.t.append(text=ctx.getText(), style=self.config["rafsi"]["brogismu"])
     def enterBalraf(self, ctx):
-        put(self.t, ctx.getText(), self.config["rafsi"]["balraf"])
-
+        self.t.append(text=ctx.getText(), style=self.config["rafsi"]["balraf"])
     def enterBroraf(self, ctx):
-        put(self.t, ctx.getText(), self.config["rafsi"]["broraf"])
-
+        self.t.append(text=ctx.getText(), style=self.config["rafsi"]["broraf"])
     def enterBauraf(self, ctx):
-        put(self.t, ctx.getText(), self.config["rafsi"]["bauraf"])
-
+        self.t.append(text=ctx.getText(), style=self.config["rafsi"]["bauraf"])
     def enterGahorgimpag(self, ctx: ColorParser.GahorgimpagContext):
-        put(self.t, ctx.getText(), self.config["rafsi"]["ga'orgimpag"])
-
+        self.t.append(text=ctx.getText(), style=self.config["rafsi"]["ga'orgimpag"])
     def enterKargimpag(self, ctx: ColorParser.KargimpagContext):
-        put(self.t, ctx.getText(), self.config["rafsi"]["kargimpag"])
-
+        self.t.append(text=ctx.getText(), style=self.config["rafsi"]["kargimpag"])
     def enterY(self, ctx):
-        put(self.t, ctx.getText(), self.config["rafsi"]["y"])
-
+        self.t.append(text=ctx.getText(), style=self.config["rafsi"]["y"])
     def enterQ(self, ctx):
-        put(self.t, ctx.getText(), self.config["rafsi"]["q"])
+        self.t.append(text=ctx.getText(), style=self.config["rafsi"]["q"])
 
 
 def colorize(tree, selmahos, config) -> Text:
