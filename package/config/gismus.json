@@ -375,5 +375,369 @@
       "standard"
     ],
     "cmarafsi": []
+  },
+  "snanu": {
+    "gloss": "south",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "pluja": {
+    "gloss": "complex",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "cikre": {
+    "gloss": "repair",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "galfi": {
+    "gloss": "modify",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "smadi": {
+    "gloss": "guess",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "skicu": {
+    "gloss": "describe",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "cacra": {
+    "gloss": "hour",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "mupli": {
+    "gloss": "example",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "jibni": {
+    "gloss": "near",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "spoja": {
+    "gloss": "explode",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "sisku": {
+    "gloss": "search",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "cpacu": {
+    "gloss": "acquire",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "vreji": {
+    "gloss": "record",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "djacu": {
+    "gloss": "water",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "darxi": {
+    "gloss": "hit",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "ckaji": {
+    "gloss": "characterize",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "tadji": {
+    "gloss": "tactic",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "patfu": {
+    "gloss": "father",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "sidbo": {
+    "gloss": "idea",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "sisti": {
+    "gloss": "cease",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "jdice": {
+    "gloss": "decide",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "vasru": {
+    "gloss": "contain",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "cmima": {
+    "gloss": "member",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "dotco": {
+    "gloss": "german",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "cerni": {
+    "gloss": "morning",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "finpe": {
+    "gloss": "fish",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "bandu": {
+    "gloss": "defend",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "sanji": {
+    "gloss": "aware",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "minji": {
+    "gloss": "machine",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "muvdu": {
+    "gloss": "move",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "zifre": {
+    "gloss": "libre",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "cinse": {
+    "gloss": "sex",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "nanca": {
+    "gloss": "year",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "tugni": {
+    "gloss": "agree",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "nitcu": {
+    "gloss": "need",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "troci": {
+    "gloss": "try",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "sidju": {
+    "gloss": "help",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "tadni": {
+    "gloss": "student",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "remna": {
+    "gloss": "human",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "bilma": {
+    "gloss": "ill",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "terpa": {
+    "gloss": "fear",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "jundi": {
+    "gloss": "attend",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "zgike": {
+    "gloss": "music",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "makfa": {
+    "gloss": "magic",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "morsi": {
+    "gloss": "dead",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "cnino": {
+    "gloss": "new",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "smaji": {
+    "gloss": "quiet",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "simsa": {
+    "gloss": "similar",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "mulno": {
+    "gloss": "complete",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "nabmi": {
+    "gloss": "problem",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "jmive": {
+    "gloss": "alive",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "sance": {
+    "gloss": "sound",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
   }
 }

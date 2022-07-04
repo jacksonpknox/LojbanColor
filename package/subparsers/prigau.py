@@ -69,6 +69,95 @@ def analyze_gismu(tree, gismus, config) -> Table:
     return table
 
 
+#TODO: 
+# probably an object method of Colorizer
+# or better yet just eliminate ?
+def put(t: Text, txt: str, color: str = None):
+    t.append(txt, style=color)
+
+
+# moves to prigau
+def get_cmavo_color(cmavo: str, selmahos: dict) -> str:
+    return selmahos[color.get_selmaho(cmavo, selmahos)]["color"]
+
+
+# moves to prigau
+def put_cmavo(t: Text, cmavo: str, selmahos: dict) -> None:
+    put(t, cmavo, get_cmavo_color(cmavo, selmahos))
+
+
+# moves to prigau
+def get_gismu(cmarafsi: str, gismus: dict) -> str:
+    for gismu in gismus.keys():
+        if cmarafsi in gismus[gismu]["cmarafsi"]:
+            return gismu
+    return "UNCAT"
+
+
+# moves to prigau
+class Colorizer(ColorListener):
+    def __init__(self, selmahos: dict, config: dict):
+        self.t = Text()
+        self.selmahos = selmahos
+        self.config = config
+
+    def exitLine(self, ctx):
+        put(self.t, "\n", None)
+
+    def exitWord(self, ctx):
+        put(self.t, " ", None)
+
+    def enterCat_cmavo(self, ctx: ColorParser.Cat_cmavoContext):
+        put_cmavo(self.t, ctx.getText(), self.selmahos)
+
+    def enterLerfu(self, ctx):
+        put(self.t, ctx.getText(), self.config["lerfu"]["color"])
+
+    def enterFuhivla(self, ctx):
+        put(self.t, ctx.getText(), self.config["fu'ivla"]["color"])
+
+    def enterCmene(self, ctx):
+        put(self.t, ctx.getText(), self.config["cmene"]["color"])
+
+    def enterY(self, ctx):
+        put(self.t, ctx.getText(), self.config["rafsi"]["y"])
+
+    def enterBaugismu(self, ctx):
+        put(self.t, ctx.getText(), self.config["rafsi"]["baugismu"])
+
+    def enterBrogismu(self, ctx):
+        put(self.t, ctx.getText(), self.config["rafsi"]["brogismu"])
+
+    def enterBalraf(self, ctx):
+        put(self.t, ctx.getText(), self.config["rafsi"]["balraf"])
+
+    def enterBroraf(self, ctx):
+        put(self.t, ctx.getText(), self.config["rafsi"]["broraf"])
+
+    def enterBauraf(self, ctx):
+        put(self.t, ctx.getText(), self.config["rafsi"]["bauraf"])
+
+    def enterGahorgimpag(self, ctx: ColorParser.GahorgimpagContext):
+        put(self.t, ctx.getText(), self.config["rafsi"]["ga'orgimpag"])
+
+    def enterKargimpag(self, ctx: ColorParser.KargimpagContext):
+        put(self.t, ctx.getText(), self.config["rafsi"]["kargimpag"])
+
+    def enterY(self, ctx):
+        put(self.t, ctx.getText(), self.config["rafsi"]["y"])
+
+    def enterQ(self, ctx):
+        put(self.t, ctx.getText(), self.config["rafsi"]["q"])
+
+
+def colorize(tree, selmahos, config) -> Text:
+    printer = Colorizer(selmahos, config)
+    walker = ParseTreeWalker()
+    walker.walk(printer, tree)
+    printer.t.rstrip()
+    return printer.t
+
+
 def get_parse_tree(lojban: str) -> ParserRuleContext:
     input_stream = InputStream(lojban)
     lexer = ColorLexer(input_stream)
@@ -94,7 +183,7 @@ def parse(args: dict):
             renderables = []
 
             if args.prigau:
-                renderables.append(Panel(color.colorize(tree, selmahos, config)))
+                renderables.append(Panel(colorize(tree, selmahos, config)))
             if args.gismu:
                 renderables.append(Panel(analyze_gismu(tree, gismus, config)))
             if args.cmarafsi:

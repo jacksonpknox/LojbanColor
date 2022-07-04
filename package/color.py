@@ -1,16 +1,8 @@
 from antlr4 import *
 
-import json
-
 import argparse
 
-from rich.text import Text
-
 from rich_argparse import RichHelpFormatter
-
-from python_color.ColorLexer import ColorLexer
-from python_color.ColorParser import ColorParser
-from python_color.ColorListener import ColorListener
 
 import subparsers.cuxna as cuxna
 import subparsers.prigau as prigau
@@ -31,101 +23,11 @@ def get_gloss(gismu: str, gismus: dict) -> str:
     return gismus[gismu]["gloss"]
 
 
-#TODO: 
-# probably an object method of Colorizer
-# or better yet just eliminate ?
-def put(t: Text, txt: str, color: str = None):
-    t.append(txt, style=color)
-
-
 def get_selmaho(cmavo: str, selmahos: dict) -> str:
     for selmaho in selmahos.keys():
         if cmavo in selmahos[selmaho]["cmavos"]:
             return selmaho
     return "UNCAT"
-
-
-# moves to prigau
-def get_cmavo_color(cmavo: str, selmahos: dict) -> str:
-    return selmahos[get_selmaho(cmavo, selmahos)]["color"]
-
-
-# moves to prigau
-def put_cmavo(t: Text, cmavo: str, selmahos: dict) -> None:
-    put(t, cmavo, get_cmavo_color(cmavo, selmahos))
-
-
-# moves to prigau
-def get_gismu(cmarafsi: str, gismus: dict) -> str:
-    for gismu in gismus.keys():
-        if cmarafsi in gismus[gismu]["cmarafsi"]:
-            return gismu
-    return "UNCAT"
-
-
-# moves to prigau
-class Colorizer(ColorListener):
-    def __init__(self, selmahos: dict, config: dict):
-        self.t = Text()
-        self.selmahos = selmahos
-        self.config = config
-
-    def exitLine(self, ctx):
-        put(self.t, "\n", None)
-
-    def exitWord(self, ctx):
-        put(self.t, " ", None)
-
-    def enterCat_cmavo(self, ctx: ColorParser.Cat_cmavoContext):
-        put_cmavo(self.t, ctx.getText(), self.selmahos)
-
-    def enterLerfu(self, ctx):
-        put(self.t, ctx.getText(), self.config["lerfu"]["color"])
-
-    def enterFuhivla(self, ctx):
-        put(self.t, ctx.getText(), self.config["fu'ivla"]["color"])
-
-    def enterCmene(self, ctx):
-        put(self.t, ctx.getText(), self.config["cmene"]["color"])
-
-    def enterY(self, ctx):
-        put(self.t, ctx.getText(), self.config["rafsi"]["y"])
-
-    def enterBaugismu(self, ctx):
-        put(self.t, ctx.getText(), self.config["rafsi"]["baugismu"])
-
-    def enterBrogismu(self, ctx):
-        put(self.t, ctx.getText(), self.config["rafsi"]["brogismu"])
-
-    def enterBalraf(self, ctx):
-        put(self.t, ctx.getText(), self.config["rafsi"]["balraf"])
-
-    def enterBroraf(self, ctx):
-        put(self.t, ctx.getText(), self.config["rafsi"]["broraf"])
-
-    def enterBauraf(self, ctx):
-        put(self.t, ctx.getText(), self.config["rafsi"]["bauraf"])
-
-    def enterGahorgimpag(self, ctx: ColorParser.GahorgimpagContext):
-        put(self.t, ctx.getText(), self.config["rafsi"]["ga'orgimpag"])
-
-    def enterKargimpag(self, ctx: ColorParser.KargimpagContext):
-        put(self.t, ctx.getText(), self.config["rafsi"]["kargimpag"])
-
-    def enterY(self, ctx):
-        put(self.t, ctx.getText(), self.config["rafsi"]["y"])
-
-    def enterQ(self, ctx):
-        put(self.t, ctx.getText(), self.config["rafsi"]["q"])
-
-
-# moves to prigau
-def colorize(tree, selmahos, config) -> Text:
-    printer = Colorizer(selmahos, config)
-    walker = ParseTreeWalker()
-    walker.walk(printer, tree)
-    printer.t.rstrip()
-    return printer.t
 
 
 def build_parser():
