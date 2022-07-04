@@ -5,7 +5,25 @@ from rich import box
 
 from rich.panel import Panel
 from rich.table import Table
+from rich.text import Text
 from rich.console import Console, Group
+
+
+def tabulate_selmaho_styles(s: list, selmahos: dict, config: dict):
+    table = Table(box=box.MINIMAL)
+    table.add_column("selma'o", style=config["cmavo"])
+    table.add_column("style", style=config["system"])
+    for selmaho in s:
+        style = selmahos[selmaho]["color"]
+        table.add_row(Text(selmaho, style=style), Text(style, style=config["system"]))
+    return table
+
+
+def force_selmaho(selmaho: str, selmahos: dict) -> str:
+    if selmaho not in selmahos.keys():
+        selmaho = color.get_selmaho(selmaho.lower(), selmahos)
+    return selmaho
+        
 
 def parse(args: dict):
     with open(color.CONFIG_DEFAULTS["config"], "r") as f:
@@ -13,7 +31,12 @@ def parse(args: dict):
     renderables = []
     console = Console()
     
-    #TODO: show selmaho style option, which silently accepts cmavos
+    if s := args.selmaho_style:
+        with open(color.CONFIG_DEFAULTS["selmahos"], "r") as f:
+            selmahos = json.load(f)
+        s = [force_selmaho(selmaho, selmahos) for selmaho in s]
+        table = tabulate_selmaho_styles(s, selmahos, config)
+        renderables.append(Panel(table))
 
     #TODO: show lexeme style option
 

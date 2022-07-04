@@ -205,7 +205,7 @@
     ]
   },
   "COI": {
-    "color": "#0000FF",
+    "color": "bold blue",
     "cmavos": [
       "fi'i",
       "mu'o",
@@ -598,7 +598,7 @@
     ]
   },
   "LI": {
-    "color": "#0000FF",
+    "color": "magenta",
     "cmavos": [
       "li"
     ]
@@ -782,7 +782,7 @@
     ]
   },
   "PA": {
-    "color": "#8080FF",
+    "color": "cyan",
     "cmavos": [
       "da'a",
       "fei",
@@ -845,7 +845,7 @@
     ]
   },
   "PU": {
-    "color": "#0000FF",
+    "color": "italic purple",
     "cmavos": [
       "ca",
       "pu",

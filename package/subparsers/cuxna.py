@@ -50,20 +50,11 @@ def is_gismu(valsi: str) -> bool:
     return True
 
 
-def is_cmavo(valsi: str) -> bool:
-    if z := valsi[0] not in C and z != ".":
-        return False
-    for c in valsi[1:]:
-        if c not in V and c != "'":
-            return False
-    return True
-
-
 def add_cmarafsi(gismu: str, cmarafsi: str, config: dict) -> None:
     gismu, cmarafsi = gismu.lower(), cmarafsi.lower()
     if not is_gismu(gismu):
         raise Exception("Error!, {} is not a gismu by morhpology.".format(gismu))
-    if not is_cmavo(cmarafsi):
+    if not color.is_cmavo(cmarafsi):
         raise Exception("Error!, {} is not a cmavo by morphology.".format(cmarafsi))
 
     with Config("gismus") as gismus:
@@ -118,9 +109,9 @@ def set_gloss(gismu: str, gloss: str, config: dict) -> None:
 
 def add_cmavo(cmavo: str, selmaho: str, config: dict) -> None:
     selmaho = selmaho.upper().replace("H", "h")
-    if not is_cmavo(cmavo):
+    if not color.is_cmavo(cmavo):
         raise Exception("Error! {} is not a cmavo by morphology.".format(cmavo))
-    if not is_cmavo(selmaho.lower().replace("h", "'")):
+    if not color.is_cmavo(selmaho.lower().replace("h", "'")):
         raise Exception("Error! {} is not a cmavo by morphology.".format(selmaho))
 
     with Config("selmahos") as selmahos:
@@ -158,9 +149,10 @@ def add_cmavo(cmavo: str, selmaho: str, config: dict) -> None:
             )
 
 
-def set_style(selmaho: str, colour: str, config: dict) -> None:
+#TODO: silently allow cmavos
+def set_selmaho_style(selmaho: str, colour: str, config: dict) -> None:
     selmaho = selmaho.upper().replace("H", "h")
-    if not is_cmavo(selmaho):
+    if not color.is_cmavo(selmaho.lower().replace("h",'\'')):
         raise Exception("Error!, {} is not a cmavo by morphology.".format(selmaho))
 
     with Config("selmahos") as selmahos:
@@ -185,9 +177,8 @@ def parse(args: dict):
 
     #TODO: style lexeme option
 
-    #TODO: rebrand as style selmaho
-    if s := args.style:
-        set_style(s[0], s[1], config)  # (selmaho, style)
+    if s := args.selmaho_style:
+        set_selmaho_style(s[0], s[1], config)  # (selmaho, style)
 
     if c := args.cmavo:
         add_cmavo(c[1], c[0], config)  # (cmavo, selmaho)

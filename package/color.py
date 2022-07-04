@@ -18,6 +18,19 @@ CONFIG_DEFAULTS = {
 }
 
 
+C = "bcdfgjklmnprstvxz"
+V = "aeiou"
+
+
+def is_cmavo(valsi: str) -> bool:
+    if (z := valsi[0]) not in C and z != ".":
+        return False
+    for c in valsi[1:]:
+        if c not in V and c != "'":
+            return False
+    return True
+
+
 def get_gloss(gismu: str, gismus: dict) -> str:
     if gismu not in gismus.keys():
         return "UNCAUGHT"
@@ -27,6 +40,8 @@ def get_gloss(gismu: str, gismus: dict) -> str:
 
 
 def get_selmaho(cmavo: str, selmahos: dict) -> str:
+    if not is_cmavo(cmavo):
+        raise Exception("Error! not cmav by morphology exception")
     for selmaho in selmahos.keys():
         if cmavo in selmahos[selmaho]["cmavos"]:
             return selmaho
@@ -109,13 +124,15 @@ def build_parser():
     )
     parser_config.add_argument(
         "-s",
-        "--style",
+        "--selmaho-style",
+        dest="selmaho_style",
         action="store",
         nargs=2,
         help="stylize SELMAHO with STYLE",
         metavar=("SELMAHO", "STYLE")
     )
     parser_config.set_defaults(func=cuxna.parse)
+
 
     parser_read = subparsers.add_parser("prigau", formatter_class=RichHelpFormatter)
     parser_read.add_argument(
@@ -164,7 +181,17 @@ def build_parser():
     )
     parser_read.set_defaults(func=prigau.parse)
 
+
     parser_request = subparsers.add_parser("cpedu", formatter_class=RichHelpFormatter)
+    parser_request.add_argument(
+        "-s",
+        "--selmaho-style",
+        dest="selmaho_style",
+        nargs="+",
+        action="extend",
+        help="print the style of each SELMAHO",
+        metavar="SELMAHO",
+    )
     parser_request.add_argument(
         "-c",
         "--cmavo",
