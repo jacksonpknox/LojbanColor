@@ -17,3 +17,5 @@ def print_all_documents() -> None:
             print(color.colorize(f.read()))
             print("ok!")
     print('end')
+
+#TODO: put all selmaho in a file

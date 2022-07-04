@@ -126,6 +126,12 @@ def get_parse_tree(lojban: str) -> ParserRuleContext:
 
 
 #TODO: refactor so input gets processed the same as other files
+#TODO: caughts only / uncaughts only options
+#TODO: interactively fill in caughts option
+#TODO: group cmavo by selmaho opion
+#TODO: analyze every lujvo option?
+#TODO: rebrand as tcidu
+#TODO: word (type) count option
 def parse(args: dict):
     rec = bool(e := args.export)
     console = Console(record=rec, force_interactive=(not rec))
