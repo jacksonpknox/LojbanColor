@@ -8,6 +8,11 @@ from rich.table import Table
 from rich.text import Text
 from rich.console import Console, Group
 
+
+def get_selmaho_table(selmaho: str, selmahos: dict, skari: dict):
+    cmavos = selmahos[selmaho]["cmavos"]
+    return color.tabulate_selmahos(cmavos, selmahos, skari)
+
 def tabulate_token_styles(t: list, skari: dict):
     s = skari["mi'iskari"]["system"]
     table = Table(box=box.MINIMAL)
@@ -34,7 +39,6 @@ def tabulate_selmaho_styles(s: list, selmahos: dict, skari: dict):
 
 
 #TODO: option to print all token styles
-#TODO: option to print an entire selmaho
 def parse(args: dict):
     with open(color.CONFIG_DEFAULTS["skari"], "r") as f:
         skari = json.load(f)
@@ -48,6 +52,7 @@ def parse(args: dict):
         table = tabulate_selmaho_styles(s, selmahos, skari)
         renderables.append(Panel(table))
 
+    #TODO: split in two
     if t := args.token_style:
         for token in t:
             real_token = False
@@ -78,4 +83,20 @@ def parse(args: dict):
         table = color.tabulate_cmarafsi(r, gismus, skari)
         renderables.append(Panel(table))
 
+    if args.selmaho:
+        with open(color.CONFIG_DEFAULTS["selmahos"], "r") as f:
+            selmahos = json.load(f)
+        for selm in args.selmaho:
+            selm = color.force_selmaho(selm, selmahos)
+            table = get_selmaho_table(selm, selmahos, skari)
+            renderables.append(Panel(table))
+
+    if args.tokens:
+        tokens = skari["valskari"]
+        table = Table(box=box.MINIMAL)
+        table.add_column("token")
+        table.add_column("style")
+        for token, style in tokens.items():
+            table.add_row(Text(token, style=style), Text(style, style=skari["mi'iskari"]["system"]))
+        renderables.append(Panel(table))
     console.print(Panel(Group(*renderables), box.DOUBLE, expand=False))

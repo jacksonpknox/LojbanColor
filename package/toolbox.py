@@ -19,7 +19,6 @@ def print_all_documents() -> None:
             print("ok!")
     print('end')
 
-#TODO: put all selmaho in a file
 def generate_selmaho_file(target, selmahos, n) -> None:
     selmahos = [s.lower().replace('h','\'') for s in selmahos.keys()]
     with open(target, "w") as f:

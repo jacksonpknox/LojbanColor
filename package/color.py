@@ -51,7 +51,10 @@ def get_selmaho(cmavo: str, selmahos: dict) -> str:
 
 def force_selmaho(selmaho: str, selmahos: dict) -> str:
     if selmaho not in selmahos.keys():
-        selmaho = get_selmaho(selmaho.lower().replace('h', '\''), selmahos)
+        cmavo_form = selmaho.lower().replace('h', '\'')
+        if not is_cmavo(cmavo_form):
+            raise Exception("Error! not cmav by morphology exception")
+        selmaho = get_selmaho(cmavo_form, selmahos)
     return selmaho
 
 
@@ -236,6 +239,18 @@ def build_parser():
     parser_request.add_argument(
         "-r", "--rafsi", nargs="+", action="extend", help="print the gismu and gloss of each CMARAFSI",
         metavar="CMARAFSI"
+    )
+    parser_request.add_argument(
+        "--selmaho",
+        nargs="+",
+        action="extend",
+        help="print every cmavo of each SELMAHO",
+        metavar="SELMAHO"
+    )
+    parser_request.add_argument(
+        "--tokens",
+        action="store_true",
+        help="print out all valskari"
     )
     parser_request.set_defaults(func=cpedu.parse)
 
