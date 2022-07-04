@@ -103,9 +103,9 @@ def analyze_gismu(tree, gismus, skari) -> Table:
     return color.gloss_gismus(collection, gismus, skari)
 
     
-def analyze_cmavos(tree, selmahos, skari) -> Table:
+def analyze_cmavos(tree, selmahos, skari, selmaho_style: bool) -> Table:
     collection = collect(tree, CmavoCollector)
-    return color.tabulate_selmahos(collection, selmahos, skari)
+    return color.tabulate_selmahos(collection, selmahos, skari, selmaho_style)
 
 
 def colorize(tree, selmahos, skari) -> Text:
@@ -125,49 +125,48 @@ def get_parse_tree(lojban: str) -> ParserRuleContext:
     return parser.folio()
 
 
-#TODO: refactor so input gets processed the same as other files
-#TODO: caughts only / uncaughts only options
+def process_and_print_tree(tree, args: dict, console, gismus, selmahos, skari):
+    renderables = []
+
+    if args.prigau:
+        renderables.append(Panel(colorize(tree, selmahos, skari)))
+    if args.cmavo:
+        renderables.append(Panel(analyze_cmavos(tree, selmahos, skari, args.selmaho_style), expand=False))
+    if args.gloss:
+        renderables.append(Panel(analyze_gismu(tree, gismus, skari), expand=False))
+    if args.rafsi:
+        renderables.append(Panel(analyze_rafsi(tree, gismus, skari), expand=False))
+
+    if args.horizontal:
+        console.print(Panel(Columns(renderables), box.DOUBLE))
+    else:
+        console.print(Panel(Group(*renderables), box.DOUBLE, expand=False))
+
+
 #TODO: interactively fill in caughts option
 #TODO: group cmavo by selmaho opion
 #TODO: analyze every lujvo option?
-#TODO: rebrand as tcidu
 #TODO: word (type) count option
-#TODO: show selmaho styles option
+
+#TODO: rebrand as tcidu
 def parse(args: dict):
     rec = bool(e := args.export)
     console = Console(record=rec, force_interactive=(not rec))
-    with open(color.CONFIG_DEFAULTS["config"]) as f:
-        config = json.load(f)
-    with open(color.CONFIG_DEFAULTS["gismus"]) as f:
-        gismus = json.load(f)
-    with open(color.CONFIG_DEFAULTS["selmahos"]) as f:
-        selmahos = json.load(f)
-    with open(color.CONFIG_DEFAULTS["skari"]) as f:
-        skari = json.load(f)
+    config = color.get_config("config")
+    gismus = color.get_config("gismus")
+    selmahos = color.get_config("selmahos")
+    skari = color.get_config("skari")
     if files := args.filepath:
         for f in files:
             with open(f, "r") as file:
                 with console.status(Text("parsing the file...", style=skari["mi'iskari"]["system"]), spinner=config["spinner"]):
                     tree = get_parse_tree(file.read())
-            renderables = []
-
-            if args.prigau:
-                renderables.append(Panel(colorize(tree, selmahos, skari)))
-            if args.cmavo:
-                renderables.append(Panel(analyze_cmavos(tree, selmahos, skari), expand=False))
-            if args.gloss:
-                renderables.append(Panel(analyze_gismu(tree, gismus, skari), expand=False))
-            if args.rafsi:
-                renderables.append(Panel(analyze_rafsi(tree, gismus, skari), expand=False))
-
-            if args.horizontal:
-                console.print(Panel(Columns(renderables), box.DOUBLE))
-            else:
-                console.print(Panel(Group(*renderables), box.DOUBLE, expand=False))
+            process_and_print_tree(tree, args, console, gismus, selmahos, skari)
 
     if args.input:
         console.print("Type the input:", style=skari["mi'iskari"]["prompt"])
-        print(Panel(colorize(get_parse_tree(sys.stdin.read()), selmahos, skari), expand=False))
+        tree = get_parse_tree(sys.stdin.read())
+        process_and_print_tree(tree, args, console, gismus, selmahos, skari)
 
     if rec:
         console.save_svg(e)

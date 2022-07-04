@@ -2,6 +2,8 @@ from antlr4 import *
 
 import argparse
 
+import json
+
 from rich_argparse import RichHelpFormatter
 
 import subparsers.cuxna as cuxna
@@ -9,6 +11,7 @@ import subparsers.prigau as prigau
 import subparsers.cpedu as cpedu
 
 from rich import box
+from rich.text import Text
 from rich.table import Table
 
 CONFIG_DEFAULTS = {
@@ -17,6 +20,10 @@ CONFIG_DEFAULTS = {
     "selmahos": "config/selmahos.json",
     "skari": "config/skari.json",
 }
+
+def get_config(conf: str) -> dict:
+    with open(CONFIG_DEFAULTS[conf]) as f:
+        return json.load(f)
 
 
 C = "bcdfgjklmnprstvxz"
@@ -78,14 +85,19 @@ def tabulate_cmarafsi(c, gismus, skari: dict) -> Table:
     return table
 
 
-def tabulate_selmahos(c, selmahos, skari: dict):
+def tabulate_selmahos(c, selmahos, skari: dict, show_styles: bool=False):
     table = Table(box=box.MINIMAL)
     table.add_column("cmavo", style=skari["valskari"]["cmavo"])
     table.add_column("selma'o", style=skari["valskari"]["cmavo"])
+    if show_styles:
+        table.add_column("style", style=skari["mi'iskari"]["system"])
     for cmavo in c:
         s = get_selmaho(cmavo, selmahos)
         colr = selmahos[s]["color"]
-        table.add_row(cmavo, s, style=colr)
+        if show_styles:
+            table.add_row(cmavo, s, colr, style=colr)
+        else:
+            table.add_row(cmavo, s, style=colr)
     return table
 
 
@@ -197,6 +209,12 @@ def build_parser():
     )
     parser_read.add_argument(
         "-n", "--no-prigau", dest="prigau", action="store_false", help="do not print read text"
+    )
+    parser_read.add_argument(
+        "--selmaho-style",
+        action="store_true",
+        dest="selmaho_style",
+        help="show selmaho styles (when using --cmavo)",
     )
     parser_read.set_defaults(func=prigau.parse)
 
