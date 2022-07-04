@@ -46,36 +46,6 @@ def collect(tree, Collector) -> list:
     return collector.collection
 
 
-def get_gismu(cmarafsi: str, gismus: dict) -> str:
-    for gismu in gismus.keys():
-        if cmarafsi in gismus[gismu]["cmarafsi"]:
-            return gismu
-    return "UNCAT"
-
-
-def analyze_cmarafsi(tree, gismus, config) -> Table:
-    collection = collect(tree, CmarafsiCollector)
-    table = Table(box=box.DOUBLE)
-    table.add_column("cmarafsi", style=config["cmarafsi"])
-    table.add_column("gismu", style=config["gismu"])
-    table.add_column("gloss", style=config["gloss"])
-    for cmarafsi in collection:
-        table.add_row(
-            cmarafsi, (g := get_gismu(cmarafsi, gismus)), color.get_gloss(g, gismus)
-        )
-    return table
-
-
-def analyze_gismu(tree, gismus, config) -> Table:
-    collection = collect(tree, GismuCollector)
-    table = Table(box=box.MINIMAL)
-    table.add_column("gismu", style=config["gismu"])
-    table.add_column("gloss", style=config["gloss"])
-    for gismu in collection:
-        table.add_row(gismu, color.get_gloss(gismu, gismus))
-    return table
-
-
 class Colorizer(ColorListener):
     def __init__(self, selmahos: dict, config: dict):
         self.t = Text()
@@ -117,6 +87,16 @@ class Colorizer(ColorListener):
         self.t.append(text=ctx.getText(), style=self.config["rafsi"]["y"])
     def enterQ(self, ctx):
         self.t.append(text=ctx.getText(), style=self.config["rafsi"]["q"])
+
+
+def analyze_cmarafsi(tree, gismus, config) -> Table:
+    collection = collect(tree, CmarafsiCollector)
+    color.tabulate_cmarafsi(collection, gismus, config)
+
+
+def analyze_gismu(tree, gismus, config) -> Table:
+    collection = collect(tree, GismuCollector)
+    return color.gloss_gismus(collection, gismus, config)
 
 
 def colorize(tree, selmahos, config) -> Text:

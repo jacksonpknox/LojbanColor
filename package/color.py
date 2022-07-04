@@ -8,6 +8,9 @@ import subparsers.cuxna as cuxna
 import subparsers.prigau as prigau
 import subparsers.cpedu as cpedu
 
+from rich import box
+from rich.table import Table
+
 CONFIG_DEFAULTS = {
     "selmahos": "config/selmahos.json",
     "config": "config/config.json",
@@ -28,6 +31,45 @@ def get_selmaho(cmavo: str, selmahos: dict) -> str:
         if cmavo in selmahos[selmaho]["cmavos"]:
             return selmaho
     return "UNCAT"
+
+
+def get_gismu(cmarafsi: str, gismus: dict) -> str:
+    for gismu in gismus.keys():
+        if cmarafsi in gismus[gismu]["cmarafsi"]:
+            return gismu
+    return "UNCAT"
+
+    
+def tabulate_cmarafsi(c, gismus, config) -> Table:
+    table = Table(box=box.DOUBLE)
+    table.add_column("cmarafsi", style=config["cmarafsi"])
+    table.add_column("gismu", style=config["gismu"])
+    table.add_column("gloss", style=config["gloss"])
+    for cmarafsi in c:
+        table.add_row(
+            cmarafsi, (g := get_gismu(cmarafsi, gismus)), get_gloss(g, gismus)
+        )
+    return Table
+
+
+def tabulate_selmahos(c, selmahos, config):
+    table = Table(box=box.MINIMAL)
+    table.add_column("cmavo", style=config["cmavo"])
+    table.add_column("cmavo", style=config["cmavo"])
+    for cmavo in c:
+        s = get_selmaho(cmavo, selmahos)
+        colr = selmahos[s]["color"]
+        table.add_row(cmavo, s, style=colr)
+    return table
+
+
+def gloss_gismus(g: list, gismus: dict, config: dict):
+    table = Table(box=box.MINIMAL)
+    table.add_column("gismu", style=config["gismu"])
+    table.add_column("gloss", style=config["gloss"])
+    for gismu in g:
+        table.add_row(gismu, get_gloss(gismu, gismus))
+    return table
 
 
 def build_parser():
