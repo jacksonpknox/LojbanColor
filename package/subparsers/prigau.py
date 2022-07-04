@@ -132,6 +132,7 @@ def get_parse_tree(lojban: str) -> ParserRuleContext:
 #TODO: analyze every lujvo option?
 #TODO: rebrand as tcidu
 #TODO: word (type) count option
+#TODO: show selmaho styles option
 def parse(args: dict):
     rec = bool(e := args.export)
     console = Console(record=rec, force_interactive=(not rec))

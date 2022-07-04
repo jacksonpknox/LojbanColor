@@ -34,7 +34,6 @@ def tabulate_selmaho_styles(s: list, selmahos: dict, skari: dict):
 
 
 #TODO: option to print all token styles
-#TODO: split t in two (m / v) and refactor to share with prigau
 #TODO: option to print an entire selmaho
 def parse(args: dict):
     with open(color.CONFIG_DEFAULTS["skari"], "r") as f:
