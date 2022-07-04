@@ -41,21 +41,22 @@ def get_gismu(cmarafsi: str, gismus: dict) -> str:
 
     
 def tabulate_cmarafsi(c, gismus, config) -> Table:
-    table = Table(box=box.DOUBLE)
+    table = Table(box=box.MINIMAL)
     table.add_column("cmarafsi", style=config["cmarafsi"])
     table.add_column("gismu", style=config["gismu"])
     table.add_column("gloss", style=config["gloss"])
     for cmarafsi in c:
+        gismu = get_gismu(cmarafsi, gismus)
         table.add_row(
-            cmarafsi, (g := get_gismu(cmarafsi, gismus)), get_gloss(g, gismus)
+            cmarafsi, gismu, get_gloss(gismu, gismus)
         )
-    return Table
+    return table
 
 
 def tabulate_selmahos(c, selmahos, config):
     table = Table(box=box.MINIMAL)
     table.add_column("cmavo", style=config["cmavo"])
-    table.add_column("cmavo", style=config["cmavo"])
+    table.add_column("selma'o", style=config["cmavo"])
     for cmavo in c:
         s = get_selmaho(cmavo, selmahos)
         colr = selmahos[s]["color"]
@@ -82,36 +83,20 @@ def build_parser():
 
     parser_config = subparsers.add_parser("cuxna", formatter_class=RichHelpFormatter)
     parser_config.add_argument(
-        "-a",
-        "--add",
-        action="store",
-        nargs=2,
-        help="add CMAVO to SELMAHO",
-        metavar=("CMAVO", "SELMAHO"),
-    )
-    parser_config.add_argument(
         "-c",
-        "--color",
+        "--cmavo",
         action="store",
         nargs=2,
-        help="set the color of SELMAHO to COLOR",
-        metavar=("SELMAHO", "COLOR"),
+        help="extend SELMAHO to include CMAVO",
+        metavar=("SELMAHO", "CMAVO"),
     )
     parser_config.add_argument(
         "-g",
         "--gloss",
         action="store",
         nargs=2,
-        help="assign gloss PHRASE to GISMU",
+        help="gloss GISMU with PHRASE",
         metavar=("GISMU", "PHRASE"),
-    )
-    parser_config.add_argument(
-        "-s",
-        "--sort",
-        action="store",
-        nargs=1,
-        help="recursively sort a json",
-        choices=["selmahos", "gismus"],
     )
     parser_config.add_argument(
         "-r",
@@ -119,8 +104,16 @@ def build_parser():
         dest="cmarafsi",
         action="store",
         nargs=2,
-        help="assign cmarafsi CMARAFSI to GISMU",
+        help="attribute GISMU with CMARAFSI",
         metavar=("GISMU", "CMARAFSI"),
+    )
+    parser_config.add_argument(
+        "-s",
+        "--style",
+        action="store",
+        nargs=2,
+        help="stylize SELMAHO with STYLE",
+        metavar=("SELMAHO", "STYLE")
     )
     parser_config.set_defaults(func=cuxna.parse)
 
@@ -139,16 +132,22 @@ def build_parser():
         help="read from standard input and color it",
     )
     parser_read.add_argument(
-        "-g",
-        "--gismu",
+        "-c",
+        "--cmavo",
         action="store_true",
-        help="record all gismu that appear in brivla and print them",
+        help="record all cmavo and print their selmaho"
     )
     parser_read.add_argument(
-        "-c",
-        "--cmarafsi",
+        "-g",
+        "--gloss",
         action="store_true",
-        help="record all cmarafsi that appear in lujvo and print them",
+        help="record all gismu that appear in brivla and gloss them",
+    )
+    parser_read.add_argument(
+        "-r",
+        "--rafsi",
+        action="store_true",
+        help="record all cmarafsi that appear in lujvo and print their gismu and gloss",
     )
     parser_read.add_argument(
         "-e",
@@ -158,7 +157,7 @@ def build_parser():
         metavar="LOCATION",
     )
     parser_read.add_argument(
-        "-r", "--row", action="store_true", help="print panels in a horizontal row"
+        "-z", "--horizontal", action="store_true", help="print panels in a horizontal row"
     )
     parser_read.add_argument(
         "-n", "--no-prigau", dest="prigau", action="store_false", help="do not print read text"
@@ -167,20 +166,24 @@ def build_parser():
 
     parser_request = subparsers.add_parser("cpedu", formatter_class=RichHelpFormatter)
     parser_request.add_argument(
-        "-g",
-        "--gismu",
-        nargs="+",
-        action="extend",
-        help="print out the gloss of GISMU",
-        metavar="GISMU",
-    )
-    parser_request.add_argument(
         "-c",
         "--cmavo",
         nargs="+",
         action="extend",
-        help="print out the selmaho of CMAVO",
+        help="print the selmaho of each CMAVO",
         metavar="CMAVO",
+    )
+    parser_request.add_argument(
+        "-g",
+        "--gloss",
+        nargs="+",
+        action="extend",
+        help="print the gloss of each GISMU",
+        metavar="GISMU",
+    )
+    parser_request.add_argument(
+        "-r", "--rafsi", nargs="+", action="extend", help="print the gismu and gloss of each CMARAFSI",
+        metavar="CMARAFSI"
     )
     parser_request.set_defaults(func=cpedu.parse)
 

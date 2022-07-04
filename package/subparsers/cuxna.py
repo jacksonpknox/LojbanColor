@@ -59,10 +59,6 @@ def is_cmavo(valsi: str) -> bool:
     return True
 
 
-def sort_config(config: str) -> None:
-    pass
-
-
 def add_cmarafsi(gismu: str, cmarafsi: str, config: dict) -> None:
     gismu, cmarafsi = gismu.lower(), cmarafsi.lower()
     if not is_gismu(gismu):
@@ -120,27 +116,6 @@ def set_gloss(gismu: str, gloss: str, config: dict) -> None:
         )
 
 
-def set_color(selmaho: str, colour: str, config: dict) -> None:
-    selmaho = selmaho.upper().replace("H", "h")
-    if not is_cmavo(selmaho):
-        raise Exception("Error!, {} is not a cmavo by morphology.".format(selmaho))
-
-    with Config("selmahos") as selmahos:
-        # TODO: ask before adding selmaho
-        # TODO: add selmaho if requested and does not exist
-        selmahos[selmaho]["color"] = colour
-        print(
-            Text.assemble(
-                ("ok... ", config["ok"]),
-                ("set color of selmaho ", config["system"]),
-                (selmaho, colour),
-                (" to ", config["system"]),
-                (colour, colour),
-                (".", config["system"])
-            )
-        )
-
-
 def add_cmavo(cmavo: str, selmaho: str, config: dict) -> None:
     selmaho = selmaho.upper().replace("H", "h")
     if not is_cmavo(cmavo):
@@ -183,21 +158,42 @@ def add_cmavo(cmavo: str, selmaho: str, config: dict) -> None:
             )
 
 
+def set_style(selmaho: str, colour: str, config: dict) -> None:
+    selmaho = selmaho.upper().replace("H", "h")
+    if not is_cmavo(selmaho):
+        raise Exception("Error!, {} is not a cmavo by morphology.".format(selmaho))
+
+    with Config("selmahos") as selmahos:
+        # TODO: ask before adding selmaho
+        # TODO: add selmaho if requested and does not exist
+        selmahos[selmaho]["color"] = colour
+        print(
+            Text.assemble(
+                ("ok... ", config["ok"]),
+                ("set color of selmaho ", config["system"]),
+                (selmaho, colour),
+                (" to ", config["system"]),
+                (colour, colour),
+                (".", config["system"])
+            )
+        )
+
+
 def parse(args: dict):
     with open(color.CONFIG_DEFAULTS["config"], "r") as f:
         config = json.load(f)
 
-    if a := args.add:
-        add_cmavo(a[0], a[1], config)  # (cmavo, selmaho)
+    #TODO: style lexeme option
 
-    if c := args.color:
-        set_color(c[0], c[1], config)  # (selmaho, color)
+    #TODO: rebrand as style selmaho
+    if s := args.style:
+        set_style(s[0], s[1], config)  # (selmaho, style)
+
+    if c := args.cmavo:
+        add_cmavo(c[1], c[0], config)  # (cmavo, selmaho)
 
     if g := args.gloss:
         set_gloss(g[0], g[1], config)  # (gismu, gloss)
 
     if r := args.cmarafsi:
         add_cmarafsi(r[0], r[1], config)  # (gismu, cmarafsi)
-
-    if s := args.sort:
-        sort_config(s)

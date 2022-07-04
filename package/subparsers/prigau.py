@@ -39,6 +39,11 @@ class GismuCollector(Collector):
     def enterGismu(self, ctx):
         self.grab(ctx.getText())
 
+        
+class CmavoCollector(Collector):
+    def enterCat_cmavo(self, ctx: ColorParser.Cat_cmavoContext):
+        self.grab(ctx.getText())
+
 
 def collect(tree, Collector) -> list:
     collector = Collector()
@@ -89,14 +94,20 @@ class Colorizer(ColorListener):
         self.t.append(text=ctx.getText(), style=self.config["rafsi"]["q"])
 
 
-def analyze_cmarafsi(tree, gismus, config) -> Table:
+
+def analyze_rafsi(tree, gismus, config) -> Table:
     collection = collect(tree, CmarafsiCollector)
-    color.tabulate_cmarafsi(collection, gismus, config)
+    return color.tabulate_cmarafsi(collection, gismus, config)
 
 
 def analyze_gismu(tree, gismus, config) -> Table:
     collection = collect(tree, GismuCollector)
     return color.gloss_gismus(collection, gismus, config)
+
+    
+def analyze_cmavos(tree, selmahos, config) -> Table:
+    collection = collect(tree, CmavoCollector)
+    return color.tabulate_selmahos(collection, selmahos, config)
 
 
 def colorize(tree, selmahos, config) -> Text:
@@ -107,6 +118,7 @@ def colorize(tree, selmahos, config) -> Text:
     return printer.t
 
 
+
 def get_parse_tree(lojban: str) -> ParserRuleContext:
     input_stream = InputStream(lojban)
     lexer = ColorLexer(input_stream)
@@ -115,9 +127,10 @@ def get_parse_tree(lojban: str) -> ParserRuleContext:
     return parser.folio()
 
 
+#TODO: refactor so input gets processed the same as other files
 def parse(args: dict):
-    r = bool(e := args.export)
-    console = Console(record=r, force_interactive=(not r))
+    rec = bool(e := args.export)
+    console = Console(record=rec, force_interactive=(not rec))
     with open(color.CONFIG_DEFAULTS["gismus"]) as f:
         gismus = json.load(f)
     with open(color.CONFIG_DEFAULTS["config"]) as f:
@@ -133,20 +146,22 @@ def parse(args: dict):
 
             if args.prigau:
                 renderables.append(Panel(colorize(tree, selmahos, config)))
-            if args.gismu:
-                renderables.append(Panel(analyze_gismu(tree, gismus, config)))
-            if args.cmarafsi:
-                renderables.append(Panel(analyze_cmarafsi(tree, gismus, config)))
+            if args.cmavo:
+                renderables.append(Panel(analyze_cmavos(tree, selmahos, config), expand=False))
+            if args.gloss:
+                renderables.append(Panel(analyze_gismu(tree, gismus, config), expand=False))
+            if args.rafsi:
+                renderables.append(Panel(analyze_rafsi(tree, gismus, config), expand=False))
 
-            if args.row:
+            if args.horizontal:
                 console.print(Panel(Columns(renderables), box.DOUBLE))
             else:
                 console.print(Panel(Group(*renderables), box.DOUBLE, expand=False))
 
-    if i := args.input:
+    if args.input:
         # TODO: use rich prompt ?
         console.print("Type the input:", style="red")
         print(Panel(color.colorize(get_parse_tree(sys.stdin.read())), expand=False))
 
-    if r:
+    if rec:
         console.save_svg(e)
