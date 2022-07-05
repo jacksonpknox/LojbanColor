@@ -4,9 +4,28 @@ from rich.columns import Columns
 from rich import box
 import plumbing
 
-#TODO: output is a list of tables
-def squeeze_table(table: Table, height: int):
-    pass
+def yank_row(table):
+    h = measure_height(table) - 1
+    return {"row": [column._cells.pop(h) for column in table.columns], "style": table.rows[h].style}
+
+
+def measure_height(table):
+    return len(table.columns[0]._cells)
+
+def squeeze_table(t: Table, height: int):
+    squished_tables = []
+    while (h := measure_height(t)) > 0:
+        n = min(h, height)
+        small_table = Table(box=box.MINIMAL)
+        for column in t.columns:
+            small_table.add_column(column.header)
+        rows = [yank_row(t) for i in range(0,n)]
+        rows.reverse()
+        for row in rows:
+            small_table.add_row(*row["row"], style=row["style"])
+        squished_tables = [small_table] + squished_tables
+    return squished_tables
+
 
 def tabulate_cmarafsi(c, gismus, skari: dict) -> Table:
     table = Table(box=box.MINIMAL)
@@ -41,14 +60,12 @@ def get_selmaho_table(selmaho: str, selmahos: dict, skari: dict):
     return tabulate_cmavos(cmavos, selmahos, skari)
 
 
-#TODO: option to limit table height: split tall tables into grouped sub-tables
 def get_selmaho_tables_panel(s: list, selmahos: dict, skari: dict, squeeze: int=0):
     selmaho_tables = []
     for selmaho in s:
         selmaho = plumbing.force_selmaho(selmaho, selmahos)
         table = get_selmaho_table(selmaho, selmahos, skari)
         if squeeze:
-            #TODO: option not written
             selmaho_tables += squeeze_table(table, squeeze)
         else:
             selmaho_tables.append(table) #no panel around each table!

@@ -159,6 +159,11 @@ def build_parser():
         action="store_true",
         help="print out all mi'iskari"
     )
+    skari_subgroup.add_argument(
+        "--selmahoskari",
+        action="store_true",
+        help="print out all selmahoskari"
+    )
     valsi_subgroup = parser_request.add_argument_group('valsi')
     valsi_subgroup.add_argument(
         "-c",

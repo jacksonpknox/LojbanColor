@@ -7,6 +7,7 @@ from rich import box
 
 from rich.panel import Panel
 from rich.table import Table
+from rich.columns import Columns
 from rich.console import Console, Group
 
 
@@ -28,7 +29,7 @@ def tabulate_minji_styles(m: list, skari: dict):
     return tabulate_skari(m, skari, "mi'iskari")
 
 
-def tabulate_selmaho_styles(s: list, selmahos: dict, skari: dict):
+def tabulate_selmaho_styles(s: list, selmahos: dict):
     table = Table(box=box.MINIMAL)
     table.add_column("selma'o")
     table.add_column("style")
@@ -36,6 +37,7 @@ def tabulate_selmaho_styles(s: list, selmahos: dict, skari: dict):
         sty = selmahos[selmaho]["color"]
         table.add_row(selmaho, sty, style=sty)
     return table
+
 
 
 def parse(args: dict):
@@ -50,7 +52,7 @@ def parse(args: dict):
         with open(plumbing.CONFIG_DEFAULTS["selmahos"], "r") as f:
             selmahos = json.load(f)
         s = [plumbing.force_selmaho(selmaho, selmahos) for selmaho in s]
-        table = tabulate_selmaho_styles(s, selmahos, skari)
+        table = tabulate_selmaho_styles(s, selmahos)
         renderables.append(Panel(table))
 
     if m := args.minji_style:
@@ -77,6 +79,12 @@ def parse(args: dict):
         table = tabulate_minji_styles(tokens, skari)
         renderables.append(Panel(table))
 
+    if args.selmahoskari:
+        with open(plumbing.CONFIG_DEFAULTS["selmahos"], "r") as f:
+            selmahos = json.load(f)
+        table = tabulate_selmaho_styles(selmahos.keys(), selmahos)
+        renderables.append(Panel(Columns(karda.squeeze_table(table, 8))))
+        
     #TODO: option to print all style of every selmaho
     # will need squeeze_table method
 
@@ -114,7 +122,7 @@ def parse(args: dict):
         selmahos.pop("UNCAT", None)
         selmahos.pop("BY", None)
         selmahos.pop("Y", None)
-        panel = karda.get_selmaho_tables_panel(selmahos.keys(), selmahos, skari)
+        panel = karda.get_selmaho_tables_panel(selmahos.keys(), selmahos, skari, squeeze=0)
         renderables.append(panel)
 
     console.print(Panel(Group(*renderables), box.DOUBLE, expand=False))
