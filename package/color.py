@@ -82,7 +82,7 @@ def build_parser():
     )
     parser_read.add_argument(
         "-g",
-        "--gloss",
+        "--gismu",
         action="store_true",
         help="record all gismu that appear in brivla and gloss them",
     )

@@ -227,7 +227,7 @@
     ]
   },
   "CU": {
-    "color": "#0000FF",
+    "color": "magenta",
     "cmavos": [
       "cu"
     ]

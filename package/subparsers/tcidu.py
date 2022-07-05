@@ -121,13 +121,15 @@ def analyze_cmavos(tree, selmahos, skari, selmaho_style: bool) -> Table:
     return karda.tabulate_cmavos(collection, selmahos, skari, selmaho_style)
 
 
+#TODO: rework; do the good way instead of the bad way,
+# and dont forget to allow squeezing
 def analyze_selmahos(tree, selmahos, skari) -> Columns:
     cmavo_collection = collect(tree, CmavoCollector)
     collection = []
     for cmavo in cmavo_collection:
         if (s := plumbing.get_selmaho(cmavo, selmahos)) not in collection:
             collection.append(s)
-    return Columns([plumbing.get_selmaho_table(s, selmahos, skari) for s in collection])
+    return Columns([karda.get_selmaho_table(s, selmahos, skari) for s in collection])
 
 
 def colorize(tree, selmahos, skari) -> Text:
@@ -157,7 +159,7 @@ def process_and_print_tree(tree, args: dict, console, gismus, selmahos, skari):
                 analyze_cmavos(tree, selmahos, skari, args.selmaho_style), expand=False
             )
         )
-    if args.gloss:
+    if args.gismu:
         renderables.append(Panel(analyze_gismu(tree, gismus, skari), expand=False))
     if args.rafsi:
         renderables.append(Panel(analyze_rafsi(tree, gismus, skari), expand=False))
