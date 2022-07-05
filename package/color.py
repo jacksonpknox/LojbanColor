@@ -162,6 +162,12 @@ def build_parser():
         metavar="HEIGHT",
         default=16,
     )
+    parser_request.add_argument(
+        "-w",
+        "--wave",
+        action="store_true",
+        help="make backgrounds colors alternate"
+    )
     skari_subgroup = parser_request.add_argument_group("skari")
     skari_subgroup.add_argument(
         "-s",

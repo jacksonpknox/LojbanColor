@@ -1,6 +1,7 @@
 from rich.table import Table
 from rich.panel import Panel
 from rich.columns import Columns
+from rich.style import Style
 from rich import box
 import plumbing
 
@@ -22,6 +23,7 @@ def squeeze_table(t: Table, height: int):
     while (h := measure_height(t)) > 0:
         n = min(h, height)
         small_table = Table(box=box.MINIMAL)
+        small_table.style = t.style
         for column in t.columns:
             small_table.add_column(column.header)
         rows = [yank_row(t) for i in range(0, n)]
@@ -78,10 +80,7 @@ def get_selmaho_tables_panel(s: list, selmahos: dict, skari: dict, squeeze: int 
     for selmaho in s:
         selmaho = plumbing.force_selmaho(selmaho, selmahos)
         table = get_selmaho_table(selmaho, selmahos, skari)
-        if squeeze:
-            selmaho_tables += squeeze_table(table, squeeze)
-        else:
-            selmaho_tables.append(table)  # no panel around each table!
-    return Panel(Columns(selmaho_tables))
+        selmaho_tables.extend(squeeze_table(table, squeeze))
+    return Panel(Columns(selmaho_tables), style=Style())
 
 

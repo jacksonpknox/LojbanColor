@@ -43,11 +43,6 @@ class TestMethods(unittest.TestCase):
         self.assertEqual(t, Text().append("noi", style="#0022FF"))
 
         
-    #TODO: after color_prt has been refactored, write this test
-    def test_color_prt(self):
-        pass
-
-        
 
 if __name__ == '__main__':
     unittest.main()
