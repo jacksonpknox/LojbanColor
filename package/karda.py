@@ -84,3 +84,12 @@ def get_selmaho_tables_panel(s: list, selmahos: dict, skari: dict, squeeze: int 
     return Panel(Columns(selmaho_tables), style=Style())
 
 
+def tabulate_selmaho_styles(s: list, selmahos: dict):
+    table = Table(box=box.MINIMAL)
+    table.add_column("selma'o")
+    table.add_column("style")
+    for selmaho in s:
+        sty = selmahos[selmaho]["color"]
+        table.add_row(selmaho, sty, style=sty)
+    return table
+

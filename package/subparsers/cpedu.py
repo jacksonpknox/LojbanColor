@@ -30,16 +30,6 @@ def tabulate_minji_styles(m: list, skari: dict):
     return tabulate_skari(m, skari, "mi'iskari")
 
 
-def tabulate_selmaho_styles(s: list, selmahos: dict):
-    table = Table(box=box.MINIMAL)
-    table.add_column("selma'o")
-    table.add_column("style")
-    for selmaho in s:
-        sty = selmahos[selmaho]["color"]
-        table.add_row(selmaho, sty, style=sty)
-    return table
-
-
 def parse(args: dict):
     with open(plumbing.CONFIG_DEFAULTS["skari"], "r") as f:
         skari = json.load(f)
@@ -51,7 +41,7 @@ def parse(args: dict):
         with open(plumbing.CONFIG_DEFAULTS["selmahos"], "r") as f:
             selmahos = json.load(f)
         s = [plumbing.force_selmaho(selmaho, selmahos) for selmaho in s]
-        table = tabulate_selmaho_styles(s, selmahos)
+        table = karda.tabulate_selmaho_styles(s, selmahos)
         renderables.append(Panel(table, style=Style()))
 
     if m := args.minji_style:
@@ -81,7 +71,7 @@ def parse(args: dict):
     if args.selmahoskari:
         with open(plumbing.CONFIG_DEFAULTS["selmahos"], "r") as f:
             selmahos = json.load(f)
-        table = tabulate_selmaho_styles(selmahos.keys(), selmahos)
+        table = karda.tabulate_selmaho_styles(selmahos.keys(), selmahos)
         renderables.append(Panel(Columns(karda.squeeze_table(table, args.squeeze)), style=Style()))
 
 

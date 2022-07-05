@@ -120,8 +120,20 @@ def analyze_cmavos(tree, selmahos, skari, selmaho_style: bool) -> Table:
     collection = collect(tree, CmavoCollector)
     return karda.tabulate_cmavos(collection, selmahos, skari, selmaho_style)
 
+    
+def analyze_selmahos_differently(tree, selmahos, squeeze: int) -> Columns:
+    cmavo_collection = collect(tree, CmavoCollector)
+    selmaho_collection = []
+    for cmavo in cmavo_collection:
+        s = plumbing.get_selmaho(cmavo, selmahos)
+        if s not in selmaho_collection:
+            selmaho_collection.append(s)
+    table = karda.tabulate_selmaho_styles(selmaho_collection, selmahos)
+    return Columns(karda.squeeze_table(table, squeeze))
+    
 
-def analyze_selmahos(tree, selmahos, skari, squeeze: int) -> Columns:
+
+def analyze_selmahos(tree, selmahos, skari, squeeze: int, show_styles: bool=False) -> Columns:
     cmavo_collection = collect(tree, CmavoCollector)
     selmaho_collection = dict()
     for cmavo in cmavo_collection:
@@ -132,7 +144,7 @@ def analyze_selmahos(tree, selmahos, skari, squeeze: int) -> Columns:
             selmaho_collection[s].append(cmavo)
     selmaho_tables = []
     for s, cmavos in selmaho_collection.items():
-        selmaho_tables.extend(karda.squeeze_table(karda.tabulate_cmavos(cmavos, selmahos, skari), squeeze))
+        selmaho_tables.extend(karda.squeeze_table(karda.tabulate_cmavos(cmavos, selmahos, skari, show_styles), squeeze))
     return Columns(selmaho_tables)
 
 
@@ -160,7 +172,7 @@ def process_and_print_tree(tree, args: dict, console, gismus, selmahos, skari):
     if args.cmavo:
         renderables.append(
             Panel(
-                analyze_cmavos(tree, selmahos, skari, args.selmaho_style), expand=False
+                analyze_cmavos(tree, selmahos, skari, False), expand=False
             )
         )
     if args.gismu:
@@ -168,7 +180,9 @@ def process_and_print_tree(tree, args: dict, console, gismus, selmahos, skari):
     if args.rafsi:
         renderables.append(Panel(analyze_rafsi(tree, gismus, skari), expand=False))
     if args.selmaho:
-        renderables.append(Panel(analyze_selmahos(tree, selmahos, skari, args.squeeze), expand=False))
+        renderables.append(Panel(analyze_selmahos(tree, selmahos, skari, args.squeeze, False), expand=False))
+    if args.selmaho_style:
+        renderables.append(Panel(analyze_selmahos_differently(tree, selmahos, args.squeeze), expand=False))
 
     if args.horizontal:
         console.print(Panel(Columns(renderables), box.DOUBLE))

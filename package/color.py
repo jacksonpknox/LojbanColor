@@ -71,6 +71,7 @@ def build_parser():
     )
     parser_config.set_defaults(func=cuxna.parse)
 
+
     parser_read = subparsers.add_parser("tcidu", formatter_class=RichHelpFormatter)
     parser_read.add_argument(
         "filepath",
@@ -80,37 +81,48 @@ def build_parser():
         nargs="*",
     )
     parser_read.add_argument(
-        "-q",
-        "--squeeze",
-        action="store",
-        type=int,
-        help="squeeze all tables down to HEIGHT rows",
-        metavar="HEIGHT",
-        default=16,
-    )
-    parser_read.add_argument(
         "-i",
         "--input",
         action="store_true",
         help="read from standard input and color it",
     )
-    parser_read.add_argument(
+    read_panels_subgroup = parser_read.add_argument_group("panels")
+    read_panels_subgroup.add_argument(
         "-c",
         "--cmavo",
         action="store_true",
         help="record all cmavo and print their selmaho",
     )
-    parser_read.add_argument(
+    read_panels_subgroup.add_argument(
         "-g",
         "--gismu",
         action="store_true",
         help="record all gismu that appear in brivla and gloss them",
     )
-    parser_read.add_argument(
+    read_panels_subgroup.add_argument(
         "-r",
         "--rafsi",
         action="store_true",
         help="record all cmarafsi that appear in lujvo and print their gismu and gloss",
+    )
+    read_panels_subgroup.add_argument(
+        "-s",
+        "--selmaho",
+        action="store_true",
+        help="record all cmavo and group them by selma'o",
+    )
+    read_panels_subgroup.add_argument(
+        "--selmaho-style",
+        action="store_true",
+        dest="selmaho_style",
+        help="print the style of every selma'o that shows us",
+    )
+    read_panels_subgroup.add_argument(
+        "-n",
+        "--no-prigau",
+        dest="prigau",
+        action="store_false",
+        help="do not print read text",
     )
     parser_read.add_argument(
         "-e",
@@ -126,25 +138,16 @@ def build_parser():
         help="print panels in a horizontal row",
     )
     parser_read.add_argument(
-        "-n",
-        "--no-prigau",
-        dest="prigau",
-        action="store_false",
-        help="do not print read text",
-    )
-    parser_read.add_argument(
-        "--selmaho-style",
-        action="store_true",
-        dest="selmaho_style",
-        help="show selmaho styles (when using --cmavo)",
-    )
-    parser_read.add_argument(
-        "-s",
-        "--selmaho",
-        action="store_true",
-        help="print the table of every selmaho that shows up",
+        "-q",
+        "--squeeze",
+        action="store",
+        type=int,
+        help="squeeze all tables down to HEIGHT rows",
+        metavar="HEIGHT",
+        default=16,
     )
     parser_read.set_defaults(func=tcidu.parse)
+
 
     parser_request = subparsers.add_parser("cpedu", formatter_class=RichHelpFormatter)
     parser_request.add_argument(
