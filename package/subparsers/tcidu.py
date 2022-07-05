@@ -1,8 +1,8 @@
-import color
+import plumbing
+import karda
 import sys
-import json
 
-from rich import print, box
+from rich import box
 from rich.text import Text
 from rich.panel import Panel
 from rich.table import Table
@@ -64,7 +64,7 @@ class Colorizer(ColorListener):
         self.t.append(" ")
 
     def enterCat_cmavo(self, ctx: ColorParser.Cat_cmavoContext):
-        self.t.append(text=(cmavo := ctx.getText()), style=self.selmahos[color.get_selmaho(cmavo, self.selmahos)]["color"])
+        self.t.append(text=(cmavo := ctx.getText()), style=self.selmahos[plumbing.get_selmaho(cmavo, self.selmahos)]["color"])
 
     def enterLerfu(self, ctx):
         self.t.append(text=ctx.getText(), style=self.valskari["lerfu"])
@@ -95,26 +95,26 @@ class Colorizer(ColorListener):
 
 def analyze_rafsi(tree, gismus, skari) -> Table:
     collection = collect(tree, CmarafsiCollector)
-    return color.tabulate_cmarafsi(collection, gismus, skari)
+    return karda.tabulate_cmarafsi(collection, gismus, skari)
 
 
 def analyze_gismu(tree, gismus, skari) -> Table:
     collection = collect(tree, GismuCollector)
-    return color.gloss_gismus(collection, gismus, skari)
+    return karda.gloss_gismus(collection, gismus, skari)
 
     
 def analyze_cmavos(tree, selmahos, skari, selmaho_style: bool) -> Table:
     collection = collect(tree, CmavoCollector)
-    return color.tabulate_cmavos(collection, selmahos, skari, selmaho_style)
+    return karda.tabulate_cmavos(collection, selmahos, skari, selmaho_style)
 
     
 def analyze_selmahos(tree, selmahos, skari) -> Columns:
     cmavo_collection = collect(tree, CmavoCollector)
     collection = []
     for cmavo in cmavo_collection:
-        if (s := color.get_selmaho(cmavo, selmahos)) not in collection:
+        if (s := plumbing.get_selmaho(cmavo, selmahos)) not in collection:
             collection.append(s)
-    return Columns([color.get_selmaho_table(s, selmahos, skari) for s in collection])
+    return Columns([plumbing.get_selmaho_table(s, selmahos, skari) for s in collection])
 
 
 def colorize(tree, selmahos, skari) -> Text:
@@ -157,15 +157,15 @@ def process_and_print_tree(tree, args: dict, console, gismus, selmahos, skari):
 #TODO: options stack
 # - interactively fill in caughts option
 # - group cmavo by selmaho opion (in one table)
-# - analyze every lujvo option? (columns in table: rafsi, type, gismu, gloss) (further in future i think)
+# - analyze individual lujvo option? (columns in table: rafsi, type, gismu, gloss) (further in future i think)
 # - word (type) count option (subparser)
 def parse(args: dict):
     rec = bool(e := args.export)
     console = Console(record=rec, force_interactive=(not rec))
-    config = color.get_config("config")
-    gismus = color.get_config("gismus")
-    selmahos = color.get_config("selmahos")
-    skari = color.get_config("skari")
+    config = plumbing.get_config("config")
+    gismus = plumbing.get_config("gismus")
+    selmahos = plumbing.get_config("selmahos")
+    skari = plumbing.get_config("skari")
     if files := args.filepath:
         for f in files:
             with open(f, "r") as file:

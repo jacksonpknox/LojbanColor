@@ -1,4 +1,4 @@
-import color
+import plumbing
 import json
 
 from rich import print
@@ -14,12 +14,12 @@ class Config:
         self.data = dict()
 
     def __enter__(self):
-        with open(color.CONFIG_DEFAULTS[self.label], "r") as f:
+        with open(plumbing.CONFIG_DEFAULTS[self.label], "r") as f:
             self.data = json.load(f)
         return self.data
 
     def __exit__(self, exc_type, exc_value, exc_traceback):
-        with open(color.CONFIG_DEFAULTS[self.label], "w") as f:
+        with open(plumbing.CONFIG_DEFAULTS[self.label], "w") as f:
             json.dump(self.data, f, indent=2)
 
 
@@ -59,7 +59,7 @@ def add_cmarafsi(gismu: str, cmarafsi: str, skari: dict) -> None:
     gismu, cmarafsi = gismu.lower(), cmarafsi.lower()
     if not is_gismu(gismu):
         raise Exception("Error!, {} is not a gismu by morhpology.".format(gismu))
-    if not color.is_cmavo(cmarafsi):
+    if not plumbing.is_cmavo(cmarafsi):
         raise Exception("Error!, {} is not a cmavo by morphology.".format(cmarafsi))
 
     with Config("gismus") as gismus:
@@ -119,9 +119,9 @@ def add_cmavo(cmavo: str, selmaho: str, skari: dict) -> None:
     c = skari["valskari"]["cmavo"]
 
     selmaho = selmaho.upper().replace("H", "h")
-    if not color.is_cmavo(cmavo):
+    if not plumbing.is_cmavo(cmavo):
         raise Exception("Error! {} is not a cmavo by morphology.".format(cmavo))
-    if not color.is_cmavo(selmaho.lower().replace("h", "'")):
+    if not plumbing.is_cmavo(selmaho.lower().replace("h", "'")):
         raise Exception("Error! {} is not a cmavo by morphology.".format(selmaho))
 
     with Config("selmahos") as selmahos:
@@ -183,7 +183,7 @@ def set_token_style(token: str, style: str) -> None:
 def set_selmaho_style(selmaho: str, colour: str, skari: dict) -> None:
     s = skari["mi'iskari"]["system"]
     with Config("selmahos") as selmahos:
-        selmaho = color.force_selmaho(selmaho, selmahos)
+        selmaho = plumbing.force_selmaho(selmaho, selmahos)
         selmahos[selmaho]["color"] = colour
         print(
             Text.assemble(
@@ -198,7 +198,7 @@ def set_selmaho_style(selmaho: str, colour: str, skari: dict) -> None:
 
 
 def parse(args: dict):
-    with open(color.CONFIG_DEFAULTS["skari"], "r") as f:
+    with open(plumbing.CONFIG_DEFAULTS["skari"], "r") as f:
         skari = json.load(f)
 
 

@@ -1,5 +1,6 @@
 import glob
 import color
+import plumbing
 import json
 from rich import print
 
@@ -32,7 +33,7 @@ def generate_selmaho_file(target, selmahos, n) -> None:
                 f.write(' ')
 
 def main():
-    with open(color.CONFIG_DEFAULTS["selmahos"]) as f:
+    with open(plumbing.CONFIG_DEFAULTS["selmahos"]) as f:
         selmahos = json.load(f)
     generate_selmaho_file("library/selmaho.jbo", selmahos, 8)
 
