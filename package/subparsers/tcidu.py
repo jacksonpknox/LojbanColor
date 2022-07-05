@@ -191,10 +191,7 @@ def process_and_print_tree(tree, args: dict, console, gismus, selmahos, skari):
 
 
 # TODO options stack
-# - wave
 # - interactively fill in caughts option
-# - analyze individual lujvo option? (columns in table: rafsi, type, gismu, gloss) (further in future i think)
-# - word (type) count option
 def parse(args: dict):
     rec = bool(e := args.export)
     console = Console(record=rec, force_interactive=(not rec))
