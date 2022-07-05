@@ -129,6 +129,23 @@ def add_cmavo(cmavo: str, selmaho: str, skari: dict) -> None:
             )
 
             
+def set_cmavo_default()
+
+def set_all_selmaho_skari(style: str, skari: dict) -> None:
+    with Config("selmahos") as selmahos:
+        for s in selmahos.keys():
+            selmahos[s]["color"] = style
+        print(
+            Text.assemble(
+                ("ok...", skari["mi'iskari"]["ok"]),
+                ("set color of every selmaho to ", skari["mi'iskari"]["system"]),
+                (style, style),
+                (".", skari["mi'iskari"]["system"])
+            )
+        )
+
+
+            
 def set_valsi_style(token: str, style: str) -> None:
     with Config("skari") as skari:
         if token not in skari["valskari"].keys():
@@ -183,8 +200,7 @@ def set_selmaho_style(selmaho: str, colour: str, skari: dict) -> None:
 
 
 def parse(args: dict):
-    with open(plumbing.CONFIG_DEFAULTS["skari"], "r") as f:
-        skari = json.load(f)
+    skari = plumbing.get_config("skari")
 
     if s := args.selmaho_style:
         set_selmaho_style(s[0], s[1], skari)  # (selmaho, style)
@@ -194,6 +210,9 @@ def parse(args: dict):
 
     if v := args.valsi_style:
         set_valsi_style(v[0], v[1]) # (token, style)
+
+    if a := args.all_selmaho_style:
+        set_all_selmaho_style(a[0], skari)
 
     if c := args.cmavo:
         add_cmavo(c[1], c[0], skari)  # (cmavo, selmaho)
