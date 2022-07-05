@@ -109,7 +109,7 @@ def parse(args: dict):
         with open(plumbing.CONFIG_DEFAULTS["selmahos"], "r") as f:
             selmahos = json.load(f)
         panel = karda.get_selmaho_tables_panel(
-            args.selmaho, selmahos, skari, squeeze=args.squeeze, wave=False #wave=args.wave
+            args.selmaho, selmahos, skari, squeeze=args.squeeze
         )
         renderables.append(panel)
 
