@@ -105,7 +105,7 @@ def analyze_gismu(tree, gismus, skari) -> Table:
     
 def analyze_cmavos(tree, selmahos, skari, selmaho_style: bool) -> Table:
     collection = collect(tree, CmavoCollector)
-    return color.tabulate_selmahos(collection, selmahos, skari, selmaho_style)
+    return color.tabulate_cmavos(collection, selmahos, skari, selmaho_style)
 
     
 def analyze_selmahos(tree, selmahos, skari) -> Columns:

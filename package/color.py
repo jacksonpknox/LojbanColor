@@ -95,7 +95,7 @@ def tabulate_cmarafsi(c, gismus, skari: dict) -> Table:
 
 
 #TODO: move to tabulate
-def tabulate_selmahos(c, selmahos, skari: dict, show_styles: bool=False):
+def tabulate_cmavos(c, selmahos, skari: dict, show_styles: bool=False):
     table = Table(box=box.MINIMAL)
     table.add_column("cmavo", style=skari["valskari"]["cmavo"])
     table.add_column("selma'o", style=skari["valskari"]["cmavo"])
@@ -114,7 +114,7 @@ def tabulate_selmahos(c, selmahos, skari: dict, show_styles: bool=False):
 #TODO: move to tabulate
 def get_selmaho_table(selmaho: str, selmahos: dict, skari: dict):
     cmavos = selmahos[selmaho]["cmavos"]
-    return tabulate_selmahos(cmavos, selmahos, skari)
+    return tabulate_cmavos(cmavos, selmahos, skari)
 
 
 #TODO: move to tabulate
@@ -253,13 +253,22 @@ def build_parser():
         metavar="SELMAHO",
     )
     parser_request.add_argument(
-        "-t",
-        "--token-style",    
-        dest="token_style",
+        "-m",
+        "--minji-style",
+        dest="minji_style",
         nargs="+",
         action="extend",
-        help="print the style of each TOKEN",
-        metavar="TOKEN",
+        help="print the style of each minji TOKEN",
+        metavar="TOKEN"
+    )
+    parser_request.add_argument(
+        "-v",
+        "--valsi-style",
+        dest="valsi_style",
+        nargs="+",
+        action="extend",
+        help="print the style of each valsi TOKEN",
+        metavar="TOKEN"
     )
     parser_request.add_argument(
         "-c",
@@ -289,9 +298,14 @@ def build_parser():
         metavar="SELMAHO"
     )
     parser_request.add_argument(
-        "--tokens",
+        "--valskari",
         action="store_true",
         help="print out all valskari"
+    )
+    parser_request.add_argument(
+        "--mihiskari",
+        action="store_true",
+        help="print out all mi'iskari"
     )
     parser_request.set_defaults(func=cpedu.parse)
 

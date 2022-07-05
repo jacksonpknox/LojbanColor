@@ -9,33 +9,35 @@ from rich.text import Text
 from rich.columns import Columns
 from rich.console import Console, Group
 
-
-def tabulate_token_styles(t: list, skari: dict):
-    s = skari["mi'iskari"]["system"]
+def tabulate_skari(l: list, skari: dict, type: str):
     table = Table(box=box.MINIMAL)
-    table.add_column("token", style=s)
-    table.add_column("style", style=s)
-    for token in t:
-        style = ""
-        for _, item in skari.items():
-            if token in item.keys():
-                style = item[token]
-        table.add_row(Text(token, style=style), Text(style, style=s))
+    table.add_column("token")
+    table.add_column("style")
+    for token in l:
+        sty = skari[type][token]
+        table.add_row(token, sty, style=sty)
     return table
+
+
+def tabulate_valsi_styles(v: list, skari: dict):
+    return tabulate_skari(v, skari, "valskari")
+
+
+def tabulate_minji_styles(m: list, skari: dict):
+    return tabulate_skari(m, skari, "mi'iskari")
 
 
 def tabulate_selmaho_styles(s: list, selmahos: dict, skari: dict):
     table = Table(box=box.MINIMAL)
-    table.add_column("selma'o", style=skari["valskari"]["cmavo"])
-    table.add_column("style", style=skari["mi'iskari"]["system"])
+    table.add_column("selma'o")
+    table.add_column("style")
     for selmaho in s:
-        style = selmahos[selmaho]["color"]
-        table.add_row(Text(selmaho, style=style), Text(style, style=skari["mi'iskari"]["system"]))
+        sty = selmahos[selmaho]["color"]
+        table.add_row(selmaho, sty, style=sty)
     return table
 
 
 #TODO: option stack
-# - option to print all mi'iskari
 # - option to print all selmaho tables
 def parse(args: dict):
     with open(color.CONFIG_DEFAULTS["skari"], "r") as f:
@@ -43,7 +45,7 @@ def parse(args: dict):
     renderables = []
     console = Console()
     
-    #TODO: move to selmaho subparser
+    #TODO: move to style subgroup
     if s := args.selmaho_style:
         with open(color.CONFIG_DEFAULTS["selmahos"], "r") as f:
             selmahos = json.load(f)
@@ -51,41 +53,48 @@ def parse(args: dict):
         table = tabulate_selmaho_styles(s, selmahos, skari)
         renderables.append(Panel(table))
 
-    #TODO: split in two
-    if t := args.token_style:
-        for token in t:
-            real_token = False
-            for _, item in skari.items():
-                if token in item.keys():
-                    real_token = True
-            if not real_token:
-                raise Exception("!! not a token: " + token)
-        table = tabulate_token_styles(t, skari)
+    
+    #TODO: move to style subgroup
+    if m := args.minji_style:
+        for token in m:
+            if token not in skari["mi'iskari"].keys():
+                raise Exception("Error!! not a minji token: " + token)
+        table = tabulate_minji_styles(m, skari)
         renderables.append(Panel(table))
 
-    #TODO: move to selmaho subparser
+    #TODO: move to style subgroup
+    if v := args.valsi_style:
+        for token in v:
+            if token not in skari["valskari"].keys():
+                raise Exception("Error!! not a valsi token: " + token)
+        table = tabulate_valsi_styles(v, skari)
+        renderables.append(Panel(table))
+
+    #TODO: move to valsi subgroup
     if c := args.cmavo:
         with open(color.CONFIG_DEFAULTS["selmahos"], "r") as f:
             selmahos = json.load(f)
+        #TODO: factor in error-throwing force_cmavo function
         c = [cmavo.lower().replace('h', '\'') for cmavo in c]
-        table = color.tabulate_selmahos(c, selmahos, skari)
+        table = color.tabulate_cmavos(c, selmahos, skari)
         renderables.append(Panel(table))
 
-    #TODO: move to gismu subparser
+    #TODO: move to valsi subgroup
     if g := args.gloss:
         with open(color.CONFIG_DEFAULTS["gismus"], "r") as f:
             gismus = json.load(f)
         table = color.gloss_gismus(g, gismus, skari)
         renderables.append(Panel(table))
 
-    #TODO: move to gismu subparser
+    #TODO: move to valsi subgroup
     if r := args.rafsi:
         with open(color.CONFIG_DEFAULTS["gismus"], "r") as f:
             gismus = json.load(f)
         table = color.tabulate_cmarafsi(r, gismus, skari)
         renderables.append(Panel(table))
 
-    #TODO: move to selmaho subparser
+    #TODO: move to valsi subgroup 
+    #TODO: refactor this useful function!
     if args.selmaho:
         with open(color.CONFIG_DEFAULTS["selmahos"], "r") as f:
             selmahos = json.load(f)
@@ -96,13 +105,18 @@ def parse(args: dict):
             selmaho_tables.append(Panel(table))
         renderables.append(Panel(Columns(selmaho_tables)))
 
-    #TODO: refactor with tabulate_token_styles
-    if args.tokens:
-        tokens = skari["valskari"]
-        table = Table(box=box.MINIMAL)
-        table.add_column("token")
-        table.add_column("style")
-        for token, style in tokens.items():
-            table.add_row(Text(token, style=style), Text(style, style=skari["mi'iskari"]["system"]))
+    #TODO: move to skari subgroup
+    if args.valskari:
+        tokens = skari["valskari"].keys()
+        table = tabulate_valsi_styles(tokens, skari)
         renderables.append(Panel(table))
+
+    #TODO: move to skari subgroup
+    if args.mihiskari:
+        tokens = skari["mi'iskari"].keys()
+        table = tabulate_minji_styles(tokens, skari)
+        renderables.append(Panel(table))
+
+
+
     console.print(Panel(Group(*renderables), box.DOUBLE, expand=False))
