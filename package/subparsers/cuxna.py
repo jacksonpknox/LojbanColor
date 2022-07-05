@@ -128,19 +128,34 @@ def add_cmavo(cmavo: str, selmaho: str, skari: dict) -> None:
                 )
             )
 
-
-def set_token_style(token: str, style: str) -> None:
+            
+def set_valsi_style(token: str, style: str) -> None:
     with Config("skari") as skari:
-        if token in skari["mi'iskari"].keys():
-            skari["mi'iskari"][token] = style
-        elif token in skari["valskari"].keys():
-            skari["valskari"][token] = style
-        else:
-            raise Exception("Error! not a token: " + token)
+        if token not in skari["valskari"].keys():
+            raise Exception("Error! not a valsi token: " + token)
+        skari["valskari"][token] = style
         s = skari["mi'iskari"]["system"]
         print(
             Text.assemble(
-                ("ok... ", skari["mi'iskari"]["ok"]),
+                ("ok...", skari["mi'iskari"]["ok"]),
+                ("set style of token ", s),
+                (token, style),
+                (" to ", s),
+                (style, s),
+                (".", s),
+            )
+        )
+
+
+def set_minji_style(token: str, style: str) -> None:
+    with Config("skari") as skari:
+        if token not in skari["mi'iskari"].keys():
+            raise Exception("Error! not a minji token: " + token)
+        skari["mi'iskari"][token] = style
+        s = skari["mi'iskari"]["system"]
+        print(
+            Text.assemble(
+                ("ok...", skari["mi'iskari"]["ok"]),
                 ("set style of token ", s),
                 (token, style),
                 (" to ", s),
@@ -174,9 +189,11 @@ def parse(args: dict):
     if s := args.selmaho_style:
         set_selmaho_style(s[0], s[1], skari)  # (selmaho, style)
 
-    #TODO: split in 2
-    if t := args.token_style:
-        set_token_style(t[0], t[1])  # (token, style)
+    if m := args.minji_style:
+        set_minji_style(m[0], m[1]) # (token, style)
+
+    if v := args.valsi_style:
+        set_valsi_style(v[0], v[1]) # (token, style)
 
     if c := args.cmavo:
         add_cmavo(c[1], c[0], skari)  # (cmavo, selmaho)

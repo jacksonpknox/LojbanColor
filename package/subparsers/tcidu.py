@@ -122,14 +122,16 @@ def analyze_cmavos(tree, selmahos, skari, selmaho_style: bool) -> Table:
 
 
 #TODO: rework; do the good way instead of the bad way,
-# and dont forget to allow squeezing
-def analyze_selmahos(tree, selmahos, skari) -> Columns:
+def analyze_selmahos(tree, selmahos, skari, squeeze: int) -> Columns:
     cmavo_collection = collect(tree, CmavoCollector)
     collection = []
     for cmavo in cmavo_collection:
         if (s := plumbing.get_selmaho(cmavo, selmahos)) not in collection:
             collection.append(s)
-    return Columns([karda.get_selmaho_table(s, selmahos, skari) for s in collection])
+    selmaho_tables = []
+    for s in collection:
+        selmaho_tables.extend(karda.squeeze_table(karda.get_selmaho_table(s, selmahos, skari), squeeze))
+    return Columns(selmaho_tables)
 
 
 def colorize(tree, selmahos, skari) -> Text:
@@ -164,7 +166,7 @@ def process_and_print_tree(tree, args: dict, console, gismus, selmahos, skari):
     if args.rafsi:
         renderables.append(Panel(analyze_rafsi(tree, gismus, skari), expand=False))
     if args.selmaho:
-        renderables.append(Panel(analyze_selmahos(tree, selmahos, skari), expand=False))
+        renderables.append(Panel(analyze_selmahos(tree, selmahos, skari, args.squeeze), expand=False))
 
     if args.horizontal:
         console.print(Panel(Columns(renderables), box.DOUBLE))
@@ -172,9 +174,8 @@ def process_and_print_tree(tree, args: dict, console, gismus, selmahos, skari):
         console.print(Panel(Group(*renderables), box.DOUBLE, expand=False))
 
 
-# TODO: options stack
+# TODO options stack
 # - interactively fill in caughts option
-# - group cmavo by selmaho opion (in one table)
 # - analyze individual lujvo option? (columns in table: rafsi, type, gismu, gloss) (further in future i think)
 # - word (type) count option
 def parse(args: dict):

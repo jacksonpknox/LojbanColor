@@ -15,7 +15,8 @@ def build_parser():
     subparsers = parser.add_subparsers(title="commands")
 
     parser_config = subparsers.add_parser("cuxna", formatter_class=RichHelpFormatter)
-    parser_config.add_argument(
+    config_skari_subgroup = parser_config.add_argument_group("skari")
+    config_skari_subgroup.add_argument(
         "-s",
         "--selmaho-style",
         dest="selmaho_style",
@@ -24,16 +25,26 @@ def build_parser():
         help="stylize SELMAHO with STYLE",
         metavar=("SELMAHO", "STYLE"),
     )
-    parser_config.add_argument(
-        "-t",
-        "--token-style",
-        dest="token_style",
+    config_skari_subgroup.add_argument(
+        "-m",
+        "--minji-style",
+        dest="minji_style",
         action="store",
         nargs=2,
-        help="stylize TOKEN with style",
+        help="stylize minji TOKEN with STYLE",
         metavar=("TOKEN", "STYLE"),
     )
-    parser_config.add_argument(
+    config_skari_subgroup.add_argument(
+        "-v",
+        "--valsi-style",
+        dest="valsi_style",
+        action="store",
+        nargs=2,
+        help="stylize valsi TOKEN with STYLE",
+        metavar=("TOKEN", "STYLE"),
+    )
+    config_valsi_subgroup = parser_config.add_argument_group("valsi")
+    config_valsi_subgroup.add_argument(
         "-c",
         "--cmavo",
         action="store",
@@ -41,7 +52,7 @@ def build_parser():
         help="extend SELMAHO to include CMAVO",
         metavar=("SELMAHO", "CMAVO"),
     )
-    parser_config.add_argument(
+    config_valsi_subgroup.add_argument(
         "-g",
         "--gloss",
         action="store",
@@ -49,7 +60,7 @@ def build_parser():
         help="gloss GISMU with PHRASE",
         metavar=("GISMU", "PHRASE"),
     )
-    parser_config.add_argument(
+    config_valsi_subgroup.add_argument(
         "-r",
         "--rafsi",
         dest="cmarafsi",
@@ -67,6 +78,15 @@ def build_parser():
         help="read a text file and color it",
         metavar="FILEPATH",
         nargs="*",
+    )
+    parser_read.add_argument(
+        "-q",
+        "--squeeze",
+        action="store",
+        type=int,
+        help="squeeze all tables down to HEIGHT rows",
+        metavar="HEIGHT",
+        default=16,
     )
     parser_read.add_argument(
         "-i",
