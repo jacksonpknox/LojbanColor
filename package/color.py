@@ -14,6 +14,7 @@ def build_parser():
     )
     subparsers = parser.add_subparsers(title="commands")
 
+    #CUXNA CUXNA CUXNA CUXNA CUXNA
     parser_config = subparsers.add_parser("cuxna", formatter_class=RichHelpFormatter)
     config_skari_subgroup = parser_config.add_argument_group("skari")
     config_skari_subgroup.add_argument(
@@ -42,6 +43,14 @@ def build_parser():
         nargs=2,
         help="stylize valsi TOKEN with STYLE",
         metavar=("TOKEN", "STYLE"),
+    )
+    config_skari_subgroup.add_argument(
+        "--all-selmaho-style",
+        dest="all_selmaho_style",
+        action="store",
+        nargs=1,
+        help="stylize every selma'o with STYLE",
+        metavar="STYLE"
     )
     config_valsi_subgroup = parser_config.add_argument_group("valsi")
     config_valsi_subgroup.add_argument(
@@ -72,6 +81,7 @@ def build_parser():
     parser_config.set_defaults(func=cuxna.parse)
 
 
+    # TCIDU TCIDU TCIDU TCIDU TCIDU
     parser_read = subparsers.add_parser("tcidu", formatter_class=RichHelpFormatter)
     parser_read.add_argument(
         "filepath",
@@ -155,6 +165,7 @@ def build_parser():
     parser_read.set_defaults(func=tcidu.parse)
 
 
+    # CPEDU CPEDU CPEDU CPEDU CPEDU
     parser_request = subparsers.add_parser("cpedu", formatter_class=RichHelpFormatter)
     parser_request.add_argument(
         "-z",

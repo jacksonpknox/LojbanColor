@@ -128,10 +128,8 @@ def add_cmavo(cmavo: str, selmaho: str, skari: dict) -> None:
                 )
             )
 
-            
-def set_cmavo_default()
 
-def set_all_selmaho_skari(style: str, skari: dict) -> None:
+def set_all_selmaho_style(style: str, skari: dict) -> None:
     with Config("selmahos") as selmahos:
         for s in selmahos.keys():
             selmahos[s]["color"] = style

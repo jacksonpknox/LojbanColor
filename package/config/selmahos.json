@@ -4,7 +4,7 @@
     "cmavos": []
   },
   "A": {
-    "color": "#0000FF",
+    "color": "white on black",
     "cmavos": [
       ".u",
       ".a",
@@ -13,7 +13,7 @@
     ]
   },
   "BAI": {
-    "color": "#0000FF",
+    "color": "cyan",
     "cmavos": [
       "mu'u",
       "ma'i",
@@ -82,38 +82,38 @@
     ]
   },
   "BAhE": {
-    "color": "#0000FF",
+    "color": "cyan",
     "cmavos": [
       "ba'e",
       "za'e"
     ]
   },
   "BE": {
-    "color": "blue",
+    "color": "cyan",
     "cmavos": [
       "be"
     ]
   },
   "BEI": {
-    "color": "#0000FF",
+    "color": "cyan",
     "cmavos": [
       "bei"
     ]
   },
   "BEhO": {
-    "color": "#0000FF",
+    "color": "cyan",
     "cmavos": [
       "be'o"
     ]
   },
   "BIhE": {
-    "color": "#0000FF",
+    "color": "cyan",
     "cmavos": [
       "bi'e"
     ]
   },
   "BIhI": {
-    "color": "#0000FF",
+    "color": "cyan",
     "cmavos": [
       "bi'o",
       "mi'i",
@@ -121,25 +121,25 @@
     ]
   },
   "BO": {
-    "color": "#0000FF",
+    "color": "cyan",
     "cmavos": [
       "bo"
     ]
   },
   "BOI": {
-    "color": "#0000FF",
+    "color": "cyan",
     "cmavos": [
       "boi"
     ]
   },
   "BU": {
-    "color": "#0000FF",
+    "color": "cyan",
     "cmavos": [
       "bu"
     ]
   },
   "BY": {
-    "color": "#33FFFF",
+    "color": "cyan",
     "cmavos": [
       "ty.",
       ".y'y.",
@@ -168,7 +168,7 @@
     ]
   },
   "CAI": {
-    "color": "#0000FF",
+    "color": "cyan",
     "cmavos": [
       "ru'e",
       "pei",
@@ -178,7 +178,7 @@
     ]
   },
   "CAhA": {
-    "color": "blue",
+    "color": "cyan",
     "cmavos": [
       "ka'e",
       "pu'i",
@@ -187,25 +187,25 @@
     ]
   },
   "CEI": {
-    "color": "#0000FF",
+    "color": "cyan",
     "cmavos": [
       "cei"
     ]
   },
   "CEhE": {
-    "color": "#0000FF",
+    "color": "cyan",
     "cmavos": [
       "ce'e"
     ]
   },
   "CO": {
-    "color": "#0000FF",
+    "color": "cyan",
     "cmavos": [
       "co"
     ]
   },
   "COI": {
-    "color": "bold blue",
+    "color": "cyan",
     "cmavos": [
       "fi'i",
       "mu'o",
@@ -227,38 +227,38 @@
     ]
   },
   "CU": {
-    "color": "magenta",
+    "color": "cyan",
     "cmavos": [
       "cu"
     ]
   },
   "CUhE": {
-    "color": "#0000FF",
+    "color": "cyan",
     "cmavos": [
       "nau",
       "cu'e"
     ]
   },
   "DAhO": {
-    "color": "#0000FF",
+    "color": "cyan",
     "cmavos": [
       "da'o"
     ]
   },
   "DOI": {
-    "color": "#0000FF",
+    "color": "cyan",
     "cmavos": [
       "doi"
     ]
   },
   "DOhU": {
-    "color": "#0000FF",
+    "color": "cyan",
     "cmavos": [
       "do'u"
     ]
   },
   "FA": {
-    "color": "blue",
+    "color": "cyan",
     "cmavos": [
       "fai",
       "fa",
@@ -270,7 +270,7 @@
     ]
   },
   "FAhA": {
-    "color": "blue",
+    "color": "cyan",
     "cmavos": [
       "fa'a",
       "ne'a",
@@ -296,55 +296,55 @@
     ]
   },
   "FAhO": {
-    "color": "#0000FF",
+    "color": "grey27",
     "cmavos": [
       "fa'o"
     ]
   },
   "FEhE": {
-    "color": "#0000FF",
+    "color": "cyan",
     "cmavos": [
       "fe'e"
     ]
   },
   "FEhU": {
-    "color": "#0000FF",
+    "color": "cyan",
     "cmavos": [
       "fe'u"
     ]
   },
   "FIhO": {
-    "color": "#0000FF",
+    "color": "cyan",
     "cmavos": [
       "fi'o"
     ]
   },
   "FOI": {
-    "color": "#0000FF",
+    "color": "cyan",
     "cmavos": [
       "foi"
     ]
   },
   "FUhA": {
-    "color": "#0000FF",
+    "color": "cyan",
     "cmavos": [
       "fu'a"
     ]
   },
   "FUhE": {
-    "color": "#0000FF",
+    "color": "cyan",
     "cmavos": [
       "fu'e"
     ]
   },
   "FUhO": {
-    "color": "#0000FF",
+    "color": "cyan",
     "cmavos": [
       "fu'o"
     ]
   },
   "GA": {
-    "color": "#0000FF",
+    "color": "cyan",
     "cmavos": [
       "ge",
       "gu",
@@ -353,26 +353,26 @@
     ]
   },
   "GAhO": {
-    "color": "#0000FF",
+    "color": "cyan",
     "cmavos": [
       "ga'o",
       "ke'i"
     ]
   },
   "GEhU": {
-    "color": "#0000FF",
+    "color": "cyan",
     "cmavos": [
       "ge'u"
     ]
   },
   "GI": {
-    "color": "#0000FF",
+    "color": "cyan",
     "cmavos": [
       "gi"
     ]
   },
   "GIhA": {
-    "color": "blue",
+    "color": "cyan",
     "cmavos": [
       "gi'o",
       "gi'a",
@@ -381,7 +381,7 @@
     ]
   },
   "GOI": {
-    "color": "#0000FF",
+    "color": "cyan",
     "cmavos": [
       "ne",
       "po'e",
@@ -393,7 +393,7 @@
     ]
   },
   "GOhA": {
-    "color": "#0000FF",
+    "color": "cyan",
     "cmavos": [
       "go'o",
       "go'i",
@@ -411,7 +411,7 @@
     ]
   },
   "GUhA": {
-    "color": "#0000FF",
+    "color": "cyan",
     "cmavos": [
       "gu'a",
       "gu'e",
@@ -426,7 +426,7 @@
     ]
   },
   "JA": {
-    "color": "blue",
+    "color": "cyan",
     "cmavos": [
       "jo",
       "ju",
@@ -435,13 +435,13 @@
     ]
   },
   "JAI": {
-    "color": "#0000FF",
+    "color": "cyan",
     "cmavos": [
       "jai"
     ]
   },
   "JOI": {
-    "color": "#0000FF",
+    "color": "cyan",
     "cmavos": [
       "ce",
       "joi",
@@ -454,37 +454,37 @@
     ]
   },
   "JOhI": {
-    "color": "#0000FF",
+    "color": "cyan",
     "cmavos": [
       "jo'i"
     ]
   },
   "KE": {
-    "color": "#0000FF",
+    "color": "cyan",
     "cmavos": [
       "ke"
     ]
   },
   "KEI": {
-    "color": "#0000FF",
+    "color": "cyan",
     "cmavos": [
       "kei"
     ]
   },
   "KEhE": {
-    "color": "#0000FF",
+    "color": "cyan",
     "cmavos": [
       "ke'e"
     ]
   },
   "KI": {
-    "color": "#0000FF",
+    "color": "cyan",
     "cmavos": [
       "ki"
     ]
   },
   "KOhA": {
-    "color": "blue",
+    "color": "cyan",
     "cmavos": [
       "vo'o",
       "do'i",
@@ -534,31 +534,31 @@
     ]
   },
   "KU": {
-    "color": "blue",
+    "color": "cyan",
     "cmavos": [
       "ku"
     ]
   },
   "KUhE": {
-    "color": "#4040FF",
+    "color": "cyan",
     "cmavos": [
       "ku'e"
     ]
   },
   "KUhO": {
-    "color": "#0000FF",
+    "color": "cyan",
     "cmavos": [
       "ku'o"
     ]
   },
   "LA": {
-    "color": "#0000FF",
+    "color": "cyan",
     "cmavos": [
       "la"
     ]
   },
   "LAU": {
-    "color": "#0000FF",
+    "color": "cyan",
     "cmavos": [
       "tau",
       "zai",
@@ -567,7 +567,7 @@
     ]
   },
   "LAhE": {
-    "color": "#0000FF",
+    "color": "cyan",
     "cmavos": [
       "lu'e",
       "tu'a",
@@ -579,7 +579,7 @@
     ]
   },
   "LE": {
-    "color": "blue",
+    "color": "cyan",
     "cmavos": [
       "le",
       "loi",
@@ -591,86 +591,86 @@
     ]
   },
   "LEhU": {
-    "color": "#0000FF",
+    "color": "cyan",
     "cmavos": [
       "le'u"
     ]
   },
   "LI": {
-    "color": "magenta",
+    "color": "cyan",
     "cmavos": [
       "li"
     ]
   },
   "LIhAU": {
-    "color": "#0000FF",
+    "color": "cyan",
     "cmavos": [
       "li'au"
     ]
   },
   "LIhU": {
-    "color": "#0000FF",
+    "color": "magenta",
     "cmavos": [
       "li'u"
     ]
   },
   "LOhO": {
-    "color": "#0000FF",
+    "color": "cyan",
     "cmavos": [
       "lo'o"
     ]
   },
   "LOhU": {
-    "color": "#0000FF",
+    "color": "cyan",
     "cmavos": [
       "lo'u"
     ]
   },
   "LU": {
-    "color": "#0000FF",
+    "color": "magenta",
     "cmavos": [
       "lu"
     ]
   },
   "LUhEI": {
-    "color": "#0000FF",
+    "color": "cyan",
     "cmavos": [
       "lu'ei"
     ]
   },
   "LUhU": {
-    "color": "#0000FF",
+    "color": "cyan",
     "cmavos": [
       "lu'u"
     ]
   },
   "MAI": {
-    "color": "#0000FF",
+    "color": "cyan",
     "cmavos": [
       "mai",
       "mo'o"
     ]
   },
   "MAhO": {
-    "color": "#0000FF",
+    "color": "cyan",
     "cmavos": [
       "ma'o"
     ]
   },
   "ME": {
-    "color": "#0000FF",
+    "color": "cyan",
     "cmavos": [
       "me"
     ]
   },
   "MEhU": {
-    "color": "#0000FF",
+    "color": "cyan",
     "cmavos": [
       "me'u"
     ]
   },
   "MOI": {
-    "color": "#0000FF",
+    "color": "cyan",
     "cmavos": [
       "si'e",
       "mei",
@@ -680,32 +680,32 @@
     ]
   },
   "MOhE": {
-    "color": "#0000FF",
+    "color": "cyan",
     "cmavos": [
       "mo'e"
     ]
   },
   "MOhI": {
-    "color": "#0000FF",
+    "color": "cyan",
     "cmavos": [
       "mo'i"
     ]
   },
   "NA": {
-    "color": "#8030FF",
+    "color": "cyan",
     "cmavos": [
       "ja'a",
       "na"
     ]
   },
   "NAI": {
-    "color": "#8030FF",
+    "color": "cyan",
     "cmavos": [
       "nai"
     ]
   },
   "NAhE": {
-    "color": "#8030FF",
+    "color": "cyan",
     "cmavos": [
       "cau'e",
       "na'e",
@@ -714,25 +714,25 @@
     ]
   },
   "NAhU": {
-    "color": "#0000FF",
+    "color": "cyan",
     "cmavos": [
       "na'u"
     ]
   },
   "NIhE": {
-    "color": "#0000FF",
+    "color": "cyan",
     "cmavos": [
       "ni'e"
     ]
   },
   "NIhO": {
-    "color": "#0000FF",
+    "color": "grey27",
     "cmavos": [
       "ni'o"
     ]
   },
   "NOI": {
-    "color": "#0000FF",
+    "color": "cyan",
     "cmavos": [
       "voi",
       "poi",
@@ -740,14 +740,14 @@
     ]
   },
   "NOIhA": {
-    "color": "#0000FF",
+    "color": "cyan",
     "cmavos": [
       "noi'a",
       "poi'a"
     ]
   },
   "NU": {
-    "color": "#0000FF",
+    "color": "deep_pink4",
     "cmavos": [
       "li'i",
       "zu'o",
@@ -764,19 +764,19 @@
     ]
   },
   "NUhA": {
-    "color": "#0000FF",
+    "color": "cyan",
     "cmavos": [
       "nu'a"
     ]
   },
   "NUhI": {
-    "color": "#0000FF",
+    "color": "cyan",
     "cmavos": [
       "nu'i"
     ]
   },
   "NUhU": {
-    "color": "#0000FF",
+    "color": "cyan",
     "cmavos": [
       "nu'u"
     ]
@@ -833,19 +833,19 @@
     ]
   },
   "PEhE": {
-    "color": "#0000FF",
+    "color": "cyan",
     "cmavos": [
       "pe'e"
     ]
   },
   "PEhO": {
-    "color": "#0000FF",
+    "color": "cyan",
     "cmavos": [
       "pe'o"
     ]
   },
   "PU": {
-    "color": "italic purple",
+    "color": "aquamarine1",
     "cmavos": [
       "ca",
       "pu",
@@ -853,20 +853,20 @@
     ]
   },
   "RAhO": {
-    "color": "#0000FF",
+    "color": "cyan",
     "cmavos": [
       "ra'o"
     ]
   },
   "ROI": {
-    "color": "#0000FF",
+    "color": "cyan",
     "cmavos": [
       "roi",
       "re'u"
     ]
   },
   "SA": {
-    "color": "#0000FF",
+    "color": "cyan",
     "cmavos": [
       "sa"
     ]
@@ -881,37 +881,37 @@
     ]
   },
   "SEI": {
-    "color": "#0000FF",
+    "color": "cyan",
     "cmavos": [
       "sei"
     ]
   },
   "SEhU": {
-    "color": "#0000FF",
+    "color": "cyan",
     "cmavos": [
       "se'u"
     ]
   },
   "SI": {
-    "color": "#0000FF",
+    "color": "cyan",
     "cmavos": [
       "si"
     ]
   },
   "SOI": {
-    "color": "#0000FF",
+    "color": "cyan",
     "cmavos": [
       "soi"
     ]
   },
   "SU": {
-    "color": "#0000FF",
+    "color": "cyan",
     "cmavos": [
       "su"
     ]
   },
   "TAhE": {
-    "color": "#0000FF",
+    "color": "cyan",
     "cmavos": [
       "na'o",
       "ru'i",
@@ -920,44 +920,44 @@
     ]
   },
   "TEI": {
-    "color": "#0000FF",
+    "color": "cyan",
     "cmavos": [
       "tei"
     ]
   },
   "TEhU": {
-    "color": "#0000FF",
+    "color": "cyan",
     "cmavos": [
       "te'u"
     ]
   },
   "TO": {
-    "color": "#0000FF",
+    "color": "cyan",
     "cmavos": [
       "to",
       "to'i"
     ]
   },
   "TOI": {
-    "color": "#0000FF",
+    "color": "cyan",
     "cmavos": [
       "toi"
     ]
   },
   "TUhE": {
-    "color": "#0000FF",
+    "color": "cyan",
     "cmavos": [
       "tu'e"
     ]
   },
   "TUhU": {
-    "color": "#0000FF",
+    "color": "cyan",
     "cmavos": [
       "tu'u"
     ]
   },
   "UI": {
-    "color": "#8080FF",
+    "color": "bright_black",
     "cmavos": [
       "vu'e",
       "ro'i",
@@ -1060,7 +1060,7 @@
     ]
   },
   "VA": {
-    "color": "#0000FF",
+    "color": "cyan",
     "cmavos": [
       "vi",
       "vu",
@@ -1068,19 +1068,19 @@
     ]
   },
   "VAU": {
-    "color": "#0000FF",
+    "color": "cyan",
     "cmavos": [
       "vau"
     ]
   },
   "VEI": {
-    "color": "#0000FF",
+    "color": "cyan",
     "cmavos": [
       "vei"
     ]
   },
   "VEhA": {
-    "color": "#0000FF",
+    "color": "cyan",
     "cmavos": [
       "ve'e",
       "ve'u",
@@ -1089,13 +1089,13 @@
     ]
   },
   "VEhO": {
-    "color": "#0000FF",
+    "color": "cyan",
     "cmavos": [
       "ve'o"
     ]
   },
   "VIhA": {
-    "color": "#0000FF",
+    "color": "cyan",
     "cmavos": [
       "vi'e",
       "vi'a",
@@ -1104,13 +1104,13 @@
     ]
   },
   "VUhO": {
-    "color": "#0000FF",
+    "color": "cyan",
     "cmavos": [
       "vu'o"
     ]
   },
   "VUhU": {
-    "color": "#0000FF",
+    "color": "cyan",
     "cmavos": [
       "ju'u",
       "sa'i",
@@ -1126,19 +1126,19 @@
     ]
   },
   "XI": {
-    "color": "#0000FF",
+    "color": "cyan",
     "cmavos": [
       "xi"
     ]
   },
   "Y": {
-    "color": "#0000FF",
+    "color": "cyan",
     "cmavos": [
       ".y."
     ]
   },
   "ZAhO": {
-    "color": "#0000FF",
+    "color": "cyan",
     "cmavos": [
       "mo'u",
       "ca'o",
@@ -1153,13 +1153,13 @@
     ]
   },
   "ZEI": {
-    "color": "#0000FF",
+    "color": "cyan",
     "cmavos": [
       "zei"
     ]
   },
   "ZEhA": {
-    "color": "#0000FF",
+    "color": "cyan",
     "cmavos": [
       "ze'e",
       "ze'i",
@@ -1168,7 +1168,7 @@
     ]
   },
   "ZI": {
-    "color": "#0000FF",
+    "color": "cyan",
     "cmavos": [
       "zi",
       "za",
@@ -1176,26 +1176,26 @@
     ]
   },
   "ZIhE": {
-    "color": "#0000FF",
+    "color": "cyan",
     "cmavos": [
       "zi'e"
     ]
   },
   "ZO": {
-    "color": "#0000FF",
+    "color": "cyan",
     "cmavos": [
       "zo"
     ]
   },
   "ZOI": {
-    "color": "#0000FF",
+    "color": "cyan",
     "cmavos": [
       "la'o",
       "zoi"
     ]
   },
   "ZOhU": {
-    "color": "#0000FF",
+    "color": "cyan",
     "cmavos": [
       "zo'u"
     ]
