@@ -127,6 +127,12 @@ def build_parser():
     parser_read.set_defaults(func=tcidu.parse)
 
     parser_request = subparsers.add_parser("cpedu", formatter_class=RichHelpFormatter)
+    parser_request.add_argument(
+        "-z",
+        "--horizontal",
+        action="store_true",
+        help="print panels in a horizontal row"
+    )
     skari_subgroup = parser_request.add_argument_group("skari")
     skari_subgroup.add_argument(
         "-s",

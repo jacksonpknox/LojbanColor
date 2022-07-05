@@ -122,4 +122,8 @@ def parse(args: dict):
         )
         renderables.append(panel)
 
-    console.print(Panel(Group(*renderables), box.DOUBLE, expand=False))
+
+    if args.horizontal:
+        console.print(Panel(Columns(renderables), box.DOUBLE))
+    else:
+        console.print(Panel(Group(*renderables), box.DOUBLE, expand=False))
