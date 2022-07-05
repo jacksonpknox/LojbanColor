@@ -89,7 +89,7 @@
     ]
   },
   "BE": {
-    "color": "#0000FF",
+    "color": "blue",
     "cmavos": [
       "be"
     ]
@@ -258,7 +258,7 @@
     ]
   },
   "FA": {
-    "color": "#0000FF",
+    "color": "blue",
     "cmavos": [
       "fai",
       "fa",
@@ -270,7 +270,7 @@
     ]
   },
   "FAhA": {
-    "color": "#0000FF",
+    "color": "blue",
     "cmavos": [
       "fa'a",
       "ne'a",
@@ -372,7 +372,7 @@
     ]
   },
   "GIhA": {
-    "color": "#0000FF",
+    "color": "blue",
     "cmavos": [
       "gi'o",
       "gi'a",
@@ -420,13 +420,13 @@
     ]
   },
   "I": {
-    "color": "#008080",
+    "color": "grey27",
     "cmavos": [
       ".i"
     ]
   },
   "JA": {
-    "color": "#0000FF",
+    "color": "blue",
     "cmavos": [
       "jo",
       "ju",
@@ -484,7 +484,7 @@
     ]
   },
   "KOhA": {
-    "color": "#0000FF",
+    "color": "blue",
     "cmavos": [
       "vo'o",
       "do'i",
@@ -534,7 +534,7 @@
     ]
   },
   "KU": {
-    "color": "#0000FF",
+    "color": "blue",
     "cmavos": [
       "ku"
     ]
@@ -872,7 +872,7 @@
     ]
   },
   "SE": {
-    "color": "#8080FF",
+    "color": "cyan",
     "cmavos": [
       "xe",
       "te",

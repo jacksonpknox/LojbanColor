@@ -227,4 +227,4 @@ def parse(args: dict):
         process_and_print_tree(tree, args, console, gismus, selmahos, skari)
 
     if rec:
-        console.save_svg(e)
+        console.save_svg(e, title="skavla")

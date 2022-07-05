@@ -1,27 +1,27 @@
 {
   "mi'iskari": {
     "gloss": "cyan",
-    "system": "",
+    "system": "white on black",
     "ok": "bold cyan",
     "prompt": "red",
     "obstacle": "red"
   },
   "valskari": {
-    "fu'ivla": "#008700",
-    "cmene": "#FFFF00",
+    "fu'ivla": "green",
+    "cmene": "yellow",
     "cmavo": "blue",
     "lerfu": "bold green",
     "gismu": "red",
     "lujvo": "red",
     "rafsi": "red",
     "cmarafsi": "yellow",
-    "brogismu": "#FF0000",
-    "baugismu": "#FF0000",
-    "kargimpag": "#FF8000",
-    "ga'orgimpag": "#FF8080",
-    "broraf": "red",
-    "bauraf": "red",
-    "balraf": "red",
+    "brogismu": "red",
+    "baugismu": "red",
+    "kargimpag": "dark_red",
+    "ga'orgimpag": "dark_red",
+    "broraf": "deep_pink4",
+    "bauraf": "deep_pink4",
+    "balraf": "deep_pink4",
     "y": "yellow",
     "q": "yellow"
   }
