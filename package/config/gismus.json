@@ -781,5 +781,131 @@
       "standard"
     ],
     "cmarafsi": []
+  },
+  "spaji": {
+    "gloss": "surprise",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "xunre": {
+    "gloss": "red",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "fengu": {
+    "gloss": "anger",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "cpedu": {
+    "gloss": "request",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "rirni": {
+    "gloss": "parent",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "fanmo": {
+    "gloss": "finale",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "lerci": {
+    "gloss": "late",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "jarco": {
+    "gloss": "show",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "mensi": {
+    "gloss": "sister",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "kanla": {
+    "gloss": "eye",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "cifnu": {
+    "gloss": "baby",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "cmila": {
+    "gloss": "laugh",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "benji": {
+    "gloss": "signal",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "jmina": {
+    "gloss": "combine",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "pacna": {
+    "gloss": "hope",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "simxu": {
+    "gloss": "mutually do",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "vimcu": {
+    "gloss": "remove",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "blanu": {
+    "gloss": "blue",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
   }
 }

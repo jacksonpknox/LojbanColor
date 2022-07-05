@@ -73,7 +73,7 @@ def get_selmaho_table(selmaho: str, selmahos: dict, skari: dict):
     return tabulate_cmavos(cmavos, selmahos, skari)
 
 
-def get_selmaho_tables_panel(s: list, selmahos: dict, skari: dict, squeeze: int = 0):
+def get_selmaho_tables_panel(s: list, selmahos: dict, skari: dict, squeeze: int = 16):
     selmaho_tables = []
     for selmaho in s:
         selmaho = plumbing.force_selmaho(selmaho, selmahos)

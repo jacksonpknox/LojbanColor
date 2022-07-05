@@ -133,6 +133,15 @@ def build_parser():
         action="store_true",
         help="print panels in a horizontal row"
     )
+    parser_request.add_argument(
+        "-q",
+        "--squeeze",
+        action="store",
+        type=int,
+        help="squeeze all tables down to HEIGHT rows",
+        metavar="HEIGHT",
+        default=16,
+    )
     skari_subgroup = parser_request.add_argument_group("skari")
     skari_subgroup.add_argument(
         "-s",

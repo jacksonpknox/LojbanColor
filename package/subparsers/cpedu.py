@@ -39,6 +39,7 @@ def tabulate_selmaho_styles(s: list, selmahos: dict):
     return table
 
 
+#TODO: wave effect
 def parse(args: dict):
     with open(plumbing.CONFIG_DEFAULTS["skari"], "r") as f:
         skari = json.load(f)
@@ -81,7 +82,7 @@ def parse(args: dict):
         with open(plumbing.CONFIG_DEFAULTS["selmahos"], "r") as f:
             selmahos = json.load(f)
         table = tabulate_selmaho_styles(selmahos.keys(), selmahos)
-        renderables.append(Panel(Columns(karda.squeeze_table(table, 8))))
+        renderables.append(Panel(Columns(karda.squeeze_table(table, args.squeeze))))
 
 
     # valsi subgroup
@@ -108,7 +109,7 @@ def parse(args: dict):
     if args.selmaho:
         with open(plumbing.CONFIG_DEFAULTS["selmahos"], "r") as f:
             selmahos = json.load(f)
-        panel = karda.get_selmaho_tables_panel(args.selmaho, selmahos, skari)
+        panel = karda.get_selmaho_tables_panel(args.selmaho, selmahos, skari, squeeze=args.squeeze)
         renderables.append(panel)
 
     if args.all_selmaho:
@@ -118,7 +119,7 @@ def parse(args: dict):
         selmahos.pop("BY", None)
         selmahos.pop("Y", None)
         panel = karda.get_selmaho_tables_panel(
-            selmahos.keys(), selmahos, skari, squeeze=0
+            selmahos.keys(), selmahos, skari, squeeze=args.squeeze
         )
         renderables.append(panel)
 
