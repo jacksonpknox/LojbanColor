@@ -146,6 +146,12 @@ def build_parser():
         metavar="HEIGHT",
         default=16,
     )
+    parser_read.add_argument(
+        "--catch-gismus",
+        dest="catch_gismus",
+        action="store_true",
+        help="prompt the use for the glosses of the gismus that show up"
+    )
     parser_read.set_defaults(func=tcidu.parse)
 
 

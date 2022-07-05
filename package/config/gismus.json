@@ -907,5 +907,201 @@
       "standard"
     ],
     "cmarafsi": []
+  },
+  "melbi": {
+    "gloss": "beautiful",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "ractu": {
+    "gloss": "rabbit",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "ciska": {
+    "gloss": "write",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "lalxu": {
+    "gloss": "lake",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "prenu": {
+    "gloss": "person",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "zvati": {
+    "gloss": "present",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "zdani": {
+    "gloss": "home",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "cmalu": {
+    "gloss": "small",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "jinvi": {
+    "gloss": "opine",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "xamgu": {
+    "gloss": "good",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "djica": {
+    "gloss": "want",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "citka": {
+    "gloss": "eat",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "klama": {
+    "gloss": "go",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "cizra": {
+    "gloss": "weird",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "catlu": {
+    "gloss": "look",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "viska": {
+    "gloss": "see",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "preti": {
+    "gloss": "question",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "tirna": {
+    "gloss": "hear",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "mutce": {
+    "gloss": "very",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "facki": {
+    "gloss": "discover",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "jimpe": {
+    "gloss": "understand",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "sutra": {
+    "gloss": "fast",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "krixa": {
+    "gloss": "yell",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "cliva": {
+    "gloss": "leave",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "dukse": {
+    "gloss": "excess",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "zukte": {
+    "gloss": "do",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "djuno": {
+    "gloss": "know",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "drata": {
+    "gloss": "other",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
   }
 }

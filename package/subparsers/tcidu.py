@@ -1,11 +1,14 @@
 import plumbing
 import karda
+import subparsers.cuxna as cuxna
+
 import sys
 
 from rich import box
 from rich.text import Text
 from rich.panel import Panel
 from rich.table import Table
+from rich.prompt import Prompt
 from rich.columns import Columns
 from rich.console import Console, Group
 
@@ -105,6 +108,14 @@ class Colorizer(ColorListener):
     def enterQ(self, ctx):
         self.t.append(text=ctx.getText(), style=self.valskari["q"])
 
+        
+def interrogate_for_glosses(tree, gismus, skari) -> None:
+    collection = collect(tree, GismuCollector)
+    for gismu in collection:
+        if gismu not in gismus.keys() or not gismus[gismu]["gloss"]:
+            gloss = Prompt.ask("type the gloss for " + gismu, default=None)
+            cuxna.set_gloss(gismu, gloss, skari)
+
 
 def analyze_rafsi(tree, gismus, skari) -> Table:
     collection = collect(tree, CmarafsiCollector)
@@ -190,8 +201,6 @@ def process_and_print_tree(tree, args: dict, console, gismus, selmahos, skari):
         console.print(Panel(Group(*renderables), box.DOUBLE, expand=False))
 
 
-# TODO options stack
-# - interactively fill in caughts option
 def parse(args: dict):
     rec = bool(e := args.export)
     console = Console(record=rec, force_interactive=(not rec))
@@ -207,6 +216,9 @@ def parse(args: dict):
                     spinner=config["spinner"],
                 ):
                     tree = get_parse_tree(file.read())
+            if args.catch_gismus:
+                interrogate_for_glosses(tree, gismus, skari)
+                gismus = plumbing.get_config("gismus")
             process_and_print_tree(tree, args, console, gismus, selmahos, skari)
 
     if args.input:
