@@ -25,6 +25,29 @@ def is_cmavo(valsi: str) -> bool:
     return True
 
 
+def is_gismu(valsi: str) -> bool:
+    if len(valsi) != 5:
+        return False
+    if valsi[0] not in C:
+        return False
+
+    if valsi[1] in C:
+        if valsi[2] not in V:
+            return False
+    elif valsi[1] in V:
+        if valsi[2] not in C:
+            return False
+    else:
+        return False
+
+    if valsi[3] not in C:
+        return False
+    if valsi[4] not in V:
+        return False
+
+    return True
+
+
 def get_gloss(gismu: str, gismus: dict) -> str:
     if gismu not in gismus.keys():
         return "UNCAUGHT"

@@ -4,7 +4,7 @@ from rich.columns import Columns
 from rich import box
 import plumbing
 
-#TODO: output is either the same table or a group of tables
+#TODO: output is a list of tables
 def squeeze_table(table: Table, height: int):
     pass
 
@@ -42,12 +42,16 @@ def get_selmaho_table(selmaho: str, selmahos: dict, skari: dict):
 
 
 #TODO: option to limit table height: split tall tables into grouped sub-tables
-def get_selmaho_tables_panel(s: list, selmahos: dict, skari: dict):
+def get_selmaho_tables_panel(s: list, selmahos: dict, skari: dict, squeeze: int=0):
     selmaho_tables = []
     for selmaho in s:
         selmaho = plumbing.force_selmaho(selmaho, selmahos)
         table = get_selmaho_table(selmaho, selmahos, skari)
-        selmaho_tables.append(table) #no panel around each table!
+        if squeeze:
+            #TODO: option not written
+            selmaho_tables += squeeze_table(table, squeeze)
+        else:
+            selmaho_tables.append(table) #no panel around each table!
     return Panel(Columns(selmaho_tables))
 
 

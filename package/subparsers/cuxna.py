@@ -23,41 +23,11 @@ class Config:
             json.dump(self.data, f, indent=2)
 
 
-#TODO: move to plumbing (delete cause its already there)
-C = "bcdfgjklmnprstvxz"
-V = "aeiou"
-
-
-#TODO: move to plumbing 
-def is_gismu(valsi: str) -> bool:
-    if len(valsi) != 5:
-        return False
-    if valsi[0] not in C:
-        return False
-
-    if valsi[1] in C:
-        if valsi[2] not in V:
-            return False
-    elif valsi[1] in V:
-        if valsi[2] not in C:
-            return False
-    else:
-        return False
-
-    if valsi[3] not in C:
-        return False
-    if valsi[4] not in V:
-        return False
-
-    return True
-
-
-
 def add_cmarafsi(gismu: str, cmarafsi: str, skari: dict) -> None:
     s = skari["mi'iskari"]["system"]
 
     gismu, cmarafsi = gismu.lower(), cmarafsi.lower()
-    if not is_gismu(gismu):
+    if not plumbing.is_gismu(gismu):
         raise Exception("Error!, {} is not a gismu by morhpology.".format(gismu))
     if not plumbing.is_cmavo(cmarafsi):
         raise Exception("Error!, {} is not a cmavo by morphology.".format(cmarafsi))
@@ -88,7 +58,7 @@ def set_gloss(gismu: str, gloss: str, skari: dict) -> None:
     s = skari["mi'iskari"]["system"]
 
     gismu = gismu.lower()
-    if not is_gismu(gismu):
+    if not plumbing.is_gismu(gismu):
         raise Exception("Error!, {} is not a gismu by morphology.".format(gismu))
 
     with Config("gismus") as gismus:

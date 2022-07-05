@@ -78,6 +78,7 @@ def parse(args: dict):
         renderables.append(Panel(table))
 
     #TODO: option to print all style of every selmaho
+    # will need squeeze_table method
 
 
     # valsi subgroup
