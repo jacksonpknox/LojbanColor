@@ -76,7 +76,7 @@ def set_gloss(gismu: str, gloss: str, skari: dict) -> None:
             Text.assemble(
                 ("ok... ", skari["mi'iskari"]["ok"]),
                 ("set gloss of gismu ", s),
-                (gismu, skari["mi'iskari"]["gismu"]),
+                (gismu, skari["valskari"]["gismu"]),
                 (" to ", s),
                 (gloss, skari["mi'iskari"]["gloss"]),
                 (".", s),
@@ -174,6 +174,7 @@ def parse(args: dict):
     if s := args.selmaho_style:
         set_selmaho_style(s[0], s[1], skari)  # (selmaho, style)
 
+    #TODO: split in 2
     if t := args.token_style:
         set_token_style(t[0], t[1])  # (token, style)
 

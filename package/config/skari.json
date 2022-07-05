@@ -1,7 +1,7 @@
 {
   "mi'iskari": {
     "gloss": "cyan",
-    "system": "black",
+    "system": "",
     "ok": "bold cyan",
     "prompt": "red",
     "obstacle": "red"
