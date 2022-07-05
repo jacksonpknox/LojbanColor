@@ -9,6 +9,7 @@ from rich.text import Text
 from rich.columns import Columns
 from rich.console import Console, Group
 
+
 def tabulate_skari(l: list, skari: dict, type: str):
     table = Table(box=box.MINIMAL)
     table.add_column("token")
@@ -37,8 +38,6 @@ def tabulate_selmaho_styles(s: list, selmahos: dict, skari: dict):
     return table
 
 
-#TODO: option stack
-# - option to print all selmaho tables
 def parse(args: dict):
     with open(color.CONFIG_DEFAULTS["skari"], "r") as f:
         skari = json.load(f)
@@ -94,16 +93,11 @@ def parse(args: dict):
         renderables.append(Panel(table))
 
     #TODO: move to valsi subgroup 
-    #TODO: refactor this useful function!
     if args.selmaho:
         with open(color.CONFIG_DEFAULTS["selmahos"], "r") as f:
             selmahos = json.load(f)
-        selmaho_tables = []
-        for selm in args.selmaho:
-            selm = color.force_selmaho(selm, selmahos)
-            table = color.get_selmaho_table(selm, selmahos, skari)
-            selmaho_tables.append(Panel(table))
-        renderables.append(Panel(Columns(selmaho_tables)))
+        panel = color.get_selmaho_tables_panel(args.selmaho, selmahos, skari)
+        renderables.append(panel)
 
     #TODO: move to skari subgroup
     if args.valskari:
@@ -116,6 +110,16 @@ def parse(args: dict):
         tokens = skari["mi'iskari"].keys()
         table = tabulate_minji_styles(tokens, skari)
         renderables.append(Panel(table))
+
+    #TODO: move to valsi subgroup
+    if args.all_selmaho:
+        with open(color.CONFIG_DEFAULTS["selmahos"], "r") as f:
+            selmahos = json.load(f)
+        selmahos.pop("UNCAT", None)
+        selmahos.pop("BY", None)
+        selmahos.pop("Y", None)
+        panel = color.get_selmaho_tables_panel(selmahos.keys(), selmahos, skari)
+        renderables.append(panel)
 
 
 

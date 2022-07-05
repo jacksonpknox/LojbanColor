@@ -13,6 +13,8 @@ import subparsers.cpedu as cpedu
 from rich import box
 from rich.text import Text
 from rich.table import Table
+from rich.panel import Panel
+from rich.columns import Columns
 
 #TODO: move to plumbing
 CONFIG_DEFAULTS = {
@@ -55,7 +57,7 @@ def get_gloss(gismu: str, gismus: dict) -> str:
 #TODO: move to plumbing
 def get_selmaho(cmavo: str, selmahos: dict) -> str:
     if not is_cmavo(cmavo):
-        raise Exception("Error! not cmav by morphology exception")
+        raise Exception("Error! not cmav by morphology exception: " + cmavo)
     for selmaho in selmahos.keys():
         if cmavo in selmahos[selmaho]["cmavos"]:
             return selmaho
@@ -115,6 +117,17 @@ def tabulate_cmavos(c, selmahos, skari: dict, show_styles: bool=False):
 def get_selmaho_table(selmaho: str, selmahos: dict, skari: dict):
     cmavos = selmahos[selmaho]["cmavos"]
     return tabulate_cmavos(cmavos, selmahos, skari)
+
+
+#TODO: move to tabulate
+#TODO: option to limit table height: split tall tables into grouped sub-tables
+def get_selmaho_tables_panel(s: list, selmahos: dict, skari: dict):
+    selmaho_tables = []
+    for selmaho in s:
+        selmaho = force_selmaho(selmaho, selmahos)
+        table = get_selmaho_table(selmaho, selmahos, skari)
+        selmaho_tables.append(table) #no panel around each table!
+    return Panel(Columns(selmaho_tables))
 
 
 #TODO: move to tabulate
@@ -306,6 +319,11 @@ def build_parser():
         "--mihiskari",
         action="store_true",
         help="print out all mi'iskari"
+    )
+    parser_request.add_argument(
+        "--all-selmaho",
+        action="store_true",
+        help="print out all cmavo of each selma'o"
     )
     parser_request.set_defaults(func=cpedu.parse)
 
