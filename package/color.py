@@ -5,6 +5,7 @@ import subparsers.cuxna as cuxna
 import subparsers.tcidu as tcidu
 import subparsers.cpedu as cpedu
 
+
 def build_parser():
     parser = argparse.ArgumentParser(
         formatter_class=RichHelpFormatter,
@@ -21,7 +22,7 @@ def build_parser():
         action="store",
         nargs=2,
         help="stylize SELMAHO with STYLE",
-        metavar=("SELMAHO", "STYLE")
+        metavar=("SELMAHO", "STYLE"),
     )
     parser_config.add_argument(
         "-t",
@@ -30,7 +31,7 @@ def build_parser():
         action="store",
         nargs=2,
         help="stylize TOKEN with style",
-        metavar=("TOKEN", "STYLE")
+        metavar=("TOKEN", "STYLE"),
     )
     parser_config.add_argument(
         "-c",
@@ -59,7 +60,6 @@ def build_parser():
     )
     parser_config.set_defaults(func=cuxna.parse)
 
-
     parser_read = subparsers.add_parser("tcidu", formatter_class=RichHelpFormatter)
     parser_read.add_argument(
         "filepath",
@@ -78,7 +78,7 @@ def build_parser():
         "-c",
         "--cmavo",
         action="store_true",
-        help="record all cmavo and print their selmaho"
+        help="record all cmavo and print their selmaho",
     )
     parser_read.add_argument(
         "-g",
@@ -100,10 +100,17 @@ def build_parser():
         metavar="LOCATION",
     )
     parser_read.add_argument(
-        "-z", "--horizontal", action="store_true", help="print panels in a horizontal row"
+        "-z",
+        "--horizontal",
+        action="store_true",
+        help="print panels in a horizontal row",
     )
     parser_read.add_argument(
-        "-n", "--no-prigau", dest="prigau", action="store_false", help="do not print read text"
+        "-n",
+        "--no-prigau",
+        dest="prigau",
+        action="store_false",
+        help="do not print read text",
     )
     parser_read.add_argument(
         "--selmaho-style",
@@ -115,13 +122,12 @@ def build_parser():
         "-s",
         "--selmaho",
         action="store_true",
-        help="print the table of every selmaho that shows up"
+        help="print the table of every selmaho that shows up",
     )
     parser_read.set_defaults(func=tcidu.parse)
 
-
     parser_request = subparsers.add_parser("cpedu", formatter_class=RichHelpFormatter)
-    skari_subgroup = parser_request.add_argument_group('skari')
+    skari_subgroup = parser_request.add_argument_group("skari")
     skari_subgroup.add_argument(
         "-s",
         "--selmaho-style",
@@ -138,7 +144,7 @@ def build_parser():
         nargs="+",
         action="extend",
         help="print the style of each minji TOKEN",
-        metavar="TOKEN"
+        metavar="TOKEN",
     )
     skari_subgroup.add_argument(
         "-v",
@@ -147,24 +153,18 @@ def build_parser():
         nargs="+",
         action="extend",
         help="print the style of each valsi TOKEN",
-        metavar="TOKEN"
+        metavar="TOKEN",
     )
     skari_subgroup.add_argument(
-        "--valskari",
-        action="store_true",
-        help="print out all valskari"
+        "--valskari", action="store_true", help="print out all valskari"
     )
     skari_subgroup.add_argument(
-        "--mihiskari",
-        action="store_true",
-        help="print out all mi'iskari"
+        "--mihiskari", action="store_true", help="print out all mi'iskari"
     )
     skari_subgroup.add_argument(
-        "--selmahoskari",
-        action="store_true",
-        help="print out all selmahoskari"
+        "--selmahoskari", action="store_true", help="print out all selmahoskari"
     )
-    valsi_subgroup = parser_request.add_argument_group('valsi')
+    valsi_subgroup = parser_request.add_argument_group("valsi")
     valsi_subgroup.add_argument(
         "-c",
         "--cmavo",
@@ -182,20 +182,22 @@ def build_parser():
         metavar="GISMU",
     )
     valsi_subgroup.add_argument(
-        "-r", "--rafsi", nargs="+", action="extend", help="print the gismu and gloss of each CMARAFSI",
-        metavar="CMARAFSI"
+        "-r",
+        "--rafsi",
+        nargs="+",
+        action="extend",
+        help="print the gismu and gloss of each CMARAFSI",
+        metavar="CMARAFSI",
     )
     valsi_subgroup.add_argument(
         "--selmaho",
         nargs="+",
         action="extend",
         help="print every cmavo of each SELMAHO",
-        metavar="SELMAHO"
+        metavar="SELMAHO",
     )
     valsi_subgroup.add_argument(
-        "--all-selmaho",
-        action="store_true",
-        help="print out all cmavo of each selma'o"
+        "--all-selmaho", action="store_true", help="print out all cmavo of each selma'o"
     )
     parser_request.set_defaults(func=cpedu.parse)
 

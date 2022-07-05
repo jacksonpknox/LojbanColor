@@ -7,6 +7,7 @@ CONFIG_DEFAULTS = {
     "skari": "config/skari.json",
 }
 
+
 def get_config(conf: str) -> dict:
     with open(CONFIG_DEFAULTS[conf]) as f:
         return json.load(f)
@@ -67,7 +68,7 @@ def get_selmaho(cmavo: str, selmahos: dict) -> str:
 
 def force_selmaho(selmaho: str, selmahos: dict) -> str:
     if selmaho not in selmahos.keys():
-        cmavo_form = selmaho.lower().replace('h', '\'')
+        cmavo_form = selmaho.lower().replace("h", "'")
         if not is_cmavo(cmavo_form):
             raise Exception("Error! not cmav by morphology exception")
         selmaho = get_selmaho(cmavo_form, selmahos)

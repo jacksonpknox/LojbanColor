@@ -38,7 +38,7 @@ def add_cmarafsi(gismu: str, cmarafsi: str, skari: dict) -> None:
                 Text.assemble(
                     ("hm... ", skari["mi'iskari"]["obstacle"]),
                     (gismu, skari["valskari"]["gismu"]),
-                    (" is not caught, so I will add it.", s)
+                    (" is not caught, so I will add it.", s),
                 )
             )
             gismus[gismu] = DEFAULT_GISMU_PACKET
@@ -49,7 +49,7 @@ def add_cmarafsi(gismu: str, cmarafsi: str, skari: dict) -> None:
                 ("added ", s),
                 (cmarafsi, skari["valskari"]["cmarafsi"]),
                 (" as a cmarafsi of ", gismu),
-                (".", s)
+                (".", s),
             )
         )
 
@@ -67,7 +67,7 @@ def set_gloss(gismu: str, gloss: str, skari: dict) -> None:
                 Text.assemble(
                     ("hm... ", skari["mi'iskari"]["obstacle"]),
                     (gismu, skari["valskari"]["gismu"]),
-                    (" is not caught, so I will add it.", s)
+                    (" is not caught, so I will add it.", s),
                 )
             )
             gismus[gismu] = DEFAULT_GISMU_PACKET
@@ -79,7 +79,7 @@ def set_gloss(gismu: str, gloss: str, skari: dict) -> None:
                 (gismu, skari["mi'iskari"]["gismu"]),
                 (" to ", s),
                 (gloss, skari["mi'iskari"]["gloss"]),
-                (".", s)
+                (".", s),
             )
         )
 
@@ -101,7 +101,7 @@ def add_cmavo(cmavo: str, selmaho: str, skari: dict) -> None:
                     ("hm... ", skari["mi'iskari"]["obstacle"]),
                     ("selmaho ", s),
                     (selmaho, c),
-                    (" is not caught, so I will add it.", s)
+                    (" is not caught, so I will add it.", s),
                 )
             )
             selmahos[selmaho] = {"color": c, "cmavos": []}
@@ -113,7 +113,7 @@ def add_cmavo(cmavo: str, selmaho: str, skari: dict) -> None:
                     (cmavo, c),
                     ("is already in selmaho ", s),
                     (selmaho, c),
-                    (", so I did nothing.", s)
+                    (", so I did nothing.", s),
                 )
             )
         else:
@@ -128,7 +128,7 @@ def add_cmavo(cmavo: str, selmaho: str, skari: dict) -> None:
                 )
             )
 
-            
+
 def set_token_style(token: str, style: str) -> None:
     with Config("skari") as skari:
         if token in skari["mi'iskari"].keys():
@@ -145,7 +145,7 @@ def set_token_style(token: str, style: str) -> None:
                 (token, style),
                 (" to ", s),
                 (style, s),
-                (".", s)
+                (".", s),
             )
         )
 
@@ -162,7 +162,7 @@ def set_selmaho_style(selmaho: str, colour: str, skari: dict) -> None:
                 (selmaho, colour),
                 (" to ", s),
                 (colour, s),
-                (".", s)
+                (".", s),
             )
         )
 
@@ -171,12 +171,11 @@ def parse(args: dict):
     with open(plumbing.CONFIG_DEFAULTS["skari"], "r") as f:
         skari = json.load(f)
 
-
     if s := args.selmaho_style:
         set_selmaho_style(s[0], s[1], skari)  # (selmaho, style)
 
     if t := args.token_style:
-        set_token_style(t[0], t[1]) # (token, style)
+        set_token_style(t[0], t[1])  # (token, style)
 
     if c := args.cmavo:
         add_cmavo(c[1], c[0], skari)  # (cmavo, selmaho)

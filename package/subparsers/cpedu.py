@@ -39,13 +39,11 @@ def tabulate_selmaho_styles(s: list, selmahos: dict):
     return table
 
 
-
 def parse(args: dict):
     with open(plumbing.CONFIG_DEFAULTS["skari"], "r") as f:
         skari = json.load(f)
     renderables = []
     console = Console()
-    
 
     # skari subgroup
     if s := args.selmaho_style:
@@ -84,24 +82,21 @@ def parse(args: dict):
             selmahos = json.load(f)
         table = tabulate_selmaho_styles(selmahos.keys(), selmahos)
         renderables.append(Panel(Columns(karda.squeeze_table(table, 8))))
-        
-    #TODO: option to print all style of every selmaho
-    # will need squeeze_table method
 
 
     # valsi subgroup
     if c := args.cmavo:
         with open(plumbing.CONFIG_DEFAULTS["selmahos"], "r") as f:
             selmahos = json.load(f)
-        #TODO: factor in error-throwing force_cmavo function
-        c = [cmavo.lower().replace('h', '\'') for cmavo in c]
+        # TODO: factor in error-throwing force_cmavo function
+        c = [cmavo.lower().replace("h", "'") for cmavo in c]
         table = karda.tabulate_cmavos(c, selmahos, skari)
         renderables.append(Panel(table))
 
     if g := args.gloss:
         with open(plumbing.CONFIG_DEFAULTS["gismus"], "r") as f:
             gismus = json.load(f)
-        table = karda.gloss_gismus(g, gismus, skari)
+        table = karda.tabulate_gismus(g, gismus, skari)
         renderables.append(Panel(table))
 
     if r := args.rafsi:
@@ -122,7 +117,9 @@ def parse(args: dict):
         selmahos.pop("UNCAT", None)
         selmahos.pop("BY", None)
         selmahos.pop("Y", None)
-        panel = karda.get_selmaho_tables_panel(selmahos.keys(), selmahos, skari, squeeze=0)
+        panel = karda.get_selmaho_tables_panel(
+            selmahos.keys(), selmahos, skari, squeeze=0
+        )
         renderables.append(panel)
 
     console.print(Panel(Group(*renderables), box.DOUBLE, expand=False))

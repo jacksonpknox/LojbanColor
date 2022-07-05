@@ -39,7 +39,7 @@ class GismuCollector(Collector):
     def enterGismu(self, ctx):
         self.grab(ctx.getText())
 
-        
+
 class CmavoCollector(Collector):
     def enterCat_cmavo(self, ctx: ColorParser.Cat_cmavoContext):
         self.grab(ctx.getText())
@@ -64,33 +64,46 @@ class Colorizer(ColorListener):
         self.t.append(" ")
 
     def enterCat_cmavo(self, ctx: ColorParser.Cat_cmavoContext):
-        self.t.append(text=(cmavo := ctx.getText()), style=self.selmahos[plumbing.get_selmaho(cmavo, self.selmahos)]["color"])
+        self.t.append(
+            text=(cmavo := ctx.getText()),
+            style=self.selmahos[plumbing.get_selmaho(cmavo, self.selmahos)]["color"],
+        )
 
     def enterLerfu(self, ctx):
         self.t.append(text=ctx.getText(), style=self.valskari["lerfu"])
+
     def enterFuhivla(self, ctx):
         self.t.append(text=ctx.getText(), style=self.valskari["fu'ivla"])
+
     def enterCmene(self, ctx):
         self.t.append(text=ctx.getText(), style=self.valskari["cmene"])
+
     def enterBaugismu(self, ctx):
         self.t.append(text=ctx.getText(), style=self.valskari["baugismu"])
+
     def enterBrogismu(self, ctx):
         self.t.append(text=ctx.getText(), style=self.valskari["brogismu"])
+
     def enterBalraf(self, ctx):
         self.t.append(text=ctx.getText(), style=self.valskari["balraf"])
+
     def enterBroraf(self, ctx):
         self.t.append(text=ctx.getText(), style=self.valskari["broraf"])
+
     def enterBauraf(self, ctx):
         self.t.append(text=ctx.getText(), style=self.valskari["bauraf"])
+
     def enterGahorgimpag(self, ctx: ColorParser.GahorgimpagContext):
         self.t.append(text=ctx.getText(), style=self.valskari["ga'orgimpag"])
+
     def enterKargimpag(self, ctx: ColorParser.KargimpagContext):
         self.t.append(text=ctx.getText(), style=self.valskari["kargimpag"])
+
     def enterY(self, ctx):
         self.t.append(text=ctx.getText(), style=self.valskari["y"])
+
     def enterQ(self, ctx):
         self.t.append(text=ctx.getText(), style=self.valskari["q"])
-
 
 
 def analyze_rafsi(tree, gismus, skari) -> Table:
@@ -100,14 +113,14 @@ def analyze_rafsi(tree, gismus, skari) -> Table:
 
 def analyze_gismu(tree, gismus, skari) -> Table:
     collection = collect(tree, GismuCollector)
-    return karda.gloss_gismus(collection, gismus, skari)
+    return karda.tabulate_gismus(collection, gismus, skari)
 
-    
+
 def analyze_cmavos(tree, selmahos, skari, selmaho_style: bool) -> Table:
     collection = collect(tree, CmavoCollector)
     return karda.tabulate_cmavos(collection, selmahos, skari, selmaho_style)
 
-    
+
 def analyze_selmahos(tree, selmahos, skari) -> Columns:
     cmavo_collection = collect(tree, CmavoCollector)
     collection = []
@@ -125,7 +138,6 @@ def colorize(tree, selmahos, skari) -> Text:
     return printer.t
 
 
-
 def get_parse_tree(lojban: str) -> ParserRuleContext:
     input_stream = InputStream(lojban)
     lexer = ColorLexer(input_stream)
@@ -140,7 +152,11 @@ def process_and_print_tree(tree, args: dict, console, gismus, selmahos, skari):
     if args.prigau:
         renderables.append(Panel(colorize(tree, selmahos, skari)))
     if args.cmavo:
-        renderables.append(Panel(analyze_cmavos(tree, selmahos, skari, args.selmaho_style), expand=False))
+        renderables.append(
+            Panel(
+                analyze_cmavos(tree, selmahos, skari, args.selmaho_style), expand=False
+            )
+        )
     if args.gloss:
         renderables.append(Panel(analyze_gismu(tree, gismus, skari), expand=False))
     if args.rafsi:
@@ -154,7 +170,7 @@ def process_and_print_tree(tree, args: dict, console, gismus, selmahos, skari):
         console.print(Panel(Group(*renderables), box.DOUBLE, expand=False))
 
 
-#TODO: options stack
+# TODO: options stack
 # - interactively fill in caughts option
 # - group cmavo by selmaho opion (in one table)
 # - analyze individual lujvo option? (columns in table: rafsi, type, gismu, gloss) (further in future i think)
@@ -169,7 +185,10 @@ def parse(args: dict):
     if files := args.filepath:
         for f in files:
             with open(f, "r") as file:
-                with console.status(Text("parsing the file...", style=skari["mi'iskari"]["system"]), spinner=config["spinner"]):
+                with console.status(
+                    Text("parsing the file...", style=skari["mi'iskari"]["system"]),
+                    spinner=config["spinner"],
+                ):
                     tree = get_parse_tree(file.read())
             process_and_print_tree(tree, args, console, gismus, selmahos, skari)
 
