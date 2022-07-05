@@ -121,16 +121,18 @@ def analyze_cmavos(tree, selmahos, skari, selmaho_style: bool) -> Table:
     return karda.tabulate_cmavos(collection, selmahos, skari, selmaho_style)
 
 
-#TODO: rework; do the good way instead of the bad way,
 def analyze_selmahos(tree, selmahos, skari, squeeze: int) -> Columns:
     cmavo_collection = collect(tree, CmavoCollector)
-    collection = []
+    selmaho_collection = dict()
     for cmavo in cmavo_collection:
-        if (s := plumbing.get_selmaho(cmavo, selmahos)) not in collection:
-            collection.append(s)
+        s = plumbing.get_selmaho(cmavo, selmahos)
+        if s not in selmaho_collection.keys():
+            selmaho_collection[s] = [cmavo]
+        else:
+            selmaho_collection[s].append(cmavo)
     selmaho_tables = []
-    for s in collection:
-        selmaho_tables.extend(karda.squeeze_table(karda.get_selmaho_table(s, selmahos, skari), squeeze))
+    for s, cmavos in selmaho_collection.items():
+        selmaho_tables.extend(karda.squeeze_table(karda.tabulate_cmavos(cmavos, selmahos, skari), squeeze))
     return Columns(selmaho_tables)
 
 
