@@ -227,7 +227,7 @@
     ]
   },
   "CU": {
-    "color": "cyan",
+    "color": "bold magenta",
     "cmavos": [
       "cu"
     ]
@@ -360,7 +360,7 @@
     ]
   },
   "GEhU": {
-    "color": "cyan",
+    "color": "magenta",
     "cmavos": [
       "ge'u"
     ]
@@ -381,7 +381,7 @@
     ]
   },
   "GOI": {
-    "color": "cyan",
+    "color": "magenta",
     "cmavos": [
       "ne",
       "po'e",
@@ -711,7 +711,10 @@
       "na'e",
       "no'e",
       "to'e"
-    ]
+    ],
+    "cmarafsi": {
+      "nal": "na'e"
+    }
   },
   "NAhU": {
     "color": "cyan",
@@ -782,7 +785,7 @@
     ]
   },
   "PA": {
-    "color": "cyan",
+    "color": "dodger_blue1",
     "cmavos": [
       "da'a",
       "fei",

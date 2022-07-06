@@ -90,9 +90,9 @@ def parse(args: dict):
         renderables.append(Panel(table, style=Style()))
 
     if r := args.rafsi:
-        with open(plumbing.CONFIG_DEFAULTS["gismus"], "r") as f:
-            gismus = json.load(f)
-        table = karda.tabulate_cmarafsi(r, gismus, skari)
+        gismus = plumbing.get_config("gismus")
+        selmahos = plumbing.get_config("selmahos")
+        table = karda.tabulate_cmarafsi(r, gismus, selmahos, skari)
         renderables.append(Panel(table, style=Style()))
 
     if args.selmaho:

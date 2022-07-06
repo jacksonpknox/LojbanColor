@@ -11,6 +11,7 @@ from rich.table import Table
 from rich.prompt import Prompt
 from rich.columns import Columns
 from rich.console import Console, Group
+from rich.style import Style
 
 from antlr4 import ParseTreeWalker, ParserRuleContext, InputStream, CommonTokenStream
 from python_color.ColorListener import ColorListener
@@ -117,9 +118,9 @@ def interrogate_for_glosses(tree, gismus, skari) -> None:
             cuxna.set_gloss(gismu, gloss, skari)
 
 
-def analyze_rafsi(tree, gismus, skari) -> Table:
+def analyze_rafsi(tree, gismus, selmahos, skari) -> Table:
     collection = collect(tree, CmarafsiCollector)
-    return karda.tabulate_cmarafsi(collection, gismus, skari)
+    return karda.tabulate_cmarafsi(collection, gismus, selmahos, skari)
 
 
 def analyze_gismu(tree, gismus, skari) -> Table:
@@ -132,6 +133,7 @@ def analyze_cmavos(tree, selmahos, skari, selmaho_style: bool) -> Table:
     return karda.tabulate_cmavos(collection, selmahos, skari, selmaho_style)
 
     
+#NOTE returns Columns
 def analyze_selmahos_differently(tree, selmahos, squeeze: int) -> Columns:
     cmavo_collection = collect(tree, CmavoCollector)
     selmaho_collection = []
@@ -143,7 +145,7 @@ def analyze_selmahos_differently(tree, selmahos, squeeze: int) -> Columns:
     return Columns(karda.squeeze_table(table, squeeze))
     
 
-
+#NOTE returns Columns
 def analyze_selmahos(tree, selmahos, skari, squeeze: int, show_styles: bool=False) -> Columns:
     cmavo_collection = collect(tree, CmavoCollector)
     selmaho_collection = dict()
@@ -179,24 +181,30 @@ def process_and_print_tree(tree, args: dict, console, gismus, selmahos, skari):
     renderables = []
 
     if args.prigau:
-        renderables.append(Panel(colorize(tree, selmahos, skari)))
-    if args.cmavo:
-        renderables.append(
-            Panel(
-                analyze_cmavos(tree, selmahos, skari, False), expand=False
-            )
-        )
-    if args.gismu:
-        renderables.append(Panel(analyze_gismu(tree, gismus, skari), expand=False))
-    if args.rafsi:
-        renderables.append(Panel(analyze_rafsi(tree, gismus, skari), expand=False))
+        renderables.append(Panel(colorize(tree, selmahos, skari), style=Style()))
+
+    if args.cmavo or args.gismu or args.rafsi:
+        col_renderables = []
+        if args.cmavo:
+            col_renderables.append(Panel(analyze_cmavos(tree, selmahos, skari, False), expand=False, style=Style.parse(skari["valskari"]["cmavo"])))
+        if args.gismu:
+            col_renderables.append(Panel(analyze_gismu(tree, gismus, skari), expand=False, style=Style.parse(skari["valskari"]["gismu"])))
+        if args.rafsi:
+            col_renderables.append(Panel(analyze_rafsi(tree, gismus, selmahos, skari), expand=False, style=Style.parse(skari["valskari"]["rafsi"])))
+        renderables.append(Panel(Columns(col_renderables), style=Style()))
+
     if args.selmaho:
-        renderables.append(Panel(analyze_selmahos(tree, selmahos, skari, args.squeeze, False), expand=False))
+        renderables.append(Panel(analyze_selmahos(tree, selmahos, skari, args.squeeze, False), expand=False, style=Style()))
     if args.selmaho_style:
-        renderables.append(Panel(analyze_selmahos_differently(tree, selmahos, args.squeeze), expand=False))
+        renderables.append(Panel(analyze_selmahos_differently(tree, selmahos, args.squeeze), expand=False, style=Style()))
+
+    if args.wave:
+        for i, panel in enumerate(renderables):
+            sty = Style(bgcolor="#333333") if (i % 2) else Style(bgcolor="black")
+            panel.style += sty
 
     if args.horizontal:
-        console.print(Panel(Columns(renderables), box.DOUBLE))
+        raise Exception("no horizontal ! >:3")
     else:
         console.print(Panel(Group(*renderables), box.DOUBLE, expand=False))
 

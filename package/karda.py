@@ -2,6 +2,7 @@ from rich.table import Table
 from rich.panel import Panel
 from rich.columns import Columns
 from rich.style import Style
+from rich.text import Text
 from rich import box
 import plumbing
 
@@ -43,26 +44,40 @@ def tabulate_gismus(g: list, gismus: dict, skari: dict):
     return table
 
 
-def tabulate_cmarafsi(c, gismus, skari: dict) -> Table:
+def tabulate_cmarafsi(c, gismus: dict, selmahos: dict, skari: dict) -> Table:
+    s = Style.parse(skari["mi'iskari"]["system"])
     table = Table(box=box.MINIMAL)
     table.add_column("cmarafsi", style=skari["valskari"]["cmarafsi"])
-    table.add_column("gismu", style=skari["valskari"]["gismu"])
-    table.add_column("gloss", style=skari["mi'iskari"]["gloss"])
+    table.add_column("type")
+    table.add_column("gismu/cmavo")
+    table.add_column("gloss/selma'o")
     for cmarafsi in c:
-        gismu = plumbing.get_gismu(cmarafsi, gismus)
-        table.add_row(cmarafsi, gismu, plumbing.get_gloss(gismu, gismus))
+        word_type, word, bonus = plumbing.classify_cmarafsi(cmarafsi, gismus, selmahos)
+        if word_type == "gismu":
+            word = Text(word, Style.parse(skari["valskari"]["gismu"]))
+            bonus = Text(bonus, Style.parse(skari["mi'iskari"]["gloss"]))
+            word_type = Text(word_type, Style.parse(skari["valskari"]["gismu"]))
+        elif word_type == "cmavo":
+            word = Text(word, Style.parse(selmahos[bonus]["color"]))
+            bonus = Text(bonus, Style.parse(selmahos[bonus]["color"]))
+            word_type = Text(word_type, Style.parse(skari["valskari"]["cmavo"]))
+        else:
+            word = Text(word, s)
+            bonus = Text(bonus, s)
+            word_type = Text(word_type, s)
+        table.add_row(cmarafsi, word_type, word, bonus)
     return table
 
 
 def tabulate_cmavos(c, selmahos, skari: dict, show_styles: bool = False):
     table = Table(box=box.MINIMAL)
-    table.add_column("cmavo", style=skari["valskari"]["cmavo"])
-    table.add_column("selma'o", style=skari["valskari"]["cmavo"])
+    table.add_column("cmavo", style=Style.parse(skari["valskari"]["cmavo"]))
+    table.add_column("selma'o", style=Style.parse(skari["valskari"]["cmavo"]))
     if show_styles:
-        table.add_column("style", style=skari["mi'iskari"]["system"])
+        table.add_column("style", style=Style.parse(skari["mi'iskari"]["system"]))
     for cmavo in c:
         s = plumbing.get_selmaho(cmavo, selmahos)
-        colr = selmahos[s]["color"]
+        colr = Style.parse(selmahos[s]["color"])
         if show_styles:
             table.add_row(cmavo, s, colr, style=colr)
         else:

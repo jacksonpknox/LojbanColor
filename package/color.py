@@ -96,6 +96,12 @@ def build_parser():
         action="store_true",
         help="read from standard input and color it",
     )
+    parser_read.add_argument(
+        "-w",
+        "--wave",
+        action="store_true",
+        help="make background colors alternate"
+    )
     read_panels_subgroup = parser_read.add_argument_group("panels")
     read_panels_subgroup.add_argument(
         "-c",

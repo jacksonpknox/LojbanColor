@@ -16,6 +16,9 @@ def get_config(conf: str) -> dict:
 C = "bcdfgjklmnprstvxz"
 V = "aeiou"
 
+#NOTE: unimplemented
+def is_cmarafsi(valsi: str) -> bool:
+    return True
 
 def is_cmavo(valsi: str) -> bool:
     if (z := valsi[0]) not in C and z != ".":
@@ -80,3 +83,13 @@ def get_gismu(cmarafsi: str, gismus: dict) -> str:
         if cmarafsi in gismus[gismu]["cmarafsi"]:
             return gismu
     return "UNCAT"
+
+    
+def classify_cmarafsi(cmarafsi: str, gismus: dict, selmahos: dict) -> tuple:
+    for gismu, dic in gismus.items():
+        if "cmarafsi" in dic.keys() and cmarafsi in dic["cmarafsi"]:
+            return ("gismu", gismu, get_gloss(gismu, gismus))
+    for selmaho, dic in selmahos.items():
+        if "cmarafsi" in dic.keys() and cmarafsi in dic["cmarafsi"]:
+            return ("cmavo", dic["cmarafsi"][cmarafsi], selmaho)
+    return ("UNCAUGHT", "UNCAUGHT", "UNCAUGHT")

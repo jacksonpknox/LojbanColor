@@ -29,8 +29,8 @@ def add_cmarafsi(gismu: str, cmarafsi: str, skari: dict) -> None:
     gismu, cmarafsi = gismu.lower(), cmarafsi.lower()
     if not plumbing.is_gismu(gismu):
         raise Exception("Error!, {} is not a gismu by morhpology.".format(gismu))
-    if not plumbing.is_cmavo(cmarafsi):
-        raise Exception("Error!, {} is not a cmavo by morphology.".format(cmarafsi))
+    if not plumbing.is_cmarafsi(cmarafsi):
+        raise Exception("Error!, {} is not a cmarafsi by morphology.".format(cmarafsi))
 
     with Config("gismus") as gismus:
         if gismu not in gismus.keys():
@@ -48,7 +48,8 @@ def add_cmarafsi(gismu: str, cmarafsi: str, skari: dict) -> None:
                 ("ok... ", skari["mi'iskari"]["ok"]),
                 ("added ", s),
                 (cmarafsi, skari["valskari"]["cmarafsi"]),
-                (" as a cmarafsi of ", gismu),
+                (" as a cmarafsi of ", s),
+                (gismu, skari["valskari"]["gismu"]),
                 (".", s),
             )
         )
