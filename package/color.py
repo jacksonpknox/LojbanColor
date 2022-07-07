@@ -266,6 +266,27 @@ def build_parser():
     valsi_subgroup.add_argument(
         "--all-selmaho", action="store_true", help="print out all cmavo of each selma'o"
     )
+    # kancu subgroup
+    kancu_subgroup = parser_request.add_argument_group("kancu")
+    kancu_subgroup.add_argument(
+        "--count-cmavo",
+        dest="count_cmavo",
+        action="store_true",
+        help="count the cmavos in your inventory"
+    )
+    kancu_subgroup.add_argument(
+        "--count-gismu",
+        dest="count_gismu",
+        action="store_true",
+        help="count the gismus in your inventory"
+    )
+    kancu_subgroup.add_argument(
+        "--count-rafsi",
+        dest="count_rafsi",
+        action="store_true",
+        help="count the rafsi in your inventory"
+    )
+
     parser_request.set_defaults(func=cpedu.parse)
 
     return parser

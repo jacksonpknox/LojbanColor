@@ -6,6 +6,42 @@ from rich.text import Text
 from rich import box
 import plumbing
 
+def tabulate_rafsi_count(gismus, selmahos):
+    table = Table(box=box.MINIMAL, title="Rafsi Count")
+    table.add_column("total")
+    table.add_column("gimrafsi")
+    table.add_column("cmavyrafsi")
+    g = 0
+    for _, dic in gismus.items():
+        g += len(dic["cmarafsi"])
+    c = 0
+    for _, dic in selmahos.items():
+        if "cmarafsi" in dic.keys():
+            c += len(dic["cmarafsi"])
+    table.add_row(str(g + c), str(g), str(c))
+    return table
+
+def tabulate_cmavo_count(selmahos):
+    table = Table(box=box.MINIMAL, title="Cmavo Count")
+    table.add_column("selmaho")
+    table.add_column("cmavo")
+    c = 0
+    for _, dic in selmahos.items():
+        c += len(dic["cmavos"])
+    table.add_row(str(len(selmahos) - 1), str(c))
+    return table
+
+
+def tabulate_gismu_count(gismus, skari):
+    table = Table(box=box.MINIMAL, title="Gismu Count")
+    table.add_column("caught")
+    table.add_column("glossed")
+    g = 0
+    for _, dic in gismus.items():
+        if "gloss" in dic and dic["gloss"]:
+            g += 1
+    table.add_row(str(len(gismus)), str(g))
+    return table
 
 def yank_row(table):
     h = measure_height(table) - 1

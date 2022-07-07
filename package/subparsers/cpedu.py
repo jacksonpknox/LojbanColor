@@ -31,8 +31,7 @@ def tabulate_minji_styles(m: list, skari: dict):
 
 
 def parse(args: dict):
-    with open(plumbing.CONFIG_DEFAULTS["skari"], "r") as f:
-        skari = json.load(f)
+    skari = plumbing.get_config("skari")
     renderables = []
     console = Console()
 
@@ -61,11 +60,13 @@ def parse(args: dict):
     if args.valskari:
         tokens = skari["valskari"].keys()
         table = tabulate_valsi_styles(tokens, skari)
+        table.title = "valskari"
         renderables.append(Panel(table, style=Style()))
 
     if args.mihiskari:
         tokens = skari["mi'iskari"].keys()
         table = tabulate_minji_styles(tokens, skari)
+        table.title = "mi'iskari"
         renderables.append(Panel(table, style=Style()))
 
     if args.selmahoskari:
@@ -113,6 +114,25 @@ def parse(args: dict):
             selmahos.keys(), selmahos, skari, squeeze=args.squeeze
         )
         renderables.append(panel)
+
+
+    # kancu subgroup
+    if args.count_gismu:
+        gismus = plumbing.get_config("gismus")
+        table = karda.tabulate_gismu_count(gismus, skari)
+        renderables.append(Panel(table, style=Style.parse(skari["valskari"]["gismu"])))
+
+    if args.count_cmavo:
+        selmahos = plumbing.get_config("selmahos")
+        table = karda.tabulate_cmavo_count(selmahos)
+        renderables.append(Panel(table, style=Style.parse(skari["valskari"]["cmavo"])))
+
+        
+    if args.count_rafsi:
+        gismus = plumbing.get_config("gismus")
+        selmahos = plumbing.get_config("selmahos")
+        table = karda.tabulate_rafsi_count(gismus, selmahos)
+        renderables.append(Panel(table, style=Style.parse(skari["valskari"]["cmarafsi"])))
 
 
     if args.wave:
