@@ -881,7 +881,11 @@
       "te",
       "ve",
       "se"
-    ]
+    ],
+    "cmarafsi": {
+      "sel": "se",
+      "ter": "te"
+    }
   },
   "SEI": {
     "color": "cyan",

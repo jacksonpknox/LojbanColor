@@ -166,7 +166,13 @@ def build_parser():
         "--catch-gismus",
         dest="catch_gismus",
         action="store_true",
-        help="prompt the use for the glosses of the gismus that show up"
+        help="prompt the user for the glosses of the gismus that show up"
+    )
+    parser_read.add_argument(
+        "--catch-rafsi",
+        dest="catch_rafsi",
+        action="store_true",
+        help="prompt the user to complete the rafsi table"
     )
     parser_read.set_defaults(func=tcidu.parse)
 

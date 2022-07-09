@@ -6,6 +6,7 @@ from rich.text import Text
 
 
 DEFAULT_GISMU_PACKET = {"gloss": None, "tags": ["standard"], "cmarafsi": []}
+DEFAULT_SELMAHO_PACKET = {"color": "cyan", "cmavos": [], "cmarafsi": dict()}
 
 
 class Config:
@@ -21,6 +22,39 @@ class Config:
     def __exit__(self, exc_type, exc_value, exc_traceback):
         with open(plumbing.CONFIG_DEFAULTS[self.label], "w") as f:
             json.dump(self.data, f, indent=2)
+
+        
+def add_cmavyrafsi(selmaho: str, cmavo: str, cmarafsi: str, selmahos: dict, skari: dict):
+    s = skari["mi'iskari"]["system"]
+    if not plumbing.is_cmavo(cmavo):
+        raise Exception("Error!, {} is not a cmavo by morhpology.".format(cmavo))
+    if not plumbing.is_cmarafsi(cmarafsi):
+        raise Exception("Error!, {} is not a cmarafsi by morphology.".format(cmarafsi))
+
+    with Config("selmahos") as mahos:
+        if selmaho not in mahos.keys():
+            print(
+                Text.assemble(
+                    ("hm... ", skari["mi'iskari"]["obstacle"]),
+                    (selmaho, skari["valskari"]["cmavo"]),
+                    (" is not caught, so I will add it.", s),
+                )
+            )
+            mahos[selmaho] = DEFAULT_SELMAHO_PACKET
+        if "cmarafsi" not in mahos[selmaho].keys():
+            mahos[selmaho]["cmarafsi"] = dict()
+        mahos[selmaho]["cmarafsi"][cmarafsi] = cmavo
+        print(
+            Text.assemble(
+                ("ok... ", skari["mi'iskari"]["ok"]),
+                ("added ", s),
+                (cmarafsi, skari["valskari"]["cmarafsi"]),
+                (" as a cmarafsi of ", s),
+                (cmavo, skari["valskari"]["cmavo"]),
+                (".", s),
+            )
+        )
+        
 
 
 def add_cmarafsi(gismu: str, cmarafsi: str, skari: dict) -> None:

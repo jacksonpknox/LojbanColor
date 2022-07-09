@@ -110,11 +110,37 @@ class Colorizer(ColorListener):
         self.t.append(text=ctx.getText(), style=self.valskari["q"])
 
         
+def interrogate_for_rafsi(tree, gismus, selmahos, skari) -> None:
+    p = Style.parse(skari["mi'iskari"]["prompt"])
+    collection = collect(tree, CmarafsiCollector)
+    for cmarafsi in collection:
+        cma = Text(cmarafsi, style=Style.parse(skari["valskari"]["cmarafsi"]))
+        word_type, word, bonus = plumbing.classify_cmarafsi(cmarafsi, gismus, selmahos)
+        if word_type == "UNCAUGHT":
+            word_type = Prompt.ask(Text("type of ", p) + cma, choices=["gismu", "cmavo"], default="gismu")
+        if word_type == "gismu":
+            if word == "UNCAUGHT":
+                word = Prompt.ask(Text("gismu for cmarafsi ", p) + cma)
+                cuxna.add_cmarafsi(word, cmarafsi, skari)
+                bonus = plumbing.get_gloss(word, gismus)
+            if bonus in ["UNCAUGHT", "UNGLOSSED"]:
+                bonus = Prompt.ask(Text("gloss for ", p) + word)
+                cuxna.set_gloss(word, bonus, skari)
+        elif word_type == "cmavo":
+            if word == "UNCAUGHT":
+                word = Prompt.ask(Text("cmavo for cmavyrafsi ", p) + cma)
+                if (s := plumbing.get_selmaho(word, selmahos)) != "UNCAT":
+                    bonus = s
+                else:
+                    bonus = Prompt.ask(Text("selma'o for cmavo ", p) + word)
+                cuxna.add_cmavyrafsi(bonus, word, cmarafsi, selmahos, skari)
+
+        
 def interrogate_for_glosses(tree, gismus, skari) -> None:
     collection = collect(tree, GismuCollector)
     for gismu in collection:
         if gismu not in gismus.keys() or not gismus[gismu]["gloss"]:
-            gloss = Prompt.ask("type the gloss for " + gismu, default=None)
+            gloss = Prompt.ask(Text("type the gloss for ", Style.parse(skari["mi'iskari"]["prompt"])) + gismu, default=None)
             cuxna.set_gloss(gismu, gloss, skari)
 
 
@@ -227,6 +253,10 @@ def parse(args: dict):
             if args.catch_gismus:
                 interrogate_for_glosses(tree, gismus, skari)
                 gismus = plumbing.get_config("gismus")
+            if args.catch_rafsi:
+                interrogate_for_rafsi(tree, gismus, selmahos, skari)
+                gismus = plumbing.get_config("gismus")
+                selmahos = plumbing.get_config("selmahos")
             process_and_print_tree(tree, args, console, gismus, selmahos, skari)
 
     if args.input:
