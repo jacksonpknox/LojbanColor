@@ -1785,5 +1785,404 @@
       "pi'e",
       "gre"
     ]
+  },
+  "bredi": {
+    "gloss": "ready",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "galtu": {
+    "gloss": "high",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "jitfa": {
+    "gloss": "false",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "xance": {
+    "gloss": "hand",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "krasi": {
+    "gloss": "origin",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "besna": {
+    "gloss": "brain",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "mitre": {
+    "gloss": "meter",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "brodi": {
+    "gloss": "var3",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "bakni": {
+    "gloss": "bovine",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "jatna": {
+    "gloss": "leader",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "bruna": {
+    "gloss": "brother",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "xekri": {
+    "gloss": "black",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "damba": {
+    "gloss": "fight",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "cladu": {
+    "gloss": "loud",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "jetfu": {
+    "gloss": "week",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "crino": {
+    "gloss": "green",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "tcima": {
+    "gloss": "weather",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "sruma": {
+    "gloss": "assume",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "cando": {
+    "gloss": "idle",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "kerlo": {
+    "gloss": "ear",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "prije": {
+    "gloss": "wise",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "taxfu": {
+    "gloss": "garment",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "gunta": {
+    "gloss": "attack",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "clira": {
+    "gloss": "early",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "kerfa": {
+    "gloss": "hair",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "masti": {
+    "gloss": "month",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "turni": {
+    "gloss": "govern",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "cunso": {
+    "gloss": "random",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "saske": {
+    "gloss": "science",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "skari": {
+    "gloss": "color",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "lanzu": {
+    "gloss": "family",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "ralju": {
+    "gloss": "principal",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "rivbi": {
+    "gloss": "avoid",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "xadni": {
+    "gloss": "body",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "rectu": {
+    "gloss": "meat",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "ckiku": {
+    "gloss": "key",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "purci": {
+    "gloss": "before",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "jorne": {
+    "gloss": "joined",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "xrani": {
+    "gloss": "injure",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "jitro": {
+    "gloss": "control",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "setca": {
+    "gloss": "insert",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "jgari": {
+    "gloss": "hold",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "cipni": {
+    "gloss": "bird",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "lunra": {
+    "gloss": "moon",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "bolci": {
+    "gloss": "sphere",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "xukmi": {
+    "gloss": "chemical",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "girzu": {
+    "gloss": "group",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "ciste": {
+    "gloss": "system",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "solri": {
+    "gloss": "sun",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "jdini": {
+    "gloss": "money",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "tcica": {
+    "gloss": "deceive",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "ciblu": {
+    "gloss": "blood",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "ponjo": {
+    "gloss": "japan",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "daspo": {
+    "gloss": "destroy",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "kensa": {
+    "gloss": "outer space",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "birje": {
+    "gloss": "beer",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "lebna": {
+    "gloss": "take",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
   }
 }
