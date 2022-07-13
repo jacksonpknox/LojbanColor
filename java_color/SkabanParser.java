@@ -20,8 +20,8 @@ public class SkabanParser extends Parser {
 	public static final int
 		RULE_folio = 0, RULE_line = 1, RULE_end = 2, RULE_flufftence = 3, RULE_sentence = 4, 
 		RULE_word = 5, RULE_cmavo = 6, RULE_jonvla = 7, RULE_cmene = 8, RULE_karmaho = 9, 
-		RULE_lerfu = 10, RULE_brivla = 11, RULE_gismu = 12, RULE_lujvo = 13, RULE_baugismu = 14, 
-		RULE_brogismu = 15, RULE_bobvo = 16, RULE_cobvo = 17, RULE_dobvo = 18, 
+		RULE_lerfu = 10, RULE_brivla = 11, RULE_gismu = 12, RULE_lujvo = 13, RULE_kargismu = 14, 
+		RULE_gahorgismu = 15, RULE_bobvo = 16, RULE_cobvo = 17, RULE_dobvo = 18, 
 		RULE_fobvo = 19, RULE_gobvo = 20, RULE_balrelraf = 21, RULE_jvoreb = 22, 
 		RULE_relraf = 23, RULE_gimpag = 24, RULE_rafgimpag = 25, RULE_balraf = 26, 
 		RULE_broraf = 27, RULE_bauraf = 28, RULE_karlraf = 29, RULE_karlrelraf = 30, 
@@ -30,8 +30,8 @@ public class SkabanParser extends Parser {
 	private static String[] makeRuleNames() {
 		return new String[] {
 			"folio", "line", "end", "flufftence", "sentence", "word", "cmavo", "jonvla", 
-			"cmene", "karmaho", "lerfu", "brivla", "gismu", "lujvo", "baugismu", 
-			"brogismu", "bobvo", "cobvo", "dobvo", "fobvo", "gobvo", "balrelraf", 
+			"cmene", "karmaho", "lerfu", "brivla", "gismu", "lujvo", "kargismu", 
+			"gahorgismu", "bobvo", "cobvo", "dobvo", "fobvo", "gobvo", "balrelraf", 
 			"jvoreb", "relraf", "gimpag", "rafgimpag", "balraf", "broraf", "bauraf", 
 			"karlraf", "karlrelraf", "gahorgimpag", "kargimpag", "q", "y", "fuhivla", 
 			"anychar"
@@ -845,11 +845,11 @@ public class SkabanParser extends Parser {
 	}
 
 	public static class GismuContext extends ParserRuleContext {
-		public BaugismuContext baugismu() {
-			return getRuleContext(BaugismuContext.class,0);
+		public KargismuContext kargismu() {
+			return getRuleContext(KargismuContext.class,0);
 		}
-		public BrogismuContext brogismu() {
-			return getRuleContext(BrogismuContext.class,0);
+		public GahorgismuContext gahorgismu() {
+			return getRuleContext(GahorgismuContext.class,0);
 		}
 		public GismuContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -876,14 +876,14 @@ public class SkabanParser extends Parser {
 				enterOuterAlt(_localctx, 1);
 				{
 				setState(150);
-				baugismu();
+				kargismu();
 				}
 				break;
 			case 2:
 				enterOuterAlt(_localctx, 2);
 				{
 				setState(151);
-				brogismu();
+				gahorgismu();
 				}
 				break;
 			}
@@ -984,7 +984,7 @@ public class SkabanParser extends Parser {
 		return _localctx;
 	}
 
-	public static class BaugismuContext extends ParserRuleContext {
+	public static class KargismuContext extends ParserRuleContext {
 		public List<TerminalNode> C() { return getTokens(SkabanParser.C); }
 		public TerminalNode C(int i) {
 			return getToken(SkabanParser.C, i);
@@ -993,23 +993,23 @@ public class SkabanParser extends Parser {
 		public TerminalNode V(int i) {
 			return getToken(SkabanParser.V, i);
 		}
-		public BaugismuContext(ParserRuleContext parent, int invokingState) {
+		public KargismuContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_baugismu; }
+		@Override public int getRuleIndex() { return RULE_kargismu; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SkabanListener ) ((SkabanListener)listener).enterBaugismu(this);
+			if ( listener instanceof SkabanListener ) ((SkabanListener)listener).enterKargismu(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SkabanListener ) ((SkabanListener)listener).exitBaugismu(this);
+			if ( listener instanceof SkabanListener ) ((SkabanListener)listener).exitKargismu(this);
 		}
 	}
 
-	public final BaugismuContext baugismu() throws RecognitionException {
-		BaugismuContext _localctx = new BaugismuContext(_ctx, getState());
-		enterRule(_localctx, 28, RULE_baugismu);
+	public final KargismuContext kargismu() throws RecognitionException {
+		KargismuContext _localctx = new KargismuContext(_ctx, getState());
+		enterRule(_localctx, 28, RULE_kargismu);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
@@ -1036,7 +1036,7 @@ public class SkabanParser extends Parser {
 		return _localctx;
 	}
 
-	public static class BrogismuContext extends ParserRuleContext {
+	public static class GahorgismuContext extends ParserRuleContext {
 		public List<TerminalNode> C() { return getTokens(SkabanParser.C); }
 		public TerminalNode C(int i) {
 			return getToken(SkabanParser.C, i);
@@ -1045,23 +1045,23 @@ public class SkabanParser extends Parser {
 		public TerminalNode V(int i) {
 			return getToken(SkabanParser.V, i);
 		}
-		public BrogismuContext(ParserRuleContext parent, int invokingState) {
+		public GahorgismuContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_brogismu; }
+		@Override public int getRuleIndex() { return RULE_gahorgismu; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SkabanListener ) ((SkabanListener)listener).enterBrogismu(this);
+			if ( listener instanceof SkabanListener ) ((SkabanListener)listener).enterGahorgismu(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SkabanListener ) ((SkabanListener)listener).exitBrogismu(this);
+			if ( listener instanceof SkabanListener ) ((SkabanListener)listener).exitGahorgismu(this);
 		}
 	}
 
-	public final BrogismuContext brogismu() throws RecognitionException {
-		BrogismuContext _localctx = new BrogismuContext(_ctx, getState());
-		enterRule(_localctx, 30, RULE_brogismu);
+	public final GahorgismuContext gahorgismu() throws RecognitionException {
+		GahorgismuContext _localctx = new GahorgismuContext(_ctx, getState());
+		enterRule(_localctx, 30, RULE_gahorgismu);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
@@ -1307,11 +1307,11 @@ public class SkabanParser extends Parser {
 		public BaurafContext bauraf() {
 			return getRuleContext(BaurafContext.class,0);
 		}
-		public BaugismuContext baugismu() {
-			return getRuleContext(BaugismuContext.class,0);
+		public KargismuContext kargismu() {
+			return getRuleContext(KargismuContext.class,0);
 		}
-		public BrogismuContext brogismu() {
-			return getRuleContext(BrogismuContext.class,0);
+		public GahorgismuContext gahorgismu() {
+			return getRuleContext(GahorgismuContext.class,0);
 		}
 		public GobvoContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -1386,7 +1386,7 @@ public class SkabanParser extends Parser {
 				setState(203);
 				q();
 				setState(204);
-				baugismu();
+				kargismu();
 				}
 				break;
 			case 4:
@@ -1405,7 +1405,7 @@ public class SkabanParser extends Parser {
 					break;
 				}
 				setState(210);
-				brogismu();
+				gahorgismu();
 				}
 				break;
 			}

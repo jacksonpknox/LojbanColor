@@ -183,25 +183,25 @@ public class SkabanBaseListener implements SkabanListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterBaugismu(SkabanParser.BaugismuContext ctx) { }
+	@Override public void enterKargismu(SkabanParser.KargismuContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitBaugismu(SkabanParser.BaugismuContext ctx) { }
+	@Override public void exitKargismu(SkabanParser.KargismuContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterBrogismu(SkabanParser.BrogismuContext ctx) { }
+	@Override public void enterGahorgismu(SkabanParser.GahorgismuContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitBrogismu(SkabanParser.BrogismuContext ctx) { }
+	@Override public void exitGahorgismu(SkabanParser.GahorgismuContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *

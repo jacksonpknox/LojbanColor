@@ -82,11 +82,11 @@ class Skabanizer(SkabanListener):
     def enterCmene(self, ctx):
         self.t.append(text=ctx.getText(), style=self.valskari["cmene"])
 
-    def enterBaugismu(self, ctx):
-        self.t.append(text=ctx.getText(), style=self.valskari["baugismu"])
+    def enterKargismu(self, ctx):
+        self.t.append(text=ctx.getText(), style=self.valskari["kargismu"])
 
-    def enterBrogismu(self, ctx):
-        self.t.append(text=ctx.getText(), style=self.valskari["brogismu"])
+    def enterGahorgismu(self, ctx):
+        self.t.append(text=ctx.getText(), style=self.valskari["ga'orgismu"])
 
     def enterBalraf(self, ctx):
         self.t.append(text=ctx.getText(), style=self.valskari["balraf"])

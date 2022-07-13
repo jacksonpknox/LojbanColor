@@ -167,8 +167,8 @@ class SkabanParser ( Parser ):
     RULE_brivla = 11
     RULE_gismu = 12
     RULE_lujvo = 13
-    RULE_baugismu = 14
-    RULE_brogismu = 15
+    RULE_kargismu = 14
+    RULE_gahorgismu = 15
     RULE_bobvo = 16
     RULE_cobvo = 17
     RULE_dobvo = 18
@@ -193,10 +193,10 @@ class SkabanParser ( Parser ):
 
     ruleNames =  [ "folio", "line", "end", "flufftence", "sentence", "word", 
                    "cmavo", "jonvla", "cmene", "karmaho", "lerfu", "brivla", 
-                   "gismu", "lujvo", "baugismu", "brogismu", "bobvo", "cobvo", 
-                   "dobvo", "fobvo", "gobvo", "balrelraf", "jvoreb", "relraf", 
-                   "gimpag", "rafgimpag", "balraf", "broraf", "bauraf", 
-                   "karlraf", "karlrelraf", "gahorgimpag", "kargimpag", 
+                   "gismu", "lujvo", "kargismu", "gahorgismu", "bobvo", 
+                   "cobvo", "dobvo", "fobvo", "gobvo", "balrelraf", "jvoreb", 
+                   "relraf", "gimpag", "rafgimpag", "balraf", "broraf", 
+                   "bauraf", "karlraf", "karlrelraf", "gahorgimpag", "kargimpag", 
                    "q", "y", "fuhivla", "anychar" ]
 
     EOF = Token.EOF
@@ -992,12 +992,12 @@ class SkabanParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def baugismu(self):
-            return self.getTypedRuleContext(SkabanParser.BaugismuContext,0)
+        def kargismu(self):
+            return self.getTypedRuleContext(SkabanParser.KargismuContext,0)
 
 
-        def brogismu(self):
-            return self.getTypedRuleContext(SkabanParser.BrogismuContext,0)
+        def gahorgismu(self):
+            return self.getTypedRuleContext(SkabanParser.GahorgismuContext,0)
 
 
         def getRuleIndex(self):
@@ -1025,13 +1025,13 @@ class SkabanParser ( Parser ):
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 150
-                self.baugismu()
+                self.kargismu()
                 pass
 
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 151
-                self.brogismu()
+                self.gahorgismu()
                 pass
 
 
@@ -1133,7 +1133,7 @@ class SkabanParser ( Parser ):
         return localctx
 
 
-    class BaugismuContext(ParserRuleContext):
+    class KargismuContext(ParserRuleContext):
         __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
@@ -1153,23 +1153,23 @@ class SkabanParser ( Parser ):
                 return self.getToken(SkabanParser.V, i)
 
         def getRuleIndex(self):
-            return SkabanParser.RULE_baugismu
+            return SkabanParser.RULE_kargismu
 
         def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterBaugismu" ):
-                listener.enterBaugismu(self)
+            if hasattr( listener, "enterKargismu" ):
+                listener.enterKargismu(self)
 
         def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitBaugismu" ):
-                listener.exitBaugismu(self)
+            if hasattr( listener, "exitKargismu" ):
+                listener.exitKargismu(self)
 
 
 
 
-    def baugismu(self):
+    def kargismu(self):
 
-        localctx = SkabanParser.BaugismuContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 28, self.RULE_baugismu)
+        localctx = SkabanParser.KargismuContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 28, self.RULE_kargismu)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 161
@@ -1191,7 +1191,7 @@ class SkabanParser ( Parser ):
         return localctx
 
 
-    class BrogismuContext(ParserRuleContext):
+    class GahorgismuContext(ParserRuleContext):
         __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
@@ -1211,23 +1211,23 @@ class SkabanParser ( Parser ):
                 return self.getToken(SkabanParser.V, i)
 
         def getRuleIndex(self):
-            return SkabanParser.RULE_brogismu
+            return SkabanParser.RULE_gahorgismu
 
         def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterBrogismu" ):
-                listener.enterBrogismu(self)
+            if hasattr( listener, "enterGahorgismu" ):
+                listener.enterGahorgismu(self)
 
         def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitBrogismu" ):
-                listener.exitBrogismu(self)
+            if hasattr( listener, "exitGahorgismu" ):
+                listener.exitGahorgismu(self)
 
 
 
 
-    def brogismu(self):
+    def gahorgismu(self):
 
-        localctx = SkabanParser.BrogismuContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 30, self.RULE_brogismu)
+        localctx = SkabanParser.GahorgismuContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 30, self.RULE_gahorgismu)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 167
@@ -1497,12 +1497,12 @@ class SkabanParser ( Parser ):
             return self.getTypedRuleContext(SkabanParser.BaurafContext,0)
 
 
-        def baugismu(self):
-            return self.getTypedRuleContext(SkabanParser.BaugismuContext,0)
+        def kargismu(self):
+            return self.getTypedRuleContext(SkabanParser.KargismuContext,0)
 
 
-        def brogismu(self):
-            return self.getTypedRuleContext(SkabanParser.BrogismuContext,0)
+        def gahorgismu(self):
+            return self.getTypedRuleContext(SkabanParser.GahorgismuContext,0)
 
 
         def getRuleIndex(self):
@@ -1570,7 +1570,7 @@ class SkabanParser ( Parser ):
                 self.state = 203
                 self.q()
                 self.state = 204
-                self.baugismu()
+                self.kargismu()
                 pass
 
             elif la_ == 4:
@@ -1586,7 +1586,7 @@ class SkabanParser ( Parser ):
 
 
                 self.state = 210
-                self.brogismu()
+                self.gahorgismu()
                 pass
 
 

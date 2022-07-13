@@ -3,12 +3,12 @@ import Lexer;
 
 brivla : gismu | lujvo ;
 
-gismu : baugismu | brogismu ;
+gismu : kargismu | gahorgismu ;
 lujvo : bobvo | cobvo | dobvo | fobvo | gobvo ;
 
 
-baugismu : C V C C V ;
-brogismu : C C V C V ;
+kargismu : C V C C V ;
+gahorgismu : C C V C V ;
 
 bobvo : balrelraf y jvoreb ;
 cobvo : relraf jvoreb? ;
@@ -16,8 +16,10 @@ dobvo : gimpag y jvoreb ;
 fobvo : rafgimpag y jvoreb ;
 gobvo : balraf (q | y)? gismu
       | broraf q? gismu
-      | bauraf q baugismu
-      | bauraf q? brogismu
+      | bauraf q kargismu
+
+      | bauraf q? gahorgismu
+
       ;
 
 

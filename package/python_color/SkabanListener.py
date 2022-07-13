@@ -134,21 +134,21 @@ class SkabanListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by SkabanParser#baugismu.
-    def enterBaugismu(self, ctx:SkabanParser.BaugismuContext):
+    # Enter a parse tree produced by SkabanParser#kargismu.
+    def enterKargismu(self, ctx:SkabanParser.KargismuContext):
         pass
 
-    # Exit a parse tree produced by SkabanParser#baugismu.
-    def exitBaugismu(self, ctx:SkabanParser.BaugismuContext):
+    # Exit a parse tree produced by SkabanParser#kargismu.
+    def exitKargismu(self, ctx:SkabanParser.KargismuContext):
         pass
 
 
-    # Enter a parse tree produced by SkabanParser#brogismu.
-    def enterBrogismu(self, ctx:SkabanParser.BrogismuContext):
+    # Enter a parse tree produced by SkabanParser#gahorgismu.
+    def enterGahorgismu(self, ctx:SkabanParser.GahorgismuContext):
         pass
 
-    # Exit a parse tree produced by SkabanParser#brogismu.
-    def exitBrogismu(self, ctx:SkabanParser.BrogismuContext):
+    # Exit a parse tree produced by SkabanParser#gahorgismu.
+    def exitGahorgismu(self, ctx:SkabanParser.GahorgismuContext):
         pass
 
 

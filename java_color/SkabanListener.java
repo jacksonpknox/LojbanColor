@@ -147,25 +147,25 @@ public interface SkabanListener extends ParseTreeListener {
 	 */
 	void exitLujvo(SkabanParser.LujvoContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link SkabanParser#baugismu}.
+	 * Enter a parse tree produced by {@link SkabanParser#kargismu}.
 	 * @param ctx the parse tree
 	 */
-	void enterBaugismu(SkabanParser.BaugismuContext ctx);
+	void enterKargismu(SkabanParser.KargismuContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link SkabanParser#baugismu}.
+	 * Exit a parse tree produced by {@link SkabanParser#kargismu}.
 	 * @param ctx the parse tree
 	 */
-	void exitBaugismu(SkabanParser.BaugismuContext ctx);
+	void exitKargismu(SkabanParser.KargismuContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link SkabanParser#brogismu}.
+	 * Enter a parse tree produced by {@link SkabanParser#gahorgismu}.
 	 * @param ctx the parse tree
 	 */
-	void enterBrogismu(SkabanParser.BrogismuContext ctx);
+	void enterGahorgismu(SkabanParser.GahorgismuContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link SkabanParser#brogismu}.
+	 * Exit a parse tree produced by {@link SkabanParser#gahorgismu}.
 	 * @param ctx the parse tree
 	 */
-	void exitBrogismu(SkabanParser.BrogismuContext ctx);
+	void exitGahorgismu(SkabanParser.GahorgismuContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link SkabanParser#bobvo}.
 	 * @param ctx the parse tree
