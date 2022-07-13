@@ -36,38 +36,44 @@ def parse(args: dict):
     console = Console()
 
     # skari subgroup
-    if s := args.selmaho_style:
-        with open(plumbing.CONFIG_DEFAULTS["selmahos"], "r") as f:
-            selmahos = json.load(f)
-        s = [plumbing.force_selmaho(selmaho, selmahos) for selmaho in s]
-        table = karda.tabulate_selmaho_styles(s, selmahos)
-        renderables.append(Panel(table, style=Style()))
+    if args.selmaho_style or args.minji_style or args.valsi_style:
+        short_skari_renderables = []
+        if s := args.selmaho_style:
+            with open(plumbing.CONFIG_DEFAULTS["selmahos"], "r") as f:
+                selmahos = json.load(f)
+            s = [plumbing.force_selmaho(selmaho, selmahos) for selmaho in s]
+            table = karda.tabulate_selmaho_styles(s, selmahos)
+            short_skari_renderables.append(Panel(table, style=Style()))
 
-    if m := args.minji_style:
-        for token in m:
-            if token not in skari["mi'iskari"].keys():
-                raise Exception("Error!! not a minji token: " + token)
-        table = tabulate_minji_styles(m, skari)
-        renderables.append(Panel(table, style=Style()))
+        if m := args.minji_style:
+            for token in m:
+                if token not in skari["mi'iskari"].keys():
+                    raise Exception("Error!! not a minji token: " + token)
+            table = tabulate_minji_styles(m, skari)
+            short_skari_renderables.append(Panel(table, style=Style()))
 
-    if v := args.valsi_style:
-        for token in v:
-            if token not in skari["valskari"].keys():
-                raise Exception("Error!! not a valsi token: " + token)
-        table = tabulate_valsi_styles(v, skari)
-        renderables.append(Panel(table, style=Style()))
+        if v := args.valsi_style:
+            for token in v:
+                if token not in skari["valskari"].keys():
+                    raise Exception("Error!! not a valsi token: " + token)
+            table = tabulate_valsi_styles(v, skari)
+            short_skari_renderables.append(Panel(table, style=Style()))
+        renderables.append(Panel(Columns(short_skari_renderables), style=Style()))
 
-    if args.valskari:
-        tokens = skari["valskari"].keys()
-        table = tabulate_valsi_styles(tokens, skari)
-        table.title = "valskari"
-        renderables.append(Panel(table, style=Style()))
+    if args.valskari or args.mihiskari:
+        long_skari_renderables = []
+        if args.valskari:
+            tokens = skari["valskari"].keys()
+            table = tabulate_valsi_styles(tokens, skari)
+            table.title = "valskari"
+            long_skari_renderables.append(Panel(table, style=Style()))
 
-    if args.mihiskari:
-        tokens = skari["mi'iskari"].keys()
-        table = tabulate_minji_styles(tokens, skari)
-        table.title = "mi'iskari"
-        renderables.append(Panel(table, style=Style()))
+        if args.mihiskari:
+            tokens = skari["mi'iskari"].keys()
+            table = tabulate_minji_styles(tokens, skari)
+            table.title = "mi'iskari"
+            long_skari_renderables.append(Panel(table, style=Style()))
+        renderables.append(Panel(Columns(long_skari_renderables), style=Style()))
 
     if args.selmahoskari:
         with open(plumbing.CONFIG_DEFAULTS["selmahos"], "r") as f:
@@ -77,24 +83,28 @@ def parse(args: dict):
 
 
     # valsi subgroup
-    if c := args.cmavo:
-        with open(plumbing.CONFIG_DEFAULTS["selmahos"], "r") as f:
-            selmahos = json.load(f)
-        c = [cmavo.lower().replace("h", "'") for cmavo in c]
-        table = karda.tabulate_cmavos(c, selmahos, skari)
-        renderables.append(Panel(table, style=Style()))
+    if args.cmavo or args.gloss or args.rafsi:
+        valsi_renderables = []
+        if c := args.cmavo:
+            with open(plumbing.CONFIG_DEFAULTS["selmahos"], "r") as f:
+                selmahos = json.load(f)
+            c = [cmavo.lower().replace("h", "'") for cmavo in c]
+            table = karda.tabulate_cmavos(c, selmahos, skari)
+            valsi_renderables.append(Panel(table, style=Style()))
 
-    if g := args.gloss:
-        with open(plumbing.CONFIG_DEFAULTS["gismus"], "r") as f:
-            gismus = json.load(f)
-        table = karda.tabulate_gismus(g, gismus, skari)
-        renderables.append(Panel(table, style=Style()))
+        if g := args.gloss:
+            with open(plumbing.CONFIG_DEFAULTS["gismus"], "r") as f:
+                gismus = json.load(f)
+            table = karda.tabulate_gismus(g, gismus, skari)
+            valsi_renderables.append(Panel(table, style=Style()))
 
-    if r := args.rafsi:
-        gismus = plumbing.get_config("gismus")
-        selmahos = plumbing.get_config("selmahos")
-        table = karda.tabulate_cmarafsi(r, gismus, selmahos, skari)
-        renderables.append(Panel(table, style=Style()))
+        if r := args.rafsi:
+            gismus = plumbing.get_config("gismus")
+            selmahos = plumbing.get_config("selmahos")
+            table = karda.tabulate_cmarafsi(r, gismus, selmahos, skari)
+            valsi_renderables.append(Panel(table, style=Style()))
+        renderables.append(Panel(Columns(valsi_renderables), style=Style()))
+
 
     if args.selmaho:
         with open(plumbing.CONFIG_DEFAULTS["selmahos"], "r") as f:
@@ -117,22 +127,24 @@ def parse(args: dict):
 
 
     # kancu subgroup
-    if args.count_gismu:
-        gismus = plumbing.get_config("gismus")
-        table = karda.tabulate_gismu_count(gismus, skari)
-        renderables.append(Panel(table, style=Style.parse(skari["valskari"]["gismu"])))
+    if args.count_gismu or args.count_cmavo or args.count_rafsi:
+        count_renderables = []
+        if args.count_gismu:
+            gismus = plumbing.get_config("gismus")
+            table = karda.tabulate_gismu_count(gismus, skari)
+            count_renderables.append(Panel(table, style=Style.parse(skari["valskari"]["gismu"])))
 
-    if args.count_cmavo:
-        selmahos = plumbing.get_config("selmahos")
-        table = karda.tabulate_cmavo_count(selmahos)
-        renderables.append(Panel(table, style=Style.parse(skari["valskari"]["cmavo"])))
+        if args.count_cmavo:
+            selmahos = plumbing.get_config("selmahos")
+            table = karda.tabulate_cmavo_count(selmahos)
+            count_renderables.append(Panel(table, style=Style.parse(skari["valskari"]["cmavo"])))
 
-        
-    if args.count_rafsi:
-        gismus = plumbing.get_config("gismus")
-        selmahos = plumbing.get_config("selmahos")
-        table = karda.tabulate_rafsi_count(gismus, selmahos)
-        renderables.append(Panel(table, style=Style.parse(skari["valskari"]["cmarafsi"])))
+        if args.count_rafsi:
+            gismus = plumbing.get_config("gismus")
+            selmahos = plumbing.get_config("selmahos")
+            table = karda.tabulate_rafsi_count(gismus, selmahos)
+            count_renderables.append(Panel(table, style=Style.parse(skari["valskari"]["cmarafsi"])))
+        renderables.append(Panel(Columns(count_renderables), style=Style()))
 
 
     if args.wave:
@@ -140,8 +152,4 @@ def parse(args: dict):
             sty = Style(bgcolor="#333333") if (i % 2) else Style(bgcolor="black")
             panel.style += sty
 
-
-    if args.horizontal:
-        console.print(Panel(Columns(renderables), box.DOUBLE, style=Style()))
-    else:
-        console.print(Panel(Group(*renderables), box.DOUBLE, expand=False, style=Style()))
+    console.print(Panel(Group(*renderables), box.DOUBLE, expand=False, style=Style()))
