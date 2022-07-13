@@ -1237,7 +1237,7 @@
     "cmarafsi": []
   },
   "nanla": {
-    "gloss": "boy",
+    "gloss": "boy (child)",
     "tags": [
       "standard"
     ],
@@ -2180,6 +2180,412 @@
   },
   "lebna": {
     "gloss": "take",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "gunma": {
+    "gloss": "aggregate",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "cpana": {
+    "gloss": "on top",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "darno": {
+    "gloss": "far",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "gusta": {
+    "gloss": "restaurant",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "batci": {
+    "gloss": "bite",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "papri": {
+    "gloss": "folio",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "jungo": {
+    "gloss": "chinese",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "sevzi": {
+    "gloss": "ego",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "cenba": {
+    "gloss": "change",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "runme": {
+    "gloss": "melt",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "jinsa": {
+    "gloss": "uncontaminated",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "binxo": {
+    "gloss": "become",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "linji": {
+    "gloss": "line",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "sakli": {
+    "gloss": "slide",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "janco": {
+    "gloss": "greater bodily joint",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "crane": {
+    "gloss": "ahead",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "karce": {
+    "gloss": "automobile",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "flecu": {
+    "gloss": "flow",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "dargu": {
+    "gloss": "road",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "manku": {
+    "gloss": "dark",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "vorme": {
+    "gloss": "doorway",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "gleki": {
+    "gloss": "happy",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "klaku": {
+    "gloss": "weep",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "pixra": {
+    "gloss": "picture",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "carna": {
+    "gloss": "turn",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "xruti": {
+    "gloss": "return",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "ponse": {
+    "gloss": "own",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "rinka": {
+    "gloss": "cause",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "ganlo": {
+    "gloss": "closed",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "kosta": {
+    "gloss": "coat",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "sanli": {
+    "gloss": "stand",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "fenki": {
+    "gloss": "crazy",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "curmi": {
+    "gloss": "allow",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "pencu": {
+    "gloss": "touch",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "sruri": {
+    "gloss": "encircle",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "stapa": {
+    "gloss": "step",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "kojna": {
+    "gloss": "corner",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "trixe": {
+    "gloss": "behind",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "toknu": {
+    "gloss": "oven",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "birka": {
+    "gloss": "arm",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "kuspe": {
+    "gloss": "span",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "tagji": {
+    "gloss": "snug",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "bradi": {
+    "gloss": "enemy",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "tikpa": {
+    "gloss": "kick",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "xrula": {
+    "gloss": "flower",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "patxu": {
+    "gloss": "pot",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "dandu": {
+    "gloss": "hang",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "catke": {
+    "gloss": "shove",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "junta": {
+    "gloss": "weight",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "cortu": {
+    "gloss": "feel pain",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "sabji": {
+    "gloss": "provide",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "degji": {
+    "gloss": "digit (body part)",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "kalri": {
+    "gloss": "open",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "bapli": {
+    "gloss": "compel",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "kluza": {
+    "gloss": "loose",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "kavbu": {
+    "gloss": "capture",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "lacpu": {
+    "gloss": "pull",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "vlipa": {
+    "gloss": "power",
     "tags": [
       "standard"
     ],
