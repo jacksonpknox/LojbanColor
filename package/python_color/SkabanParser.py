@@ -179,10 +179,10 @@ class SkabanParser ( Parser ):
     RULE_relraf = 23
     RULE_gimsygenja = 24
     RULE_rafgimpag = 25
-    RULE_balraf = 26
-    RULE_broraf = 27
-    RULE_bauraf = 28
-    RULE_karlraf = 29
+    RULE_ganlycmarafsi = 26
+    RULE_gahorkarcmarafsi = 27
+    RULE_karkarcmarafsi = 28
+    RULE_karcmarafsi = 29
     RULE_karlrelraf = 30
     RULE_gahorgimsygenja = 31
     RULE_kargimsygenja = 32
@@ -195,9 +195,10 @@ class SkabanParser ( Parser ):
                    "cmavo", "jonvla", "cmene", "karmaho", "lerfu", "brivla", 
                    "gismu", "lujvo", "kargismu", "gahorgismu", "bobvo", 
                    "cobvo", "dobvo", "fobvo", "gobvo", "balrelraf", "jvorebla", 
-                   "relraf", "gimsygenja", "rafgimpag", "balraf", "broraf", 
-                   "bauraf", "karlraf", "karlrelraf", "gahorgimsygenja", 
-                   "kargimsygenja", "q", "y", "fuhivla", "anychar" ]
+                   "relraf", "gimsygenja", "rafgimpag", "ganlycmarafsi", 
+                   "gahorkarcmarafsi", "karkarcmarafsi", "karcmarafsi", 
+                   "karlrelraf", "gahorgimsygenja", "kargimsygenja", "q", 
+                   "y", "fuhivla", "anychar" ]
 
     EOF = Token.EOF
     WS=1
@@ -1473,8 +1474,8 @@ class SkabanParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def balraf(self):
-            return self.getTypedRuleContext(SkabanParser.BalrafContext,0)
+        def ganlycmarafsi(self):
+            return self.getTypedRuleContext(SkabanParser.GanlycmarafsiContext,0)
 
 
         def gismu(self):
@@ -1489,12 +1490,12 @@ class SkabanParser ( Parser ):
             return self.getTypedRuleContext(SkabanParser.YContext,0)
 
 
-        def broraf(self):
-            return self.getTypedRuleContext(SkabanParser.BrorafContext,0)
+        def gahorkarcmarafsi(self):
+            return self.getTypedRuleContext(SkabanParser.GahorkarcmarafsiContext,0)
 
 
-        def bauraf(self):
-            return self.getTypedRuleContext(SkabanParser.BaurafContext,0)
+        def karkarcmarafsi(self):
+            return self.getTypedRuleContext(SkabanParser.KarkarcmarafsiContext,0)
 
 
         def kargismu(self):
@@ -1530,7 +1531,7 @@ class SkabanParser ( Parser ):
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 189
-                self.balraf()
+                self.ganlycmarafsi()
                 self.state = 192
                 self._errHandler.sync(self)
                 la_ = self._interp.adaptivePredict(self._input,15,self._ctx)
@@ -1550,7 +1551,7 @@ class SkabanParser ( Parser ):
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 196
-                self.broraf()
+                self.gahorkarcmarafsi()
                 self.state = 198
                 self._errHandler.sync(self)
                 la_ = self._interp.adaptivePredict(self._input,16,self._ctx)
@@ -1566,7 +1567,7 @@ class SkabanParser ( Parser ):
             elif la_ == 3:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 202
-                self.bauraf()
+                self.karkarcmarafsi()
                 self.state = 203
                 self.q()
                 self.state = 204
@@ -1576,7 +1577,7 @@ class SkabanParser ( Parser ):
             elif la_ == 4:
                 self.enterOuterAlt(localctx, 4)
                 self.state = 206
-                self.bauraf()
+                self.karkarcmarafsi()
                 self.state = 208
                 self._errHandler.sync(self)
                 la_ = self._interp.adaptivePredict(self._input,17,self._ctx)
@@ -1606,19 +1607,19 @@ class SkabanParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def balraf(self, i:int=None):
+        def ganlycmarafsi(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(SkabanParser.BalrafContext)
+                return self.getTypedRuleContexts(SkabanParser.GanlycmarafsiContext)
             else:
-                return self.getTypedRuleContext(SkabanParser.BalrafContext,i)
+                return self.getTypedRuleContext(SkabanParser.GanlycmarafsiContext,i)
 
 
-        def broraf(self):
-            return self.getTypedRuleContext(SkabanParser.BrorafContext,0)
+        def gahorkarcmarafsi(self):
+            return self.getTypedRuleContext(SkabanParser.GahorkarcmarafsiContext,0)
 
 
-        def bauraf(self):
-            return self.getTypedRuleContext(SkabanParser.BaurafContext,0)
+        def karkarcmarafsi(self):
+            return self.getTypedRuleContext(SkabanParser.KarkarcmarafsiContext,0)
 
 
         def q(self):
@@ -1654,7 +1655,7 @@ class SkabanParser ( Parser ):
             la_ = self._interp.adaptivePredict(self._input,21,self._ctx)
             if la_ == 1:
                 self.state = 214
-                self.balraf()
+                self.ganlycmarafsi()
                 self.state = 217
                 self._errHandler.sync(self)
                 la_ = self._interp.adaptivePredict(self._input,19,self._ctx)
@@ -1671,7 +1672,7 @@ class SkabanParser ( Parser ):
 
             elif la_ == 2:
                 self.state = 219
-                self.broraf()
+                self.gahorkarcmarafsi()
                 self.state = 221
                 self._errHandler.sync(self)
                 la_ = self._interp.adaptivePredict(self._input,20,self._ctx)
@@ -1684,14 +1685,14 @@ class SkabanParser ( Parser ):
 
             elif la_ == 3:
                 self.state = 223
-                self.bauraf()
+                self.karkarcmarafsi()
                 self.state = 224
                 self.q()
                 pass
 
 
             self.state = 228
-            self.balraf()
+            self.ganlycmarafsi()
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -1708,22 +1709,22 @@ class SkabanParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def karlraf(self, i:int=None):
+        def karcmarafsi(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(SkabanParser.KarlrafContext)
+                return self.getTypedRuleContexts(SkabanParser.KarcmarafsiContext)
             else:
-                return self.getTypedRuleContext(SkabanParser.KarlrafContext,i)
+                return self.getTypedRuleContext(SkabanParser.KarcmarafsiContext,i)
 
 
         def gismu(self):
             return self.getTypedRuleContext(SkabanParser.GismuContext,0)
 
 
-        def balraf(self, i:int=None):
+        def ganlycmarafsi(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(SkabanParser.BalrafContext)
+                return self.getTypedRuleContexts(SkabanParser.GanlycmarafsiContext)
             else:
-                return self.getTypedRuleContext(SkabanParser.BalrafContext,i)
+                return self.getTypedRuleContext(SkabanParser.GanlycmarafsiContext,i)
 
 
         def gimsygenja(self, i:int=None):
@@ -1771,7 +1772,7 @@ class SkabanParser ( Parser ):
                     la_ = self._interp.adaptivePredict(self._input,23,self._ctx)
                     if la_ == 1:
                         self.state = 230
-                        self.balraf()
+                        self.ganlycmarafsi()
                         self.state = 232
                         self._errHandler.sync(self)
                         _la = self._input.LA(1)
@@ -1791,7 +1792,7 @@ class SkabanParser ( Parser ):
 
                     elif la_ == 3:
                         self.state = 237
-                        self.karlraf()
+                        self.karcmarafsi()
                         pass
 
              
@@ -1804,7 +1805,7 @@ class SkabanParser ( Parser ):
             la_ = self._interp.adaptivePredict(self._input,25,self._ctx)
             if la_ == 1:
                 self.state = 243
-                self.karlraf()
+                self.karcmarafsi()
                 pass
 
             elif la_ == 2:
@@ -1947,8 +1948,8 @@ class SkabanParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def balraf(self):
-            return self.getTypedRuleContext(SkabanParser.BalrafContext,0)
+        def ganlycmarafsi(self):
+            return self.getTypedRuleContext(SkabanParser.GanlycmarafsiContext,0)
 
 
         def gimsygenja(self):
@@ -1959,8 +1960,8 @@ class SkabanParser ( Parser ):
             return self.getTypedRuleContext(SkabanParser.QContext,0)
 
 
-        def karlraf(self):
-            return self.getTypedRuleContext(SkabanParser.KarlrafContext,0)
+        def karcmarafsi(self):
+            return self.getTypedRuleContext(SkabanParser.KarcmarafsiContext,0)
 
 
         def kargimsygenja(self):
@@ -1996,7 +1997,7 @@ class SkabanParser ( Parser ):
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 255
-                self.balraf()
+                self.ganlycmarafsi()
                 self.state = 257
                 self._errHandler.sync(self)
                 la_ = self._interp.adaptivePredict(self._input,28,self._ctx)
@@ -2012,7 +2013,7 @@ class SkabanParser ( Parser ):
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 261
-                self.karlraf()
+                self.karcmarafsi()
                 self.state = 262
                 self.q()
                 self.state = 263
@@ -2022,7 +2023,7 @@ class SkabanParser ( Parser ):
             elif la_ == 3:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 265
-                self.karlraf()
+                self.karcmarafsi()
                 self.state = 266
                 self.gahorgimsygenja()
                 pass
@@ -2037,7 +2038,7 @@ class SkabanParser ( Parser ):
         return localctx
 
 
-    class BalrafContext(ParserRuleContext):
+    class GanlycmarafsiContext(ParserRuleContext):
         __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
@@ -2054,23 +2055,23 @@ class SkabanParser ( Parser ):
             return self.getToken(SkabanParser.V, 0)
 
         def getRuleIndex(self):
-            return SkabanParser.RULE_balraf
+            return SkabanParser.RULE_ganlycmarafsi
 
         def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterBalraf" ):
-                listener.enterBalraf(self)
+            if hasattr( listener, "enterGanlycmarafsi" ):
+                listener.enterGanlycmarafsi(self)
 
         def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitBalraf" ):
-                listener.exitBalraf(self)
+            if hasattr( listener, "exitGanlycmarafsi" ):
+                listener.exitGanlycmarafsi(self)
 
 
 
 
-    def balraf(self):
+    def ganlycmarafsi(self):
 
-        localctx = SkabanParser.BalrafContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 52, self.RULE_balraf)
+        localctx = SkabanParser.GanlycmarafsiContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 52, self.RULE_ganlycmarafsi)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 270
@@ -2088,7 +2089,7 @@ class SkabanParser ( Parser ):
         return localctx
 
 
-    class BrorafContext(ParserRuleContext):
+    class GahorkarcmarafsiContext(ParserRuleContext):
         __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
@@ -2105,23 +2106,23 @@ class SkabanParser ( Parser ):
             return self.getToken(SkabanParser.V, 0)
 
         def getRuleIndex(self):
-            return SkabanParser.RULE_broraf
+            return SkabanParser.RULE_gahorkarcmarafsi
 
         def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterBroraf" ):
-                listener.enterBroraf(self)
+            if hasattr( listener, "enterGahorkarcmarafsi" ):
+                listener.enterGahorkarcmarafsi(self)
 
         def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitBroraf" ):
-                listener.exitBroraf(self)
+            if hasattr( listener, "exitGahorkarcmarafsi" ):
+                listener.exitGahorkarcmarafsi(self)
 
 
 
 
-    def broraf(self):
+    def gahorkarcmarafsi(self):
 
-        localctx = SkabanParser.BrorafContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 54, self.RULE_broraf)
+        localctx = SkabanParser.GahorkarcmarafsiContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 54, self.RULE_gahorkarcmarafsi)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 274
@@ -2139,7 +2140,7 @@ class SkabanParser ( Parser ):
         return localctx
 
 
-    class BaurafContext(ParserRuleContext):
+    class KarkarcmarafsiContext(ParserRuleContext):
         __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
@@ -2159,23 +2160,23 @@ class SkabanParser ( Parser ):
             return self.getToken(SkabanParser.AP, 0)
 
         def getRuleIndex(self):
-            return SkabanParser.RULE_bauraf
+            return SkabanParser.RULE_karkarcmarafsi
 
         def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterBauraf" ):
-                listener.enterBauraf(self)
+            if hasattr( listener, "enterKarkarcmarafsi" ):
+                listener.enterKarkarcmarafsi(self)
 
         def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitBauraf" ):
-                listener.exitBauraf(self)
+            if hasattr( listener, "exitKarkarcmarafsi" ):
+                listener.exitKarkarcmarafsi(self)
 
 
 
 
-    def bauraf(self):
+    def karkarcmarafsi(self):
 
-        localctx = SkabanParser.BaurafContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 56, self.RULE_bauraf)
+        localctx = SkabanParser.KarkarcmarafsiContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 56, self.RULE_karkarcmarafsi)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
@@ -2202,39 +2203,39 @@ class SkabanParser ( Parser ):
         return localctx
 
 
-    class KarlrafContext(ParserRuleContext):
+    class KarcmarafsiContext(ParserRuleContext):
         __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def broraf(self):
-            return self.getTypedRuleContext(SkabanParser.BrorafContext,0)
+        def gahorkarcmarafsi(self):
+            return self.getTypedRuleContext(SkabanParser.GahorkarcmarafsiContext,0)
 
 
-        def bauraf(self):
-            return self.getTypedRuleContext(SkabanParser.BaurafContext,0)
+        def karkarcmarafsi(self):
+            return self.getTypedRuleContext(SkabanParser.KarkarcmarafsiContext,0)
 
 
         def getRuleIndex(self):
-            return SkabanParser.RULE_karlraf
+            return SkabanParser.RULE_karcmarafsi
 
         def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterKarlraf" ):
-                listener.enterKarlraf(self)
+            if hasattr( listener, "enterKarcmarafsi" ):
+                listener.enterKarcmarafsi(self)
 
         def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitKarlraf" ):
-                listener.exitKarlraf(self)
+            if hasattr( listener, "exitKarcmarafsi" ):
+                listener.exitKarcmarafsi(self)
 
 
 
 
-    def karlraf(self):
+    def karcmarafsi(self):
 
-        localctx = SkabanParser.KarlrafContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 58, self.RULE_karlraf)
+        localctx = SkabanParser.KarcmarafsiContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 58, self.RULE_karcmarafsi)
         try:
             self.state = 287
             self._errHandler.sync(self)
@@ -2242,13 +2243,13 @@ class SkabanParser ( Parser ):
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 285
-                self.broraf()
+                self.gahorkarcmarafsi()
                 pass
 
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 286
-                self.bauraf()
+                self.karkarcmarafsi()
                 pass
 
 
@@ -2268,22 +2269,22 @@ class SkabanParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def broraf(self, i:int=None):
+        def gahorkarcmarafsi(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(SkabanParser.BrorafContext)
+                return self.getTypedRuleContexts(SkabanParser.GahorkarcmarafsiContext)
             else:
-                return self.getTypedRuleContext(SkabanParser.BrorafContext,i)
+                return self.getTypedRuleContext(SkabanParser.GahorkarcmarafsiContext,i)
 
 
-        def balraf(self):
-            return self.getTypedRuleContext(SkabanParser.BalrafContext,0)
+        def ganlycmarafsi(self):
+            return self.getTypedRuleContext(SkabanParser.GanlycmarafsiContext,0)
 
 
-        def bauraf(self, i:int=None):
+        def karkarcmarafsi(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(SkabanParser.BaurafContext)
+                return self.getTypedRuleContexts(SkabanParser.KarkarcmarafsiContext)
             else:
-                return self.getTypedRuleContext(SkabanParser.BaurafContext,i)
+                return self.getTypedRuleContext(SkabanParser.KarkarcmarafsiContext,i)
 
 
         def q(self):
@@ -2323,7 +2324,7 @@ class SkabanParser ( Parser ):
                 la_ = self._interp.adaptivePredict(self._input,35,self._ctx)
                 if la_ == 1:
                     self.state = 289
-                    self.balraf()
+                    self.ganlycmarafsi()
                     self.state = 292
                     self._errHandler.sync(self)
                     la_ = self._interp.adaptivePredict(self._input,32,self._ctx)
@@ -2340,7 +2341,7 @@ class SkabanParser ( Parser ):
 
                 elif la_ == 2:
                     self.state = 294
-                    self.broraf()
+                    self.gahorkarcmarafsi()
                     self.state = 296
                     self._errHandler.sync(self)
                     la_ = self._interp.adaptivePredict(self._input,33,self._ctx)
@@ -2353,7 +2354,7 @@ class SkabanParser ( Parser ):
 
                 elif la_ == 3:
                     self.state = 298
-                    self.bauraf()
+                    self.karkarcmarafsi()
                     self.state = 300
                     self._errHandler.sync(self)
                     la_ = self._interp.adaptivePredict(self._input,34,self._ctx)
@@ -2366,7 +2367,7 @@ class SkabanParser ( Parser ):
 
 
                 self.state = 304
-                self.broraf()
+                self.gahorkarcmarafsi()
                 pass
 
             elif la_ == 2:
@@ -2376,7 +2377,7 @@ class SkabanParser ( Parser ):
                 la_ = self._interp.adaptivePredict(self._input,38,self._ctx)
                 if la_ == 1:
                     self.state = 306
-                    self.balraf()
+                    self.ganlycmarafsi()
                     self.state = 309
                     self._errHandler.sync(self)
                     la_ = self._interp.adaptivePredict(self._input,36,self._ctx)
@@ -2393,7 +2394,7 @@ class SkabanParser ( Parser ):
 
                 elif la_ == 2:
                     self.state = 311
-                    self.broraf()
+                    self.gahorkarcmarafsi()
                     self.state = 313
                     self._errHandler.sync(self)
                     la_ = self._interp.adaptivePredict(self._input,37,self._ctx)
@@ -2406,14 +2407,14 @@ class SkabanParser ( Parser ):
 
                 elif la_ == 3:
                     self.state = 315
-                    self.bauraf()
+                    self.karkarcmarafsi()
                     self.state = 316
                     self.q()
                     pass
 
 
                 self.state = 320
-                self.bauraf()
+                self.karkarcmarafsi()
                 pass
 
 

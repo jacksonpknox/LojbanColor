@@ -242,39 +242,39 @@ class SkabanListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by SkabanParser#balraf.
-    def enterBalraf(self, ctx:SkabanParser.BalrafContext):
+    # Enter a parse tree produced by SkabanParser#ganlycmarafsi.
+    def enterGanlycmarafsi(self, ctx:SkabanParser.GanlycmarafsiContext):
         pass
 
-    # Exit a parse tree produced by SkabanParser#balraf.
-    def exitBalraf(self, ctx:SkabanParser.BalrafContext):
-        pass
-
-
-    # Enter a parse tree produced by SkabanParser#broraf.
-    def enterBroraf(self, ctx:SkabanParser.BrorafContext):
-        pass
-
-    # Exit a parse tree produced by SkabanParser#broraf.
-    def exitBroraf(self, ctx:SkabanParser.BrorafContext):
+    # Exit a parse tree produced by SkabanParser#ganlycmarafsi.
+    def exitGanlycmarafsi(self, ctx:SkabanParser.GanlycmarafsiContext):
         pass
 
 
-    # Enter a parse tree produced by SkabanParser#bauraf.
-    def enterBauraf(self, ctx:SkabanParser.BaurafContext):
+    # Enter a parse tree produced by SkabanParser#gahorkarcmarafsi.
+    def enterGahorkarcmarafsi(self, ctx:SkabanParser.GahorkarcmarafsiContext):
         pass
 
-    # Exit a parse tree produced by SkabanParser#bauraf.
-    def exitBauraf(self, ctx:SkabanParser.BaurafContext):
+    # Exit a parse tree produced by SkabanParser#gahorkarcmarafsi.
+    def exitGahorkarcmarafsi(self, ctx:SkabanParser.GahorkarcmarafsiContext):
         pass
 
 
-    # Enter a parse tree produced by SkabanParser#karlraf.
-    def enterKarlraf(self, ctx:SkabanParser.KarlrafContext):
+    # Enter a parse tree produced by SkabanParser#karkarcmarafsi.
+    def enterKarkarcmarafsi(self, ctx:SkabanParser.KarkarcmarafsiContext):
         pass
 
-    # Exit a parse tree produced by SkabanParser#karlraf.
-    def exitKarlraf(self, ctx:SkabanParser.KarlrafContext):
+    # Exit a parse tree produced by SkabanParser#karkarcmarafsi.
+    def exitKarkarcmarafsi(self, ctx:SkabanParser.KarkarcmarafsiContext):
+        pass
+
+
+    # Enter a parse tree produced by SkabanParser#karcmarafsi.
+    def enterKarcmarafsi(self, ctx:SkabanParser.KarcmarafsiContext):
+        pass
+
+    # Exit a parse tree produced by SkabanParser#karcmarafsi.
+    def exitKarcmarafsi(self, ctx:SkabanParser.KarcmarafsiContext):
         pass
 
 

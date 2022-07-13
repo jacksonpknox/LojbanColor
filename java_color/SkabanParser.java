@@ -23,17 +23,17 @@ public class SkabanParser extends Parser {
 		RULE_lerfu = 10, RULE_brivla = 11, RULE_gismu = 12, RULE_lujvo = 13, RULE_kargismu = 14, 
 		RULE_gahorgismu = 15, RULE_bobvo = 16, RULE_cobvo = 17, RULE_dobvo = 18, 
 		RULE_fobvo = 19, RULE_gobvo = 20, RULE_balrelraf = 21, RULE_jvorebla = 22, 
-		RULE_relraf = 23, RULE_gimsygenja = 24, RULE_rafgimpag = 25, RULE_balraf = 26, 
-		RULE_broraf = 27, RULE_bauraf = 28, RULE_karlraf = 29, RULE_karlrelraf = 30, 
-		RULE_gahorgimsygenja = 31, RULE_kargimsygenja = 32, RULE_q = 33, RULE_y = 34, 
-		RULE_fuhivla = 35, RULE_anychar = 36;
+		RULE_relraf = 23, RULE_gimsygenja = 24, RULE_rafgimpag = 25, RULE_ganlycmarafsi = 26, 
+		RULE_gahorkarcmarafsi = 27, RULE_karkarcmarafsi = 28, RULE_karcmarafsi = 29, 
+		RULE_karlrelraf = 30, RULE_gahorgimsygenja = 31, RULE_kargimsygenja = 32, 
+		RULE_q = 33, RULE_y = 34, RULE_fuhivla = 35, RULE_anychar = 36;
 	private static String[] makeRuleNames() {
 		return new String[] {
 			"folio", "line", "end", "flufftence", "sentence", "word", "cmavo", "jonvla", 
 			"cmene", "karmaho", "lerfu", "brivla", "gismu", "lujvo", "kargismu", 
 			"gahorgismu", "bobvo", "cobvo", "dobvo", "fobvo", "gobvo", "balrelraf", 
-			"jvorebla", "relraf", "gimsygenja", "rafgimpag", "balraf", "broraf", 
-			"bauraf", "karlraf", "karlrelraf", "gahorgimsygenja", "kargimsygenja", 
+			"jvorebla", "relraf", "gimsygenja", "rafgimpag", "ganlycmarafsi", "gahorkarcmarafsi", 
+			"karkarcmarafsi", "karcmarafsi", "karlrelraf", "gahorgimsygenja", "kargimsygenja", 
 			"q", "y", "fuhivla", "anychar"
 		};
 	}
@@ -1289,8 +1289,8 @@ public class SkabanParser extends Parser {
 	}
 
 	public static class GobvoContext extends ParserRuleContext {
-		public BalrafContext balraf() {
-			return getRuleContext(BalrafContext.class,0);
+		public GanlycmarafsiContext ganlycmarafsi() {
+			return getRuleContext(GanlycmarafsiContext.class,0);
 		}
 		public GismuContext gismu() {
 			return getRuleContext(GismuContext.class,0);
@@ -1301,11 +1301,11 @@ public class SkabanParser extends Parser {
 		public YContext y() {
 			return getRuleContext(YContext.class,0);
 		}
-		public BrorafContext broraf() {
-			return getRuleContext(BrorafContext.class,0);
+		public GahorkarcmarafsiContext gahorkarcmarafsi() {
+			return getRuleContext(GahorkarcmarafsiContext.class,0);
 		}
-		public BaurafContext bauraf() {
-			return getRuleContext(BaurafContext.class,0);
+		public KarkarcmarafsiContext karkarcmarafsi() {
+			return getRuleContext(KarkarcmarafsiContext.class,0);
 		}
 		public KargismuContext kargismu() {
 			return getRuleContext(KargismuContext.class,0);
@@ -1338,7 +1338,7 @@ public class SkabanParser extends Parser {
 				enterOuterAlt(_localctx, 1);
 				{
 				setState(189);
-				balraf();
+				ganlycmarafsi();
 				setState(192);
 				_errHandler.sync(this);
 				switch ( getInterpreter().adaptivePredict(_input,15,_ctx) ) {
@@ -1363,7 +1363,7 @@ public class SkabanParser extends Parser {
 				enterOuterAlt(_localctx, 2);
 				{
 				setState(196);
-				broraf();
+				gahorkarcmarafsi();
 				setState(198);
 				_errHandler.sync(this);
 				switch ( getInterpreter().adaptivePredict(_input,16,_ctx) ) {
@@ -1382,7 +1382,7 @@ public class SkabanParser extends Parser {
 				enterOuterAlt(_localctx, 3);
 				{
 				setState(202);
-				bauraf();
+				karkarcmarafsi();
 				setState(203);
 				q();
 				setState(204);
@@ -1393,7 +1393,7 @@ public class SkabanParser extends Parser {
 				enterOuterAlt(_localctx, 4);
 				{
 				setState(206);
-				bauraf();
+				karkarcmarafsi();
 				setState(208);
 				_errHandler.sync(this);
 				switch ( getInterpreter().adaptivePredict(_input,17,_ctx) ) {
@@ -1422,17 +1422,17 @@ public class SkabanParser extends Parser {
 	}
 
 	public static class BalrelrafContext extends ParserRuleContext {
-		public List<BalrafContext> balraf() {
-			return getRuleContexts(BalrafContext.class);
+		public List<GanlycmarafsiContext> ganlycmarafsi() {
+			return getRuleContexts(GanlycmarafsiContext.class);
 		}
-		public BalrafContext balraf(int i) {
-			return getRuleContext(BalrafContext.class,i);
+		public GanlycmarafsiContext ganlycmarafsi(int i) {
+			return getRuleContext(GanlycmarafsiContext.class,i);
 		}
-		public BrorafContext broraf() {
-			return getRuleContext(BrorafContext.class,0);
+		public GahorkarcmarafsiContext gahorkarcmarafsi() {
+			return getRuleContext(GahorkarcmarafsiContext.class,0);
 		}
-		public BaurafContext bauraf() {
-			return getRuleContext(BaurafContext.class,0);
+		public KarkarcmarafsiContext karkarcmarafsi() {
+			return getRuleContext(KarkarcmarafsiContext.class,0);
 		}
 		public QContext q() {
 			return getRuleContext(QContext.class,0);
@@ -1466,7 +1466,7 @@ public class SkabanParser extends Parser {
 			case 1:
 				{
 				setState(214);
-				balraf();
+				ganlycmarafsi();
 				setState(217);
 				_errHandler.sync(this);
 				switch ( getInterpreter().adaptivePredict(_input,19,_ctx) ) {
@@ -1488,7 +1488,7 @@ public class SkabanParser extends Parser {
 			case 2:
 				{
 				setState(219);
-				broraf();
+				gahorkarcmarafsi();
 				setState(221);
 				_errHandler.sync(this);
 				switch ( getInterpreter().adaptivePredict(_input,20,_ctx) ) {
@@ -1504,14 +1504,14 @@ public class SkabanParser extends Parser {
 			case 3:
 				{
 				setState(223);
-				bauraf();
+				karkarcmarafsi();
 				setState(224);
 				q();
 				}
 				break;
 			}
 			setState(228);
-			balraf();
+			ganlycmarafsi();
 			}
 		}
 		catch (RecognitionException re) {
@@ -1526,20 +1526,20 @@ public class SkabanParser extends Parser {
 	}
 
 	public static class JvoreblaContext extends ParserRuleContext {
-		public List<KarlrafContext> karlraf() {
-			return getRuleContexts(KarlrafContext.class);
+		public List<KarcmarafsiContext> karcmarafsi() {
+			return getRuleContexts(KarcmarafsiContext.class);
 		}
-		public KarlrafContext karlraf(int i) {
-			return getRuleContext(KarlrafContext.class,i);
+		public KarcmarafsiContext karcmarafsi(int i) {
+			return getRuleContext(KarcmarafsiContext.class,i);
 		}
 		public GismuContext gismu() {
 			return getRuleContext(GismuContext.class,0);
 		}
-		public List<BalrafContext> balraf() {
-			return getRuleContexts(BalrafContext.class);
+		public List<GanlycmarafsiContext> ganlycmarafsi() {
+			return getRuleContexts(GanlycmarafsiContext.class);
 		}
-		public BalrafContext balraf(int i) {
-			return getRuleContext(BalrafContext.class,i);
+		public GanlycmarafsiContext ganlycmarafsi(int i) {
+			return getRuleContext(GanlycmarafsiContext.class,i);
 		}
 		public List<GimsygenjaContext> gimsygenja() {
 			return getRuleContexts(GimsygenjaContext.class);
@@ -1587,7 +1587,7 @@ public class SkabanParser extends Parser {
 					case 1:
 						{
 						setState(230);
-						balraf();
+						ganlycmarafsi();
 						setState(232);
 						_errHandler.sync(this);
 						_la = _input.LA(1);
@@ -1611,7 +1611,7 @@ public class SkabanParser extends Parser {
 					case 3:
 						{
 						setState(237);
-						karlraf();
+						karcmarafsi();
 						}
 						break;
 					}
@@ -1627,7 +1627,7 @@ public class SkabanParser extends Parser {
 			case 1:
 				{
 				setState(243);
-				karlraf();
+				karcmarafsi();
 				}
 				break;
 			case 2:
@@ -1761,8 +1761,8 @@ public class SkabanParser extends Parser {
 	}
 
 	public static class RafgimpagContext extends ParserRuleContext {
-		public BalrafContext balraf() {
-			return getRuleContext(BalrafContext.class,0);
+		public GanlycmarafsiContext ganlycmarafsi() {
+			return getRuleContext(GanlycmarafsiContext.class,0);
 		}
 		public GimsygenjaContext gimsygenja() {
 			return getRuleContext(GimsygenjaContext.class,0);
@@ -1770,8 +1770,8 @@ public class SkabanParser extends Parser {
 		public QContext q() {
 			return getRuleContext(QContext.class,0);
 		}
-		public KarlrafContext karlraf() {
-			return getRuleContext(KarlrafContext.class,0);
+		public KarcmarafsiContext karcmarafsi() {
+			return getRuleContext(KarcmarafsiContext.class,0);
 		}
 		public KargimsygenjaContext kargimsygenja() {
 			return getRuleContext(KargimsygenjaContext.class,0);
@@ -1804,7 +1804,7 @@ public class SkabanParser extends Parser {
 				enterOuterAlt(_localctx, 1);
 				{
 				setState(255);
-				balraf();
+				ganlycmarafsi();
 				setState(257);
 				_errHandler.sync(this);
 				switch ( getInterpreter().adaptivePredict(_input,28,_ctx) ) {
@@ -1823,7 +1823,7 @@ public class SkabanParser extends Parser {
 				enterOuterAlt(_localctx, 2);
 				{
 				setState(261);
-				karlraf();
+				karcmarafsi();
 				setState(262);
 				q();
 				setState(263);
@@ -1834,7 +1834,7 @@ public class SkabanParser extends Parser {
 				enterOuterAlt(_localctx, 3);
 				{
 				setState(265);
-				karlraf();
+				karcmarafsi();
 				setState(266);
 				gahorgimsygenja();
 				}
@@ -1852,29 +1852,29 @@ public class SkabanParser extends Parser {
 		return _localctx;
 	}
 
-	public static class BalrafContext extends ParserRuleContext {
+	public static class GanlycmarafsiContext extends ParserRuleContext {
 		public List<TerminalNode> C() { return getTokens(SkabanParser.C); }
 		public TerminalNode C(int i) {
 			return getToken(SkabanParser.C, i);
 		}
 		public TerminalNode V() { return getToken(SkabanParser.V, 0); }
-		public BalrafContext(ParserRuleContext parent, int invokingState) {
+		public GanlycmarafsiContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_balraf; }
+		@Override public int getRuleIndex() { return RULE_ganlycmarafsi; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SkabanListener ) ((SkabanListener)listener).enterBalraf(this);
+			if ( listener instanceof SkabanListener ) ((SkabanListener)listener).enterGanlycmarafsi(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SkabanListener ) ((SkabanListener)listener).exitBalraf(this);
+			if ( listener instanceof SkabanListener ) ((SkabanListener)listener).exitGanlycmarafsi(this);
 		}
 	}
 
-	public final BalrafContext balraf() throws RecognitionException {
-		BalrafContext _localctx = new BalrafContext(_ctx, getState());
-		enterRule(_localctx, 52, RULE_balraf);
+	public final GanlycmarafsiContext ganlycmarafsi() throws RecognitionException {
+		GanlycmarafsiContext _localctx = new GanlycmarafsiContext(_ctx, getState());
+		enterRule(_localctx, 52, RULE_ganlycmarafsi);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
@@ -1897,29 +1897,29 @@ public class SkabanParser extends Parser {
 		return _localctx;
 	}
 
-	public static class BrorafContext extends ParserRuleContext {
+	public static class GahorkarcmarafsiContext extends ParserRuleContext {
 		public List<TerminalNode> C() { return getTokens(SkabanParser.C); }
 		public TerminalNode C(int i) {
 			return getToken(SkabanParser.C, i);
 		}
 		public TerminalNode V() { return getToken(SkabanParser.V, 0); }
-		public BrorafContext(ParserRuleContext parent, int invokingState) {
+		public GahorkarcmarafsiContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_broraf; }
+		@Override public int getRuleIndex() { return RULE_gahorkarcmarafsi; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SkabanListener ) ((SkabanListener)listener).enterBroraf(this);
+			if ( listener instanceof SkabanListener ) ((SkabanListener)listener).enterGahorkarcmarafsi(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SkabanListener ) ((SkabanListener)listener).exitBroraf(this);
+			if ( listener instanceof SkabanListener ) ((SkabanListener)listener).exitGahorkarcmarafsi(this);
 		}
 	}
 
-	public final BrorafContext broraf() throws RecognitionException {
-		BrorafContext _localctx = new BrorafContext(_ctx, getState());
-		enterRule(_localctx, 54, RULE_broraf);
+	public final GahorkarcmarafsiContext gahorkarcmarafsi() throws RecognitionException {
+		GahorkarcmarafsiContext _localctx = new GahorkarcmarafsiContext(_ctx, getState());
+		enterRule(_localctx, 54, RULE_gahorkarcmarafsi);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
@@ -1942,30 +1942,30 @@ public class SkabanParser extends Parser {
 		return _localctx;
 	}
 
-	public static class BaurafContext extends ParserRuleContext {
+	public static class KarkarcmarafsiContext extends ParserRuleContext {
 		public TerminalNode C() { return getToken(SkabanParser.C, 0); }
 		public List<TerminalNode> V() { return getTokens(SkabanParser.V); }
 		public TerminalNode V(int i) {
 			return getToken(SkabanParser.V, i);
 		}
 		public TerminalNode AP() { return getToken(SkabanParser.AP, 0); }
-		public BaurafContext(ParserRuleContext parent, int invokingState) {
+		public KarkarcmarafsiContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_bauraf; }
+		@Override public int getRuleIndex() { return RULE_karkarcmarafsi; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SkabanListener ) ((SkabanListener)listener).enterBauraf(this);
+			if ( listener instanceof SkabanListener ) ((SkabanListener)listener).enterKarkarcmarafsi(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SkabanListener ) ((SkabanListener)listener).exitBauraf(this);
+			if ( listener instanceof SkabanListener ) ((SkabanListener)listener).exitKarkarcmarafsi(this);
 		}
 	}
 
-	public final BaurafContext bauraf() throws RecognitionException {
-		BaurafContext _localctx = new BaurafContext(_ctx, getState());
-		enterRule(_localctx, 56, RULE_bauraf);
+	public final KarkarcmarafsiContext karkarcmarafsi() throws RecognitionException {
+		KarkarcmarafsiContext _localctx = new KarkarcmarafsiContext(_ctx, getState());
+		enterRule(_localctx, 56, RULE_karkarcmarafsi);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
@@ -1999,30 +1999,30 @@ public class SkabanParser extends Parser {
 		return _localctx;
 	}
 
-	public static class KarlrafContext extends ParserRuleContext {
-		public BrorafContext broraf() {
-			return getRuleContext(BrorafContext.class,0);
+	public static class KarcmarafsiContext extends ParserRuleContext {
+		public GahorkarcmarafsiContext gahorkarcmarafsi() {
+			return getRuleContext(GahorkarcmarafsiContext.class,0);
 		}
-		public BaurafContext bauraf() {
-			return getRuleContext(BaurafContext.class,0);
+		public KarkarcmarafsiContext karkarcmarafsi() {
+			return getRuleContext(KarkarcmarafsiContext.class,0);
 		}
-		public KarlrafContext(ParserRuleContext parent, int invokingState) {
+		public KarcmarafsiContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_karlraf; }
+		@Override public int getRuleIndex() { return RULE_karcmarafsi; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SkabanListener ) ((SkabanListener)listener).enterKarlraf(this);
+			if ( listener instanceof SkabanListener ) ((SkabanListener)listener).enterKarcmarafsi(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SkabanListener ) ((SkabanListener)listener).exitKarlraf(this);
+			if ( listener instanceof SkabanListener ) ((SkabanListener)listener).exitKarcmarafsi(this);
 		}
 	}
 
-	public final KarlrafContext karlraf() throws RecognitionException {
-		KarlrafContext _localctx = new KarlrafContext(_ctx, getState());
-		enterRule(_localctx, 58, RULE_karlraf);
+	public final KarcmarafsiContext karcmarafsi() throws RecognitionException {
+		KarcmarafsiContext _localctx = new KarcmarafsiContext(_ctx, getState());
+		enterRule(_localctx, 58, RULE_karcmarafsi);
 		try {
 			setState(287);
 			_errHandler.sync(this);
@@ -2031,14 +2031,14 @@ public class SkabanParser extends Parser {
 				enterOuterAlt(_localctx, 1);
 				{
 				setState(285);
-				broraf();
+				gahorkarcmarafsi();
 				}
 				break;
 			case 2:
 				enterOuterAlt(_localctx, 2);
 				{
 				setState(286);
-				bauraf();
+				karkarcmarafsi();
 				}
 				break;
 			}
@@ -2055,20 +2055,20 @@ public class SkabanParser extends Parser {
 	}
 
 	public static class KarlrelrafContext extends ParserRuleContext {
-		public List<BrorafContext> broraf() {
-			return getRuleContexts(BrorafContext.class);
+		public List<GahorkarcmarafsiContext> gahorkarcmarafsi() {
+			return getRuleContexts(GahorkarcmarafsiContext.class);
 		}
-		public BrorafContext broraf(int i) {
-			return getRuleContext(BrorafContext.class,i);
+		public GahorkarcmarafsiContext gahorkarcmarafsi(int i) {
+			return getRuleContext(GahorkarcmarafsiContext.class,i);
 		}
-		public BalrafContext balraf() {
-			return getRuleContext(BalrafContext.class,0);
+		public GanlycmarafsiContext ganlycmarafsi() {
+			return getRuleContext(GanlycmarafsiContext.class,0);
 		}
-		public List<BaurafContext> bauraf() {
-			return getRuleContexts(BaurafContext.class);
+		public List<KarkarcmarafsiContext> karkarcmarafsi() {
+			return getRuleContexts(KarkarcmarafsiContext.class);
 		}
-		public BaurafContext bauraf(int i) {
-			return getRuleContext(BaurafContext.class,i);
+		public KarkarcmarafsiContext karkarcmarafsi(int i) {
+			return getRuleContext(KarkarcmarafsiContext.class,i);
 		}
 		public QContext q() {
 			return getRuleContext(QContext.class,0);
@@ -2106,7 +2106,7 @@ public class SkabanParser extends Parser {
 				case 1:
 					{
 					setState(289);
-					balraf();
+					ganlycmarafsi();
 					setState(292);
 					_errHandler.sync(this);
 					switch ( getInterpreter().adaptivePredict(_input,32,_ctx) ) {
@@ -2128,7 +2128,7 @@ public class SkabanParser extends Parser {
 				case 2:
 					{
 					setState(294);
-					broraf();
+					gahorkarcmarafsi();
 					setState(296);
 					_errHandler.sync(this);
 					switch ( getInterpreter().adaptivePredict(_input,33,_ctx) ) {
@@ -2144,7 +2144,7 @@ public class SkabanParser extends Parser {
 				case 3:
 					{
 					setState(298);
-					bauraf();
+					karkarcmarafsi();
 					setState(300);
 					_errHandler.sync(this);
 					switch ( getInterpreter().adaptivePredict(_input,34,_ctx) ) {
@@ -2159,7 +2159,7 @@ public class SkabanParser extends Parser {
 					break;
 				}
 				setState(304);
-				broraf();
+				gahorkarcmarafsi();
 				}
 				break;
 			case 2:
@@ -2171,7 +2171,7 @@ public class SkabanParser extends Parser {
 				case 1:
 					{
 					setState(306);
-					balraf();
+					ganlycmarafsi();
 					setState(309);
 					_errHandler.sync(this);
 					switch ( getInterpreter().adaptivePredict(_input,36,_ctx) ) {
@@ -2193,7 +2193,7 @@ public class SkabanParser extends Parser {
 				case 2:
 					{
 					setState(311);
-					broraf();
+					gahorkarcmarafsi();
 					setState(313);
 					_errHandler.sync(this);
 					switch ( getInterpreter().adaptivePredict(_input,37,_ctx) ) {
@@ -2209,14 +2209,14 @@ public class SkabanParser extends Parser {
 				case 3:
 					{
 					setState(315);
-					bauraf();
+					karkarcmarafsi();
 					setState(316);
 					q();
 					}
 					break;
 				}
 				setState(320);
-				bauraf();
+				karkarcmarafsi();
 				}
 				break;
 			}

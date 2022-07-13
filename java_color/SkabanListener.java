@@ -267,45 +267,45 @@ public interface SkabanListener extends ParseTreeListener {
 	 */
 	void exitRafgimpag(SkabanParser.RafgimpagContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link SkabanParser#balraf}.
+	 * Enter a parse tree produced by {@link SkabanParser#ganlycmarafsi}.
 	 * @param ctx the parse tree
 	 */
-	void enterBalraf(SkabanParser.BalrafContext ctx);
+	void enterGanlycmarafsi(SkabanParser.GanlycmarafsiContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link SkabanParser#balraf}.
+	 * Exit a parse tree produced by {@link SkabanParser#ganlycmarafsi}.
 	 * @param ctx the parse tree
 	 */
-	void exitBalraf(SkabanParser.BalrafContext ctx);
+	void exitGanlycmarafsi(SkabanParser.GanlycmarafsiContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link SkabanParser#broraf}.
+	 * Enter a parse tree produced by {@link SkabanParser#gahorkarcmarafsi}.
 	 * @param ctx the parse tree
 	 */
-	void enterBroraf(SkabanParser.BrorafContext ctx);
+	void enterGahorkarcmarafsi(SkabanParser.GahorkarcmarafsiContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link SkabanParser#broraf}.
+	 * Exit a parse tree produced by {@link SkabanParser#gahorkarcmarafsi}.
 	 * @param ctx the parse tree
 	 */
-	void exitBroraf(SkabanParser.BrorafContext ctx);
+	void exitGahorkarcmarafsi(SkabanParser.GahorkarcmarafsiContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link SkabanParser#bauraf}.
+	 * Enter a parse tree produced by {@link SkabanParser#karkarcmarafsi}.
 	 * @param ctx the parse tree
 	 */
-	void enterBauraf(SkabanParser.BaurafContext ctx);
+	void enterKarkarcmarafsi(SkabanParser.KarkarcmarafsiContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link SkabanParser#bauraf}.
+	 * Exit a parse tree produced by {@link SkabanParser#karkarcmarafsi}.
 	 * @param ctx the parse tree
 	 */
-	void exitBauraf(SkabanParser.BaurafContext ctx);
+	void exitKarkarcmarafsi(SkabanParser.KarkarcmarafsiContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link SkabanParser#karlraf}.
+	 * Enter a parse tree produced by {@link SkabanParser#karcmarafsi}.
 	 * @param ctx the parse tree
 	 */
-	void enterKarlraf(SkabanParser.KarlrafContext ctx);
+	void enterKarcmarafsi(SkabanParser.KarcmarafsiContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link SkabanParser#karlraf}.
+	 * Exit a parse tree produced by {@link SkabanParser#karcmarafsi}.
 	 * @param ctx the parse tree
 	 */
-	void exitKarlraf(SkabanParser.KarlrafContext ctx);
+	void exitKarcmarafsi(SkabanParser.KarcmarafsiContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link SkabanParser#karlrelraf}.
 	 * @param ctx the parse tree

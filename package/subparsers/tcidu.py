@@ -29,13 +29,13 @@ class Collector(SkabanListener):
 
 
 class CmarafsiCollector(Collector):
-    def enterBalraf(self, ctx):
+    def enterGanlycmarafsi(self, ctx):
         self.grab(ctx.getText())
 
-    def enterBroraf(self, ctx):
+    def enterGahorkarcmarafsi(self, ctx):
         self.grab(ctx.getText())
 
-    def enterBauraf(self, ctx):
+    def enterKarkarcmarafsi(self, ctx):
         self.grab(ctx.getText())
 
 
@@ -88,14 +88,14 @@ class Skabanizer(SkabanListener):
     def enterGahorgismu(self, ctx):
         self.t.append(text=ctx.getText(), style=self.valskari["ga'orgismu"])
 
-    def enterBalraf(self, ctx):
-        self.t.append(text=ctx.getText(), style=self.valskari["balraf"])
+    def enterGanlycmarafsi(self, ctx):
+        self.t.append(text=ctx.getText(), style=self.valskari["ganlycmarafsi"])
 
-    def enterBroraf(self, ctx):
-        self.t.append(text=ctx.getText(), style=self.valskari["broraf"])
+    def enterGahorkarcmarafsi(self, ctx):
+        self.t.append(text=ctx.getText(), style=self.valskari["ga'orkarcmarafsi"])
 
-    def enterBauraf(self, ctx):
-        self.t.append(text=ctx.getText(), style=self.valskari["bauraf"])
+    def enterKarkarcmarafsi(self, ctx):
+        self.t.append(text=ctx.getText(), style=self.valskari["karkarcmarafsi"])
 
     def enterGahorgimsygenja(self, ctx: SkabanParser.GahorgimsygenjaContext):
         self.t.append(text=ctx.getText(), style=self.valskari["ga'orgimsygenja"])

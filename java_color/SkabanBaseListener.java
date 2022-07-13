@@ -327,49 +327,49 @@ public class SkabanBaseListener implements SkabanListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterBalraf(SkabanParser.BalrafContext ctx) { }
+	@Override public void enterGanlycmarafsi(SkabanParser.GanlycmarafsiContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitBalraf(SkabanParser.BalrafContext ctx) { }
+	@Override public void exitGanlycmarafsi(SkabanParser.GanlycmarafsiContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterBroraf(SkabanParser.BrorafContext ctx) { }
+	@Override public void enterGahorkarcmarafsi(SkabanParser.GahorkarcmarafsiContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitBroraf(SkabanParser.BrorafContext ctx) { }
+	@Override public void exitGahorkarcmarafsi(SkabanParser.GahorkarcmarafsiContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterBauraf(SkabanParser.BaurafContext ctx) { }
+	@Override public void enterKarkarcmarafsi(SkabanParser.KarkarcmarafsiContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitBauraf(SkabanParser.BaurafContext ctx) { }
+	@Override public void exitKarkarcmarafsi(SkabanParser.KarkarcmarafsiContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterKarlraf(SkabanParser.KarlrafContext ctx) { }
+	@Override public void enterKarcmarafsi(SkabanParser.KarcmarafsiContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitKarlraf(SkabanParser.KarlrafContext ctx) { }
+	@Override public void exitKarcmarafsi(SkabanParser.KarcmarafsiContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
