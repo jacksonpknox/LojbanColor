@@ -175,17 +175,17 @@ class SkabanParser ( Parser ):
     RULE_fobvo = 19
     RULE_gobvo = 20
     RULE_balrelraf = 21
-    RULE_jvoreb = 22
+    RULE_jvorebla = 22
     RULE_relraf = 23
-    RULE_gimpag = 24
+    RULE_gimsygenja = 24
     RULE_rafgimpag = 25
     RULE_balraf = 26
     RULE_broraf = 27
     RULE_bauraf = 28
     RULE_karlraf = 29
     RULE_karlrelraf = 30
-    RULE_gahorgimpag = 31
-    RULE_kargimpag = 32
+    RULE_gahorgimsygenja = 31
+    RULE_kargimsygenja = 32
     RULE_q = 33
     RULE_y = 34
     RULE_fuhivla = 35
@@ -194,10 +194,10 @@ class SkabanParser ( Parser ):
     ruleNames =  [ "folio", "line", "end", "flufftence", "sentence", "word", 
                    "cmavo", "jonvla", "cmene", "karmaho", "lerfu", "brivla", 
                    "gismu", "lujvo", "kargismu", "gahorgismu", "bobvo", 
-                   "cobvo", "dobvo", "fobvo", "gobvo", "balrelraf", "jvoreb", 
-                   "relraf", "gimpag", "rafgimpag", "balraf", "broraf", 
-                   "bauraf", "karlraf", "karlrelraf", "gahorgimpag", "kargimpag", 
-                   "q", "y", "fuhivla", "anychar" ]
+                   "cobvo", "dobvo", "fobvo", "gobvo", "balrelraf", "jvorebla", 
+                   "relraf", "gimsygenja", "rafgimpag", "balraf", "broraf", 
+                   "bauraf", "karlraf", "karlrelraf", "gahorgimsygenja", 
+                   "kargimsygenja", "q", "y", "fuhivla", "anychar" ]
 
     EOF = Token.EOF
     WS=1
@@ -1264,8 +1264,8 @@ class SkabanParser ( Parser ):
             return self.getTypedRuleContext(SkabanParser.YContext,0)
 
 
-        def jvoreb(self):
-            return self.getTypedRuleContext(SkabanParser.JvorebContext,0)
+        def jvorebla(self):
+            return self.getTypedRuleContext(SkabanParser.JvoreblaContext,0)
 
 
         def getRuleIndex(self):
@@ -1293,7 +1293,7 @@ class SkabanParser ( Parser ):
             self.state = 174
             self.y()
             self.state = 175
-            self.jvoreb()
+            self.jvorebla()
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -1314,8 +1314,8 @@ class SkabanParser ( Parser ):
             return self.getTypedRuleContext(SkabanParser.RelrafContext,0)
 
 
-        def jvoreb(self):
-            return self.getTypedRuleContext(SkabanParser.JvorebContext,0)
+        def jvorebla(self):
+            return self.getTypedRuleContext(SkabanParser.JvoreblaContext,0)
 
 
         def getRuleIndex(self):
@@ -1346,7 +1346,7 @@ class SkabanParser ( Parser ):
             _la = self._input.LA(1)
             if _la==SkabanParser.C:
                 self.state = 178
-                self.jvoreb()
+                self.jvorebla()
 
 
         except RecognitionException as re:
@@ -1365,16 +1365,16 @@ class SkabanParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def gimpag(self):
-            return self.getTypedRuleContext(SkabanParser.GimpagContext,0)
+        def gimsygenja(self):
+            return self.getTypedRuleContext(SkabanParser.GimsygenjaContext,0)
 
 
         def y(self):
             return self.getTypedRuleContext(SkabanParser.YContext,0)
 
 
-        def jvoreb(self):
-            return self.getTypedRuleContext(SkabanParser.JvorebContext,0)
+        def jvorebla(self):
+            return self.getTypedRuleContext(SkabanParser.JvoreblaContext,0)
 
 
         def getRuleIndex(self):
@@ -1398,11 +1398,11 @@ class SkabanParser ( Parser ):
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 181
-            self.gimpag()
+            self.gimsygenja()
             self.state = 182
             self.y()
             self.state = 183
-            self.jvoreb()
+            self.jvorebla()
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -1427,8 +1427,8 @@ class SkabanParser ( Parser ):
             return self.getTypedRuleContext(SkabanParser.YContext,0)
 
 
-        def jvoreb(self):
-            return self.getTypedRuleContext(SkabanParser.JvorebContext,0)
+        def jvorebla(self):
+            return self.getTypedRuleContext(SkabanParser.JvoreblaContext,0)
 
 
         def getRuleIndex(self):
@@ -1456,7 +1456,7 @@ class SkabanParser ( Parser ):
             self.state = 186
             self.y()
             self.state = 187
-            self.jvoreb()
+            self.jvorebla()
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -1701,7 +1701,7 @@ class SkabanParser ( Parser ):
         return localctx
 
 
-    class JvorebContext(ParserRuleContext):
+    class JvoreblaContext(ParserRuleContext):
         __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
@@ -1726,11 +1726,11 @@ class SkabanParser ( Parser ):
                 return self.getTypedRuleContext(SkabanParser.BalrafContext,i)
 
 
-        def gimpag(self, i:int=None):
+        def gimsygenja(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(SkabanParser.GimpagContext)
+                return self.getTypedRuleContexts(SkabanParser.GimsygenjaContext)
             else:
-                return self.getTypedRuleContext(SkabanParser.GimpagContext,i)
+                return self.getTypedRuleContext(SkabanParser.GimsygenjaContext,i)
 
 
         def y(self, i:int=None):
@@ -1741,23 +1741,23 @@ class SkabanParser ( Parser ):
 
 
         def getRuleIndex(self):
-            return SkabanParser.RULE_jvoreb
+            return SkabanParser.RULE_jvorebla
 
         def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterJvoreb" ):
-                listener.enterJvoreb(self)
+            if hasattr( listener, "enterJvorebla" ):
+                listener.enterJvorebla(self)
 
         def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitJvoreb" ):
-                listener.exitJvoreb(self)
+            if hasattr( listener, "exitJvorebla" ):
+                listener.exitJvorebla(self)
 
 
 
 
-    def jvoreb(self):
+    def jvorebla(self):
 
-        localctx = SkabanParser.JvorebContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 44, self.RULE_jvoreb)
+        localctx = SkabanParser.JvoreblaContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 44, self.RULE_jvorebla)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
@@ -1784,7 +1784,7 @@ class SkabanParser ( Parser ):
 
                     elif la_ == 2:
                         self.state = 234
-                        self.gimpag()
+                        self.gimsygenja()
                         self.state = 235
                         self.y()
                         pass
@@ -1881,39 +1881,39 @@ class SkabanParser ( Parser ):
         return localctx
 
 
-    class GimpagContext(ParserRuleContext):
+    class GimsygenjaContext(ParserRuleContext):
         __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def gahorgimpag(self):
-            return self.getTypedRuleContext(SkabanParser.GahorgimpagContext,0)
+        def gahorgimsygenja(self):
+            return self.getTypedRuleContext(SkabanParser.GahorgimsygenjaContext,0)
 
 
-        def kargimpag(self):
-            return self.getTypedRuleContext(SkabanParser.KargimpagContext,0)
+        def kargimsygenja(self):
+            return self.getTypedRuleContext(SkabanParser.KargimsygenjaContext,0)
 
 
         def getRuleIndex(self):
-            return SkabanParser.RULE_gimpag
+            return SkabanParser.RULE_gimsygenja
 
         def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterGimpag" ):
-                listener.enterGimpag(self)
+            if hasattr( listener, "enterGimsygenja" ):
+                listener.enterGimsygenja(self)
 
         def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitGimpag" ):
-                listener.exitGimpag(self)
+            if hasattr( listener, "exitGimsygenja" ):
+                listener.exitGimsygenja(self)
 
 
 
 
-    def gimpag(self):
+    def gimsygenja(self):
 
-        localctx = SkabanParser.GimpagContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 48, self.RULE_gimpag)
+        localctx = SkabanParser.GimsygenjaContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 48, self.RULE_gimsygenja)
         try:
             self.state = 253
             self._errHandler.sync(self)
@@ -1921,13 +1921,13 @@ class SkabanParser ( Parser ):
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 251
-                self.gahorgimpag()
+                self.gahorgimsygenja()
                 pass
 
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 252
-                self.kargimpag()
+                self.kargimsygenja()
                 pass
 
 
@@ -1951,8 +1951,8 @@ class SkabanParser ( Parser ):
             return self.getTypedRuleContext(SkabanParser.BalrafContext,0)
 
 
-        def gimpag(self):
-            return self.getTypedRuleContext(SkabanParser.GimpagContext,0)
+        def gimsygenja(self):
+            return self.getTypedRuleContext(SkabanParser.GimsygenjaContext,0)
 
 
         def q(self):
@@ -1963,12 +1963,12 @@ class SkabanParser ( Parser ):
             return self.getTypedRuleContext(SkabanParser.KarlrafContext,0)
 
 
-        def kargimpag(self):
-            return self.getTypedRuleContext(SkabanParser.KargimpagContext,0)
+        def kargimsygenja(self):
+            return self.getTypedRuleContext(SkabanParser.KargimsygenjaContext,0)
 
 
-        def gahorgimpag(self):
-            return self.getTypedRuleContext(SkabanParser.GahorgimpagContext,0)
+        def gahorgimsygenja(self):
+            return self.getTypedRuleContext(SkabanParser.GahorgimsygenjaContext,0)
 
 
         def getRuleIndex(self):
@@ -2006,7 +2006,7 @@ class SkabanParser ( Parser ):
 
 
                 self.state = 259
-                self.gimpag()
+                self.gimsygenja()
                 pass
 
             elif la_ == 2:
@@ -2016,7 +2016,7 @@ class SkabanParser ( Parser ):
                 self.state = 262
                 self.q()
                 self.state = 263
-                self.kargimpag()
+                self.kargimsygenja()
                 pass
 
             elif la_ == 3:
@@ -2024,7 +2024,7 @@ class SkabanParser ( Parser ):
                 self.state = 265
                 self.karlraf()
                 self.state = 266
-                self.gahorgimpag()
+                self.gahorgimsygenja()
                 pass
 
 
@@ -2426,7 +2426,7 @@ class SkabanParser ( Parser ):
         return localctx
 
 
-    class GahorgimpagContext(ParserRuleContext):
+    class GahorgimsygenjaContext(ParserRuleContext):
         __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
@@ -2443,23 +2443,23 @@ class SkabanParser ( Parser ):
             return self.getToken(SkabanParser.V, 0)
 
         def getRuleIndex(self):
-            return SkabanParser.RULE_gahorgimpag
+            return SkabanParser.RULE_gahorgimsygenja
 
         def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterGahorgimpag" ):
-                listener.enterGahorgimpag(self)
+            if hasattr( listener, "enterGahorgimsygenja" ):
+                listener.enterGahorgimsygenja(self)
 
         def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitGahorgimpag" ):
-                listener.exitGahorgimpag(self)
+            if hasattr( listener, "exitGahorgimsygenja" ):
+                listener.exitGahorgimsygenja(self)
 
 
 
 
-    def gahorgimpag(self):
+    def gahorgimsygenja(self):
 
-        localctx = SkabanParser.GahorgimpagContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 62, self.RULE_gahorgimpag)
+        localctx = SkabanParser.GahorgimsygenjaContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 62, self.RULE_gahorgimsygenja)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 324
@@ -2479,7 +2479,7 @@ class SkabanParser ( Parser ):
         return localctx
 
 
-    class KargimpagContext(ParserRuleContext):
+    class KargimsygenjaContext(ParserRuleContext):
         __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
@@ -2496,23 +2496,23 @@ class SkabanParser ( Parser ):
             return self.getToken(SkabanParser.V, 0)
 
         def getRuleIndex(self):
-            return SkabanParser.RULE_kargimpag
+            return SkabanParser.RULE_kargimsygenja
 
         def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterKargimpag" ):
-                listener.enterKargimpag(self)
+            if hasattr( listener, "enterKargimsygenja" ):
+                listener.enterKargimsygenja(self)
 
         def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitKargimpag" ):
-                listener.exitKargimpag(self)
+            if hasattr( listener, "exitKargimsygenja" ):
+                listener.exitKargimsygenja(self)
 
 
 
 
-    def kargimpag(self):
+    def kargimsygenja(self):
 
-        localctx = SkabanParser.KargimpagContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 64, self.RULE_kargimpag)
+        localctx = SkabanParser.KargimsygenjaContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 64, self.RULE_kargimsygenja)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 329

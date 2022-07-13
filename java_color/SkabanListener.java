@@ -227,15 +227,15 @@ public interface SkabanListener extends ParseTreeListener {
 	 */
 	void exitBalrelraf(SkabanParser.BalrelrafContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link SkabanParser#jvoreb}.
+	 * Enter a parse tree produced by {@link SkabanParser#jvorebla}.
 	 * @param ctx the parse tree
 	 */
-	void enterJvoreb(SkabanParser.JvorebContext ctx);
+	void enterJvorebla(SkabanParser.JvoreblaContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link SkabanParser#jvoreb}.
+	 * Exit a parse tree produced by {@link SkabanParser#jvorebla}.
 	 * @param ctx the parse tree
 	 */
-	void exitJvoreb(SkabanParser.JvorebContext ctx);
+	void exitJvorebla(SkabanParser.JvoreblaContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link SkabanParser#relraf}.
 	 * @param ctx the parse tree
@@ -247,15 +247,15 @@ public interface SkabanListener extends ParseTreeListener {
 	 */
 	void exitRelraf(SkabanParser.RelrafContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link SkabanParser#gimpag}.
+	 * Enter a parse tree produced by {@link SkabanParser#gimsygenja}.
 	 * @param ctx the parse tree
 	 */
-	void enterGimpag(SkabanParser.GimpagContext ctx);
+	void enterGimsygenja(SkabanParser.GimsygenjaContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link SkabanParser#gimpag}.
+	 * Exit a parse tree produced by {@link SkabanParser#gimsygenja}.
 	 * @param ctx the parse tree
 	 */
-	void exitGimpag(SkabanParser.GimpagContext ctx);
+	void exitGimsygenja(SkabanParser.GimsygenjaContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link SkabanParser#rafgimpag}.
 	 * @param ctx the parse tree
@@ -317,25 +317,25 @@ public interface SkabanListener extends ParseTreeListener {
 	 */
 	void exitKarlrelraf(SkabanParser.KarlrelrafContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link SkabanParser#gahorgimpag}.
+	 * Enter a parse tree produced by {@link SkabanParser#gahorgimsygenja}.
 	 * @param ctx the parse tree
 	 */
-	void enterGahorgimpag(SkabanParser.GahorgimpagContext ctx);
+	void enterGahorgimsygenja(SkabanParser.GahorgimsygenjaContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link SkabanParser#gahorgimpag}.
+	 * Exit a parse tree produced by {@link SkabanParser#gahorgimsygenja}.
 	 * @param ctx the parse tree
 	 */
-	void exitGahorgimpag(SkabanParser.GahorgimpagContext ctx);
+	void exitGahorgimsygenja(SkabanParser.GahorgimsygenjaContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link SkabanParser#kargimpag}.
+	 * Enter a parse tree produced by {@link SkabanParser#kargimsygenja}.
 	 * @param ctx the parse tree
 	 */
-	void enterKargimpag(SkabanParser.KargimpagContext ctx);
+	void enterKargimsygenja(SkabanParser.KargimsygenjaContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link SkabanParser#kargimpag}.
+	 * Exit a parse tree produced by {@link SkabanParser#kargimsygenja}.
 	 * @param ctx the parse tree
 	 */
-	void exitKargimpag(SkabanParser.KargimpagContext ctx);
+	void exitKargimsygenja(SkabanParser.KargimsygenjaContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link SkabanParser#q}.
 	 * @param ctx the parse tree

@@ -206,12 +206,12 @@ class SkabanListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by SkabanParser#jvoreb.
-    def enterJvoreb(self, ctx:SkabanParser.JvorebContext):
+    # Enter a parse tree produced by SkabanParser#jvorebla.
+    def enterJvorebla(self, ctx:SkabanParser.JvoreblaContext):
         pass
 
-    # Exit a parse tree produced by SkabanParser#jvoreb.
-    def exitJvoreb(self, ctx:SkabanParser.JvorebContext):
+    # Exit a parse tree produced by SkabanParser#jvorebla.
+    def exitJvorebla(self, ctx:SkabanParser.JvoreblaContext):
         pass
 
 
@@ -224,12 +224,12 @@ class SkabanListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by SkabanParser#gimpag.
-    def enterGimpag(self, ctx:SkabanParser.GimpagContext):
+    # Enter a parse tree produced by SkabanParser#gimsygenja.
+    def enterGimsygenja(self, ctx:SkabanParser.GimsygenjaContext):
         pass
 
-    # Exit a parse tree produced by SkabanParser#gimpag.
-    def exitGimpag(self, ctx:SkabanParser.GimpagContext):
+    # Exit a parse tree produced by SkabanParser#gimsygenja.
+    def exitGimsygenja(self, ctx:SkabanParser.GimsygenjaContext):
         pass
 
 
@@ -287,21 +287,21 @@ class SkabanListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by SkabanParser#gahorgimpag.
-    def enterGahorgimpag(self, ctx:SkabanParser.GahorgimpagContext):
+    # Enter a parse tree produced by SkabanParser#gahorgimsygenja.
+    def enterGahorgimsygenja(self, ctx:SkabanParser.GahorgimsygenjaContext):
         pass
 
-    # Exit a parse tree produced by SkabanParser#gahorgimpag.
-    def exitGahorgimpag(self, ctx:SkabanParser.GahorgimpagContext):
+    # Exit a parse tree produced by SkabanParser#gahorgimsygenja.
+    def exitGahorgimsygenja(self, ctx:SkabanParser.GahorgimsygenjaContext):
         pass
 
 
-    # Enter a parse tree produced by SkabanParser#kargimpag.
-    def enterKargimpag(self, ctx:SkabanParser.KargimpagContext):
+    # Enter a parse tree produced by SkabanParser#kargimsygenja.
+    def enterKargimsygenja(self, ctx:SkabanParser.KargimsygenjaContext):
         pass
 
-    # Exit a parse tree produced by SkabanParser#kargimpag.
-    def exitKargimpag(self, ctx:SkabanParser.KargimpagContext):
+    # Exit a parse tree produced by SkabanParser#kargimsygenja.
+    def exitKargimsygenja(self, ctx:SkabanParser.KargimsygenjaContext):
         pass
 
 

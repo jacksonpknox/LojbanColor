@@ -279,13 +279,13 @@ public class SkabanBaseListener implements SkabanListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterJvoreb(SkabanParser.JvorebContext ctx) { }
+	@Override public void enterJvorebla(SkabanParser.JvoreblaContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitJvoreb(SkabanParser.JvorebContext ctx) { }
+	@Override public void exitJvorebla(SkabanParser.JvoreblaContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -303,13 +303,13 @@ public class SkabanBaseListener implements SkabanListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterGimpag(SkabanParser.GimpagContext ctx) { }
+	@Override public void enterGimsygenja(SkabanParser.GimsygenjaContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitGimpag(SkabanParser.GimpagContext ctx) { }
+	@Override public void exitGimsygenja(SkabanParser.GimsygenjaContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -387,25 +387,25 @@ public class SkabanBaseListener implements SkabanListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterGahorgimpag(SkabanParser.GahorgimpagContext ctx) { }
+	@Override public void enterGahorgimsygenja(SkabanParser.GahorgimsygenjaContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitGahorgimpag(SkabanParser.GahorgimpagContext ctx) { }
+	@Override public void exitGahorgimsygenja(SkabanParser.GahorgimsygenjaContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterKargimpag(SkabanParser.KargimpagContext ctx) { }
+	@Override public void enterKargimsygenja(SkabanParser.KargimsygenjaContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitKargimpag(SkabanParser.KargimpagContext ctx) { }
+	@Override public void exitKargimsygenja(SkabanParser.KargimsygenjaContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *

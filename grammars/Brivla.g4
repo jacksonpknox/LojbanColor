@@ -10,10 +10,10 @@ lujvo : bobvo | cobvo | dobvo | fobvo | gobvo ;
 kargismu : C V C C V ;
 gahorgismu : C C V C V ;
 
-bobvo : balrelraf y jvoreb ;
-cobvo : relraf jvoreb? ;
-dobvo : gimpag y jvoreb ;
-fobvo : rafgimpag y jvoreb ;
+bobvo : balrelraf y jvorebla ;
+cobvo : relraf jvorebla? ;
+dobvo : gimsygenja y jvorebla ;
+fobvo : rafgimpag y jvorebla ;
 gobvo : balraf (q | y)? gismu
       | broraf q? gismu
       | bauraf q kargismu
@@ -24,15 +24,15 @@ gobvo : balraf (q | y)? gismu
 
 
 balrelraf : (balraf (q | y)? | broraf q? | bauraf q) balraf ;
-jvoreb : (balraf y? | gimpag y | karlraf)* (karlraf | gismu) ;
+jvorebla : (balraf y? | gimsygenja y | karlraf)* (karlraf | gismu) ;
 
 relraf : balrelraf | karlrelraf ;
 
-gimpag : gahorgimpag | kargimpag ;
+gimsygenja : gahorgimsygenja | kargimsygenja ;
 
-rafgimpag : balraf q? gimpag
-          | karlraf q kargimpag
-          | karlraf gahorgimpag
+rafgimpag : balraf q? gimsygenja
+          | karlraf q kargimsygenja
+          | karlraf gahorgimsygenja
           ;
 
 balraf : C V C ;
@@ -46,8 +46,8 @@ karlrelraf : (balraf (q | y)? | broraf q? | bauraf q?) broraf
            | (balraf (q | y)? | broraf q? | bauraf q) bauraf
            ;
 
-gahorgimpag : C C V C ;
-kargimpag : C V C C ;
+gahorgimsygenja : C C V C ;
+kargimsygenja : C V C C ;
 
 
 q : C ; // can be customized by breaking up C into subsets
