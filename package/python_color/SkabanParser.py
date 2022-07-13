@@ -174,16 +174,16 @@ class SkabanParser ( Parser ):
     RULE_dobvo = 18
     RULE_fobvo = 19
     RULE_gobvo = 20
-    RULE_balrelraf = 21
+    RULE_ganlyrelrafsi = 21
     RULE_jvorebla = 22
-    RULE_relraf = 23
+    RULE_relrafsi = 23
     RULE_gimsygenja = 24
-    RULE_rafgimpag = 25
+    RULE_rafsygimsygenja = 25
     RULE_ganlycmarafsi = 26
     RULE_gahorkarcmarafsi = 27
     RULE_karkarcmarafsi = 28
     RULE_karcmarafsi = 29
-    RULE_karlrelraf = 30
+    RULE_karlyrelrafsi = 30
     RULE_gahorgimsygenja = 31
     RULE_kargimsygenja = 32
     RULE_q = 33
@@ -194,11 +194,11 @@ class SkabanParser ( Parser ):
     ruleNames =  [ "folio", "line", "end", "flufftence", "sentence", "word", 
                    "cmavo", "jonvla", "cmene", "karmaho", "lerfu", "brivla", 
                    "gismu", "lujvo", "kargismu", "gahorgismu", "bobvo", 
-                   "cobvo", "dobvo", "fobvo", "gobvo", "balrelraf", "jvorebla", 
-                   "relraf", "gimsygenja", "rafgimpag", "ganlycmarafsi", 
-                   "gahorkarcmarafsi", "karkarcmarafsi", "karcmarafsi", 
-                   "karlrelraf", "gahorgimsygenja", "kargimsygenja", "q", 
-                   "y", "fuhivla", "anychar" ]
+                   "cobvo", "dobvo", "fobvo", "gobvo", "ganlyrelrafsi", 
+                   "jvorebla", "relrafsi", "gimsygenja", "rafsygimsygenja", 
+                   "ganlycmarafsi", "gahorkarcmarafsi", "karkarcmarafsi", 
+                   "karcmarafsi", "karlyrelrafsi", "gahorgimsygenja", "kargimsygenja", 
+                   "q", "y", "fuhivla", "anychar" ]
 
     EOF = Token.EOF
     WS=1
@@ -1257,8 +1257,8 @@ class SkabanParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def balrelraf(self):
-            return self.getTypedRuleContext(SkabanParser.BalrelrafContext,0)
+        def ganlyrelrafsi(self):
+            return self.getTypedRuleContext(SkabanParser.GanlyrelrafsiContext,0)
 
 
         def y(self):
@@ -1290,7 +1290,7 @@ class SkabanParser ( Parser ):
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 173
-            self.balrelraf()
+            self.ganlyrelrafsi()
             self.state = 174
             self.y()
             self.state = 175
@@ -1311,8 +1311,8 @@ class SkabanParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def relraf(self):
-            return self.getTypedRuleContext(SkabanParser.RelrafContext,0)
+        def relrafsi(self):
+            return self.getTypedRuleContext(SkabanParser.RelrafsiContext,0)
 
 
         def jvorebla(self):
@@ -1341,7 +1341,7 @@ class SkabanParser ( Parser ):
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 177
-            self.relraf()
+            self.relrafsi()
             self.state = 179
             self._errHandler.sync(self)
             _la = self._input.LA(1)
@@ -1420,8 +1420,8 @@ class SkabanParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def rafgimpag(self):
-            return self.getTypedRuleContext(SkabanParser.RafgimpagContext,0)
+        def rafsygimsygenja(self):
+            return self.getTypedRuleContext(SkabanParser.RafsygimsygenjaContext,0)
 
 
         def y(self):
@@ -1453,7 +1453,7 @@ class SkabanParser ( Parser ):
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 185
-            self.rafgimpag()
+            self.rafsygimsygenja()
             self.state = 186
             self.y()
             self.state = 187
@@ -1600,7 +1600,7 @@ class SkabanParser ( Parser ):
         return localctx
 
 
-    class BalrelrafContext(ParserRuleContext):
+    class GanlyrelrafsiContext(ParserRuleContext):
         __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
@@ -1631,23 +1631,23 @@ class SkabanParser ( Parser ):
 
 
         def getRuleIndex(self):
-            return SkabanParser.RULE_balrelraf
+            return SkabanParser.RULE_ganlyrelrafsi
 
         def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterBalrelraf" ):
-                listener.enterBalrelraf(self)
+            if hasattr( listener, "enterGanlyrelrafsi" ):
+                listener.enterGanlyrelrafsi(self)
 
         def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitBalrelraf" ):
-                listener.exitBalrelraf(self)
+            if hasattr( listener, "exitGanlyrelrafsi" ):
+                listener.exitGanlyrelrafsi(self)
 
 
 
 
-    def balrelraf(self):
+    def ganlyrelrafsi(self):
 
-        localctx = SkabanParser.BalrelrafContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 42, self.RULE_balrelraf)
+        localctx = SkabanParser.GanlyrelrafsiContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 42, self.RULE_ganlyrelrafsi)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 226
@@ -1823,39 +1823,39 @@ class SkabanParser ( Parser ):
         return localctx
 
 
-    class RelrafContext(ParserRuleContext):
+    class RelrafsiContext(ParserRuleContext):
         __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def balrelraf(self):
-            return self.getTypedRuleContext(SkabanParser.BalrelrafContext,0)
+        def ganlyrelrafsi(self):
+            return self.getTypedRuleContext(SkabanParser.GanlyrelrafsiContext,0)
 
 
-        def karlrelraf(self):
-            return self.getTypedRuleContext(SkabanParser.KarlrelrafContext,0)
+        def karlyrelrafsi(self):
+            return self.getTypedRuleContext(SkabanParser.KarlyrelrafsiContext,0)
 
 
         def getRuleIndex(self):
-            return SkabanParser.RULE_relraf
+            return SkabanParser.RULE_relrafsi
 
         def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterRelraf" ):
-                listener.enterRelraf(self)
+            if hasattr( listener, "enterRelrafsi" ):
+                listener.enterRelrafsi(self)
 
         def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitRelraf" ):
-                listener.exitRelraf(self)
+            if hasattr( listener, "exitRelrafsi" ):
+                listener.exitRelrafsi(self)
 
 
 
 
-    def relraf(self):
+    def relrafsi(self):
 
-        localctx = SkabanParser.RelrafContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 46, self.RULE_relraf)
+        localctx = SkabanParser.RelrafsiContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 46, self.RULE_relrafsi)
         try:
             self.state = 249
             self._errHandler.sync(self)
@@ -1863,13 +1863,13 @@ class SkabanParser ( Parser ):
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 247
-                self.balrelraf()
+                self.ganlyrelrafsi()
                 pass
 
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 248
-                self.karlrelraf()
+                self.karlyrelrafsi()
                 pass
 
 
@@ -1941,7 +1941,7 @@ class SkabanParser ( Parser ):
         return localctx
 
 
-    class RafgimpagContext(ParserRuleContext):
+    class RafsygimsygenjaContext(ParserRuleContext):
         __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
@@ -1973,23 +1973,23 @@ class SkabanParser ( Parser ):
 
 
         def getRuleIndex(self):
-            return SkabanParser.RULE_rafgimpag
+            return SkabanParser.RULE_rafsygimsygenja
 
         def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterRafgimpag" ):
-                listener.enterRafgimpag(self)
+            if hasattr( listener, "enterRafsygimsygenja" ):
+                listener.enterRafsygimsygenja(self)
 
         def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitRafgimpag" ):
-                listener.exitRafgimpag(self)
+            if hasattr( listener, "exitRafsygimsygenja" ):
+                listener.exitRafsygimsygenja(self)
 
 
 
 
-    def rafgimpag(self):
+    def rafsygimsygenja(self):
 
-        localctx = SkabanParser.RafgimpagContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 50, self.RULE_rafgimpag)
+        localctx = SkabanParser.RafsygimsygenjaContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 50, self.RULE_rafsygimsygenja)
         try:
             self.state = 268
             self._errHandler.sync(self)
@@ -2262,7 +2262,7 @@ class SkabanParser ( Parser ):
         return localctx
 
 
-    class KarlrelrafContext(ParserRuleContext):
+    class KarlyrelrafsiContext(ParserRuleContext):
         __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
@@ -2296,23 +2296,23 @@ class SkabanParser ( Parser ):
 
 
         def getRuleIndex(self):
-            return SkabanParser.RULE_karlrelraf
+            return SkabanParser.RULE_karlyrelrafsi
 
         def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterKarlrelraf" ):
-                listener.enterKarlrelraf(self)
+            if hasattr( listener, "enterKarlyrelrafsi" ):
+                listener.enterKarlyrelrafsi(self)
 
         def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitKarlrelraf" ):
-                listener.exitKarlrelraf(self)
+            if hasattr( listener, "exitKarlyrelrafsi" ):
+                listener.exitKarlyrelrafsi(self)
 
 
 
 
-    def karlrelraf(self):
+    def karlyrelrafsi(self):
 
-        localctx = SkabanParser.KarlrelrafContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 60, self.RULE_karlrelraf)
+        localctx = SkabanParser.KarlyrelrafsiContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 60, self.RULE_karlyrelrafsi)
         try:
             self.state = 322
             self._errHandler.sync(self)

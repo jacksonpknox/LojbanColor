@@ -217,15 +217,15 @@ public interface SkabanListener extends ParseTreeListener {
 	 */
 	void exitGobvo(SkabanParser.GobvoContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link SkabanParser#balrelraf}.
+	 * Enter a parse tree produced by {@link SkabanParser#ganlyrelrafsi}.
 	 * @param ctx the parse tree
 	 */
-	void enterBalrelraf(SkabanParser.BalrelrafContext ctx);
+	void enterGanlyrelrafsi(SkabanParser.GanlyrelrafsiContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link SkabanParser#balrelraf}.
+	 * Exit a parse tree produced by {@link SkabanParser#ganlyrelrafsi}.
 	 * @param ctx the parse tree
 	 */
-	void exitBalrelraf(SkabanParser.BalrelrafContext ctx);
+	void exitGanlyrelrafsi(SkabanParser.GanlyrelrafsiContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link SkabanParser#jvorebla}.
 	 * @param ctx the parse tree
@@ -237,15 +237,15 @@ public interface SkabanListener extends ParseTreeListener {
 	 */
 	void exitJvorebla(SkabanParser.JvoreblaContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link SkabanParser#relraf}.
+	 * Enter a parse tree produced by {@link SkabanParser#relrafsi}.
 	 * @param ctx the parse tree
 	 */
-	void enterRelraf(SkabanParser.RelrafContext ctx);
+	void enterRelrafsi(SkabanParser.RelrafsiContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link SkabanParser#relraf}.
+	 * Exit a parse tree produced by {@link SkabanParser#relrafsi}.
 	 * @param ctx the parse tree
 	 */
-	void exitRelraf(SkabanParser.RelrafContext ctx);
+	void exitRelrafsi(SkabanParser.RelrafsiContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link SkabanParser#gimsygenja}.
 	 * @param ctx the parse tree
@@ -257,15 +257,15 @@ public interface SkabanListener extends ParseTreeListener {
 	 */
 	void exitGimsygenja(SkabanParser.GimsygenjaContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link SkabanParser#rafgimpag}.
+	 * Enter a parse tree produced by {@link SkabanParser#rafsygimsygenja}.
 	 * @param ctx the parse tree
 	 */
-	void enterRafgimpag(SkabanParser.RafgimpagContext ctx);
+	void enterRafsygimsygenja(SkabanParser.RafsygimsygenjaContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link SkabanParser#rafgimpag}.
+	 * Exit a parse tree produced by {@link SkabanParser#rafsygimsygenja}.
 	 * @param ctx the parse tree
 	 */
-	void exitRafgimpag(SkabanParser.RafgimpagContext ctx);
+	void exitRafsygimsygenja(SkabanParser.RafsygimsygenjaContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link SkabanParser#ganlycmarafsi}.
 	 * @param ctx the parse tree
@@ -307,15 +307,15 @@ public interface SkabanListener extends ParseTreeListener {
 	 */
 	void exitKarcmarafsi(SkabanParser.KarcmarafsiContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link SkabanParser#karlrelraf}.
+	 * Enter a parse tree produced by {@link SkabanParser#karlyrelrafsi}.
 	 * @param ctx the parse tree
 	 */
-	void enterKarlrelraf(SkabanParser.KarlrelrafContext ctx);
+	void enterKarlyrelrafsi(SkabanParser.KarlyrelrafsiContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link SkabanParser#karlrelraf}.
+	 * Exit a parse tree produced by {@link SkabanParser#karlyrelrafsi}.
 	 * @param ctx the parse tree
 	 */
-	void exitKarlrelraf(SkabanParser.KarlrelrafContext ctx);
+	void exitKarlyrelrafsi(SkabanParser.KarlyrelrafsiContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link SkabanParser#gahorgimsygenja}.
 	 * @param ctx the parse tree

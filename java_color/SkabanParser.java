@@ -22,19 +22,19 @@ public class SkabanParser extends Parser {
 		RULE_word = 5, RULE_cmavo = 6, RULE_jonvla = 7, RULE_cmene = 8, RULE_karmaho = 9, 
 		RULE_lerfu = 10, RULE_brivla = 11, RULE_gismu = 12, RULE_lujvo = 13, RULE_kargismu = 14, 
 		RULE_gahorgismu = 15, RULE_bobvo = 16, RULE_cobvo = 17, RULE_dobvo = 18, 
-		RULE_fobvo = 19, RULE_gobvo = 20, RULE_balrelraf = 21, RULE_jvorebla = 22, 
-		RULE_relraf = 23, RULE_gimsygenja = 24, RULE_rafgimpag = 25, RULE_ganlycmarafsi = 26, 
+		RULE_fobvo = 19, RULE_gobvo = 20, RULE_ganlyrelrafsi = 21, RULE_jvorebla = 22, 
+		RULE_relrafsi = 23, RULE_gimsygenja = 24, RULE_rafsygimsygenja = 25, RULE_ganlycmarafsi = 26, 
 		RULE_gahorkarcmarafsi = 27, RULE_karkarcmarafsi = 28, RULE_karcmarafsi = 29, 
-		RULE_karlrelraf = 30, RULE_gahorgimsygenja = 31, RULE_kargimsygenja = 32, 
+		RULE_karlyrelrafsi = 30, RULE_gahorgimsygenja = 31, RULE_kargimsygenja = 32, 
 		RULE_q = 33, RULE_y = 34, RULE_fuhivla = 35, RULE_anychar = 36;
 	private static String[] makeRuleNames() {
 		return new String[] {
 			"folio", "line", "end", "flufftence", "sentence", "word", "cmavo", "jonvla", 
 			"cmene", "karmaho", "lerfu", "brivla", "gismu", "lujvo", "kargismu", 
-			"gahorgismu", "bobvo", "cobvo", "dobvo", "fobvo", "gobvo", "balrelraf", 
-			"jvorebla", "relraf", "gimsygenja", "rafgimpag", "ganlycmarafsi", "gahorkarcmarafsi", 
-			"karkarcmarafsi", "karcmarafsi", "karlrelraf", "gahorgimsygenja", "kargimsygenja", 
-			"q", "y", "fuhivla", "anychar"
+			"gahorgismu", "bobvo", "cobvo", "dobvo", "fobvo", "gobvo", "ganlyrelrafsi", 
+			"jvorebla", "relrafsi", "gimsygenja", "rafsygimsygenja", "ganlycmarafsi", 
+			"gahorkarcmarafsi", "karkarcmarafsi", "karcmarafsi", "karlyrelrafsi", 
+			"gahorgimsygenja", "kargimsygenja", "q", "y", "fuhivla", "anychar"
 		};
 	}
 	public static final String[] ruleNames = makeRuleNames();
@@ -1089,8 +1089,8 @@ public class SkabanParser extends Parser {
 	}
 
 	public static class BobvoContext extends ParserRuleContext {
-		public BalrelrafContext balrelraf() {
-			return getRuleContext(BalrelrafContext.class,0);
+		public GanlyrelrafsiContext ganlyrelrafsi() {
+			return getRuleContext(GanlyrelrafsiContext.class,0);
 		}
 		public YContext y() {
 			return getRuleContext(YContext.class,0);
@@ -1119,7 +1119,7 @@ public class SkabanParser extends Parser {
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(173);
-			balrelraf();
+			ganlyrelrafsi();
 			setState(174);
 			y();
 			setState(175);
@@ -1138,8 +1138,8 @@ public class SkabanParser extends Parser {
 	}
 
 	public static class CobvoContext extends ParserRuleContext {
-		public RelrafContext relraf() {
-			return getRuleContext(RelrafContext.class,0);
+		public RelrafsiContext relrafsi() {
+			return getRuleContext(RelrafsiContext.class,0);
 		}
 		public JvoreblaContext jvorebla() {
 			return getRuleContext(JvoreblaContext.class,0);
@@ -1166,7 +1166,7 @@ public class SkabanParser extends Parser {
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(177);
-			relraf();
+			relrafsi();
 			setState(179);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
@@ -1240,8 +1240,8 @@ public class SkabanParser extends Parser {
 	}
 
 	public static class FobvoContext extends ParserRuleContext {
-		public RafgimpagContext rafgimpag() {
-			return getRuleContext(RafgimpagContext.class,0);
+		public RafsygimsygenjaContext rafsygimsygenja() {
+			return getRuleContext(RafsygimsygenjaContext.class,0);
 		}
 		public YContext y() {
 			return getRuleContext(YContext.class,0);
@@ -1270,7 +1270,7 @@ public class SkabanParser extends Parser {
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(185);
-			rafgimpag();
+			rafsygimsygenja();
 			setState(186);
 			y();
 			setState(187);
@@ -1421,7 +1421,7 @@ public class SkabanParser extends Parser {
 		return _localctx;
 	}
 
-	public static class BalrelrafContext extends ParserRuleContext {
+	public static class GanlyrelrafsiContext extends ParserRuleContext {
 		public List<GanlycmarafsiContext> ganlycmarafsi() {
 			return getRuleContexts(GanlycmarafsiContext.class);
 		}
@@ -1440,23 +1440,23 @@ public class SkabanParser extends Parser {
 		public YContext y() {
 			return getRuleContext(YContext.class,0);
 		}
-		public BalrelrafContext(ParserRuleContext parent, int invokingState) {
+		public GanlyrelrafsiContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_balrelraf; }
+		@Override public int getRuleIndex() { return RULE_ganlyrelrafsi; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SkabanListener ) ((SkabanListener)listener).enterBalrelraf(this);
+			if ( listener instanceof SkabanListener ) ((SkabanListener)listener).enterGanlyrelrafsi(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SkabanListener ) ((SkabanListener)listener).exitBalrelraf(this);
+			if ( listener instanceof SkabanListener ) ((SkabanListener)listener).exitGanlyrelrafsi(this);
 		}
 	}
 
-	public final BalrelrafContext balrelraf() throws RecognitionException {
-		BalrelrafContext _localctx = new BalrelrafContext(_ctx, getState());
-		enterRule(_localctx, 42, RULE_balrelraf);
+	public final GanlyrelrafsiContext ganlyrelrafsi() throws RecognitionException {
+		GanlyrelrafsiContext _localctx = new GanlyrelrafsiContext(_ctx, getState());
+		enterRule(_localctx, 42, RULE_ganlyrelrafsi);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
@@ -1650,30 +1650,30 @@ public class SkabanParser extends Parser {
 		return _localctx;
 	}
 
-	public static class RelrafContext extends ParserRuleContext {
-		public BalrelrafContext balrelraf() {
-			return getRuleContext(BalrelrafContext.class,0);
+	public static class RelrafsiContext extends ParserRuleContext {
+		public GanlyrelrafsiContext ganlyrelrafsi() {
+			return getRuleContext(GanlyrelrafsiContext.class,0);
 		}
-		public KarlrelrafContext karlrelraf() {
-			return getRuleContext(KarlrelrafContext.class,0);
+		public KarlyrelrafsiContext karlyrelrafsi() {
+			return getRuleContext(KarlyrelrafsiContext.class,0);
 		}
-		public RelrafContext(ParserRuleContext parent, int invokingState) {
+		public RelrafsiContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_relraf; }
+		@Override public int getRuleIndex() { return RULE_relrafsi; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SkabanListener ) ((SkabanListener)listener).enterRelraf(this);
+			if ( listener instanceof SkabanListener ) ((SkabanListener)listener).enterRelrafsi(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SkabanListener ) ((SkabanListener)listener).exitRelraf(this);
+			if ( listener instanceof SkabanListener ) ((SkabanListener)listener).exitRelrafsi(this);
 		}
 	}
 
-	public final RelrafContext relraf() throws RecognitionException {
-		RelrafContext _localctx = new RelrafContext(_ctx, getState());
-		enterRule(_localctx, 46, RULE_relraf);
+	public final RelrafsiContext relrafsi() throws RecognitionException {
+		RelrafsiContext _localctx = new RelrafsiContext(_ctx, getState());
+		enterRule(_localctx, 46, RULE_relrafsi);
 		try {
 			setState(249);
 			_errHandler.sync(this);
@@ -1682,14 +1682,14 @@ public class SkabanParser extends Parser {
 				enterOuterAlt(_localctx, 1);
 				{
 				setState(247);
-				balrelraf();
+				ganlyrelrafsi();
 				}
 				break;
 			case 2:
 				enterOuterAlt(_localctx, 2);
 				{
 				setState(248);
-				karlrelraf();
+				karlyrelrafsi();
 				}
 				break;
 			}
@@ -1760,7 +1760,7 @@ public class SkabanParser extends Parser {
 		return _localctx;
 	}
 
-	public static class RafgimpagContext extends ParserRuleContext {
+	public static class RafsygimsygenjaContext extends ParserRuleContext {
 		public GanlycmarafsiContext ganlycmarafsi() {
 			return getRuleContext(GanlycmarafsiContext.class,0);
 		}
@@ -1779,23 +1779,23 @@ public class SkabanParser extends Parser {
 		public GahorgimsygenjaContext gahorgimsygenja() {
 			return getRuleContext(GahorgimsygenjaContext.class,0);
 		}
-		public RafgimpagContext(ParserRuleContext parent, int invokingState) {
+		public RafsygimsygenjaContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_rafgimpag; }
+		@Override public int getRuleIndex() { return RULE_rafsygimsygenja; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SkabanListener ) ((SkabanListener)listener).enterRafgimpag(this);
+			if ( listener instanceof SkabanListener ) ((SkabanListener)listener).enterRafsygimsygenja(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SkabanListener ) ((SkabanListener)listener).exitRafgimpag(this);
+			if ( listener instanceof SkabanListener ) ((SkabanListener)listener).exitRafsygimsygenja(this);
 		}
 	}
 
-	public final RafgimpagContext rafgimpag() throws RecognitionException {
-		RafgimpagContext _localctx = new RafgimpagContext(_ctx, getState());
-		enterRule(_localctx, 50, RULE_rafgimpag);
+	public final RafsygimsygenjaContext rafsygimsygenja() throws RecognitionException {
+		RafsygimsygenjaContext _localctx = new RafsygimsygenjaContext(_ctx, getState());
+		enterRule(_localctx, 50, RULE_rafsygimsygenja);
 		try {
 			setState(268);
 			_errHandler.sync(this);
@@ -2054,7 +2054,7 @@ public class SkabanParser extends Parser {
 		return _localctx;
 	}
 
-	public static class KarlrelrafContext extends ParserRuleContext {
+	public static class KarlyrelrafsiContext extends ParserRuleContext {
 		public List<GahorkarcmarafsiContext> gahorkarcmarafsi() {
 			return getRuleContexts(GahorkarcmarafsiContext.class);
 		}
@@ -2076,23 +2076,23 @@ public class SkabanParser extends Parser {
 		public YContext y() {
 			return getRuleContext(YContext.class,0);
 		}
-		public KarlrelrafContext(ParserRuleContext parent, int invokingState) {
+		public KarlyrelrafsiContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_karlrelraf; }
+		@Override public int getRuleIndex() { return RULE_karlyrelrafsi; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SkabanListener ) ((SkabanListener)listener).enterKarlrelraf(this);
+			if ( listener instanceof SkabanListener ) ((SkabanListener)listener).enterKarlyrelrafsi(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SkabanListener ) ((SkabanListener)listener).exitKarlrelraf(this);
+			if ( listener instanceof SkabanListener ) ((SkabanListener)listener).exitKarlyrelrafsi(this);
 		}
 	}
 
-	public final KarlrelrafContext karlrelraf() throws RecognitionException {
-		KarlrelrafContext _localctx = new KarlrelrafContext(_ctx, getState());
-		enterRule(_localctx, 60, RULE_karlrelraf);
+	public final KarlyrelrafsiContext karlyrelrafsi() throws RecognitionException {
+		KarlyrelrafsiContext _localctx = new KarlyrelrafsiContext(_ctx, getState());
+		enterRule(_localctx, 60, RULE_karlyrelrafsi);
 		try {
 			setState(322);
 			_errHandler.sync(this);

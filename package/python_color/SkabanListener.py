@@ -197,12 +197,12 @@ class SkabanListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by SkabanParser#balrelraf.
-    def enterBalrelraf(self, ctx:SkabanParser.BalrelrafContext):
+    # Enter a parse tree produced by SkabanParser#ganlyrelrafsi.
+    def enterGanlyrelrafsi(self, ctx:SkabanParser.GanlyrelrafsiContext):
         pass
 
-    # Exit a parse tree produced by SkabanParser#balrelraf.
-    def exitBalrelraf(self, ctx:SkabanParser.BalrelrafContext):
+    # Exit a parse tree produced by SkabanParser#ganlyrelrafsi.
+    def exitGanlyrelrafsi(self, ctx:SkabanParser.GanlyrelrafsiContext):
         pass
 
 
@@ -215,12 +215,12 @@ class SkabanListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by SkabanParser#relraf.
-    def enterRelraf(self, ctx:SkabanParser.RelrafContext):
+    # Enter a parse tree produced by SkabanParser#relrafsi.
+    def enterRelrafsi(self, ctx:SkabanParser.RelrafsiContext):
         pass
 
-    # Exit a parse tree produced by SkabanParser#relraf.
-    def exitRelraf(self, ctx:SkabanParser.RelrafContext):
+    # Exit a parse tree produced by SkabanParser#relrafsi.
+    def exitRelrafsi(self, ctx:SkabanParser.RelrafsiContext):
         pass
 
 
@@ -233,12 +233,12 @@ class SkabanListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by SkabanParser#rafgimpag.
-    def enterRafgimpag(self, ctx:SkabanParser.RafgimpagContext):
+    # Enter a parse tree produced by SkabanParser#rafsygimsygenja.
+    def enterRafsygimsygenja(self, ctx:SkabanParser.RafsygimsygenjaContext):
         pass
 
-    # Exit a parse tree produced by SkabanParser#rafgimpag.
-    def exitRafgimpag(self, ctx:SkabanParser.RafgimpagContext):
+    # Exit a parse tree produced by SkabanParser#rafsygimsygenja.
+    def exitRafsygimsygenja(self, ctx:SkabanParser.RafsygimsygenjaContext):
         pass
 
 
@@ -278,12 +278,12 @@ class SkabanListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by SkabanParser#karlrelraf.
-    def enterKarlrelraf(self, ctx:SkabanParser.KarlrelrafContext):
+    # Enter a parse tree produced by SkabanParser#karlyrelrafsi.
+    def enterKarlyrelrafsi(self, ctx:SkabanParser.KarlyrelrafsiContext):
         pass
 
-    # Exit a parse tree produced by SkabanParser#karlrelraf.
-    def exitKarlrelraf(self, ctx:SkabanParser.KarlrelrafContext):
+    # Exit a parse tree produced by SkabanParser#karlyrelrafsi.
+    def exitKarlyrelrafsi(self, ctx:SkabanParser.KarlyrelrafsiContext):
         pass
 
 

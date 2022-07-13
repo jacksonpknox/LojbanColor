@@ -267,13 +267,13 @@ public class SkabanBaseListener implements SkabanListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterBalrelraf(SkabanParser.BalrelrafContext ctx) { }
+	@Override public void enterGanlyrelrafsi(SkabanParser.GanlyrelrafsiContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitBalrelraf(SkabanParser.BalrelrafContext ctx) { }
+	@Override public void exitGanlyrelrafsi(SkabanParser.GanlyrelrafsiContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -291,13 +291,13 @@ public class SkabanBaseListener implements SkabanListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterRelraf(SkabanParser.RelrafContext ctx) { }
+	@Override public void enterRelrafsi(SkabanParser.RelrafsiContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitRelraf(SkabanParser.RelrafContext ctx) { }
+	@Override public void exitRelrafsi(SkabanParser.RelrafsiContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -315,13 +315,13 @@ public class SkabanBaseListener implements SkabanListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterRafgimpag(SkabanParser.RafgimpagContext ctx) { }
+	@Override public void enterRafsygimsygenja(SkabanParser.RafsygimsygenjaContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitRafgimpag(SkabanParser.RafgimpagContext ctx) { }
+	@Override public void exitRafsygimsygenja(SkabanParser.RafsygimsygenjaContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -375,13 +375,13 @@ public class SkabanBaseListener implements SkabanListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterKarlrelraf(SkabanParser.KarlrelrafContext ctx) { }
+	@Override public void enterKarlyrelrafsi(SkabanParser.KarlyrelrafsiContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitKarlrelraf(SkabanParser.KarlrelrafContext ctx) { }
+	@Override public void exitKarlyrelrafsi(SkabanParser.KarlyrelrafsiContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
