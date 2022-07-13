@@ -1,4 +1,5 @@
 grammar Fuhivla ;
+import Lexer ;
 
 fuhivla : anychar+ ;
 

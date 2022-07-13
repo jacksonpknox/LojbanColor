@@ -1,4 +1,4 @@
-# Generated from Color.g4 by ANTLR 4.10.1
+# Generated from Skaban.g4 by ANTLR 4.10.1
 from antlr4 import *
 from io import StringIO
 import sys
@@ -27,7 +27,7 @@ def serializedATN():
         16,1,0,0,0,3,0,20,23,0
     ]
 
-class ColorLexer(Lexer):
+class SkabanLexer(Lexer):
 
     atn = ATNDeserializer().deserialize(serializedATN())
 
@@ -54,7 +54,7 @@ class ColorLexer(Lexer):
 
     ruleNames = [ "WS", "NEWLINE", "DOT", "C", "V", "Y", "AP", "EXTRA" ]
 
-    grammarFileName = "Color.g4"
+    grammarFileName = "Skaban.g4"
 
     def __init__(self, input=None, output:TextIO = sys.stdout):
         super().__init__(input, output)

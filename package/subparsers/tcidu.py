@@ -14,12 +14,12 @@ from rich.console import Console, Group
 from rich.style import Style
 
 from antlr4 import ParseTreeWalker, ParserRuleContext, InputStream, CommonTokenStream
-from python_color.ColorListener import ColorListener
-from python_color.ColorLexer import ColorLexer
-from python_color.ColorParser import ColorParser
+from python_color.SkabanListener import SkabanListener
+from python_color.SkabanLexer import SkabanLexer
+from python_color.SkabanParser import SkabanParser
 
 
-class Collector(ColorListener):
+class Collector(SkabanListener):
     def __init__(self):
         self.collection = []
 
@@ -45,7 +45,7 @@ class GismuCollector(Collector):
 
 
 class CmavoCollector(Collector):
-    def enterCat_cmavo(self, ctx: ColorParser.Cat_cmavoContext):
+    def enterKarmaho(self, ctx: SkabanParser.KarmahoContext):
         self.grab(ctx.getText())
 
 
@@ -55,7 +55,7 @@ def collect(tree, Collector) -> list:
     return collector.collection
 
 
-class Colorizer(ColorListener):
+class Skabanizer(SkabanListener):
     def __init__(self, selmahos: dict, valskari: dict):
         self.t = Text()
         self.selmahos = selmahos
@@ -67,7 +67,7 @@ class Colorizer(ColorListener):
     def exitWord(self, ctx):
         self.t.append(" ")
 
-    def enterCat_cmavo(self, ctx: ColorParser.Cat_cmavoContext):
+    def enterKarmaho(self, ctx: SkabanParser.KarmahoContext):
         self.t.append(
             text=(cmavo := ctx.getText()),
             style=self.selmahos[plumbing.get_selmaho(cmavo, self.selmahos)]["color"],
@@ -97,10 +97,10 @@ class Colorizer(ColorListener):
     def enterBauraf(self, ctx):
         self.t.append(text=ctx.getText(), style=self.valskari["bauraf"])
 
-    def enterGahorgimpag(self, ctx: ColorParser.GahorgimpagContext):
+    def enterGahorgimpag(self, ctx: SkabanParser.GahorgimpagContext):
         self.t.append(text=ctx.getText(), style=self.valskari["ga'orgimpag"])
 
-    def enterKargimpag(self, ctx: ColorParser.KargimpagContext):
+    def enterKargimpag(self, ctx: SkabanParser.KargimpagContext):
         self.t.append(text=ctx.getText(), style=self.valskari["kargimpag"])
 
     def enterY(self, ctx):
@@ -188,7 +188,7 @@ def analyze_selmahos(tree, selmahos, skari, squeeze: int, show_styles: bool=Fals
 
 
 def colorize(tree, selmahos, skari) -> Text:
-    printer = Colorizer(selmahos, skari["valskari"])
+    printer = Skabanizer(selmahos, skari["valskari"])
     walker = ParseTreeWalker()
     walker.walk(printer, tree)
     printer.t.rstrip()
@@ -197,9 +197,9 @@ def colorize(tree, selmahos, skari) -> Text:
 
 def get_parse_tree(lojban: str) -> ParserRuleContext:
     input_stream = InputStream(lojban)
-    lexer = ColorLexer(input_stream)
+    lexer = SkabanLexer(input_stream)
     stream = CommonTokenStream(lexer)
-    parser = ColorParser(stream)
+    parser = SkabanParser(stream)
     return parser.folio()
 
 
