@@ -229,10 +229,7 @@ def process_and_print_tree(tree, args: dict, console, gismus, selmahos, skari):
             sty = Style(bgcolor="#333333") if (i % 2) else Style(bgcolor="black")
             panel.style += sty
 
-    if args.horizontal:
-        raise Exception("no horizontal ! >:3")
-    else:
-        console.print(Panel(Group(*renderables), box.DOUBLE, expand=False))
+    console.print(Panel(Group(*renderables), box.DOUBLE, expand=False))
 
 
 def parse(args: dict):

@@ -9,8 +9,8 @@ import subparsers.cpedu as cpedu
 def build_parser():
     parser = argparse.ArgumentParser(
         formatter_class=RichHelpFormatter,
-        description="This is the skavla program :)",
-        epilog="God bless you !",
+        description="skavla: colored words\n A program that reads and colors Lojban",
+        epilog="<3",
     )
     subparsers = parser.add_subparsers(title="commands")
 
@@ -146,12 +146,6 @@ def build_parser():
         action="store",
         help="export the result to an .svg file",
         metavar="LOCATION",
-    )
-    parser_read.add_argument(
-        "-z",
-        "--horizontal",
-        action="store_true",
-        help="print panels in a horizontal row",
     )
     parser_read.add_argument(
         "-q",
