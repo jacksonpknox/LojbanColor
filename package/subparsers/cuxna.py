@@ -43,6 +43,7 @@ def add_cmavyrafsi(selmaho: str, cmavo: str, cmarafsi: str, selmahos: dict, skar
             mahos[selmaho] = DEFAULT_SELMAHO_PACKET
         if "cmarafsi" not in mahos[selmaho].keys():
             mahos[selmaho]["cmarafsi"] = dict()
+            #TODO: say you caught the cmavo
         mahos[selmaho]["cmarafsi"][cmarafsi] = cmavo
         print(
             Text.assemble(
@@ -55,7 +56,6 @@ def add_cmavyrafsi(selmaho: str, cmavo: str, cmarafsi: str, selmahos: dict, skar
             )
         )
         
-
 
 def add_cmarafsi(gismu: str, cmarafsi: str, skari: dict) -> None:
     s = skari["mi'iskari"]["system"]
@@ -165,6 +165,7 @@ def add_cmavo(cmavo: str, selmaho: str, skari: dict) -> None:
 
 
 def set_all_selmaho_style(style: str, skari: dict) -> None:
+    #TODO: add a warning and request for confirmation
     with Config("selmahos") as selmahos:
         for s in selmahos.keys():
             selmahos[s]["color"] = style
@@ -176,7 +177,6 @@ def set_all_selmaho_style(style: str, skari: dict) -> None:
                 (".", skari["mi'iskari"]["system"])
             )
         )
-
 
             
 def set_valsi_style(token: str, style: str) -> None:
