@@ -174,12 +174,6 @@ def build_parser():
     # CPEDU CPEDU CPEDU CPEDU CPEDU
     parser_request = subparsers.add_parser("cpedu", formatter_class=RichHelpFormatter)
     parser_request.add_argument(
-        "-z",
-        "--horizontal",
-        action="store_true",
-        help="print panels in a horizontal row"
-    )
-    parser_request.add_argument(
         "-q",
         "--squeeze",
         action="store",
