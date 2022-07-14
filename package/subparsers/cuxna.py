@@ -232,6 +232,7 @@ def set_selmaho_style(selmaho: str, colour: str, skari: dict) -> None:
         )
 
 
+#TODO: -cr --cmavyrafsi option
 def parse(args: dict):
     skari = plumbing.get_config("skari")
 

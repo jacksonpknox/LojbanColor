@@ -30,6 +30,7 @@ def tabulate_minji_styles(m: list, skari: dict):
     return tabulate_skari(m, skari, "mi'iskari")
 
 
+#TODO: add export option
 def parse(args: dict):
     skari = plumbing.get_config("skari")
     renderables = []
