@@ -2590,5 +2590,47 @@
       "standard"
     ],
     "cmarafsi": []
+  },
+  "cirla": {
+    "gloss": "cheese",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "xanka": {
+    "gloss": "anxious",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "detri": {
+    "gloss": "date",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "dilnu": {
+    "gloss": "cloud",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "stali": {
+    "gloss": "stay",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "zabna": {
+    "gloss": "good (connotation)",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
   }
 }
