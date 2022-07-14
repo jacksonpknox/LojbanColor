@@ -216,7 +216,7 @@ def process_and_print_tree(tree, args: dict, console, gismus, selmahos, skari):
         if args.gismu:
             col_renderables.append(Panel(analyze_gismu(tree, gismus, skari), expand=False, style=Style.parse(skari["valskari"]["gismu"])))
         if args.rafsi:
-            col_renderables.append(Panel(analyze_rafsi(tree, gismus, selmahos, skari), expand=False, style=Style.parse(skari["valskari"]["rafsi"])))
+            col_renderables.append(Panel(analyze_rafsi(tree, gismus, selmahos, skari), expand=False, style=Style.parse(skari["valskari"]["cmarafsi"])))
         renderables.append(Panel(Columns(col_renderables), style=Style()))
 
     if args.selmaho:
