@@ -1,5 +1,5 @@
 import glob
-import color
+import skavla
 import plumbing
 import json
 from rich import print
@@ -16,7 +16,7 @@ def print_all_documents() -> None:
     print(docs)
     for doc in docs:
         with open(doc, "r") as f:
-            print(color.colorize(f.read()))
+            print(skavla.colorize(f.read()))
             print("ok!")
     print('end')
 

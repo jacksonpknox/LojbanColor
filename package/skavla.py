@@ -4,6 +4,7 @@ from rich_argparse import RichHelpFormatter
 import subparsers.cuxna as cuxna
 import subparsers.tcidu as tcidu
 import subparsers.cpedu as cpedu
+import subparsers.litru as litru
 
 
 def build_parser():
@@ -301,6 +302,17 @@ def build_parser():
         help="do not print read text",
     )
     parser_read.set_defaults(func=tcidu.parse)
+
+    parser_journey = subparsers.add_parser("litru", formatter_class=RichHelpFormatter)
+    parser_journey.add_argument(
+        "-d",
+        "--directory",
+        dest="directory",
+        action="store",
+        help="analyze every lojbanic file in DIRECTORY, recursively, and then print a summary",
+        metavar="DIRECTORY",
+    )
+    parser_journey.set_defaults(func=litru.parse)
 
     return parser
 
