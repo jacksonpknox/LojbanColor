@@ -291,7 +291,7 @@ def build_parser():
         "--selmaho-style",
         action="store_true",
         dest="selmaho_style",
-        help="print the style of every selma'o that shows us",
+        help="print the style of every selma'o that shows up",
     )
     read_panels_subgroup.add_argument(
         "-n",
