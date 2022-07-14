@@ -83,25 +83,25 @@ class Skabanizer(SkabanListener):
         self.t.append(text=ctx.getText(), style=self.valskari["cmene"])
 
     def enterKargismu(self, ctx):
-        self.t.append(text=ctx.getText(), style=self.valskari["kargismu"])
+        self.t.append(text=ctx.getText(), style=self.valskari["gismu"])
 
     def enterGahorgismu(self, ctx):
-        self.t.append(text=ctx.getText(), style=self.valskari["ga'orgismu"])
+        self.t.append(text=ctx.getText(), style=self.valskari["gismu"])
 
     def enterGanlycmarafsi(self, ctx):
-        self.t.append(text=ctx.getText(), style=self.valskari["ganlycmarafsi"])
+        self.t.append(text=ctx.getText(), style=self.valskari["cmarafsi"])
 
     def enterGahorkarcmarafsi(self, ctx):
-        self.t.append(text=ctx.getText(), style=self.valskari["ga'orkarcmarafsi"])
+        self.t.append(text=ctx.getText(), style=self.valskari["cmarafsi"])
 
     def enterKarkarcmarafsi(self, ctx):
-        self.t.append(text=ctx.getText(), style=self.valskari["karkarcmarafsi"])
+        self.t.append(text=ctx.getText(), style=self.valskari["cmarafsi"])
 
     def enterGahorgimsygenja(self, ctx: SkabanParser.GahorgimsygenjaContext):
-        self.t.append(text=ctx.getText(), style=self.valskari["ga'orgimsygenja"])
+        self.t.append(text=ctx.getText(), style=self.valskari["gimsygenja"])
 
     def enterKargimsygenja(self, ctx: SkabanParser.KargimsygenjaContext):
-        self.t.append(text=ctx.getText(), style=self.valskari["kargimsygenja"])
+        self.t.append(text=ctx.getText(), style=self.valskari["gimsygenja"])
 
     def enterY(self, ctx):
         self.t.append(text=ctx.getText(), style=self.valskari["y"])
