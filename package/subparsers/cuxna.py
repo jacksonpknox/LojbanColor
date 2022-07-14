@@ -2,6 +2,7 @@ import plumbing
 import json
 
 from rich import print
+from rich.prompt import Prompt
 from rich.text import Text
 
 
@@ -42,8 +43,7 @@ def add_cmavyrafsi(selmaho: str, cmavo: str, cmarafsi: str, selmahos: dict, skar
             )
             mahos[selmaho] = DEFAULT_SELMAHO_PACKET
         if "cmarafsi" not in mahos[selmaho].keys():
-            mahos[selmaho]["cmarafsi"] = dict()
-            #TODO: say you caught the cmavo
+            mahos[selmaho]["cmarafsi"] = dict() # refactorable safe insertion
         mahos[selmaho]["cmarafsi"][cmarafsi] = cmavo
         print(
             Text.assemble(
@@ -165,7 +165,6 @@ def add_cmavo(cmavo: str, selmaho: str, skari: dict) -> None:
 
 
 def set_all_selmaho_style(style: str, skari: dict) -> None:
-    #TODO: add a warning and request for confirmation
     with Config("selmahos") as selmahos:
         for s in selmahos.keys():
             selmahos[s]["color"] = style
@@ -232,7 +231,6 @@ def set_selmaho_style(selmaho: str, colour: str, skari: dict) -> None:
         )
 
 
-#TODO: -cr --cmavyrafsi option
 def parse(args: dict):
     skari = plumbing.get_config("skari")
 
@@ -246,7 +244,15 @@ def parse(args: dict):
         set_valsi_style(v[0], v[1]) # (token, style)
 
     if a := args.all_selmaho_style:
-        set_all_selmaho_style(a[0], skari)
+        print(
+            Text.assemble(
+                ("warning! ", skari["mi'iskari"]["obstacle"]),
+                ("this will erase all selma'o color choices.", skari["mi'iskari"]["system"])
+            )
+        )
+        proceed = Prompt.ask(Text("go ahead?", skari["mi'iskari"]["prompt"]), choices=["yes", "no"], default="no")
+        if proceed == "yes":
+            set_all_selmaho_style(a[0], skari)
 
     if c := args.cmavo:
         add_cmavo(c[1], c[0], skari)  # (cmavo, selmaho)
@@ -256,3 +262,11 @@ def parse(args: dict):
 
     if r := args.cmarafsi:
         add_cmarafsi(r[0], r[1], skari)  # (gismu, cmarafsi)
+
+    if y := args.cmavyrafsi:
+        selmahos = plumbing.get_config("selmahos")
+        cmavo = y[0]
+        selmaho = plumbing.get_selmaho(cmavo, selmahos)
+        if selmaho == "UNCAT":
+            raise Exception(f"Error! cmavo {cmavo} is not caught.")
+        add_cmavyrafsi(selmaho, cmavo, y[1], selmahos, skari)

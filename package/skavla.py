@@ -78,6 +78,15 @@ def build_parser():
         help="attribute GISMU with CMARAFSI",
         metavar=("GISMU", "CMARAFSI"),
     )
+    config_valsi_subgroup.add_argument(
+        "-y",
+        "--cmavyrafsi",
+        dest="cmavyrafsi",
+        action="store",
+        nargs=2,
+        help="attribute CMAVO with CMARAFSI",
+        metavar=("CMAVO", "CMARAFSI")
+    )
     parser_config.set_defaults(func=cuxna.parse)
 
 

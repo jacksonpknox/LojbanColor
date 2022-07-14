@@ -62,7 +62,7 @@ def get_gloss(gismu: str, gismus: dict) -> str:
 
 def get_selmaho(cmavo: str, selmahos: dict) -> str:
     if not is_cmavo(cmavo):
-        raise Exception("Error! not cmav by morphology exception: " + cmavo)
+        raise Exception("Error! not cmavo by morphology exception: " + cmavo)
     for selmaho in selmahos.keys():
         if cmavo in selmahos[selmaho]["cmavos"]:
             return selmaho
