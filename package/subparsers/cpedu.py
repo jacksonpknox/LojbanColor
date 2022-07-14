@@ -30,11 +30,13 @@ def tabulate_minji_styles(m: list, skari: dict):
     return tabulate_skari(m, skari, "mi'iskari")
 
 
-#TODO: add export option
 def parse(args: dict):
+    rec = bool(e := args.export)
+    console = Console(record=rec, force_interactive=(not rec))
+    
     skari = plumbing.get_config("skari")
+
     renderables = []
-    console = Console()
 
     # skari subgroup
     if args.selmaho_style or args.minji_style or args.valsi_style:
@@ -106,7 +108,6 @@ def parse(args: dict):
             valsi_renderables.append(Panel(table, style=Style()))
         renderables.append(Panel(Columns(valsi_renderables), style=Style()))
 
-
     if args.selmaho:
         with open(plumbing.CONFIG_DEFAULTS["selmahos"], "r") as f:
             selmahos = json.load(f)
@@ -154,3 +155,6 @@ def parse(args: dict):
             panel.style += sty
 
     console.print(Panel(Group(*renderables), box.DOUBLE, expand=False, style=Style()))
+
+    if rec:
+        console.save_svg(e, title="skavla")

@@ -98,6 +98,13 @@ def build_parser():
         action="store_true",
         help="make backgrounds colors alternate"
     )
+    parser_request.add_argument(
+        "-e",
+        "--export",
+        action="store",
+        help="export the result to an .svg file",
+        metavar="LOCATION"
+    )
     skari_subgroup = parser_request.add_argument_group("skari")
     skari_subgroup.add_argument(
         "-s",
