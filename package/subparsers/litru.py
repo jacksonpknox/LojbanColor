@@ -10,7 +10,6 @@ from rich.panel import Panel
 from rich import box
 
 
-#TODO: implement
 def summarize_directory(directory: str):
     gismus = plumbing.get_config("gismus")
     files = glob.glob(directory + "/**/*.jbo", recursive=True)
