@@ -63,10 +63,10 @@ class Skabanizer(SkabanListener):
         self.t.append(text=ctx.getText(), style=self.valskari["cmarafsi"])
 
     def enterGahorgimsygenja(self, ctx: SkabanParser.GahorgimsygenjaContext):
-        self.t.append(text=ctx.getText(), style=self.valskari["gimsygenja"])
+        self.t.append(text=ctx.getText(), style=self.valskari["gismygenja"])
 
     def enterKargimsygenja(self, ctx: SkabanParser.KargimsygenjaContext):
-        self.t.append(text=ctx.getText(), style=self.valskari["gimsygenja"])
+        self.t.append(text=ctx.getText(), style=self.valskari["gismygenja"])
 
     def enterY(self, ctx):
         self.t.append(text=ctx.getText(), style=self.valskari["y"])
