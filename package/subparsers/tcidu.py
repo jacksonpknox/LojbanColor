@@ -103,10 +103,12 @@ def interrogate_for_rafsi(tree, gismus, selmahos, skari) -> None:
         
 def interrogate_for_glosses(tree, gismus, skari) -> None:
     collection = jmaji.collect(tree, jmaji.GismuCollector)
+    p = Style.parse(skari["mi'iskari"]["prompt"])
     for gismu in collection:
         if gismu not in gismus.keys() or not gismus[gismu]["gloss"]:
-            gloss = Prompt.ask(Text("type the gloss for ", Style.parse(skari["mi'iskari"]["prompt"])) + gismu, default=None)
-            cuxna.set_gloss(gismu, gloss, skari)
+            gloss = Prompt.ask(Text("type the gloss for ", p) + gismu + Text(" (enter to skip)", p), default=None)
+            if gloss:
+                cuxna.set_gloss(gismu, gloss, skari)
 
 
 def analyze_rafsi(tree, gismus, selmahos, skari) -> Table:
