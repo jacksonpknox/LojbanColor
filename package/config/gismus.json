@@ -1084,7 +1084,9 @@
     "tags": [
       "standard"
     ],
-    "cmarafsi": []
+    "cmarafsi": [
+      "liv"
+    ]
   },
   "dukse": {
     "gloss": "excess",
@@ -1994,7 +1996,9 @@
     "tags": [
       "standard"
     ],
-    "cmarafsi": []
+    "cmarafsi": [
+      "ska"
+    ]
   },
   "lanzu": {
     "gloss": "family",
@@ -2632,5 +2636,217 @@
       "standard"
     ],
     "cmarafsi": []
+  },
+  "panra": {
+    "gloss": "parallel",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "panzi": {
+    "gloss": "child",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "cribe": {
+    "gloss": "bear",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "fatci": {
+    "gloss": "fact",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "lakne": {
+    "gloss": "probable",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "pemci": {
+    "gloss": "poem",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "kulnu": {
+    "gloss": "culture",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "flalu": {
+    "gloss": "law",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "junri": {
+    "gloss": "serious",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "pante": {
+    "gloss": "protest",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "kalci": {
+    "gloss": "feces",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "sinma": {
+    "gloss": "respect",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "tutci": {
+    "gloss": "tool",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "xendo": {
+    "gloss": "kind",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "mekso": {
+    "gloss": "math expression",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "since": {
+    "gloss": "snake",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "tsali": {
+    "gloss": "strong",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "fenra": {
+    "gloss": "crack",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": [
+      "fe'a"
+    ]
+  },
+  "racli": {
+    "gloss": "rational",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "mabla": {
+    "gloss": "bad (connotation)",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "lojbo": {
+    "gloss": "Lojbanic",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "cnano": {
+    "gloss": "norm",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "bangu": {
+    "gloss": "language",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "cripu": {
+    "gloss": "bridge",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "zmadu": {
+    "gloss": "greater",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": [
+      "zma"
+    ]
+  },
+  "nelci": {
+    "gloss": "like",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": [
+      "zma",
+      "nei"
+    ]
+  },
+  "gerna": {
+    "gloss": "grammar",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": [
+      "zma",
+      "nei",
+      "gen"
+    ]
+  },
+  "tarmi": {
+    "gloss": "form",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": [
+      "zma",
+      "nei",
+      "gen",
+      "tai"
+    ]
   }
 }

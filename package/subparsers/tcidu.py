@@ -1,5 +1,6 @@
 import plumbing
 import karda
+import jmaji
 import subparsers.cuxna as cuxna
 
 import sys
@@ -13,46 +14,10 @@ from rich.columns import Columns
 from rich.console import Console, Group
 from rich.style import Style
 
-from antlr4 import ParseTreeWalker, ParserRuleContext, InputStream, CommonTokenStream
+from antlr4 import ParseTreeWalker
+
 from python_color.SkabanListener import SkabanListener
-from python_color.SkabanLexer import SkabanLexer
 from python_color.SkabanParser import SkabanParser
-
-
-class Collector(SkabanListener):
-    def __init__(self):
-        self.collection = []
-
-    def grab(self, s: str):
-        if s not in self.collection:
-            self.collection.append(s)
-
-
-class CmarafsiCollector(Collector):
-    def enterGanlycmarafsi(self, ctx):
-        self.grab(ctx.getText())
-
-    def enterGahorkarcmarafsi(self, ctx):
-        self.grab(ctx.getText())
-
-    def enterKarkarcmarafsi(self, ctx):
-        self.grab(ctx.getText())
-
-
-class GismuCollector(Collector):
-    def enterGismu(self, ctx):
-        self.grab(ctx.getText())
-
-
-class CmavoCollector(Collector):
-    def enterKarmaho(self, ctx: SkabanParser.KarmahoContext):
-        self.grab(ctx.getText())
-
-
-def collect(tree, Collector) -> list:
-    collector = Collector()
-    ParseTreeWalker().walk(collector, tree)
-    return collector.collection
 
 
 class Skabanizer(SkabanListener):
@@ -112,7 +77,7 @@ class Skabanizer(SkabanListener):
         
 def interrogate_for_rafsi(tree, gismus, selmahos, skari) -> None:
     p = Style.parse(skari["mi'iskari"]["prompt"])
-    collection = collect(tree, CmarafsiCollector)
+    collection = jmaji.collect(tree, jmaji.CmarafsiCollector)
     for cmarafsi in collection:
         cma = Text(cmarafsi, style=Style.parse(skari["valskari"]["cmarafsi"]))
         word_type, word, bonus = plumbing.classify_cmarafsi(cmarafsi, gismus, selmahos)
@@ -137,7 +102,7 @@ def interrogate_for_rafsi(tree, gismus, selmahos, skari) -> None:
 
         
 def interrogate_for_glosses(tree, gismus, skari) -> None:
-    collection = collect(tree, GismuCollector)
+    collection = jmaji.collect(tree, jmaji.GismuCollector)
     for gismu in collection:
         if gismu not in gismus.keys() or not gismus[gismu]["gloss"]:
             gloss = Prompt.ask(Text("type the gloss for ", Style.parse(skari["mi'iskari"]["prompt"])) + gismu, default=None)
@@ -145,23 +110,23 @@ def interrogate_for_glosses(tree, gismus, skari) -> None:
 
 
 def analyze_rafsi(tree, gismus, selmahos, skari) -> Table:
-    collection = collect(tree, CmarafsiCollector)
+    collection = jmaji.collect(tree, jmaji.CmarafsiCollector)
     return karda.tabulate_cmarafsi(collection, gismus, selmahos, skari)
 
 
 def analyze_gismu(tree, gismus, skari) -> Table:
-    collection = collect(tree, GismuCollector)
+    collection = jmaji.collect(tree, jmaji.GismuCollector)
     return karda.tabulate_gismus(collection, gismus, skari)
 
 
 def analyze_cmavos(tree, selmahos, skari, selmaho_style: bool) -> Table:
-    collection = collect(tree, CmavoCollector)
+    collection = jmaji.collect(tree, jmaji.CmavoCollector)
     return karda.tabulate_cmavos(collection, selmahos, skari, selmaho_style)
 
     
 #NOTE returns Columns
 def analyze_selmahos_differently(tree, selmahos, squeeze: int) -> Columns:
-    cmavo_collection = collect(tree, CmavoCollector)
+    cmavo_collection = jmaji.collect(tree, jmaji.CmavoCollector)
     selmaho_collection = []
     for cmavo in cmavo_collection:
         s = plumbing.get_selmaho(cmavo, selmahos)
@@ -173,7 +138,7 @@ def analyze_selmahos_differently(tree, selmahos, squeeze: int) -> Columns:
 
 #NOTE returns Columns
 def analyze_selmahos(tree, selmahos, skari, squeeze: int, show_styles: bool=False) -> Columns:
-    cmavo_collection = collect(tree, CmavoCollector)
+    cmavo_collection = jmaji.collect(tree, jmaji.CmavoCollector)
     selmaho_collection = dict()
     for cmavo in cmavo_collection:
         s = plumbing.get_selmaho(cmavo, selmahos)
@@ -193,14 +158,6 @@ def colorize(tree, selmahos, skari) -> Text:
     walker.walk(printer, tree)
     printer.t.rstrip()
     return printer.t
-
-
-def get_parse_tree(lojban: str) -> ParserRuleContext:
-    input_stream = InputStream(lojban)
-    lexer = SkabanLexer(input_stream)
-    stream = CommonTokenStream(lexer)
-    parser = SkabanParser(stream)
-    return parser.folio()
 
 
 def process_and_print_tree(tree, args: dict, console, gismus, selmahos, skari):
@@ -246,7 +203,7 @@ def parse(args: dict):
                     Text("parsing the file...", style=skari["mi'iskari"]["system"]),
                     spinner=config["spinner"],
                 ):
-                    tree = get_parse_tree(file.read())
+                    tree = jmaji.get_parse_tree(file.read())
             if args.catch_gismus:
                 interrogate_for_glosses(tree, gismus, skari)
                 gismus = plumbing.get_config("gismus")
@@ -258,7 +215,7 @@ def parse(args: dict):
 
     if args.input:
         console.print("Type the input:", style=skari["mi'iskari"]["prompt"])
-        tree = get_parse_tree(sys.stdin.read())
+        tree = jmaji.get_parse_tree(sys.stdin.read())
         process_and_print_tree(tree, args, console, gismus, selmahos, skari)
 
     if rec:

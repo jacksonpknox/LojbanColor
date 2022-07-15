@@ -124,7 +124,10 @@
     "color": "cyan",
     "cmavos": [
       "bo"
-    ]
+    ],
+    "cmarafsi": {
+      "bor": "bo"
+    }
   },
   "BOI": {
     "color": "cyan",
