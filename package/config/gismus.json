@@ -1054,7 +1054,9 @@
     "tags": [
       "standard"
     ],
-    "cmarafsi": []
+    "cmarafsi": [
+      "cta"
+    ]
   },
   "viska": {
     "gloss": "see",
@@ -2226,7 +2228,9 @@
     "tags": [
       "standard"
     ],
-    "cmarafsi": []
+    "cmarafsi": [
+      "blu"
+    ]
   },
   "ponjo": {
     "gloss": "japan",
@@ -2614,7 +2618,7 @@
     "cmarafsi": []
   },
   "cortu": {
-    "gloss": "feel pain",
+    "gloss": "pain",
     "tags": [
       "standard"
     ],
@@ -4501,5 +4505,70 @@
       "sre",
       "ton"
     ]
+  },
+  "smani": {
+    "gloss": "monkey",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "jecta": {
+    "gloss": "polity",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "bebna": {
+    "gloss": "fool",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "kandi": {
+    "gloss": "dim",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "sefta": {
+    "gloss": "surface",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "cirko": {
+    "gloss": "lose",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": [
+      "cri"
+    ]
+  },
+  "spofu": {
+    "gloss": "broken",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "xlali": {
+    "gloss": "bad",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "tanru": {
+    "gloss": "binary metaphor",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
   }
 }
