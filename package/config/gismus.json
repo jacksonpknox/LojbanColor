@@ -196,7 +196,9 @@
   "fliba": {
     "gloss": "fail",
     "tags": [],
-    "cmarafsi": []
+    "cmarafsi": [
+      "fli"
+    ]
   },
   "cmaci": {
     "gloss": "math",
@@ -392,7 +394,9 @@
     "tags": [
       "standard"
     ],
-    "cmarafsi": []
+    "cmarafsi": [
+      "gu'a"
+    ]
   },
   "snanu": {
     "gloss": "south",
@@ -760,7 +764,9 @@
     "tags": [
       "standard"
     ],
-    "cmarafsi": []
+    "cmarafsi": [
+      "ji'e"
+    ]
   },
   "sance": {
     "gloss": "sound",
@@ -994,7 +1000,9 @@
     "tags": [
       "standard"
     ],
-    "cmarafsi": []
+    "cmarafsi": [
+      "zda"
+    ]
   },
   "cmalu": {
     "gloss": "small",
@@ -1017,7 +1025,9 @@
     "tags": [
       "standard"
     ],
-    "cmarafsi": []
+    "cmarafsi": [
+      "xag"
+    ]
   },
   "djica": {
     "gloss": "want",
@@ -1707,7 +1717,9 @@
     "tags": [
       "standard"
     ],
-    "cmarafsi": []
+    "cmarafsi": [
+      "daf"
+    ]
   },
   "mentu": {
     "gloss": "minute",
@@ -1856,7 +1868,9 @@
     "tags": [
       "standard"
     ],
-    "cmarafsi": []
+    "cmarafsi": [
+      "red"
+    ]
   },
   "galtu": {
     "gloss": "high",
@@ -2007,7 +2021,9 @@
     "tags": [
       "standard"
     ],
-    "cmarafsi": []
+    "cmarafsi": [
+      "ta'u"
+    ]
   },
   "gunta": {
     "gloss": "attack",
@@ -2265,7 +2281,9 @@
     "tags": [
       "standard"
     ],
-    "cmarafsi": []
+    "cmarafsi": [
+      "le'a"
+    ]
   },
   "gunma": {
     "gloss": "aggregate",
@@ -2454,7 +2472,9 @@
     "tags": [
       "standard"
     ],
-    "cmarafsi": []
+    "cmarafsi": [
+      "xru"
+    ]
   },
   "ponse": {
     "gloss": "own",
@@ -2601,7 +2621,9 @@
     "tags": [
       "standard"
     ],
-    "cmarafsi": []
+    "cmarafsi": [
+      "dad"
+    ]
   },
   "catke": {
     "gloss": "shove",
@@ -3029,7 +3051,7 @@
     ]
   },
   "porsi": {
-    "gloss": "order",
+    "gloss": "ordered",
     "tags": [
       "standard"
     ],
@@ -3214,7 +3236,9 @@
     "tags": [
       "standard"
     ],
-    "cmarafsi": []
+    "cmarafsi": [
+      "rai"
+    ]
   },
   "munje": {
     "gloss": "universe",
@@ -3357,7 +3381,7 @@
     "cmarafsi": []
   },
   "balvi": {
-    "gloss": "future",
+    "gloss": "after",
     "tags": [
       "standard"
     ],
@@ -3487,7 +3511,9 @@
     "tags": [
       "standard"
     ],
-    "cmarafsi": []
+    "cmarafsi": [
+      "ni'a"
+    ]
   },
   "natmi": {
     "gloss": "nation",
@@ -3699,7 +3725,9 @@
     "tags": [
       "standard"
     ],
-    "cmarafsi": []
+    "cmarafsi": [
+      "zba"
+    ]
   },
   "botpi": {
     "gloss": "bottle",
@@ -4154,7 +4182,8 @@
       "standard"
     ],
     "cmarafsi": [
-      "ner"
+      "ner",
+      "ne'i"
     ]
   },
   "misno": {
@@ -4389,7 +4418,7 @@
     "cmarafsi": []
   },
   "vrici": {
-    "gloss": "assorted",
+    "gloss": "miscellaneous",
     "tags": [
       "standard"
     ],
@@ -4566,6 +4595,200 @@
   },
   "tanru": {
     "gloss": "binary metaphor",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "xasli": {
+    "gloss": "donkey",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "bloti": {
+    "gloss": "boat",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "sazri": {
+    "gloss": "operate",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "cilre": {
+    "gloss": "learn",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "xadba": {
+    "gloss": "half",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "jinru": {
+    "gloss": "submerge",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "jdima": {
+    "gloss": "price",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "xecto": {
+    "gloss": "hundred",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "rupnu": {
+    "gloss": "major money unit",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "kargu": {
+    "gloss": "expensive",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "xruki": {
+    "gloss": "turkey",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "mintu": {
+    "gloss": "identical",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "klaji": {
+    "gloss": "street",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "ninmu": {
+    "gloss": "woman",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "dizlo": {
+    "gloss": "low",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "fenso": {
+    "gloss": "sew",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "kamju": {
+    "gloss": "column",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "rutni": {
+    "gloss": "artifact",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "vanju": {
+    "gloss": "wine",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "tuple": {
+    "gloss": "leg",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "tanbo": {
+    "gloss": "plank",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": [
+      "ta'o"
+    ]
+  },
+  "krefu": {
+    "gloss": "recurrence",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": [
+      "ta'o",
+      "ref"
+    ]
+  },
+  "ladru": {
+    "gloss": "milk",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "rapli": {
+    "gloss": "repeat",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "xebro": {
+    "gloss": "hebrew",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "datka": {
+    "gloss": "duck",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "nobli": {
+    "gloss": "noble",
     "tags": [
       "standard"
     ],
