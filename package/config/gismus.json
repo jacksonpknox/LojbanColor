@@ -4793,5 +4793,19 @@
       "standard"
     ],
     "cmarafsi": []
+  },
+  "kalsa": {
+    "gloss": "chaos",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
+  },
+  "zdile": {
+    "gloss": "fun",
+    "tags": [
+      "standard"
+    ],
+    "cmarafsi": []
   }
 }
