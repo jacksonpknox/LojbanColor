@@ -1,3 +1,4 @@
+from signal import raise_signal
 import plumbing
 import json
 
@@ -10,21 +11,62 @@ DEFAULT_GISMU_PACKET = {"gloss": None, "tags": ["standard"], "cmarafsi": []}
 DEFAULT_SELMAHO_PACKET = {"color": "cyan", "cmavos": [], "cmarafsi": dict()}
 
 
-class Config:
-    def __init__(self, label: str):
-        self.label = label
-        self.data = dict()
-
-    def __enter__(self):
-        with open(plumbing.CONFIG_DEFAULTS[self.label], "r") as f:
-            self.data = json.load(f)
-        return self.data
-
-    def __exit__(self, exc_type, exc_value, exc_traceback):
-        with open(plumbing.CONFIG_DEFAULTS[self.label], "w") as f:
-            json.dump(self.data, f, indent=2)
-
+def set_sumti(gismu: str, sumti: str, valsi: str, skari: dict):
+    sumti = int(sumti)
+    if sumti not in range(1, 6):
+        raise Exception("Error!, {} is out of range.".format(sumti))
+    if not plumbing.is_gismu(gismu):
+        raise Exception("Error!, {} is not a gismu by morphology.".format(gismu))
+    
+    with plumbing.Config("gismus") as gismus:
+        if gismu not in gismus.keys():
+            raise Exception("Error!, {} is not caught.".format(gismu))
+        if "sumti" not in gismus[gismu].keys():
+            gismus[gismu]["sumti"] = []
+        while len(gismus[gismu]["sumti"]) < sumti:
+            gismus[gismu]["sumti"].append("zo'e")
+        gismus[gismu]["sumti"][sumti - 1] = valsi
+    
+    print(
+        Text.assemble(
+            ("ok... ", skari["mi'iskari"]["ok"]),
+            ("set sumti place ", skari["mi'iskari"]["system"]),
+            (str(sumti), skari["mi'iskari"]["gloss"]),
+            (" of ", skari["mi'iskari"]["system"]),
+            (gismu, skari["valskari"]["gismu"]),
+            (" to ", skari["mi'iskari"]["system"]),
+            (valsi, skari["mi'iskari"]["gloss"]),
+            (".", skari["mi'iskari"]["system"]),
+        )
+    )
         
+def add_tag_to_gismu(gismu: str, tag: str, skari: dict):
+    s = skari["mi'iskari"]["system"]
+
+    gismu = gismu.lower()
+    if not plumbing.is_gismu(gismu):
+        raise Exception("Error!, {} is not a gismu by morphology.".format(gismu))
+
+    with plumbing.Config("gismus") as gismus:
+        if gismu not in gismus.keys():
+            raise Exception("Error!, {} is not caught.".format(gismu))
+        if "tags" not in gismus[gismu].keys():
+            gismus[gismu]["tags"] = []
+        if tag not in gismus[gismu]["tags"]:
+            gismus[gismu]["tags"].append(tag)
+            print(
+                Text.assemble(
+                    ("ok... ", skari["mi'iskari"]["ok"]),
+                    ("added ", s),
+                    (tag, skari["mi'iskari"]["gloss"]),
+                    (" as a tag of ", s),
+                    (gismu, skari["valskari"]["gismu"]),
+                    (".", s),
+                )
+            )
+    
+
+
 def add_cmavyrafsi(selmaho: str, cmavo: str, cmarafsi: str, selmahos: dict, skari: dict):
     s = skari["mi'iskari"]["system"]
     if not plumbing.is_cmavo(cmavo):
@@ -32,7 +74,7 @@ def add_cmavyrafsi(selmaho: str, cmavo: str, cmarafsi: str, selmahos: dict, skar
     if not plumbing.is_cmarafsi(cmarafsi):
         raise Exception("Error!, {} is not a cmarafsi by morphology.".format(cmarafsi))
 
-    with Config("selmahos") as mahos:
+    with plumbing.Config("selmahos") as mahos:
         if selmaho not in mahos.keys():
             print(
                 Text.assemble(
@@ -66,7 +108,7 @@ def add_cmarafsi(gismu: str, cmarafsi: str, skari: dict) -> None:
     if not plumbing.is_cmarafsi(cmarafsi):
         raise Exception("Error!, {} is not a cmarafsi by morphology.".format(cmarafsi))
 
-    with Config("gismus") as gismus:
+    with plumbing.Config("gismus") as gismus:
         if gismu not in gismus.keys():
             print(
                 Text.assemble(
@@ -96,7 +138,7 @@ def set_gloss(gismu: str, gloss: str, skari: dict) -> None:
     if not plumbing.is_gismu(gismu):
         raise Exception("Error!, {} is not a gismu by morphology.".format(gismu))
 
-    with Config("gismus") as gismus:
+    with plumbing.Config("gismus") as gismus:
         if gismu not in gismus.keys():
             print(
                 Text.assemble(
@@ -129,7 +171,7 @@ def add_cmavo(cmavo: str, selmaho: str, skari: dict) -> None:
     if not plumbing.is_cmavo(selmaho.lower().replace("h", "'")):
         raise Exception("Error! {} is not a cmavo by morphology.".format(selmaho))
 
-    with Config("selmahos") as selmahos:
+    with plumbing.Config("selmahos") as selmahos:
         if selmaho not in selmahos.keys():
             print(
                 Text.assemble(
@@ -165,7 +207,7 @@ def add_cmavo(cmavo: str, selmaho: str, skari: dict) -> None:
 
 
 def set_all_selmaho_style(style: str, skari: dict) -> None:
-    with Config("selmahos") as selmahos:
+    with plumbing.Config("selmahos") as selmahos:
         for s in selmahos.keys():
             selmahos[s]["color"] = style
         print(
@@ -179,7 +221,7 @@ def set_all_selmaho_style(style: str, skari: dict) -> None:
 
             
 def set_valsi_style(token: str, style: str) -> None:
-    with Config("skari") as skari:
+    with plumbing.Config("skari") as skari:
         if token not in skari["valskari"].keys():
             raise Exception("Error! not a valsi token: " + token)
         skari["valskari"][token] = style
@@ -197,7 +239,7 @@ def set_valsi_style(token: str, style: str) -> None:
 
 
 def set_minji_style(token: str, style: str) -> None:
-    with Config("skari") as skari:
+    with plumbing.Config("skari") as skari:
         if token not in skari["mi'iskari"].keys():
             raise Exception("Error! not a minji token: " + token)
         skari["mi'iskari"][token] = style
@@ -216,7 +258,7 @@ def set_minji_style(token: str, style: str) -> None:
 
 def set_selmaho_style(selmaho: str, colour: str, skari: dict) -> None:
     s = skari["mi'iskari"]["system"]
-    with Config("selmahos") as selmahos:
+    with plumbing.Config("selmahos") as selmahos:
         selmaho = plumbing.force_selmaho(selmaho, selmahos)
         selmahos[selmaho]["color"] = colour
         print(
@@ -270,3 +312,9 @@ def parse(args: dict):
         if selmaho == "UNCAT":
             raise Exception(f"Error! cmavo {cmavo} is not caught.")
         add_cmavyrafsi(selmaho, cmavo, y[1], selmahos, skari)
+
+    if t := args.tag_gismu:
+        add_tag_to_gismu(t[0], t[1], skari)  # (gismu, tag)
+
+    if u := args.set_sumti:
+        set_sumti(u[0], u[1], u[2], skari) # (gismu, sumti, valsi)

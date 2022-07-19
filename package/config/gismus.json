@@ -1,45 +1,104 @@
 {
   "bacru": {
     "gloss": "utter",
+    "liste": [
+      "CLL"
+    ],
     "tags": [
-      "standard"
+      "fasnu"
     ],
     "cmarafsi": [
       "ba'u"
+    ],
+    "sumnamcu": 2,
+    "sumti": [
+      "gasnu",
+      "sance"
     ]
   },
   "badna": {
     "gloss": "banana",
-    "tags": [],
-    "cmarafsi": []
+    "liste": [
+      "CLL"
+    ],
+    "tags": [
+      "grute"
+    ],
+    "cmarafsi": [],
+    "sumnamcu": 2,
+    "sumti": [
+      "badna",
+      "jutsi"
+    ]
   },
   "badri": {
-    "gloss": null,
-    "tags": [
-      "standard"
+    "gloss": "sad",
+    "liste": [
+      "CLL"
     ],
-    "cmarafsi": []
+    "tags": [
+      "selcinmo"
+    ],
+    "cmarafsi": [
+      "dri"
+    ],
+    "sumnamcu": 2,
+    "sumti": [
+      "cinmo",
+      "sucta"
+    ]
   },
   "bajra": {
     "gloss": "run",
-    "tags": [
-      "standard"
+    "liste": [
+      "CLL"
     ],
-    "cmarafsi": []
+    "tags": [
+      "fasnu"
+    ],
+    "cmarafsi": [
+      "baj"
+    ],
+    "sumnamcu": 4,
+    "sumti": [
+      "gasnu",
+      "sefta",
+      "zo'e",
+      "velbajra"
+    ]
   },
   "bakfu": {
-    "gloss": null,
-    "tags": [
-      "standard"
+    "gloss": "bundle",
+    "liste": [
+      "CLL"
     ],
-    "cmarafsi": []
+    "tags": [],
+    "cmarafsi": [
+      "baf"
+    ],
+    "sumnamcu": 3,
+    "sumti": [
+      "bakfu",
+      "zo'e",
+      "zo'e"
+    ]
   },
   "bakni": {
     "gloss": "bovine",
-    "tags": [
-      "standard"
+    "liste": [
+      "CLL"
     ],
-    "cmarafsi": []
+    "tags": [
+      "danlu"
+    ],
+    "cmarafsi": [
+      "bak"
+    ],
+    "sumnamcu": 2,
+    "sumti": [
+      "bakni",
+      "jutsi"
+    ]
   },
   "bakri": {
     "gloss": null,
@@ -534,7 +593,7 @@
     "cmarafsi": []
   },
   "brito": {
-    "gloss": null,
+    "gloss": "british",
     "tags": [
       "standard"
     ],
@@ -569,7 +628,7 @@
     "cmarafsi": []
   },
   "brodu": {
-    "gloss": null,
+    "gloss": "var5",
     "tags": [
       "standard"
     ],
@@ -3920,7 +3979,7 @@
     "cmarafsi": []
   },
   "kajde": {
-    "gloss": null,
+    "gloss": "warn",
     "tags": [
       "standard"
     ],
@@ -4551,7 +4610,7 @@
     "cmarafsi": []
   },
   "lacri": {
-    "gloss": null,
+    "gloss": "trust",
     "tags": [
       "standard"
     ],
@@ -4911,7 +4970,7 @@
     "cmarafsi": []
   },
   "lunbe": {
-    "gloss": null,
+    "gloss": "bare",
     "tags": [
       "standard"
     ],
@@ -5058,7 +5117,7 @@
     "cmarafsi": []
   },
   "marce": {
-    "gloss": null,
+    "gloss": "vehicle",
     "tags": [
       "standard"
     ],
@@ -9312,7 +9371,7 @@
     "cmarafsi": []
   },
   "xelso": {
-    "gloss": null,
+    "gloss": "greek",
     "tags": [
       "standard"
     ],

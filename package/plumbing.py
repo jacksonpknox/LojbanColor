@@ -5,7 +5,24 @@ CONFIG_DEFAULTS = {
     "gismus": "config/gismus.json",
     "selmahos": "config/selmahos.json",
     "skari": "config/skari.json",
+    "progress": "config/progress.json"
 }
+
+
+class Config:
+    def __init__(self, label: str):
+        self.label = label
+        self.data = dict()
+
+    def __enter__(self):
+        with open(CONFIG_DEFAULTS[self.label], "r") as f:
+            self.data = json.load(f)
+        return self.data
+
+    def __exit__(self, exc_type, exc_value, exc_traceback):
+        with open(CONFIG_DEFAULTS[self.label], "w") as f:
+            json.dump(self.data, f, indent=2)
+
 
 
 def get_config(conf: str) -> dict:

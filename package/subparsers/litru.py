@@ -10,6 +10,14 @@ from rich.panel import Panel
 from rich import box
 
 
+def advance_gismu():
+    gismus = plumbing.get_config("gismus")
+    gismus = list(gismus.keys())
+    
+    with plumbing.Config("progress") as progress:
+        progress["current_gismu"] = gismus[(gismus.index(progress["current_gismu"]) + 1) % len(gismus)]
+
+
 def summarize_directory(directory: str):
     gismus = plumbing.get_config("gismus")
     files = glob.glob(directory + "/**/*.jbo", recursive=True)
@@ -57,3 +65,7 @@ def parse(args: dict):
         renderables.append(Panel(table, style=Style()))
 
     console.print(Panel(Group(*renderables), box.DOUBLE, expand=False, style=Style())) 
+
+    
+    if c := args.crane:
+        advance_gismu()

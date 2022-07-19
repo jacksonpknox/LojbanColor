@@ -17,6 +17,7 @@ def build_parser():
 
     #CUXNA CUXNA CUXNA CUXNA CUXNA
     parser_config = subparsers.add_parser("cuxna", formatter_class=RichHelpFormatter)
+    # skari subgroup
     config_skari_subgroup = parser_config.add_argument_group("skari")
     config_skari_subgroup.add_argument(
         "-s",
@@ -53,6 +54,7 @@ def build_parser():
         help="stylize every selma'o with STYLE",
         metavar="STYLE"
     )
+    # valsi subgroup
     config_valsi_subgroup = parser_config.add_argument_group("valsi")
     config_valsi_subgroup.add_argument(
         "-c",
@@ -87,6 +89,24 @@ def build_parser():
         nargs=2,
         help="attribute CMAVO with CMARAFSI",
         metavar=("CMAVO", "CMARAFSI")
+    )
+    config_valsi_subgroup.add_argument(
+        "-t",
+        "--tag-gismu",
+        dest="tag_gismu",
+        action="store",
+        nargs=2,
+        help="tag GISMU with TAG",
+        metavar=("GISMU", "TAG"),
+    )
+    config_valsi_subgroup.add_argument(
+        "-u",
+        "--set-sumti",
+        dest="set_sumti",
+        action="store",
+        nargs=3,
+        help="set SUMTI of GISMU to VALSI",
+        metavar=("GISMU", "SUMTI", "VALSI"),
     )
     parser_config.set_defaults(func=cuxna.parse)
 
@@ -303,6 +323,7 @@ def build_parser():
     )
     parser_read.set_defaults(func=tcidu.parse)
 
+    # LITRU LITRU LITRU LITRU LITRU
     parser_journey = subparsers.add_parser("litru", formatter_class=RichHelpFormatter)
     parser_journey.add_argument(
         "-d",
@@ -311,6 +332,13 @@ def build_parser():
         action="store",
         help="analyze every lojbanic file in DIRECTORY, recursively, and then print a summary",
         metavar="DIRECTORY",
+    )
+    parser_journey.add_argument(
+        "-c",
+        "--crane",
+        dest="crane",
+        action="store_true",
+        help="advance the current gismu",
     )
     parser_journey.set_defaults(func=litru.parse)
 
