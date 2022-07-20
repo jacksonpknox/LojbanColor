@@ -22,7 +22,7 @@
       "CLL"
     ],
     "tags": [
-      "grute"
+      "grutyvla"
     ],
     "cmarafsi": [],
     "sumnamcu": 2,
@@ -54,7 +54,8 @@
       "CLL"
     ],
     "tags": [
-      "fasnu"
+      "fasnu",
+      "cadzyvla"
     ],
     "cmarafsi": [
       "baj"
@@ -89,7 +90,7 @@
       "CLL"
     ],
     "tags": [
-      "danlu"
+      "danlyvla"
     ],
     "cmarafsi": [
       "bak"
@@ -101,136 +102,279 @@
     ]
   },
   "bakri": {
-    "gloss": null,
-    "tags": [
-      "standard"
+    "gloss": "chalk",
+    "liste": [
+      "CLL"
     ],
-    "cmarafsi": []
+    "sumnamcu": 3,
+    "sumti": [
+      "bakri",
+      "krasi",
+      "tarmi"
+    ]
   },
   "baktu": {
-    "gloss": null,
-    "tags": [
-      "standard"
+    "gloss": "bucket",
+    "liste": [
+      "CLL"
     ],
-    "cmarafsi": []
+    "tags": [
+      "vasruvla"
+    ],
+    "sumnamcu": 3,
+    "sumti": [
+      "baktu",
+      "selvasru",
+      "marji"
+    ]
   },
   "balji": {
-    "gloss": null,
-    "tags": [
-      "standard"
+    "gloss": "bulb",
+    "liste": [
+      "CLL"
     ],
-    "cmarafsi": []
+    "tags": [
+      "rango"
+    ],
+    "sumnamcu": 2,
+    "sumti": [
+      "balji",
+      "justi"
+    ]
   },
   "balni": {
-    "gloss": null,
-    "tags": [
-      "standard"
+    "gloss": "balcony",
+    "liste":[
+      "CLL"
     ],
-    "cmarafsi": []
+    "tags": [
+      "kajnyvla"
+    ],
+    "sumnamcu": 2,
+    "sumti": [
+      "balni",
+      "dinju"
+    ]
   },
   "balre": {
-    "gloss": null,
-    "tags": [
-      "standard"
+    "gloss": "blade",
+    "liste": [
+      "CLL"
     ],
-    "cmarafsi": []
+    "cmarafsi": [
+      "ba'e"
+    ],
+    "sumnamcu": 2,
+    "sumti": [
+      "balre",
+      "tutci"
+    ]
   },
   "balvi": {
     "gloss": "after",
+    "liste": [
+      "CLL"
+    ],
     "tags": [
-      "standard"
+      "tcika porsi"
     ],
     "cmarafsi": [
       "bav"
+    ],
+    "sumnamcu": 2,
+    "sumti": [
+      "balvytcika",
+      "prutcika"
     ]
   },
   "bancu": {
     "gloss": "beyond",
-    "tags": [
-      "standard"
+    "liste": [
+      "CLL"
     ],
-    "cmarafsi": []
+    "cmarafsi": [
+      "bac"
+    ],
+    "sumnamcu": 4,
+    "sumti": [
+      "zo'e",
+      "jimte",
+      "zo'e",
+      "klani"
+    ]
   },
   "bandu": {
     "gloss": "defend",
-    "tags": [
-      "standard"
+    "liste":[
+      "CLL"
     ],
-    "cmarafsi": []
+    "tags": [
+      "fasnu"
+    ],
+    "cmarafsi": [
+      "bad"
+    ],  
+    "sumnamcu": 3,
+    "sumti": [
+      "gasnu",
+      "selbandu",
+      "ckape"
+    ]
   },
   "banfi": {
-    "gloss": null,
-    "tags": [
-      "standard"
+    "gloss": "amphibian",
+    "liste": [
+      "CLL"
     ],
-    "cmarafsi": []
+    "tags": [
+      "danlu"
+    ],
+    "sumnamcu": 2,
+    "sumti": [
+      "banfi",
+      "jutsi"
+    ]
   },
   "bangu": {
     "gloss": "language",
-    "tags": [
-      "standard"
+    "liste": [
+      "CLL"
     ],
     "cmarafsi": [
+      "ban",
       "bau"
+    ],
+    "sumnamcu": 3,
+    "sumti": [
+      "bangu",
+      "prenu",
+      "sidbo"
     ]
   },
   "banli": {
     "gloss": "great",
-    "tags": [
-      "standard"
+    "liste": [
+      "CLL"
     ],
     "cmarafsi": [
-      "bal"
+      "bal",
+      "ba'i"
+    ],
+    "sumnamcu": 3,
+    "sumti": [
+      "zo'e",
+      "ckaji",
+      "ckilu"
     ]
   },
   "banro": {
     "gloss": "grow",
-    "tags": [
-      "standard"
+    "liste": [
+      "CLL"
     ],
-    "cmarafsi": []
+    "tags": [
+      "fasnu"
+    ],
+    "cmarafsi": [
+      "ba'o"
+    ],
+    "sumnamcu": 3,
+    "sumti": [
+      "zo'e",
+      "bratarmi",
+      "cmatarmi"
+    ]
   },
   "banxa": {
-    "gloss": null,
-    "tags": [
-      "standard"
+    "gloss": "bank",
+    "liste": [
+      "CLL"
     ],
-    "cmarafsi": []
+    "cmarafsi": [
+      "bax"
+    ],
+    "sumnamcu": 3,
+    "sumti": [
+      "banxa",
+      "ciste",
+      "selgau"
+    ]
   },
   "banzu": {
     "gloss": "suffice",
-    "tags": [
-      "standard"
+    "liste": [
+      "CLL"
     ],
-    "cmarafsi": []
+    "cmarafsi": [
+      "baz"
+    ],
+    "sumnamcu": 3,
+    "sumti": [
+      "zo'e",
+      "nitcu",
+      "tcini"
+    ]
   },
   "bapli": {
     "gloss": "compel",
-    "tags": [
-      "standard"
+    "liste": [
+      "CLL"
     ],
-    "cmarafsi": []
+    "tags": [
+      "gasnuvla"
+    ],
+    "cmarafsi": [
+      "bap",
+      "bai"
+    ],
+    "sumnamcu": 2,
+    "sumti": [
+      "gasnu",
+      "fasnu"
+    ]
   },
   "barda": {
     "gloss": "big",
-    "tags": [],
+    "liste": [
+      "CLL"
+    ],
     "cmarafsi": [
       "bra"
+    ],
+    "sumnamcu": 3,
+    "sumti": [
+      "zo'e",
+      "ckaji",
+      "ckilu"
     ]
   },
   "bargu": {
     "gloss": "arch",
-    "tags": [
-      "standard"
+    "liste": [
+      "CLL"
     ],
-    "cmarafsi": []
+    "cmarafsi": [
+      "bag"
+    ],
+    "sumnamcu": 3,
+    "sumti": [
+      "bargu",
+      "gapru",
+      "marji"
+    ]
   },
   "barja": {
     "gloss": "bar",
-    "tags": [
-      "standard"
+    "liste": [
+      "CLL"
     ],
-    "cmarafsi": []
+    "cmarafsi": [],
+    "sumnamcu": 3,
+    "sumti": [
+      "barja",
+      "zo'e",
+      "zo'e"
+    ]
   },
   "barna": {
     "gloss": null,
