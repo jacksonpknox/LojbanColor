@@ -7,17 +7,9 @@ import subparsers.cpedu as cpedu
 import subparsers.litru as litru
 
 
-def build_parser():
-    parser = argparse.ArgumentParser(
-        formatter_class=RichHelpFormatter,
-        description="skavla: colored words\n A program that reads and colors Lojban",
-    )
-    subparsers = parser.add_subparsers(title="minde")
-
-    # CUXNA CUXNA CUXNA CUXNA CUXNA
-    parser_config = subparsers.add_parser("cuxna", formatter_class=RichHelpFormatter)
+def inflate_cuxna_parser(parser: argparse.ArgumentParser) -> None:
     # skari subgroup
-    config_skari_subgroup = parser_config.add_argument_group("skari")
+    config_skari_subgroup = parser.add_argument_group("skari")
     config_skari_subgroup.add_argument(
         "-s",
         "--selmaho-style",
@@ -54,7 +46,7 @@ def build_parser():
         metavar="STYLE",
     )
     # valsi subgroup
-    config_valsi_subgroup = parser_config.add_argument_group("valsi")
+    config_valsi_subgroup = parser.add_argument_group("valsi")
     config_valsi_subgroup.add_argument(
         "-c",
         "--cmavo",
@@ -107,11 +99,11 @@ def build_parser():
         help="set SUMTI of GISMU to VALSI",
         metavar=("GISMU", "SUMTI", "VALSI"),
     )
-    parser_config.set_defaults(func=cuxna.parse)
+    parser.set_defaults(func=cuxna.parse)
 
-    # CPEDU CPEDU CPEDU CPEDU CPEDU
-    parser_request = subparsers.add_parser("cpedu", formatter_class=RichHelpFormatter)
-    parser_request.add_argument(
+    
+def inflate_cpedu_parser(parser: argparse.ArgumentParser) -> None:
+    parser.add_argument(
         "-q",
         "--squeeze",
         action="store",
@@ -120,17 +112,17 @@ def build_parser():
         metavar="HEIGHT",
         default=16,
     )
-    parser_request.add_argument(
+    parser.add_argument(
         "-w", "--wave", action="store_true", help="make backgrounds colors alternate"
     )
-    parser_request.add_argument(
+    parser.add_argument(
         "-e",
         "--export",
         action="store",
         help="export the result to an .svg file",
         metavar="LOCATION",
     )
-    skari_subgroup = parser_request.add_argument_group("skari")
+    skari_subgroup = parser.add_argument_group("skari")
     skari_subgroup.add_argument(
         "-s",
         "--selmaho-style",
@@ -167,7 +159,7 @@ def build_parser():
     skari_subgroup.add_argument(
         "--valskari", action="store_true", help="print out all valskari"
     )
-    valsi_subgroup = parser_request.add_argument_group("valsi")
+    valsi_subgroup = parser.add_argument_group("valsi")
     valsi_subgroup.add_argument(
         "-c",
         "--cmavo",
@@ -203,7 +195,7 @@ def build_parser():
         "--all-selmaho", action="store_true", help="print out all cmavo of each selma'o"
     )
     # kancu subgroup
-    kancu_subgroup = parser_request.add_argument_group("kancu")
+    kancu_subgroup = parser.add_argument_group("kancu")
     kancu_subgroup.add_argument(
         "--count-cmavo",
         dest="count_cmavo",
@@ -223,11 +215,12 @@ def build_parser():
         help="count the rafsi in your inventory",
     )
 
-    parser_request.set_defaults(func=cpedu.parse)
+    parser.set_defaults(func=cpedu.parse)
+    
 
-    # TCIDU TCIDU TCIDU TCIDU TCIDU
-    parser_read = subparsers.add_parser("tcidu", formatter_class=RichHelpFormatter)
-    parser_read.add_argument(
+
+def inflate_tcidu_parser(parser: argparse.ArgumentParser) -> None:
+    parser.add_argument(
         "-q",
         "--squeeze",
         action="store",
@@ -236,10 +229,10 @@ def build_parser():
         metavar="HEIGHT",
         default=16,
     )
-    parser_read.add_argument(
+    parser.add_argument(
         "-w", "--wave", action="store_true", help="make background colors alternate"
     )
-    parser_read.add_argument(
+    parser.add_argument(
         "-e",
         "--export",
         action="store",
@@ -247,7 +240,7 @@ def build_parser():
         metavar="LOCATION",
     )
     # Input subgroup
-    read_input_subgroup = parser_read.add_argument_group("selru'e")
+    read_input_subgroup = parser.add_argument_group("selru'e")
     read_input_subgroup.add_argument(
         "filepath",
         action="extend",
@@ -274,7 +267,7 @@ def build_parser():
         help="prompt the user to complete the rafsi table",
     )
     # Panels subgroup
-    read_panels_subgroup = parser_read.add_argument_group("panels")
+    read_panels_subgroup = parser.add_argument_group("panels")
     read_panels_subgroup.add_argument(
         "-c",
         "--cmavo",
@@ -312,11 +305,12 @@ def build_parser():
         action="store_false",
         help="do not print read text",
     )
-    parser_read.set_defaults(func=tcidu.parse)
+    parser.set_defaults(func=tcidu.parse)
+    
 
-    # LITRU LITRU LITRU LITRU LITRU
-    parser_journey = subparsers.add_parser("litru", formatter_class=RichHelpFormatter)
-    parser_journey.add_argument(
+
+def inflate_litru_parser(parser: argparse.ArgumentParser) -> None:
+    parser.add_argument(
         "-d",
         "--directory",
         dest="directory",
@@ -324,16 +318,39 @@ def build_parser():
         help="analyze every lojbanic file in DIRECTORY, recursively, and then print a summary",
         metavar="DIRECTORY",
     )
-    parser_journey.add_argument(
+    parser.add_argument(
         "-c",
         "--crane",
         dest="crane",
         action="store_true",
         help="advance the current gismu",
     )
-    parser_journey.set_defaults(func=litru.parse)
+    parser.set_defaults(func=litru.parse)
+
+    
+def build_parser():
+    parser = argparse.ArgumentParser(
+        formatter_class=RichHelpFormatter,
+        description="skavla: colored words\n A program that reads and colors Lojban",
+    )
+    parser.set_defaults(func=lambda args: parser.print_help())
+
+    subparsers = parser.add_subparsers(title="minde")
+
+    cuxna_parser = subparsers.add_parser("cuxna", formatter_class=RichHelpFormatter)
+    inflate_cuxna_parser(cuxna_parser)
+
+    cpedu_parser = subparsers.add_parser("cpedu", formatter_class=RichHelpFormatter)
+    inflate_cpedu_parser(cpedu_parser)
+    
+    tcidu_parser = subparsers.add_parser("tcidu", formatter_class=RichHelpFormatter)
+    inflate_tcidu_parser(tcidu_parser)
+    
+    litru_parser = subparsers.add_parser("litru", formatter_class=RichHelpFormatter)
+    inflate_litru_parser(litru_parser)
 
     return parser
+    
 
 
 def main():

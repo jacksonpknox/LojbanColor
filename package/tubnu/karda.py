@@ -4,7 +4,7 @@ from rich.columns import Columns
 from rich.style import Style
 from rich.text import Text
 from rich import box
-import plumbing
+import tubnu.plumbing as plumbing
 
 
 def tabulate_rafsi_count(gismus, selmahos):

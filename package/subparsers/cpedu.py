@@ -35,6 +35,8 @@ def parse(args: dict):
     console = Console(record=rec, force_interactive=(not rec))
 
     skari = plumbing.get_config("skari")
+    selmahos = plumbing.get_config("selmahos")
+    gismus = plumbing.get_config("gismus")
 
     renderables = []
 
@@ -42,8 +44,6 @@ def parse(args: dict):
     if args.selmaho_style or args.minji_style or args.valsi_style:
         short_skari_renderables = []
         if s := args.selmaho_style:
-            with open(plumbing.CONFIG_DEFAULTS["selmahos"], "r") as f:
-                selmahos = json.load(f)
             s = [plumbing.force_selmaho(selmaho, selmahos) for selmaho in s]
             table = karda.tabulate_selmaho_styles(s, selmahos)
             short_skari_renderables.append(Panel(table, style=Style()))
@@ -79,8 +79,6 @@ def parse(args: dict):
         renderables.append(Panel(Columns(long_skari_renderables), style=Style()))
 
     if args.selmahoskari:
-        with open(plumbing.CONFIG_DEFAULTS["selmahos"], "r") as f:
-            selmahos = json.load(f)
         table = karda.tabulate_selmaho_styles(selmahos.keys(), selmahos)
         renderables.append(
             Panel(Columns(karda.squeeze_table(table, args.squeeze)), style=Style())
@@ -89,40 +87,33 @@ def parse(args: dict):
     # valsi subgroup
     if args.cmavo or args.gloss or args.rafsi:
         valsi_renderables = []
+
         if c := args.cmavo:
-            with open(plumbing.CONFIG_DEFAULTS["selmahos"], "r") as f:
-                selmahos = json.load(f)
             c = [cmavo.lower().replace("h", "'") for cmavo in c]
+
             table = karda.tabulate_cmavos(c, selmahos, skari)
             valsi_renderables.append(Panel(table, style=Style()))
 
         if g := args.gloss:
-            with open(plumbing.CONFIG_DEFAULTS["gismus"], "r") as f:
-                gismus = json.load(f)
             table = karda.tabulate_gismus(g, gismus, skari)
             valsi_renderables.append(Panel(table, style=Style()))
 
         if r := args.rafsi:
-            gismus = plumbing.get_config("gismus")
-            selmahos = plumbing.get_config("selmahos")
             table = karda.tabulate_cmarafsi(r, gismus, selmahos, skari)
             valsi_renderables.append(Panel(table, style=Style()))
+
         renderables.append(Panel(Columns(valsi_renderables), style=Style()))
 
     if args.selmaho:
-        with open(plumbing.CONFIG_DEFAULTS["selmahos"], "r") as f:
-            selmahos = json.load(f)
         panel = karda.get_selmaho_tables_panel(
             args.selmaho, selmahos, skari, squeeze=args.squeeze
         )
         renderables.append(panel)
 
     if args.all_selmaho:
-        with open(plumbing.CONFIG_DEFAULTS["selmahos"], "r") as f:
-            selmahos = json.load(f)
-        selmahos.pop("UNCAT", None)
-        selmahos.pop("BY", None)
-        selmahos.pop("Y", None)
+        selmahos.pop("UNCAT")
+        selmahos.pop("BY")
+        selmahos.pop("Y")
         panel = karda.get_selmaho_tables_panel(
             selmahos.keys(), selmahos, skari, squeeze=args.squeeze
         )
@@ -132,22 +123,18 @@ def parse(args: dict):
     if args.count_gismu or args.count_cmavo or args.count_rafsi:
         count_renderables = []
         if args.count_gismu:
-            gismus = plumbing.get_config("gismus")
             table = karda.tabulate_gismu_count(gismus, skari)
             count_renderables.append(
                 Panel(table, style=Style.parse(skari["valskari"]["gismu"]))
             )
 
         if args.count_cmavo:
-            selmahos = plumbing.get_config("selmahos")
             table = karda.tabulate_cmavo_count(selmahos)
             count_renderables.append(
                 Panel(table, style=Style.parse(skari["valskari"]["cmavo"]))
             )
 
         if args.count_rafsi:
-            gismus = plumbing.get_config("gismus")
-            selmahos = plumbing.get_config("selmahos")
             table = karda.tabulate_rafsi_count(gismus, selmahos)
             count_renderables.append(
                 Panel(table, style=Style.parse(skari["valskari"]["cmarafsi"]))
