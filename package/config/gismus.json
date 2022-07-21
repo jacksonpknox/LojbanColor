@@ -501,85 +501,204 @@
   },
   "bebna": {
     "gloss": "fool",
-    "tags": [
-      "standard"
+    "liste": [
+      "CLL"
     ],
-    "cmarafsi": []
+    "tags": [
+      "bebnyvla"
+    ],
+    "cmarafsi": [
+      "beb"
+    ],
+    "sumnamcu": 2,
+    "sumti": [
+      "bebna",
+      "zo'e"
+    ]
   },
   "bemro": {
-    "gloss": null,
-    "tags": [
-      "standard"
+    "gloss": "north american",
+    "liste": [
+      "CLL"
     ],
-    "cmarafsi": []
+    "tags": [
+      "natmyvla",
+      "kulnu"
+    ],
+    "cmarafsi": [
+      "bem",
+      "be'o"
+    ],
+    "sumnamcu": 2,
+    "sumti": [
+      "zo'e",
+      "selckaji"
+    ]
   },
   "bende": {
     "gloss": "crew",
-    "tags": [
-      "standard"
+    "liste": [
+      "CLL"
     ],
-    "cmarafsi": []
+    "cmarafsi": [
+      "bed",
+      "be'e"
+    ],
+    "sumnamcu": 4,
+    "sumti" : [
+      "bende",
+      "prenu",
+      "jatna",
+      "terpli"
+    ]
   },
   "bengo": {
-    "gloss": null,
-    "tags": [
-      "standard"
+    "gloss": "bengali",
+    "liste": [
+      "CLL"
     ],
-    "cmarafsi": []
+    "tags": [
+      "natmyvla"
+    ],
+    "cmarafsi": [
+      "beg"
+    ],
+    "sumnamcu": 2,
+    "sumti": [
+      "zo'e",
+      "selckaji"
+    ]
   },
   "benji": {
     "gloss": "signal",
-    "tags": [
-      "standard"
+    "liste": [
+      "CLL"
     ],
-    "cmarafsi": []
+    "tags": [
+      "fasnu",
+      "cuskyvla"
+    ],
+    "cmarafsi": [
+      "bej",
+      "be'i"
+    ],
+    "sumnamcu": 5,
+    "sumti": [
+      "gasnu",
+      "notci",
+      "tercusku",
+      "krasi",
+      "tadji"
+    ]
   },
   "bersa": {
     "gloss": "son",
-    "tags": [
-      "standard"
+    "liste": [
+      "CLL"
     ],
-    "cmarafsi": []
+    "tags": [
+      "panzi",
+      "nakni",
+      "nanmu"
+    ],
+    "cmarafsi": [
+      "bes",
+      "be'a"
+    ],
+    "sumnamcu": 2,
+    "sumti": [
+      "bersa",
+      "rirni"
+    ]
   },
   "berti": {
     "gloss": "north",
+    "liste": [
+      "CLL"
+    ],
     "tags": [
-      "standard"
+      "farna"
     ],
     "cmarafsi": [
-      "zip",
-      "tu'a",
-      "gli",
       "ber"
+    ],
+    "sumnamcu": 3,
+    "sumti": [
+      "zo'e",
+      "zo'e",
+      "zo'e"
     ]
   },
   "besna": {
     "gloss": "brain",
-    "tags": [
-      "standard"
+    "liste": [
+      "CLL"
     ],
-    "cmarafsi": []
+    "tags": [
+      "rango"
+    ],
+    "cmarafsi": [
+      "ben"
+    ],
+    "sumnamcu": 2,
+    "sumti": [
+      "besna",
+      "xadni"
+    ]
   },
   "betfu": {
     "gloss": "abdomen",
-    "tags": [
-      "standard"
+    "liste": [
+      "CLL"
     ],
-    "cmarafsi": []
+    "tags": [
+      "rango"
+    ],
+    "cmarafsi": [
+      "bef",
+      "be'u"
+    ],
+    "sumnamcu": 2,
+    "sumti": [
+      "betfu",
+      "xadni"
+    ]
   },
   "betri": {
     "gloss": "tragedy",
-    "tags": [
-      "standard"
+    "liste": [
+      "CLL"
     ],
-    "cmarafsi": []
+    "cmarafsi": [
+      "bet"
+    ],
+    "sumnamcu": 2,
+    "sumti": [
+      "betri",
+      "zo'e"
+    ]
   },
   "bevri": {
     "gloss": "carry",
-    "tags": [
-      "standard"
+    "liste": [
+      "CLL"
     ],
-    "cmarafsi": []
+    "tags": [
+      "fasnu",
+      "muvdu"
+    ],
+    "cmarafsi": [
+      "bev",
+      "bei"
+    ],
+    "sumnamcu": 5,
+    "sumti": [
+      "gasnu",
+      "dacti",
+      "stuzi",
+      "stuzi",
+      "pluta"
+    ]
   },
   "bidju": {
     "gloss": null,
