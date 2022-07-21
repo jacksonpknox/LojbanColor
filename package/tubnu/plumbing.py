@@ -5,7 +5,7 @@ CONFIG_DEFAULTS = {
     "gismus": "config/gismus.json",
     "selmahos": "config/selmahos.json",
     "skari": "config/skari.json",
-    "progress": "config/progress.json"
+    "progress": "config/progress.json",
 }
 
 
@@ -24,7 +24,6 @@ class Config:
             json.dump(self.data, f, indent=2)
 
 
-
 def get_config(conf: str) -> dict:
     with open(CONFIG_DEFAULTS[conf]) as f:
         return json.load(f)
@@ -33,9 +32,10 @@ def get_config(conf: str) -> dict:
 C = "bcdfgjklmnprstvxz"
 V = "aeiou"
 
-#NOTE: unimplemented
+# NOTE: unimplemented
 def is_cmarafsi(valsi: str) -> bool:
     return True
+
 
 def is_cmavo(valsi: str) -> bool:
     if (z := valsi[0]) not in C and z != ".":
@@ -101,7 +101,7 @@ def get_gismu(cmarafsi: str, gismus: dict) -> str:
             return gismu
     return "UNCAT"
 
-    
+
 def classify_cmarafsi(cmarafsi: str, gismus: dict, selmahos: dict) -> tuple:
     for gismu, dic in gismus.items():
         if "cmarafsi" in dic.keys() and cmarafsi in dic["cmarafsi"]:

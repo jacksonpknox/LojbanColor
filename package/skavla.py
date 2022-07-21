@@ -1,5 +1,5 @@
 import argparse
-from rich_argparse import RichHelpFormatter
+from tubnu.rich_argparse import RichHelpFormatter
 
 import subparsers.cuxna as cuxna
 import subparsers.tcidu as tcidu
@@ -11,11 +11,10 @@ def build_parser():
     parser = argparse.ArgumentParser(
         formatter_class=RichHelpFormatter,
         description="skavla: colored words\n A program that reads and colors Lojban",
-        epilog="<3",
     )
     subparsers = parser.add_subparsers(title="minde")
 
-    #CUXNA CUXNA CUXNA CUXNA CUXNA
+    # CUXNA CUXNA CUXNA CUXNA CUXNA
     parser_config = subparsers.add_parser("cuxna", formatter_class=RichHelpFormatter)
     # skari subgroup
     config_skari_subgroup = parser_config.add_argument_group("skari")
@@ -52,7 +51,7 @@ def build_parser():
         action="store",
         nargs=1,
         help="stylize every selma'o with STYLE",
-        metavar="STYLE"
+        metavar="STYLE",
     )
     # valsi subgroup
     config_valsi_subgroup = parser_config.add_argument_group("valsi")
@@ -88,7 +87,7 @@ def build_parser():
         action="store",
         nargs=2,
         help="attribute CMAVO with CMARAFSI",
-        metavar=("CMAVO", "CMARAFSI")
+        metavar=("CMAVO", "CMARAFSI"),
     )
     config_valsi_subgroup.add_argument(
         "-t",
@@ -110,7 +109,6 @@ def build_parser():
     )
     parser_config.set_defaults(func=cuxna.parse)
 
-
     # CPEDU CPEDU CPEDU CPEDU CPEDU
     parser_request = subparsers.add_parser("cpedu", formatter_class=RichHelpFormatter)
     parser_request.add_argument(
@@ -123,17 +121,14 @@ def build_parser():
         default=16,
     )
     parser_request.add_argument(
-        "-w",
-        "--wave",
-        action="store_true",
-        help="make backgrounds colors alternate"
+        "-w", "--wave", action="store_true", help="make backgrounds colors alternate"
     )
     parser_request.add_argument(
         "-e",
         "--export",
         action="store",
         help="export the result to an .svg file",
-        metavar="LOCATION"
+        metavar="LOCATION",
     )
     skari_subgroup = parser_request.add_argument_group("skari")
     skari_subgroup.add_argument(
@@ -213,23 +208,22 @@ def build_parser():
         "--count-cmavo",
         dest="count_cmavo",
         action="store_true",
-        help="count the cmavos in your inventory"
+        help="count the cmavos in your inventory",
     )
     kancu_subgroup.add_argument(
         "--count-gismu",
         dest="count_gismu",
         action="store_true",
-        help="count the gismus in your inventory"
+        help="count the gismus in your inventory",
     )
     kancu_subgroup.add_argument(
         "--count-rafsi",
         dest="count_rafsi",
         action="store_true",
-        help="count the rafsi in your inventory"
+        help="count the rafsi in your inventory",
     )
 
     parser_request.set_defaults(func=cpedu.parse)
-
 
     # TCIDU TCIDU TCIDU TCIDU TCIDU
     parser_read = subparsers.add_parser("tcidu", formatter_class=RichHelpFormatter)
@@ -243,10 +237,7 @@ def build_parser():
         default=16,
     )
     parser_read.add_argument(
-        "-w",
-        "--wave",
-        action="store_true",
-        help="make background colors alternate"
+        "-w", "--wave", action="store_true", help="make background colors alternate"
     )
     parser_read.add_argument(
         "-e",
@@ -274,13 +265,13 @@ def build_parser():
         "--catch-gismus",
         dest="catch_gismus",
         action="store_true",
-        help="prompt the user for the glosses of the gismus that show up"
+        help="prompt the user for the glosses of the gismus that show up",
     )
     read_input_subgroup.add_argument(
         "--catch-rafsi",
         dest="catch_rafsi",
         action="store_true",
-        help="prompt the user to complete the rafsi table"
+        help="prompt the user to complete the rafsi table",
     )
     # Panels subgroup
     read_panels_subgroup = parser_read.add_argument_group("panels")

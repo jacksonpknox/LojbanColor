@@ -1,6 +1,6 @@
-import plumbing
-import karda
-import jmaji
+import tubnu.plumbing as plumbing
+import tubnu.karda as karda
+import tubnu.jmaji as jmaji
 import subparsers.cuxna as cuxna
 
 import sys
@@ -74,7 +74,7 @@ class Skabanizer(SkabanListener):
     def enterQ(self, ctx):
         self.t.append(text=ctx.getText(), style=self.valskari["q"])
 
-        
+
 def interrogate_for_rafsi(tree, gismus, selmahos, skari) -> None:
     p = Style.parse(skari["mi'iskari"]["prompt"])
     collection = jmaji.collect(tree, jmaji.CmarafsiCollector)
@@ -82,7 +82,9 @@ def interrogate_for_rafsi(tree, gismus, selmahos, skari) -> None:
         cma = Text(cmarafsi, style=Style.parse(skari["valskari"]["cmarafsi"]))
         word_type, word, bonus = plumbing.classify_cmarafsi(cmarafsi, gismus, selmahos)
         if word_type == "UNCAUGHT":
-            word_type = Prompt.ask(Text("type of ", p) + cma, choices=["gismu", "cmavo"], default="gismu")
+            word_type = Prompt.ask(
+                Text("type of ", p) + cma, choices=["gismu", "cmavo"], default="gismu"
+            )
         if word_type == "gismu":
             if word == "UNCAUGHT":
                 word = Prompt.ask(Text("gismu for cmarafsi ", p) + cma)
@@ -100,13 +102,16 @@ def interrogate_for_rafsi(tree, gismus, selmahos, skari) -> None:
                     bonus = Prompt.ask(Text("selma'o for cmavo ", p) + word)
                 cuxna.add_cmavyrafsi(bonus, word, cmarafsi, selmahos, skari)
 
-        
+
 def interrogate_for_glosses(tree, gismus, skari) -> None:
     collection = jmaji.collect(tree, jmaji.GismuCollector)
     p = Style.parse(skari["mi'iskari"]["prompt"])
     for gismu in collection:
         if gismu not in gismus.keys() or not gismus[gismu]["gloss"]:
-            gloss = Prompt.ask(Text("type the gloss for ", p) + gismu + Text(" (enter to skip)", p), default=None)
+            gloss = Prompt.ask(
+                Text("type the gloss for ", p) + gismu + Text(" (enter to skip)", p),
+                default=None,
+            )
             if gloss:
                 cuxna.set_gloss(gismu, gloss, skari)
 
@@ -125,8 +130,8 @@ def analyze_cmavos(tree, selmahos, skari, selmaho_style: bool) -> Table:
     collection = jmaji.collect(tree, jmaji.CmavoCollector)
     return karda.tabulate_cmavos(collection, selmahos, skari, selmaho_style)
 
-    
-#NOTE returns Columns
+
+# NOTE returns Columns
 def analyze_selmahos_differently(tree, selmahos, squeeze: int) -> Columns:
     cmavo_collection = jmaji.collect(tree, jmaji.CmavoCollector)
     selmaho_collection = []
@@ -136,10 +141,12 @@ def analyze_selmahos_differently(tree, selmahos, squeeze: int) -> Columns:
             selmaho_collection.append(s)
     table = karda.tabulate_selmaho_styles(selmaho_collection, selmahos)
     return Columns(karda.squeeze_table(table, squeeze))
-    
 
-#NOTE returns Columns
-def analyze_selmahos(tree, selmahos, skari, squeeze: int, show_styles: bool=False) -> Columns:
+
+# NOTE returns Columns
+def analyze_selmahos(
+    tree, selmahos, skari, squeeze: int, show_styles: bool = False
+) -> Columns:
     cmavo_collection = jmaji.collect(tree, jmaji.CmavoCollector)
     selmaho_collection = dict()
     for cmavo in cmavo_collection:
@@ -150,7 +157,11 @@ def analyze_selmahos(tree, selmahos, skari, squeeze: int, show_styles: bool=Fals
             selmaho_collection[s].append(cmavo)
     selmaho_tables = []
     for s, cmavos in selmaho_collection.items():
-        selmaho_tables.extend(karda.squeeze_table(karda.tabulate_cmavos(cmavos, selmahos, skari, show_styles), squeeze))
+        selmaho_tables.extend(
+            karda.squeeze_table(
+                karda.tabulate_cmavos(cmavos, selmahos, skari, show_styles), squeeze
+            )
+        )
     return Columns(selmaho_tables)
 
 
@@ -171,17 +182,47 @@ def process_and_print_tree(tree, args: dict, console, gismus, selmahos, skari):
     if args.cmavo or args.gismu or args.rafsi:
         col_renderables = []
         if args.cmavo:
-            col_renderables.append(Panel(analyze_cmavos(tree, selmahos, skari, False), expand=False, style=Style.parse(skari["valskari"]["cmavo"])))
+            col_renderables.append(
+                Panel(
+                    analyze_cmavos(tree, selmahos, skari, False),
+                    expand=False,
+                    style=Style.parse(skari["valskari"]["cmavo"]),
+                )
+            )
         if args.gismu:
-            col_renderables.append(Panel(analyze_gismu(tree, gismus, skari), expand=False, style=Style.parse(skari["valskari"]["gismu"])))
+            col_renderables.append(
+                Panel(
+                    analyze_gismu(tree, gismus, skari),
+                    expand=False,
+                    style=Style.parse(skari["valskari"]["gismu"]),
+                )
+            )
         if args.rafsi:
-            col_renderables.append(Panel(analyze_rafsi(tree, gismus, selmahos, skari), expand=False, style=Style.parse(skari["valskari"]["cmarafsi"])))
+            col_renderables.append(
+                Panel(
+                    analyze_rafsi(tree, gismus, selmahos, skari),
+                    expand=False,
+                    style=Style.parse(skari["valskari"]["cmarafsi"]),
+                )
+            )
         renderables.append(Panel(Columns(col_renderables), style=Style()))
 
     if args.selmaho:
-        renderables.append(Panel(analyze_selmahos(tree, selmahos, skari, args.squeeze, False), expand=False, style=Style()))
+        renderables.append(
+            Panel(
+                analyze_selmahos(tree, selmahos, skari, args.squeeze, False),
+                expand=False,
+                style=Style(),
+            )
+        )
     if args.selmaho_style:
-        renderables.append(Panel(analyze_selmahos_differently(tree, selmahos, args.squeeze), expand=False, style=Style()))
+        renderables.append(
+            Panel(
+                analyze_selmahos_differently(tree, selmahos, args.squeeze),
+                expand=False,
+                style=Style(),
+            )
+        )
 
     if args.wave:
         for i, panel in enumerate(renderables):

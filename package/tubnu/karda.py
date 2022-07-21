@@ -6,6 +6,7 @@ from rich.text import Text
 from rich import box
 import plumbing
 
+
 def tabulate_rafsi_count(gismus, selmahos):
     table = Table(box=box.MINIMAL, title="Rafsi Count")
     table.add_column("total")
@@ -19,6 +20,7 @@ def tabulate_rafsi_count(gismus, selmahos):
         c += len(dic.get("cmarafsi", []))
     table.add_row(str(g + c), str(g), str(c))
     return table
+
 
 def tabulate_cmavo_count(selmahos):
     table = Table(box=box.MINIMAL, title="Cmavo Count")
@@ -41,6 +43,7 @@ def tabulate_gismu_count(gismus, skari):
             g += 1
     table.add_row(str(len(gismus)), str(g))
     return table
+
 
 def yank_row(table):
     h = measure_height(table) - 1
@@ -142,4 +145,3 @@ def tabulate_selmaho_styles(s: list, selmahos: dict):
         sty = selmahos[selmaho]["color"]
         table.add_row(selmaho, sty, style=sty)
     return table
-

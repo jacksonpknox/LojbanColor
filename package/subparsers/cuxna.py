@@ -1,6 +1,5 @@
 from signal import raise_signal
-import plumbing
-import json
+import tubnu.plumbing as plumbing
 
 from rich import print
 from rich.prompt import Prompt
@@ -17,7 +16,7 @@ def set_sumti(gismu: str, sumti: str, valsi: str, skari: dict):
         raise Exception("Error!, {} is out of range.".format(sumti))
     if not plumbing.is_gismu(gismu):
         raise Exception("Error!, {} is not a gismu by morphology.".format(gismu))
-    
+
     with plumbing.Config("gismus") as gismus:
         if gismu not in gismus.keys():
             raise Exception("Error!, {} is not caught.".format(gismu))
@@ -26,7 +25,7 @@ def set_sumti(gismu: str, sumti: str, valsi: str, skari: dict):
         while len(gismus[gismu]["sumti"]) < sumti:
             gismus[gismu]["sumti"].append("zo'e")
         gismus[gismu]["sumti"][sumti - 1] = valsi
-    
+
     print(
         Text.assemble(
             ("ok... ", skari["mi'iskari"]["ok"]),
@@ -39,7 +38,8 @@ def set_sumti(gismu: str, sumti: str, valsi: str, skari: dict):
             (".", skari["mi'iskari"]["system"]),
         )
     )
-        
+
+
 def add_tag_to_gismu(gismu: str, tag: str, skari: dict):
     s = skari["mi'iskari"]["system"]
 
@@ -64,10 +64,11 @@ def add_tag_to_gismu(gismu: str, tag: str, skari: dict):
                     (".", s),
                 )
             )
-    
 
 
-def add_cmavyrafsi(selmaho: str, cmavo: str, cmarafsi: str, selmahos: dict, skari: dict):
+def add_cmavyrafsi(
+    selmaho: str, cmavo: str, cmarafsi: str, selmahos: dict, skari: dict
+):
     s = skari["mi'iskari"]["system"]
     if not plumbing.is_cmavo(cmavo):
         raise Exception("Error!, {} is not a cmavo by morhpology.".format(cmavo))
@@ -85,7 +86,7 @@ def add_cmavyrafsi(selmaho: str, cmavo: str, cmarafsi: str, selmahos: dict, skar
             )
             mahos[selmaho] = DEFAULT_SELMAHO_PACKET
         if "cmarafsi" not in mahos[selmaho].keys():
-            mahos[selmaho]["cmarafsi"] = dict() # refactorable safe insertion
+            mahos[selmaho]["cmarafsi"] = dict()  # refactorable safe insertion
         mahos[selmaho]["cmarafsi"][cmarafsi] = cmavo
         print(
             Text.assemble(
@@ -97,7 +98,7 @@ def add_cmavyrafsi(selmaho: str, cmavo: str, cmarafsi: str, selmahos: dict, skar
                 (".", s),
             )
         )
-        
+
 
 def add_cmarafsi(gismu: str, cmarafsi: str, skari: dict) -> None:
     s = skari["mi'iskari"]["system"]
@@ -215,11 +216,11 @@ def set_all_selmaho_style(style: str, skari: dict) -> None:
                 ("ok...", skari["mi'iskari"]["ok"]),
                 ("set color of every selmaho to ", skari["mi'iskari"]["system"]),
                 (style, style),
-                (".", skari["mi'iskari"]["system"])
+                (".", skari["mi'iskari"]["system"]),
             )
         )
 
-            
+
 def set_valsi_style(token: str, style: str) -> None:
     with plumbing.Config("skari") as skari:
         if token not in skari["valskari"].keys():
@@ -280,19 +281,26 @@ def parse(args: dict):
         set_selmaho_style(s[0], s[1], skari)  # (selmaho, style)
 
     if m := args.minji_style:
-        set_minji_style(m[0], m[1]) # (token, style)
+        set_minji_style(m[0], m[1])  # (token, style)
 
     if v := args.valsi_style:
-        set_valsi_style(v[0], v[1]) # (token, style)
+        set_valsi_style(v[0], v[1])  # (token, style)
 
     if a := args.all_selmaho_style:
         print(
             Text.assemble(
                 ("warning! ", skari["mi'iskari"]["obstacle"]),
-                ("this will erase all selma'o color choices.", skari["mi'iskari"]["system"])
+                (
+                    "this will erase all selma'o color choices.",
+                    skari["mi'iskari"]["system"],
+                ),
             )
         )
-        proceed = Prompt.ask(Text("go ahead?", skari["mi'iskari"]["prompt"]), choices=["yes", "no"], default="no")
+        proceed = Prompt.ask(
+            Text("go ahead?", skari["mi'iskari"]["prompt"]),
+            choices=["yes", "no"],
+            default="no",
+        )
         if proceed == "yes":
             set_all_selmaho_style(a[0], skari)
 
@@ -317,4 +325,4 @@ def parse(args: dict):
         add_tag_to_gismu(t[0], t[1], skari)  # (gismu, tag)
 
     if u := args.set_sumti:
-        set_sumti(u[0], u[1], u[2], skari) # (gismu, sumti, valsi)
+        set_sumti(u[0], u[1], u[2], skari)  # (gismu, sumti, valsi)

@@ -1,5 +1,5 @@
-import plumbing
-import karda
+import tubnu.plumbing as plumbing
+import tubnu.karda as karda
 
 import json
 
@@ -33,7 +33,7 @@ def tabulate_minji_styles(m: list, skari: dict):
 def parse(args: dict):
     rec = bool(e := args.export)
     console = Console(record=rec, force_interactive=(not rec))
-    
+
     skari = plumbing.get_config("skari")
 
     renderables = []
@@ -82,8 +82,9 @@ def parse(args: dict):
         with open(plumbing.CONFIG_DEFAULTS["selmahos"], "r") as f:
             selmahos = json.load(f)
         table = karda.tabulate_selmaho_styles(selmahos.keys(), selmahos)
-        renderables.append(Panel(Columns(karda.squeeze_table(table, args.squeeze)), style=Style()))
-
+        renderables.append(
+            Panel(Columns(karda.squeeze_table(table, args.squeeze)), style=Style())
+        )
 
     # valsi subgroup
     if args.cmavo or args.gloss or args.rafsi:
@@ -127,27 +128,31 @@ def parse(args: dict):
         )
         renderables.append(panel)
 
-
     # kancu subgroup
     if args.count_gismu or args.count_cmavo or args.count_rafsi:
         count_renderables = []
         if args.count_gismu:
             gismus = plumbing.get_config("gismus")
             table = karda.tabulate_gismu_count(gismus, skari)
-            count_renderables.append(Panel(table, style=Style.parse(skari["valskari"]["gismu"])))
+            count_renderables.append(
+                Panel(table, style=Style.parse(skari["valskari"]["gismu"]))
+            )
 
         if args.count_cmavo:
             selmahos = plumbing.get_config("selmahos")
             table = karda.tabulate_cmavo_count(selmahos)
-            count_renderables.append(Panel(table, style=Style.parse(skari["valskari"]["cmavo"])))
+            count_renderables.append(
+                Panel(table, style=Style.parse(skari["valskari"]["cmavo"]))
+            )
 
         if args.count_rafsi:
             gismus = plumbing.get_config("gismus")
             selmahos = plumbing.get_config("selmahos")
             table = karda.tabulate_rafsi_count(gismus, selmahos)
-            count_renderables.append(Panel(table, style=Style.parse(skari["valskari"]["cmarafsi"])))
+            count_renderables.append(
+                Panel(table, style=Style.parse(skari["valskari"]["cmarafsi"]))
+            )
         renderables.append(Panel(Columns(count_renderables), style=Style()))
-
 
     if args.wave:
         for i, panel in enumerate(renderables):
