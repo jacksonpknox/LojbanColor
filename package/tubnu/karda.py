@@ -8,7 +8,7 @@ import tubnu.plumbing as plumbing
 
 
 def tabulate_rafsi_count(gismus, selmahos):
-    table = Table(box=box.MINIMAL, title="Rafsi Count")
+    table = Table(box=box.MINIMAL)
     table.add_column("total")
     table.add_column("gimrafsi")
     table.add_column("cmavyrafsi")
@@ -23,7 +23,7 @@ def tabulate_rafsi_count(gismus, selmahos):
 
 
 def tabulate_cmavo_count(selmahos):
-    table = Table(box=box.MINIMAL, title="Cmavo Count")
+    table = Table(box=box.MINIMAL)
     table.add_column("selmaho")
     table.add_column("cmavo")
     c = 0
@@ -34,7 +34,7 @@ def tabulate_cmavo_count(selmahos):
 
 
 def tabulate_gismu_count(gismus, skari):
-    table = Table(box=box.MINIMAL, title="Gismu Count")
+    table = Table(box=box.MINIMAL)
     table.add_column("caught")
     table.add_column("glossed")
     g = 0
@@ -134,7 +134,7 @@ def get_selmaho_tables_panel(s: list, selmahos: dict, skari: dict, squeeze: int 
         selmaho = plumbing.force_selmaho(selmaho, selmahos)
         table = get_selmaho_table(selmaho, selmahos, skari)
         selmaho_tables.extend(squeeze_table(table, squeeze))
-    return Panel(Columns(selmaho_tables), style=Style())
+    return Panel(Columns(selmaho_tables), style=Style(), title="selma'o")
 
 
 def tabulate_selmaho_styles(s: list, selmahos: dict):

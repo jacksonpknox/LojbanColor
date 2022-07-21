@@ -1,8 +1,6 @@
 import tubnu.plumbing as plumbing
 import tubnu.karda as karda
 
-import json
-
 from rich import box
 
 from rich.panel import Panel
@@ -30,6 +28,30 @@ def tabulate_minji_styles(m: list, skari: dict):
     return tabulate_skari(m, skari, "mi'iskari")
 
 
+def kancu_big_panel(skari: dict, selmahos: dict, gismus: dict, args):
+    renderables = []
+
+    if args.count_cmavo:
+        table = karda.tabulate_cmavo_count(selmahos)
+        renderables.append(
+            Panel(table, style=Style.parse(skari["valskari"]["cmavo"]), title="cmavo")
+        )
+
+    if args.count_gismu:
+        table = karda.tabulate_gismu_count(gismus, skari)
+        renderables.append(
+            Panel(table, style=Style.parse(skari["valskari"]["gismu"]), title="gismu")
+        )
+
+    if args.count_rafsi:
+        table = karda.tabulate_rafsi_count(gismus, selmahos)
+        renderables.append(
+            Panel(table, style=Style.parse(skari["valskari"]["cmarafsi"]), title="cmarafsi")
+        )
+
+    return Panel(Columns(renderables), style=Style(), title="kancu")
+
+
 def all_selmaho_big_panel(skari: dict, selmahos: dict, gismus: dict, args):
     selmahos.pop("UNCAT")
     selmahos.pop("BY")
@@ -52,24 +74,24 @@ def short_valsi_big_panel(skari: dict, selmahos: dict, gismus: dict, args):
     if c := args.cmavo:
         c = [cmavo.lower().replace("h", "'") for cmavo in c]
         table = karda.tabulate_cmavos(c, selmahos, skari)
-        renderables.append(Panel(table, style=Style()))
+        renderables.append(Panel(table, style=Style.parse(skari["valskari"]["cmavo"]), title="cmavo"))
 
     if g := args.gloss:
         table = karda.tabulate_gismus(g, gismus, skari)
-        renderables.append(Panel(table, style=Style()))
+        renderables.append(Panel(table, style=Style.parse(skari["valskari"]["gismu"]), title="gismu"))
 
     if r := args.rafsi:
         table = karda.tabulate_cmarafsi(r, gismus, selmahos, skari)
-        renderables.append(Panel(table, style=Style()))
+        renderables.append(Panel(table, style=Style.parse(skari["valskari"]["cmarafsi"]), title="cmarafsi"))
 
-    return Panel(Columns(renderables), style=Style())
+    return Panel(Columns(renderables), style=Style(), title="valsi")
 
 
 def all_selmaho_skari_big_panel(skari: dict, selmahos: dict, gismus: dict, args):
     table = karda.tabulate_selmaho_styles(selmahos.keys(), selmahos)
     renderables = karda.squeeze_table(table, args.squeeze)
 
-    return Panel(Columns(renderables), style=Style())
+    return Panel(Columns(renderables), style=Style(), title="selmahoskari")
     
 
 def all_skari_big_panel(skari: dict, selmahos: dict, gismus: dict, args):
@@ -77,16 +99,14 @@ def all_skari_big_panel(skari: dict, selmahos: dict, gismus: dict, args):
     if args.valskari:
         tokens = skari["valskari"].keys()
         table = tabulate_valsi_styles(tokens, skari)
-        table.title = "valskari"
-        renderables.append(Panel(table, style=Style()))
+        renderables.append(Panel(table, style=Style(), title="valskari"))
 
     if args.mihiskari:
         tokens = skari["mi'iskari"].keys()
         table = tabulate_minji_styles(tokens, skari)
-        table.title = "mi'iskari"
-        renderables.append(Panel(table, style=Style()))
+        renderables.append(Panel(table, style=Style(), title="mi'iskari"))
 
-    return Panel(Columns(renderables), style=Style())
+    return Panel(Columns(renderables), style=Style(), title="skari")
 
 
 def short_skari_big_panel(skari: dict, selmahos: dict, gismus: dict, args):
@@ -110,29 +130,7 @@ def short_skari_big_panel(skari: dict, selmahos: dict, gismus: dict, args):
         table = tabulate_valsi_styles(v, skari)
         renderables.append(Panel(table, style=Style()))
 
-    return Panel(Columns(renderables), style=Style())
-
-
-def kancu_big_panel(skari: dict, selmahos: dict, gismus: dict, args):
-    renderables = []
-    if args.count_gismu:
-        table = karda.tabulate_gismu_count(gismus, skari)
-        renderables.append(
-            Panel(table, style=Style.parse(skari["valskari"]["gismu"]))
-        )
-
-    if args.count_cmavo:
-        table = karda.tabulate_cmavo_count(selmahos)
-        renderables.append(
-            Panel(table, style=Style.parse(skari["valskari"]["cmavo"]))
-        )
-
-    if args.count_rafsi:
-        table = karda.tabulate_rafsi_count(gismus, selmahos)
-        renderables.append(
-            Panel(table, style=Style.parse(skari["valskari"]["cmarafsi"]))
-        )
-    return Panel(Columns(renderables), style=Style())
+    return Panel(Columns(renderables), style=Style(), title="skari")
 
 
 def get_big_panels(args):
@@ -187,7 +185,7 @@ def parse(args: dict):
             sty = Style(bgcolor="#333333") if (i % 2) else Style(bgcolor="black")
             panel.style += sty
 
-    console.print(Panel(Group(*big_panels), box.DOUBLE, expand=False, style=Style()))
+    console.print(Panel(Group(*big_panels), box.DOUBLE, expand=False, style=Style(), title="cpedu"))
 
     if rec:
         console.save_svg(e, title="skavla")
