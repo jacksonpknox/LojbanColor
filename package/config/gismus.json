@@ -144,7 +144,7 @@
   },
   "balni": {
     "gloss": "balcony",
-    "liste":[
+    "liste": [
       "CLL"
     ],
     "tags": [
@@ -205,7 +205,7 @@
   },
   "bandu": {
     "gloss": "defend",
-    "liste":[
+    "liste": [
       "CLL"
     ],
     "tags": [
@@ -213,7 +213,7 @@
     ],
     "cmarafsi": [
       "bad"
-    ],  
+    ],
     "sumnamcu": 3,
     "sumti": [
       "gasnu",
@@ -3746,7 +3746,7 @@
     "cmarafsi": []
   },
   "jicmu": {
-    "gloss": null,
+    "gloss": "basis",
     "tags": [
       "standard"
     ],
@@ -5853,9 +5853,13 @@
   "narju": {
     "gloss": "orange",
     "tags": [
-      "standard"
+      "standard",
+      "skari"
     ],
-    "cmarafsi": []
+    "cmarafsi": [],
+    "sumti": [
+      "dacti"
+    ]
   },
   "natfe": {
     "gloss": "deny",
@@ -7442,9 +7446,16 @@
   "sfasa": {
     "gloss": "punish",
     "tags": [
-      "standard"
+      "standard",
+      "fasnu"
     ],
-    "cmarafsi": []
+    "cmarafsi": [],
+    "sumti": [
+      "gasnu",
+      "zo'e",
+      "zekri",
+      "velsfasa"
+    ]
   },
   "sfofa": {
     "gloss": "sofa",
@@ -7831,9 +7842,10 @@
     "cmarafsi": []
   },
   "snidu": {
-    "gloss": null,
+    "gloss": "second",
     "tags": [
-      "standard"
+      "standard",
+      "temci"
     ],
     "cmarafsi": []
   },
@@ -7901,9 +7913,10 @@
     "cmarafsi": []
   },
   "solji": {
-    "gloss": null,
+    "gloss": "gold",
     "tags": [
-      "standard"
+      "standard",
+      "marji"
     ],
     "cmarafsi": []
   },
