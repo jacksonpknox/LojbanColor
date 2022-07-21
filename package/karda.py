@@ -13,11 +13,10 @@ def tabulate_rafsi_count(gismus, selmahos):
     table.add_column("cmavyrafsi")
     g = 0
     for _, dic in gismus.items():
-        g += len(dic["cmarafsi"])
+        g += len(dic.get("cmarafsi", []))
     c = 0
     for _, dic in selmahos.items():
-        if "cmarafsi" in dic.keys():
-            c += len(dic["cmarafsi"])
+        c += len(dic.get("cmarafsi", []))
     table.add_row(str(g + c), str(g), str(c))
     return table
 
