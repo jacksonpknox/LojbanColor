@@ -90,7 +90,8 @@
       "CLL"
     ],
     "tags": [
-      "danlyvla"
+      "danlyvla",
+      "bakni"
     ],
     "cmarafsi": [
       "bak"
@@ -364,7 +365,7 @@
     ]
   },
   "barja": {
-    "gloss": "bar",
+    "gloss": "tavern",
     "liste": [
       "CLL"
     ],
@@ -377,62 +378,126 @@
     ]
   },
   "barna": {
-    "gloss": null,
-    "tags": [
-      "standard"
+    "gloss": "mark",
+    "liste": [
+      "CLL"
     ],
-    "cmarafsi": []
+    "cmarafsi": [
+      "ba'a"
+    ],
+    "sumnamcu": 3,
+    "sumti": [
+      "barna",
+      "dacti",
+      "marji"
+    ]
   },
   "bartu": {
     "gloss": "outside",
-    "tags": [
-      "standard"
+    "liste": [
+      "CLL"
     ],
     "cmarafsi": [
       "bar"
+    ],
+    "sumnamcu": 2,
+    "sumti": [
+      "stuzi",
+      "korbi"
     ]
   },
   "basna": {
-    "gloss": null,
-    "tags": [
-      "standard"
+    "gloss": "emphasize",
+    "liste": [
+      "CLL"
     ],
-    "cmarafsi": []
+    "tags": [
+      "fasnu"
+    ],
+    "sumnamcu": 3,
+    "sumti": [
+      "gasnu",
+      "zo'e",
+      "tadji"
+    ]
   },
   "basti": {
     "gloss": "replace",
-    "tags": [
-      "standard"
+    "liste": [
+      "CLL"
     ],
-    "cmarafsi": []
+    "cmarafsi": [
+      "bas"
+    ],
+    "sumnamcu": 3,
+    "sumti": [
+      "basti",
+      "selbasti",
+      "tcini"
+    ]
   },
   "batci": {
     "gloss": "bite",
-    "tags": [
-      "standard"
+    "liste": [
+      "CLL"
     ],
-    "cmarafsi": []
+    "tags": [
+      "fasnu"
+    ],
+    "cmarafsi": [
+      "bat"
+    ],
+    "sumnamcu": 4,
+    "sumti": [
+      "gasnu",
+      "selgunta",
+      "seldiklo",
+      "selpilno"
+    ]
   },
   "batke": {
     "gloss": "button",
-    "tags": [
-      "standard"
+    "liste": [
+      "CLL"
     ],
-    "cmarafsi": []
+    "sumnamcu": 4,
+    "sumti": [
+      "batke",
+      "dacti",
+      "terpli",
+      "marji"
+    ]
   },
   "bavmi": {
-    "gloss": null,
-    "tags": [
-      "standard"
+    "gloss": "barley",
+    "liste": [
+      "CLL"
     ],
-    "cmarafsi": []
+    "tags": [
+      "spatyvla",
+      "spati",
+      "gurni"
+    ],
+    "sumnamcu": 2,
+    "sumti": [
+      "bavmi",
+      "jutsi"
+    ]
   },
   "baxso": {
-    "gloss": null,
-    "tags": [
-      "standard"
+    "gloss": "Malay",
+    "liste": [
+      "CLL"
     ],
-    "cmarafsi": []
+    "tags": [
+      "natmyvla",
+      "kulnu"
+    ],
+    "sumnamcu": 2,
+    "sumti": [
+      "zo'e",
+      "selckaji"
+    ]
   },
   "bebna": {
     "gloss": "fool",
