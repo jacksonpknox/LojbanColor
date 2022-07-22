@@ -23,6 +23,20 @@ class Config:
         with open(CONFIG_DEFAULTS[self.label], "w") as f:
             json.dump(self.data, f, indent=2)
 
+class SuperConfig:
+    def __init__(self, filepath: str):
+        self.filepath = filepath
+        self.data = dict()
+
+    def __enter__(self):
+        with open(self.filepath, "r") as f:
+            self.data = json.load(f)
+        return self.data
+        
+    def __exit__(self, exc_type, exc_value, exc_traceback):
+        with open(self.filepath, "w") as f:
+            json.dump(self.data, f, indent=2)
+
 
 def get_config(conf: str) -> dict:
     with open(CONFIG_DEFAULTS[conf]) as f:
@@ -89,6 +103,8 @@ def get_selmaho(cmavo: str, selmahos: dict) -> str:
 def force_selmaho(selmaho: str, selmahos: dict) -> str:
     if selmaho not in selmahos.keys():
         cmavo_form = selmaho.lower().replace("h", "'")
+        if cmavo_form[0] in V:
+            cmavo_form = "." + cmavo_form
         if not is_cmavo(cmavo_form):
             raise Exception("Error! not cmav by morphology exception")
         selmaho = get_selmaho(cmavo_form, selmahos)

@@ -3,8 +3,6 @@ import tubnu.karda as karda
 import tubnu.jmaji as jmaji
 import subparsers.cuxna as cuxna
 
-import sys
-
 from rich import box
 from rich.text import Text
 from rich.panel import Panel
@@ -62,10 +60,10 @@ class Skabanizer(SkabanListener):
     def enterKarkarcmarafsi(self, ctx):
         self.t.append(text=ctx.getText(), style=self.valskari["cmarafsi"])
 
-    def enterGahorgimsygenja(self, ctx: SkabanParser.GahorgimsygenjaContext):
+    def enterGahorgimsygenja(self, ctx):
         self.t.append(text=ctx.getText(), style=self.valskari["gismygenja"])
 
-    def enterKargimsygenja(self, ctx: SkabanParser.KargimsygenjaContext):
+    def enterKargimsygenja(self, ctx):
         self.t.append(text=ctx.getText(), style=self.valskari["gismygenja"])
 
     def enterY(self, ctx):
@@ -92,7 +90,7 @@ def interrogate_for_rafsi(tree, gismus, selmahos, skari) -> None:
                 bonus = plumbing.get_gloss(word, gismus)
             if bonus in ["UNCAUGHT", "UNGLOSSED"]:
                 bonus = Prompt.ask(Text("gloss for ", p) + word)
-                cuxna.set_gloss(word, bonus, skari)
+                cuxna.add_gloss(word, bonus, skari)
         elif word_type == "cmavo":
             if word == "UNCAUGHT":
                 word = Prompt.ask(Text("cmavo for cmavyrafsi ", p) + cma)
@@ -113,7 +111,7 @@ def interrogate_for_glosses(tree, gismus, skari) -> None:
                 default=None,
             )
             if gloss:
-                cuxna.set_gloss(gismu, gloss, skari)
+                cuxna.add_gloss(gismu, gloss, skari)
 
 
 def analyze_rafsi(tree, gismus, selmahos, skari) -> Table:
@@ -129,18 +127,6 @@ def analyze_gismu(tree, gismus, skari) -> Table:
 def analyze_cmavos(tree, selmahos, skari, selmaho_style: bool) -> Table:
     collection = jmaji.collect(tree, jmaji.CmavoCollector)
     return karda.tabulate_cmavos(collection, selmahos, skari, selmaho_style)
-
-
-# NOTE returns Columns
-def analyze_selmahos_differently(tree, selmahos, squeeze: int) -> Columns:
-    cmavo_collection = jmaji.collect(tree, jmaji.CmavoCollector)
-    selmaho_collection = []
-    for cmavo in cmavo_collection:
-        s = plumbing.get_selmaho(cmavo, selmahos)
-        if s not in selmaho_collection:
-            selmaho_collection.append(s)
-    table = karda.tabulate_selmaho_styles(selmaho_collection, selmahos)
-    return Columns(karda.squeeze_table(table, squeeze))
 
 
 # NOTE returns Columns
@@ -215,14 +201,7 @@ def process_and_print_tree(tree, args: dict, console, gismus, selmahos, skari):
                 style=Style(),
             )
         )
-    if args.selmaho_style:
-        renderables.append(
-            Panel(
-                analyze_selmahos_differently(tree, selmahos, args.squeeze),
-                expand=False,
-                style=Style(),
-            )
-        )
+
 
     if args.wave:
         for i, panel in enumerate(renderables):
@@ -257,8 +236,9 @@ def parse(args: dict):
             process_and_print_tree(tree, args, console, gismus, selmahos, skari)
 
     if args.input:
-        console.print("Type the input:", style=skari["mi'iskari"]["prompt"])
-        tree = jmaji.get_parse_tree(sys.stdin.read())
+        p = Style.parse(skari["mi'iskari"]["prompt"])
+        user_input = Prompt.ask(Text("type the input", style=p))
+        tree = jmaji.get_parse_tree(user_input)
         process_and_print_tree(tree, args, console, gismus, selmahos, skari)
 
     if rec:

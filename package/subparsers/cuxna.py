@@ -1,4 +1,3 @@
-from signal import raise_signal
 import tubnu.plumbing as plumbing
 
 from rich import print
@@ -67,7 +66,7 @@ def add_tag_to_gismu(gismu: str, tag: str, skari: dict):
 
 
 def add_cmavyrafsi(
-    selmaho: str, cmavo: str, cmarafsi: str, selmahos: dict, skari: dict
+    cmavo: str, cmarafsi: str, selmahos: dict, skari: dict
 ):
     s = skari["mi'iskari"]["system"]
     if not plumbing.is_cmavo(cmavo):
@@ -75,29 +74,25 @@ def add_cmavyrafsi(
     if not plumbing.is_cmarafsi(cmarafsi):
         raise Exception("Error!, {} is not a cmarafsi by morphology.".format(cmarafsi))
 
+    selmaho = plumbing.get_selmaho(cmavo, selmahos)
+    if selmaho == "UNCAT":
+        raise Exception(f"Error! cmavo {cmavo} is not caught.")
+
     with plumbing.Config("selmahos") as mahos:
-        if selmaho not in mahos.keys():
-            print(
-                Text.assemble(
-                    ("hm... ", skari["mi'iskari"]["obstacle"]),
-                    (selmaho, skari["valskari"]["cmavo"]),
-                    (" is not caught, so I will add it.", s),
-                )
-            )
-            mahos[selmaho] = DEFAULT_SELMAHO_PACKET
         if "cmarafsi" not in mahos[selmaho].keys():
             mahos[selmaho]["cmarafsi"] = dict()  # refactorable safe insertion
         mahos[selmaho]["cmarafsi"][cmarafsi] = cmavo
-        print(
-            Text.assemble(
-                ("ok... ", skari["mi'iskari"]["ok"]),
-                ("added ", s),
-                (cmarafsi, skari["valskari"]["cmarafsi"]),
-                (" as a cmarafsi of ", s),
-                (cmavo, skari["valskari"]["cmavo"]),
-                (".", s),
-            )
+
+    print(
+        Text.assemble(
+            ("ok... ", skari["mi'iskari"]["ok"]),
+            ("added ", s),
+            (cmarafsi, skari["valskari"]["cmarafsi"]),
+            (" as a cmarafsi of ", s),
+            (cmavo, skari["valskari"]["cmavo"]),
+            (".", s),
         )
+    )
 
 
 def add_cmarafsi(gismu: str, cmarafsi: str, skari: dict) -> None:
@@ -111,28 +106,23 @@ def add_cmarafsi(gismu: str, cmarafsi: str, skari: dict) -> None:
 
     with plumbing.Config("gismus") as gismus:
         if gismu not in gismus.keys():
-            print(
-                Text.assemble(
-                    ("hm... ", skari["mi'iskari"]["obstacle"]),
-                    (gismu, skari["valskari"]["gismu"]),
-                    (" is not caught, so I will add it.", s),
-                )
-            )
-            gismus[gismu] = DEFAULT_GISMU_PACKET
+            raise Exception("Error!, {} is not caught.".format(gismu))
         gismus[gismu]["cmarafsi"].append(cmarafsi)
-        print(
-            Text.assemble(
-                ("ok... ", skari["mi'iskari"]["ok"]),
-                ("added ", s),
-                (cmarafsi, skari["valskari"]["cmarafsi"]),
-                (" as a cmarafsi of ", s),
-                (gismu, skari["valskari"]["gismu"]),
-                (".", s),
-            )
+        
+    print(
+        Text.assemble(
+            ("ok... ", skari["mi'iskari"]["ok"]),
+            ("added ", s),
+            (cmarafsi, skari["valskari"]["cmarafsi"]),
+            (" as a cmarafsi of ", s),
+            (gismu, skari["valskari"]["gismu"]),
+            (".", s),
         )
+    )
 
 
-def set_gloss(gismu: str, gloss: str, skari: dict) -> None:
+# implicityly catches gismu
+def add_gloss(gismu: str, gloss: str, skari: dict) -> None:
     s = skari["mi'iskari"]["system"]
 
     gismu = gismu.lower()
@@ -150,18 +140,19 @@ def set_gloss(gismu: str, gloss: str, skari: dict) -> None:
             )
             gismus[gismu] = DEFAULT_GISMU_PACKET
         gismus[gismu]["gloss"] = gloss
-        print(
-            Text.assemble(
-                ("ok... ", skari["mi'iskari"]["ok"]),
-                ("set gloss of gismu ", s),
-                (gismu, skari["valskari"]["gismu"]),
-                (" to ", s),
-                (gloss, skari["mi'iskari"]["gloss"]),
-                (".", s),
-            )
+    print(
+        Text.assemble(
+            ("ok... ", skari["mi'iskari"]["ok"]),
+            ("set gloss of gismu ", s),
+            (gismu, skari["valskari"]["gismu"]),
+            (" to ", s),
+            (gloss, skari["mi'iskari"]["gloss"]),
+            (".", s),
         )
+    )
 
 
+# implicitly catches selmaho
 def add_cmavo(cmavo: str, selmaho: str, skari: dict) -> None:
     s = skari["mi'iskari"]["system"]
     c = skari["valskari"]["cmavo"]
@@ -308,18 +299,14 @@ def parse(args: dict):
         add_cmavo(c[1], c[0], skari)  # (cmavo, selmaho)
 
     if g := args.gloss:
-        set_gloss(g[0], g[1], skari)  # (gismu, gloss)
+        add_gloss(g[0], g[1], skari)  # (gismu, gloss)
 
     if r := args.cmarafsi:
         add_cmarafsi(r[0], r[1], skari)  # (gismu, cmarafsi)
 
     if y := args.cmavyrafsi:
         selmahos = plumbing.get_config("selmahos")
-        cmavo = y[0]
-        selmaho = plumbing.get_selmaho(cmavo, selmahos)
-        if selmaho == "UNCAT":
-            raise Exception(f"Error! cmavo {cmavo} is not caught.")
-        add_cmavyrafsi(selmaho, cmavo, y[1], selmahos, skari)
+        add_cmavyrafsi(y[0], y[1], selmahos, skari) # (cmavo, cmavyrafsi)
 
     if t := args.tag_gismu:
         add_tag_to_gismu(t[0], t[1], skari)  # (gismu, tag)

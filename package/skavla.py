@@ -293,12 +293,6 @@ def inflate_tcidu_parser(parser: argparse.ArgumentParser) -> None:
         help="record all cmavo and group them by selma'o",
     )
     read_panels_subgroup.add_argument(
-        "--selmaho-style",
-        action="store_true",
-        dest="selmaho_style",
-        help="print the style of every selma'o that shows up",
-    )
-    read_panels_subgroup.add_argument(
         "-n",
         "--no-prigau",
         dest="prigau",
