@@ -9,6 +9,10 @@ CONFIG_DEFAULTS = {
 }
 
 
+def sort_straight(dic: dict) -> dict:
+    return dict(sorted(dic.items(), key=lambda x: x[0]))
+
+
 class Config:
     def __init__(self, label: str):
         self.label = label
@@ -46,8 +50,27 @@ def get_config(conf: str) -> dict:
 C = "bcdfgjklmnprstvxz"
 V = "aeiou"
 
-# NOTE: unimplemented
 def is_cmarafsi(valsi: str) -> bool:
+    if valsi[0] not in C:
+        return False
+    if valsi[1] in C:
+        if len(valsi) != 3:
+            return False
+        if valsi[2] not in V:
+            return False
+    elif valsi[1] in V:
+        if valsi[2] == "'":
+            if len(valsi) != 4:
+                return False
+            if valsi[3] not in V:
+                return False
+        else:
+            if len(valsi) != 3:
+                return False
+            if valsi[2] not in C + V:
+                return False
+    else:
+        return False
     return True
 
 
