@@ -135,8 +135,8 @@ def short_skari_big_panel(skari: dict, selmahos: dict, gismus: dict, args):
 
 def get_big_panels(args):
     skari = plumbing.get_config("skari")
-    selmahos = plumbing.get_config("selmahos")
-    gismus = plumbing.get_config("gismus")
+    selmahos = plumbing.get_config("selmaho")
+    gismus = plumbing.get_config("gismu")
 
     renderables = []
 
