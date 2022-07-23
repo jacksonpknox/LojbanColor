@@ -33,7 +33,7 @@ class Skabanizer(SkabanListener):
     def enterKarmaho(self, ctx: SkabanParser.KarmahoContext):
         self.t.append(
             text=(cmavo := ctx.getText()),
-            style=self.selmahos[plumbing.get_selmaho(cmavo, self.selmahos)]["color"],
+            style=self.selmahos[plumbing.get_selmaho(cmavo, self.selmahos)]["skari"],
         )
 
     def enterLerfu(self, ctx):
@@ -214,7 +214,7 @@ def process_and_print_tree(tree, args: dict, console, gismus, selmahos, skari):
 def parse(args: dict):
     rec = bool(e := args.export)
     console = Console(record=rec, force_interactive=(not rec))
-    config = plumbing.get_config("config")
+    minji = plumbing.get_config("minji")
     gismus = plumbing.get_config("gismus")
     selmahos = plumbing.get_config("selmahos")
     skari = plumbing.get_config("skari")
@@ -223,7 +223,7 @@ def parse(args: dict):
             with open(f, "r") as file:
                 with console.status(
                     Text("parsing the file...", style=skari["mi'iskari"]["system"]),
-                    spinner=config["spinner"],
+                    spinner=minji["spinner"],
                 ):
                     tree = jmaji.get_parse_tree(file.read())
             if args.catch_gismus:

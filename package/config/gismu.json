@@ -1130,6 +1130,13 @@
       "standard"
     ]
   },
+  "capre": {
+    "cmarafsi": [],
+    "gloss": "climb",
+    "tags": [
+      "standard"
+    ]
+  },
   "carce": {
     "cmarafsi": [],
     "gloss": null,
@@ -10121,13 +10128,6 @@
   "zvati": {
     "cmarafsi": [],
     "gloss": "present",
-    "tags": [
-      "standard"
-    ]
-  },
-  "capre": {
-    "cmarafsi": [],
-    "gloss": "climb",
     "tags": [
       "standard"
     ]

@@ -96,8 +96,8 @@ def tabulate_cmarafsi(c, gismus: dict, selmahos: dict, skari: dict) -> Table:
             bonus = Text(bonus, Style.parse(skari["mi'iskari"]["gloss"]))
             word_type = Text(word_type, Style.parse(skari["valskari"]["gismu"]))
         elif word_type == "cmavo":
-            word = Text(word, Style.parse(selmahos[bonus]["color"]))
-            bonus = Text(bonus, Style.parse(selmahos[bonus]["color"]))
+            word = Text(word, Style.parse(selmahos[bonus]["skari"]))
+            bonus = Text(bonus, Style.parse(selmahos[bonus]["skari"]))
             word_type = Text(word_type, Style.parse(skari["valskari"]["cmavo"]))
         else:
             word = Text(word, s)
@@ -115,7 +115,7 @@ def tabulate_cmavos(c, selmahos, skari: dict, show_styles: bool = False):
         table.add_column("style", style=Style.parse(skari["mi'iskari"]["system"]))
     for cmavo in c:
         s = plumbing.get_selmaho(cmavo, selmahos)
-        colr = Style.parse(selmahos[s]["color"])
+        colr = Style.parse(selmahos[s]["skari"])
         if show_styles:
             table.add_row(cmavo, s, colr, style=colr)
         else:
@@ -142,6 +142,6 @@ def tabulate_selmaho_styles(s: list, selmahos: dict):
     table.add_column("selma'o")
     table.add_column("style")
     for selmaho in s:
-        sty = selmahos[selmaho]["color"]
+        sty = selmahos[selmaho]["skari"]
         table.add_row(selmaho, sty, style=sty)
     return table

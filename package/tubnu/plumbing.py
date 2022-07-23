@@ -1,11 +1,13 @@
 import json
 
 CONFIG_DEFAULTS = {
-    "config": "config/config.json",
-    "gismus": "config/gismus.json",
-    "selmahos": "config/selmahos.json",
+    "minji": "config/minji.json",
+    "gismu": "config/gismu.json",
+    "selmaho": "config/selmaho.json",
     "skari": "config/skari.json",
     "progress": "config/progress.json",
+    "rafsi": "config/rafsi.json",
+    "cmavyrafsi": "config/cmavyrafsi.json",
 }
 
 

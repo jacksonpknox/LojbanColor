@@ -1,24 +1,18 @@
 import argparse
 from tubnu.rich_argparse import RichHelpFormatter
 
+import tubnu.plumbing as plumbing
 import subparsers.cuxna as cuxna
 import subparsers.tcidu as tcidu
 import subparsers.cpedu as cpedu
 import subparsers.litru as litru
 
+import tricu
+
 
 def inflate_cuxna_parser(parser: argparse.ArgumentParser) -> None:
     # skari subgroup
     config_skari_subgroup = parser.add_argument_group("skari")
-    config_skari_subgroup.add_argument(
-        "-s",
-        "--selmaho-style",
-        dest="selmaho_style",
-        action="store",
-        nargs=2,
-        help="stylize SELMAHO with STYLE",
-        metavar=("SELMAHO", "STYLE"),
-    )
     config_skari_subgroup.add_argument(
         "-m",
         "--minji-style",
@@ -37,7 +31,44 @@ def inflate_cuxna_parser(parser: argparse.ArgumentParser) -> None:
         help="stylize valsi TOKEN with STYLE",
         metavar=("TOKEN", "STYLE"),
     )
-    config_skari_subgroup.add_argument(
+
+    subparsers = parser.add_subparsers(title="configs")
+
+    cmavyrafsi_cuxna_parser = subparsers.add_parser("cmavyrafsi", formatter_class=RichHelpFormatter)
+    cmavyrafsi_cuxna_schema = [
+        tricu.SingleStringAttribute("cmavo", lambda x: plumbing.is_cmavo(x[1])),
+        tricu.TagsListAttribute("liste"),
+        tricu.TagsListAttribute("tags")
+    ]
+    tricu.inflate_schematic_cuxna_parser(cmavyrafsi_cuxna_parser, cmavyrafsi_cuxna_schema, plumbing.CONFIG_DEFAULTS["cmavyrafsi"])
+
+    gismu_cuxna_parser = subparsers.add_parser("gismu", formatter_class=RichHelpFormatter)
+    gismu_cuxna_schema = [
+        tricu.SingleStringAttribute("gloss"),
+        tricu.TagsListAttribute("liste"),
+        tricu.TagsListAttribute("tags"),
+        tricu.SingleIntegerAttribute("namcu", lambda x : int(x[1]) in range(1,6)), # bug. doesnt know it is an int
+        tricu.SpringyTagsListAttribute("sumti", "zo'e", lambda x : int(x[1]) in range(1,6)),
+    ]
+    tricu.inflate_schematic_cuxna_parser(gismu_cuxna_parser, gismu_cuxna_schema, plumbing.CONFIG_DEFAULTS["gismu"])
+
+    rafsi_cuxna_parser = subparsers.add_parser("rafsi", formatter_class=RichHelpFormatter)
+    rafsi_cuxna_schema = [
+        tricu.SingleStringAttribute("gismu", verifier=lambda x: plumbing.is_gismu(x[1])),
+        tricu.TagsListAttribute("liste"),
+        tricu.TagsListAttribute("tags")
+    ]
+    tricu.inflate_schematic_cuxna_parser(rafsi_cuxna_parser, rafsi_cuxna_schema, plumbing.CONFIG_DEFAULTS["rafsi"])
+
+    selmaho_cuxna_parser = subparsers.add_parser("selmaho", formatter_class=RichHelpFormatter)
+    selmaho_cuxna_schema = [
+        tricu.SingleStringAttribute("skari"),
+        tricu.TagsListAttribute("cmavos", verifier=lambda x: plumbing.is_cmavo(x[1])),
+        tricu.TagsListAttribute("tags")
+    ]
+    tricu.inflate_schematic_cuxna_parser(selmaho_cuxna_parser, selmaho_cuxna_schema, plumbing.CONFIG_DEFAULTS["selmaho"])
+    tadji_selmaho_cuxna_group = selmaho_cuxna_parser.add_argument_group("tadji")
+    tadji_selmaho_cuxna_group.add_argument(
         "--all-selmaho-style",
         dest="all_selmaho_style",
         action="store",
@@ -45,60 +76,7 @@ def inflate_cuxna_parser(parser: argparse.ArgumentParser) -> None:
         help="stylize every selma'o with STYLE",
         metavar="STYLE",
     )
-    # valsi subgroup
-    config_valsi_subgroup = parser.add_argument_group("valsi")
-    config_valsi_subgroup.add_argument(
-        "-c",
-        "--cmavo",
-        action="store",
-        nargs=2,
-        help="extend SELMAHO to include CMAVO",
-        metavar=("SELMAHO", "CMAVO"),
-    )
-    config_valsi_subgroup.add_argument(
-        "-g",
-        "--gloss",
-        action="store",
-        nargs=2,
-        help="gloss GISMU with PHRASE",
-        metavar=("GISMU", "PHRASE"),
-    )
-    config_valsi_subgroup.add_argument(
-        "-r",
-        "--rafsi",
-        dest="cmarafsi",
-        action="store",
-        nargs=2,
-        help="attribute GISMU with CMARAFSI",
-        metavar=("GISMU", "CMARAFSI"),
-    )
-    config_valsi_subgroup.add_argument(
-        "-y",
-        "--cmavyrafsi",
-        dest="cmavyrafsi",
-        action="store",
-        nargs=2,
-        help="attribute CMAVO with CMARAFSI",
-        metavar=("CMAVO", "CMARAFSI"),
-    )
-    config_valsi_subgroup.add_argument(
-        "-t",
-        "--tag-gismu",
-        dest="tag_gismu",
-        action="store",
-        nargs=2,
-        help="tag GISMU with TAG",
-        metavar=("GISMU", "TAG"),
-    )
-    config_valsi_subgroup.add_argument(
-        "-u",
-        "--set-sumti",
-        dest="set_sumti",
-        action="store",
-        nargs=3,
-        help="set SUMTI of GISMU to VALSI",
-        metavar=("GISMU", "SUMTI", "VALSI"),
-    )
+
     parser.set_defaults(func=cuxna.parse)
 
     

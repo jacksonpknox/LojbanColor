@@ -1,4 +1,5 @@
 import argparse
+import json
 from tubnu.rich_argparse import RichHelpFormatter
 import tubnu.plumbing as plumbing
 
@@ -118,7 +119,17 @@ class SpringyTagsListAttribute(Attribute):
 
 def parse(args: argparse.Namespace) -> dict:
     if args.sort:
-        pass
+        with open(args.filepath, "r") as f:
+            dic = plumbing.sort_straight(json.load(f))
+        with open(args.filepath, "w") as f:
+            json.dump(dic, f, indent=2)
+
+    if args.add_key:
+        key = args.add_key[0]
+        if not args.key_verifier(key):
+            raise Exception(f"{key} did not pass verification")
+        with plumbing.SuperConfig(args.filepath) as dic:
+            dic[key] = {}
 
     if args.sort_all_properties:
         with plumbing.SuperConfig(args.filepath) as dic:
@@ -136,9 +147,10 @@ def parse(args: argparse.Namespace) -> dict:
             attribute.handle(value, args.filepath)
 
 
-def inflate_cuxna_parser(parser: argparse.ArgumentParser, schema: dict, default_filepath: str) -> None:
+def inflate_schematic_cuxna_parser(parser: argparse.ArgumentParser, schema: dict, default_filepath: str, key_verifier: callable=lambda x: True) -> None:
     parser.set_defaults(func=parse)
     parser.set_defaults(schema=schema)
+    parser.set_defaults(key_verifier=key_verifier)
 
     parser.add_argument(
         "--filepath",
@@ -147,6 +159,13 @@ def inflate_cuxna_parser(parser: argparse.ArgumentParser, schema: dict, default_
         help="path of json file",
         metavar="FILEPATH",
         default=default_filepath,
+    )
+    parser.add_argument(
+        "--add-key",
+        action="store",
+        nargs=1,
+        help="add KEY",
+        metavar="KEY",
     )
 
     sort_group = parser.add_argument_group("sort")
@@ -188,14 +207,3 @@ gismu_cuxna_schema = [
     SingleIntegerAttribute("namcu", lambda x : int(x[1]) in range(1,6)), # bug. doesnt know it is an int
     SpringyTagsListAttribute("sumti", "zo'e", lambda x : int(x[1]) in range(1,6)),
 ]
-        
-
-def main():
-    parser = argparse.ArgumentParser(formatter_class=RichHelpFormatter)
-    inflate_cuxna_parser(parser, gismu_cuxna_schema, "config/gismus.json")
-    args = parser.parse_args()
-    args.func(args)
-
-    
-if __name__ == """__main__""":
-    main()
