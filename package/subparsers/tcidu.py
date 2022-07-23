@@ -215,8 +215,8 @@ def parse(args: dict):
     rec = bool(e := args.export)
     console = Console(record=rec, force_interactive=(not rec))
     minji = plumbing.get_config("minji")
-    gismus = plumbing.get_config("gismus")
-    selmahos = plumbing.get_config("selmahos")
+    gismus = plumbing.get_config("gismu")
+    selmahos = plumbing.get_config("selmaho")
     skari = plumbing.get_config("skari")
     if files := args.filepath:
         for f in files:

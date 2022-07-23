@@ -1559,10 +1559,19 @@
     ]
   },
   "ciska": {
-    "cmarafsi": [],
     "gloss": "write",
+    "liste": [
+      "CLL"
+    ],
+    "namcu": 4,
+    "sumti": [
+      "gasnu",
+      "notci",
+      "vreji",
+      "tutci"
+    ],
     "tags": [
-      "standard"
+      "fasnu"
     ]
   },
   "cisma": {
