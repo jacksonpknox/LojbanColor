@@ -1,7 +1,8 @@
+from chevron import render
 import tubnu.plumbing as plumbing
 import tubnu.karda as karda
 
-from rich import box
+from rich import box, print
 
 from rich.panel import Panel
 from rich.table import Table
@@ -84,6 +85,11 @@ def short_valsi_big_panel(skari: dict, selmahos: dict, gismus: dict, args):
         table = karda.tabulate_cmarafsi(r, gismus, selmahos, skari)
         renderables.append(Panel(table, style=Style.parse(skari["valskari"]["cmarafsi"]), title="cmarafsi"))
 
+    if gt := args.gismu_tree:
+        for gismu in gt:    
+            tree = karda.get_gismu_tree(gismu, gismus, skari)
+            renderables.append(Panel(tree, style=Style.parse(skari["valskari"]["gismu"]), title=gismu))
+
     return Panel(Columns(renderables), style=Style(), title="valsi")
 
 
@@ -154,7 +160,7 @@ def get_big_panels(args):
         renderables.append(panel)
 
     # valsi subgroup
-    if args.cmavo or args.gloss or args.rafsi:
+    if args.cmavo or args.gloss or args.rafsi or args.gismu_tree:
         panel = short_valsi_big_panel(skari, selmahos, gismus, args)
         renderables.append(panel)
 

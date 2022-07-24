@@ -489,6 +489,7 @@
     "liste": [
       "CLL"
     ],
+    "namcu": 2,
     "sumnamcu": 2,
     "sumti": [
       "zo'e",
@@ -1083,7 +1084,7 @@
   },
   "cange": {
     "cmarafsi": [],
-    "gloss": null,
+    "gloss": "farm",
     "tags": [
       "standard"
     ]
@@ -1216,7 +1217,7 @@
   },
   "cecla": {
     "cmarafsi": [],
-    "gloss": null,
+    "gloss": "launch",
     "tags": [
       "standard"
     ]
@@ -6844,7 +6845,7 @@
   },
   "pritu": {
     "cmarafsi": [],
-    "gloss": null,
+    "gloss": "right",
     "tags": [
       "standard"
     ]
@@ -8281,7 +8282,8 @@
   },
   "srasu": {
     "cmarafsi": [],
-    "gloss": null,
+    "gloss": "grass",
+    "namcu": 2,
     "tags": [
       "standard"
     ]
@@ -8377,7 +8379,7 @@
   },
   "steba": {
     "cmarafsi": [],
-    "gloss": null,
+    "gloss": "frustration",
     "tags": [
       "standard"
     ]
@@ -8662,7 +8664,8 @@
   },
   "tarbi": {
     "cmarafsi": [],
-    "gloss": null,
+    "gloss": "embryo",
+    "namcu": 3,
     "tags": [
       "standard"
     ]
@@ -9848,7 +9851,7 @@
   },
   "xrula": {
     "cmarafsi": [],
-    "gloss": "flower",
+    "gloss": "lure",
     "tags": [
       "standard"
     ]

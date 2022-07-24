@@ -3,10 +3,32 @@ from rich.panel import Panel
 from rich.columns import Columns
 from rich.style import Style
 from rich.text import Text
-from rich import box
+from rich.tree import Tree
+from rich import box, print
 import tubnu.plumbing as plumbing
 
 
+def get_gismu_tree(gismu: str, gismus: dict, skari: dict):
+    if not plumbing.is_gismu(gismu):
+        raise Exception("{} is not a gismu".format(gismu))
+
+    tree = Tree(gismu, style=skari["valskari"]["gismu"])
+
+    if not gismu in gismus.keys():
+        tree.add("UNCAUGHT")
+        return(tree)
+    
+    gismu = gismus[gismu]
+    
+    tree.add("gloss").add(str(gismu.get("gloss", "UNGLOSSED")))
+    tree.add("namcu").add(str(gismu.get("namcu", "UNNAMCU")))
+    sumti_node = tree.add("sumti")
+    for sumti in gismu.get("sumti", []):
+        sumti_node.add(str(sumti))
+
+    return tree
+    
+    
 def tabulate_rafsi_count(gismus, selmahos):
     table = Table(box=box.MINIMAL)
     table.add_column("total")

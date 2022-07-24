@@ -172,6 +172,9 @@ def inflate_cpedu_parser(parser: argparse.ArgumentParser) -> None:
     valsi_subgroup.add_argument(
         "--all-selmaho", action="store_true", help="print out all cmavo of each selma'o"
     )
+    valsi_subgroup.add_argument(
+        "--gismu-tree", action="store", help="print the tree of GISMU", metavar="GISMU", nargs="+"
+    )
     # kancu subgroup
     kancu_subgroup = parser.add_argument_group("kancu")
     kancu_subgroup.add_argument(
