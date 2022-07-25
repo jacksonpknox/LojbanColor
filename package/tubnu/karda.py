@@ -8,11 +8,14 @@ from rich import box, print
 import tubnu.plumbing as plumbing
 
 
-def get_cmavo_tree(cmavo: str, cmavos: dict, skari: dict):
+def get_cmavo_tree(cmavo: str, cmavos: dict, selmahos: dict, skari: dict):
     if not plumbing.is_cmavo(cmavo):
         raise Exception("{} is not a cmavo".format(cmavo))
+
+    selmaho = plumbing.get_selmaho(cmavo, cmavos)
+    selmaho_skari = selmahos[selmaho]["skari"]
     
-    tree = Tree(cmavo, style=skari["valskari"]["cmavo"])
+    tree = Tree(Text(cmavo, selmaho_skari), style=skari["valskari"]["cmavo"])
     
     if not cmavo in cmavos.keys():
         tree.add("UNCAUGHT")
@@ -20,8 +23,8 @@ def get_cmavo_tree(cmavo: str, cmavos: dict, skari: dict):
     
     cmavo = cmavos[cmavo]
     
-    tree.add("gloss").add(str(cmavo.get("gloss", "UNGLOSSED")))
-    tree.add("selmaho").add(str(cmavo.get("selmaho", "UNSELMAHO")))
+    tree.add("gloss").add(Text(str(cmavo.get("gloss", "UNGLOSSED")), style=Style.parse(skari["mi'iskari"]["gloss"])))
+    tree.add("selmaho").add(Text(str(cmavo.get("selmaho", "UNSELMAHO")), style=Style.parse(selmaho_skari)))
     
     return tree
 
@@ -38,7 +41,7 @@ def get_gismu_tree(gismu: str, gismus: dict, skari: dict):
     
     gismu = gismus[gismu]
     
-    tree.add("gloss").add(str(gismu.get("gloss", "UNGLOSSED")))
+    tree.add("gloss").add(Text(str(gismu.get("gloss", "UNGLOSSED")), style=Style.parse(skari["mi'iskari"]["gloss"])))
     tree.add("namcu").add(str(gismu.get("namcu", "UNNAMCU")))
     sumti_node = tree.add("sumti")
     for sumti in gismu.get("sumti", []):

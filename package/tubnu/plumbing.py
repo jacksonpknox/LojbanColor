@@ -127,13 +127,15 @@ def get_gloss(gismu: str, gismus: dict) -> str:
     return gismus[gismu]["gloss"]
 
 
-def get_selmaho(cmavo: str, selmahos: dict) -> str:
+def get_selmaho(cmavo: str, cmavos: dict) -> str:
     if not is_cmavo(cmavo):
         raise Exception("Error! not cmavo by morphology exception: " + cmavo)
-    for selmaho in selmahos.keys():
-        if cmavo in selmahos[selmaho]["cmavos"]:
-            return selmaho
-    return "UNCAT"
+    if cmavo not in cmavos.keys():
+        return "UNCAUGHT"
+    if not cmavos[cmavo].get("selmaho", None):
+        return "UNCATEGORIZED"
+    else:
+        return cmavos[cmavo]["selmaho"]
 
 
 def force_selmaho(selmaho: str, selmahos: dict) -> str:

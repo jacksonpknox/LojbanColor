@@ -20,9 +20,10 @@ from python_color.SkabanParser import SkabanParser
 
 
 class Skabanizer(SkabanListener):
-    def __init__(self, selmahos: dict, valskari: dict):
+    def __init__(self, selmahos: dict, cmavos: dict, valskari: dict):
         self.t = Text()
         self.selmahos = selmahos
+        self.cmavos = cmavos 
         self.valskari = valskari
 
     def exitLine(self, ctx):
@@ -34,7 +35,7 @@ class Skabanizer(SkabanListener):
     def enterKarmaho(self, ctx: SkabanParser.KarmahoContext):
         self.t.append(
             text=(cmavo := ctx.getText()),
-            style=self.selmahos[plumbing.get_selmaho(cmavo, self.selmahos)]["skari"],
+            style=self.selmahos[plumbing.get_selmaho(cmavo, self.cmavos)]["skari"],
         )
 
     def enterLerfu(self, ctx):
@@ -208,8 +209,8 @@ def analyze_selmahos(
     return Columns(selmaho_tables)
 
 
-def colorize(tree, selmahos, skari) -> Text:
-    printer = Skabanizer(selmahos, skari["valskari"])
+def colorize(tree, selmahos, cmavos, skari) -> Text:
+    printer = Skabanizer(selmahos, cmavos, skari["valskari"])
     walker = ParseTreeWalker()
     walker.walk(printer, tree)
     printer.t.rstrip()
@@ -220,7 +221,7 @@ def process_and_print_tree(tree, args: dict, console, gismus, selmahos, skari, c
     renderables = []
 
     if args.prigau:
-        renderables.append(Panel(colorize(tree, selmahos, skari), style=Style()))
+        renderables.append(Panel(colorize(tree, selmahos, cmavos, skari), style=Style()))
 
     if args.rafsi:
         col_renderables = []
@@ -236,13 +237,13 @@ def process_and_print_tree(tree, args: dict, console, gismus, selmahos, skari, c
 
     if args.cmavo:
         collection = jmaji.collect(tree, jmaji.CmavoCollector)
-        cmavo_trees = [Panel(karda.get_cmavo_tree(cmavo, cmavos, skari), style=Style.parse(skari["valskari"]["cmavo"])) for cmavo in collection]
-        renderables.append(Panel(Columns(cmavo_trees), style=Style.parse(skari["valskari"]["cmavo"])))
+        cmavo_trees = [Panel(karda.get_cmavo_tree(cmavo, cmavos, selmahos, skari), style=Style.parse(skari["valskari"]["cmavo"])) for cmavo in collection]
+        renderables.append(Panel(Columns(cmavo_trees), style=Style.parse(skari["valskari"]["cmavo"]), title="cmavo"))
 
     if args.gismu:
         collection = jmaji.collect(tree, jmaji.GismuCollector)
         gismu_trees = [Panel(karda.get_gismu_tree(gismu, gismus, skari), style=Style.parse(skari["valskari"]["gismu"]), title=gismu) for gismu in collection]
-        renderables.append(Panel(Columns(gismu_trees), style=Style.parse(skari["valskari"]["gismu"])))
+        renderables.append(Panel(Columns(gismu_trees), style=Style.parse(skari["valskari"]["gismu"]), title="gismu"))
 
 
     console.print(Panel(Group(*renderables), box.DOUBLE, expand=False))
