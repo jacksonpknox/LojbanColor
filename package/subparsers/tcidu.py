@@ -3,7 +3,7 @@ import tubnu.karda as karda
 import tubnu.jmaji as jmaji
 import subparsers.cuxna as cuxna
 
-from rich import box
+from rich import box, print
 from rich.text import Text
 from rich.panel import Panel
 from rich.table import Table
@@ -11,6 +11,7 @@ from rich.prompt import Prompt
 from rich.columns import Columns
 from rich.console import Console, Group
 from rich.style import Style
+from rich.rule import Rule
 
 from antlr4 import ParseTreeWalker
 
@@ -113,6 +114,27 @@ def interrogate_for_glosses(tree, gismus, skari) -> None:
             if gloss:
                 cuxna.add_gloss(gismu, gloss, skari)
 
+                
+def interrogate_for_cmavos(tree) -> None:
+    collection = jmaji.collect(tree, jmaji.CmavoCollector)
+    with plumbing.Config("cmavo") as cmavos:
+        for cmavo in collection:
+            print(Rule(title=cmavo))
+            if cmavo not in cmavos.keys():
+                print("uncaught cmavo:", cmavo)
+                catch = Prompt.ask("catch it?", choices=["y", "n"], default="n")
+                if catch == "y":
+                    cmavos[cmavo] = {}
+            if not cmavos[cmavo].get("gloss", None):
+                gloss = Prompt.ask("gloss? (enter to skip)", default=None)
+                if gloss:
+                    cmavos[cmavo]["gloss"] = gloss
+            if not cmavos[cmavo].get("selmaho", None):
+                selmaho = Prompt.ask("selmaho? (enter to skip)", default=None)
+                if selmaho:
+                    cmavos[cmavo]["selmaho"] = selmaho
+
+
 
 def analyze_rafsi(tree, gismus, selmahos, skari) -> Table:
     collection = jmaji.collect(tree, jmaji.CmarafsiCollector)
@@ -206,13 +228,16 @@ def parse(args: dict):
                     spinner=minji["spinner"],
                 ):
                     tree = jmaji.get_parse_tree(file.read())
+            if args.catch_cmavos:
+                interrogate_for_cmavos(tree)
+                cmavos = plumbing.get_config("cmavo")
             if args.catch_gismus:
                 interrogate_for_glosses(tree, gismus, skari)
-                gismus = plumbing.get_config("gismus")
+                gismus = plumbing.get_config("gismu")
             if args.catch_rafsi:
                 interrogate_for_rafsi(tree, gismus, selmahos, skari)
-                gismus = plumbing.get_config("gismus")
-                selmahos = plumbing.get_config("selmahos")
+                gismus = plumbing.get_config("gismu")
+                selmahos = plumbing.get_config("selmaho")
             process_and_print_tree(tree, args, console, gismus, selmahos, skari, cmavos)
 
     if args.input:

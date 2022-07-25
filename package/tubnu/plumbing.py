@@ -61,6 +61,7 @@ def is_selmaho(valsi: str) -> bool:
     for letter in valsi:
         if letter not in V + 'h':
             return False
+    return True
 
 def is_cmarafsi(valsi: str) -> bool:
     if valsi[0] not in C:

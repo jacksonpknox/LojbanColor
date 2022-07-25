@@ -235,6 +235,12 @@ def inflate_tcidu_parser(parser: argparse.ArgumentParser) -> None:
         action="store_true",
         help="prompt the user to complete the rafsi table",
     )
+    read_input_subgroup.add_argument(
+        "--catch-cmavos",
+        dest="catch_cmavos",
+        action="store_true",
+        help="prompt the user to complete the cmavo trees",
+    )
     # Panels subgroup
     read_panels_subgroup = parser.add_argument_group("panels")
     read_panels_subgroup.add_argument(
