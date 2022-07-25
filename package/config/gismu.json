@@ -404,7 +404,8 @@
     "sumti": [
       "stuzi",
       "korbi"
-    ]
+    ],
+    "namcu": 2
   },
   "basna": {
     "gloss": "emphasize",
@@ -800,6 +801,13 @@
     "gloss": "wall",
     "tags": [
       "standard"
+    ],
+    "namcu": 4,
+    "sumti": [
+      "bitmu",
+      "zo'e",
+      "zo'e",
+      "dinju"
     ]
   },
   "blabi": {
@@ -807,6 +815,10 @@
     "gloss": "white",
     "tags": [
       "standard"
+    ],
+    "namcu": 1,
+    "sumti": [
+      "zo'e"
     ]
   },
   "blaci": {
@@ -914,6 +926,12 @@
     "gloss": "wind",
     "tags": [
       "standard"
+    ],
+    "namcu": 3,
+    "sumti": [
+      "brife",
+      "farna",
+      "zo'e"
     ]
   },
   "briju": {
@@ -982,6 +1000,11 @@
     "gloss": "cloth",
     "tags": [
       "standard"
+    ],
+    "namcu": 2,
+    "sumti": [
+      "bukpu",
+      "marji"
     ]
   },
   "bumru": {
@@ -1661,6 +1684,12 @@
     "gloss": "bed",
     "tags": [
       "standard"
+    ],
+    "namcu": 3,
+    "sumti": [
+      "ckana",
+      "marji",
+      "pilno"
     ]
   },
   "ckape": {
@@ -1727,6 +1756,12 @@
     "gloss": "conifer",
     "tags": [
       "standard"
+    ],
+    "namcu": 3,
+    "sumti": [
+      "ckunu",
+      "jutsi",
+      "terckunu"
     ]
   },
   "cladu": {
@@ -1808,6 +1843,11 @@
     "gloss": "mountain",
     "tags": [
       "standard"
+    ],
+    "namcu": 2,
+    "sumti": [
+      "cmana",
+      "tumla"
     ]
   },
   "cmavo": {
@@ -1992,6 +2032,11 @@
     "gloss": "goblin",
     "tags": [
       "standard"
+    ],
+    "namcu": 2,
+    "sumti": [
+      "crida",
+      "ranmi"
     ]
   },
   "crino": {
@@ -2635,6 +2680,14 @@
     "gloss": "play",
     "tags": [
       "standard"
+    ],
+    "namcu": 5,
+    "sumti": [
+      "draci",
+      "sidbo",
+      "finti",
+      "tercusku",
+      "xeldraci"
     ]
   },
   "drani": {
@@ -4335,6 +4388,12 @@
     "gloss": "shelf",
     "tags": [
       "standard"
+    ],
+    "namcu": 3,
+    "sumti": [
+      "kajna",
+      "selsarji",
+      "terpli"
     ]
   },
   "kakne": {
@@ -5459,6 +5518,12 @@
     "gloss": "shelter",
     "tags": [
       "standard"
+    ],
+    "namcu": 3,
+    "sumti": [
+      "marbi",
+      "selbandu",
+      "ckape"
     ]
   },
   "marce": {
@@ -6443,6 +6508,13 @@
     "gloss": "poem",
     "tags": [
       "standard"
+    ],
+    "namcu": 4,
+    "sumti": [
+      "pemci",
+      "sidbo",
+      "finti",
+      "tercusku"
     ]
   },
   "penbi": {
@@ -7215,6 +7287,13 @@
     "gloss": "river",
     "tags": [
       "standard"
+    ],
+    "namcu": 4,
+    "sumti": [
+      "rirxe",
+      "tumla",
+      "xamsi",
+      "fanmo"
     ]
   },
   "rismi": {
@@ -7491,6 +7570,13 @@
     "gloss": "support",
     "tags": [
       "standard"
+    ],
+    "namcu": 4,
+    "sumti": [
+      "gasnu",
+      "selsarji",
+      "fapro",
+      "tadji"
     ]
   },
   "sarlu": {
@@ -7777,6 +7863,10 @@
     "gloss": "sleep",
     "tags": [
       "standard"
+    ],
+    "namcu": 1,
+    "sumti": [
+      "gasnu"
     ]
   },
   "sirji": {
@@ -7942,6 +8032,12 @@
     "gloss": "solid",
     "tags": [
       "standard"
+    ],
+    "namcu": 3,
+    "sumti": [
+      "zo'e",
+      "marji",
+      "tcini"
     ]
   },
   "slilu": {
@@ -8076,6 +8172,11 @@
     "gloss": "safe",
     "tags": [
       "standard"
+    ],
+    "namcu": 2,
+    "sumti": [
+      "zo'e",
+      "ckape"
     ]
   },
   "snuti": {
@@ -9074,6 +9175,12 @@
     "gloss": "strong",
     "tags": [
       "standard"
+    ],
+    "namcu": 3,
+    "sumti": [
+      "zo'e",
+      "ckaji",
+      "ckilu"
     ]
   },
   "tsani": {
@@ -9083,6 +9190,11 @@
     "gloss": "sky",
     "tags": [
       "standard"
+    ],
+    "namcu": 2,
+    "sumti": [
+      "tsani",
+      "stuzi"
     ]
   },
   "tsapi": {
@@ -9104,6 +9216,13 @@
     "gloss": "stage",
     "tags": [
       "standard"
+    ],
+    "namcu": 4,
+    "sumti": [
+      "tsina",
+      "zo'e",
+      "selsarji",
+      "marji"
     ]
   },
   "tubnu": {
@@ -9607,6 +9726,12 @@
     "gloss": "sea",
     "tags": [
       "standard"
+    ],
+    "namcu": 3,
+    "sumti": [
+      "xamsi",
+      "plini",
+      "litki"
     ]
   },
   "xance": {

@@ -115,6 +115,41 @@ def interrogate_for_glosses(tree, gismus, skari) -> None:
                 cuxna.add_gloss(gismu, gloss, skari)
 
                 
+def interrogate_for_gismus(tree) -> None:
+    collection = jmaji.collect(tree, jmaji.GismuCollector)
+    with plumbing.Config("gismu") as gismus:
+        for gismu in collection:
+            print(Rule(title=gismu))
+            if gismu not in gismus.keys():
+                print("uncaught gismu: ", gismu)
+                catch = Prompt.ask(
+                    Text("catch? ", style=Style.parse("bold")) + gismu,
+                    choices=["y", "n"],
+                    default="n",
+                )
+                if catch == "y":
+                    gismus[gismu] = {}
+            if not gismus[gismu].get("gloss"):
+                gloss = Prompt.ask("gloss? (enter to skip)", default=None)
+                if gloss:
+                    gismus[gismu]["gloss"] = gloss
+            if not gismus[gismu].get("namcu"):
+                namcu = Prompt.ask("namcu? (enter to skip)", default=None, choices=["1", "2", "3", "4", "5"])
+                if namcu:
+                    gismus[gismu]["namcu"] = int(namcu)
+            if gismus[gismu].get("namcu"):
+                namcu = int(gismus[gismu]["namcu"])
+                if not gismus[gismu].get("sumti", []):
+                    gismus[gismu]["sumti"] = [""] * namcu
+                    for i in range(namcu):
+                        sumti = Prompt.ask(
+                            f"sumti {i + 1}? ",
+                            default="zo'e",
+                        )
+                        gismus[gismu]["sumti"][i] = sumti
+                    
+
+                
 def interrogate_for_cmavos(tree) -> None:
     collection = jmaji.collect(tree, jmaji.CmavoCollector)
     with plumbing.Config("cmavo") as cmavos:
@@ -187,7 +222,7 @@ def process_and_print_tree(tree, args: dict, console, gismus, selmahos, skari, c
     if args.prigau:
         renderables.append(Panel(colorize(tree, selmahos, skari), style=Style()))
 
-    if args.cmavo or args.rafsi:
+    if args.rafsi:
         col_renderables = []
         if args.rafsi:
             col_renderables.append(
@@ -232,7 +267,7 @@ def parse(args: dict):
                 interrogate_for_cmavos(tree)
                 cmavos = plumbing.get_config("cmavo")
             if args.catch_gismus:
-                interrogate_for_glosses(tree, gismus, skari)
+                interrogate_for_gismus(tree)
                 gismus = plumbing.get_config("gismu")
             if args.catch_rafsi:
                 interrogate_for_rafsi(tree, gismus, selmahos, skari)
