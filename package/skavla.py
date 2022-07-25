@@ -240,12 +240,7 @@ def inflate_tcidu_parser(parser: argparse.ArgumentParser) -> None:
         "-g",
         "--gismu",
         action="store_true",
-        help="record all gismu that appear in brivla and gloss them",
-    )
-    read_panels_subgroup.add_argument(
-        "--tree-gismu",
-        action="store_true",
-        help="record all gismu and print their trees",
+        help="record all gismu that appear in brivla and print their tree",
     )
     read_panels_subgroup.add_argument(
         "-r",

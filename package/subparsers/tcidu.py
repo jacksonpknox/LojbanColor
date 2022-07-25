@@ -1,4 +1,3 @@
-from matplotlib import collections
 import tubnu.plumbing as plumbing
 import tubnu.karda as karda
 import tubnu.jmaji as jmaji
@@ -160,13 +159,13 @@ def colorize(tree, selmahos, skari) -> Text:
     return printer.t
 
 
-def process_and_print_tree(tree, args: dict, console, gismus, selmahos, skari):
+def process_and_print_tree(tree, args: dict, console, gismus, selmahos, skari, cmavos):
     renderables = []
 
     if args.prigau:
         renderables.append(Panel(colorize(tree, selmahos, skari), style=Style()))
 
-    if args.cmavo or args.gismu or args.rafsi:
+    if args.cmavo or args.rafsi:
         col_renderables = []
         if args.cmavo:
             col_renderables.append(
@@ -174,14 +173,6 @@ def process_and_print_tree(tree, args: dict, console, gismus, selmahos, skari):
                     analyze_cmavos(tree, selmahos, skari, False),
                     expand=False,
                     style=Style.parse(skari["valskari"]["cmavo"]),
-                )
-            )
-        if args.gismu:
-            col_renderables.append(
-                Panel(
-                    analyze_gismu(tree, gismus, skari),
-                    expand=False,
-                    style=Style.parse(skari["valskari"]["gismu"]),
                 )
             )
         if args.rafsi:
@@ -194,36 +185,27 @@ def process_and_print_tree(tree, args: dict, console, gismus, selmahos, skari):
             )
         renderables.append(Panel(Columns(col_renderables), style=Style()))
 
-    if args.tree_gismu:
+    if args.cmavo:
+        collection = jmaji.collect(tree, jmaji.CmavoCollector)
+        cmavo_trees = [Panel(karda.get_cmavo_tree(cmavo, cmavos, skari), style=Style.parse(skari["valskari"]["cmavo"])) for cmavo in collection]
+        renderables.append(Panel(Columns(cmavo_trees), style=Style.parse(skari["valskari"]["cmavo"])))
+
+    if args.gismu:
         collection = jmaji.collect(tree, jmaji.GismuCollector)
         gismu_trees = [Panel(karda.get_gismu_tree(gismu, gismus, skari), style=Style.parse(skari["valskari"]["gismu"]), title=gismu) for gismu in collection]
         renderables.append(Panel(Columns(gismu_trees), style=Style.parse(skari["valskari"]["gismu"])))
 
-    if args.selmaho:
-        renderables.append(
-            Panel(
-                analyze_selmahos(tree, selmahos, skari, args.squeeze, False),
-                expand=False,
-                style=Style(),
-            )
-        )
-
-
-    if args.wave:
-        for i, panel in enumerate(renderables):
-            sty = Style(bgcolor="#333333") if (i % 2) else Style(bgcolor="black")
-            panel.style += sty
 
     console.print(Panel(Group(*renderables), box.DOUBLE, expand=False))
 
 
 def parse(args: dict):
-    rec = bool(e := args.export)
-    console = Console(record=rec, force_interactive=(not rec))
+    console = Console()
     minji = plumbing.get_config("minji")
     gismus = plumbing.get_config("gismu")
     selmahos = plumbing.get_config("selmaho")
     skari = plumbing.get_config("skari")
+    cmavos = plumbing.get_config("cmavo")
     if files := args.filepath:
         for f in files:
             with open(f, "r") as file:
@@ -239,13 +221,10 @@ def parse(args: dict):
                 interrogate_for_rafsi(tree, gismus, selmahos, skari)
                 gismus = plumbing.get_config("gismus")
                 selmahos = plumbing.get_config("selmahos")
-            process_and_print_tree(tree, args, console, gismus, selmahos, skari)
+            process_and_print_tree(tree, args, console, gismus, selmahos, skari, cmavos)
 
     if args.input:
         p = Style.parse(skari["mi'iskari"]["prompt"])
         user_input = Prompt.ask(Text("type the input", style=p))
         tree = jmaji.get_parse_tree(user_input)
-        process_and_print_tree(tree, args, console, gismus, selmahos, skari)
-
-    if rec:
-        console.save_svg(e, title="skavla")
+        process_and_print_tree(tree, args, console, gismus, selmahos, skari, cmavos)

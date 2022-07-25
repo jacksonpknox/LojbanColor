@@ -8,6 +8,7 @@ CONFIG_DEFAULTS = {
     "progress": "config/progress.json",
     "rafsi": "config/rafsi.json",
     "cmavyrafsi": "config/cmavyrafsi.json",
+    "cmavo": "config/cmavo.json",
 }
 
 

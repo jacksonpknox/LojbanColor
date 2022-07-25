@@ -8,6 +8,24 @@ from rich import box, print
 import tubnu.plumbing as plumbing
 
 
+def get_cmavo_tree(cmavo: str, cmavos: dict, skari: dict):
+    if not plumbing.is_cmavo(cmavo):
+        raise Exception("{} is not a cmavo".format(cmavo))
+    
+    tree = Tree(cmavo, style=skari["valskari"]["cmavo"])
+    
+    if not cmavo in cmavos.keys():
+        tree.add("UNCAUGHT")
+        return(tree)
+    
+    cmavo = cmavos[cmavo]
+    
+    tree.add("gloss").add(str(cmavo.get("gloss", "UNGLOSSED")))
+    tree.add("selmaho").add(str(cmavo.get("selmaho", "UNSELMAHO")))
+    
+    return tree
+
+
 def get_gismu_tree(gismu: str, gismus: dict, skari: dict):
     if not plumbing.is_gismu(gismu):
         raise Exception("{} is not a gismu".format(gismu))
