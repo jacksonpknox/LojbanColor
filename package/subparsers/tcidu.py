@@ -1,3 +1,4 @@
+from matplotlib import collections
 import tubnu.plumbing as plumbing
 import tubnu.karda as karda
 import tubnu.jmaji as jmaji
@@ -192,6 +193,11 @@ def process_and_print_tree(tree, args: dict, console, gismus, selmahos, skari):
                 )
             )
         renderables.append(Panel(Columns(col_renderables), style=Style()))
+
+    if args.tree_gismu:
+        collection = jmaji.collect(tree, jmaji.GismuCollector)
+        gismu_trees = [Panel(karda.get_gismu_tree(gismu, gismus, skari), style=Style.parse(skari["valskari"]["gismu"]), title=gismu) for gismu in collection]
+        renderables.append(Panel(Columns(gismu_trees), style=Style.parse(skari["valskari"]["gismu"])))
 
     if args.selmaho:
         renderables.append(

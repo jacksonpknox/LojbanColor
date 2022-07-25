@@ -201,25 +201,6 @@ def inflate_cpedu_parser(parser: argparse.ArgumentParser) -> None:
 
 
 def inflate_tcidu_parser(parser: argparse.ArgumentParser) -> None:
-    parser.add_argument(
-        "-q",
-        "--squeeze",
-        action="store",
-        type=int,
-        help="squeeze all tables down to HEIGHT rows",
-        metavar="HEIGHT",
-        default=16,
-    )
-    parser.add_argument(
-        "-w", "--wave", action="store_true", help="make background colors alternate"
-    )
-    parser.add_argument(
-        "-e",
-        "--export",
-        action="store",
-        help="export the result to an .svg file",
-        metavar="LOCATION",
-    )
     # Input subgroup
     read_input_subgroup = parser.add_argument_group("selru'e")
     read_input_subgroup.add_argument(
@@ -262,16 +243,15 @@ def inflate_tcidu_parser(parser: argparse.ArgumentParser) -> None:
         help="record all gismu that appear in brivla and gloss them",
     )
     read_panels_subgroup.add_argument(
+        "--tree-gismu",
+        action="store_true",
+        help="record all gismu and print their trees",
+    )
+    read_panels_subgroup.add_argument(
         "-r",
         "--rafsi",
         action="store_true",
         help="record all cmarafsi that appear in lujvo and print their gismu and gloss",
-    )
-    read_panels_subgroup.add_argument(
-        "-s",
-        "--selmaho",
-        action="store_true",
-        help="record all cmavo and group them by selma'o",
     )
     read_panels_subgroup.add_argument(
         "-n",
