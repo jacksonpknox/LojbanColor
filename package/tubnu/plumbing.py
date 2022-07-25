@@ -53,6 +53,15 @@ def get_config(conf: str) -> dict:
 C = "bcdfgjklmnprstvxz"
 V = "aeiou"
 
+
+def is_selmaho(valsi: str) -> bool:
+    valsi = valsi.lower().replace("'", "h")
+    if valsi[0] in C:
+        valsi = valsi[1:]
+    for letter in valsi:
+        if letter not in V + 'h':
+            return False
+
 def is_cmarafsi(valsi: str) -> bool:
     if valsi[0] not in C:
         return False

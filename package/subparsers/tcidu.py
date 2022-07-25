@@ -167,14 +167,6 @@ def process_and_print_tree(tree, args: dict, console, gismus, selmahos, skari, c
 
     if args.cmavo or args.rafsi:
         col_renderables = []
-        if args.cmavo:
-            col_renderables.append(
-                Panel(
-                    analyze_cmavos(tree, selmahos, skari, False),
-                    expand=False,
-                    style=Style.parse(skari["valskari"]["cmavo"]),
-                )
-            )
         if args.rafsi:
             col_renderables.append(
                 Panel(

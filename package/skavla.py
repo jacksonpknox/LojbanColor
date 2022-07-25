@@ -33,6 +33,13 @@ def inflate_cuxna_parser(parser: argparse.ArgumentParser) -> None:
     )
 
     subparsers = parser.add_subparsers(title="configs")
+    
+    cmavos_cuxna_parser = subparsers.add_parser("cmavo", formatter_class=RichHelpFormatter)
+    cmavos_cuxna_schema = [
+        tricu.SingleStringAttribute("gloss"),
+        tricu.SingleStringAttribute("selmaho", verifier=lambda x: plumbing.is_selmaho(x[1]))
+    ]
+    tricu.inflate_schematic_cuxna_parser(cmavos_cuxna_parser, cmavos_cuxna_schema, plumbing.CONFIG_DEFAULTS["cmavo"])
 
     cmavyrafsi_cuxna_parser = subparsers.add_parser("cmavyrafsi", formatter_class=RichHelpFormatter)
     cmavyrafsi_cuxna_schema = [
