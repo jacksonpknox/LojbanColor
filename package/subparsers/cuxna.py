@@ -268,48 +268,8 @@ def set_selmaho_style(selmaho: str, colour: str, skari: dict) -> None:
 def parse(args: dict):
     skari = plumbing.get_config("skari")
 
-    if s := args.selmaho_style:
-        set_selmaho_style(s[0], s[1], skari)  # (selmaho, style)
-
     if m := args.minji_style:
         set_minji_style(m[0], m[1])  # (token, style)
 
     if v := args.valsi_style:
         set_valsi_style(v[0], v[1])  # (token, style)
-
-    if a := args.all_selmaho_style:
-        print(
-            Text.assemble(
-                ("warning! ", skari["mi'iskari"]["obstacle"]),
-                (
-                    "this will erase all selma'o color choices.",
-                    skari["mi'iskari"]["system"],
-                ),
-            )
-        )
-        proceed = Prompt.ask(
-            Text("go ahead?", skari["mi'iskari"]["prompt"]),
-            choices=["yes", "no"],
-            default="no",
-        )
-        if proceed == "yes":
-            set_all_selmaho_style(a[0], skari)
-
-    if c := args.cmavo:
-        add_cmavo(c[1], c[0], skari)  # (cmavo, selmaho)
-
-    if g := args.gloss:
-        add_gloss(g[0], g[1], skari)  # (gismu, gloss)
-
-    if r := args.cmarafsi:
-        add_cmarafsi(r[0], r[1], skari)  # (gismu, cmarafsi)
-
-    if y := args.cmavyrafsi:
-        selmahos = plumbing.get_config("selmahos")
-        add_cmavyrafsi(y[0], y[1], selmahos, skari) # (cmavo, cmavyrafsi)
-
-    if t := args.tag_gismu:
-        add_tag_to_gismu(t[0], t[1], skari)  # (gismu, tag)
-
-    if u := args.set_sumti:
-        set_sumti(u[0], u[1], u[2], skari)  # (gismu, sumti, valsi)
