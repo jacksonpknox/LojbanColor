@@ -83,7 +83,7 @@
       "ra'a",
       "ja'e"
     ],
-    "skari": "cyan",
+    "skari": "yellow",
     "tags": [
       "barda"
     ]
@@ -99,13 +99,13 @@
     "cmavos": [
       "be"
     ],
-    "skari": "cyan"
+    "skari": "magenta"
   },
   "BEI": {
     "cmavos": [
       "bei"
     ],
-    "skari": "cyan"
+    "skari": "magenta"
   },
   "BEhO": {
     "cmavos": [
@@ -310,7 +310,7 @@
       "ti'a",
       "pa'o"
     ],
-    "skari": "cyan",
+    "skari": "yellow",
     "tags": [
       "barda"
     ]
@@ -431,7 +431,7 @@
       "bu'a",
       "bu'e"
     ],
-    "skari": "bright_blue"
+    "skari": "white"
   },
   "GUhA": {
     "cmavos": [
@@ -687,13 +687,13 @@
     "cmavos": [
       "me"
     ],
-    "skari": "cyan"
+    "skari": "magenta"
   },
   "MEhU": {
     "cmavos": [
       "me'u"
     ],
-    "skari": "cyan"
+    "skari": "magenta"
   },
   "MOI": {
     "cmavos": [
@@ -867,7 +867,7 @@
       "vai",
       "ki'o"
     ],
-    "skari": "blue",
+    "skari": "yellow",
     "tags": [
       "barda"
     ]
@@ -890,7 +890,7 @@
       "pu",
       "ba"
     ],
-    "skari": "aquamarine1"
+    "skari": "yellow"
   },
   "RAhO": {
     "cmavos": [
@@ -1121,7 +1121,7 @@
     "cmavos": [
       "vau"
     ],
-    "skari": "cyan"
+    "skari": "magenta"
   },
   "VEI": {
     "cmavos": [
@@ -1203,7 +1203,7 @@
       "di'a",
       "za'o"
     ],
-    "skari": "cyan",
+    "skari": "yellow",
     "tags": [
       "barda"
     ]
