@@ -14,7 +14,7 @@
       ".o",
       ".e"
     ],
-    "skari": "white on black"
+    "skari": "red"
   },
   "BAI": {
     "cmavos": [
@@ -398,7 +398,7 @@
       "gi'u",
       "gi'e"
     ],
-    "skari": "cyan"
+    "skari": "red"
   },
   "GOI": {
     "cmavos": [
@@ -431,7 +431,7 @@
       "bu'a",
       "bu'e"
     ],
-    "skari": "cyan"
+    "skari": "bright_blue"
   },
   "GUhA": {
     "cmavos": [
@@ -492,7 +492,7 @@
     "cmavos": [
       "kei"
     ],
-    "skari": "cyan"
+    "skari": "magenta"
   },
   "KEhE": {
     "cmavos": [
@@ -554,7 +554,7 @@
       "mi",
       "ko"
     ],
-    "skari": "cyan",
+    "skari": "bright_blue",
     "tags": [
       "barda"
     ]
@@ -563,7 +563,7 @@
     "cmavos": [
       "ku"
     ],
-    "skari": "cyan"
+    "skari": "magenta"
   },
   "KUhE": {
     "cmavos": [
@@ -581,7 +581,7 @@
     "cmavos": [
       "la"
     ],
-    "skari": "cyan"
+    "skari": "magenta"
   },
   "LAU": {
     "cmavos": [
@@ -614,7 +614,7 @@
       "lo",
       "lei"
     ],
-    "skari": "cyan"
+    "skari": "magenta"
   },
   "LEhU": {
     "cmavos": [
@@ -767,7 +767,7 @@
       "poi",
       "noi"
     ],
-    "skari": "cyan"
+    "skari": "magenta"
   },
   "NOIhA": {
     "cmavos": [
@@ -867,7 +867,7 @@
       "vai",
       "ki'o"
     ],
-    "skari": "dodger_blue1",
+    "skari": "blue",
     "tags": [
       "barda"
     ]

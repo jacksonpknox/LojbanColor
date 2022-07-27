@@ -14,6 +14,8 @@ def get_cmavo_tree(cmavo: str, cmavos: dict, selmahos: dict, skari: dict):
 
     selmaho = plumbing.get_selmaho(cmavo, cmavos)
     selmaho_skari = selmahos[selmaho]["skari"]
+
+    system_skari = skari["mi'iskari"]["system"]
     
     tree = Tree(Text(cmavo, selmaho_skari), style=skari["valskari"]["cmavo"])
     
@@ -23,8 +25,8 @@ def get_cmavo_tree(cmavo: str, cmavos: dict, selmahos: dict, skari: dict):
     
     cmavo = cmavos[cmavo]
     
-    tree.add("gloss").add(Text(str(cmavo.get("gloss", "UNGLOSSED")), style=Style.parse(skari["mi'iskari"]["gloss"])))
-    tree.add("selmaho").add(Text(str(cmavo.get("selmaho", "UNSELMAHO")), style=Style.parse(selmaho_skari)))
+    tree.add("gloss", style=system_skari).add(Text(str(cmavo.get("gloss", "UNGLOSSED")), style=Style.parse(skari["mi'iskari"]["gloss"])))
+    tree.add("selmaho", style=system_skari).add(Text(str(cmavo.get("selmaho", "UNSELMAHO")), style=Style.parse(selmaho_skari)))
     
     return tree
 
@@ -32,6 +34,8 @@ def get_cmavo_tree(cmavo: str, cmavos: dict, selmahos: dict, skari: dict):
 def get_gismu_tree(gismu: str, gismus: dict, skari: dict):
     if not plumbing.is_gismu(gismu):
         raise Exception("{} is not a gismu".format(gismu))
+
+    system_skari = skari["mi'iskari"]["system"]
 
     tree = Tree(gismu, style=skari["valskari"]["gismu"])
 
@@ -41,9 +45,9 @@ def get_gismu_tree(gismu: str, gismus: dict, skari: dict):
     
     gismu = gismus[gismu]
     
-    tree.add("gloss").add(Text(str(gismu.get("gloss", "UNGLOSSED")), style=Style.parse(skari["mi'iskari"]["gloss"])))
-    tree.add("namcu").add(str(gismu.get("namcu", "UNNAMCU")))
-    sumti_node = tree.add("sumti")
+    tree.add("gloss", style=system_skari).add(Text(str(gismu.get("gloss", "UNGLOSSED")), style=Style.parse(skari["mi'iskari"]["gloss"])))
+    tree.add("namcu", style=system_skari).add(str(gismu.get("namcu", "UNNAMCU")))
+    sumti_node = tree.add("sumti", style=system_skari)
     for sumti in gismu.get("sumti", []):
         sumti_node.add(str(sumti))
 
