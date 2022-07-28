@@ -14,7 +14,7 @@
       ".o",
       ".e"
     ],
-    "skari": "red"
+    "skari": "black"
   },
   "BAI": {
     "cmavos": [
@@ -83,7 +83,7 @@
       "ra'a",
       "ja'e"
     ],
-    "skari": "yellow",
+    "skari": "cyan",
     "tags": [
       "barda"
     ]
@@ -198,7 +198,7 @@
       "nu'o",
       "ca'a"
     ],
-    "skari": "cyan"
+    "skari": "yellow"
   },
   "CEI": {
     "cmavos": [
@@ -238,7 +238,7 @@
       "re'i",
       "pe'u"
     ],
-    "skari": "cyan",
+    "skari": "black",
     "tags": [
       "barda"
     ]
@@ -272,7 +272,7 @@
     "cmavos": [
       "do'u"
     ],
-    "skari": "cyan"
+    "skari": "magenta"
   },
   "FA": {
     "cmavos": [
@@ -398,7 +398,7 @@
       "gi'u",
       "gi'e"
     ],
-    "skari": "red"
+    "skari": "black"
   },
   "GOI": {
     "cmavos": [
@@ -431,7 +431,7 @@
       "bu'a",
       "bu'e"
     ],
-    "skari": "white"
+    "skari": "red"
   },
   "GUhA": {
     "cmavos": [
@@ -455,7 +455,7 @@
       "ja",
       "je"
     ],
-    "skari": "cyan"
+    "skari": "black"
   },
   "JAI": {
     "cmavos": [
@@ -554,7 +554,7 @@
       "mi",
       "ko"
     ],
-    "skari": "bright_blue",
+    "skari": "green",
     "tags": [
       "barda"
     ]
@@ -581,7 +581,7 @@
     "cmavos": [
       "la"
     ],
-    "skari": "magenta"
+    "skari": "green"
   },
   "LAU": {
     "cmavos": [
@@ -614,7 +614,7 @@
       "lo",
       "lei"
     ],
-    "skari": "magenta"
+    "skari": "green"
   },
   "LEhU": {
     "cmavos": [
@@ -638,7 +638,7 @@
     "cmavos": [
       "li'u"
     ],
-    "skari": "magenta"
+    "skari": "white"
   },
   "LOhO": {
     "cmavos": [
@@ -656,7 +656,7 @@
     "cmavos": [
       "lu"
     ],
-    "skari": "magenta"
+    "skari": "white"
   },
   "LUhEI": {
     "cmavos": [
@@ -791,7 +791,7 @@
       "mu'e",
       "su'u"
     ],
-    "skari": "deep_pink4",
+    "skari": "green",
     "tags": [
       "barda"
     ]
@@ -1103,7 +1103,7 @@
       "su'a",
       ".uu"
     ],
-    "skari": "bright_black",
+    "skari": "yellow",
     "tags": [
       "barda",
       "cizra"

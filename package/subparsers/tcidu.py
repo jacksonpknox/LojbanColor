@@ -237,11 +237,13 @@ def process_and_print_tree(tree, args: dict, console, gismus, selmahos, skari, c
 
     if args.cmavo:
         collection = jmaji.collect(tree, jmaji.CmavoCollector)
+        collection.sort()
         cmavo_trees = [Panel(karda.get_cmavo_tree(cmavo, cmavos, selmahos, skari), style=Style.parse(skari["valskari"]["cmavo"])) for cmavo in collection]
         renderables.append(Panel(Columns(cmavo_trees), style=Style.parse(skari["valskari"]["cmavo"]), title="cmavo"))
 
     if args.gismu:
         collection = jmaji.collect(tree, jmaji.GismuCollector)
+        collection.sort()
         gismu_trees = [Panel(karda.get_gismu_tree(gismu, gismus, skari), style=Style.parse(skari["valskari"]["gismu"]), title=gismu) for gismu in collection]
         renderables.append(Panel(Columns(gismu_trees), style=Style.parse(skari["valskari"]["gismu"]), title="gismu"))
 
