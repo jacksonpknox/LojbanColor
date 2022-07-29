@@ -13,7 +13,10 @@
   },
   ".o": {},
   ".u": {},
-  "ba'e": {},
+  "ba'e": {
+    "gloss": "emphasize next word",
+    "selmaho": "BAhE"
+  },
   "za'e": {},
   "ba'i": {},
   "bai": {
@@ -32,7 +35,10 @@
   "ci'u": {},
   "cu'u": {},
   "de'i": {},
-  "di'o": {},
+  "di'o": {
+    "gloss": "diklo",
+    "selmaho": "BAI"
+  },
   "do'e": {
     "gloss": "unspecified modal",
     "selmaho": "BAI"
@@ -52,11 +58,17 @@
   "ji'e": {},
   "ji'o": {},
   "ji'u": {},
-  "ka'a": {},
+  "ka'a": {
+    "gloss": "klama",
+    "selmaho": "BAI"
+  },
   "ka'i": {},
   "kai": {},
   "ki'i": {},
-  "ki'u": {},
+  "ki'u": {
+    "gloss": "krinu",
+    "selmaho": "BAI"
+  },
   "koi": {},
   "ku'u": {},
   "la'u": {},
@@ -180,7 +192,10 @@
   "be'e": {},
   "re'i": {},
   "mu'o": {},
-  "je'e": {},
+  "je'e": {
+    "gloss": "roger",
+    "selmaho": "COI"
+  },
   "vi'o": {},
   "ke'o": {},
   "fe'o": {},
@@ -196,7 +211,10 @@
     "gloss": "vocative terminator",
     "selmaho": "DOhU"
   },
-  "doi": {},
+  "doi": {
+    "gloss": "vocative marker",
+    "selmaho": "DOI"
+  },
   "fa": {
     "gloss": "1st sumti place",
     "selmaho": "FA"
@@ -225,7 +243,10 @@
   "ca'u": {},
   "ti'a": {},
   "zu'a": {},
-  "ga'u": {},
+  "ga'u": {
+    "gloss": "up",
+    "selmaho": "FAhA"
+  },
   "ni'a": {},
   "ne'i": {
     "gloss": "within",
@@ -258,7 +279,10 @@
   },
   "fe'e": {},
   "fe'u": {},
-  "fi'o": {},
+  "fi'o": {
+    "gloss": "begin selbri to sumti tag",
+    "selmaho": "FIhO"
+  },
   "foi": {},
   "fu'a": {},
   "fu'e": {},
@@ -269,7 +293,10 @@
   "gu": {},
   "ga'o": {},
   "ke'i": {},
-  "ge'u": {},
+  "ge'u": {
+    "gloss": "end GOI relative phrase",
+    "selmaho": "GEhU"
+  },
   "gi": {},
   "gi'a": {},
   "gi'e": {
@@ -306,12 +333,18 @@
   },
   "po": {},
   "po'e": {},
-  "po'u": {},
+  "po'u": {
+    "gloss": "begin restrictive appositive phrase",
+    "selmaho": "GOI"
+  },
   "ne": {
     "gloss": "begin non-restrictive relative phrase",
     "selmaho": "GOI"
   },
-  "no'u": {},
+  "no'u": {
+    "gloss": "begin non-restrictive appositive phrase",
+    "selmaho": "GOI"
+  },
   "gu'a": {},
   "gu'e": {},
   "gu'o": {},
@@ -332,14 +365,20 @@
     "selmaho": "JAI"
   },
   "jo'i": {},
-  "joi": {},
+  "joi": {
+    "gloss": "mixed conjunction",
+    "selmaho": "JOI"
+  },
   "ce": {},
   "ce'o": {
     "gloss": "ordered sequence link",
     "selmaho": "JOI"
   },
   "jo'u": {},
-  "fa'u": {},
+  "fa'u": {
+    "gloss": "respectively",
+    "selmaho": "JOI"
+  },
   "jo'e": {},
   "ku'a": {},
   "pi'u": {},
@@ -412,11 +451,20 @@
     "gloss": "most recent sumti",
     "selmaho": "KOhA"
   },
-  "ra": {},
-  "ru": {},
+  "ra": {
+    "gloss": "recent sumti",
+    "selmaho": "KOhA"
+  },
+  "ru": {
+    "gloss": "remote past sumti",
+    "selmaho": "KOhA"
+  },
   "zo'e": {},
   "zu'i": {},
-  "zi'o": {},
+  "zi'o": {
+    "gloss": "delete sumti place",
+    "selmaho": "KOhA"
+  },
   "vo'a": {},
   "vo'e": {},
   "vo'i": {},
@@ -468,7 +516,10 @@
   "lo'e": {},
   "loi": {},
   "le'u": {},
-  "li": {},
+  "li": {
+    "gloss": "begin mekso to sumti",
+    "selmaho": "LI"
+  },
   "li'u": {
     "gloss": "end grammatical quotation",
     "selmaho": "LIhU"
@@ -489,9 +540,18 @@
   },
   "me'u": {},
   "mo'e": {},
-  "mo'i": {},
-  "moi": {},
-  "mei": {},
+  "mo'i": {
+    "gloss": "mark motion",
+    "selmaho": "MOhI"
+  },
+  "moi": {
+    "gloss": "number to ordinal selbri",
+    "selmaho": "MOI"
+  },
+  "mei": {
+    "gloss": "number to cardinality selbri",
+    "selmaho": "MOI"
+  },
   "si'e": {},
   "cu'o": {},
   "va'e": {},
@@ -535,7 +595,10 @@
   "mu'e": {},
   "pu'u": {},
   "zu'o": {},
-  "za'i": {},
+  "za'i": {
+    "gloss": "state abstractor",
+    "selmaho": "NU"
+  },
   "ka": {
     "gloss": "ckaji abstractor",
     "selmaho": "NU"
@@ -559,7 +622,10 @@
     "gloss": "2",
     "selmaho": "PA"
   },
-  "ci": {},
+  "ci": {
+    "gloss": "3",
+    "selmaho": "PA"
+  },
   "vo": {},
   "mu": {},
   "xa": {},
@@ -572,7 +638,10 @@
   },
   "ma'u": {},
   "ni'u": {},
-  "pi": {},
+  "pi": {
+    "gloss": "radix point",
+    "selmaho": "PA"
+  },
   "fi'u": {},
   "ra'e": {},
   "ce'i": {},
@@ -659,11 +728,20 @@
   "di'i": {},
   "na'o": {},
   "ru'i": {},
-  "ta'e": {},
+  "ta'e": {
+    "gloss": "habitually",
+    "selmaho": "TAhE"
+  },
   "te'u": {},
   "tei": {},
-  "to": {},
-  "toi": {},
+  "to": {
+    "gloss": "begin grammatical parenthetical",
+    "selmaho": "TO"
+  },
+  "toi": {
+    "gloss": "end TO",
+    "selmaho": "TOI"
+  },
   "tu'e": {},
   "tu'u": {},
   ".ua": {
@@ -696,7 +774,10 @@
   ".o'i": {},
   ".o'o": {},
   ".o'u": {},
-  ".ii": {},
+  ".ii": {
+    "gloss": "fear",
+    "selmaho": "UI"
+  },
   ".i'i": {},
   ".io": {},
   ".i'o": {},
@@ -719,14 +800,20 @@
     "selmaho": "UI"
   },
   ".e'i": {},
-  ".e'o": {},
+  ".e'o": {
+    "gloss": "request",
+    "selmaho": "UI"
+  },
   ".e'u": {},
   ".ia": {},
   ".i'a": {
     "gloss": "acceptance",
     "selmaho": "UI"
   },
-  ".ie": {},
+  ".ie": {
+    "gloss": "agreement",
+    "selmaho": "UI"
+  },
   ".i'e": {},
   "ro'a": {
     "gloss": "social category",
@@ -835,7 +922,10 @@
   "fe'a": {},
   "xi": {},
   ".y.": {},
-  "pu'o": {},
+  "pu'o": {
+    "gloss": "until",
+    "selmaho": "ZAhO"
+  },
   "ca'o": {
     "gloss": "during",
     "selmaho": "ZAhO"
@@ -869,7 +959,10 @@
     "gloss": "short time distance",
     "selmaho": "ZI"
   },
-  "za": {},
+  "za": {
+    "gloss": "medium time distance",
+    "selmaho": "ZI"
+  },
   "zu": {},
   "zi'e": {},
   "zo": {
@@ -893,5 +986,17 @@
   "jei": {
     "gloss": "truth-value abstractor",
     "selmaho": "NU"
+  },
+  "lei": {
+    "gloss": "the (metaphor, mass)",
+    "selmaho": "LE"
+  },
+  "goi": {
+    "gloss": "assign sumti",
+    "selmaho": "GOI"
+  },
+  "sai": {
+    "gloss": "moderate intensity",
+    "selmaho": "CAI"
   }
 }
