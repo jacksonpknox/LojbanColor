@@ -220,8 +220,17 @@ def colorize(tree, selmahos, cmavos, skari) -> Text:
 def process_and_print_tree(tree, args: dict, console, gismus, selmahos, skari, cmavos):
     renderables = []
 
-    if args.prigau:
-        renderables.append(Panel(colorize(tree, selmahos, cmavos, skari), style=Style()))
+    if args.cmavo:
+        collection = jmaji.collect(tree, jmaji.CmavoCollector)
+        collection.sort()
+        cmavo_trees = [Panel(karda.get_cmavo_tree(cmavo, cmavos, selmahos, skari), style=Style.parse(skari["valskari"]["cmavo"])) for cmavo in collection]
+        renderables.append(Panel(Columns(cmavo_trees), style=Style.parse(skari["valskari"]["cmavo"]), title="cmavo"))
+
+    if args.gismu:
+        collection = jmaji.collect(tree, jmaji.GismuCollector)
+        collection.sort()
+        gismu_trees = [Panel(karda.get_gismu_tree(gismu, gismus, skari), style=Style.parse(skari["valskari"]["gismu"]), title=gismu) for gismu in collection]
+        renderables.append(Panel(Columns(gismu_trees), style=Style.parse(skari["valskari"]["gismu"]), title="gismu"))
 
     if args.rafsi:
         col_renderables = []
@@ -235,17 +244,8 @@ def process_and_print_tree(tree, args: dict, console, gismus, selmahos, skari, c
             )
         renderables.append(Panel(Columns(col_renderables), style=Style()))
 
-    if args.cmavo:
-        collection = jmaji.collect(tree, jmaji.CmavoCollector)
-        collection.sort()
-        cmavo_trees = [Panel(karda.get_cmavo_tree(cmavo, cmavos, selmahos, skari), style=Style.parse(skari["valskari"]["cmavo"])) for cmavo in collection]
-        renderables.append(Panel(Columns(cmavo_trees), style=Style.parse(skari["valskari"]["cmavo"]), title="cmavo"))
-
-    if args.gismu:
-        collection = jmaji.collect(tree, jmaji.GismuCollector)
-        collection.sort()
-        gismu_trees = [Panel(karda.get_gismu_tree(gismu, gismus, skari), style=Style.parse(skari["valskari"]["gismu"]), title=gismu) for gismu in collection]
-        renderables.append(Panel(Columns(gismu_trees), style=Style.parse(skari["valskari"]["gismu"]), title="gismu"))
+    if args.prigau:
+        renderables.append(Panel(colorize(tree, selmahos, cmavos, skari), style=Style()))
 
 
     console.print(Panel(Group(*renderables), box.DOUBLE, expand=False))
