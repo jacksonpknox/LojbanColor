@@ -540,8 +540,14 @@
     "gloss": "the",
     "selmaho": "LE"
   },
-  "lo'e": {},
-  "loi": {},
+  "lo'e": {
+    "gloss": "the typical one",
+    "selmaho": "LE"
+  },
+  "loi": {
+    "gloss": "the mass",
+    "selmaho": "LE"
+  },
   "le'u": {},
   "li": {
     "gloss": "begin mekso to sumti",
@@ -899,10 +905,16 @@
     "gloss": "however",
     "selmaho": "UI"
   },
-  "ji'a": {},
+  "ji'a": {
+    "gloss": "additionally",
+    "selmaho": "UI"
+  },
   "si'a": {},
   "mi'u": {},
-  "po'o": {},
+  "po'o": {
+    "gloss": "uniquely",
+    "selmaho": "UI"
+  },
   "li'a": {},
   "ba'u": {
     "gloss": "exaggeration",
@@ -922,7 +934,10 @@
   "la'a": {},
   "ta'o": {},
   "ra'u": {},
-  "mu'a": {},
+  "mu'a": {
+    "gloss": "for example",
+    "selmaho": "UI"
+  },
   "zu'u": {},
   "ke'u": {},
   "da'i": {
@@ -987,7 +1002,10 @@
     "gloss": "during",
     "selmaho": "ZAhO"
   },
-  "ba'o": {},
+  "ba'o": {
+    "gloss": "since",
+    "selmaho": "ZAhO"
+  },
   "co'a": {
     "gloss": "at the starting point of",
     "selmaho": "ZAhO"
@@ -1058,5 +1076,9 @@
   "sai": {
     "gloss": "moderate intensity",
     "selmaho": "CAI"
+  },
+  "ji": {
+    "gloss": "sumti afterthought connective question",
+    "selmaho": "A"
   }
 }
