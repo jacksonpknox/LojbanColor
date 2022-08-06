@@ -53,7 +53,10 @@
     "gloss": "gasnu",
     "selmaho": "BAI"
   },
-  "ja'e": {},
+  "ja'e": {
+    "gloss": "jalge",
+    "selmaho": "BAI"
+  },
   "ja'i": {},
   "ji'e": {},
   "ji'o": {},
@@ -180,7 +183,10 @@
     "gloss": "neutral intensity",
     "selmaho": "CAI"
   },
-  "pei": {},
+  "pei": {
+    "gloss": "attitudinal question",
+    "selmaho": "CAI"
+  },
   "ce'e": {},
   "cei": {},
   "co": {},
@@ -193,7 +199,10 @@
   "nu'e": {},
   "ta'a": {},
   "pe'u": {},
-  "ki'e": {},
+  "ki'e": {
+    "gloss": "thanks",
+    "selmaho": "COI"
+  },
   "fi'i": {},
   "be'e": {},
   "re'i": {},
@@ -294,7 +303,10 @@
   "fu'e": {},
   "fu'o": {},
   "ga": {},
-  "ge": {},
+  "ge": {
+    "gloss": "forethought and",
+    "selmaho": "GA"
+  },
   "go": {},
   "gu": {},
   "ga'o": {},
@@ -303,7 +315,10 @@
     "gloss": "end GOI relative phrase",
     "selmaho": "GEhU"
   },
-  "gi": {},
+  "gi": {
+    "gloss": "ge medial marker",
+    "selmaho": "GI"
+  },
   "gi'a": {},
   "gi'e": {
     "gloss": "bridi-tail afterthought and",
@@ -355,7 +370,10 @@
     "selmaho": "GOI"
   },
   "gu'a": {},
-  "gu'e": {},
+  "gu'e": {
+    "gloss": "tanru-internal forethought",
+    "selmaho": "GUhA"
+  },
   "gu'o": {},
   "gu'u": {},
   ".i": {
@@ -450,7 +468,10 @@
   },
   "de'e": {},
   "da'e": {},
-  "dei": {},
+  "dei": {
+    "gloss": "this utterance",
+    "selmaho": "KOhA"
+  },
   "do'i": {},
   "ko'a": {
     "gloss": "thing 1",
@@ -826,7 +847,10 @@
     "gloss": "fear",
     "selmaho": "UI"
   },
-  ".i'i": {},
+  ".i'i": {
+    "gloss": "togetherness",
+    "selmaho": "UI"
+  },
   ".io": {},
   ".i'o": {},
   ".iu": {},
@@ -882,7 +906,10 @@
   "fu'i": {},
   "be'u": {},
   "se'a": {},
-  "dai": {},
+  "dai": {
+    "gloss": "empathy marker",
+    "selmaho": "UI"
+  },
   "bu'o": {},
   "ja'o": {},
   "ca'e": {},
@@ -927,7 +954,10 @@
     "gloss": "generously",
     "selmaho": "UI"
   },
-  "sa'u": {},
+  "sa'u": {
+    "gloss": "simply",
+    "selmaho": "UI"
+  },
   "pa'e": {},
   "je'u": {},
   "ju'o": {},
@@ -958,7 +988,10 @@
     "selmaho": "UI"
   },
   "pe'a": {},
-  "bi'u": {},
+  "bi'u": {
+    "gloss": "newly introduced information",
+    "selmaho": "UI"
+  },
   "ge'e": {
     "gloss": "non-specific emotion",
     "selmaho": "UI"

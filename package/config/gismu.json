@@ -14,35 +14,31 @@
     ]
   },
   "badna": {
-    "cmarafsi": [],
     "gloss": "banana",
     "liste": [
-      "CLL"
+      "jbovlaste"
     ],
-    "sumnamcu": 2,
+    "namcu": 2,
     "sumti": [
       "badna",
       "jutsi"
     ],
     "tags": [
-      "grutyvla"
+      "grute"
     ]
   },
   "badri": {
-    "cmarafsi": [
-      "dri"
-    ],
     "gloss": "sad",
     "liste": [
-      "CLL"
+      "jbovlaste"
     ],
-    "sumnamcu": 2,
+    "namcu": 2,
     "sumti": [
       "cinmo",
-      "sucta"
+      "zo'e"
     ],
     "tags": [
-      "selcinmo"
+      "cinmo"
     ]
   },
   "bajra": {
@@ -1297,9 +1293,15 @@
   },
   "catra": {
     "cmarafsi": [],
-    "gloss": null,
+    "gloss": "kill",
     "tags": [
       "standard"
+    ],
+    "namcu": 3,
+    "sumti": [
+      "gasnu",
+      "selckape",
+      "tadji"
     ]
   },
   "caxno": {
@@ -2959,6 +2961,12 @@
     "gloss": "day",
     "tags": [
       "standard"
+    ],
+    "namcu": 3,
+    "sumti": [
+      "djedi",
+      "namcu",
+      "ckilu"
     ]
   },
   "djica": {
@@ -3236,6 +3244,11 @@
     "gloss": "finale",
     "tags": [
       "standard"
+    ],
+    "namcu": 2,
+    "sumti": [
+      "fanmo",
+      "pruce"
     ]
   },
   "fanri": {
@@ -3372,6 +3385,12 @@
     "gloss": "anger",
     "tags": [
       "standard"
+    ],
+    "namcu": 3,
+    "sumti": [
+      "cinmo",
+      "selfe'u",
+      "krinu"
     ]
   },
   "fenki": {
@@ -3435,6 +3454,12 @@
     "gloss": "female",
     "tags": [
       "standard"
+    ],
+    "namcu": 3,
+    "sumti": [
+      "jmive",
+      "jutsi",
+      "ckaji"
     ]
   },
   "figre": {
@@ -3903,6 +3928,11 @@
     "gloss": "happy",
     "tags": [
       "standard"
+    ],
+    "namcu": 2,
+    "sumti": [
+      "cinmo",
+      "zo'e"
     ]
   },
   "gletu": {
@@ -5976,6 +6006,13 @@
     "gloss": "story",
     "tags": [
       "standard"
+    ],
+    "namcu": 4,
+    "sumti": [
+      "cusku",
+      "selcusku",
+      "tersku",
+      "velsku"
     ]
   },
   "liste": {
@@ -7014,6 +7051,11 @@
     "gloss": "like",
     "tags": [
       "standard"
+    ],
+    "namcu": 2,
+    "sumti": [
+      "cinmo",
+      "zasti"
     ]
   },
   "nenri": {
@@ -7352,6 +7394,11 @@
     "gloss": "father",
     "tags": [
       "standard"
+    ],
+    "namcu": 2,
+    "sumti": [
+      "patfu",
+      "panzi"
     ]
   },
   "patlu": {
@@ -8032,6 +8079,12 @@
     "gloss": "disturb",
     "tags": [
       "standard"
+    ],
+    "namcu": 3,
+    "sumti": [
+      "zo'e",
+      "prenu",
+      "nabmi"
     ]
   },
   "ralci": {
@@ -8855,6 +8908,13 @@
     "gloss": "seem",
     "tags": [
       "standard"
+    ],
+    "namcu": 4,
+    "sumti": [
+      "simlu",
+      "ckaji",
+      "zgana",
+      "tcini"
     ]
   },
   "simsa": {
@@ -9320,7 +9380,7 @@
   },
   "softo": {
     "cmarafsi": [],
-    "gloss": null,
+    "gloss": "soviet",
     "tags": [
       "standard"
     ]
@@ -9551,7 +9611,7 @@
   },
   "stace": {
     "cmarafsi": [],
-    "gloss": null,
+    "gloss": "honest",
     "tags": [
       "standard"
     ]
@@ -9719,6 +9779,11 @@
     "gloss": "location (fixed)",
     "tags": [
       "standard"
+    ],
+    "namcu": 2,
+    "sumti": [
+      "stuzi",
+      "zasti"
     ]
   },
   "sucta": {
@@ -10536,7 +10601,7 @@
   },
   "tunba": {
     "cmarafsi": [],
-    "gloss": null,
+    "gloss": "sibling",
     "tags": [
       "standard"
     ]
@@ -11453,7 +11518,7 @@
   },
   "zasni": {
     "cmarafsi": [],
-    "gloss": null,
+    "gloss": "temporary",
     "tags": [
       "standard"
     ]
@@ -11653,7 +11718,7 @@
   },
   "zumri": {
     "cmarafsi": [],
-    "gloss": null,
+    "gloss": "corn",
     "tags": [
       "standard"
     ]
