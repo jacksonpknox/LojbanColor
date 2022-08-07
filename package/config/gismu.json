@@ -42,23 +42,19 @@
     ]
   },
   "bajra": {
-    "cmarafsi": [
-      "baj"
-    ],
     "gloss": "run",
     "liste": [
-      "CLL"
+      "jbovlaste"
     ],
     "sumnamcu": 4,
     "sumti": [
-      "gasnu",
+      "cadzu",
       "sefta",
-      "zo'e",
+      "terdzu",
       "velbajra"
     ],
     "tags": [
-      "fasnu",
-      "cadzyvla"
+      "cadzu"
     ],
     "namcu": 4
   },
@@ -4794,6 +4790,13 @@
     "gloss": "compete",
     "tags": [
       "standard"
+    ],
+    "namcu": 4,
+    "sumti": [
+      "jivna",
+      "bradi",
+      "terjvi",
+      "selji'a"
     ]
   },
   "jmaji": {
@@ -10437,6 +10440,13 @@
     "gloss": "superlative",
     "tags": [
       "standard"
+    ],
+    "namcu": 4,
+    "sumti": [
+      "zo'e",
+      "ckaji",
+      "zo'e",
+      "zilcmi"
     ]
   },
   "trano": {
