@@ -1,11 +1,11 @@
 {
   "UNCATEGORIZED": {
     "cmavos": [],
-    "skari": "black on white"
+    "skari": "bright_black on white"
   },
   "UNCAUGHT": {
     "cmavos": [],
-    "skari": "black on white"
+    "skari": "bright_black on white"
   },
   "A": {
     "cmavos": [
@@ -14,7 +14,7 @@
       ".o",
       ".e"
     ],
-    "skari": "black"
+    "skari": "bright_black"
   },
   "BAI": {
     "cmavos": [
@@ -319,7 +319,7 @@
     "cmavos": [
       "fa'o"
     ],
-    "skari": "grey27"
+    "skari": "bright_black"
   },
   "FEhE": {
     "cmavos": [
@@ -398,7 +398,7 @@
       "gi'u",
       "gi'e"
     ],
-    "skari": "black"
+    "skari": "bright_black"
   },
   "GOI": {
     "cmavos": [
@@ -446,7 +446,7 @@
     "cmavos": [
       ".i"
     ],
-    "skari": "grey27"
+    "skari": "bright_black"
   },
   "JA": {
     "cmavos": [
@@ -455,7 +455,7 @@
       "ja",
       "je"
     ],
-    "skari": "black"
+    "skari": "bright_black"
   },
   "JAI": {
     "cmavos": [
@@ -474,7 +474,7 @@
       "jo'u",
       "pi'u"
     ],
-    "skari": "black"
+    "skari": "bright_black"
   },
   "JOhI": {
     "cmavos": [
@@ -759,7 +759,7 @@
     "cmavos": [
       "ni'o"
     ],
-    "skari": "grey27"
+    "skari": "bright_black"
   },
   "NOI": {
     "cmavos": [
