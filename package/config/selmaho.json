@@ -1,180 +1,50 @@
 {
   "UNCATEGORIZED": {
-    "cmavos": [],
     "skari": "bright_black on white"
   },
   "UNCAUGHT": {
-    "cmavos": [],
     "skari": "bright_black on white"
   },
   "A": {
-    "cmavos": [
-      ".u",
-      ".a",
-      ".o",
-      ".e"
-    ],
     "skari": "bright_black"
   },
   "BAI": {
-    "cmavos": [
-      "mu'u",
-      "ma'i",
-      "ki'i",
-      "me'a",
-      "ci'o",
-      "fau",
-      "rai",
-      "ti'u",
-      "pi'o",
-      "du'i",
-      "ga'a",
-      "gau",
-      "la'u",
-      "koi",
-      "ra'i",
-      "li'e",
-      "ji'u",
-      "bau",
-      "sau",
-      "ba'i",
-      "fa'e",
-      "ci'u",
-      "va'u",
-      "cau",
-      "do'e",
-      "ka'a",
-      "ji'o",
-      "pu'a",
-      "zau",
-      "ma'e",
-      "me'e",
-      "cu'u",
-      "de'i",
-      "pu'e",
-      "ki'u",
-      "di'o",
-      "ti'i",
-      "ja'i",
-      "ri'a",
-      "mau",
-      "pa'a",
-      "ca'i",
-      "si'u",
-      "ci'e",
-      "ji'e",
-      "kai",
-      "bai",
-      "le'a",
-      "be'i",
-      "tai",
-      "ku'u",
-      "zu'e",
-      "ka'i",
-      "mu'i",
-      "fi'e",
-      "ni'i",
-      "pa'u",
-      "ta'i",
-      "tu'i",
-      "po'i",
-      "du'o",
-      "va'o",
-      "ra'a",
-      "ja'e"
-    ],
     "skari": "cyan",
     "tags": [
       "barda"
     ]
   },
   "BAhE": {
-    "cmavos": [
-      "ba'e",
-      "za'e"
-    ],
     "skari": "yellow"
   },
   "BE": {
-    "cmavos": [
-      "be"
-    ],
     "skari": "bright_green"
   },
   "BEI": {
-    "cmavos": [
-      "bei"
-    ],
     "skari": "magenta"
   },
   "BEhO": {
-    "cmavos": [
-      "be'o"
-    ],
     "skari": "cyan"
   },
   "BIhE": {
-    "cmavos": [
-      "bi'e"
-    ],
     "skari": "cyan"
   },
   "BIhI": {
-    "cmavos": [
-      "bi'o",
-      "mi'i",
-      "bi'i"
-    ],
     "skari": "cyan"
   },
   "BO": {
     "cmarafsi": {
       "bor": "bo"
     },
-    "cmavos": [
-      "bo"
-    ],
     "skari": "cyan"
   },
   "BOI": {
-    "cmavos": [
-      "boi"
-    ],
     "skari": "cyan"
   },
   "BU": {
-    "cmavos": [
-      "bu"
-    ],
     "skari": "cyan"
   },
   "BY": {
-    "cmavos": [
-      "ty.",
-      ".y'y.",
-      "je'o",
-      "xy.",
-      "my.",
-      "ru'o",
-      "zy.",
-      "ry.",
-      "cy.",
-      "jy.",
-      "ly.",
-      "ky.",
-      "py.",
-      "na'a",
-      "gy.",
-      "by.",
-      "lo'a",
-      "dy.",
-      "sy.",
-      "vy.",
-      "jo'o",
-      "fy.",
-      "ny.",
-      "ge'o"
-    ],
     "skari": "cyan",
     "tags": [
       "barda",
@@ -182,927 +52,303 @@
     ]
   },
   "CAI": {
-    "cmavos": [
-      "ru'e",
-      "pei",
-      "cu'i",
-      "sai",
-      "cai"
-    ],
     "skari": "yellow"
   },
   "CAhA": {
-    "cmavos": [
-      "ka'e",
-      "pu'i",
-      "nu'o",
-      "ca'a"
-    ],
     "skari": "yellow"
   },
   "CEI": {
-    "cmavos": [
-      "cei"
-    ],
     "skari": "cyan"
   },
   "CEhE": {
-    "cmavos": [
-      "ce'e"
-    ],
     "skari": "cyan"
   },
   "CO": {
-    "cmavos": [
-      "co"
-    ],
     "skari": "cyan"
   },
   "COI": {
-    "cmavos": [
-      "fi'i",
-      "mu'o",
-      "jo'au",
-      "mi'e",
-      "ju'i",
-      "ki'e",
-      "vi'o",
-      "ke'o",
-      "nu'e",
-      "coi",
-      "co'o",
-      "be'e",
-      "ta'a",
-      "fe'o",
-      "je'e",
-      "re'i",
-      "pe'u"
-    ],
     "skari": "yellow",
     "tags": [
       "barda"
     ]
   },
   "CU": {
-    "cmavos": [
-      "cu"
-    ],
     "skari": "bold magenta"
   },
   "CUhE": {
-    "cmavos": [
-      "nau",
-      "cu'e"
-    ],
     "skari": "cyan"
   },
   "DAhO": {
-    "cmavos": [
-      "da'o"
-    ],
     "skari": "cyan"
   },
   "DOI": {
-    "cmavos": [
-      "doi"
-    ],
     "skari": "cyan"
   },
   "DOhU": {
-    "cmavos": [
-      "do'u"
-    ],
     "skari": "magenta"
   },
   "FA": {
-    "cmavos": [
-      "fai",
-      "fa",
-      "fe",
-      "fi'a",
-      "fi",
-      "fu",
-      "fo"
-    ],
     "skari": "cyan"
   },
   "FAhA": {
-    "cmavos": [
-      "fa'a",
-      "ne'a",
-      "ze'o",
-      "zo'a",
-      "zu'a",
-      "te'e",
-      "ca'u",
-      "zo'i",
-      "ru'u",
-      "du'a",
-      "bu'u",
-      "ga'u",
-      "re'o",
-      "ne'i",
-      "ni'a",
-      "ne'u",
-      "be'a",
-      "to'o",
-      "vu'a",
-      "ti'a",
-      "pa'o"
-    ],
     "skari": "yellow",
     "tags": [
       "barda"
     ]
   },
   "FAhO": {
-    "cmavos": [
-      "fa'o"
-    ],
     "skari": "bright_black"
   },
   "FEhE": {
-    "cmavos": [
-      "fe'e"
-    ],
     "skari": "cyan"
   },
   "FEhU": {
-    "cmavos": [
-      "fe'u"
-    ],
     "skari": "cyan"
   },
   "FIhO": {
-    "cmavos": [
-      "fi'o"
-    ],
     "skari": "cyan"
   },
   "FOI": {
-    "cmavos": [
-      "foi"
-    ],
     "skari": "cyan"
   },
   "FUhA": {
-    "cmavos": [
-      "fu'a"
-    ],
     "skari": "cyan"
   },
   "FUhE": {
-    "cmavos": [
-      "fu'e"
-    ],
     "skari": "cyan"
   },
   "FUhO": {
-    "cmavos": [
-      "fu'o"
-    ],
     "skari": "cyan"
   },
   "GA": {
-    "cmavos": [
-      "ge",
-      "gu",
-      "go",
-      "ga"
-    ],
     "skari": "cyan"
   },
   "GAhO": {
-    "cmavos": [
-      "ga'o",
-      "ke'i"
-    ],
     "skari": "cyan"
   },
   "GEhU": {
-    "cmavos": [
-      "ge'u"
-    ],
     "skari": "magenta"
   },
   "GI": {
-    "cmavos": [
-      "gi"
-    ],
     "skari": "cyan"
   },
   "GIhA": {
-    "cmavos": [
-      "gi'o",
-      "gi'a",
-      "gi'u",
-      "gi'e"
-    ],
     "skari": "bright_black"
   },
   "GOI": {
-    "cmavos": [
-      "ne",
-      "po'e",
-      "pe",
-      "no'u",
-      "po'u",
-      "goi",
-      "po"
-    ],
     "skari": "cyan"
   },
   "GOhA": {
-    "cmarafsi": {
-      "dub": "du"
-    },
-    "cmavos": [
-      "go'o",
-      "go'i",
-      "bu'i",
-      "co'e",
-      "go'u",
-      "go'a",
-      "mo",
-      "nei",
-      "go'e",
-      "no'a",
-      "du",
-      "bu'a",
-      "bu'e"
-    ],
     "skari": "red"
   },
   "GUhA": {
-    "cmavos": [
-      "gu'a",
-      "gu'e",
-      "gu'o",
-      "gu'u"
-    ],
     "skari": "cyan"
   },
   "I": {
-    "cmavos": [
-      ".i"
-    ],
     "skari": "bright_black"
   },
   "JA": {
-    "cmavos": [
-      "jo",
-      "ju",
-      "ja",
-      "je"
-    ],
     "skari": "bright_black"
   },
   "JAI": {
-    "cmavos": [
-      "jai"
-    ],
     "skari": "cyan"
   },
   "JOI": {
-    "cmavos": [
-      "ce",
-      "joi",
-      "jo'e",
-      "ku'a",
-      "ce'o",
-      "fa'u",
-      "jo'u",
-      "pi'u"
-    ],
     "skari": "bright_black"
   },
   "JOhI": {
-    "cmavos": [
-      "jo'i"
-    ],
     "skari": "cyan"
   },
   "KE": {
-    "cmavos": [
-      "ke"
-    ],
     "skari": "cyan"
   },
   "KEI": {
-    "cmavos": [
-      "kei"
-    ],
     "skari": "magenta"
   },
   "KEhE": {
-    "cmavos": [
-      "ke'e"
-    ],
     "skari": "cyan"
   },
   "KI": {
-    "cmavos": [
-      "ki"
-    ],
     "skari": "cyan"
   },
   "KOhA": {
-    "cmavos": [
-      "vo'o",
-      "do'i",
-      "tu",
-      "ko'i",
-      "de",
-      "zu'i",
-      "ri",
-      "ce'u",
-      "zo'e",
-      "ko'e",
-      "de'e",
-      "fo'a",
-      "ko'o",
-      "da'u",
-      "da",
-      "ke'a",
-      "vo'a",
-      "vo'u",
-      "ma'a",
-      "dei",
-      "do'o",
-      "ta",
-      "di'u",
-      "di",
-      "vo'e",
-      "ra",
-      "di'e",
-      "ma",
-      "ru",
-      "do",
-      "fo'u",
-      "vo'i",
-      "da'e",
-      "ko'u",
-      "mi'o",
-      "zi'o",
-      "ko'a",
-      "fo'e",
-      "de'u",
-      "ti",
-      "fo'i",
-      "fo'o",
-      "mi'a",
-      "mi",
-      "ko"
-    ],
     "skari": "green",
     "tags": [
       "barda"
     ]
   },
   "KU": {
-    "cmavos": [
-      "ku"
-    ],
     "skari": "magenta"
   },
   "KUhE": {
-    "cmavos": [
-      "ku'e"
-    ],
     "skari": "cyan"
   },
   "KUhO": {
-    "cmavos": [
-      "ku'o"
-    ],
     "skari": "cyan"
   },
   "LA": {
-    "cmavos": [
-      "la"
-    ],
     "skari": "green"
   },
   "LAU": {
-    "cmavos": [
-      "tau",
-      "zai",
-      "lau",
-      "ce'a"
-    ],
     "skari": "cyan"
   },
   "LAhE": {
-    "cmavos": [
-      "lu'e",
-      "tu'a",
-      "la'e",
-      "lu'a",
-      "lu'i",
-      "vu'i",
-      "lu'o"
-    ],
     "skari": "green"
   },
   "LE": {
-    "cmavos": [
-      "le",
-      "loi",
-      "lo'e",
-      "ri'oi",
-      "le'e",
-      "lo",
-      "lei"
-    ],
     "skari": "green"
   },
   "LEhU": {
-    "cmavos": [
-      "le'u"
-    ],
     "skari": "cyan"
   },
   "LI": {
-    "cmavos": [
-      "li"
-    ],
     "skari": "green"
   },
   "LIhAU": {
-    "cmavos": [
-      "li'au"
-    ],
     "skari": "cyan"
   },
   "LIhU": {
-    "cmavos": [
-      "li'u"
-    ],
     "skari": "white"
   },
   "LOhO": {
-    "cmavos": [
-      "lo'o"
-    ],
     "skari": "cyan"
   },
   "LOhU": {
-    "cmavos": [
-      "lo'u"
-    ],
     "skari": "cyan"
   },
   "LU": {
-    "cmavos": [
-      "lu"
-    ],
     "skari": "white"
   },
   "LUhEI": {
-    "cmavos": [
-      "lu'ei"
-    ],
     "skari": "cyan"
   },
   "LUhU": {
-    "cmavos": [
-      "lu'u"
-    ],
     "skari": "cyan"
   },
   "MAI": {
-    "cmavos": [
-      "mai",
-      "mo'o"
-    ],
     "skari": "cyan"
   },
   "MAhO": {
-    "cmavos": [
-      "ma'o"
-    ],
     "skari": "cyan"
   },
   "ME": {
-    "cmavos": [
-      "me"
-    ],
     "skari": "magenta"
   },
   "MEhU": {
-    "cmavos": [
-      "me'u"
-    ],
     "skari": "magenta"
   },
   "MOI": {
-    "cmavos": [
-      "si'e",
-      "mei",
-      "moi",
-      "va'e",
-      "cu'o"
-    ],
     "skari": "red"
   },
   "MOhE": {
-    "cmavos": [
-      "mo'e"
-    ],
     "skari": "cyan"
   },
   "MOhI": {
-    "cmavos": [
-      "mo'i"
-    ],
     "skari": "yellow"
   },
   "NA": {
-    "cmavos": [
-      "ja'a",
-      "na"
-    ],
     "skari": "cyan"
   },
   "NAI": {
-    "cmavos": [
-      "nai"
-    ],
     "skari": "cyan"
   },
   "NAhE": {
-    "cmarafsi": {
-      "nal": "na'e",
-      "tol": "to'e"
-    },
-    "cmavos": [
-      "cau'e",
-      "na'e",
-      "no'e",
-      "to'e"
-    ],
     "skari": "cyan"
   },
   "NAhU": {
-    "cmavos": [
-      "na'u"
-    ],
     "skari": "cyan"
   },
   "NIhE": {
-    "cmavos": [
-      "ni'e"
-    ],
     "skari": "cyan"
   },
   "NIhO": {
-    "cmavos": [
-      "ni'o"
-    ],
     "skari": "bright_black"
   },
   "NOI": {
-    "cmavos": [
-      "voi",
-      "poi",
-      "noi"
-    ],
     "skari": "cyan"
   },
   "NOIhA": {
-    "cmavos": [
-      "noi'a",
-      "poi'a"
-    ],
     "skari": "cyan"
   },
   "NU": {
-    "cmavos": [
-      "li'i",
-      "zu'o",
-      "si'o",
-      "za'i",
-      "ni",
-      "ka",
-      "poi'i",
-      "nu",
-      "du'u",
-      "pu'u",
-      "mu'e",
-      "su'u"
-    ],
     "skari": "green",
     "tags": [
       "barda"
     ]
   },
   "NUhA": {
-    "cmavos": [
-      "nu'a"
-    ],
     "skari": "cyan"
   },
   "NUhI": {
-    "cmavos": [
-      "nu'i"
-    ],
     "skari": "cyan"
   },
   "NUhU": {
-    "cmavos": [
-      "nu'u"
-    ],
     "skari": "cyan"
   },
   "PA": {
-    "cmarafsi": {
-      "soz": "so",
-      "rel": "re"
-    },
-    "cmavos": [
-      "da'a",
-      "fei",
-      "fi'u",
-      "no'o",
-      "pi",
-      "ro",
-      "no",
-      "tu'o",
-      "ji'i",
-      "ci",
-      "ka'o",
-      "rei",
-      "so'u",
-      "me'i",
-      "so'a",
-      "re",
-      "ra'e",
-      "ce'i",
-      "mo'a",
-      "vo",
-      "so",
-      "te'o",
-      "mu",
-      "ni'u",
-      "su'e",
-      "bi",
-      "so'o",
-      "dau",
-      "ma'u",
-      "gai",
-      "du'e",
-      "rau",
-      "xa",
-      "za'u",
-      "jau",
-      "su'o",
-      "xo",
-      "pai",
-      "ci'i",
-      "so'i",
-      "ze",
-      "pi'e",
-      "pa",
-      "so'e",
-      "vai",
-      "ki'o"
-    ],
     "skari": "yellow",
     "tags": [
       "barda"
     ]
   },
   "PEhE": {
-    "cmavos": [
-      "pe'e"
-    ],
     "skari": "cyan"
   },
   "PEhO": {
-    "cmavos": [
-      "pe'o"
-    ],
     "skari": "cyan"
   },
   "PU": {
-    "cmavos": [
-      "ca",
-      "pu",
-      "ba"
-    ],
     "skari": "yellow"
   },
   "RAhO": {
-    "cmavos": [
-      "ra'o"
-    ],
     "skari": "cyan"
   },
   "ROI": {
-    "cmavos": [
-      "roi",
-      "re'u"
-    ],
     "skari": "yellow"
   },
   "SA": {
-    "cmavos": [
-      "sa"
-    ],
     "skari": "cyan"
   },
   "SE": {
-    "cmarafsi": {
-      "sel": "se",
-      "ter": "te",
-      "xel": "xe",
-      "vel": "ve"
-    },
-    "cmavos": [
-      "xe",
-      "te",
-      "ve",
-      "se"
-    ],
     "skari": "cyan"
   },
   "SEI": {
-    "cmavos": [
-      "sei"
-    ],
     "skari": "cyan"
   },
   "SEhU": {
-    "cmavos": [
-      "se'u"
-    ],
     "skari": "cyan"
   },
   "SI": {
-    "cmavos": [
-      "si"
-    ],
     "skari": "cyan"
   },
   "SOI": {
-    "cmavos": [
-      "soi"
-    ],
     "skari": "cyan"
   },
   "SU": {
-    "cmavos": [
-      "su"
-    ],
     "skari": "cyan"
   },
   "TAhE": {
-    "cmavos": [
-      "na'o",
-      "ru'i",
-      "di'i",
-      "ta'e"
-    ],
     "skari": "yellow"
   },
   "TEI": {
-    "cmavos": [
-      "tei"
-    ],
     "skari": "cyan"
   },
   "TEhU": {
-    "cmavos": [
-      "te'u"
-    ],
     "skari": "cyan"
   },
   "TO": {
-    "cmavos": [
-      "to",
-      "to'i"
-    ],
     "skari": "white"
   },
   "TOI": {
-    "cmavos": [
-      "toi"
-    ],
     "skari": "white"
   },
   "TUhE": {
-    "cmavos": [
-      "tu'e"
-    ],
     "skari": "cyan"
   },
   "TUhU": {
-    "cmavos": [
-      "tu'u"
-    ],
     "skari": "cyan"
   },
   "UI": {
-    "cmavos": [
-      "vu'e",
-      "ro'i",
-      ".au",
-      ".i'i",
-      ".o'a",
-      ".ui",
-      "ju'a",
-      ".a'i",
-      ".o'o",
-      ".u'e",
-      "re'e",
-      "ki'a",
-      ".ia",
-      "bu'o",
-      "va'i",
-      ".ue",
-      "jo'a",
-      "ru'a",
-      "mi'u",
-      "kau",
-      "dai",
-      "ja'o",
-      "la'a",
-      ".ai",
-      ".u'i",
-      "mu'a",
-      "be'u",
-      "li'o",
-      ".u'u",
-      ".oi",
-      ".e'i",
-      ".ii",
-      ".i'u",
-      ".a'a",
-      ".io",
-      ".o'i",
-      ".ua",
-      ".iu",
-      "bi'u",
-      "ku'i",
-      "pe'i",
-      "sa'a",
-      ".a'o",
-      "li'a",
-      ".i'a",
-      "ba'u",
-      "se'o",
-      "zu'u",
-      ".ei",
-      ".u'a",
-      "na'i",
-      ".i'e",
-      ".e'a",
-      "do'a",
-      "pa'e",
-      "ro'a",
-      "ca'e",
-      "ge'e",
-      "se'a",
-      "to'u",
-      ".a'u",
-      "ju'o",
-      ".e'u",
-      "fu'i",
-      ".ie",
-      ".u'o",
-      ".a'e",
-      "je'u",
-      "ro'u",
-      "ra'u",
-      "ri'e",
-      "ke'u",
-      "pe'a",
-      ".o'e",
-      "xu",
-      "ba'a",
-      "sa'u",
-      "pau",
-      ".i'o",
-      ".e'o",
-      ".o'u",
-      "ga'i",
-      "ji'a",
-      "po'o",
-      "za'a",
-      "le'o",
-      "ka'u",
-      "ti'e",
-      "zo'o",
-      "da'i",
-      ".e'e",
-      "sa'e",
-      "si'a",
-      "ta'o",
-      "ro'e",
-      "se'i",
-      "su'a",
-      ".uu"
-    ],
     "skari": "yellow",
     "tags": [
       "barda",
@@ -1110,150 +356,63 @@
     ]
   },
   "VA": {
-    "cmavos": [
-      "vi",
-      "vu",
-      "va"
-    ],
     "skari": "cyan"
   },
   "VAU": {
-    "cmavos": [
-      "vau"
-    ],
     "skari": "magenta"
   },
   "VEI": {
-    "cmavos": [
-      "vei"
-    ],
     "skari": "cyan"
   },
   "VEhA": {
-    "cmavos": [
-      "ve'e",
-      "ve'u",
-      "ve'i",
-      "ve'a"
-    ],
     "skari": "cyan"
   },
   "VEhO": {
-    "cmavos": [
-      "ve'o"
-    ],
     "skari": "cyan"
   },
   "VIhA": {
-    "cmavos": [
-      "vi'e",
-      "vi'a",
-      "vi'i",
-      "vi'u"
-    ],
     "skari": "cyan"
   },
   "VUhO": {
-    "cmavos": [
-      "vu'o"
-    ],
     "skari": "cyan"
   },
   "VUhU": {
-    "cmavos": [
-      "ju'u",
-      "sa'i",
-      "vu'u",
-      "te'a",
-      "su'i",
-      "ge'a",
-      "va'a",
-      "fe'a",
-      "gei",
-      "pi'a",
-      "pi'i"
-    ],
     "skari": "cyan",
     "tags": [
       "barda"
     ]
   },
   "XI": {
-    "cmavos": [
-      "xi"
-    ],
     "skari": "cyan"
   },
   "Y": {
-    "cmavos": [
-      ".y."
-    ],
     "skari": "cyan"
   },
   "ZAhO": {
-    "cmavos": [
-      "mo'u",
-      "ca'o",
-      "co'u",
-      "pu'o",
-      "co'i",
-      "co'a",
-      "de'a",
-      "ba'o",
-      "di'a",
-      "za'o"
-    ],
     "skari": "yellow",
     "tags": [
       "barda"
     ]
   },
   "ZEI": {
-    "cmavos": [
-      "zei"
-    ],
     "skari": "cyan"
   },
   "ZEhA": {
-    "cmavos": [
-      "ze'e",
-      "ze'i",
-      "ze'u",
-      "ze'a"
-    ],
     "skari": "cyan"
   },
   "ZI": {
-    "cmavos": [
-      "zi",
-      "za",
-      "zu"
-    ],
     "skari": "yellow"
   },
   "ZIhE": {
-    "cmavos": [
-      "zi'e"
-    ],
     "skari": "cyan"
   },
   "ZO": {
-    "cmavos": [
-      "zo"
-    ],
     "skari": "cyan"
   },
   "ZOI": {
-    "cmavos": [
-      "la'o",
-      "zoi"
-    ],
     "skari": "cyan"
   },
   "ZOhU": {
-    "cmavos": [
-      "zo'u"
-    ],
     "skari": "cyan"
   }
 }

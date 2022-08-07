@@ -190,7 +190,10 @@
     "gloss": "emphasize next word",
     "selmaho": "BAhE"
   },
-  "ba'i": {},
+  "ba'i": {
+    "gloss": "basti",
+    "selmaho": "BAI"
+  },
   "ba'o": {
     "gloss": "since",
     "selmaho": "ZAhO"
@@ -211,19 +214,46 @@
     "gloss": "sumti link",
     "selmaho": "BE"
   },
-  "be'a": {},
-  "be'e": {},
-  "be'i": {},
-  "be'o": {},
-  "be'u": {},
+  "be'a": {
+    "gloss": "north of",
+    "selmaho": "FAhA"
+  },
+  "be'e": {
+    "gloss": "request to speak",
+    "selmaho": "COI"
+  },
+  "be'i": {
+    "gloss": "benji",
+    "selmaho": "BAI"
+  },
+  "be'o": {
+    "gloss": "be terminator",
+    "selmaho": "BEhO"
+  },
+  "be'u": {
+    "gloss": "need",
+    "selmaho": "UI"
+  },
   "bei": {
     "gloss": "continue linked sumti",
     "selmaho": "BEI"
   },
-  "bi": {},
-  "bi'e": {},
-  "bi'i": {},
-  "bi'o": {},
+  "bi": {
+    "gloss": "8",
+    "selmaho": "PA"
+  },
+  "bi'e": {
+    "gloss": "priority mex operator",
+    "selmaho": "BIhE"
+  },
+  "bi'i": {
+    "gloss": "between (interval connective)",
+    "selmaho": "BIhI"
+  },
+  "bi'o": {
+    "gloss": "ordered from.. to.. (interval connective)",
+    "selmaho": "BIhI"
+  },
   "bi'u": {
     "gloss": "newly introduced information",
     "selmaho": "UI"
@@ -232,14 +262,38 @@
     "gloss": "short scope joiner",
     "selmaho": "BO"
   },
-  "boi": {},
-  "bu": {},
-  "bu'a": {},
-  "bu'e": {},
-  "bu'i": {},
-  "bu'o": {},
-  "bu'u": {},
-  "by.": {},
+  "boi": {
+    "gloss": "terminator numeral or letteral string",
+    "selmaho": "BOI"
+  },
+  "bu": {
+    "gloss": "one word to BY",
+    "selmaho": "BU"
+  },
+  "bu'a": {
+    "gloss": "some selbri 1",
+    "selmaho": "GOhA"
+  },
+  "bu'e": {
+    "gloss": "some selbri 2",
+    "selmaho": "GOhA"
+  },
+  "bu'i": {
+    "gloss": "some selbri 3",
+    "selmaho": "GOhA"
+  },
+  "bu'o": {
+    "gloss": "some selbri 4",
+    "selmaho": "GOhA"
+  },
+  "bu'u": {
+    "gloss": "some selbri 5",
+    "selmaho": "GOhA"
+  },
+  "by.": {
+    "gloss": "b",
+    "selmaho": "BY"
+  },
   "ca": {
     "gloss": "during",
     "selmaho": "PU"
