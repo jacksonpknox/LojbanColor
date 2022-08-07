@@ -298,23 +298,50 @@
     "gloss": "during",
     "selmaho": "PU"
   },
-  "ca'a": {},
-  "ca'e": {},
-  "ca'i": {},
+  "ca'a": {
+    "gloss": "ongoing",
+    "selmaho": "CAhA"
+  },
+  "ca'e": {
+    "gloss": "I define",
+    "selmaho": "UI"
+  },
+  "ca'i": {
+    "gloss": "catni",
+    "selmaho": "BAI"
+  },
   "ca'o": {
     "gloss": "during",
     "selmaho": "ZAhO"
   },
-  "ca'u": {},
+  "ca'u": {
+    "gloss": "forwards",
+    "selmaho": "FAhA"
+  },
   "cai": {
     "gloss": "strong intensity",
     "selmaho": "CAI"
   },
-  "cau": {},
-  "ce": {},
-  "ce'a": {},
-  "ce'e": {},
-  "ce'i": {},
+  "cau": {
+    "gloss": "claxu",
+    "selmaho": "BAI"
+  },
+  "ce": {
+    "gloss": "and also",
+    "selmaho": "JOI"
+  },
+  "ce'a": {
+    "gloss": "font",
+    "selmaho": "LAU"
+  },
+  "ce'e": {
+    "gloss": "link afterthought termset",
+    "selmaho": "CEhE"
+  },
+  "ce'i": {
+    "gloss": "percentage",
+    "selmaho": "PA"
+  },
   "ce'o": {
     "gloss": "ordered sequence link",
     "selmaho": "JOI"
@@ -323,26 +350,50 @@
     "gloss": "comparative quantifier",
     "selmaho": "KOhA"
   },
-  "cei": {},
+  "cei": {
+    "gloss": "assign broda",
+    "selmaho": "CEI"
+  },
   "ci": {
     "gloss": "3",
     "selmaho": "PA"
   },
-  "ci'e": {},
-  "ci'i": {},
-  "ci'o": {},
-  "ci'u": {},
-  "co": {},
+  "ci'e": {
+    "gloss": "ciste",
+    "selmaho": "BAI"
+  },
+  "ci'i": {
+    "gloss": "infinity",
+    "selmaho": "PA"
+  },
+  "ci'o": {
+    "gloss": "cinmo",
+    "selmaho": "BAI"
+  },
+  "ci'u": {
+    "gloss": "ckilu",
+    "selmaho": "BAI"
+  },
+  "co": {
+    "gloss": "tanru inverter",
+    "selmaho": "CO"
+  },
   "co'a": {
     "gloss": "at the starting point of",
     "selmaho": "ZAhO"
   },
-  "co'e": {},
+  "co'e": {
+    "gloss": "unspecified bridi",
+    "selmaho": "GOhA"
+  },
   "co'i": {
     "gloss": "point event",
     "selmaho": "ZAhO"
   },
-  "co'o": {},
+  "co'o": {
+    "gloss": "partings",
+    "selmaho": "COI"
+  },
   "co'u": {
     "gloss": "at the end",
     "selmaho": "ZAhO"
@@ -355,14 +406,26 @@
     "gloss": "selbri marker",
     "selmaho": "CU"
   },
-  "cu'e": {},
+  "cu'e": {
+    "gloss": "tense/modal question",
+    "selmaho": "CUhE"
+  },
   "cu'i": {
     "gloss": "neutral intensity",
     "selmaho": "CAI"
   },
-  "cu'o": {},
-  "cu'u": {},
-  "cy.": {},
+  "cu'o": {
+    "gloss": "number to probability",
+    "selmaho": "MOI"
+  },
+  "cu'u": {
+    "gloss": "cusku",
+    "selmaho": "BAI"
+  },
+  "cy.": {
+    "gloss": "c",
+    "selmaho": "BY"
+  },
   "da": {
     "gloss": "logically quantified existential pro-sumti",
     "selmaho": "KOhA"
