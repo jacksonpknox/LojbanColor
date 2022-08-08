@@ -1078,7 +1078,10 @@
     "gloss": "name descriptor",
     "selmaho": "LA"
   },
-  "la'a": {},
+  "la'a": {
+    "gloss": "probability",
+    "selmaho": "UI"
+  },
   "la'e": {
     "gloss": "the referent of",
     "selmaho": "LAhE"
@@ -1087,15 +1090,30 @@
     "gloss": "begin non-Lojban name",
     "selmaho": "ZOI"
   },
-  "la'u": {},
-  "lau": {},
+  "la'u": {
+    "gloss": "klani",
+    "selmaho": "BAI"
+  },
+  "lau": {
+    "gloss": "special symbol",
+    "selmaho": "LAU"
+  },
   "le": {
     "gloss": "the",
     "selmaho": "LE"
   },
-  "le'a": {},
-  "le'o": {},
-  "le'u": {},
+  "le'a": {
+    "gloss": "klesi",
+    "selmaho": "BAI"
+  },
+  "le'o": {
+    "gloss": "aggresive",
+    "selmaho": "UI"
+  },
+  "le'u": {
+    "gloss": "end LOhU",
+    "selmaho": "LEhU"
+  },
   "lei": {
     "gloss": "the (metaphor, mass)",
     "selmaho": "LE"
@@ -1104,10 +1122,22 @@
     "gloss": "begin mekso to sumti",
     "selmaho": "LI"
   },
-  "li'a": {},
-  "li'e": {},
-  "li'i": {},
-  "li'o": {},
+  "li'a": {
+    "gloss": "clearly",
+    "selmaho": "UI"
+  },
+  "li'e": {
+    "gloss": "lidne",
+    "selmaho": "BAI"
+  },
+  "li'i": {
+    "gloss": "experience abstractor",
+    "selmaho": "NU"
+  },
+  "li'o": {
+    "gloss": "ommited text",
+    "selmaho": "UI"
+  },
   "li'u": {
     "gloss": "end grammatical quotation",
     "selmaho": "LIhU"
@@ -1116,13 +1146,22 @@
     "gloss": "the",
     "selmaho": "LE"
   },
-  "lo'a": {},
+  "lo'a": {
+    "gloss": "Lojban shift",
+    "selmaho": "BY"
+  },
   "lo'e": {
     "gloss": "the typical one",
     "selmaho": "LE"
   },
-  "lo'o": {},
-  "lo'u": {},
+  "lo'o": {
+    "gloss": "end LI",
+    "selmaho": "LOhO"
+  },
+  "lo'u": {
+    "gloss": "LOhU",
+    "selmaho": "OOC Lojban quote"
+  },
   "loi": {
     "gloss": "the mass",
     "selmaho": "LE"
@@ -1131,12 +1170,30 @@
     "gloss": "begin grammatical quotation",
     "selmaho": "LU"
   },
-  "lu'a": {},
-  "lu'e": {},
-  "lu'i": {},
-  "lu'o": {},
-  "lu'u": {},
-  "ly.": {},
+  "lu'a": {
+    "gloss": "components of",
+    "selmaho": "LAhE"
+  },
+  "lu'e": {
+    "gloss": "symbol for",
+    "selmaho": "LAhE"
+  },
+  "lu'i": {
+    "gloss": "set with members",
+    "selmaho": "LAhE"
+  },
+  "lu'o": {
+    "gloss": "mass composed of",
+    "selmaho": "LAhE"
+  },
+  "lu'u": {
+    "gloss": "end sumti qualifier",
+    "selmaho": "LUhU"
+  },
+  "ly.": {
+    "gloss": "l",
+    "selmaho": "BY"
+  },
   "ma": {
     "gloss": "sumti question",
     "selmaho": "KOhA"
@@ -1145,7 +1202,10 @@
     "gloss": "we and you",
     "selmaho": "KOhA"
   },
-  "ma'e": {},
+  "ma'e": {
+    "gloss": "marji",
+    "selmaho": "BAI"
+  },
   "ma'i": {},
   "ma'o": {},
   "ma'u": {},
