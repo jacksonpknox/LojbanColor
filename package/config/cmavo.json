@@ -1237,18 +1237,30 @@
     "gloss": "we and you",
     "selmaho": "KOhA"
   },
-  "mi'u": {},
+  "mi'u": {
+    "gloss": "ditto",
+    "selmaho": "UI"
+  },
   "mo": {
     "gloss": "bridi question",
     "selmaho": "GOhA"
   },
-  "mo'a": {},
-  "mo'e": {},
+  "mo'a": {
+    "gloss": "too few",
+    "selmaho": "PA"
+  },
+  "mo'e": {
+    "gloss": "sumti to mex",
+    "selmaho": "MOhE"
+  },
   "mo'i": {
     "gloss": "mark motion",
     "selmaho": "MOhI"
   },
-  "mo'o": {},
+  "mo'o": {
+    "gloss": "number to ordinal",
+    "selmaho": "MAI"
+  },
   "mo'u": {
     "gloss": "at the natural end",
     "selmaho": "ZAhO"
@@ -1265,28 +1277,58 @@
     "gloss": "for example",
     "selmaho": "UI"
   },
-  "mu'e": {},
+  "mu'e": {
+    "gloss": "achievement abstractor",
+    "selmaho": "NU"
+  },
   "mu'i": {
     "gloss": "mukti",
     "selmaho": "BAI"
   },
-  "mu'o": {},
-  "mu'u": {},
-  "my.": {},
+  "mu'o": {
+    "gloss": "over",
+    "selmaho": "COI"
+  },
+  "mu'u": {
+    "gloss": "mupli",
+    "selmaho": "BAI"
+  },
+  "my.": {
+    "gloss": "m",
+    "selmaho": "BY"
+  },
   "na": {
     "gloss": "bridi negator",
     "selmaho": "NA"
   },
-  "na'a": {},
-  "na'e": {},
-  "na'i": {},
-  "na'o": {},
-  "na'u": {},
+  "na'a": {
+    "gloss": "cancel letteral shift",
+    "selmaho": "BY"
+  },
+  "na'e": {
+    "gloss": "other than",
+    "selmaho": "NAhE"
+  },
+  "na'i": {
+    "gloss": "metalinguistic negator",
+    "selmaho": "UI"
+  },
+  "na'o": {
+    "gloss": "typically",
+    "selmaho": "TAhE"
+  },
+  "na'u": {
+    "gloss": "selbri to mex op",
+    "selmaho": "na'u"
+  },
   "nai": {
     "gloss": "versatile negator",
     "selmaho": "NAI"
   },
-  "nau": {},
+  "nau": {
+    "gloss": "current spacetime",
+    "selmaho": "CUhE"
+  },
   "ne": {
     "gloss": "begin non-restrictive relative phrase",
     "selmaho": "GOI"
@@ -1299,27 +1341,54 @@
     "gloss": "within",
     "selmaho": "FAhA"
   },
-  "ne'u": {},
+  "ne'u": {
+    "gloss": "south of",
+    "selmaho": "FAhA"
+  },
   "nei": {
     "gloss": "repeat current bridi",
     "selmaho": "GOhA"
   },
-  "ni": {},
-  "ni'a": {},
-  "ni'e": {},
-  "ni'i": {},
+  "ni": {
+    "gloss": "quantity abstractor",
+    "selmaho": "NU"
+  },
+  "ni'a": {
+    "gloss": "down from",
+    "selmaho": "FAhA"
+  },
+  "ni'e": {
+    "gloss": "selbri to mex op",
+    "selmaho": "NIhE"
+  },
+  "ni'i": {
+    "gloss": "nibli",
+    "selmaho": "BAI"
+  },
   "ni'o": {
     "gloss": "new topic",
     "selmaho": "NIhO"
   },
-  "ni'u": {},
+  "ni'u": {
+    "gloss": "minus sign",
+    "selmaho": "PA"
+  },
   "no": {
     "gloss": "zero",
     "selmaho": "PA"
   },
-  "no'a": {},
-  "no'e": {},
-  "no'o": {},
+  "no'a": {
+    "gloss": "repeat super bridi",
+    "selmaho": "GOhA"
+  },
+  "no'e": {
+    "gloss": "not really",
+    "selmaho": "NAhE"
+  },
+  "no'o": {
+    "gloss": "typical value",
+    "selmaho": "PA"
+  },
   "no'u": {
     "gloss": "begin non-restrictive appositive phrase",
     "selmaho": "GOI"
@@ -1332,20 +1401,50 @@
     "gloss": "general abstractor",
     "selmaho": "NU"
   },
-  "nu'a": {},
-  "nu'e": {},
-  "nu'i": {},
-  "nu'u": {},
-  "ny.": {},
+  "nu'a": {
+    "gloss": "mex to selbri",
+    "selmaho": "NUhA"
+  },
+  "nu'e": {
+    "gloss": "promise",
+    "selmaho": "COI"
+  },
+  "nu'i": {
+    "gloss": "start forethought termset construct",
+    "selmaho": "NUhI"
+  },
+  "nu'u": {
+    "gloss": "end NUhI",
+    "selmaho": "NUhU"
+  },
+  "ny.": {
+    "gloss": "n",
+    "selmaho": "BY"
+  },
   "pa": {
     "gloss": "one",
     "selmaho": "PA"
   },
-  "pa'a": {},
-  "pa'e": {},
-  "pa'o": {},
-  "pa'u": {},
-  "pai": {},
+  "pa'a": {
+    "gloss": "panra",
+    "selmaho": "BAI"
+  },
+  "pa'e": {
+    "gloss": "justice",
+    "selmaho": "UI"
+  },
+  "pa'o": {
+    "gloss": "passing through",
+    "selmaho": "FAhA"
+  },
+  "pa'u": {
+    "gloss": "pagbu",
+    "selmaho": "BAI"
+  },
+  "pai": {
+    "gloss": "pi",
+    "selmaho": "PA"
+  },
   "pau": {
     "gloss": "question premarker",
     "selmaho": "UI"
@@ -1354,11 +1453,26 @@
     "gloss": "begin restrictive relative phrase",
     "selmaho": "GOI"
   },
-  "pe'a": {},
-  "pe'e": {},
-  "pe'i": {},
-  "pe'o": {},
-  "pe'u": {},
+  "pe'a": {
+    "gloss": "figurative",
+    "selmaho": "UI"
+  },
+  "pe'e": {
+    "gloss": "mark connective as joining termsets",
+    "selmaho": "PEhE"
+  },
+  "pe'i": {
+    "gloss": "I opine",
+    "selmaho": "UI"
+  },
+  "pe'o": {
+    "gloss": "mex op forethought flag",
+    "selmaho": "PEhO"
+  },
+  "pe'u": {
+    "gloss": "please",
+    "selmaho": "COI"
+  },
   "pei": {
     "gloss": "attitudinal question",
     "selmaho": "CAI"
@@ -1367,17 +1481,38 @@
     "gloss": "radix point",
     "selmaho": "PA"
   },
-  "pi'a": {},
-  "pi'e": {},
-  "pi'i": {},
+  "pi'a": {
+    "gloss": "n-ary mex op",
+    "selmaho": "VUhU"
+  },
+  "pi'e": {
+    "gloss": "separate base > 16 digits",
+    "selmaho": "PA"
+  },
+  "pi'i": {
+    "gloss": "n-ary times",
+    "selmaho": "VUhU"
+  },
   "pi'o": {
     "gloss": "used by",
     "selmaho": "BAI"
   },
-  "pi'u": {},
-  "po": {},
-  "po'e": {},
-  "po'i": {},
+  "pi'u": {
+    "gloss": "cross product",
+    "selmaho": "JOI"
+  },
+  "po": {
+    "gloss": "specific to",
+    "selmaho": "GOI"
+  },
+  "po'e": {
+    "gloss": "which belongs to",
+    "selmaho": "GOI"
+  },
+  "po'i": {
+    "gloss": "porsi",
+    "selmaho": "BAI"
+  },
   "po'o": {
     "gloss": "uniquely",
     "selmaho": "UI"
@@ -1394,14 +1529,26 @@
     "gloss": "before",
     "selmaho": "PU"
   },
-  "pu'a": {},
-  "pu'e": {},
+  "pu'a": {
+    "gloss": "pluka",
+    "selmaho": "BAI"
+  },
+  "pu'e": {
+    "gloss": "pruce",
+    "selmaho": "BAI"
+  },
   "pu'o": {
     "gloss": "until",
     "selmaho": "ZAhO"
   },
-  "pu'u": {},
-  "py.": {},
+  "pu'u": {
+    "gloss": "process abstractor",
+    "selmaho": "NU"
+  },
+  "py.": {
+    "gloss": "p",
+    "selmaho": "BY"
+  },
   "ra": {
     "gloss": "recent sumti",
     "selmaho": "KOhA"
