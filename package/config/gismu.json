@@ -2814,25 +2814,23 @@
   "dacti": {
     "gloss": "thing",
     "liste": [],
-    "namcu": null,
+    "namcu": 1,
     "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "dadjo": {
-    "gloss": null,
+    "gloss": "taoist",
     "liste": [],
-    "namcu": null,
+    "namcu": 2,
     "sumti": [],
     "tags": [
-      "standard"
+      "lijda"
     ]
   },
   "dakfu": {
     "gloss": "knife",
     "liste": [],
-    "namcu": null,
+    "namcu": 3,
     "sumti": [],
     "tags": [
       "standard"
@@ -2841,126 +2839,110 @@
   "dakli": {
     "gloss": "bag",
     "liste": [],
-    "namcu": null,
+    "namcu": 3,
     "sumti": [],
     "tags": [
-      "standard"
+      "vasru"
     ]
   },
   "damba": {
     "gloss": "fight",
     "liste": [],
-    "namcu": null,
+    "namcu": 3,
     "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "damri": {
-    "gloss": null,
+    "gloss": "percussive instrument",
     "liste": [],
-    "namcu": null,
+    "namcu": 2,
     "sumti": [],
     "tags": [
-      "standard"
+      "zgitci"
     ]
   },
   "dandu": {
     "gloss": "hang",
     "liste": [],
-    "namcu": null,
+    "namcu": 3,
     "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "danfu": {
     "gloss": "solution",
     "liste": [],
-    "namcu": null,
+    "namcu": 2,
     "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "danlu": {
     "gloss": "animal",
     "liste": [],
-    "namcu": null,
+    "namcu": 2,
     "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "danmo": {
     "gloss": "smoke",
     "liste": [],
-    "namcu": null,
+    "namcu": 2,
     "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "danre": {
-    "gloss": null,
+    "gloss": "pressure",
     "liste": [],
-    "namcu": null,
+    "namcu": 2,
     "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "dansu": {
     "gloss": "dance",
     "liste": [],
-    "namcu": null,
+    "namcu": 2,
     "sumti": [],
     "tags": []
   },
   "danti": {
-    "gloss": null,
+    "gloss": "projectile",
     "liste": [],
-    "namcu": null,
+    "namcu": 2,
     "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "daplu": {
     "gloss": "island",
     "liste": [],
-    "namcu": null,
+    "namcu": 3,
     "sumti": [],
     "tags": [
-      "standard"
+      "tumla"
     ]
   },
   "dapma": {
     "gloss": "curse",
-    "liste": [],
-    "namcu": null,
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 3,
     "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "dargu": {
     "gloss": "road",
-    "liste": [],
-    "namcu": null,
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 4,
     "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "darlu": {
     "gloss": "argue",
     "liste": [],
-    "namcu": null,
+    "namcu": 3,
     "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "darno": {
     "gloss": "far",
@@ -2980,7 +2962,7 @@
   "darsi": {
     "gloss": "daring",
     "liste": [],
-    "namcu": null,
+    "namcu": 2,
     "sumti": [],
     "tags": [
       "standard"
@@ -2989,16 +2971,16 @@
   "darxi": {
     "gloss": "hit",
     "liste": [],
-    "namcu": null,
+    "namcu": 4,
     "sumti": [],
     "tags": [
       "standard"
     ]
   },
   "daski": {
-    "gloss": null,
+    "gloss": "pocket",
     "liste": [],
-    "namcu": null,
+    "namcu": 2,
     "sumti": [],
     "tags": [
       "standard"
@@ -3007,7 +2989,7 @@
   "dasni": {
     "gloss": "wear",
     "liste": [],
-    "namcu": null,
+    "namcu": 3,
     "sumti": [],
     "tags": [
       "standard"
@@ -3026,9 +3008,9 @@
     ]
   },
   "dasri": {
-    "gloss": null,
+    "gloss": "ribbon",
     "liste": [],
-    "namcu": null,
+    "namcu": 2,
     "sumti": [],
     "tags": [
       "standard"
@@ -3036,16 +3018,23 @@
   },
   "datka": {
     "gloss": "duck",
-    "liste": [],
-    "namcu": null,
-    "sumti": [],
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 2,
+    "sumti": [
+      "datka",
+      "jutsi"
+    ],
     "tags": [
-      "standard"
+      "cipni"
     ]
   },
   "datni": {
     "gloss": "data",
-    "liste": [],
+    "liste": [
+      "jbovlaste"
+    ],
     "namcu": 3,
     "sumti": [
       "datni",
@@ -3072,74 +3061,68 @@
   "degji": {
     "gloss": "digit (body part)",
     "liste": [],
-    "namcu": null,
+    "namcu": 3,
     "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "dejni": {
-    "gloss": null,
+    "gloss": "owe",
     "liste": [],
-    "namcu": null,
+    "namcu": 4,
     "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "dekpu": {
-    "gloss": null,
+    "gloss": "local volume",
     "liste": [],
-    "namcu": null,
+    "namcu": 4,
     "sumti": [],
     "tags": [
-      "standard"
+      "diklo gradu"
     ]
   },
   "dekto": {
-    "gloss": null,
-    "liste": [],
-    "namcu": null,
+    "gloss": 10e1,
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 3,
     "sumti": [],
     "tags": [
-      "standard"
+      "namcu"
     ]
   },
   "delno": {
-    "gloss": null,
-    "liste": [],
-    "namcu": null,
+    "gloss": "candela",
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 3,
     "sumti": [],
     "tags": [
-      "standard"
+      "gradu"
     ]
   },
   "dembi": {
     "gloss": "legume",
     "liste": [],
-    "namcu": null,
+    "namcu": 2,
     "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "denci": {
     "gloss": "tooth",
     "liste": [],
-    "namcu": null,
+    "namcu": 2,
     "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "denmi": {
     "gloss": "dense",
     "liste": [],
-    "namcu": null,
+    "namcu": 3,
     "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "denpa": {
     "gloss": "wait",
@@ -3169,103 +3152,85 @@
     ]
   },
   "derxi": {
-    "gloss": null,
+    "gloss": "heap",
     "liste": [],
-    "namcu": null,
+    "namcu": 3,
     "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "desku": {
     "gloss": "shake",
     "liste": [],
-    "namcu": null,
+    "namcu": 2,
     "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "detri": {
     "gloss": "date",
     "liste": [],
-    "namcu": null,
+    "namcu": 4,
     "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "dicra": {
     "gloss": "interrupt",
     "liste": [],
-    "namcu": null,
+    "namcu": 3,
     "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "dikca": {
     "gloss": "electricity",
     "liste": [],
-    "namcu": null,
+    "namcu": 3,
     "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "diklo": {
     "gloss": "local",
     "liste": [],
-    "namcu": null,
+    "namcu": 3,
     "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "dikni": {
     "gloss": "periodic",
     "liste": [],
-    "namcu": null,
+    "namcu": 3,
     "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "dilcu": {
-    "gloss": null,
-    "liste": [],
-    "namcu": null,
+    "gloss": "quotient",
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 4,
     "sumti": [],
     "tags": [
-      "standard"
+      "fancu"
     ]
   },
   "dilnu": {
     "gloss": "cloud",
     "liste": [],
-    "namcu": null,
+    "namcu": 4,
     "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "dimna": {
-    "gloss": null,
+    "gloss": "fate",
     "liste": [],
-    "namcu": null,
+    "namcu": 2,
     "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "dinju": {
     "gloss": "building",
     "liste": [],
-    "namcu": null,
+    "namcu": 2,
     "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "dinko": {
     "gloss": "nail",
@@ -3276,36 +3241,28 @@
       "klesi",
       "marji"
     ],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "dirba": {
     "gloss": "dear",
     "liste": [],
-    "namcu": null,
+    "namcu": 2,
     "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "dirce": {
-    "gloss": null,
+    "gloss": "radiate",
     "liste": [],
-    "namcu": null,
+    "namcu": 3,
     "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "dirgo": {
-    "gloss": null,
+    "gloss": "drop",
     "liste": [],
-    "namcu": null,
+    "namcu": 3,
     "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "dizlo": {
     "gloss": "low",
@@ -3323,11 +3280,9 @@
   "djacu": {
     "gloss": "water",
     "liste": [],
-    "namcu": null,
+    "namcu": 1,
     "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "djedi": {
     "gloss": "day",
@@ -3358,7 +3313,7 @@
   "djine": {
     "gloss": "ring",
     "liste": [],
-    "namcu": null,
+    "namcu": 4,
     "sumti": [],
     "tags": [
       "standard"
@@ -3394,7 +3349,7 @@
   "dotco": {
     "gloss": "german",
     "liste": [],
-    "namcu": null,
+    "namcu": 2,
     "sumti": [],
     "tags": [
       "standard"
@@ -3418,7 +3373,7 @@
   "drani": {
     "gloss": "correct",
     "liste": [],
-    "namcu": null,
+    "namcu": 4,
     "sumti": [],
     "tags": [
       "standard"
@@ -3440,20 +3395,18 @@
   "drudi": {
     "gloss": "roof",
     "liste": [],
-    "namcu": null,
+    "namcu": 2,
     "sumti": [],
     "tags": [
       "standard"
     ]
   },
   "dugri": {
-    "gloss": null,
+    "gloss": "logarithm",
     "liste": [],
-    "namcu": null,
+    "namcu": 3,
     "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "dukse": {
     "gloss": "excess",
@@ -3471,11 +3424,9 @@
   "dukti": {
     "gloss": "opposite",
     "liste": [],
-    "namcu": null,
+    "namcu": 3,
     "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "dunda": {
     "gloss": "give",
@@ -3493,7 +3444,7 @@
   "dunja": {
     "gloss": "freeze",
     "liste": [],
-    "namcu": null,
+    "namcu": 3,
     "sumti": [],
     "tags": [
       "standard"
@@ -3502,7 +3453,7 @@
   "dunku": {
     "gloss": "anguish",
     "liste": [],
-    "namcu": null,
+    "namcu": 2,
     "sumti": [],
     "tags": [
       "standard"
@@ -3552,7 +3503,7 @@
   "dzipo": {
     "gloss": "Antarctica",
     "liste": [],
-    "namcu": null,
+    "namcu": 2,
     "sumti": [],
     "tags": [
       "standard"
@@ -3574,7 +3525,7 @@
   "fadni": {
     "gloss": "ordinary",
     "liste": [],
-    "namcu": null,
+    "namcu": 3,
     "sumti": [],
     "tags": [
       "standard"
@@ -3583,43 +3534,37 @@
   "fagri": {
     "gloss": "fire",
     "liste": [],
-    "namcu": null,
+    "namcu": 3,
     "sumti": [],
     "tags": [
       "standard"
     ]
   },
   "falnu": {
-    "gloss": null,
+    "gloss": "sail",
     "liste": [],
-    "namcu": null,
+    "namcu": 3,
     "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "famti": {
     "gloss": "aunt/uncle",
     "liste": [],
-    "namcu": null,
+    "namcu": 3,
     "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "fancu": {
     "gloss": "function",
     "liste": [],
-    "namcu": null,
+    "namcu": 4,
     "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "fange": {
     "gloss": "foreign",
     "liste": [],
-    "namcu": null,
+    "namcu": 3,
     "sumti": [],
     "tags": [
       "standard"
@@ -3638,9 +3583,9 @@
     ]
   },
   "fanri": {
-    "gloss": null,
+    "gloss": "factory",
     "liste": [],
-    "namcu": null,
+    "namcu": 3,
     "sumti": [],
     "tags": [
       "standard"
@@ -3649,7 +3594,7 @@
   "fanta": {
     "gloss": "prevent",
     "liste": [],
-    "namcu": null,
+    "namcu": 2,
     "sumti": [],
     "tags": [
       "standard"
