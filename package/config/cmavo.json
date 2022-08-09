@@ -44,7 +44,8 @@
     "selmaho": "UI"
   },
   ".e'i": {
-    "gloss": "feeling constraint"
+    "gloss": "feeling constraint",
+    "selmaho": "UI"
   },
   ".e'o": {
     "gloss": "request",
@@ -1482,7 +1483,7 @@
     "selmaho": "PA"
   },
   "pi'a": {
-    "gloss": "n-ary mex op",
+    "gloss": "vectors to rows",
     "selmaho": "VUhU"
   },
   "pi'e": {
@@ -1553,25 +1554,58 @@
     "gloss": "recent sumti",
     "selmaho": "KOhA"
   },
-  "ra'a": {},
-  "ra'e": {},
-  "ra'i": {},
-  "ra'o": {},
-  "ra'u": {},
-  "rai": {},
-  "rau": {},
+  "ra'a": {
+    "gloss": "srana",
+    "selmaho": "BAI"
+  },
+  "ra'e": {
+    "gloss": "repeating digits",
+    "selmaho": "PA"
+  },
+  "ra'i": {
+    "gloss": "krasi",
+    "selmaho": "BAI"
+  },
+  "ra'o": {
+    "gloss": "indicate pronoun update",
+    "selmaho": "RAhO"
+  },
+  "ra'u": {
+    "gloss": "chiefly",
+    "selmaho": "UI"
+  },
+  "rai": {
+    "gloss": "traji",
+    "selmaho": "BAI"
+  },
+  "rau": {
+    "gloss": "enough",
+    "selmaho": "PA"
+  },
   "re": {
     "gloss": "2",
     "selmaho": "PA"
   },
-  "re'e": {},
-  "re'i": {},
-  "re'o": {},
+  "re'e": {
+    "gloss": "religious",
+    "selmaho": "UI"
+  },
+  "re'i": {
+    "gloss": "ready to receive",
+    "selmaho": "COI"
+  },
+  "re'o": {
+    "gloss": "adjacent to",
+    "selmaho": "FAhA"
+  },
   "re'u": {
     "gloss": "number to tense interval modifier",
     "selmaho": "ROI"
   },
-  "rei": {},
+  "rei": {
+    "gloss": "E (14)",
+    "selmaho": "PA"
+  },
   "ri": {
     "gloss": "most recent sumti",
     "selmaho": "KOhA"
@@ -1580,7 +1614,10 @@
     "gloss": "rinka",
     "selmaho": "BAI"
   },
-  "ri'e": {},
+  "ri'e": {
+    "gloss": "release emotion",
+    "selmaho": "UI"
+  },
   "ro": {
     "gloss": "all",
     "selmaho": "PA"
@@ -1593,8 +1630,14 @@
     "gloss": "mental",
     "selmaho": "UI"
   },
-  "ro'i": {},
-  "ro'u": {},
+  "ro'i": {
+    "gloss": "emotional",
+    "selmaho": "UI"
+  },
+  "ro'u": {
+    "gloss": "sexual",
+    "selmaho": "UI"
+  },
   "roi": {
     "gloss": "number to modifier",
     "selmaho": "ROI"
@@ -1603,19 +1646,46 @@
     "gloss": "remote past sumti",
     "selmaho": "KOhA"
   },
-  "ru'a": {},
+  "ru'a": {
+    "gloss": "I postulate",
+    "selmaho": "UI"
+  },
   "ru'e": {
     "gloss": "weak intensity",
     "selmaho": "CAI"
   },
-  "ru'i": {},
-  "ru'o": {},
-  "ru'u": {},
-  "ry.": {},
-  "sa": {},
-  "sa'a": {},
-  "sa'e": {},
-  "sa'i": {},
+  "ru'i": {
+    "gloss": "continuously",
+    "selmaho": "TAhE"
+  },
+  "ru'o": {
+    "gloss": "Cyrillic shift",
+    "selmaho": "BY"
+  },
+  "ru'u": {
+    "gloss": "surrounding",
+    "selmaho": "FAhA"
+  },
+  "ry.": {
+    "gloss": "r",
+    "selmaho": "BY"
+  },
+  "sa": {
+    "gloss": "erase utterance",
+    "selmaho": "SA"
+  },
+  "sa'a": {
+    "gloss": "inserted text",
+    "selmaho": "UI"
+  },
+  "sa'e": {
+    "gloss": "precisely speaking",
+    "selmaho": "UI"
+  },
+  "sa'i": {
+    "gloss": "vectors to columns",
+    "selmaho": "VUhU"
+  },
   "sa'u": {
     "gloss": "simply",
     "selmaho": "UI"
@@ -1624,26 +1694,62 @@
     "gloss": "moderate intensity",
     "selmaho": "CAI"
   },
-  "sau": {},
+  "sau": {
+    "gloss": "sarcu",
+    "selmaho": "BAI"
+  },
   "se": {
     "gloss": "2nd conversion",
     "selmaho": "SE"
   },
-  "se'a": {},
-  "se'i": {},
-  "se'o": {},
-  "se'u": {},
+  "se'a": {
+    "gloss": "self-sufficiency",
+    "selmaho": "UI"
+  },
+  "se'i": {
+    "gloss": "self-oriented",
+    "selmaho": "UI"
+  },
+  "se'o": {
+    "gloss": "I know from experience",
+    "selmaho": "UI"
+  },
+  "se'u": {
+    "gloss": "end SEI / SOI",
+    "selmaho": "SEhU"
+  },
   "sei": {
     "gloss": "begin discursive bridi",
     "selmaho": "SEI"
   },
-  "si": {},
-  "si'a": {},
-  "si'e": {},
-  "si'o": {},
-  "si'u": {},
-  "so": {},
-  "so'a": {},
+  "si": {
+    "gloss": "erase last Lojban word",
+    "selmaho": "SI"
+  },
+  "si'a": {
+    "gloss": "similarly",
+    "selmaho": "UI"
+  },
+  "si'e": {
+    "gloss": "convert number to portion selbri",
+    "selmaho": "MOI"
+  },
+  "si'o": {
+    "gloss": "idea abstractor",
+    "selmaho": "NU"
+  },
+  "si'u": {
+    "gloss": "sidju",
+    "selmaho": "BAI"
+  },
+  "so": {
+    "gloss": "9",
+    "selmaho": "PA"
+  },
+  "so'a": {
+    "gloss": "almost all",
+    "selmaho": "PA"
+  },
   "so'e": {
     "gloss": "most",
     "selmaho": "PA"
@@ -1656,22 +1762,46 @@
     "gloss": "few",
     "selmaho": "PA"
   },
-  "soi": {},
-  "su": {},
-  "su'a": {},
-  "su'e": {},
-  "su'i": {},
+  "soi": {
+    "gloss": "begin reciprocal sumti",
+    "selmaho": "SOI"
+  },
+  "su": {
+    "gloss": "start over",
+    "selmaho": "SU"
+  },
+  "su'a": {
+    "gloss": "I generalize",
+    "selmaho": "UI"
+  },
+  "su'e": {
+    "gloss": "at most",
+    "selmaho": "PA"
+  },
+  "su'i": {
+    "gloss": "n-ary plus",
+    "selmaho": "VUhU"
+  },
   "su'o": {
     "gloss": "at least",
     "selmaho": "PA"
   },
-  "su'u": {},
-  "sy.": {},
+  "su'u": {
+    "gloss": "non-specific abstractor",
+    "selmaho": "NU"
+  },
+  "sy.": {
+    "gloss": "s",
+    "selmaho": "BY"
+  },
   "ta": {
     "gloss": "that there",
     "selmaho": "KOhA"
   },
-  "ta'a": {},
+  "ta'a": {
+    "gloss": "interruption",
+    "selmaho": "COI"
+  },
   "ta'e": {
     "gloss": "habitually",
     "selmaho": "TAhE"
@@ -1680,32 +1810,62 @@
     "gloss": "tadji",
     "selmaho": "BAI"
   },
-  "ta'o": {},
+  "ta'o": {
+    "gloss": "by the way",
+    "selmaho": "UI"
+  },
   "tai": {
     "gloss": "tamsmi",
     "selmaho": "BAI"
   },
-  "tau": {},
+  "tau": {
+    "gloss": "change case for next letteral",
+    "selmaho": "LAU"
+  },
   "te": {
     "gloss": "switch 1 and 3 sumti",
     "selmaho": "SE"
   },
-  "te'a": {},
-  "te'e": {},
-  "te'o": {},
-  "te'u": {},
-  "tei": {},
+  "te'a": {
+    "gloss": "exponential",
+    "selmaho": "VUhU"
+  },
+  "te'e": {
+    "gloss": "edged by",
+    "selmaho": "FAhA"
+  },
+  "te'o": {
+    "gloss": "Euler's number",
+    "selmaho": "PA"
+  },
+  "te'u": {
+    "gloss": "end JOhI",
+    "selmaho": "TEhU"
+  },
+  "tei": {
+    "gloss": "composite letteral",
+    "selmaho": "TEI"
+  },
   "ti": {
     "gloss": "this here",
     "selmaho": "KOhA"
   },
-  "ti'a": {},
+  "ti'a": {
+    "gloss": "to the rear",
+    "selmaho": "FAhA"
+  },
   "ti'e": {
     "gloss": "hearsay",
     "selmaho": "UI"
   },
-  "ti'i": {},
-  "ti'u": {},
+  "ti'i": {
+    "gloss": "stidi",
+    "selmaho": "BAI"
+  },
+  "ti'u": {
+    "gloss": "tcika",
+    "selmaho": "BAI"
+  },
   "to": {
     "gloss": "begin grammatical parenthetical",
     "selmaho": "TO"
@@ -1718,7 +1878,10 @@
     "gloss": "away from",
     "selmaho": "FAhA"
   },
-  "to'u": {},
+  "to'u": {
+    "gloss": "in brief",
+    "selmaho": "UI"
+  },
   "toi": {
     "gloss": "end TO",
     "selmaho": "TOI"
@@ -1731,15 +1894,42 @@
     "gloss": "abstraction to sumti",
     "selmaho": "LAhE"
   },
-  "tu'e": {},
-  "tu'i": {},
-  "tu'o": {},
-  "tu'u": {},
-  "ty.": {},
-  "va": {},
-  "va'a": {},
-  "va'e": {},
-  "va'i": {},
+  "tu'e": {
+    "gloss": "begin multiple utterance",
+    "selmaho": "TUhE"
+  },
+  "tu'i": {
+    "gloss": "stuzi",
+    "selmaho": "BAI"
+  },
+  "tu'o": {
+    "gloss": "null operand (unary)",
+    "selmaho": "PA"
+  },
+  "tu'u": {
+    "gloss": "end TUhE",
+    "selmaho": "TUhU"
+  },
+  "ty.": {
+    "gloss": "t",
+    "selmaho": "BY"
+  },
+  "va": {
+    "gloss": "near",
+    "selmaho": "VA"
+  },
+  "va'a": {
+    "gloss": "additive inverse",
+    "selmaho": "VUhU"
+  },
+  "va'e": {
+    "gloss": "number to scalar",
+    "selmaho": "MOI"
+  },
+  "va'i": {
+    "gloss": "in other words",
+    "selmaho": "UI"
+  },
   "va'o": {
     "gloss": "vanbi",
     "selmaho": "BAI"
@@ -1748,50 +1938,146 @@
     "gloss": "xamgu",
     "selmaho": "BAI"
   },
-  "vai": {},
+  "vai": {
+    "gloss": "F (15)",
+    "selmaho": "PA"
+  },
   "vau": {
     "gloss": "end of sumti",
     "selmaho": "VAU"
   },
-  "ve": {},
-  "ve'a": {},
-  "ve'e": {},
-  "ve'i": {},
-  "ve'o": {},
-  "ve'u": {},
-  "vei": {},
-  "vi": {},
-  "vi'a": {},
-  "vi'e": {},
-  "vi'i": {},
-  "vi'o": {},
-  "vi'u": {},
-  "vo": {},
-  "vo'a": {},
-  "vo'e": {},
-  "vo'i": {},
-  "vo'o": {},
-  "vo'u": {},
+  "ve": {
+    "gloss": "4th conversion",
+    "selmaho": "SE"
+  },
+  "ve'a": {
+    "gloss": "medium region of space",
+    "selmaho": "VEhA"
+  },
+  "ve'e": {
+    "gloss": "the whole of space",
+    "selmaho": "VEhA"
+  },
+  "ve'i": {
+    "gloss": "tiny region of space",
+    "selmaho": "VEhA"
+  },
+  "ve'o": {
+    "gloss": "right math bracket",
+    "selmaho": "VEI"
+  },
+  "ve'u": {
+    "gloss": "large region of space",
+    "selmaho": "VEhA"
+  },
+  "vei": {
+    "gloss": "left math bracket",
+    "selmaho": "VEI"
+  },
+  "vi": {
+    "gloss": "here at",
+    "selmaho": "VA"
+  },
+  "vi'a": {
+    "gloss": "2-space interval",
+    "selmaho": "VIhA"
+  },
+  "vi'e": {
+    "gloss": "4-space interval",
+    "selmaho": "VIhA"
+  },
+  "vi'i": {
+    "gloss": "1-space interval",
+    "selmaho": "VIhA"
+  },
+  "vi'o": {
+    "gloss": "wilco",
+    "selmaho": "COI"
+  },
+  "vi'u": {
+    "gloss": "3-space interval",
+    "selmaho": "VIhA"
+  },
+  "vo": {
+    "gloss": "4",
+    "selmaho": "PA"
+  },
+  "vo'a": {
+    "gloss": "repeat 1st place of main bridi",
+    "selmaho": "KOhA"
+  },
+  "vo'e": {
+    "gloss": "repeat 2nd place of main bridi",
+    "selmaho": "KOhA"
+  },
+  "vo'i": {
+    "gloss": "repeat 3rd place of main bridi",
+    "selmaho": "KOhA"
+  },
+  "vo'o": {
+    "gloss": "repeat 4th place of main bridi",
+    "selmaho": "KOhA"
+  },
+  "vo'u": {
+    "gloss": "repeat 5th place of main bridi",
+    "selmaho": "KOhA"
+  },
   "voi": {
     "gloss": "begin non-veridical restrictive clause",
     "selmaho": "NOI"
   },
-  "vu": {},
-  "vu'a": {},
-  "vu'e": {},
-  "vu'i": {},
-  "vu'o": {},
-  "vu'u": {},
-  "vy.": {},
-  "xa": {},
-  "xe": {},
-  "xi": {},
-  "xo": {},
+  "vu": {
+    "gloss": "far from",
+    "selmaho": "VA"
+  },
+  "vu'a": {
+    "gloss": "west of",
+    "selmaho": "FAhA"
+  },
+  "vu'e": {
+    "gloss": "virtue",
+    "selmaho": "UI"
+  },
+  "vu'i": {
+    "gloss": "begin sequence",
+    "selmaho": "LAhE"
+  },
+  "vu'o": {
+    "gloss": "join relative phrase in afterthought",
+    "selmaho": "VUhO"
+  },
+  "vu'u": {
+    "gloss": "n-ary minus",
+    "selmaho": "VUhU"
+  },
+  "vy.": {
+    "gloss": "v",
+    "selmaho": "BY"
+  },
+  "xa": {
+    "gloss": "6",
+    "selmaho": "PA"
+  },
+  "xe": {
+    "gloss": "5th conversion",
+    "selmaho": "SE"
+  },
+  "xi": {
+    "gloss": "subscript",
+    "selmaho": "XI"
+  },
+  "xo": {
+    "gloss": "digit question",
+    "selmaho": "PA"
+  },
   "xu": {
     "gloss": "true-false question",
     "selmaho": "UI"
   },
-  "xy.": {},
+  "xy.": {
+    "gloss": "x",
+    "selmaho": "BY"
+  },
   "za": {
     "gloss": "medium time distance",
     "selmaho": "ZI"
@@ -1800,19 +2086,34 @@
     "gloss": "evidential",
     "selmaho": "UI"
   },
-  "za'e": {},
+  "za'e": {
+    "gloss": "the whole of time",
+    "selmaho": "ZEHA"
+  },
   "za'i": {
     "gloss": "state abstractor",
     "selmaho": "NU"
   },
-  "za'o": {},
+  "za'o": {
+    "gloss": "superfective",
+    "selmaho": "ZAhO"
+  },
   "za'u": {
     "gloss": "greater",
     "selmaho": "PA"
   },
-  "zai": {},
-  "zau": {},
-  "ze": {},
+  "zai": {
+    "gloss": "alphabet selector",
+    "selmaho": "LAU"
+  },
+  "zau": {
+    "gloss": "zanru",
+    "selmaho": "BAI"
+  },
+  "ze": {
+    "gloss": "7",
+    "selmaho": "PA"
+  },
   "ze'a": {
     "gloss": "medium time length",
     "selmaho": "ZEhA"
@@ -1821,15 +2122,30 @@
     "gloss": "all time",
     "selmaho": "ZEhA"
   },
-  "ze'i": {},
-  "ze'o": {},
-  "ze'u": {},
-  "zei": {},
+  "ze'i": {
+    "gloss": "tiny amount of time",
+    "selmaho": "ZEhA"
+  },
+  "ze'o": {
+    "gloss": "beyond",
+    "selmaho": "FAhA"
+  },
+  "ze'u": {
+    "gloss": "long time interval",
+    "selmaho": "ZEhA"
+  },
+  "zei": {
+    "gloss": "join lujvo",
+    "selmaho": "ZEI"
+  },
   "zi": {
     "gloss": "short time distance",
     "selmaho": "ZI"
   },
-  "zi'e": {},
+  "zi'e": {
+    "gloss": "join relative clause",
+    "selmaho": "ZIhE"
+  },
   "zi'o": {
     "gloss": "delete sumti place",
     "selmaho": "KOhA"
@@ -1838,17 +2154,56 @@
     "gloss": "word quote",
     "selmaho": "ZO"
   },
-  "zo'a": {},
-  "zo'e": {},
-  "zo'i": {},
-  "zo'o": {},
-  "zo'u": {},
-  "zoi": {},
-  "zu": {},
-  "zu'a": {},
-  "zu'e": {},
-  "zu'i": {},
-  "zu'o": {},
-  "zu'u": {},
-  "zy.": {}
+  "zo'a": {
+    "gloss": "tangential to",
+    "selmaho": "FAhA"
+  },
+  "zo'e": {
+    "gloss": "unspecified sumti",
+    "selmaho": "KOhA"
+  },
+  "zo'i": {
+    "gloss": "inward from",
+    "selmaho": "FAhA"
+  },
+  "zo'o": {
+    "gloss": "humorously",
+    "selmaho": "UI"
+  },
+  "zo'u": {
+    "gloss": "end prenex",
+    "selmaho": "ZOhU"
+  },
+  "zoi": {
+    "gloss": "non-Lojban quotation",
+    "selmaho": "ZOI"
+  },
+  "zu": {
+    "gloss": "long time distance",
+    "selmaho": "ZI"
+  },
+  "zu'a": {
+    "gloss": "left of",
+    "selmaho": "FAhA"
+  },
+  "zu'e": {
+    "gloss": "zukte",
+    "selmaho": "BAI"
+  },
+  "zu'i": {
+    "gloss": "typical value",
+    "selmaho": "KOhA"
+  },
+  "zu'o": {
+    "gloss": "event abstractor",
+    "selmaho": "NU"
+  },
+  "zu'u": {
+    "gloss": "on the one hand",
+    "selmaho": "UI"
+  },
+  "zy.": {
+    "gloss": "z",
+    "selmaho": "UI"
+  }
 }
