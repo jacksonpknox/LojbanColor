@@ -5206,43 +5206,37 @@
   "jgalu": {
     "gloss": "claw",
     "liste": [],
-    "namcu": null,
+    "namcu": 2,
     "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "jganu": {
-    "gloss": null,
+    "gloss": "angle",
     "liste": [],
-    "namcu": null,
+    "namcu": 3,
     "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "jgari": {
     "gloss": "hold",
     "liste": [],
-    "namcu": null,
+    "namcu": 4,
     "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "jgena": {
-    "gloss": null,
+    "gloss": "knot",
     "liste": [],
-    "namcu": null,
+    "namcu": 2,
     "sumti": [],
     "tags": [
       "standard"
     ]
   },
   "jgina": {
-    "gloss": null,
+    "gloss": "gene",
     "liste": [],
-    "namcu": null,
+    "namcu": 3,
     "sumti": [],
     "tags": [
       "standard"
@@ -5251,7 +5245,7 @@
   "jgira": {
     "gloss": "pride",
     "liste": [],
-    "namcu": null,
+    "namcu": 2,
     "sumti": [],
     "tags": [
       "standard"
@@ -5260,7 +5254,7 @@
   "jgita": {
     "gloss": "stringed musical instrument",
     "liste": [],
-    "namcu": null,
+    "namcu": 2,
     "sumti": [],
     "tags": [
       "standard"
@@ -5269,7 +5263,7 @@
   "jibni": {
     "gloss": "near",
     "liste": [],
-    "namcu": null,
+    "namcu": 3,
     "sumti": [],
     "tags": [
       "standard"
@@ -5288,9 +5282,9 @@
     ]
   },
   "jicla": {
-    "gloss": null,
+    "gloss": "stir",
     "liste": [],
-    "namcu": null,
+    "namcu": 2,
     "sumti": [],
     "tags": [
       "standard"
@@ -5299,7 +5293,7 @@
   "jicmu": {
     "gloss": "basis",
     "liste": [],
-    "namcu": null,
+    "namcu": 2,
     "sumti": [],
     "tags": [
       "standard"
@@ -5308,7 +5302,7 @@
   "jijnu": {
     "gloss": "intuit",
     "liste": [],
-    "namcu": null,
+    "namcu": 3,
     "sumti": [],
     "tags": [
       "standard"
@@ -5317,46 +5311,52 @@
   "jikca": {
     "gloss": "socialize",
     "liste": [],
-    "namcu": null,
+    "namcu": 2,
     "sumti": [],
     "tags": [
       "standard"
     ]
   },
   "jikru": {
-    "gloss": null,
+    "gloss": "liquor",
     "liste": [],
-    "namcu": null,
+    "namcu": 2,
     "sumti": [],
     "tags": [
       "standard"
     ]
   },
   "jilka": {
-    "gloss": null,
+    "gloss": "base",
     "liste": [],
-    "namcu": null,
+    "namcu": 2,
     "sumti": [],
     "tags": [
       "standard"
     ]
   },
   "jilra": {
-    "gloss": null,
+    "gloss": "envy",
     "liste": [],
-    "namcu": null,
+    "namcu": 3,
     "sumti": [],
     "tags": [
       "standard"
     ]
   },
   "jimca": {
-    "gloss": null,
-    "liste": [],
-    "namcu": null,
-    "sumti": [],
+    "gloss": "branch",
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 2,
+    "sumti": [
+      "jimca",
+      "tricu"
+    ],
     "tags": [
-      "standard"
+      "spati rango",
+      "tricu"
     ]
   },
   "jimpe": {
@@ -5375,16 +5375,16 @@
   "jimte": {
     "gloss": "limit",
     "liste": [],
-    "namcu": null,
+    "namcu": 3,
     "sumti": [],
     "tags": [
       "standard"
     ]
   },
   "jinci": {
-    "gloss": null,
+    "gloss": "scissors",
     "liste": [],
-    "namcu": null,
+    "namcu": 2,
     "sumti": [],
     "tags": [
       "standard"
@@ -5393,16 +5393,16 @@
   "jinga": {
     "gloss": "win",
     "liste": [],
-    "namcu": null,
+    "namcu": 4,
     "sumti": [],
     "tags": [
       "standard"
     ]
   },
   "jinku": {
-    "gloss": null,
+    "gloss": "vaccine",
     "liste": [],
-    "namcu": null,
+    "namcu": 4,
     "sumti": [],
     "tags": [
       "standard"
@@ -5411,7 +5411,7 @@
   "jinme": {
     "gloss": "metal",
     "liste": [],
-    "namcu": null,
+    "namcu": 2,
     "sumti": [],
     "tags": [
       "standard"
@@ -5420,7 +5420,7 @@
   "jinru": {
     "gloss": "submerge",
     "liste": [],
-    "namcu": null,
+    "namcu": 2,
     "sumti": [],
     "tags": [
       "standard"
@@ -5429,16 +5429,16 @@
   "jinsa": {
     "gloss": "uncontaminated",
     "liste": [],
-    "namcu": null,
+    "namcu": 3,
     "sumti": [],
     "tags": [
       "standard"
     ]
   },
   "jinto": {
-    "gloss": null,
+    "gloss": "well",
     "liste": [],
-    "namcu": null,
+    "namcu": 3,
     "sumti": [],
     "tags": [
       "standard"
@@ -5459,9 +5459,9 @@
     ]
   },
   "jinzi": {
-    "gloss": null,
+    "gloss": "innate",
     "liste": [],
-    "namcu": null,
+    "namcu": 2,
     "sumti": [],
     "tags": [
       "standard"
@@ -5470,25 +5470,25 @@
   "jipci": {
     "gloss": "chicken",
     "liste": [],
-    "namcu": null,
+    "namcu": 2,
     "sumti": [],
     "tags": [
       "standard"
     ]
   },
   "jipno": {
-    "gloss": null,
+    "gloss": "tip",
     "liste": [],
-    "namcu": null,
+    "namcu": 3,
     "sumti": [],
     "tags": [
       "standard"
     ]
   },
   "jirna": {
-    "gloss": null,
+    "gloss": "horn",
     "liste": [],
-    "namcu": null,
+    "namcu": 2,
     "sumti": [],
     "tags": [
       "standard"
@@ -5497,7 +5497,7 @@
   "jisra": {
     "gloss": "juice",
     "liste": [],
-    "namcu": null,
+    "namcu": 2,
     "sumti": [],
     "tags": [
       "standard"
@@ -5506,7 +5506,7 @@
   "jitfa": {
     "gloss": "false",
     "liste": [],
-    "namcu": null,
+    "namcu": 2,
     "sumti": [],
     "tags": [
       "standard"
@@ -5526,9 +5526,9 @@
     ]
   },
   "jivbu": {
-    "gloss": null,
+    "gloss": "weave",
     "liste": [],
-    "namcu": null,
+    "namcu": 3,
     "sumti": [],
     "tags": [
       "standard"
@@ -5551,16 +5551,16 @@
   "jmaji": {
     "gloss": "gather",
     "liste": [],
-    "namcu": null,
+    "namcu": 3,
     "sumti": [],
     "tags": [
       "standard"
     ]
   },
   "jmifa": {
-    "gloss": null,
+    "gloss": "shoal",
     "liste": [],
-    "namcu": null,
+    "namcu": 3,
     "sumti": [],
     "tags": [
       "standard"
@@ -5569,7 +5569,7 @@
   "jmina": {
     "gloss": "combine",
     "liste": [],
-    "namcu": null,
+    "namcu": 4,
     "sumti": [],
     "tags": [
       "standard"
@@ -5578,16 +5578,16 @@
   "jmive": {
     "gloss": "alive",
     "liste": [],
-    "namcu": null,
+    "namcu": 2,
     "sumti": [],
     "tags": [
       "standard"
     ]
   },
   "jordo": {
-    "gloss": null,
+    "gloss": "jordanian",
     "liste": [],
-    "namcu": null,
+    "namcu": 2,
     "sumti": [],
     "tags": [
       "standard"
@@ -5596,7 +5596,7 @@
   "jorne": {
     "gloss": "joined",
     "liste": [],
-    "namcu": null,
+    "namcu": 3,
     "sumti": [],
     "tags": [
       "standard"
@@ -5605,7 +5605,7 @@
   "jubme": {
     "gloss": "table",
     "liste": [],
-    "namcu": null,
+    "namcu": 3,
     "sumti": [],
     "tags": [
       "standard"
@@ -5614,7 +5614,7 @@
   "judri": {
     "gloss": "address",
     "liste": [],
-    "namcu": null,
+    "namcu": 3,
     "sumti": [],
     "tags": [
       "standard"
@@ -5623,7 +5623,7 @@
   "jufra": {
     "gloss": "utterance",
     "liste": [],
-    "namcu": null,
+    "namcu": 3,
     "sumti": [],
     "tags": [
       "standard"
@@ -5632,25 +5632,25 @@
   "jukni": {
     "gloss": "spider",
     "liste": [],
-    "namcu": null,
+    "namcu": 2,
     "sumti": [],
     "tags": [
       "standard"
     ]
   },
   "jukpa": {
-    "gloss": null,
+    "gloss": "cook",
     "liste": [],
-    "namcu": null,
+    "namcu": 3,
     "sumti": [],
     "tags": [
       "standard"
     ]
   },
   "julne": {
-    "gloss": null,
+    "gloss": "filter",
     "liste": [],
-    "namcu": null,
+    "namcu": 4,
     "sumti": [],
     "tags": [
       "standard"
@@ -5683,7 +5683,7 @@
   "junla": {
     "gloss": "clock",
     "liste": [],
-    "namcu": null,
+    "namcu": 4,
     "sumti": [],
     "tags": [
       "standard"
@@ -5692,7 +5692,7 @@
   "junri": {
     "gloss": "serious",
     "liste": [],
-    "namcu": null,
+    "namcu": 2,
     "sumti": [],
     "tags": [
       "standard"
@@ -5701,16 +5701,16 @@
   "junta": {
     "gloss": "weight",
     "liste": [],
-    "namcu": null,
+    "namcu": 3,
     "sumti": [],
     "tags": [
       "standard"
     ]
   },
   "jurme": {
-    "gloss": null,
+    "gloss": "germ",
     "liste": [],
-    "namcu": null,
+    "namcu": 2,
     "sumti": [],
     "tags": [
       "standard"
@@ -5719,7 +5719,7 @@
   "jursa": {
     "gloss": "severe",
     "liste": [],
-    "namcu": null,
+    "namcu": 2,
     "sumti": [],
     "tags": [
       "standard"
@@ -5728,7 +5728,7 @@
   "jutsi": {
     "gloss": "species",
     "liste": [],
-    "namcu": null,
+    "namcu": 3,
     "sumti": [],
     "tags": [
       "standard"
@@ -5737,7 +5737,7 @@
   "juxre": {
     "gloss": "clumsy",
     "liste": [],
-    "namcu": null,
+    "namcu": 2,
     "sumti": [],
     "tags": [
       "standard"
@@ -5746,7 +5746,7 @@
   "jvinu": {
     "gloss": "scene",
     "liste": [],
-    "namcu": null,
+    "namcu": 3,
     "sumti": [],
     "tags": [
       "standard"
@@ -5755,7 +5755,7 @@
   "kabri": {
     "gloss": "cup",
     "liste": [],
-    "namcu": null,
+    "namcu": 3,
     "sumti": [],
     "tags": [
       "standard"
@@ -5764,7 +5764,7 @@
   "kacma": {
     "gloss": "camera",
     "liste": [],
-    "namcu": null,
+    "namcu": 3,
     "sumti": [],
     "tags": [
       "standard"
@@ -5773,7 +5773,7 @@
   "kadno": {
     "gloss": "canadian",
     "liste": [],
-    "namcu": null,
+    "namcu": 2,
     "sumti": [],
     "tags": [
       "standard"
@@ -5782,7 +5782,7 @@
   "kafke": {
     "gloss": "cough",
     "liste": [],
-    "namcu": null,
+    "namcu": 3,
     "sumti": [],
     "tags": [
       "standard"
@@ -5791,7 +5791,7 @@
   "kagni": {
     "gloss": "corporation",
     "liste": [],
-    "namcu": null,
+    "namcu": 3,
     "sumti": [],
     "tags": [
       "standard"
@@ -5800,7 +5800,7 @@
   "kajde": {
     "gloss": "warn",
     "liste": [],
-    "namcu": null,
+    "namcu": 3,
     "sumti": [],
     "tags": [
       "standard"
@@ -5833,9 +5833,9 @@
     ]
   },
   "kakpa": {
-    "gloss": null,
+    "gloss": "dig",
     "liste": [],
-    "namcu": null,
+    "namcu": 4,
     "sumti": [],
     "tags": [
       "standard"
@@ -5844,7 +5844,7 @@
   "kalci": {
     "gloss": "feces",
     "liste": [],
-    "namcu": null,
+    "namcu": 2,
     "sumti": [],
     "tags": [
       "standard"
@@ -5853,7 +5853,7 @@
   "kalri": {
     "gloss": "open",
     "liste": [],
-    "namcu": null,
+    "namcu": 3,
     "sumti": [],
     "tags": [
       "standard"
@@ -5872,9 +5872,9 @@
     ]
   },
   "kalte": {
-    "gloss": null,
+    "gloss": "hunt",
     "liste": [],
-    "namcu": null,
+    "namcu": 3,
     "sumti": [],
     "tags": [
       "standard"
@@ -5883,25 +5883,25 @@
   "kamju": {
     "gloss": "column",
     "liste": [],
-    "namcu": null,
+    "namcu": 2,
     "sumti": [],
     "tags": [
       "standard"
     ]
   },
   "kamni": {
-    "gloss": null,
+    "gloss": "committee",
     "liste": [],
-    "namcu": null,
+    "namcu": 3,
     "sumti": [],
     "tags": [
       "standard"
     ]
   },
   "kampu": {
-    "gloss": null,
+    "gloss": "common",
     "liste": [],
-    "namcu": null,
+    "namcu": 2,
     "sumti": [],
     "tags": [
       "standard"
@@ -5910,7 +5910,7 @@
   "kanba": {
     "gloss": "goat",
     "liste": [],
-    "namcu": null,
+    "namcu": 2,
     "sumti": [],
     "tags": [
       "standard"
@@ -5919,7 +5919,7 @@
   "kancu": {
     "gloss": "count",
     "liste": [],
-    "namcu": null,
+    "namcu": 4,
     "sumti": [],
     "tags": [
       "standard"
@@ -5941,7 +5941,7 @@
   "kanji": {
     "gloss": "compute",
     "liste": [],
-    "namcu": null,
+    "namcu": 4,
     "sumti": [],
     "tags": [
       "standard"
@@ -5960,9 +5960,9 @@
     ]
   },
   "kanro": {
-    "gloss": null,
+    "gloss": "healthy",
     "liste": [],
-    "namcu": null,
+    "namcu": 2,
     "sumti": [],
     "tags": [
       "standard"
@@ -5971,7 +5971,7 @@
   "kansa": {
     "gloss": "with",
     "liste": [],
-    "namcu": null,
+    "namcu": 3,
     "sumti": [],
     "tags": [
       "standard"
@@ -5990,9 +5990,9 @@
     ]
   },
   "kanxe": {
-    "gloss": null,
+    "gloss": "conjunction",
     "liste": [],
-    "namcu": null,
+    "namcu": 3,
     "sumti": [],
     "tags": [
       "standard"
@@ -6001,7 +6001,7 @@
   "karbi": {
     "gloss": "compare",
     "liste": [],
-    "namcu": null,
+    "namcu": 5,
     "sumti": [],
     "tags": [
       "standard"
@@ -6023,7 +6023,7 @@
   "karda": {
     "gloss": "card",
     "liste": [],
-    "namcu": null,
+    "namcu": 3,
     "sumti": [],
     "tags": [
       "standard"
@@ -6032,16 +6032,16 @@
   "kargu": {
     "gloss": "expensive",
     "liste": [],
-    "namcu": null,
+    "namcu": 3,
     "sumti": [],
     "tags": [
       "standard"
     ]
   },
   "karli": {
-    "gloss": null,
+    "gloss": "collar",
     "liste": [],
-    "namcu": null,
+    "namcu": 3,
     "sumti": [],
     "tags": [
       "standard"
@@ -6050,7 +6050,7 @@
   "karni": {
     "gloss": "periodical",
     "liste": [],
-    "namcu": null,
+    "namcu": 4,
     "sumti": [],
     "tags": [
       "standard"
@@ -6059,7 +6059,7 @@
   "katna": {
     "gloss": "cut",
     "liste": [],
-    "namcu": null,
+    "namcu": 3,
     "sumti": [],
     "tags": [
       "standard"
@@ -6068,7 +6068,7 @@
   "kavbu": {
     "gloss": "capture",
     "liste": [],
-    "namcu": null,
+    "namcu": 3,
     "sumti": [],
     "tags": [
       "standard"
@@ -6077,7 +6077,7 @@
   "kecti": {
     "gloss": "sorry",
     "liste": [],
-    "namcu": null,
+    "namcu": 3,
     "sumti": [],
     "tags": [
       "standard"
@@ -6098,16 +6098,16 @@
   "kelvo": {
     "gloss": "degrees Kelvin",
     "liste": [],
-    "namcu": null,
+    "namcu": 3,
     "sumti": [],
     "tags": [
       "standard"
     ]
   },
   "kenra": {
-    "gloss": null,
+    "gloss": "cancer",
     "liste": [],
-    "namcu": null,
+    "namcu": 2,
     "sumti": [],
     "tags": [
       "standard"
@@ -6116,7 +6116,7 @@
   "kensa": {
     "gloss": "outer space",
     "liste": [],
-    "namcu": null,
+    "namcu": 2,
     "sumti": [],
     "tags": [
       "standard"
@@ -6125,7 +6125,7 @@
   "kerfa": {
     "gloss": "hair",
     "liste": [],
-    "namcu": null,
+    "namcu": 3,
     "sumti": [],
     "tags": [
       "standard"
@@ -6134,16 +6134,16 @@
   "kerlo": {
     "gloss": "ear",
     "liste": [],
-    "namcu": null,
+    "namcu": 2,
     "sumti": [],
     "tags": [
       "standard"
     ]
   },
   "ketco": {
-    "gloss": null,
+    "gloss": "south america",
     "liste": [],
-    "namcu": null,
+    "namcu": 2,
     "sumti": [],
     "tags": [
       "standard"
@@ -6162,45 +6162,45 @@
     ]
   },
   "kicne": {
-    "gloss": null,
+    "gloss": "cushion",
     "liste": [],
-    "namcu": null,
+    "namcu": 3,
     "sumti": [],
     "tags": [
       "standard"
     ]
   },
   "kijno": {
-    "gloss": null,
+    "gloss": "oxygen",
     "liste": [],
-    "namcu": null,
+    "namcu": 1,
     "sumti": [],
     "tags": [
       "standard"
     ]
   },
   "kilto": {
-    "gloss": null,
+    "gloss": "10e3",
     "liste": [],
-    "namcu": null,
+    "namcu": 3,
     "sumti": [],
     "tags": [
       "standard"
     ]
   },
   "kinli": {
-    "gloss": null,
+    "gloss": "keen",
     "liste": [],
-    "namcu": null,
+    "namcu": 2,
     "sumti": [],
     "tags": [
       "standard"
     ]
   },
   "kisto": {
-    "gloss": null,
+    "gloss": "pakistani",
     "liste": [],
-    "namcu": null,
+    "namcu": 2,
     "sumti": [],
     "tags": [
       "standard"
@@ -6209,7 +6209,7 @@
   "klaji": {
     "gloss": "street",
     "liste": [],
-    "namcu": null,
+    "namcu": 3,
     "sumti": [],
     "tags": [
       "standard"
@@ -6218,7 +6218,7 @@
   "klaku": {
     "gloss": "weep",
     "liste": [],
-    "namcu": null,
+    "namcu": 3,
     "sumti": [],
     "tags": [
       "standard"
@@ -6242,7 +6242,7 @@
   "klani": {
     "gloss": "quantity",
     "liste": [],
-    "namcu": null,
+    "namcu": 3,
     "sumti": [],
     "tags": [
       "standard"
@@ -6251,7 +6251,7 @@
   "klesi": {
     "gloss": "category",
     "liste": [],
-    "namcu": null,
+    "namcu": 3,
     "sumti": [],
     "tags": [
       "standard"
@@ -6260,16 +6260,16 @@
   "klina": {
     "gloss": "clear",
     "liste": [],
-    "namcu": null,
+    "namcu": 2,
     "sumti": [],
     "tags": [
       "standard"
     ]
   },
   "kliru": {
-    "gloss": null,
+    "gloss": "halogen",
     "liste": [],
-    "namcu": null,
+    "namcu": 2,
     "sumti": [],
     "tags": [
       "standard"
@@ -6288,9 +6288,9 @@
     ]
   },
   "klupe": {
-    "gloss": null,
+    "gloss": "screw",
     "liste": [],
-    "namcu": null,
+    "namcu": 4,
     "sumti": [],
     "tags": [
       "standard"
@@ -6299,16 +6299,16 @@
   "kluza": {
     "gloss": "loose",
     "liste": [],
-    "namcu": null,
+    "namcu": 3,
     "sumti": [],
     "tags": [
       "standard"
     ]
   },
   "kobli": {
-    "gloss": null,
+    "gloss": "lettuce",
     "liste": [],
-    "namcu": null,
+    "namcu": 2,
     "sumti": [],
     "tags": [
       "standard"
@@ -6317,34 +6317,34 @@
   "kojna": {
     "gloss": "corner",
     "liste": [],
-    "namcu": null,
+    "namcu": 3,
     "sumti": [],
     "tags": [
       "standard"
     ]
   },
   "kolme": {
-    "gloss": null,
+    "gloss": "coal",
     "liste": [],
-    "namcu": null,
+    "namcu": 2,
     "sumti": [],
     "tags": [
       "standard"
     ]
   },
   "komcu": {
-    "gloss": null,
+    "gloss": "comb",
     "liste": [],
-    "namcu": null,
+    "namcu": 3,
     "sumti": [],
     "tags": [
       "standard"
     ]
   },
   "konju": {
-    "gloss": null,
+    "gloss": "cone",
     "liste": [],
-    "namcu": null,
+    "namcu": 3,
     "sumti": [],
     "tags": [
       "standard"
@@ -6364,18 +6364,18 @@
     ]
   },
   "korcu": {
-    "gloss": null,
+    "gloss": "bent",
     "liste": [],
-    "namcu": null,
+    "namcu": 1,
     "sumti": [],
     "tags": [
       "standard"
     ]
   },
   "korka": {
-    "gloss": null,
+    "gloss": "cork",
     "liste": [],
-    "namcu": null,
+    "namcu": 2,
     "sumti": [],
     "tags": [
       "standard"
@@ -6384,16 +6384,16 @@
   "kosta": {
     "gloss": "coat",
     "liste": [],
-    "namcu": null,
+    "namcu": 2,
     "sumti": [],
     "tags": [
       "standard"
     ]
   },
   "kramu": {
-    "gloss": null,
+    "gloss": "local area",
     "liste": [],
-    "namcu": null,
+    "namcu": 4,
     "sumti": [],
     "tags": [
       "standard"
@@ -6402,7 +6402,7 @@
   "krasi": {
     "gloss": "origin",
     "liste": [],
-    "namcu": null,
+    "namcu": 2,
     "sumti": [],
     "tags": [
       "standard"
@@ -6411,7 +6411,7 @@
   "krati": {
     "gloss": "represent",
     "liste": [],
-    "namcu": null,
+    "namcu": 3,
     "sumti": [],
     "tags": [
       "standard"
@@ -6420,7 +6420,7 @@
   "krefu": {
     "gloss": "recurrence",
     "liste": [],
-    "namcu": null,
+    "namcu": 3,
     "sumti": [],
     "tags": [
       "standard"
@@ -6429,16 +6429,16 @@
   "krici": {
     "gloss": "believe",
     "liste": [],
-    "namcu": null,
+    "namcu": 3,
     "sumti": [],
     "tags": [
       "standard"
     ]
   },
   "krili": {
-    "gloss": null,
+    "gloss": "crystal",
     "liste": [],
-    "namcu": null,
+    "namcu": 3,
     "sumti": [],
     "tags": [
       "standard"
@@ -6447,7 +6447,7 @@
   "krinu": {
     "gloss": "reason",
     "liste": [],
-    "namcu": null,
+    "namcu": 2,
     "sumti": [],
     "tags": [
       "standard"
@@ -6466,45 +6466,45 @@
     ]
   },
   "kruca": {
-    "gloss": null,
+    "gloss": "intersect",
     "liste": [],
-    "namcu": null,
+    "namcu": 3,
     "sumti": [],
     "tags": [
       "standard"
     ]
   },
   "kruji": {
-    "gloss": null,
+    "gloss": "cream",
     "liste": [],
-    "namcu": null,
+    "namcu": 2,
     "sumti": [],
     "tags": [
       "standard"
     ]
   },
   "kruvi": {
-    "gloss": null,
+    "gloss": "curve",
     "liste": [],
-    "namcu": null,
+    "namcu": 4,
     "sumti": [],
     "tags": [
       "standard"
     ]
   },
   "kubli": {
-    "gloss": null,
+    "gloss": "cube",
     "liste": [],
-    "namcu": null,
+    "namcu": 3,
     "sumti": [],
     "tags": [
       "standard"
     ]
   },
   "kucli": {
-    "gloss": null,
+    "gloss": "curious",
     "liste": [],
-    "namcu": null,
+    "namcu": 2,
     "sumti": [],
     "tags": [
       "standard"
@@ -6513,16 +6513,16 @@
   "kufra": {
     "gloss": "comfort",
     "liste": [],
-    "namcu": null,
+    "namcu": 2,
     "sumti": [],
     "tags": [
       "standard"
     ]
   },
   "kukte": {
-    "gloss": null,
+    "gloss": "delicious",
     "liste": [],
-    "namcu": null,
+    "namcu": 2,
     "sumti": [],
     "tags": [
       "standard"
@@ -6531,7 +6531,7 @@
   "kulnu": {
     "gloss": "culture",
     "liste": [],
-    "namcu": null,
+    "namcu": 2,
     "sumti": [],
     "tags": [
       "standard"
@@ -6549,9 +6549,9 @@
     "tags": []
   },
   "kumte": {
-    "gloss": null,
+    "gloss": "dromedary",
     "liste": [],
-    "namcu": null,
+    "namcu": 2,
     "sumti": [],
     "tags": [
       "standard"
@@ -6560,7 +6560,7 @@
   "kunra": {
     "gloss": "ore",
     "liste": [],
-    "namcu": null,
+    "namcu": 3,
     "sumti": [],
     "tags": [
       "standard"
@@ -6569,7 +6569,7 @@
   "kunti": {
     "gloss": "empty",
     "liste": [],
-    "namcu": null,
+    "namcu": 2,
     "sumti": [],
     "tags": [
       "standard"
@@ -6591,16 +6591,16 @@
   "kurji": {
     "gloss": "care",
     "liste": [],
-    "namcu": null,
+    "namcu": 2,
     "sumti": [],
     "tags": [
       "standard"
     ]
   },
   "kurki": {
-    "gloss": null,
+    "gloss": "bitter",
     "liste": [],
-    "namcu": null,
+    "namcu": 2,
     "sumti": [],
     "tags": [
       "standard"
@@ -6609,7 +6609,7 @@
   "kuspe": {
     "gloss": "span",
     "liste": [],
-    "namcu": null,
+    "namcu": 2,
     "sumti": [],
     "tags": [
       "standard"
@@ -6618,16 +6618,16 @@
   "kusru": {
     "gloss": "cruel",
     "liste": [],
-    "namcu": null,
+    "namcu": 2,
     "sumti": [],
     "tags": [
       "standard"
     ]
   },
   "labno": {
-    "gloss": null,
+    "gloss": "lupine",
     "liste": [],
-    "namcu": null,
+    "namcu": 2,
     "sumti": [],
     "tags": [
       "standard"
