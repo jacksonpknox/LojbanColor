@@ -646,8 +646,7 @@
     "sumti": [
       "bikla"
     ],
-    "tags": [
-    ]
+    "tags": []
   },
   "bilga": {
     "gloss": "must",
@@ -714,8 +713,7 @@
       "ckape",
       "velbinra"
     ],
-    "tags": [
-    ]
+    "tags": []
   },
   "binxo": {
     "gloss": "become",
@@ -1089,8 +1087,7 @@
       "bumru",
       "litki"
     ],
-    "tags": [
-    ]
+    "tags": []
   },
   "bunda": {
     "gloss": "local weight",
@@ -1201,8 +1198,7 @@
       "fasnu",
       "ckilu"
     ],
-    "tags": [
-    ]
+    "tags": []
   },
   "cakla": {
     "gloss": "chocolate",
@@ -1224,8 +1220,7 @@
       "selcalku",
       "marji"
     ],
-    "tags": [
-    ]
+    "tags": []
   },
   "canci": {
     "gloss": "vanish",
@@ -1316,8 +1311,7 @@
       "krasi",
       "marji"
     ],
-    "tags": [
-    ]
+    "tags": []
   },
   "canti": {
     "gloss": "intestines",
@@ -1641,8 +1635,7 @@
       "jbovlaste"
     ],
     "namcu": 3,
-    "sumti": [
-    ],
+    "sumti": [],
     "tags": [
       "rango"
     ]
@@ -1687,8 +1680,7 @@
     "sumti": [
       "zo'e"
     ],
-    "tags": [
-    ]
+    "tags": []
   },
   "cikre": {
     "gloss": "repair",
@@ -1766,8 +1758,7 @@
     ],
     "namcu": 3,
     "sumti": [],
-    "tags": [
-    ]
+    "tags": []
   },
   "cimni": {
     "gloss": "infinite",
@@ -1821,8 +1812,7 @@
       "cinje",
       "zasti"
     ],
-    "tags": [
-    ]
+    "tags": []
   },
   "cinki": {
     "gloss": "arthropod",
@@ -1917,24 +1907,21 @@
     "liste": [],
     "namcu": 3,
     "sumti": [],
-    "tags": [
-    ]
+    "tags": []
   },
   "cirko": {
     "gloss": "lose",
     "liste": [],
     "namcu": 3,
     "sumti": [],
-    "tags": [
-    ]
+    "tags": []
   },
   "cirla": {
     "gloss": "cheese",
     "liste": [],
     "namcu": 2,
     "sumti": [],
-    "tags": [
-    ]
+    "tags": []
   },
   "ciska": {
     "gloss": "write",
@@ -1959,8 +1946,7 @@
     ],
     "namcu": 1,
     "sumti": [],
-    "tags": [
-    ]
+    "tags": []
   },
   "ciste": {
     "gloss": "system",
@@ -2041,8 +2027,7 @@
     ],
     "namcu": 3,
     "sumti": [],
-    "tags": [
-    ]
+    "tags": []
   },
   "ckafi": {
     "gloss": "coffee",
@@ -2138,16 +2123,14 @@
     "liste": [],
     "namcu": 2,
     "sumti": [],
-    "tags": [
-    ]
+    "tags": []
   },
   "ckini": {
     "gloss": "related",
     "liste": [],
     "namcu": 3,
     "sumti": [],
-    "tags": [
-    ]
+    "tags": []
   },
   "ckire": {
     "gloss": "grateful",
@@ -2158,8 +2141,7 @@
       "zo'e",
       "zo'e"
     ],
-    "tags": [
-    ]
+    "tags": []
   },
   "ckule": {
     "gloss": "school",
@@ -2268,8 +2250,7 @@
     "liste": [],
     "namcu": 2,
     "sumti": [],
-    "tags": [
-    ]
+    "tags": []
   },
   "cmaci": {
     "gloss": "math",
@@ -2287,8 +2268,7 @@
       "cimde",
       "cnano"
     ],
-    "tags": [
-    ]
+    "tags": []
   },
   "cmana": {
     "gloss": "mountain",
@@ -2298,8 +2278,7 @@
       "cmana",
       "tumla"
     ],
-    "tags": [
-    ]
+    "tags": []
   },
   "cmavo": {
     "gloss": "grammar word",
@@ -2563,8 +2542,7 @@
       "jbovlaste"
     ],
     "namcu": 4,
-    "sumti": [
-    ],
+    "sumti": [],
     "tags": [
       "standard"
     ]
@@ -3082,7 +3060,7 @@
     ]
   },
   "dekto": {
-    "gloss": 10e1,
+    "gloss": 100.0,
     "liste": [
       "jbovlaste"
     ],
@@ -3616,13 +3594,13 @@
     ]
   },
   "fanza": {
-    "gloss": null,
-    "liste": [],
-    "namcu": null,
+    "gloss": "annoy",
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 2,
     "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "fapro": {
     "gloss": "oppose",
@@ -3689,49 +3667,49 @@
     ]
   },
   "fatne": {
-    "gloss": null,
-    "liste": [],
-    "namcu": null,
+    "gloss": "inverted",
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 2,
     "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "fatri": {
-    "gloss": null,
-    "liste": [],
-    "namcu": null,
+    "gloss": "distribute",
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 3,
     "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "febvi": {
-    "gloss": null,
-    "liste": [],
-    "namcu": null,
+    "gloss": "evaporate",
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 3,
     "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "femti": {
-    "gloss": null,
-    "liste": [],
-    "namcu": null,
+    "gloss": "10e-15",
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 3,
     "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "fendi": {
-    "gloss": null,
-    "liste": [],
-    "namcu": null,
+    "gloss": "divide",
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 4,
     "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "fengu": {
     "gloss": "anger",
@@ -3777,40 +3755,45 @@
     ]
   },
   "fepni": {
-    "gloss": null,
-    "liste": [],
-    "namcu": null,
+    "gloss": "small money unit",
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 3,
     "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "fepri": {
-    "gloss": null,
-    "liste": [],
-    "namcu": null,
-    "sumti": [],
+    "gloss": "lung",
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 2,
+    "sumti": [
+      "fepri",
+      "xadni"
+    ],
     "tags": [
-      "standard"
+      "rango"
     ]
   },
   "ferti": {
-    "gloss": null,
-    "liste": [],
-    "namcu": null,
+    "gloss": "fertile",
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 2,
     "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "festi": {
     "gloss": "waste",
-    "liste": [],
-    "namcu": null,
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 2,
     "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "fetsi": {
     "gloss": "female",
@@ -3826,33 +3809,45 @@
     ]
   },
   "figre": {
-    "gloss": null,
-    "liste": [],
-    "namcu": null,
-    "sumti": [],
+    "gloss": "fig",
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 2,
+    "sumti": [
+      "figre",
+      "jutsi"
+    ],
     "tags": [
-      "standard"
+      "grute"
     ]
   },
   "filso": {
-    "gloss": null,
-    "liste": [],
-    "namcu": null,
-    "sumti": [],
+    "gloss": "palestinian",
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 2,
+    "sumti": [
+      "zo'e",
+      "ckaji"
+    ],
     "tags": [
-      "standard"
+      "natmi"
     ]
   },
   "finpe": {
     "gloss": "fish",
-    "liste": [],
+    "liste": [
+      "jbovlaste"
+    ],
     "namcu": 2,
     "sumti": [
       "finpe",
       "jutsi"
     ],
     "tags": [
-      "standard"
+      "danlu"
     ]
   },
   "finti": {
@@ -3865,52 +3860,46 @@
       "terpli",
       "velfinti"
     ],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "flalu": {
     "gloss": "law",
-    "liste": [],
-    "namcu": null,
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 5,
     "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "flani": {
-    "gloss": null,
-    "liste": [],
-    "namcu": null,
+    "gloss": "air-reed instrument",
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 1,
     "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "flecu": {
     "gloss": "flow",
     "liste": [],
-    "namcu": null,
+    "namcu": 4,
     "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "fliba": {
     "gloss": "fail",
     "liste": [],
-    "namcu": null,
+    "namcu": 2,
     "sumti": [],
     "tags": []
   },
   "flira": {
     "gloss": "face",
     "liste": [],
-    "namcu": null,
+    "namcu": 2,
     "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "foldi": {
     "gloss": "field",
@@ -3925,44 +3914,49 @@
     ]
   },
   "fonmo": {
-    "gloss": null,
+    "gloss": "foam",
     "liste": [],
-    "namcu": null,
+    "namcu": 3,
     "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "fonxa": {
-    "gloss": null,
-    "liste": [],
-    "namcu": null,
+    "gloss": "phone",
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 2,
     "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "forca": {
-    "gloss": null,
-    "liste": [],
-    "namcu": null,
+    "gloss": "fork",
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 4,
     "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "fraso": {
     "gloss": "french",
-    "liste": [],
-    "namcu": null,
-    "sumti": [],
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 2,
+    "sumti": [
+      "zo'e",
+      "ckaji"
+    ],
     "tags": [
-      "standard"
+      "natmi"
     ]
   },
   "frati": {
     "gloss": "react",
-    "liste": [],
+    "liste": [
+      "jbovlaste"
+    ],
     "namcu": 4,
     "sumti": [
       "gasnu",
@@ -3976,12 +3970,12 @@
   },
   "fraxu": {
     "gloss": "forgive",
-    "liste": [],
-    "namcu": null,
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 3,
     "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "frica": {
     "gloss": "differ",
@@ -3997,12 +3991,17 @@
     ]
   },
   "friko": {
-    "gloss": null,
-    "liste": [],
-    "namcu": null,
-    "sumti": [],
+    "gloss": "african",
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 2,
+    "sumti": [
+      "zo'e",
+      "ckaji"
+    ],
     "tags": [
-      "standard"
+      "braplu"
     ]
   },
   "frili": {
@@ -4022,116 +4021,118 @@
     ]
   },
   "frinu": {
-    "gloss": null,
-    "liste": [],
-    "namcu": null,
+    "gloss": "fraction",
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 3,
     "sumti": [],
     "tags": [
-      "standard"
+      "cmaci"
     ]
   },
   "friti": {
     "gloss": "offer",
-    "liste": [],
-    "namcu": null,
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 4,
     "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "frumu": {
-    "gloss": null,
-    "liste": [],
-    "namcu": null,
+    "gloss": "frown",
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 1,
     "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "fukpi": {
     "gloss": "copy",
-    "liste": [],
-    "namcu": null,
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 1,
     "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "fulta": {
-    "gloss": null,
-    "liste": [],
-    "namcu": null,
+    "gloss": "float",
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 2,
     "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "funca": {
     "gloss": "luck",
-    "liste": [],
-    "namcu": null,
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 2,
     "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "fusra": {
-    "gloss": null,
-    "liste": [],
-    "namcu": null,
+    "gloss": "rot",
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 2,
     "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "fuzme": {
     "gloss": "responsible",
-    "liste": [],
-    "namcu": null,
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 3,
     "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "gacri": {
     "gloss": "cover",
-    "liste": [],
-    "namcu": null,
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 2,
     "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "gadri": {
     "gloss": "article",
-    "liste": [],
-    "namcu": null,
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 4,
     "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "galfi": {
     "gloss": "modify",
-    "liste": [],
-    "namcu": null,
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 3,
     "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "galtu": {
     "gloss": "high",
-    "liste": [],
+    "liste": [
+      "jbovlaste"
+    ],
     "namcu": 3,
     "sumti": [
       "dacti",
       "jvinu",
       "cnano"
     ],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "galxe": {
     "gloss": "throat",
@@ -4149,21 +4150,21 @@
   },
   "ganlo": {
     "gloss": "closed",
-    "liste": [],
-    "namcu": null,
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 3,
     "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "ganra": {
     "gloss": "wide",
-    "liste": [],
-    "namcu": null,
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 3,
     "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "ganse": {
     "gloss": "detect",
@@ -4175,283 +4176,342 @@
       "terganse",
       "tcini"
     ],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "ganti": {
-    "gloss": null,
-    "liste": [],
-    "namcu": null,
+    "gloss": "gonad",
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 3,
     "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "ganxo": {
     "gloss": "anus",
-    "liste": [],
-    "namcu": null,
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 2,
     "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "ganzu": {
     "gloss": "organize",
-    "liste": [],
-    "namcu": null,
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 4,
     "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "gapci": {
     "gloss": "gas",
-    "liste": [],
-    "namcu": null,
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 3,
     "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "gapru": {
     "gloss": "above",
-    "liste": [],
-    "namcu": null,
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 3,
     "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "garna": {
-    "gloss": null,
-    "liste": [],
-    "namcu": null,
+    "gloss": "rail",
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 3,
     "sumti": [],
     "tags": [
-      "standard"
+      "dacti"
     ]
   },
   "gasnu": {
     "gloss": "do",
-    "liste": [],
-    "namcu": null,
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 2,
     "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "gasta": {
-    "gloss": null,
-    "liste": [],
-    "namcu": null,
+    "gloss": "steel",
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 2,
     "sumti": [],
     "tags": [
-      "standard"
+      "marji"
     ]
   },
   "genja": {
-    "gloss": null,
-    "liste": [],
-    "namcu": null,
-    "sumti": [],
+    "gloss": "root",
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 2,
+    "sumti": [
+      "genja",
+      "spati"
+    ],
     "tags": [
-      "standard"
+      "spati rango"
     ]
   },
   "gento": {
-    "gloss": null,
-    "liste": [],
-    "namcu": null,
-    "sumti": [],
-    "tags": [
-      "standard"
-    ]
-  },
-  "genxu": {
-    "gloss": null,
-    "liste": [],
-    "namcu": null,
-    "sumti": [],
-    "tags": [
-      "standard"
-    ]
-  },
-  "gerku": {
-    "gloss": "dog",
-    "liste": [],
-    "namcu": 2,
-    "sumti": [
-      "mabru",
-      "jutsi"
+    "gloss": "argentinian",
+    "liste": [
+      "jbovlaste"
     ],
-    "tags": [
-      "standard"
-    ]
-  },
-  "gerna": {
-    "gloss": "grammar",
-    "liste": [],
-    "namcu": null,
-    "sumti": [],
-    "tags": [
-      "standard"
-    ]
-  },
-  "gidva": {
-    "gloss": "guide",
-    "liste": [],
-    "namcu": 3,
-    "sumti": [
-      "gasnu",
-      "girzu",
-      "cuntu"
-    ],
-    "tags": [
-      "standard"
-    ]
-  },
-  "gigdo": {
-    "gloss": null,
-    "liste": [],
-    "namcu": null,
-    "sumti": [],
-    "tags": [
-      "standard"
-    ]
-  },
-  "ginka": {
-    "gloss": null,
-    "liste": [],
-    "namcu": null,
-    "sumti": [],
-    "tags": [
-      "standard"
-    ]
-  },
-  "girzu": {
-    "gloss": "group",
-    "liste": [],
-    "namcu": null,
-    "sumti": [],
-    "tags": [
-      "standard"
-    ]
-  },
-  "gismu": {
-    "gloss": null,
-    "liste": [],
-    "namcu": null,
-    "sumti": [],
-    "tags": [
-      "standard"
-    ]
-  },
-  "glare": {
-    "gloss": "hot",
-    "liste": [],
-    "namcu": null,
-    "sumti": [],
-    "tags": [
-      "standard"
-    ]
-  },
-  "gleki": {
-    "gloss": "happy",
-    "liste": [],
-    "namcu": 2,
-    "sumti": [
-      "cinmo",
-      "zo'e"
-    ],
-    "tags": [
-      "standard"
-    ]
-  },
-  "gletu": {
-    "gloss": null,
-    "liste": [],
-    "namcu": null,
-    "sumti": [],
-    "tags": [
-      "standard"
-    ]
-  },
-  "glico": {
-    "gloss": "english",
-    "liste": [],
     "namcu": 2,
     "sumti": [
       "zo'e",
       "ckaji"
     ],
     "tags": [
-      "standard"
+      "natmi"
+    ]
+  },
+  "genxu": {
+    "gloss": "hook",
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 2,
+    "sumti": [
+      "genxu",
+      "marji"
+    ],
+    "tags": [
+      "dacti"
+    ]
+  },
+  "gerku": {
+    "gloss": "dog",
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 2,
+    "sumti": [
+      "gerku",
+      "jutsi"
+    ],
+    "tags": [
+      "mabru"
+    ]
+  },
+  "gerna": {
+    "gloss": "grammar",
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 3,
+    "sumti": [],
+    "tags": []
+  },
+  "gidva": {
+    "gloss": "guide",
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 3,
+    "sumti": [
+      "gasnu",
+      "girzu",
+      "cuntu"
+    ],
+    "tags": []
+  },
+  "gigdo": {
+    "gloss": "10e9",
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 3,
+    "sumti": [],
+    "tags": []
+  },
+  "ginka": {
+    "gloss": "camp",
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 3,
+    "sumti": [],
+    "tags": []
+  },
+  "girzu": {
+    "gloss": "group",
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 4,
+    "sumti": [],
+    "tags": []
+  },
+  "gismu": {
+    "gloss": "gismu",
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 4,
+    "sumti": [
+      "gismu",
+      "bridi",
+      "sumti",
+      "rafsi"
+    ],
+    "tags": [
+      "valsi",
+      "gerna"
+    ]
+  },
+  "glare": {
+    "gloss": "hot",
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 2,
+    "sumti": [
+      "zo'e",
+      "ckilu"
+    ],
+    "tags": []
+  },
+  "gleki": {
+    "gloss": "happy",
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 2,
+    "sumti": [
+      "cinmo",
+      "zo'e"
+    ],
+    "tags": [
+      "cinmo"
+    ]
+  },
+  "gletu": {
+    "gloss": "copulate",
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 2,
+    "sumti": [],
+    "tags": []
+  },
+  "glico": {
+    "gloss": "english",
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 2,
+    "sumti": [
+      "zo'e",
+      "ckaji"
+    ],
+    "tags": [
+      "bangu"
     ]
   },
   "gluta": {
-    "gloss": null,
-    "liste": [],
-    "namcu": null,
-    "sumti": [],
+    "gloss": "glove",
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 2,
+    "sumti": [
+      "gluta",
+      "marji"
+    ],
     "tags": [
-      "standard"
+      "taxfu"
     ]
   },
   "gocti": {
-    "gloss": null,
-    "liste": [],
-    "namcu": null,
+    "gloss": "10e-24",
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 3,
     "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "gotro": {
-    "gloss": null,
-    "liste": [],
-    "namcu": null,
+    "gloss": "10e24",
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 3,
     "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "gradu": {
-    "gloss": null,
-    "liste": [],
-    "namcu": null,
-    "sumti": [],
+    "gloss": "unit",
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 3,
+    "sumti": [
+      "gradu",
+      "ckilu",
+      "ckaji"
+    ],
     "tags": [
-      "standard"
+      "gradu"
     ]
   },
   "grake": {
-    "gloss": null,
-    "liste": [],
-    "namcu": null,
-    "sumti": [],
+    "gloss": "gram",
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 3,
+    "sumti": [
+      "dacti",
+      "namcu",
+      "ckilu"
+    ],
     "tags": [
-      "standard"
+      "gradu"
     ]
   },
   "grana": {
     "gloss": "rod",
-    "liste": [],
-    "namcu": null,
-    "sumti": [],
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 2,
+    "sumti": [
+      "grana",
+      "marji"
+    ],
     "tags": [
-      "standard"
+      "dacti"
     ]
   },
   "grasu": {
     "gloss": "fat",
-    "liste": [],
-    "namcu": null,
-    "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 2,
+    "sumti": [
+      "grasu",
+      "krasi"
+    ],
+    "tags": []
   },
   "greku": {
     "gloss": "frame",
@@ -4467,34 +4527,45 @@
   },
   "grusi": {
     "gloss": "gray",
-    "liste": [],
-    "namcu": null,
-    "sumti": [],
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 1,
+    "sumti": [
+      "zo'e"
+    ],
     "tags": [
-      "standard"
+      "skari"
     ]
   },
   "grute": {
     "gloss": "fruit",
-    "liste": [],
-    "namcu": null,
-    "sumti": [],
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 2,
+    "sumti": [
+      "grute",
+      "spati"
+    ],
     "tags": [
-      "standard"
+      "spati rango"
     ]
   },
   "gubni": {
     "gloss": "public",
-    "liste": [],
-    "namcu": null,
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 2,
     "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "gugde": {
     "gloss": "country",
-    "liste": [],
+    "liste": [
+      "jbovlaste"
+    ],
     "namcu": 3,
     "sumti": [
       "gugde",
@@ -4505,225 +4576,268 @@
   },
   "gundi": {
     "gloss": "industry",
-    "liste": [],
+    "liste": [
+      "jbovlaste"
+    ],
     "namcu": 3,
     "sumti": [
       "gundi",
       "selgundi",
       "pruce"
     ],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "gunka": {
     "gloss": "work",
-    "liste": [],
-    "namcu": null,
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 3,
     "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "gunma": {
     "gloss": "aggregate",
-    "liste": [],
+    "liste": [
+      "jbovlaste"
+    ],
     "namcu": 2,
     "sumti": [
       "gunma",
       "spisa"
     ],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "gunro": {
-    "gloss": null,
-    "liste": [],
-    "namcu": null,
+    "gloss": "roll",
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 3,
     "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "gunse": {
-    "gloss": null,
-    "liste": [],
-    "namcu": null,
-    "sumti": [],
+    "gloss": "goose",
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 2,
+    "sumti": [
+      "gunse",
+      "jutsi"
+    ],
     "tags": [
-      "standard"
+      "cipni"
     ]
   },
   "gunta": {
     "gloss": "attack",
-    "liste": [],
-    "namcu": null,
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 3,
     "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "gurni": {
-    "gloss": null,
-    "liste": [],
-    "namcu": null,
-    "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "gloss": "grain",
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 2,
+    "sumti": [
+      "gurni",
+      "jutsi"
+    ],
+    "tags": []
   },
   "guska": {
-    "gloss": null,
-    "liste": [],
-    "namcu": null,
+    "gloss": "scrape",
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 3,
     "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "gusni": {
     "gloss": "light",
-    "liste": [],
+    "liste": [
+      "jbovlaste"
+    ],
     "namcu": 3,
     "sumti": [
       "gusni",
       "canlu",
       "krasi"
     ],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "gusta": {
     "gloss": "restaurant",
-    "liste": [],
-    "namcu": null,
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 3,
     "sumti": [],
     "tags": [
-      "standard"
+      "dinju"
     ]
   },
   "gutci": {
-    "gloss": null,
-    "liste": [],
-    "namcu": null,
+    "gloss": "local distance",
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 4,
     "sumti": [],
     "tags": [
-      "standard"
+      "diklo gradu"
     ]
   },
   "gutra": {
-    "gloss": null,
-    "liste": [],
-    "namcu": null,
-    "sumti": [],
+    "gloss": "womb",
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 2,
+    "sumti": [
+      "gutra",
+      "xadni"
+    ],
     "tags": [
-      "standard"
+      "rango"
     ]
   },
   "guzme": {
-    "gloss": null,
-    "liste": [],
-    "namcu": null,
-    "sumti": [],
+    "gloss": "melon",
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 2,
+    "sumti": [
+      "guzme",
+      "jutsi"
+    ],
     "tags": [
-      "standard"
+      "spati"
     ]
   },
   "jabre": {
-    "gloss": null,
-    "liste": [],
-    "namcu": null,
+    "gloss": "brake",
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 3,
     "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "jadni": {
     "gloss": "adorn",
-    "liste": [],
-    "namcu": null,
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 2,
     "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "jakne": {
-    "gloss": null,
-    "liste": [],
-    "namcu": null,
+    "gloss": "rocket",
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 3,
     "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "jalge": {
     "gloss": "result",
     "liste": [],
-    "namcu": null,
+    "namcu": 2,
     "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "jalna": {
-    "gloss": null,
-    "liste": [],
-    "namcu": null,
+    "gloss": "starch",
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 3,
     "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "jalra": {
-    "gloss": null,
-    "liste": [],
-    "namcu": null,
-    "sumti": [],
+    "gloss": "cockroach",
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 2,
+    "sumti": [
+      "jalra",
+      "jutsi"
+    ],
     "tags": [
-      "standard"
+      "cinki"
     ]
   },
   "jamfu": {
     "gloss": "foot",
-    "liste": [],
-    "namcu": null,
-    "sumti": [],
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 2,
+    "sumti": [
+      "jamfu",
+      "xadni"
+    ],
     "tags": [
-      "standard"
+      "rango"
     ]
   },
   "jamna": {
     "gloss": "war",
-    "liste": [],
-    "namcu": null,
-    "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 3,
+    "sumti": [
+      "jamna",
+      "seljamna",
+      "terjamna"
+    ],
+    "tags": []
   },
   "janbe": {
     "gloss": "bell",
-    "liste": [],
-    "namcu": null,
-    "sumti": [],
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 2,
+    "sumti": [
+      "janbe",
+      "tonga"
+    ],
     "tags": [
-      "standard"
+      "damri"
     ]
   },
   "janco": {
     "gloss": "greater bodily joint",
-    "liste": [],
-    "namcu": null,
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 3,
     "sumti": [],
     "tags": [
-      "standard"
+      "rango"
     ]
   },
   "janli": {
     "gloss": "collide",
-    "liste": [],
+    "liste": [
+      "jbovlaste"
+    ],
     "namcu": 2,
     "sumti": [
       "dacti",
@@ -4734,67 +4848,79 @@
     ]
   },
   "jansu": {
-    "gloss": null,
-    "liste": [],
-    "namcu": null,
+    "gloss": "diplomat",
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 4,
     "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "janta": {
-    "gloss": null,
-    "liste": [],
-    "namcu": null,
+    "gloss": "account",
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 4,
     "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "jarbu": {
-    "gloss": null,
-    "liste": [],
-    "namcu": null,
-    "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "gloss": "suburb",
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 2,
+    "sumti": [
+      "jarbu",
+      "tcadu"
+    ],
+    "tags": []
   },
   "jarco": {
     "gloss": "show",
-    "liste": [],
-    "namcu": null,
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 3,
     "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "jarki": {
-    "gloss": null,
-    "liste": [],
-    "namcu": null,
-    "sumti": [],
+    "gloss": "narrow",
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 3,
+    "sumti": [
+      "zasti",
+      "cimde",
+      "ckilu"
+    ],
     "tags": [
-      "standard"
+      "cimde karbi"
     ]
   },
   "jaspu": {
-    "gloss": null,
-    "liste": [],
-    "namcu": null,
+    "gloss": "passport",
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 4,
     "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "jatna": {
     "gloss": "leader",
-    "liste": [],
-    "namcu": null,
-    "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 2,
+    "sumti": [
+      "jatna",
+      "selja'a"
+    ],
+    "tags": []
   },
   "javni": {
     "gloss": "rule",
@@ -4813,39 +4939,44 @@
   },
   "jbama": {
     "gloss": "bomb",
-    "liste": [],
-    "namcu": null,
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 2,
     "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "jbari": {
-    "gloss": null,
-    "liste": [],
-    "namcu": null,
-    "sumti": [],
+    "gloss": "berry",
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 2,
+    "sumti": [
+      "jbari",
+      "spati"
+    ],
     "tags": [
-      "standard"
+      "spati rango"
     ]
   },
   "jbena": {
     "gloss": "born",
-    "liste": [],
-    "namcu": null,
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 4,
     "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "jbera": {
-    "gloss": null,
-    "liste": [],
-    "namcu": null,
+    "gloss": "borrow",
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 4,
     "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "jbini": {
     "gloss": "between",
@@ -4864,25 +4995,25 @@
   },
   "jdari": {
     "gloss": "firm",
-    "liste": [],
-    "namcu": null,
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 3,
     "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "jdice": {
     "gloss": "decide",
-    "liste": [],
+    "liste": [
+      "jbovlaste"
+    ],
     "namcu": 3,
     "sumti": [
       "gasnu",
       "bridi",
       "sidbo"
     ],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "jdika": {
     "gloss": "decrease",
@@ -4901,159 +5032,176 @@
   },
   "jdima": {
     "gloss": "price",
-    "liste": [],
-    "namcu": null,
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 4,
     "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "jdini": {
     "gloss": "money",
-    "liste": [],
-    "namcu": null,
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 2,
     "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "jduli": {
-    "gloss": null,
-    "liste": [],
-    "namcu": null,
+    "gloss": "jelly",
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 2,
     "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "jecta": {
     "gloss": "polity",
-    "liste": [],
+    "liste": [
+      "jbovlaste"
+    ],
     "namcu": 2,
     "sumti": [
       "jecta",
       "tutra"
     ],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "jeftu": {
     "gloss": "week",
-    "liste": [],
-    "namcu": null,
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 3,
     "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "jegvo": {
-    "gloss": null,
-    "liste": [],
-    "namcu": null,
-    "sumti": [],
+    "gloss": "abrahamic",
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 2,
+    "sumti": [
+      "zo'e",
+      "ckaji"
+    ],
     "tags": [
-      "standard"
+      "lijda"
     ]
   },
   "jelca": {
     "gloss": "burn",
-    "liste": [],
-    "namcu": null,
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 3,
     "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "jemna": {
     "gloss": "gem",
-    "liste": [],
-    "namcu": null,
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 3,
     "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "jenca": {
     "gloss": "shock",
-    "liste": [],
-    "namcu": null,
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 2,
     "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "jendu": {
-    "gloss": null,
-    "liste": [],
-    "namcu": null,
+    "gloss": "axle",
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 3,
     "sumti": [],
     "tags": [
-      "standard"
+      "dacti"
     ]
   },
   "jenmi": {
-    "gloss": null,
-    "liste": [],
-    "namcu": null,
+    "gloss": "army",
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 3,
     "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "jerna": {
     "gloss": "earn",
-    "liste": [],
-    "namcu": null,
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 3,
     "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "jersi": {
     "gloss": "chase",
-    "liste": [],
-    "namcu": null,
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 2,
     "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "jerxo": {
-    "gloss": null,
-    "liste": [],
-    "namcu": null,
-    "sumti": [],
+    "gloss": "algerian",
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 2,
+    "sumti": [
+      "zo'e",
+      "ckaji"
+    ],
     "tags": [
-      "standard"
+      "natmi"
     ]
   },
   "jesni": {
-    "gloss": null,
-    "liste": [],
-    "namcu": null,
-    "sumti": [],
+    "gloss": "needle",
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 2,
+    "sumti": [
+      "jesni",
+      "marji"
+    ],
     "tags": [
-      "standard"
+      "dacti"
     ]
   },
   "jetce": {
-    "gloss": null,
-    "liste": [],
-    "namcu": null,
+    "gloss": "jet",
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 3,
     "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "jetnu": {
     "gloss": "true",
-    "liste": [],
-    "namcu": null,
+    "liste": [
+      "jbovlaste"
+    ],
+    "namcu": 2,
     "sumti": [],
-    "tags": [
-      "standard"
-    ]
+    "tags": []
   },
   "jgalu": {
     "gloss": "claw",
@@ -10392,7 +10540,7 @@
     ]
   },
   "skori": {
-    "gloss": null,
+    "gloss": "rope",
     "liste": [],
     "namcu": null,
     "sumti": [],
