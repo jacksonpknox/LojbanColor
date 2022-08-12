@@ -11,7 +11,7 @@
       "sance"
     ],
     "tags": [
-      "fasnu"
+      "cusku"
     ]
   },
   "badna": {
@@ -136,7 +136,7 @@
       "justi"
     ],
     "tags": [
-      "spatyrango"
+      "spati rango"
     ]
   },
   "balni": {
@@ -178,11 +178,12 @@
     ],
     "namcu": 2,
     "sumti": [
-      "balvytcika",
-      "prutcika"
+      "balvi tcika",
+      "purci tcika"
     ],
     "tags": [
-      "tcika porsi"
+      "tcika porsi",
+      "karbi"
     ]
   },
   "bancu": {
@@ -198,7 +199,9 @@
       "zo'e",
       "klani"
     ],
-    "tags": []
+    "tags": [
+      "karbi"
+    ]
   },
   "bandu": {
     "gloss": "defend",
@@ -243,7 +246,9 @@
       "prenu",
       "sidbo"
     ],
-    "tags": []
+    "tags": [
+      "gerna"
+    ]
   },
   "banli": {
     "gloss": "great",
@@ -257,7 +262,9 @@
       "ckaji",
       "ckilu"
     ],
-    "tags": []
+    "tags": [
+      "karbi"
+    ]
   },
   "banro": {
     "gloss": "grow",
@@ -268,8 +275,8 @@
     "namcu": 3,
     "sumti": [
       "zo'e",
-      "bratarmi",
-      "cmatarmi"
+      "barda tarmi",
+      "cmalu tarmi"
     ],
     "tags": [
       "fasnu"
@@ -287,7 +294,10 @@
       "ciste",
       "selgau"
     ],
-    "tags": []
+    "tags": [
+      "dinju",
+      "jdini"
+    ]
   },
   "banzu": {
     "gloss": "suffice",
@@ -301,7 +311,9 @@
       "nitcu",
       "tcini"
     ],
-    "tags": []
+    "tags": [
+      "karbi"
+    ]
   },
   "bapli": {
     "gloss": "compel",
@@ -315,7 +327,7 @@
       "fasnu"
     ],
     "tags": [
-      "gasnuvla"
+      "gasnu"
     ]
   },
   "barda": {
@@ -330,7 +342,9 @@
       "ckaji",
       "ckilu"
     ],
-    "tags": []
+    "tags": [
+      "karbi"
+    ]
   },
   "bargu": {
     "gloss": "arch",
@@ -344,7 +358,9 @@
       "gapru",
       "marji"
     ],
-    "tags": []
+    "tags": [
+      "dacti"
+    ]
   },
   "barja": {
     "gloss": "tavern",
@@ -355,10 +371,13 @@
     "namcu": 3,
     "sumti": [
       "barja",
-      "zo'e",
-      "zo'e"
+      "cidja",
+      "prenu"
     ],
-    "tags": []
+    "tags": [
+      "dinju",
+      "gusta"
+    ]
   },
   "barna": {
     "gloss": "mark",
@@ -385,7 +404,9 @@
       "stuzi",
       "korbi"
     ],
-    "tags": []
+    "tags": [
+      "karbi"
+    ]
   },
   "basna": {
     "gloss": "emphasize",
@@ -399,9 +420,7 @@
       "zo'e",
       "tadji"
     ],
-    "tags": [
-      "fasnu"
-    ]
+    "tags": []
   },
   "basti": {
     "gloss": "replace",
@@ -426,8 +445,8 @@
     "namcu": 4,
     "sumti": [
       "gasnu",
-      "selgunta",
-      "seldiklo",
+      "dacti",
+      "diklo",
       "selpilno"
     ],
     "tags": [
@@ -461,7 +480,6 @@
       "jutsi"
     ],
     "tags": [
-      "spatyvla",
       "spati",
       "gurni"
     ]
@@ -478,7 +496,7 @@
       "selckaji"
     ],
     "tags": [
-      "natmyvla",
+      "natmi",
       "kulnu"
     ]
   },
@@ -493,9 +511,7 @@
       "bebna",
       "zo'e"
     ],
-    "tags": [
-      "bebnyvla"
-    ]
+    "tags": []
   },
   "bemro": {
     "gloss": "north american",
@@ -506,11 +522,10 @@
     "namcu": 2,
     "sumti": [
       "zo'e",
-      "selckaji"
+      "ckaji"
     ],
     "tags": [
-      "natmyvla",
-      "kulnu"
+      "braplu"
     ]
   },
   "bende": {
@@ -540,7 +555,7 @@
       "selckaji"
     ],
     "tags": [
-      "natmyvla"
+      "natmi"
     ]
   },
   "benji": {
@@ -558,8 +573,7 @@
       "tadji"
     ],
     "tags": [
-      "fasnu",
-      "cuskyvla"
+      "cusku"
     ]
   },
   "bersa": {
@@ -574,9 +588,8 @@
       "rirni"
     ],
     "tags": [
-      "panzi",
-      "nakni",
-      "nanmu"
+      "lanzu",
+      "panzi"
     ]
   },
   "berti": {
@@ -653,7 +666,6 @@
       "pluta"
     ],
     "tags": [
-      "fasnu",
       "muvdu"
     ]
   },
@@ -679,8 +691,13 @@
       "jbovlaste"
     ],
     "namcu": 2,
-    "sumti": [],
-    "tags": []
+    "sumti": [
+      "bifce",
+      "jutsi"
+    ],
+    "tags": [
+      "cinki"
+    ]
   },
   "bikla": {
     "gloss": "whip",
@@ -706,9 +723,7 @@
       "selgau",
       "terbilga"
     ],
-    "tags": [
-      "flalu"
-    ]
+    "tags": []
   },
   "bilma": {
     "gloss": "ill",
@@ -731,7 +746,11 @@
       "jbovlaste"
     ],
     "namcu": 3,
-    "sumti": [],
+    "sumti": [
+      "bilni",
+      "ciste",
+      "terpli"
+    ],
     "tags": []
   },
   "bindo": {
@@ -787,8 +806,13 @@
       "jbovlaste"
     ],
     "namcu": 2,
-    "sumti": [],
-    "tags": []
+    "sumti": [
+      "birje",
+      "selbirje"
+    ],
+    "tags": [
+      "litki cidja"
+    ]
   },
   "birka": {
     "gloss": "arm",
@@ -797,8 +821,13 @@
       "jbovlaste"
     ],
     "namcu": 2,
-    "sumti": [],
-    "tags": []
+    "sumti": [
+      "birka",
+      "xadni"
+    ],
+    "tags": [
+      "rango"
+    ]
   },
   "birti": {
     "gloss": "certain",
@@ -807,8 +836,13 @@
       "jbovlaste"
     ],
     "namcu": 2,
-    "sumti": [],
-    "tags": []
+    "sumti": [
+      "menli",
+      "bridi"
+    ],
+    "tags": [
+      "menli"
+    ]
   },
   "bisli": {
     "gloss": "ice",
@@ -817,7 +851,10 @@
       "jbovlaste"
     ],
     "namcu": 2,
-    "sumti": [],
+    "sumti": [
+      "bisli",
+      "marji"
+    ],
     "tags": []
   },
   "bitmu": {
@@ -845,7 +882,9 @@
     "sumti": [
       "zo'e"
     ],
-    "tags": []
+    "tags": [
+      "skari"
+    ]
   },
   "blaci": {
     "gloss": "glass",
@@ -854,7 +893,10 @@
       "jbovlaste"
     ],
     "namcu": 2,
-    "sumti": [],
+    "sumti": [
+      "blaci",
+      "marji"
+    ],
     "tags": []
   },
   "blanu": {
@@ -864,8 +906,12 @@
       "jbovlaste"
     ],
     "namcu": 1,
-    "sumti": [],
-    "tags": []
+    "sumti": [
+      "zo'e"
+    ],
+    "tags": [
+      "skari"
+    ]
   },
   "bliku": {
     "gloss": "block",
@@ -890,8 +936,14 @@
       "jbovlaste"
     ],
     "namcu": 3,
-    "sumti": [],
-    "tags": []
+    "sumti": [
+      "bloti",
+      "selmarce",
+      "velmarce"
+    ],
+    "tags": [
+      "marce"
+    ]
   },
   "bolci": {
     "gloss": "sphere",
@@ -900,8 +952,14 @@
       "jbovlaste"
     ],
     "namcu": 2,
-    "sumti": [],
-    "tags": []
+    "sumti": [
+      "bolci",
+      "marji"
+    ],
+    "tags": [
+      "dacti",
+      "tarmi"
+    ]
   },
   "bongu": {
     "gloss": "bone",
@@ -910,8 +968,14 @@
       "jbovlaste"
     ],
     "namcu": 3,
-    "sumti": [],
-    "tags": []
+    "sumti": [
+      "bongu",
+      "terpli",
+      "xadni"
+    ],
+    "tags": [
+      "rango"
+    ]
   },
   "botpi": {
     "gloss": "bottle",
@@ -920,8 +984,15 @@
       "jbovlaste"
     ],
     "namcu": 4,
-    "sumti": [],
-    "tags": []
+    "sumti": [
+      "botpi",
+      "selvasru",
+      "marji",
+      "gacri"
+    ],
+    "tags": [
+      "vasru"
+    ]
   },
   "boxfo": {
     "gloss": "sheet",
@@ -945,7 +1016,13 @@
       "jbovlaste"
     ],
     "namcu": 5,
-    "sumti": [],
+    "sumti": [
+      "boxna",
+      "foldi",
+      "tarmi",
+      "velbo'a",
+      "xelbo'a"
+    ],
     "tags": []
   },
   "bradi": {
@@ -1045,8 +1122,14 @@
       "jbovlaste"
     ],
     "namcu": 3,
-    "sumti": [],
-    "tags": []
+    "sumti": [
+      "briju",
+      "gunka",
+      "stuzi"
+    ],
+    "tags": [
+      "dinju"
+    ]
   },
   "brito": {
     "gloss": "british",
@@ -1055,8 +1138,13 @@
       "jbovlaste"
     ],
     "namcu": 2,
-    "sumti": [],
-    "tags": []
+    "sumti": [
+      "zo'e",
+      "ckaji"
+    ],
+    "tags": [
+      "natmi"
+    ]
   },
   "broda": {
     "gloss": "var1",
@@ -1065,7 +1153,13 @@
       "jbovlaste"
     ],
     "namcu": 5,
-    "sumti": [],
+    "sumti": [
+      "zo'e",
+      "zo'e",
+      "zo'e",
+      "zo'e",
+      "zo'e"
+    ],
     "tags": [
       "broda"
     ]
@@ -1077,7 +1171,13 @@
       "jbovlaste"
     ],
     "namcu": 5,
-    "sumti": [],
+    "sumti": [
+      "zo'e",
+      "zo'e",
+      "zo'e",
+      "zo'e",
+      "zo'e"
+    ],
     "tags": [
       "broda"
     ]
@@ -1089,7 +1189,13 @@
       "jbovlaste"
     ],
     "namcu": 5,
-    "sumti": [],
+    "sumti": [
+      "zo'e",
+      "zo'e",
+      "zo'e",
+      "zo'e",
+      "zo'e"
+    ],
     "tags": [
       "broda"
     ]
@@ -1101,7 +1207,13 @@
       "jbovlaste"
     ],
     "namcu": 5,
-    "sumti": [],
+    "sumti": [
+      "zo'e",
+      "zo'e",
+      "zo'e",
+      "zo'e",
+      "zo'e"
+    ],
     "tags": [
       "broda"
     ]
@@ -1113,7 +1225,13 @@
       "jbovlaste"
     ],
     "namcu": 5,
-    "sumti": [],
+    "sumti": [
+      "zo'e",
+      "zo'e",
+      "zo'e",
+      "zo'e",
+      "zo'e"
+    ],
     "tags": [
       "broda"
     ]
@@ -1130,7 +1248,10 @@
       "tcana",
       "tricu"
     ],
-    "tags": []
+    "tags": [
+      "lanzu",
+      "tunba"
+    ]
   },
   "budjo": {
     "gloss": "buddhist",
@@ -1246,7 +1367,9 @@
       "tcika",
       "tcika"
     ],
-    "tags": []
+    "tags": [
+      "tcika porsi"
+    ]
   },
   "cabra": {
     "gloss": "device",
@@ -1255,7 +1378,11 @@
       "jbovlaste"
     ],
     "namcu": 3,
-    "sumti": [],
+    "sumti": [
+      "cabra",
+      "terpli",
+      "gasnu"
+    ],
     "tags": []
   },
   "cacra": {
@@ -1265,8 +1392,14 @@
       "jbovlaste"
     ],
     "namcu": 3,
-    "sumti": [],
-    "tags": []
+    "sumti": [
+      "temci",
+      "namcu",
+      "ckilu"
+    ],
+    "tags": [
+      "temci gradu"
+    ]
   },
   "cadzu": {
     "gloss": "walk",
@@ -1280,7 +1413,9 @@
       "sefta",
       "tercadzu"
     ],
-    "tags": []
+    "tags": [
+      "cadzu"
+    ]
   },
   "cafne": {
     "gloss": "often",
@@ -1302,7 +1437,9 @@
       "jbovlaste"
     ],
     "namcu": 1,
-    "sumti": [],
+    "sumti": [
+      "cakla"
+    ],
     "tags": []
   },
   "calku": {
@@ -1326,7 +1463,11 @@
       "jbovlaste"
     ],
     "namcu": 3,
-    "sumti": [],
+    "sumti": [
+      "canci",
+      "stuzi",
+      "terganse"
+    ],
     "tags": []
   },
   "cando": {
@@ -1336,7 +1477,9 @@
       "jbovlaste"
     ],
     "namcu": 1,
-    "sumti": [],
+    "sumti": [
+      "minji"
+    ],
     "tags": []
   },
   "cange": {
@@ -1346,7 +1489,12 @@
       "jbovlaste"
     ],
     "namcu": 4,
-    "sumti": [],
+    "sumti": [
+      "cange",
+      "stuzi",
+      "tercange",
+      "velcange"
+    ],
     "tags": []
   },
   "canja": {
@@ -1386,7 +1534,10 @@
       "jbovlaste"
     ],
     "namcu": 2,
-    "sumti": [],
+    "sumti": [
+      "canlu",
+      "zasti"
+    ],
     "tags": []
   },
   "canpa": {
@@ -1456,7 +1607,11 @@
       "jbovlaste"
     ],
     "namcu": 3,
-    "sumti": [],
+    "sumti": [
+      "carmi",
+      "ckaji",
+      "ganse"
+    ],
     "tags": []
   },
   "carna": {
@@ -1466,7 +1621,12 @@
       "jbovlaste"
     ],
     "namcu": 4,
-    "sumti": [],
+    "sumti": [
+      "carna",
+      "selcarna",
+      "farna",
+      "velcarna"
+    ],
     "tags": []
   },
   "cartu": {
@@ -1476,7 +1636,11 @@
       "jbovlaste"
     ],
     "namcu": 3,
-    "sumti": [],
+    "sumti": [
+      "cartu",
+      "zasti",
+      "datni"
+    ],
     "tags": []
   },
   "carvi": {
@@ -1486,7 +1650,11 @@
       "jbovlaste"
     ],
     "namcu": 3,
-    "sumti": [],
+    "sumti": [
+      "carvi",
+      "selcarvi",
+      "tercarvi"
+    ],
     "tags": []
   },
   "casnu": {
@@ -1509,7 +1677,11 @@
       "jbovlaste"
     ],
     "namcu": 3,
-    "sumti": [],
+    "sumti": [
+      "catke",
+      "selcatke",
+      "diklo"
+    ],
     "tags": []
   },
   "catlu": {
@@ -1532,7 +1704,11 @@
       "jbovlaste"
     ],
     "namcu": 3,
-    "sumti": [],
+    "sumti": [
+      "catni",
+      "selcatni",
+      "tercatni"
+    ],
     "tags": []
   },
   "catra": {

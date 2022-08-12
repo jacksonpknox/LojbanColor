@@ -1,6 +1,5 @@
 import argparse
 import json
-from tubnu.rich_argparse import RichHelpFormatter
 import tubnu.plumbing as plumbing
 
 class Attribute:
@@ -196,14 +195,3 @@ def inflate_schematic_cuxna_parser(parser: argparse.ArgumentParser, schema: dict
             dest=attribute.name.replace("-", "_"),
             **attribute.kwargs,
         )
-
-        
-        
-gismu_cuxna_schema = [
-    SingleStringAttribute("gloss"),
-    TagsListAttribute("liste"),
-    TagsListAttribute("tags"),
-    TagsListAttribute("cmarafsi", verifier=lambda x: plumbing.is_cmarafsi(x[1])),
-    SingleIntegerAttribute("namcu", lambda x : int(x[1]) in range(1,6)), # bug. doesnt know it is an int
-    SpringyTagsListAttribute("sumti", "zo'e", lambda x : int(x[1]) in range(1,6)),
-]
