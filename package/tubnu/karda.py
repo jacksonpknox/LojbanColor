@@ -161,6 +161,7 @@ def tabulate_cmavos(c, selmahos, skari: dict, show_styles: bool = False):
     if show_styles:
         table.add_column("style", style=Style.parse(skari["mi'iskari"]["system"]))
     for cmavo in c:
+        #TODO: change selmahos to cmavos?
         s = plumbing.get_selmaho(cmavo, selmahos)
         colr = Style.parse(selmahos[s]["skari"])
         if show_styles:

@@ -128,6 +128,7 @@ def get_gloss(gismu: str, gismus: dict) -> str:
 
 
 def get_selmaho(cmavo: str, cmavos: dict) -> str:
+    #TODO: rewrite ?
     if not is_cmavo(cmavo):
         raise Exception("Error! not cmavo by morphology exception: " + cmavo)
     if cmavo not in cmavos.keys():
