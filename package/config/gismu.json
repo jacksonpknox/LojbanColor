@@ -259,7 +259,7 @@
     "namcu": 3,
     "sumti": [
       "zo'e",
-      "ckaji",
+      "selkai",
       "ckilu"
     ],
     "tags": [
@@ -339,7 +339,7 @@
     "namcu": 3,
     "sumti": [
       "zo'e",
-      "ckaji",
+      "selkai",
       "ckilu"
     ],
     "tags": [
@@ -493,7 +493,7 @@
     "namcu": 2,
     "sumti": [
       "zo'e",
-      "selckaji"
+      "selselkai"
     ],
     "tags": [
       "natmi",
@@ -522,7 +522,7 @@
     "namcu": 2,
     "sumti": [
       "zo'e",
-      "ckaji"
+      "selkai"
     ],
     "tags": [
       "braplu"
@@ -552,7 +552,7 @@
     "namcu": 2,
     "sumti": [
       "zo'e",
-      "selckaji"
+      "selselkai"
     ],
     "tags": [
       "natmi"
@@ -762,7 +762,7 @@
     "namcu": 2,
     "sumti": [
       "zo'e",
-      "ckaji"
+      "selkai"
     ],
     "tags": [
       "natmi"
@@ -1063,7 +1063,7 @@
     "namcu": 2,
     "sumti": [
       "zo'e",
-      "ckaji"
+      "selkai"
     ],
     "tags": [
       "natmi"
@@ -1140,7 +1140,7 @@
     "namcu": 2,
     "sumti": [
       "zo'e",
-      "ckaji"
+      "selkai"
     ],
     "tags": [
       "natmi"
@@ -1262,7 +1262,7 @@
     "namcu": 2,
     "sumti": [
       "budjo",
-      "ckaji"
+      "selkai"
     ],
     "tags": [
       "lijda"
@@ -1609,7 +1609,7 @@
     "namcu": 3,
     "sumti": [
       "carmi",
-      "ckaji",
+      "selkai",
       "ganse"
     ],
     "tags": []
@@ -1732,8 +1732,15 @@
       "jbovlaste"
     ],
     "namcu": 4,
-    "sumti": [],
-    "tags": []
+    "sumti": [
+      "zo'e",
+      "selkai",
+      "manri",
+      "ckilu"
+    ],
+    "tags": [
+      "cimde karbi"
+    ]
   },
   "cecla": {
     "gloss": "launch",
@@ -1742,7 +1749,11 @@
       "jbovlaste"
     ],
     "namcu": 3,
-    "sumti": [],
+    "sumti": [
+      "gasnu",
+      "danti",
+      "velmarce"
+    ],
     "tags": []
   },
   "cecmu": {
@@ -1752,8 +1763,13 @@
       "jbovlaste"
     ],
     "namcu": 2,
-    "sumti": [],
-    "tags": []
+    "sumti": [
+      "cecmu",
+      "jmive"
+    ],
+    "tags": [
+      "girzu"
+    ]
   },
   "cedra": {
     "gloss": "era",
@@ -1766,7 +1782,9 @@
       "cedra",
       "tcita"
     ],
-    "tags": []
+    "tags": [
+      "temci"
+    ]
   },
   "cenba": {
     "gloss": "change",
@@ -1775,7 +1793,12 @@
       "jbovlaste"
     ],
     "namcu": 4,
-    "sumti": [],
+    "sumti": [
+      "zasti",
+      "selkai",
+      "klani",
+      "tcini"
+    ],
     "tags": []
   },
   "censa": {
@@ -1785,7 +1808,10 @@
       "jbovlaste"
     ],
     "namcu": 2,
-    "sumti": [],
+    "sumti": [
+      "zasti",
+      "lijda"
+    ],
     "tags": []
   },
   "centi": {
@@ -1795,8 +1821,14 @@
       "jbovlaste"
     ],
     "namcu": 3,
-    "sumti": [],
-    "tags": []
+    "sumti": [
+      "cmalu namcu",
+      "barda namcu",
+      "selkai"
+    ],
+    "tags": [
+      "namcu"
+    ]
   },
   "cerda": {
     "gloss": "heir",
@@ -1805,7 +1837,12 @@
       "jbovlaste"
     ],
     "namcu": 4,
-    "sumti": [],
+    "sumti": [
+      "cerda",
+      "selcerda",
+      "tercerda",
+      "jvinu"
+    ],
     "tags": []
   },
   "cerni": {
@@ -1820,7 +1857,9 @@
       "detri",
       "stuzi"
     ],
-    "tags": []
+    "tags": [
+      "temci"
+    ]
   },
   "certu": {
     "gloss": "expert",
@@ -1829,7 +1868,11 @@
       "jbovlaste"
     ],
     "namcu": 3,
-    "sumti": [],
+    "sumti": [
+      "certu",
+      "selcertu",
+      "ckilu"
+    ],
     "tags": []
   },
   "cevni": {
@@ -1839,7 +1882,11 @@
       "jbovlaste"
     ],
     "namcu": 3,
-    "sumti": [],
+    "sumti": [
+      "cevni",
+      "lijda",
+      "tercevni"
+    ],
     "tags": []
   },
   "cfari": {
@@ -1849,8 +1896,12 @@
       "jbovlaste"
     ],
     "namcu": 1,
-    "sumti": [],
-    "tags": []
+    "sumti": [
+      "pruce"
+    ],
+    "tags": [
+      "pruce"
+    ]
   },
   "cfika": {
     "gloss": "fiction",
@@ -1859,8 +1910,14 @@
       "jbovlaste"
     ],
     "namcu": 3,
-    "sumti": [],
-    "tags": []
+    "sumti": [
+      "cfika",
+      "selmlisri",
+      "termlisri"
+    ],
+    "tags": [
+      "lisri"
+    ]
   },
   "cfila": {
     "gloss": "flaw",
@@ -1869,7 +1926,11 @@
       "jbovlaste"
     ],
     "namcu": 3,
-    "sumti": [],
+    "sumti": [
+      "ckaji",
+      "zasti",
+      "selrinka"
+    ],
     "tags": []
   },
   "cfine": {
@@ -1894,8 +1955,14 @@
       "jbovlaste"
     ],
     "namcu": 3,
-    "sumti": [],
-    "tags": []
+    "sumti": [
+      "rinka",
+      "menli",
+      "ckaji"
+    ],
+    "tags": [
+      "menli"
+    ]
   },
   "ciblu": {
     "gloss": "blood",
@@ -1904,8 +1971,13 @@
       "jbovlaste"
     ],
     "namcu": 2,
-    "sumti": [],
-    "tags": []
+    "sumti": [
+      "ciblu",
+      "danlu"
+    ],
+    "tags": [
+      "rango"
+    ]
   },
   "cicna": {
     "gloss": "cyan",
@@ -1928,7 +2000,10 @@
       "jbovlaste"
     ],
     "namcu": 2,
-    "sumti": [],
+    "sumti": [
+      "cidja",
+      "jmive"
+    ],
     "tags": []
   },
   "cidni": {
@@ -1938,7 +2013,11 @@
       "jbovlaste"
     ],
     "namcu": 3,
-    "sumti": [],
+    "sumti": [
+      "cidni",
+      "tercadzu",
+      "xadni"
+    ],
     "tags": [
       "rango"
     ]
@@ -1950,8 +2029,12 @@
       "jbovlaste"
     ],
     "namcu": 1,
-    "sumti": [],
-    "tags": []
+    "sumti": [
+      "cidro"
+    ],
+    "tags": [
+      "selratni"
+    ]
   },
   "cifnu": {
     "gloss": "baby",
@@ -1960,8 +2043,13 @@
       "jbovlaste"
     ],
     "namcu": 2,
-    "sumti": [],
-    "tags": []
+    "sumti": [
+      "cifnu",
+      "jutsi"
+    ],
+    "tags": [
+      "danlu"
+    ]
   },
   "cigla": {
     "gloss": "gland",
@@ -2012,7 +2100,12 @@
       "jbovlaste"
     ],
     "namcu": 4,
-    "sumti": [],
+    "sumti": [
+      "gasnu",
+      "zo'e",
+      "prenu",
+      "notci"
+    ],
     "tags": []
   },
   "cilce": {
@@ -2022,7 +2115,9 @@
       "jbovlaste"
     ],
     "namcu": 1,
-    "sumti": [],
+    "sumti": [
+      "zo'e"
+    ],
     "tags": []
   },
   "cilmo": {
@@ -2032,7 +2127,10 @@
       "jbovlaste"
     ],
     "namcu": 2,
-    "sumti": [],
+    "sumti": [
+      "zo'e",
+      "litki"
+    ],
     "tags": []
   },
   "cilre": {
@@ -2043,11 +2141,11 @@
     ],
     "namcu": 5,
     "sumti": [
+      "menli",
       "zo'e",
-      "zo'e",
-      "zo'e",
-      "zo'e",
-      "zo'e"
+      "sidbo",
+      "krasi",
+      "tadji"
     ],
     "tags": []
   },
@@ -2073,7 +2171,11 @@
       "jbovlaste"
     ],
     "namcu": 3,
-    "sumti": [],
+    "sumti": [
+      "cimde",
+      "zasti",
+      "jvinu"
+    ],
     "tags": []
   },
   "cimni": {
@@ -2083,7 +2185,11 @@
       "jbovlaste"
     ],
     "namcu": 3,
-    "sumti": [],
+    "sumti": [
+      "zo'e",
+      "ckaji",
+      "zo'e"
+    ],
     "tags": []
   },
   "cinba": {
@@ -2093,7 +2199,11 @@
       "jbovlaste"
     ],
     "namcu": 3,
-    "sumti": [],
+    "sumti": [
+      "gasnu",
+      "zo'e",
+      "diklo"
+    ],
     "tags": []
   },
   "cindu": {
@@ -2119,8 +2229,13 @@
       "jbovlaste"
     ],
     "namcu": 2,
-    "sumti": [],
-    "tags": []
+    "sumti": [
+      "cinfo",
+      "jutsi"
+    ],
+    "tags": [
+      "mabru"
+    ]
   },
   "cinje": {
     "gloss": "wrinkle",
@@ -2142,8 +2257,13 @@
       "jbovlaste"
     ],
     "namcu": 2,
-    "sumti": [],
-    "tags": []
+    "sumti": [
+      "cinki",
+      "jutsi"
+    ],
+    "tags": [
+      "danlu"
+    ]
   },
   "cinla": {
     "gloss": "thin",
@@ -2152,8 +2272,14 @@
       "jbovlaste"
     ],
     "namcu": 3,
-    "sumti": [],
-    "tags": []
+    "sumti": [
+      "zasti",
+      "cimde",
+      "ckilu"
+    ],
+    "tags": [
+      "cimde karbi"
+    ]
   },
   "cinmo": {
     "gloss": "emote",
@@ -2162,8 +2288,14 @@
       "jbovlaste"
     ],
     "namcu": 3,
-    "sumti": [],
-    "tags": []
+    "sumti": [
+      "menli",
+      "selcinmo",
+      "zo'e"
+    ],
+    "tags": [
+      "menli"
+    ]
   },
   "cinri": {
     "gloss": "interest",
@@ -2174,9 +2306,11 @@
     "namcu": 2,
     "sumti": [
       "zo'e",
-      "jinvi"
+      "menli"
     ],
-    "tags": []
+    "tags": [
+      "menli"
+    ]
   },
   "cinse": {
     "gloss": "sex",
@@ -2185,7 +2319,12 @@
       "jbovlaste"
     ],
     "namcu": 4,
-    "sumti": [],
+    "sumti": [
+      "jmive",
+      "zo'e",
+      "tercinse",
+      "ckilu"
+    ],
     "tags": []
   },
   "cinta": {
@@ -2209,7 +2348,11 @@
       "jbovlaste"
     ],
     "namcu": 3,
-    "sumti": [],
+    "sumti": [
+      "cinza",
+      "pilno",
+      "dacti"
+    ],
     "tags": [
       "tutci"
     ]
@@ -2236,7 +2379,11 @@
       "jbovlaste"
     ],
     "namcu": 3,
-    "sumti": [],
+    "sumti": [
+      "cipra",
+      "selcipra",
+      "tercipra"
+    ],
     "tags": []
   },
   "cirko": {
@@ -2246,7 +2393,11 @@
       "jbovlaste"
     ],
     "namcu": 3,
-    "sumti": [],
+    "sumti": [
+      "cirko",
+      "selcirko",
+      "tercirko"
+    ],
     "tags": []
   },
   "cirla": {
@@ -2256,8 +2407,13 @@
       "jbovlaste"
     ],
     "namcu": 2,
-    "sumti": [],
-    "tags": []
+    "sumti": [
+      "cirla",
+      "krasi"
+    ],
+    "tags": [
+      "cidja"
+    ]
   },
   "ciska": {
     "gloss": "write",
@@ -2283,7 +2439,9 @@
       "jbovlaste"
     ],
     "namcu": 1,
-    "sumti": [],
+    "sumti": [
+      "prenu"
+    ],
     "tags": []
   },
   "ciste": {
@@ -2293,7 +2451,12 @@
       "jbovlaste"
     ],
     "namcu": 4,
-    "sumti": [],
+    "sumti": [
+      "ciste",
+      "stura",
+      "terciste",
+      "velciste"
+    ],
     "tags": []
   },
   "citka": {
@@ -2316,7 +2479,10 @@
       "jbovlaste"
     ],
     "namcu": 2,
-    "sumti": [],
+    "sumti": [
+      "zasti",
+      "ckilu"
+    ],
     "tags": []
   },
   "citri": {
@@ -2326,7 +2492,11 @@
       "jbovlaste"
     ],
     "namcu": 3,
-    "sumti": [],
+    "sumti": [
+      "citri",
+      "prenu",
+      "jvinu"
+    ],
     "tags": []
   },
   "citsi": {
@@ -2336,8 +2506,14 @@
       "jbovlaste"
     ],
     "namcu": 3,
-    "sumti": [],
-    "tags": []
+    "sumti": [
+      "citsi",
+      "temci",
+      "nanca"
+    ],
+    "tags": [
+      "temci"
+    ]
   },
   "civla": {
     "gloss": "flea",
@@ -2346,7 +2522,11 @@
       "jbovlaste"
     ],
     "namcu": 3,
-    "sumti": [],
+    "sumti": [
+      "civla",
+      "jutsi",
+      "tercivla"
+    ],
     "tags": [
       "cinki"
     ]
@@ -2361,7 +2541,7 @@
     "sumti": [
       "zo'e",
       "selcizra",
-      "ckaji"
+      "selkai"
     ],
     "tags": []
   },
@@ -2372,8 +2552,14 @@
       "jbovlaste"
     ],
     "namcu": 3,
-    "sumti": [],
-    "tags": []
+    "sumti": [
+      "dacti",
+      "krasi",
+      "marji"
+    ],
+    "tags": [
+      "marji"
+    ]
   },
   "ckafi": {
     "gloss": "coffee",
@@ -2390,7 +2576,7 @@
       "litki cidja"
     ]
   },
-  "ckaji": {
+  "selkai": {
     "gloss": "characterize",
     "liste": [
       "CLL",
@@ -2440,7 +2626,12 @@
       "jbovlaste"
     ],
     "namcu": 4,
-    "sumti": [],
+    "sumti": [
+      "gasnu",
+      "zasti",
+      "terckasu",
+      "velckasu"
+    ],
     "tags": []
   },
   "ckeji": {
@@ -2466,7 +2657,11 @@
       "jbovlaste"
     ],
     "namcu": 3,
-    "sumti": [],
+    "sumti": [
+      "ckiku",
+      "stela",
+      "selkai"
+    ],
     "tags": []
   },
   "ckilu": {
@@ -2476,7 +2671,10 @@
       "jbovlaste"
     ],
     "namcu": 2,
-    "sumti": [],
+    "sumti": [
+      "ckilu",
+      "selckilu"
+    ],
     "tags": []
   },
   "ckini": {
@@ -2486,8 +2684,14 @@
       "jbovlaste"
     ],
     "namcu": 3,
-    "sumti": [],
-    "tags": []
+    "sumti": [
+      "zo'e",
+      "zo'e",
+      "terckini"
+    ],
+    "tags": [
+      "karbi"
+    ]
   },
   "ckire": {
     "gloss": "grateful",
@@ -2510,7 +2714,13 @@
       "jbovlaste"
     ],
     "namcu": 5,
-    "sumti": [],
+    "sumti": [
+      "ckule",
+      "stuzi",
+      "sidbo",
+      "velckule",
+      "xelckule"
+    ],
     "tags": [
       "dinju"
     ]
@@ -2527,7 +2737,10 @@
       "jutsi",
       "terckunu"
     ],
-    "tags": []
+    "tags": [
+      "tricu",
+      "spati"
+    ]
   },
   "cladu": {
     "gloss": "loud",
@@ -2556,7 +2769,7 @@
       "ckilu"
     ],
     "tags": [
-      "barda"
+      "cimde karbi"
     ]
   },
   "claxu": {
@@ -2579,8 +2792,14 @@
       "jbovlaste"
     ],
     "namcu": 3,
-    "sumti": [],
-    "tags": []
+    "sumti": [
+      "clika",
+      "jutsi",
+      "terclika"
+    ],
+    "tags": [
+      "jmive"
+    ]
   },
   "clira": {
     "gloss": "early",
@@ -2589,7 +2808,10 @@
       "jbovlaste"
     ],
     "namcu": 2,
-    "sumti": [],
+    "sumti": [
+      "fasnu",
+      "ckilu"
+    ],
     "tags": []
   },
   "clite": {
@@ -2599,7 +2821,11 @@
       "jbovlaste"
     ],
     "namcu": 3,
-    "sumti": [],
+    "sumti": [
+      "prenu",
+      "ckaji",
+      "ckilu"
+    ],
     "tags": []
   },
   "cliva": {
@@ -2623,7 +2849,10 @@
       "jbovlaste"
     ],
     "namcu": 2,
-    "sumti": [],
+    "sumti": [
+      "clupa",
+      "marji"
+    ],
     "tags": []
   },
   "cmaci": {
@@ -2633,7 +2862,10 @@
       "jbovlaste"
     ],
     "namcu": 2,
-    "sumti": [],
+    "sumti": [
+      "cmaci",
+      "selcmaci"
+    ],
     "tags": []
   },
   "cmalu": {
@@ -2670,8 +2902,16 @@
       "jbovlaste"
     ],
     "namcu": 4,
-    "sumti": [],
-    "tags": []
+    "sumti": [
+      "cmavo",
+      "selma'o",
+      "smuni",
+      "bangu"
+    ],
+    "tags": [
+      "gerna",
+      "valsi"
+    ]
   },
   "cmene": {
     "gloss": "name",
@@ -2685,7 +2925,10 @@
       "zo'e",
       "prenu"
     ],
-    "tags": []
+    "tags": [
+      "gerna",
+      "valsi"
+    ]
   },
   "cmila": {
     "gloss": "laugh",
@@ -2694,7 +2937,9 @@
       "jbovlaste"
     ],
     "namcu": 1,
-    "sumti": [],
+    "sumti": [
+      "prenu"
+    ],
     "tags": []
   },
   "cmima": {
@@ -2704,7 +2949,10 @@
       "jbovlaste"
     ],
     "namcu": 2,
-    "sumti": [],
+    "sumti": [
+      "cmima",
+      "selcmi"
+    ],
     "tags": []
   },
   "cmoni": {
@@ -2713,11 +2961,11 @@
       "CLL",
       "jbovlaste"
     ],
-    "namcu": 4,
+    "namcu": 3,
     "sumti": [
       "bacru",
       "sance",
-      "ckaji"
+      "selkai"
     ],
     "tags": [
       "bacru"
@@ -3228,7 +3476,7 @@
     "namcu": 2,
     "sumti": [
       "zo'e",
-      "ckaji"
+      "selkai"
     ],
     "tags": []
   },
@@ -3475,7 +3723,7 @@
     "sumti": [
       "zasti",
       "zasti",
-      "ckaji"
+      "selkai"
     ],
     "tags": [
       "karbi"
@@ -3583,7 +3831,7 @@
     "sumti": [
       "namcu",
       "namcu",
-      "ckaji"
+      "selkai"
     ],
     "tags": []
   },
@@ -4087,7 +4335,7 @@
     "sumti": [
       "zo'e",
       "zo'e",
-      "ckaji"
+      "selkai"
     ],
     "tags": []
   },
@@ -4117,7 +4365,7 @@
     "sumti": [
       "dzena",
       "girzu",
-      "ckaji"
+      "selkai"
     ],
     "tags": []
   },
@@ -4486,7 +4734,7 @@
     "sumti": [
       "jmive",
       "jutsi",
-      "ckaji"
+      "selkai"
     ],
     "tags": []
   },
@@ -4514,7 +4762,7 @@
     "namcu": 2,
     "sumti": [
       "zo'e",
-      "ckaji"
+      "selkai"
     ],
     "tags": [
       "natmi"
@@ -4652,7 +4900,7 @@
     "namcu": 2,
     "sumti": [
       "zo'e",
-      "ckaji"
+      "selkai"
     ],
     "tags": [
       "natmi"
@@ -4693,7 +4941,7 @@
     "sumti": [
       "zo'e",
       "zo'e",
-      "ckaji"
+      "selkai"
     ],
     "tags": [
       "karbi"
@@ -4708,7 +4956,7 @@
     "namcu": 2,
     "sumti": [
       "zo'e",
-      "ckaji"
+      "selkai"
     ],
     "tags": [
       "braplu"
@@ -5015,7 +5263,7 @@
     "namcu": 2,
     "sumti": [
       "zo'e",
-      "ckaji"
+      "selkai"
     ],
     "tags": [
       "natmi"
@@ -5170,7 +5418,7 @@
     "namcu": 2,
     "sumti": [
       "zo'e",
-      "ckaji"
+      "selkai"
     ],
     "tags": [
       "bangu"
@@ -5221,7 +5469,7 @@
     "sumti": [
       "gradu",
       "ckilu",
-      "ckaji"
+      "selkai"
     ],
     "tags": [
       "gradu"
@@ -5787,7 +6035,7 @@
     "sumti": [
       "zasti",
       "jimte",
-      "ckaji"
+      "selkai"
     ],
     "tags": [
       "karbi"
@@ -5826,7 +6074,7 @@
     "namcu": 3,
     "sumti": [
       "zasti",
-      "ckaji",
+      "selkai",
       "klani"
     ],
     "tags": [
@@ -5895,7 +6143,7 @@
     "namcu": 2,
     "sumti": [
       "zo'e",
-      "ckaji"
+      "selkai"
     ],
     "tags": [
       "lijda"
@@ -5982,7 +6230,7 @@
     "namcu": 2,
     "sumti": [
       "zo'e",
-      "ckaji"
+      "selkai"
     ],
     "tags": [
       "natmi"
@@ -6552,7 +6800,7 @@
     "namcu": 2,
     "sumti": [
       "zo'e",
-      "ckaji"
+      "selkai"
     ],
     "tags": []
   },
@@ -6763,7 +7011,7 @@
     "namcu": 2,
     "sumti": [
       "zo'e",
-      "ckaji"
+      "selkai"
     ],
     "tags": []
   },
@@ -6836,7 +7084,7 @@
     "namcu": 3,
     "sumti": [
       "zo'e",
-      "ckaji",
+      "selkai",
       "zgana"
     ],
     "tags": []
@@ -6860,7 +7108,7 @@
     "namcu": 2,
     "sumti": [
       "zo'e",
-      "ckaji"
+      "selkai"
     ],
     "tags": []
   },
@@ -6893,7 +7141,7 @@
     "namcu": 2,
     "sumti": [
       "kantu",
-      "ckaji"
+      "selkai"
     ],
     "tags": []
   },
@@ -8083,7 +8331,7 @@
     "namcu": 2,
     "sumti": [
       "zo'e",
-      "ckaji"
+      "selkai"
     ],
     "tags": [
       "bangu"
@@ -8352,7 +8600,7 @@
     "sumti": [
       "zo'e",
       "zo'e",
-      "ckaji"
+      "selkai"
     ],
     "tags": [
       "karbi"
@@ -8441,7 +8689,7 @@
     "namcu": 2,
     "sumti": [
       "zo'e",
-      "ckaji"
+      "selkai"
     ],
     "tags": []
   },
@@ -8555,7 +8803,7 @@
     "sumti": [
       "zo'e",
       "jinvi",
-      "ckaji",
+      "selkai",
       "ckilu"
     ],
     "tags": []
@@ -8689,7 +8937,7 @@
     "namcu": 2,
     "sumti": [
       "zo'e",
-      "ckaji"
+      "selkai"
     ],
     "tags": []
   },
@@ -8854,7 +9102,7 @@
     "sumti": [
       "mleca",
       "zmadu",
-      "ckaji",
+      "selkai",
       "klani"
     ],
     "tags": []
@@ -9110,7 +9358,7 @@
     "namcu": 3,
     "sumti": [
       "zo'e",
-      "ckaji",
+      "selkai",
       "farna"
     ],
     "tags": []
@@ -10225,7 +10473,7 @@
     "namcu": 3,
     "sumti": [
       "tcini",
-      "ckaji",
+      "selkai",
       "ckilu"
     ],
     "tags": []
@@ -11723,7 +11971,7 @@
     "namcu": 4,
     "sumti": [
       "simlu",
-      "ckaji",
+      "selkai",
       "zgana",
       "tcini"
     ],
@@ -11739,7 +11987,7 @@
     "sumti": [
       "zo'e",
       "zo'e",
-      "ckaji"
+      "selkai"
     ],
     "tags": []
   },
@@ -13659,7 +13907,7 @@
     "namcu": 4,
     "sumti": [
       "zo'e",
-      "ckaji",
+      "selkai",
       "zo'e",
       "zilcmi"
     ],
@@ -13752,7 +14000,7 @@
     "namcu": 3,
     "sumti": [
       "zo'e",
-      "ckaji",
+      "selkai",
       "ckilu"
     ],
     "tags": []
@@ -15122,7 +15370,7 @@
     "sumti": [
       "zo'e",
       "jinvi",
-      "ckaji"
+      "selkai"
     ],
     "tags": []
   },
@@ -15145,7 +15393,7 @@
     "namcu": 3,
     "sumti": [
       "zasti",
-      "ckaji",
+      "selkai",
       "klani"
     ],
     "tags": [
