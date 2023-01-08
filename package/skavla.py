@@ -5,7 +5,6 @@ import tubnu.plumbing as plumbing
 import subparsers.cuxna as cuxna
 import subparsers.tcidu as tcidu
 import subparsers.cpedu as cpedu
-import subparsers.litru as litru
 
 import tricu
 
