@@ -269,26 +269,6 @@ def inflate_tcidu_parser(parser: argparse.ArgumentParser) -> None:
     )
     parser.set_defaults(func=tcidu.parse)
     
-
-
-def inflate_litru_parser(parser: argparse.ArgumentParser) -> None:
-    parser.add_argument(
-        "-d",
-        "--directory",
-        dest="directory",
-        action="store",
-        help="analyze every lojbanic file in DIRECTORY, recursively, and then print a summary",
-        metavar="DIRECTORY",
-    )
-    parser.add_argument(
-        "-c",
-        "--crane",
-        dest="crane",
-        action="store_true",
-        help="advance the current gismu",
-    )
-    parser.set_defaults(func=litru.parse)
-
     
 def build_parser():
     parser = argparse.ArgumentParser(
@@ -307,9 +287,6 @@ def build_parser():
     
     tcidu_parser = subparsers.add_parser("tcidu", formatter_class=RichHelpFormatter)
     inflate_tcidu_parser(tcidu_parser)
-    
-    litru_parser = subparsers.add_parser("litru", formatter_class=RichHelpFormatter)
-    inflate_litru_parser(litru_parser)
 
     return parser
     
