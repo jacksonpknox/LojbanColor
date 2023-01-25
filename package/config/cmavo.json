@@ -1207,19 +1207,46 @@
     "gloss": "marji",
     "selmaho": "BAI"
   },
-  "ma'i": {},
-  "ma'o": {},
-  "ma'u": {},
-  "mai": {},
-  "mau": {},
+  "ma'i": {
+    "gloss": "manri",
+    "selmaho": "BAI"
+  },
+  "ma'o": {
+    "gloss": "operand to operator",
+    "selmaho": "MAhO"
+  },
+  "ma'u": {
+    "gloss": "plus sign",
+    "selmaho": "PA"
+  },
+  "mai": {
+    "gloss": "utterance ordinal ('ly')",
+    "selmaho": "MAI"
+  },
+  "mau": {
+    "gloss": "zmadu",
+    "selmaho": "exceeded by"
+  },
   "me": {
     "gloss": "sumti to selbri",
     "selmaho": "ME"
   },
-  "me'a": {},
-  "me'e": {},
-  "me'i": {},
-  "me'u": {},
+  "me'a": {
+    "gloss": "mleca",
+    "selmaho": "BAI"
+  },
+  "me'e": {
+    "gloss": "cmene",
+    "selmaho": "BAI"
+  },
+  "me'i": {
+    "gloss": "less than",
+    "selmaho": "PA"
+  },
+  "me'u": {
+    "gloss": "end ME",
+    "selmaho": "MEhU"
+  },
   "mei": {
     "gloss": "number to cardinality selbri",
     "selmaho": "MOI"
@@ -1232,8 +1259,14 @@
     "gloss": "we and not you",
     "selmaho": "KOhA"
   },
-  "mi'e": {},
-  "mi'i": {},
+  "mi'e": {
+    "gloss": "self-introduction",
+    "selmaho": "COI"
+  },
+  "mi'i": {
+    "gloss": "center-range interval",
+    "selmaho": "BIhI"
+  },
   "mi'o": {
     "gloss": "we and you",
     "selmaho": "KOhA"

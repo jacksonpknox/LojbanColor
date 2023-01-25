@@ -1,15 +1,338 @@
 {
-  "sel": {
-    "cmavo": "se",
-    "liste": [
-      "jbovlaste"
-    ],
-    "tags": []
+  "biv": {
+    "cmavo": "bi"
+  },
+  "biz": {
+    "cmavo": "bi'i"
+  },
+  "bor": {
+    "cmavo": "bo"
+  },
+  "bu'i": {
+    "cmavo": "bu"
+  },
+  "bul": {
+    "cmavo": "bu'a"
+  },
+  "bus": {
+    "cmavo": "bu"
+  },
+  "caz": {
+    "cmavo": "ca'a"
+  },
+  "ce'o": {
+    "cmavo": "ce'o"
+  },
+  "cec": {
+    "cmavo": "ce"
+  },
+  "cez": {
+    "cmavo": "ce'i"
+  },
+  "cib": {
+    "cmavo": "ci"
+  },
+  "co'a": {
+    "cmavo": "co'a"
+  },
+  "co'e": {
+    "cmavo": "co'e"
+  },
+  "co'u": {
+    "cmavo": "co'u"
+  },
+  "col": {
+    "cmavo": "co"
+  },
+  "com": {
+    "cmavo": "co'e"
+  },
+  "dav": {
+    "cmavo": "da"
+  },
+  "daz": {
+    "cmavo": "da'a"
+  },
+  "doi": {
+    "cmavo": "do"
+  },
+  "don": {
+    "cmavo": "do"
+  },
+  "du'o": {
+    "cmavo": "du"
+  },
+  "dub": {
+    "cmavo": "du"
+  },
+  "dum": {
+    "cmavo": "du'u"
+  },
+  "dza": {
+    "cmavo": "da"
+  },
+  "fo'a": {
+    "cmavo": "fo'a"
+  },
+  "fo'e": {
+    "cmavo": "fo'e"
+  },
+  "fo'i": {
+    "cmavo": "fo'i"
+  },
+  "jav": {
+    "cmavo": "ja"
+  },
+  "jev": {
+    "cmavo": "je"
+  },
+  "jez": {
+    "cmavo": "jei"
+  },
+  "jo'u": {
+    "cmavo": "jo'u"
+  },
+  "joi": {
+    "cmavo": "joi"
+  },
+  "jol": {
+    "cmavo": "joi"
+  },
+  "jom": {
+    "cmavo": "jo'e"
+  },
+  "jov": {
+    "cmavo": "jo"
+  },
+  "juv": {
+    "cmavo": "ju"
+  },
+  "jve": {
+    "cmavo": "je"
+  },
+  "kam": {
+    "cmavo": "ka"
+  },
+  "ke'e": {
+    "cmavo": "ke'e"
+  },
+  "kem": {
+    "cmavo": "ke"
+  },
+  "kep": {
+    "cmavo": "ke'e"
+  },
+  "kez": {
+    "cmavo": "kei"
+  },
+  "kuz": {
+    "cmavo": "ku'a"
+  },
+  "lem": {
+    "cmavo": "le'e"
+  },
+  "liz": {
+    "cmavo": "li'i"
+  },
+  "lom": {
+    "cmavo": "lo'e"
+  },
+  "mei": {
+    "cmavo": "mei"
+  },
+  "mem": {
+    "cmavo": "mei"
+  },
+  "mib": {
+    "cmavo": "mi"
+  },
+  "mob": {
+    "cmavo": "mo'a"
+  },
+  "moi": {
+    "cmavo": "moi"
+  },
+  "mom": {
+    "cmavo": "moi"
+  },
+  "mov": {
+    "cmavo": "mo'i"
+  },
+  "muf": {
+    "cmavo": "mu'e"
+  },
+  "mum": {
+    "cmavo": "mu"
+  },
+  "nal": {
+    "cmavo": "na'e"
+  },
+  "nar": {
+    "cmavo": "na"
+  },
+  "nil": {
+    "cmavo": "ni"
+  },
+  "no'e": {
+    "cmavo": "no'e"
+  },
+  "non": {
+    "cmavo": "no"
+  },
+  "nor": {
+    "cmavo": "no'e"
+  },
+  "nu'o": {
+    "cmavo": "nu'o"
+  },
+  "nun": {
+    "cmavo": "nu"
+  },
+  "pav": {
+    "cmavo": "pa"
+  },
+  "pev": {
+    "cmavo": "pe'a"
+  },
+  "piv": {
+    "cmavo": "pi'u"
+  },
+  "piz": {
+    "cmavo": "pi"
+  },
+  "pus": {
+    "cmavo": "pu'i"
+  },
+  "puv": {
+    "cmavo": "pu'u"
   },
   "rel": {
-    "cmavo": "re",
-    "liste": [
-      "jbovlaste"
-    ]
+    "cmavo": "re"
+  },
+  "roi": {
+    "cmavo": "roi"
+  },
+  "rol": {
+    "cmavo": "ro"
+  },
+  "rom": {
+    "cmavo": "roi"
+  },
+  "sel": {
+    "cmavo": "se"
+  },
+  "siz": {
+    "cmavo": "si'o"
+  },
+  "so'i": {
+    "cmavo": "so'i"
+  },
+  "soj": {
+    "cmavo": "so'a"
+  },
+  "sop": {
+    "cmavo": "so'e"
+  },
+  "sor": {
+    "cmavo": "so'i"
+  },
+  "sos": {
+    "cmavo": "so'o"
+  },
+  "sot": {
+    "cmavo": "so'u"
+  },
+  "soz": {
+    "cmavo": "so"
+  },
+  "su'e": {
+    "cmavo": "su'e"
+  },
+  "su'o": {
+    "cmavo": "su'o"
+  },
+  "sup": {
+    "cmavo": "su'e"
+  },
+  "suv": {
+    "cmavo": "su'u"
+  },
+  "suz": {
+    "cmavo": "su'o"
+  },
+  "taz": {
+    "cmavo": "ta"
+  },
+  "ter": {
+    "cmavo": "te"
+  },
+  "tif": {
+    "cmavo": "ti"
+  },
+  "to'e": {
+    "cmavo": "to'e"
+  },
+  "tol": {
+    "cmavo": "to'e"
+  },
+  "tuf": {
+    "cmavo": "tu"
+  },
+  "vaz": {
+    "cmavo": "va"
+  },
+  "ve'e": {
+    "cmavo": "ve'e"
+  },
+  "vel": {
+    "cmavo": "ve"
+  },
+  "viz": {
+    "cmavo": "vi"
+  },
+  "von": {
+    "cmavo": "vo"
+  },
+  "vuz": {
+    "cmavo": "vu"
+  },
+  "xav": {
+    "cmavo": "xa"
+  },
+  "xel": {
+    "cmavo": "xe"
+  },
+  "za'o": {
+    "cmavo": "za'o"
+  },
+  "zaz": {
+    "cmavo": "za'i"
+  },
+  "ze'e": {
+    "cmavo": "ze'e"
+  },
+  "ze'o": {
+    "cmavo": "ze'o"
+  },
+  "zel": {
+    "cmavo": "ze"
+  },
+  "zev": {
+    "cmavo": "ze'o"
+  },
+  "zo'a": {
+    "cmavo": "zo'a"
+  },
+  "zo'i": {
+    "cmavo": "zo'i"
+  },
+  "zon": {
+    "cmavo": "zo'a"
+  },
+  "zor": {
+    "cmavo": "zo'i"
+  },
+  "zum": {
+    "cmavo": "zu'o"
   }
 }

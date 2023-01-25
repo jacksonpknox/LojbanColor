@@ -1,9 +1,4301 @@
 {
-    "cku": {
-        "gismu": "cukta",
-        "liste": [
-            "jbovlaste"
-        ],
-        "tags": []
-    }
+  "ba'a": {
+    "gismu": "barna"
+  },
+  "ba'e": {
+    "gismu": "balre"
+  },
+  "ba'i": {
+    "gismu": "banli"
+  },
+  "ba'o": {
+    "gismu": "banro"
+  },
+  "ba'u": {
+    "gismu": "bacru"
+  },
+  "bab": {
+    "gismu": "zbabu"
+  },
+  "bac": {
+    "gismu": "bancu"
+  },
+  "bad": {
+    "gismu": "bandu"
+  },
+  "baf": {
+    "gismu": "bakfu"
+  },
+  "bag": {
+    "gismu": "bargu"
+  },
+  "bai": {
+    "gismu": "bapli"
+  },
+  "baj": {
+    "gismu": "bajra"
+  },
+  "bak": {
+    "gismu": "bakni"
+  },
+  "bal": {
+    "gismu": "banli"
+  },
+  "bam": {
+    "gismu": "jbama"
+  },
+  "ban": {
+    "gismu": "bangu"
+  },
+  "bap": {
+    "gismu": "bapli"
+  },
+  "bar": {
+    "gismu": "bartu"
+  },
+  "bas": {
+    "gismu": "basti"
+  },
+  "bat": {
+    "gismu": "batci"
+  },
+  "bau": {
+    "gismu": "bangu"
+  },
+  "bav": {
+    "gismu": "balvi"
+  },
+  "bax": {
+    "gismu": "banxa"
+  },
+  "baz": {
+    "gismu": "banzu"
+  },
+  "be'a": {
+    "gismu": "bersa"
+  },
+  "be'e": {
+    "gismu": "bende"
+  },
+  "be'i": {
+    "gismu": "benji"
+  },
+  "be'o": {
+    "gismu": "bemro"
+  },
+  "be'u": {
+    "gismu": "betfu"
+  },
+  "beb": {
+    "gismu": "bebna"
+  },
+  "bed": {
+    "gismu": "bende"
+  },
+  "bef": {
+    "gismu": "betfu"
+  },
+  "beg": {
+    "gismu": "bengo"
+  },
+  "bei": {
+    "gismu": "bevri"
+  },
+  "bej": {
+    "gismu": "benji"
+  },
+  "bem": {
+    "gismu": "bemro"
+  },
+  "ben": {
+    "gismu": "besna"
+  },
+  "ber": {
+    "gismu": "berti"
+  },
+  "bes": {
+    "gismu": "bersa"
+  },
+  "bet": {
+    "gismu": "betri"
+  },
+  "bev": {
+    "gismu": "bevri"
+  },
+  "bi'a": {
+    "gismu": "bilma"
+  },
+  "bi'e": {
+    "gismu": "brife"
+  },
+  "bi'i": {
+    "gismu": "jbini"
+  },
+  "bi'o": {
+    "gismu": "binxo"
+  },
+  "bi'u": {
+    "gismu": "bitmu"
+  },
+  "bic": {
+    "gismu": "bifce"
+  },
+  "bid": {
+    "gismu": "bindo"
+  },
+  "bif": {
+    "gismu": "brife"
+  },
+  "big": {
+    "gismu": "bilga"
+  },
+  "bij": {
+    "gismu": "briju"
+  },
+  "bik": {
+    "gismu": "bikla"
+  },
+  "bil": {
+    "gismu": "bilni"
+  },
+  "bim": {
+    "gismu": "bitmu"
+  },
+  "bin": {
+    "gismu": "jbini"
+  },
+  "bir": {
+    "gismu": "birka"
+  },
+  "bis": {
+    "gismu": "bisli"
+  },
+  "bit": {
+    "gismu": "birti"
+  },
+  "bix": {
+    "gismu": "binxo"
+  },
+  "bla": {
+    "gismu": "blanu"
+  },
+  "ble": {
+    "gismu": "ruble"
+  },
+  "bli": {
+    "gismu": "bliku"
+  },
+  "blo": {
+    "gismu": "bloti"
+  },
+  "blu": {
+    "gismu": "ciblu"
+  },
+  "bo'a": {
+    "gismu": "boxna"
+  },
+  "bo'e": {
+    "gismu": "brode"
+  },
+  "bo'i": {
+    "gismu": "botpi"
+  },
+  "bo'o": {
+    "gismu": "boxfo"
+  },
+  "bo'u": {
+    "gismu": "bongu"
+  },
+  "bof": {
+    "gismu": "boxfo"
+  },
+  "bog": {
+    "gismu": "bongu"
+  },
+  "boi": {
+    "gismu": "bolci"
+  },
+  "bol": {
+    "gismu": "bolci"
+  },
+  "bon": {
+    "gismu": "boxna"
+  },
+  "bot": {
+    "gismu": "botpi"
+  },
+  "bra": {
+    "gismu": "barda"
+  },
+  "bre": {
+    "gismu": "bredi"
+  },
+  "bri": {
+    "gismu": "bridi"
+  },
+  "bro": {
+    "gismu": "xebro"
+  },
+  "bru": {
+    "gismu": "burcu"
+  },
+  "bu'a": {
+    "gismu": "bruna"
+  },
+  "bu'e": {
+    "gismu": "bunre"
+  },
+  "bu'o": {
+    "gismu": "budjo"
+  },
+  "bu'u": {
+    "gismu": "bukpu"
+  },
+  "bud": {
+    "gismu": "bunda"
+  },
+  "buj": {
+    "gismu": "budjo"
+  },
+  "buk": {
+    "gismu": "bukpu"
+  },
+  "bum": {
+    "gismu": "bumru"
+  },
+  "bun": {
+    "gismu": "bruna"
+  },
+  "bur": {
+    "gismu": "bunre"
+  },
+  "ca'a": {
+    "gismu": "cabra"
+  },
+  "ca'e": {
+    "gismu": "catke"
+  },
+  "ca'i": {
+    "gismu": "catni"
+  },
+  "ca'o": {
+    "gismu": "canko"
+  },
+  "ca'u": {
+    "gismu": "canlu"
+  },
+  "cab": {
+    "gismu": "cabna"
+  },
+  "cac": {
+    "gismu": "tcaci"
+  },
+  "cad": {
+    "gismu": "cando"
+  },
+  "caf": {
+    "gismu": "cafne"
+  },
+  "cag": {
+    "gismu": "cange"
+  },
+  "cai": {
+    "gismu": "carmi"
+  },
+  "caj": {
+    "gismu": "canja"
+  },
+  "cak": {
+    "gismu": "calku"
+  },
+  "cal": {
+    "gismu": "canlu"
+  },
+  "cam": {
+    "gismu": "carmi"
+  },
+  "can": {
+    "gismu": "canre"
+  },
+  "cap": {
+    "gismu": "ckape"
+  },
+  "car": {
+    "gismu": "carna"
+  },
+  "cas": {
+    "gismu": "ckasu"
+  },
+  "cat": {
+    "gismu": "cartu"
+  },
+  "cau": {
+    "gismu": "claxu"
+  },
+  "cav": {
+    "gismu": "carvi"
+  },
+  "cax": {
+    "gismu": "caxno"
+  },
+  "ce'a": {
+    "gismu": "cecla"
+  },
+  "ce'i": {
+    "gismu": "cteki"
+  },
+  "ce'u": {
+    "gismu": "cecmu"
+  },
+  "ced": {
+    "gismu": "cerda"
+  },
+  "cei": {
+    "gismu": "cevni"
+  },
+  "cek": {
+    "gismu": "creka"
+  },
+  "cel": {
+    "gismu": "cecla"
+  },
+  "cem": {
+    "gismu": "cecmu"
+  },
+  "cen": {
+    "gismu": "centi"
+  },
+  "cer": {
+    "gismu": "cerni"
+  },
+  "ces": {
+    "gismu": "censa"
+  },
+  "cev": {
+    "gismu": "cevni"
+  },
+  "cfa": {
+    "gismu": "cfari"
+  },
+  "cfi": {
+    "gismu": "cfila"
+  },
+  "cfu": {
+    "gismu": "ricfu"
+  },
+  "ci'a": {
+    "gismu": "ciska"
+  },
+  "ci'e": {
+    "gismu": "ciste"
+  },
+  "ci'i": {
+    "gismu": "cinri"
+  },
+  "ci'o": {
+    "gismu": "citno"
+  },
+  "ci'u": {
+    "gismu": "ckilu"
+  },
+  "cic": {
+    "gismu": "cilce"
+  },
+  "cid": {
+    "gismu": "cidni"
+  },
+  "cif": {
+    "gismu": "cifnu"
+  },
+  "cig": {
+    "gismu": "cigla"
+  },
+  "cij": {
+    "gismu": "cinje"
+  },
+  "cik": {
+    "gismu": "cikna"
+  },
+  "cil": {
+    "gismu": "cilta"
+  },
+  "cim": {
+    "gismu": "cilmo"
+  },
+  "cin": {
+    "gismu": "cinse"
+  },
+  "cip": {
+    "gismu": "cipra"
+  },
+  "cir": {
+    "gismu": "citri"
+  },
+  "cis": {
+    "gismu": "crisa"
+  },
+  "cit": {
+    "gismu": "citno"
+  },
+  "civ": {
+    "gismu": "civla"
+  },
+  "ciz": {
+    "gismu": "cizra"
+  },
+  "cka": {
+    "gismu": "ckana"
+  },
+  "cke": {
+    "gismu": "ckeji"
+  },
+  "cki": {
+    "gismu": "ciksi"
+  },
+  "cko": {
+    "gismu": "cokcu"
+  },
+  "cku": {
+    "gismu": "cukta"
+  },
+  "cla": {
+    "gismu": "clani"
+  },
+  "cli": {
+    "gismu": "cilre"
+  },
+  "clu": {
+    "gismu": "culno"
+  },
+  "cma": {
+    "gismu": "cmalu"
+  },
+  "cme": {
+    "gismu": "cmene"
+  },
+  "cmi": {
+    "gismu": "cmima"
+  },
+  "cmo": {
+    "gismu": "cmoni"
+  },
+  "cmu": {
+    "gismu": "jicmu"
+  },
+  "cna": {
+    "gismu": "canpa"
+  },
+  "cne": {
+    "gismu": "cenba"
+  },
+  "cni": {
+    "gismu": "cinmo"
+  },
+  "cno": {
+    "gismu": "condi"
+  },
+  "cnu": {
+    "gismu": "macnu"
+  },
+  "co'i": {
+    "gismu": "cmoni"
+  },
+  "coi": {
+    "gismu": "condi"
+  },
+  "con": {
+    "gismu": "condi"
+  },
+  "cor": {
+    "gismu": "cortu"
+  },
+  "cpa": {
+    "gismu": "cpacu"
+  },
+  "cpe": {
+    "gismu": "cpedu"
+  },
+  "cpi": {
+    "gismu": "cipni"
+  },
+  "cpu": {
+    "gismu": "lacpu"
+  },
+  "cra": {
+    "gismu": "crane"
+  },
+  "cre": {
+    "gismu": "certu"
+  },
+  "cri": {
+    "gismu": "cirko"
+  },
+  "cro": {
+    "gismu": "cortu"
+  },
+  "cru": {
+    "gismu": "curmi"
+  },
+  "cta": {
+    "gismu": "catlu"
+  },
+  "cte": {
+    "gismu": "nicte"
+  },
+  "cti": {
+    "gismu": "citka"
+  },
+  "cto": {
+    "gismu": "xecto"
+  },
+  "ctu": {
+    "gismu": "ctuca"
+  },
+  "cu'a": {
+    "gismu": "cuxna"
+  },
+  "cu'e": {
+    "gismu": "ckule"
+  },
+  "cu'i": {
+    "gismu": "cumki"
+  },
+  "cu'o": {
+    "gismu": "cunso"
+  },
+  "cu'u": {
+    "gismu": "cuntu"
+  },
+  "cuc": {
+    "gismu": "cutci"
+  },
+  "cuk": {
+    "gismu": "cukla"
+  },
+  "cul": {
+    "gismu": "cumla"
+  },
+  "cum": {
+    "gismu": "cumki"
+  },
+  "cun": {
+    "gismu": "cunso"
+  },
+  "cup": {
+    "gismu": "clupa"
+  },
+  "cur": {
+    "gismu": "curnu"
+  },
+  "cus": {
+    "gismu": "cusku"
+  },
+  "cut": {
+    "gismu": "cutne"
+  },
+  "cuv": {
+    "gismu": "curve"
+  },
+  "cux": {
+    "gismu": "cuxna"
+  },
+  "da'a": {
+    "gismu": "damba"
+  },
+  "da'e": {
+    "gismu": "danre"
+  },
+  "da'i": {
+    "gismu": "darxi"
+  },
+  "da'o": {
+    "gismu": "darno"
+  },
+  "da'u": {
+    "gismu": "danlu"
+  },
+  "dab": {
+    "gismu": "damba"
+  },
+  "dac": {
+    "gismu": "dacru"
+  },
+  "dad": {
+    "gismu": "dandu"
+  },
+  "daf": {
+    "gismu": "danfu"
+  },
+  "dag": {
+    "gismu": "dargu"
+  },
+  "dai": {
+    "gismu": "dacti"
+  },
+  "daj": {
+    "gismu": "dadjo"
+  },
+  "dak": {
+    "gismu": "dakfu"
+  },
+  "dal": {
+    "gismu": "danlu"
+  },
+  "dam": {
+    "gismu": "danmo"
+  },
+  "dan": {
+    "gismu": "danti"
+  },
+  "dap": {
+    "gismu": "dapma"
+  },
+  "dar": {
+    "gismu": "darno"
+  },
+  "das": {
+    "gismu": "dasni"
+  },
+  "dat": {
+    "gismu": "drata"
+  },
+  "dau": {
+    "gismu": "darlu"
+  },
+  "dax": {
+    "gismu": "darxi"
+  },
+  "de'a": {
+    "gismu": "denpa"
+  },
+  "de'i": {
+    "gismu": "denci"
+  },
+  "de'o": {
+    "gismu": "delno"
+  },
+  "de'u": {
+    "gismu": "dertu"
+  },
+  "deb": {
+    "gismu": "dembi"
+  },
+  "dec": {
+    "gismu": "decti"
+  },
+  "deg": {
+    "gismu": "degji"
+  },
+  "dei": {
+    "gismu": "djedi"
+  },
+  "dej": {
+    "gismu": "dejni"
+  },
+  "dek": {
+    "gismu": "dekto"
+  },
+  "del": {
+    "gismu": "delno"
+  },
+  "dem": {
+    "gismu": "denmi"
+  },
+  "den": {
+    "gismu": "denci"
+  },
+  "dep": {
+    "gismu": "denpa"
+  },
+  "der": {
+    "gismu": "dertu"
+  },
+  "des": {
+    "gismu": "desku"
+  },
+  "det": {
+    "gismu": "detri"
+  },
+  "di'a": {
+    "gismu": "jdima"
+  },
+  "di'e": {
+    "gismu": "dirce"
+  },
+  "di'i": {
+    "gismu": "jdini"
+  },
+  "di'o": {
+    "gismu": "dinko"
+  },
+  "di'u": {
+    "gismu": "dinju"
+  },
+  "dib": {
+    "gismu": "dirba"
+  },
+  "dic": {
+    "gismu": "dikca"
+  },
+  "dig": {
+    "gismu": "dirgo"
+  },
+  "dij": {
+    "gismu": "dinju"
+  },
+  "dik": {
+    "gismu": "dikni"
+  },
+  "dil": {
+    "gismu": "dilnu"
+  },
+  "dim": {
+    "gismu": "dimna"
+  },
+  "din": {
+    "gismu": "jdini"
+  },
+  "dir": {
+    "gismu": "dicra"
+  },
+  "diz": {
+    "gismu": "dizlo"
+  },
+  "dja": {
+    "gismu": "cidja"
+  },
+  "dje": {
+    "gismu": "djedi"
+  },
+  "dji": {
+    "gismu": "djica"
+  },
+  "djo": {
+    "gismu": "sadjo"
+  },
+  "dju": {
+    "gismu": "sidju"
+  },
+  "do'i": {
+    "gismu": "donri"
+  },
+  "do'o": {
+    "gismu": "dotco"
+  },
+  "dor": {
+    "gismu": "donri"
+  },
+  "dot": {
+    "gismu": "dotco"
+  },
+  "dra": {
+    "gismu": "drani"
+  },
+  "dre": {
+    "gismu": "derxi"
+  },
+  "dri": {
+    "gismu": "badri"
+  },
+  "dro": {
+    "gismu": "cidro"
+  },
+  "dru": {
+    "gismu": "drudi"
+  },
+  "du'a": {
+    "gismu": "dunda"
+  },
+  "du'e": {
+    "gismu": "dukse"
+  },
+  "du'i": {
+    "gismu": "dunli"
+  },
+  "du'u": {
+    "gismu": "dunku"
+  },
+  "dud": {
+    "gismu": "dunda"
+  },
+  "dug": {
+    "gismu": "dugri"
+  },
+  "duj": {
+    "gismu": "dunja"
+  },
+  "duk": {
+    "gismu": "dunku"
+  },
+  "dul": {
+    "gismu": "jduli"
+  },
+  "dun": {
+    "gismu": "dunli"
+  },
+  "dur": {
+    "gismu": "dunra"
+  },
+  "dus": {
+    "gismu": "dukse"
+  },
+  "dut": {
+    "gismu": "dukti"
+  },
+  "dze": {
+    "gismu": "dzena"
+  },
+  "dzi": {
+    "gismu": "dizlo"
+  },
+  "dzu": {
+    "gismu": "cadzu"
+  },
+  "fa'a": {
+    "gismu": "farna"
+  },
+  "fa'e": {
+    "gismu": "fatne"
+  },
+  "fa'i": {
+    "gismu": "facki"
+  },
+  "fa'o": {
+    "gismu": "fanmo"
+  },
+  "fa'u": {
+    "gismu": "farlu"
+  },
+  "fac": {
+    "gismu": "fatci"
+  },
+  "fad": {
+    "gismu": "fadni"
+  },
+  "fag": {
+    "gismu": "fagri"
+  },
+  "fai": {
+    "gismu": "fatri"
+  },
+  "fak": {
+    "gismu": "facki"
+  },
+  "fal": {
+    "gismu": "farlu"
+  },
+  "fam": {
+    "gismu": "fanmo"
+  },
+  "fan": {
+    "gismu": "falnu"
+  },
+  "fap": {
+    "gismu": "fapro"
+  },
+  "far": {
+    "gismu": "farna"
+  },
+  "fas": {
+    "gismu": "fraso"
+  },
+  "fat": {
+    "gismu": "fatne"
+  },
+  "fau": {
+    "gismu": "fasnu"
+  },
+  "fav": {
+    "gismu": "farvi"
+  },
+  "fax": {
+    "gismu": "fraxu"
+  },
+  "faz": {
+    "gismu": "fanza"
+  },
+  "fe'a": {
+    "gismu": "fenra"
+  },
+  "fe'i": {
+    "gismu": "fetsi"
+  },
+  "fe'o": {
+    "gismu": "fenso"
+  },
+  "fe'u": {
+    "gismu": "fengu"
+  },
+  "feb": {
+    "gismu": "febvi"
+  },
+  "fed": {
+    "gismu": "fendi"
+  },
+  "feg": {
+    "gismu": "fengu"
+  },
+  "fei": {
+    "gismu": "fepni"
+  },
+  "fek": {
+    "gismu": "fenki"
+  },
+  "fem": {
+    "gismu": "femti"
+  },
+  "fen": {
+    "gismu": "fenso"
+  },
+  "fep": {
+    "gismu": "fepni"
+  },
+  "fer": {
+    "gismu": "fenra"
+  },
+  "fes": {
+    "gismu": "festi"
+  },
+  "fet": {
+    "gismu": "fetsi"
+  },
+  "fi'a": {
+    "gismu": "cfika"
+  },
+  "fi'e": {
+    "gismu": "finpe"
+  },
+  "fi'i": {
+    "gismu": "finti"
+  },
+  "fi'o": {
+    "gismu": "friko"
+  },
+  "fi'u": {
+    "gismu": "cfipu"
+  },
+  "fic": {
+    "gismu": "frica"
+  },
+  "fig": {
+    "gismu": "figre"
+  },
+  "fik": {
+    "gismu": "cfika"
+  },
+  "fil": {
+    "gismu": "frili"
+  },
+  "fin": {
+    "gismu": "finti"
+  },
+  "fip": {
+    "gismu": "finpe"
+  },
+  "fir": {
+    "gismu": "flira"
+  },
+  "fis": {
+    "gismu": "filso"
+  },
+  "fit": {
+    "gismu": "friti"
+  },
+  "fla": {
+    "gismu": "flalu"
+  },
+  "fle": {
+    "gismu": "flecu"
+  },
+  "fli": {
+    "gismu": "fliba"
+  },
+  "flo": {
+    "gismu": "foldi"
+  },
+  "flu": {
+    "gismu": "fulta"
+  },
+  "fo'o": {
+    "gismu": "fonmo"
+  },
+  "foi": {
+    "gismu": "foldi"
+  },
+  "fom": {
+    "gismu": "fonmo"
+  },
+  "fon": {
+    "gismu": "fonxa"
+  },
+  "fra": {
+    "gismu": "frati"
+  },
+  "fre": {
+    "gismu": "ferti"
+  },
+  "fri": {
+    "gismu": "lifri"
+  },
+  "fro": {
+    "gismu": "forca"
+  },
+  "fru": {
+    "gismu": "frumu"
+  },
+  "fu'a": {
+    "gismu": "funca"
+  },
+  "fu'e": {
+    "gismu": "fuzme"
+  },
+  "fu'i": {
+    "gismu": "fukpi"
+  },
+  "fuk": {
+    "gismu": "fukpi"
+  },
+  "ful": {
+    "gismu": "fulta"
+  },
+  "fun": {
+    "gismu": "funca"
+  },
+  "fur": {
+    "gismu": "fusra"
+  },
+  "fuz": {
+    "gismu": "fuzme"
+  },
+  "ga'a": {
+    "gismu": "grana"
+  },
+  "ga'e": {
+    "gismu": "ganse"
+  },
+  "ga'i": {
+    "gismu": "galfi"
+  },
+  "ga'o": {
+    "gismu": "ganlo"
+  },
+  "ga'u": {
+    "gismu": "galtu"
+  },
+  "gac": {
+    "gismu": "gapci"
+  },
+  "gad": {
+    "gismu": "gadri"
+  },
+  "gaf": {
+    "gismu": "galfi"
+  },
+  "gai": {
+    "gismu": "gacri"
+  },
+  "gal": {
+    "gismu": "galtu"
+  },
+  "gan": {
+    "gismu": "ganra"
+  },
+  "gap": {
+    "gismu": "gapru"
+  },
+  "gar": {
+    "gismu": "garna"
+  },
+  "gas": {
+    "gismu": "ganse"
+  },
+  "gat": {
+    "gismu": "gasta"
+  },
+  "gau": {
+    "gismu": "gasnu"
+  },
+  "gax": {
+    "gismu": "ganxo"
+  },
+  "gaz": {
+    "gismu": "ganzu"
+  },
+  "ge'a": {
+    "gismu": "gerna"
+  },
+  "ge'o": {
+    "gismu": "gento"
+  },
+  "ge'u": {
+    "gismu": "gerku"
+  },
+  "gei": {
+    "gismu": "gleki"
+  },
+  "gej": {
+    "gismu": "genja"
+  },
+  "gek": {
+    "gismu": "gleki"
+  },
+  "gen": {
+    "gismu": "gerna"
+  },
+  "ger": {
+    "gismu": "gerku"
+  },
+  "get": {
+    "gismu": "gento"
+  },
+  "gex": {
+    "gismu": "genxu"
+  },
+  "gi'a": {
+    "gismu": "gidva"
+  },
+  "gi'e": {
+    "gismu": "zgike"
+  },
+  "gi'o": {
+    "gismu": "gigdo"
+  },
+  "gi'u": {
+    "gismu": "gismu"
+  },
+  "gic": {
+    "gismu": "glico"
+  },
+  "gid": {
+    "gismu": "gidva"
+  },
+  "gig": {
+    "gismu": "gigdo"
+  },
+  "gik": {
+    "gismu": "ginka"
+  },
+  "gim": {
+    "gismu": "gismu"
+  },
+  "gin": {
+    "gismu": "jgina"
+  },
+  "gir": {
+    "gismu": "girzu"
+  },
+  "git": {
+    "gismu": "jgita"
+  },
+  "gla": {
+    "gismu": "glare"
+  },
+  "gle": {
+    "gismu": "gletu"
+  },
+  "gli": {
+    "gismu": "glico"
+  },
+  "glu": {
+    "gismu": "gluta"
+  },
+  "goc": {
+    "gismu": "gocti"
+  },
+  "got": {
+    "gismu": "gotro"
+  },
+  "gra": {
+    "gismu": "grake"
+  },
+  "gre": {
+    "gismu": "pagre"
+  },
+  "gri": {
+    "gismu": "girzu"
+  },
+  "gru": {
+    "gismu": "gurni"
+  },
+  "gu'a": {
+    "gismu": "gunka"
+  },
+  "gu'e": {
+    "gismu": "gugde"
+  },
+  "gu'i": {
+    "gismu": "gusni"
+  },
+  "gu'o": {
+    "gismu": "gunro"
+  },
+  "gub": {
+    "gismu": "gubni"
+  },
+  "guc": {
+    "gismu": "gutci"
+  },
+  "gud": {
+    "gismu": "gundi"
+  },
+  "gug": {
+    "gismu": "gugde"
+  },
+  "guk": {
+    "gismu": "guska"
+  },
+  "gum": {
+    "gismu": "gunma"
+  },
+  "gun": {
+    "gismu": "gunka"
+  },
+  "gur": {
+    "gismu": "gunro"
+  },
+  "gus": {
+    "gismu": "gusni"
+  },
+  "gut": {
+    "gismu": "gunta"
+  },
+  "guz": {
+    "gismu": "guzme"
+  },
+  "ja'a": {
+    "gismu": "jatna"
+  },
+  "ja'e": {
+    "gismu": "jalge"
+  },
+  "ja'i": {
+    "gismu": "jadni"
+  },
+  "ja'o": {
+    "gismu": "jarco"
+  },
+  "ja'u": {
+    "gismu": "jgalu"
+  },
+  "jab": {
+    "gismu": "janbe"
+  },
+  "jac": {
+    "gismu": "djacu"
+  },
+  "jad": {
+    "gismu": "jadni"
+  },
+  "jaf": {
+    "gismu": "jamfu"
+  },
+  "jag": {
+    "gismu": "jalge"
+  },
+  "jai": {
+    "gismu": "jgari"
+  },
+  "jaj": {
+    "gismu": "jmaji"
+  },
+  "jak": {
+    "gismu": "jarki"
+  },
+  "jal": {
+    "gismu": "janli"
+  },
+  "jam": {
+    "gismu": "jamna"
+  },
+  "jan": {
+    "gismu": "janco"
+  },
+  "jap": {
+    "gismu": "jaspu"
+  },
+  "jar": {
+    "gismu": "jdari"
+  },
+  "jas": {
+    "gismu": "jansu"
+  },
+  "jat": {
+    "gismu": "janta"
+  },
+  "jau": {
+    "gismu": "djacu"
+  },
+  "jba": {
+    "gismu": "jbari"
+  },
+  "jbe": {
+    "gismu": "jbena"
+  },
+  "jbi": {
+    "gismu": "jibni"
+  },
+  "jbo": {
+    "gismu": "lojbo"
+  },
+  "jbu": {
+    "gismu": "jubme"
+  },
+  "jda": {
+    "gismu": "lijda"
+  },
+  "jde": {
+    "gismu": "kajde"
+  },
+  "jdi": {
+    "gismu": "jdice"
+  },
+  "jdu": {
+    "gismu": "jduli"
+  },
+  "je'a": {
+    "gismu": "jecta"
+  },
+  "je'e": {
+    "gismu": "jetce"
+  },
+  "je'i": {
+    "gismu": "jersi"
+  },
+  "je'o": {
+    "gismu": "jegvo"
+  },
+  "je'u": {
+    "gismu": "jetnu"
+  },
+  "jec": {
+    "gismu": "jecta"
+  },
+  "jed": {
+    "gismu": "jendu"
+  },
+  "jef": {
+    "gismu": "jeftu"
+  },
+  "jeg": {
+    "gismu": "jegvo"
+  },
+  "jei": {
+    "gismu": "jenmi"
+  },
+  "jel": {
+    "gismu": "jelca"
+  },
+  "jem": {
+    "gismu": "jenmi"
+  },
+  "jen": {
+    "gismu": "jenca"
+  },
+  "jer": {
+    "gismu": "jbera"
+  },
+  "jes": {
+    "gismu": "jesni"
+  },
+  "jet": {
+    "gismu": "jetnu"
+  },
+  "jex": {
+    "gismu": "jerxo"
+  },
+  "jga": {
+    "gismu": "jganu"
+  },
+  "jge": {
+    "gismu": "jgena"
+  },
+  "jgi": {
+    "gismu": "jgira"
+  },
+  "ji'a": {
+    "gismu": "jinga"
+  },
+  "ji'e": {
+    "gismu": "jmive"
+  },
+  "ji'i": {
+    "gismu": "jinvi"
+  },
+  "ji'o": {
+    "gismu": "jipno"
+  },
+  "ji'u": {
+    "gismu": "jvinu"
+  },
+  "jib": {
+    "gismu": "jibri"
+  },
+  "jic": {
+    "gismu": "jimca"
+  },
+  "jif": {
+    "gismu": "jitfa"
+  },
+  "jig": {
+    "gismu": "jinga"
+  },
+  "jij": {
+    "gismu": "jijnu"
+  },
+  "jik": {
+    "gismu": "jikca"
+  },
+  "jil": {
+    "gismu": "jilka"
+  },
+  "jim": {
+    "gismu": "jinme"
+  },
+  "jin": {
+    "gismu": "djine"
+  },
+  "jip": {
+    "gismu": "jipno"
+  },
+  "jir": {
+    "gismu": "jinru"
+  },
+  "jis": {
+    "gismu": "jinsa"
+  },
+  "jit": {
+    "gismu": "jimte"
+  },
+  "jiv": {
+    "gismu": "jinvi"
+  },
+  "jiz": {
+    "gismu": "jinzi"
+  },
+  "jma": {
+    "gismu": "jamfu"
+  },
+  "jme": {
+    "gismu": "jemna"
+  },
+  "jmi": {
+    "gismu": "jimpe"
+  },
+  "jo'e": {
+    "gismu": "jorne"
+  },
+  "jo'o": {
+    "gismu": "jordo"
+  },
+  "jon": {
+    "gismu": "jorne"
+  },
+  "jor": {
+    "gismu": "jordo"
+  },
+  "ju'a": {
+    "gismu": "jufra"
+  },
+  "ju'e": {
+    "gismu": "julne"
+  },
+  "ju'i": {
+    "gismu": "jundi"
+  },
+  "ju'o": {
+    "gismu": "djuno"
+  },
+  "jub": {
+    "gismu": "jubme"
+  },
+  "jud": {
+    "gismu": "jundi"
+  },
+  "juf": {
+    "gismu": "jufra"
+  },
+  "jug": {
+    "gismu": "jungo"
+  },
+  "juk": {
+    "gismu": "jukni"
+  },
+  "jul": {
+    "gismu": "junla"
+  },
+  "jum": {
+    "gismu": "jurme"
+  },
+  "jun": {
+    "gismu": "djuno"
+  },
+  "jup": {
+    "gismu": "jukpa"
+  },
+  "jur": {
+    "gismu": "junri"
+  },
+  "jus": {
+    "gismu": "jursa"
+  },
+  "jut": {
+    "gismu": "jutsi"
+  },
+  "jux": {
+    "gismu": "juxre"
+  },
+  "jva": {
+    "gismu": "javni"
+  },
+  "jvi": {
+    "gismu": "jivna"
+  },
+  "jvo": {
+    "gismu": "lujvo"
+  },
+  "ka'a": {
+    "gismu": "katna"
+  },
+  "ka'e": {
+    "gismu": "kakne"
+  },
+  "ka'i": {
+    "gismu": "krati"
+  },
+  "ka'o": {
+    "gismu": "kanro"
+  },
+  "ka'u": {
+    "gismu": "kantu"
+  },
+  "kab": {
+    "gismu": "karbi"
+  },
+  "kac": {
+    "gismu": "kancu"
+  },
+  "kad": {
+    "gismu": "kandi"
+  },
+  "kaf": {
+    "gismu": "ckafi"
+  },
+  "kag": {
+    "gismu": "kagni"
+  },
+  "kai": {
+    "gismu": "ckaji"
+  },
+  "kaj": {
+    "gismu": "kanji"
+  },
+  "kak": {
+    "gismu": "klaku"
+  },
+  "kal": {
+    "gismu": "kanla"
+  },
+  "kan": {
+    "gismu": "kansa"
+  },
+  "kap": {
+    "gismu": "skapi"
+  },
+  "kar": {
+    "gismu": "kalri"
+  },
+  "kas": {
+    "gismu": "kalsa"
+  },
+  "kat": {
+    "gismu": "kalte"
+  },
+  "kau": {
+    "gismu": "kampu"
+  },
+  "kav": {
+    "gismu": "kavbu"
+  },
+  "kax": {
+    "gismu": "kanxe"
+  },
+  "ke'a": {
+    "gismu": "kevna"
+  },
+  "ke'i": {
+    "gismu": "kecti"
+  },
+  "ke'o": {
+    "gismu": "kelvo"
+  },
+  "ke'u": {
+    "gismu": "krefu"
+  },
+  "kec": {
+    "gismu": "kecti"
+  },
+  "kei": {
+    "gismu": "kelci"
+  },
+  "kej": {
+    "gismu": "ckeji"
+  },
+  "kel": {
+    "gismu": "kelci"
+  },
+  "ken": {
+    "gismu": "kenra"
+  },
+  "ker": {
+    "gismu": "kerlo"
+  },
+  "kes": {
+    "gismu": "kensa"
+  },
+  "ket": {
+    "gismu": "ketco"
+  },
+  "kev": {
+    "gismu": "kevna"
+  },
+  "ki'a": {
+    "gismu": "krixa"
+  },
+  "ki'e": {
+    "gismu": "kicne"
+  },
+  "ki'i": {
+    "gismu": "ckini"
+  },
+  "ki'o": {
+    "gismu": "kilto"
+  },
+  "ki'u": {
+    "gismu": "krinu"
+  },
+  "kic": {
+    "gismu": "kicne"
+  },
+  "kij": {
+    "gismu": "kijno"
+  },
+  "kik": {
+    "gismu": "ckiku"
+  },
+  "kil": {
+    "gismu": "kinli"
+  },
+  "kin": {
+    "gismu": "skina"
+  },
+  "kir": {
+    "gismu": "ckire"
+  },
+  "kis": {
+    "gismu": "kisto"
+  },
+  "kit": {
+    "gismu": "kliti"
+  },
+  "kix": {
+    "gismu": "krixa"
+  },
+  "kla": {
+    "gismu": "klama"
+  },
+  "kle": {
+    "gismu": "klesi"
+  },
+  "kli": {
+    "gismu": "klina"
+  },
+  "klo": {
+    "gismu": "diklo"
+  },
+  "klu": {
+    "gismu": "kulnu"
+  },
+  "ko'a": {
+    "gismu": "kojna"
+  },
+  "ko'e": {
+    "gismu": "kolme"
+  },
+  "ko'i": {
+    "gismu": "kobli"
+  },
+  "ko'o": {
+    "gismu": "skoto"
+  },
+  "ko'u": {
+    "gismu": "konju"
+  },
+  "kob": {
+    "gismu": "kobli"
+  },
+  "koi": {
+    "gismu": "korbi"
+  },
+  "koj": {
+    "gismu": "kojna"
+  },
+  "kok": {
+    "gismu": "korka"
+  },
+  "kol": {
+    "gismu": "kolme"
+  },
+  "kom": {
+    "gismu": "komcu"
+  },
+  "kon": {
+    "gismu": "konju"
+  },
+  "kor": {
+    "gismu": "korbi"
+  },
+  "kos": {
+    "gismu": "kosta"
+  },
+  "kot": {
+    "gismu": "skoto"
+  },
+  "kra": {
+    "gismu": "krasi"
+  },
+  "kre": {
+    "gismu": "kerfa"
+  },
+  "kri": {
+    "gismu": "krici"
+  },
+  "kro": {
+    "gismu": "korcu"
+  },
+  "kru": {
+    "gismu": "kruvi"
+  },
+  "ku'a": {
+    "gismu": "kumfa"
+  },
+  "ku'e": {
+    "gismu": "kuspe"
+  },
+  "ku'i": {
+    "gismu": "kurji"
+  },
+  "ku'o": {
+    "gismu": "skuro"
+  },
+  "ku'u": {
+    "gismu": "ckunu"
+  },
+  "kub": {
+    "gismu": "kubli"
+  },
+  "kuc": {
+    "gismu": "kruca"
+  },
+  "kuf": {
+    "gismu": "kufra"
+  },
+  "kuj": {
+    "gismu": "kurji"
+  },
+  "kuk": {
+    "gismu": "kukte"
+  },
+  "kul": {
+    "gismu": "ckule"
+  },
+  "kum": {
+    "gismu": "kumfa"
+  },
+  "kun": {
+    "gismu": "kunra"
+  },
+  "kup": {
+    "gismu": "kuspe"
+  },
+  "kur": {
+    "gismu": "kurfa"
+  },
+  "kus": {
+    "gismu": "kusru"
+  },
+  "kut": {
+    "gismu": "kunti"
+  },
+  "la'a": {
+    "gismu": "lasna"
+  },
+  "la'e": {
+    "gismu": "lakne"
+  },
+  "la'i": {
+    "gismu": "lamji"
+  },
+  "la'o": {
+    "gismu": "latmo"
+  },
+  "la'u": {
+    "gismu": "lalxu"
+  },
+  "lab": {
+    "gismu": "blabi"
+  },
+  "lac": {
+    "gismu": "lacri"
+  },
+  "lad": {
+    "gismu": "ladru"
+  },
+  "laf": {
+    "gismu": "lafti"
+  },
+  "lag": {
+    "gismu": "vlagi"
+  },
+  "lai": {
+    "gismu": "klani"
+  },
+  "laj": {
+    "gismu": "klaji"
+  },
+  "lak": {
+    "gismu": "lakse"
+  },
+  "lal": {
+    "gismu": "lanli"
+  },
+  "lam": {
+    "gismu": "lamji"
+  },
+  "lan": {
+    "gismu": "lanme"
+  },
+  "lap": {
+    "gismu": "lacpu"
+  },
+  "lar": {
+    "gismu": "larcu"
+  },
+  "las": {
+    "gismu": "slasi"
+  },
+  "lat": {
+    "gismu": "mlatu"
+  },
+  "lau": {
+    "gismu": "cladu"
+  },
+  "lax": {
+    "gismu": "lanxe"
+  },
+  "laz": {
+    "gismu": "lanzu"
+  },
+  "le'a": {
+    "gismu": "lebna"
+  },
+  "le'i": {
+    "gismu": "pleji"
+  },
+  "le'o": {
+    "gismu": "lenjo"
+  },
+  "le'u": {
+    "gismu": "lerfu"
+  },
+  "leb": {
+    "gismu": "lebna"
+  },
+  "lec": {
+    "gismu": "lerci"
+  },
+  "led": {
+    "gismu": "mledi"
+  },
+  "lei": {
+    "gismu": "klesi"
+  },
+  "lej": {
+    "gismu": "pleji"
+  },
+  "lek": {
+    "gismu": "lenku"
+  },
+  "len": {
+    "gismu": "lenjo"
+  },
+  "ler": {
+    "gismu": "lerfu"
+  },
+  "let": {
+    "gismu": "gletu"
+  },
+  "li'a": {
+    "gismu": "cliva"
+  },
+  "li'e": {
+    "gismu": "lidne"
+  },
+  "li'i": {
+    "gismu": "linji"
+  },
+  "li'o": {
+    "gismu": "linto"
+  },
+  "li'u": {
+    "gismu": "litru"
+  },
+  "lib": {
+    "gismu": "libjo"
+  },
+  "lic": {
+    "gismu": "litce"
+  },
+  "lid": {
+    "gismu": "lindi"
+  },
+  "lif": {
+    "gismu": "lifri"
+  },
+  "lig": {
+    "gismu": "sligu"
+  },
+  "lij": {
+    "gismu": "linji"
+  },
+  "lik": {
+    "gismu": "litki"
+  },
+  "lil": {
+    "gismu": "livla"
+  },
+  "lim": {
+    "gismu": "limna"
+  },
+  "lin": {
+    "gismu": "linsi"
+  },
+  "lir": {
+    "gismu": "clira"
+  },
+  "lis": {
+    "gismu": "lisri"
+  },
+  "lit": {
+    "gismu": "clite"
+  },
+  "liv": {
+    "gismu": "cliva"
+  },
+  "lix": {
+    "gismu": "plixa"
+  },
+  "lo'i": {
+    "gismu": "bloti"
+  },
+  "lo'o": {
+    "gismu": "slovo"
+  },
+  "lo'u": {
+    "gismu": "lorxu"
+  },
+  "lob": {
+    "gismu": "lojbo"
+  },
+  "loi": {
+    "gismu": "loldi"
+  },
+  "loj": {
+    "gismu": "logji"
+  },
+  "lol": {
+    "gismu": "loldi"
+  },
+  "lor": {
+    "gismu": "lorxu"
+  },
+  "lot": {
+    "gismu": "bloti"
+  },
+  "lov": {
+    "gismu": "slovo"
+  },
+  "lu'a": {
+    "gismu": "pluta"
+  },
+  "lu'e": {
+    "gismu": "klupe"
+  },
+  "lu'i": {
+    "gismu": "lumci"
+  },
+  "lu'o": {
+    "gismu": "lubno"
+  },
+  "lub": {
+    "gismu": "lunbe"
+  },
+  "luj": {
+    "gismu": "pluja"
+  },
+  "lum": {
+    "gismu": "lumci"
+  },
+  "lun": {
+    "gismu": "mluni"
+  },
+  "lup": {
+    "gismu": "klupe"
+  },
+  "lur": {
+    "gismu": "lunra"
+  },
+  "lus": {
+    "gismu": "lunsa"
+  },
+  "lut": {
+    "gismu": "pluta"
+  },
+  "luv": {
+    "gismu": "lujvo"
+  },
+  "luz": {
+    "gismu": "kluza"
+  },
+  "ma'a": {
+    "gismu": "cmana"
+  },
+  "ma'e": {
+    "gismu": "marce"
+  },
+  "ma'i": {
+    "gismu": "masti"
+  },
+  "ma'o": {
+    "gismu": "cmavo"
+  },
+  "ma'u": {
+    "gismu": "makcu"
+  },
+  "mab": {
+    "gismu": "mabru"
+  },
+  "mac": {
+    "gismu": "manci"
+  },
+  "mad": {
+    "gismu": "marde"
+  },
+  "maf": {
+    "gismu": "makfa"
+  },
+  "mag": {
+    "gismu": "margu"
+  },
+  "mai": {
+    "gismu": "marji"
+  },
+  "maj": {
+    "gismu": "marji"
+  },
+  "mak": {
+    "gismu": "maksi"
+  },
+  "mal": {
+    "gismu": "mabla"
+  },
+  "mam": {
+    "gismu": "mamta"
+  },
+  "man": {
+    "gismu": "manku"
+  },
+  "map": {
+    "gismu": "mapku"
+  },
+  "mar": {
+    "gismu": "manri"
+  },
+  "mas": {
+    "gismu": "malsi"
+  },
+  "mat": {
+    "gismu": "mapti"
+  },
+  "mau": {
+    "gismu": "zmadu"
+  },
+  "mav": {
+    "gismu": "mavji"
+  },
+  "max": {
+    "gismu": "marxa"
+  },
+  "me'a": {
+    "gismu": "mleca"
+  },
+  "me'e": {
+    "gismu": "cmene"
+  },
+  "me'i": {
+    "gismu": "mensi"
+  },
+  "me'o": {
+    "gismu": "mekso"
+  },
+  "me'u": {
+    "gismu": "mentu"
+  },
+  "meb": {
+    "gismu": "mebri"
+  },
+  "mec": {
+    "gismu": "mleca"
+  },
+  "meg": {
+    "gismu": "megdo"
+  },
+  "mej": {
+    "gismu": "meljo"
+  },
+  "mek": {
+    "gismu": "mekso"
+  },
+  "mel": {
+    "gismu": "melbi"
+  },
+  "men": {
+    "gismu": "menli"
+  },
+  "mer": {
+    "gismu": "merko"
+  },
+  "mes": {
+    "gismu": "mensi"
+  },
+  "met": {
+    "gismu": "mentu"
+  },
+  "mex": {
+    "gismu": "mexno"
+  },
+  "mi'a": {
+    "gismu": "cmila"
+  },
+  "mi'e": {
+    "gismu": "minde"
+  },
+  "mi'i": {
+    "gismu": "minji"
+  },
+  "mi'o": {
+    "gismu": "misno"
+  },
+  "mi'u": {
+    "gismu": "mintu"
+  },
+  "mic": {
+    "gismu": "mikce"
+  },
+  "mid": {
+    "gismu": "minde"
+  },
+  "mif": {
+    "gismu": "mifra"
+  },
+  "mij": {
+    "gismu": "midju"
+  },
+  "mik": {
+    "gismu": "mikri"
+  },
+  "mil": {
+    "gismu": "milti"
+  },
+  "mim": {
+    "gismu": "cmima"
+  },
+  "min": {
+    "gismu": "jmina"
+  },
+  "mip": {
+    "gismu": "mipri"
+  },
+  "mir": {
+    "gismu": "minra"
+  },
+  "mis": {
+    "gismu": "misno"
+  },
+  "mit": {
+    "gismu": "mintu"
+  },
+  "miv": {
+    "gismu": "jmive"
+  },
+  "mix": {
+    "gismu": "mixre"
+  },
+  "mla": {
+    "gismu": "mlana"
+  },
+  "mle": {
+    "gismu": "melbi"
+  },
+  "mli": {
+    "gismu": "milxe"
+  },
+  "mlo": {
+    "gismu": "molki"
+  },
+  "mlu": {
+    "gismu": "simlu"
+  },
+  "mo'a": {
+    "gismu": "morna"
+  },
+  "mo'i": {
+    "gismu": "morji"
+  },
+  "mo'o": {
+    "gismu": "molro"
+  },
+  "mo'u": {
+    "gismu": "moklu"
+  },
+  "moc": {
+    "gismu": "mokca"
+  },
+  "moj": {
+    "gismu": "morji"
+  },
+  "mol": {
+    "gismu": "moklu"
+  },
+  "mon": {
+    "gismu": "morna"
+  },
+  "mor": {
+    "gismu": "morko"
+  },
+  "mos": {
+    "gismu": "mosra"
+  },
+  "mra": {
+    "gismu": "marbi"
+  },
+  "mre": {
+    "gismu": "merli"
+  },
+  "mri": {
+    "gismu": "mrilu"
+  },
+  "mro": {
+    "gismu": "morsi"
+  },
+  "mru": {
+    "gismu": "mruli"
+  },
+  "mu'a": {
+    "gismu": "murta"
+  },
+  "mu'e": {
+    "gismu": "munje"
+  },
+  "mu'i": {
+    "gismu": "mukti"
+  },
+  "mu'o": {
+    "gismu": "mulno"
+  },
+  "mu'u": {
+    "gismu": "muvdu"
+  },
+  "muc": {
+    "gismu": "smuci"
+  },
+  "mud": {
+    "gismu": "mudri"
+  },
+  "muj": {
+    "gismu": "munje"
+  },
+  "muk": {
+    "gismu": "mukti"
+  },
+  "mul": {
+    "gismu": "mulno"
+  },
+  "mun": {
+    "gismu": "smuni"
+  },
+  "mup": {
+    "gismu": "mupli"
+  },
+  "mur": {
+    "gismu": "murta"
+  },
+  "mus": {
+    "gismu": "muslo"
+  },
+  "mut": {
+    "gismu": "mucti"
+  },
+  "muv": {
+    "gismu": "muvdu"
+  },
+  "muz": {
+    "gismu": "muzga"
+  },
+  "na'a": {
+    "gismu": "nanca"
+  },
+  "na'e": {
+    "gismu": "natfe"
+  },
+  "na'i": {
+    "gismu": "nalci"
+  },
+  "na'o": {
+    "gismu": "cnano"
+  },
+  "na'u": {
+    "gismu": "namcu"
+  },
+  "nab": {
+    "gismu": "nanba"
+  },
+  "nac": {
+    "gismu": "namcu"
+  },
+  "nad": {
+    "gismu": "nandu"
+  },
+  "naf": {
+    "gismu": "natfe"
+  },
+  "nag": {
+    "gismu": "narge"
+  },
+  "nai": {
+    "gismu": "natmi"
+  },
+  "naj": {
+    "gismu": "narju"
+  },
+  "nak": {
+    "gismu": "nakni"
+  },
+  "nam": {
+    "gismu": "nabmi"
+  },
+  "nan": {
+    "gismu": "snanu"
+  },
+  "nat": {
+    "gismu": "natmi"
+  },
+  "nau": {
+    "gismu": "nanmu"
+  },
+  "nav": {
+    "gismu": "nanvi"
+  },
+  "nax": {
+    "gismu": "naxle"
+  },
+  "naz": {
+    "gismu": "nazbi"
+  },
+  "ne'i": {
+    "gismu": "nenri"
+  },
+  "ne'o": {
+    "gismu": "cnebo"
+  },
+  "ne'u": {
+    "gismu": "cnemu"
+  },
+  "neb": {
+    "gismu": "cnebo"
+  },
+  "nei": {
+    "gismu": "nelci"
+  },
+  "nel": {
+    "gismu": "nelci"
+  },
+  "nem": {
+    "gismu": "cnemu"
+  },
+  "nen": {
+    "gismu": "nejni"
+  },
+  "ner": {
+    "gismu": "nenri"
+  },
+  "ni'a": {
+    "gismu": "cnita"
+  },
+  "ni'e": {
+    "gismu": "nilce"
+  },
+  "ni'i": {
+    "gismu": "nibli"
+  },
+  "ni'o": {
+    "gismu": "cnino"
+  },
+  "ni'u": {
+    "gismu": "ninmu"
+  },
+  "nib": {
+    "gismu": "nibli"
+  },
+  "nic": {
+    "gismu": "cnici"
+  },
+  "nid": {
+    "gismu": "snidu"
+  },
+  "nik": {
+    "gismu": "nikle"
+  },
+  "nim": {
+    "gismu": "ninmu"
+  },
+  "nin": {
+    "gismu": "cnino"
+  },
+  "nip": {
+    "gismu": "snipa"
+  },
+  "nir": {
+    "gismu": "nirna"
+  },
+  "nis": {
+    "gismu": "cnisa"
+  },
+  "nit": {
+    "gismu": "cnita"
+  },
+  "niv": {
+    "gismu": "nivji"
+  },
+  "nix": {
+    "gismu": "nixli"
+  },
+  "no'i": {
+    "gismu": "nobli"
+  },
+  "noi": {
+    "gismu": "notci"
+  },
+  "nol": {
+    "gismu": "nobli"
+  },
+  "not": {
+    "gismu": "notci"
+  },
+  "nu'a": {
+    "gismu": "snura"
+  },
+  "nu'e": {
+    "gismu": "nupre"
+  },
+  "nu'i": {
+    "gismu": "nutli"
+  },
+  "nuj": {
+    "gismu": "snuji"
+  },
+  "nuk": {
+    "gismu": "nukni"
+  },
+  "nul": {
+    "gismu": "nutli"
+  },
+  "num": {
+    "gismu": "nurma"
+  },
+  "nup": {
+    "gismu": "nupre"
+  },
+  "nur": {
+    "gismu": "snura"
+  },
+  "nut": {
+    "gismu": "snuti"
+  },
+  "nuz": {
+    "gismu": "nuzba"
+  },
+  "pa'a": {
+    "gismu": "pacna"
+  },
+  "pa'e": {
+    "gismu": "prane"
+  },
+  "pa'i": {
+    "gismu": "prami"
+  },
+  "pa'o": {
+    "gismu": "panlo"
+  },
+  "pa'u": {
+    "gismu": "patfu"
+  },
+  "pab": {
+    "gismu": "parbi"
+  },
+  "pac": {
+    "gismu": "palci"
+  },
+  "pad": {
+    "gismu": "pandi"
+  },
+  "paf": {
+    "gismu": "patfu"
+  },
+  "pag": {
+    "gismu": "pagbu"
+  },
+  "pai": {
+    "gismu": "pajni"
+  },
+  "paj": {
+    "gismu": "spaji"
+  },
+  "pak": {
+    "gismu": "palku"
+  },
+  "pal": {
+    "gismu": "prali"
+  },
+  "pam": {
+    "gismu": "prami"
+  },
+  "pan": {
+    "gismu": "panci"
+  },
+  "pap": {
+    "gismu": "panpi"
+  },
+  "par": {
+    "gismu": "cpare"
+  },
+  "pas": {
+    "gismu": "pastu"
+  },
+  "pat": {
+    "gismu": "pante"
+  },
+  "pau": {
+    "gismu": "pagbu"
+  },
+  "pax": {
+    "gismu": "patxu"
+  },
+  "paz": {
+    "gismu": "panzi"
+  },
+  "pe'a": {
+    "gismu": "preja"
+  },
+  "pe'i": {
+    "gismu": "penmi"
+  },
+  "pe'o": {
+    "gismu": "pendo"
+  },
+  "pe'u": {
+    "gismu": "pencu"
+  },
+  "peb": {
+    "gismu": "penbi"
+  },
+  "pec": {
+    "gismu": "pencu"
+  },
+  "ped": {
+    "gismu": "pendo"
+  },
+  "pei": {
+    "gismu": "pensi"
+  },
+  "pej": {
+    "gismu": "preja"
+  },
+  "pel": {
+    "gismu": "pelxu"
+  },
+  "pem": {
+    "gismu": "pemci"
+  },
+  "pen": {
+    "gismu": "penmi"
+  },
+  "per": {
+    "gismu": "perli"
+  },
+  "pes": {
+    "gismu": "pensi"
+  },
+  "pet": {
+    "gismu": "petso"
+  },
+  "pex": {
+    "gismu": "pesxu"
+  },
+  "pez": {
+    "gismu": "pezli"
+  },
+  "pi'a": {
+    "gismu": "pilka"
+  },
+  "pi'e": {
+    "gismu": "plipe"
+  },
+  "pi'i": {
+    "gismu": "pilji"
+  },
+  "pi'o": {
+    "gismu": "pipno"
+  },
+  "pi'u": {
+    "gismu": "pimlu"
+  },
+  "pib": {
+    "gismu": "plibu"
+  },
+  "pic": {
+    "gismu": "picti"
+  },
+  "pid": {
+    "gismu": "pindi"
+  },
+  "pif": {
+    "gismu": "pinfu"
+  },
+  "pij": {
+    "gismu": "prije"
+  },
+  "pik": {
+    "gismu": "pinka"
+  },
+  "pil": {
+    "gismu": "pilka"
+  },
+  "pim": {
+    "gismu": "pimlu"
+  },
+  "pin": {
+    "gismu": "pinta"
+  },
+  "pip": {
+    "gismu": "plipe"
+  },
+  "pir": {
+    "gismu": "pixra"
+  },
+  "pis": {
+    "gismu": "pinsi"
+  },
+  "pit": {
+    "gismu": "plita"
+  },
+  "pix": {
+    "gismu": "pinxe"
+  },
+  "pla": {
+    "gismu": "platu"
+  },
+  "ple": {
+    "gismu": "pelji"
+  },
+  "pli": {
+    "gismu": "pilno"
+  },
+  "plo": {
+    "gismu": "polje"
+  },
+  "plu": {
+    "gismu": "daplu"
+  },
+  "po'a": {
+    "gismu": "spoja"
+  },
+  "po'e": {
+    "gismu": "ponse"
+  },
+  "po'i": {
+    "gismu": "porpi"
+  },
+  "po'o": {
+    "gismu": "ponjo"
+  },
+  "po'u": {
+    "gismu": "spofu"
+  },
+  "pof": {
+    "gismu": "spofu"
+  },
+  "poi": {
+    "gismu": "porsi"
+  },
+  "poj": {
+    "gismu": "spoja"
+  },
+  "pol": {
+    "gismu": "polno"
+  },
+  "pon": {
+    "gismu": "ponjo"
+  },
+  "pop": {
+    "gismu": "porpi"
+  },
+  "por": {
+    "gismu": "porsi"
+  },
+  "pos": {
+    "gismu": "ponse"
+  },
+  "pot": {
+    "gismu": "porto"
+  },
+  "pra": {
+    "gismu": "cupra"
+  },
+  "pre": {
+    "gismu": "prenu"
+  },
+  "pri": {
+    "gismu": "prina"
+  },
+  "pro": {
+    "gismu": "fapro"
+  },
+  "pru": {
+    "gismu": "purci"
+  },
+  "pu'a": {
+    "gismu": "pluka"
+  },
+  "pu'e": {
+    "gismu": "pulce"
+  },
+  "pu'i": {
+    "gismu": "punji"
+  },
+  "pu'o": {
+    "gismu": "purmo"
+  },
+  "pu'u": {
+    "gismu": "sputu"
+  },
+  "puc": {
+    "gismu": "pulce"
+  },
+  "pud": {
+    "gismu": "purdi"
+  },
+  "puj": {
+    "gismu": "punji"
+  },
+  "puk": {
+    "gismu": "pluka"
+  },
+  "pul": {
+    "gismu": "punli"
+  },
+  "pum": {
+    "gismu": "purmo"
+  },
+  "pun": {
+    "gismu": "pruni"
+  },
+  "pur": {
+    "gismu": "purci"
+  },
+  "put": {
+    "gismu": "sputu"
+  },
+  "ra'a": {
+    "gismu": "srana"
+  },
+  "ra'e": {
+    "gismu": "ralte"
+  },
+  "ra'i": {
+    "gismu": "ranji"
+  },
+  "ra'o": {
+    "gismu": "radno"
+  },
+  "ra'u": {
+    "gismu": "raktu"
+  },
+  "rab": {
+    "gismu": "xrabo"
+  },
+  "rac": {
+    "gismu": "ralci"
+  },
+  "rad": {
+    "gismu": "randa"
+  },
+  "raf": {
+    "gismu": "rafsi"
+  },
+  "rag": {
+    "gismu": "rango"
+  },
+  "rai": {
+    "gismu": "traji"
+  },
+  "raj": {
+    "gismu": "sraji"
+  },
+  "rak": {
+    "gismu": "sraku"
+  },
+  "ral": {
+    "gismu": "ralju"
+  },
+  "ram": {
+    "gismu": "ranmi"
+  },
+  "ran": {
+    "gismu": "ranti"
+  },
+  "rap": {
+    "gismu": "rapli"
+  },
+  "rar": {
+    "gismu": "rarna"
+  },
+  "ras": {
+    "gismu": "grasu"
+  },
+  "rat": {
+    "gismu": "ratni"
+  },
+  "rau": {
+    "gismu": "gradu"
+  },
+  "rav": {
+    "gismu": "ragve"
+  },
+  "rax": {
+    "gismu": "ranxi"
+  },
+  "raz": {
+    "gismu": "brazo"
+  },
+  "re'a": {
+    "gismu": "remna"
+  },
+  "re'e": {
+    "gismu": "trene"
+  },
+  "re'i": {
+    "gismu": "renvi"
+  },
+  "re'o": {
+    "gismu": "renro"
+  },
+  "re'u": {
+    "gismu": "rectu"
+  },
+  "reb": {
+    "gismu": "rebla"
+  },
+  "rec": {
+    "gismu": "rectu"
+  },
+  "red": {
+    "gismu": "bredi"
+  },
+  "ref": {
+    "gismu": "krefu"
+  },
+  "rei": {
+    "gismu": "preti"
+  },
+  "rej": {
+    "gismu": "vreji"
+  },
+  "rek": {
+    "gismu": "greku"
+  },
+  "rem": {
+    "gismu": "remna"
+  },
+  "ren": {
+    "gismu": "trene"
+  },
+  "rep": {
+    "gismu": "crepu"
+  },
+  "rer": {
+    "gismu": "renro"
+  },
+  "res": {
+    "gismu": "respa"
+  },
+  "ret": {
+    "gismu": "preti"
+  },
+  "rev": {
+    "gismu": "renvi"
+  },
+  "ri'a": {
+    "gismu": "rinka"
+  },
+  "ri'e": {
+    "gismu": "rirxe"
+  },
+  "ri'i": {
+    "gismu": "ritli"
+  },
+  "ri'o": {
+    "gismu": "crino"
+  },
+  "ri'u": {
+    "gismu": "rinju"
+  },
+  "rib": {
+    "gismu": "cribe"
+  },
+  "ric": {
+    "gismu": "tricu"
+  },
+  "rid": {
+    "gismu": "crida"
+  },
+  "rif": {
+    "gismu": "ricfu"
+  },
+  "rig": {
+    "gismu": "rigni"
+  },
+  "rij": {
+    "gismu": "rijno"
+  },
+  "rik": {
+    "gismu": "rinka"
+  },
+  "ril": {
+    "gismu": "rilti"
+  },
+  "rim": {
+    "gismu": "rimni"
+  },
+  "rin": {
+    "gismu": "krinu"
+  },
+  "rip": {
+    "gismu": "cripu"
+  },
+  "rir": {
+    "gismu": "rirni"
+  },
+  "ris": {
+    "gismu": "rismi"
+  },
+  "rit": {
+    "gismu": "brito"
+  },
+  "riv": {
+    "gismu": "rivbi"
+  },
+  "rix": {
+    "gismu": "trixe"
+  },
+  "ro'a": {
+    "gismu": "prosa"
+  },
+  "ro'i": {
+    "gismu": "rokci"
+  },
+  "ro'o": {
+    "gismu": "ropno"
+  },
+  "ro'u": {
+    "gismu": "rotsu"
+  },
+  "rod": {
+    "gismu": "broda"
+  },
+  "rog": {
+    "gismu": "romge"
+  },
+  "rok": {
+    "gismu": "rokci"
+  },
+  "ron": {
+    "gismu": "ropno"
+  },
+  "ror": {
+    "gismu": "rorci"
+  },
+  "ros": {
+    "gismu": "prosa"
+  },
+  "rot": {
+    "gismu": "rotsu"
+  },
+  "roz": {
+    "gismu": "rozgu"
+  },
+  "ru'a": {
+    "gismu": "sruma"
+  },
+  "ru'e": {
+    "gismu": "pruce"
+  },
+  "ru'i": {
+    "gismu": "pruxi"
+  },
+  "ru'o": {
+    "gismu": "rusko"
+  },
+  "ru'u": {
+    "gismu": "rupnu"
+  },
+  "rub": {
+    "gismu": "ruble"
+  },
+  "ruc": {
+    "gismu": "pruce"
+  },
+  "rud": {
+    "gismu": "drudi"
+  },
+  "ruf": {
+    "gismu": "rufsu"
+  },
+  "ruj": {
+    "gismu": "kruji"
+  },
+  "ruk": {
+    "gismu": "rusko"
+  },
+  "rul": {
+    "gismu": "xrula"
+  },
+  "rum": {
+    "gismu": "runme"
+  },
+  "run": {
+    "gismu": "rutni"
+  },
+  "rup": {
+    "gismu": "rupnu"
+  },
+  "rur": {
+    "gismu": "sruri"
+  },
+  "rus": {
+    "gismu": "grusi"
+  },
+  "rut": {
+    "gismu": "grute"
+  },
+  "ruv": {
+    "gismu": "kruvi"
+  },
+  "rux": {
+    "gismu": "pruxi"
+  },
+  "sa'a": {
+    "gismu": "sanga"
+  },
+  "sa'e": {
+    "gismu": "satre"
+  },
+  "sa'i": {
+    "gismu": "sanli"
+  },
+  "sa'o": {
+    "gismu": "salpo"
+  },
+  "sa'u": {
+    "gismu": "sarcu"
+  },
+  "sab": {
+    "gismu": "sabji"
+  },
+  "sac": {
+    "gismu": "stace"
+  },
+  "sad": {
+    "gismu": "snada"
+  },
+  "sag": {
+    "gismu": "sanga"
+  },
+  "sai": {
+    "gismu": "sanmi"
+  },
+  "saj": {
+    "gismu": "sanji"
+  },
+  "sak": {
+    "gismu": "sakci"
+  },
+  "sal": {
+    "gismu": "sakli"
+  },
+  "sam": {
+    "gismu": "skami"
+  },
+  "san": {
+    "gismu": "spano"
+  },
+  "sap": {
+    "gismu": "sampu"
+  },
+  "sar": {
+    "gismu": "slari"
+  },
+  "sas": {
+    "gismu": "srasu"
+  },
+  "sat": {
+    "gismu": "sakta"
+  },
+  "sau": {
+    "gismu": "slabu"
+  },
+  "sav": {
+    "gismu": "savru"
+  },
+  "sax": {
+    "gismu": "sarxe"
+  },
+  "saz": {
+    "gismu": "sazri"
+  },
+  "se'a": {
+    "gismu": "setca"
+  },
+  "se'i": {
+    "gismu": "sevzi"
+  },
+  "se'u": {
+    "gismu": "selfu"
+  },
+  "seb": {
+    "gismu": "steba"
+  },
+  "sec": {
+    "gismu": "senci"
+  },
+  "sed": {
+    "gismu": "stedu"
+  },
+  "sef": {
+    "gismu": "selfu"
+  },
+  "sei": {
+    "gismu": "sepli"
+  },
+  "sen": {
+    "gismu": "senpi"
+  },
+  "sep": {
+    "gismu": "sepli"
+  },
+  "ser": {
+    "gismu": "serti"
+  },
+  "set": {
+    "gismu": "senta"
+  },
+  "sev": {
+    "gismu": "senva"
+  },
+  "sez": {
+    "gismu": "sevzi"
+  },
+  "sfa": {
+    "gismu": "sfasa"
+  },
+  "sfe": {
+    "gismu": "sefta"
+  },
+  "sfo": {
+    "gismu": "sfofa"
+  },
+  "sfu": {
+    "gismu": "sufti"
+  },
+  "si'a": {
+    "gismu": "sinma"
+  },
+  "si'e": {
+    "gismu": "snime"
+  },
+  "si'i": {
+    "gismu": "sicni"
+  },
+  "si'o": {
+    "gismu": "sidbo"
+  },
+  "si'u": {
+    "gismu": "simxu"
+  },
+  "sib": {
+    "gismu": "sidbo"
+  },
+  "sic": {
+    "gismu": "stici"
+  },
+  "sid": {
+    "gismu": "stidi"
+  },
+  "sig": {
+    "gismu": "sigja"
+  },
+  "sij": {
+    "gismu": "skiji"
+  },
+  "sik": {
+    "gismu": "silka"
+  },
+  "sil": {
+    "gismu": "siclu"
+  },
+  "sim": {
+    "gismu": "simxu"
+  },
+  "sin": {
+    "gismu": "tsina"
+  },
+  "sip": {
+    "gismu": "sipna"
+  },
+  "sir": {
+    "gismu": "sirji"
+  },
+  "sis": {
+    "gismu": "sisku"
+  },
+  "sit": {
+    "gismu": "sitna"
+  },
+  "siv": {
+    "gismu": "sivni"
+  },
+  "six": {
+    "gismu": "sirxo"
+  },
+  "ska": {
+    "gismu": "skari"
+  },
+  "ske": {
+    "gismu": "saske"
+  },
+  "ski": {
+    "gismu": "skicu"
+  },
+  "sko": {
+    "gismu": "skori"
+  },
+  "sku": {
+    "gismu": "cusku"
+  },
+  "sla": {
+    "gismu": "salci"
+  },
+  "sle": {
+    "gismu": "selci"
+  },
+  "sli": {
+    "gismu": "slilu"
+  },
+  "slo": {
+    "gismu": "solji"
+  },
+  "slu": {
+    "gismu": "sluji"
+  },
+  "sma": {
+    "gismu": "smaji"
+  },
+  "sme": {
+    "gismu": "semto"
+  },
+  "smi": {
+    "gismu": "simsa"
+  },
+  "smo": {
+    "gismu": "smoka"
+  },
+  "smu": {
+    "gismu": "smuni"
+  },
+  "sna": {
+    "gismu": "sance"
+  },
+  "sne": {
+    "gismu": "senva"
+  },
+  "sni": {
+    "gismu": "sinxa"
+  },
+  "sno": {
+    "gismu": "masno"
+  },
+  "snu": {
+    "gismu": "casnu"
+  },
+  "so'a": {
+    "gismu": "sovda"
+  },
+  "so'e": {
+    "gismu": "sobde"
+  },
+  "so'o": {
+    "gismu": "sombo"
+  },
+  "sob": {
+    "gismu": "sobde"
+  },
+  "soc": {
+    "gismu": "sorcu"
+  },
+  "sod": {
+    "gismu": "sodva"
+  },
+  "sof": {
+    "gismu": "softo"
+  },
+  "sog": {
+    "gismu": "sorgu"
+  },
+  "soi": {
+    "gismu": "sonci"
+  },
+  "sol": {
+    "gismu": "solri"
+  },
+  "som": {
+    "gismu": "sombo"
+  },
+  "son": {
+    "gismu": "sonci"
+  },
+  "sov": {
+    "gismu": "sovda"
+  },
+  "spa": {
+    "gismu": "spati"
+  },
+  "spe": {
+    "gismu": "speni"
+  },
+  "spi": {
+    "gismu": "spisa"
+  },
+  "spo": {
+    "gismu": "daspo"
+  },
+  "spu": {
+    "gismu": "spuda"
+  },
+  "sra": {
+    "gismu": "sarji"
+  },
+  "sre": {
+    "gismu": "srera"
+  },
+  "sri": {
+    "gismu": "dasri"
+  },
+  "sro": {
+    "gismu": "sorcu"
+  },
+  "sru": {
+    "gismu": "sruri"
+  },
+  "sta": {
+    "gismu": "stali"
+  },
+  "ste": {
+    "gismu": "liste"
+  },
+  "sti": {
+    "gismu": "sisti"
+  },
+  "sto": {
+    "gismu": "stodi"
+  },
+  "stu": {
+    "gismu": "stuzi"
+  },
+  "su'a": {
+    "gismu": "stura"
+  },
+  "su'i": {
+    "gismu": "sumti"
+  },
+  "su'u": {
+    "gismu": "sfubu"
+  },
+  "sub": {
+    "gismu": "sfubu"
+  },
+  "suc": {
+    "gismu": "sucta"
+  },
+  "sud": {
+    "gismu": "sudga"
+  },
+  "sug": {
+    "gismu": "sunga"
+  },
+  "suj": {
+    "gismu": "sumji"
+  },
+  "suk": {
+    "gismu": "suksa"
+  },
+  "sul": {
+    "gismu": "sunla"
+  },
+  "sum": {
+    "gismu": "sumti"
+  },
+  "sun": {
+    "gismu": "stuna"
+  },
+  "sur": {
+    "gismu": "surla"
+  },
+  "sut": {
+    "gismu": "sutra"
+  },
+  "ta'a": {
+    "gismu": "tavla"
+  },
+  "ta'e": {
+    "gismu": "tanxe"
+  },
+  "ta'i": {
+    "gismu": "tatpi"
+  },
+  "ta'o": {
+    "gismu": "tanbo"
+  },
+  "ta'u": {
+    "gismu": "taxfu"
+  },
+  "tab": {
+    "gismu": "tabno"
+  },
+  "tac": {
+    "gismu": "tance"
+  },
+  "tad": {
+    "gismu": "tadni"
+  },
+  "taf": {
+    "gismu": "taxfu"
+  },
+  "tag": {
+    "gismu": "tagji"
+  },
+  "tai": {
+    "gismu": "tarmi"
+  },
+  "taj": {
+    "gismu": "tamji"
+  },
+  "tak": {
+    "gismu": "staku"
+  },
+  "tal": {
+    "gismu": "talsa"
+  },
+  "tam": {
+    "gismu": "tarmi"
+  },
+  "tan": {
+    "gismu": "tsani"
+  },
+  "tap": {
+    "gismu": "stapa"
+  },
+  "tar": {
+    "gismu": "tarci"
+  },
+  "tas": {
+    "gismu": "tansi"
+  },
+  "tat": {
+    "gismu": "tatru"
+  },
+  "tau": {
+    "gismu": "tanru"
+  },
+  "tav": {
+    "gismu": "tavla"
+  },
+  "tax": {
+    "gismu": "tanxe"
+  },
+  "tca": {
+    "gismu": "tcadu"
+  },
+  "tce": {
+    "gismu": "mutce"
+  },
+  "tci": {
+    "gismu": "tutci"
+  },
+  "tco": {
+    "gismu": "ketco"
+  },
+  "tcu": {
+    "gismu": "nitcu"
+  },
+  "te'a": {
+    "gismu": "terpa"
+  },
+  "te'i": {
+    "gismu": "steci"
+  },
+  "te'o": {
+    "gismu": "stero"
+  },
+  "te'u": {
+    "gismu": "tengu"
+  },
+  "teb": {
+    "gismu": "ctebi"
+  },
+  "tec": {
+    "gismu": "steci"
+  },
+  "ted": {
+    "gismu": "terdi"
+  },
+  "tef": {
+    "gismu": "tenfa"
+  },
+  "teg": {
+    "gismu": "tengu"
+  },
+  "tei": {
+    "gismu": "temci"
+  },
+  "tek": {
+    "gismu": "cteki"
+  },
+  "tel": {
+    "gismu": "stela"
+  },
+  "tem": {
+    "gismu": "temci"
+  },
+  "ten": {
+    "gismu": "tcena"
+  },
+  "tep": {
+    "gismu": "terpa"
+  },
+  "tet": {
+    "gismu": "terto"
+  },
+  "ti'a": {
+    "gismu": "tcima"
+  },
+  "ti'e": {
+    "gismu": "trixe"
+  },
+  "ti'i": {
+    "gismu": "stidi"
+  },
+  "ti'o": {
+    "gismu": "ctino"
+  },
+  "ti'u": {
+    "gismu": "tixnu"
+  },
+  "tib": {
+    "gismu": "tinbe"
+  },
+  "tic": {
+    "gismu": "tcica"
+  },
+  "tid": {
+    "gismu": "tcidu"
+  },
+  "tig": {
+    "gismu": "tigni"
+  },
+  "tij": {
+    "gismu": "tilju"
+  },
+  "tik": {
+    "gismu": "stika"
+  },
+  "til": {
+    "gismu": "tcila"
+  },
+  "tim": {
+    "gismu": "tcima"
+  },
+  "tin": {
+    "gismu": "tirna"
+  },
+  "tip": {
+    "gismu": "tikpa"
+  },
+  "tir": {
+    "gismu": "tirse"
+  },
+  "tis": {
+    "gismu": "tisna"
+  },
+  "tit": {
+    "gismu": "titla"
+  },
+  "tiv": {
+    "gismu": "tivni"
+  },
+  "tix": {
+    "gismu": "tixnu"
+  },
+  "tiz": {
+    "gismu": "stizu"
+  },
+  "to'a": {
+    "gismu": "tonga"
+  },
+  "to'i": {
+    "gismu": "torni"
+  },
+  "to'u": {
+    "gismu": "tordu"
+  },
+  "toc": {
+    "gismu": "troci"
+  },
+  "tod": {
+    "gismu": "toldi"
+  },
+  "tog": {
+    "gismu": "tonga"
+  },
+  "toi": {
+    "gismu": "troci"
+  },
+  "tok": {
+    "gismu": "toknu"
+  },
+  "ton": {
+    "gismu": "torni"
+  },
+  "tor": {
+    "gismu": "tordu"
+  },
+  "tra": {
+    "gismu": "tarti"
+  },
+  "tre": {
+    "gismu": "mitre"
+  },
+  "tri": {
+    "gismu": "trina"
+  },
+  "tro": {
+    "gismu": "jitro"
+  },
+  "tru": {
+    "gismu": "turni"
+  },
+  "tsa": {
+    "gismu": "tsali"
+  },
+  "tse": {
+    "gismu": "zutse"
+  },
+  "tsi": {
+    "gismu": "tsiju"
+  },
+  "tsu": {
+    "gismu": "rotsu"
+  },
+  "tu'a": {
+    "gismu": "tumla"
+  },
+  "tu'e": {
+    "gismu": "tuple"
+  },
+  "tu'i": {
+    "gismu": "tugni"
+  },
+  "tu'o": {
+    "gismu": "tunlo"
+  },
+  "tu'u": {
+    "gismu": "tubnu"
+  },
+  "tub": {
+    "gismu": "tunba"
+  },
+  "tug": {
+    "gismu": "tugni"
+  },
+  "tuj": {
+    "gismu": "tujli"
+  },
+  "tuk": {
+    "gismu": "tunka"
+  },
+  "tul": {
+    "gismu": "tunlo"
+  },
+  "tum": {
+    "gismu": "tumla"
+  },
+  "tun": {
+    "gismu": "tunta"
+  },
+  "tup": {
+    "gismu": "tuple"
+  },
+  "tur": {
+    "gismu": "stura"
+  },
+  "tut": {
+    "gismu": "tutra"
+  },
+  "tuz": {
+    "gismu": "stuzi"
+  },
+  "va'i": {
+    "gismu": "vamji"
+  },
+  "va'u": {
+    "gismu": "vasxu"
+  },
+  "vab": {
+    "gismu": "vanbi"
+  },
+  "vac": {
+    "gismu": "vanci"
+  },
+  "vai": {
+    "gismu": "vajni"
+  },
+  "vaj": {
+    "gismu": "vajni"
+  },
+  "val": {
+    "gismu": "valsi"
+  },
+  "vam": {
+    "gismu": "vamji"
+  },
+  "van": {
+    "gismu": "vanju"
+  },
+  "var": {
+    "gismu": "vacri"
+  },
+  "vas": {
+    "gismu": "vasru"
+  },
+  "vat": {
+    "gismu": "vamtu"
+  },
+  "vau": {
+    "gismu": "vasru"
+  },
+  "vax": {
+    "gismu": "vasxu"
+  },
+  "ve'a": {
+    "gismu": "verba"
+  },
+  "ve'u": {
+    "gismu": "vecnu"
+  },
+  "vef": {
+    "gismu": "venfu"
+  },
+  "vei": {
+    "gismu": "vreji"
+  },
+  "ven": {
+    "gismu": "vecnu"
+  },
+  "ver": {
+    "gismu": "verba"
+  },
+  "ves": {
+    "gismu": "vensa"
+  },
+  "vi'a": {
+    "gismu": "viska"
+  },
+  "vi'e": {
+    "gismu": "vitke"
+  },
+  "vi'i": {
+    "gismu": "vikmi"
+  },
+  "vi'o": {
+    "gismu": "vitno"
+  },
+  "vi'u": {
+    "gismu": "vimcu"
+  },
+  "vib": {
+    "gismu": "vibna"
+  },
+  "vic": {
+    "gismu": "vimcu"
+  },
+  "vid": {
+    "gismu": "vindu"
+  },
+  "vif": {
+    "gismu": "vifne"
+  },
+  "vij": {
+    "gismu": "vinji"
+  },
+  "vik": {
+    "gismu": "viknu"
+  },
+  "vil": {
+    "gismu": "vlile"
+  },
+  "vim": {
+    "gismu": "vikmi"
+  },
+  "vin": {
+    "gismu": "jvinu"
+  },
+  "vip": {
+    "gismu": "vipsi"
+  },
+  "vir": {
+    "gismu": "vidru"
+  },
+  "vis": {
+    "gismu": "viska"
+  },
+  "vit": {
+    "gismu": "vitci"
+  },
+  "vla": {
+    "gismu": "valsi"
+  },
+  "vle": {
+    "gismu": "zivle"
+  },
+  "vli": {
+    "gismu": "vlipa"
+  },
+  "vo'a": {
+    "gismu": "voksa"
+  },
+  "voi": {
+    "gismu": "vofli"
+  },
+  "vok": {
+    "gismu": "voksa"
+  },
+  "vol": {
+    "gismu": "vofli"
+  },
+  "vor": {
+    "gismu": "vorme"
+  },
+  "vra": {
+    "gismu": "vraga"
+  },
+  "vre": {
+    "gismu": "vreta"
+  },
+  "vri": {
+    "gismu": "virnu"
+  },
+  "vro": {
+    "gismu": "vorme"
+  },
+  "vru": {
+    "gismu": "savru"
+  },
+  "vu'e": {
+    "gismu": "vrude"
+  },
+  "vu'i": {
+    "gismu": "vrusi"
+  },
+  "vu'o": {
+    "gismu": "vukro"
+  },
+  "vud": {
+    "gismu": "vrude"
+  },
+  "vur": {
+    "gismu": "vukro"
+  },
+  "vus": {
+    "gismu": "vrusi"
+  },
+  "xa'a": {
+    "gismu": "xatra"
+  },
+  "xa'e": {
+    "gismu": "xance"
+  },
+  "xa'i": {
+    "gismu": "xarci"
+  },
+  "xa'o": {
+    "gismu": "xampo"
+  },
+  "xa'u": {
+    "gismu": "xabju"
+  },
+  "xab": {
+    "gismu": "xadba"
+  },
+  "xac": {
+    "gismu": "xarci"
+  },
+  "xad": {
+    "gismu": "xadni"
+  },
+  "xag": {
+    "gismu": "xamgu"
+  },
+  "xai": {
+    "gismu": "xrani"
+  },
+  "xaj": {
+    "gismu": "xarju"
+  },
+  "xak": {
+    "gismu": "xaksu"
+  },
+  "xal": {
+    "gismu": "xalka"
+  },
+  "xam": {
+    "gismu": "xajmi"
+  },
+  "xan": {
+    "gismu": "xance"
+  },
+  "xap": {
+    "gismu": "xampo"
+  },
+  "xar": {
+    "gismu": "xanri"
+  },
+  "xas": {
+    "gismu": "xamsi"
+  },
+  "xat": {
+    "gismu": "xatsi"
+  },
+  "xau": {
+    "gismu": "xamgu"
+  },
+  "xaz": {
+    "gismu": "xazdo"
+  },
+  "xe'a": {
+    "gismu": "xedja"
+  },
+  "xe'i": {
+    "gismu": "xekri"
+  },
+  "xe'o": {
+    "gismu": "xendo"
+  },
+  "xe'u": {
+    "gismu": "xenru"
+  },
+  "xeb": {
+    "gismu": "xebro"
+  },
+  "xed": {
+    "gismu": "xendo"
+  },
+  "xei": {
+    "gismu": "xebni"
+  },
+  "xej": {
+    "gismu": "xedja"
+  },
+  "xek": {
+    "gismu": "xekri"
+  },
+  "xen": {
+    "gismu": "xebni"
+  },
+  "xer": {
+    "gismu": "xenru"
+  },
+  "xes": {
+    "gismu": "xelso"
+  },
+  "xet": {
+    "gismu": "xecto"
+  },
+  "xex": {
+    "gismu": "xexso"
+  },
+  "xi'a": {
+    "gismu": "xirma"
+  },
+  "xi'o": {
+    "gismu": "xriso"
+  },
+  "xi'u": {
+    "gismu": "xislu"
+  },
+  "xil": {
+    "gismu": "xislu"
+  },
+  "xim": {
+    "gismu": "xinmo"
+  },
+  "xin": {
+    "gismu": "xindo"
+  },
+  "xip": {
+    "gismu": "xispo"
+  },
+  "xir": {
+    "gismu": "xirma"
+  },
+  "xis": {
+    "gismu": "xriso"
+  },
+  "xla": {
+    "gismu": "xlali"
+  },
+  "xle": {
+    "gismu": "naxle"
+  },
+  "xli": {
+    "gismu": "nixli"
+  },
+  "xlu": {
+    "gismu": "xlura"
+  },
+  "xoi": {
+    "gismu": "xotli"
+  },
+  "xol": {
+    "gismu": "xotli"
+  },
+  "xra": {
+    "gismu": "pixra"
+  },
+  "xre": {
+    "gismu": "mixre"
+  },
+  "xri": {
+    "gismu": "maxri"
+  },
+  "xru": {
+    "gismu": "xruti"
+  },
+  "xu'a": {
+    "gismu": "xusra"
+  },
+  "xu'e": {
+    "gismu": "xunre"
+  },
+  "xu'i": {
+    "gismu": "xukmi"
+  },
+  "xu'o": {
+    "gismu": "xurdo"
+  },
+  "xub": {
+    "gismu": "xruba"
+  },
+  "xuk": {
+    "gismu": "xruki"
+  },
+  "xul": {
+    "gismu": "xutla"
+  },
+  "xum": {
+    "gismu": "xukmi"
+  },
+  "xun": {
+    "gismu": "xunre"
+  },
+  "xur": {
+    "gismu": "xurdo"
+  },
+  "xus": {
+    "gismu": "xusra"
+  },
+  "za'a": {
+    "gismu": "zabna"
+  },
+  "za'i": {
+    "gismu": "zasti"
+  },
+  "za'u": {
+    "gismu": "zargu"
+  },
+  "zac": {
+    "gismu": "zarci"
+  },
+  "zag": {
+    "gismu": "zargu"
+  },
+  "zai": {
+    "gismu": "zarci"
+  },
+  "zaj": {
+    "gismu": "zajba"
+  },
+  "zal": {
+    "gismu": "zalvi"
+  },
+  "zan": {
+    "gismu": "zabna"
+  },
+  "zar": {
+    "gismu": "zanru"
+  },
+  "zas": {
+    "gismu": "zasni"
+  },
+  "zat": {
+    "gismu": "zasti"
+  },
+  "zau": {
+    "gismu": "zanru"
+  },
+  "zba": {
+    "gismu": "zbasu"
+  },
+  "zbe": {
+    "gismu": "zbepi"
+  },
+  "zbi": {
+    "gismu": "nazbi"
+  },
+  "zda": {
+    "gismu": "zdani"
+  },
+  "zdi": {
+    "gismu": "zdile"
+  },
+  "zdo": {
+    "gismu": "xazdo"
+  },
+  "ze'a": {
+    "gismu": "zenba"
+  },
+  "zei": {
+    "gismu": "zekri"
+  },
+  "zen": {
+    "gismu": "zenba"
+  },
+  "zep": {
+    "gismu": "zepti"
+  },
+  "zer": {
+    "gismu": "zekri"
+  },
+  "zet": {
+    "gismu": "zetro"
+  },
+  "zga": {
+    "gismu": "zgana"
+  },
+  "zgi": {
+    "gismu": "zgike"
+  },
+  "zgu": {
+    "gismu": "rozgu"
+  },
+  "zi'e": {
+    "gismu": "zifre"
+  },
+  "zi'i": {
+    "gismu": "zinki"
+  },
+  "zi'o": {
+    "gismu": "dzipo"
+  },
+  "zi'u": {
+    "gismu": "zirpu"
+  },
+  "zif": {
+    "gismu": "zifre"
+  },
+  "zin": {
+    "gismu": "zinki"
+  },
+  "zip": {
+    "gismu": "dzipo"
+  },
+  "zir": {
+    "gismu": "zirpu"
+  },
+  "ziv": {
+    "gismu": "zivle"
+  },
+  "zma": {
+    "gismu": "zmadu"
+  },
+  "zme": {
+    "gismu": "guzme"
+  },
+  "zmi": {
+    "gismu": "zmiku"
+  },
+  "zmu": {
+    "gismu": "zumri"
+  },
+  "zu'e": {
+    "gismu": "zukte"
+  },
+  "zu'i": {
+    "gismu": "zunti"
+  },
+  "zug": {
+    "gismu": "zungi"
+  },
+  "zuk": {
+    "gismu": "zukte"
+  },
+  "zul": {
+    "gismu": "zunle"
+  },
+  "zun": {
+    "gismu": "zunti"
+  },
+  "zut": {
+    "gismu": "zutse"
+  },
+  "zva": {
+    "gismu": "zvati"
+  }
 }
