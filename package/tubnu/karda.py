@@ -154,15 +154,14 @@ def tabulate_cmarafsi(c, gismus: dict, selmahos: dict, skari: dict) -> Table:
     return table
 
 
-def tabulate_cmavos(c, selmahos, skari: dict, show_styles: bool = False):
+def tabulate_cmavos(cs: list, cmavos: dict, selmahos: dict, skari: dict, show_styles: bool = False):
     table = Table(box=box.MINIMAL)
     table.add_column("cmavo", style=Style.parse(skari["valskari"]["cmavo"]))
     table.add_column("selma'o", style=Style.parse(skari["valskari"]["cmavo"]))
     if show_styles:
         table.add_column("style", style=Style.parse(skari["mi'iskari"]["system"]))
-    for cmavo in c:
-        #TODO: change selmahos to cmavos?
-        s = plumbing.get_selmaho(cmavo, selmahos)
+    for cmavo in cs:
+        s = cmavos[cmavo]["selmaho"]
         colr = Style.parse(selmahos[s]["skari"])
         if show_styles:
             table.add_row(cmavo, s, colr, style=colr)
@@ -171,16 +170,19 @@ def tabulate_cmavos(c, selmahos, skari: dict, show_styles: bool = False):
     return table
 
 
-def get_selmaho_table(selmaho: str, selmahos: dict, skari: dict):
-    cmavos = selmahos[selmaho]["cmavos"]
-    return tabulate_cmavos(cmavos, selmahos, skari)
+def get_selmaho_table(selmaho: str, cmavos: dict, selmahos: dict, skari: dict):
+    cs = []
+    for cmavo, d in cmavos.items():
+        if d["selmaho"] == selmaho:
+            cs.append(cmavo)
+    return tabulate_cmavos(cs, cmavos, selmahos, skari)
 
 
-def get_selmaho_tables_panel(s: list, selmahos: dict, skari: dict, squeeze: int = 16):
+def get_selmaho_tables_panel(s: list, cmavos: dict, selmahos: dict, skari: dict, squeeze: int = 16):
     selmaho_tables = []
     for selmaho in s:
         selmaho = plumbing.force_selmaho(selmaho, selmahos)
-        table = get_selmaho_table(selmaho, selmahos, skari)
+        table = get_selmaho_table(selmaho, cmavos, selmahos, skari)
         selmaho_tables.extend(squeeze_table(table, squeeze))
     return Panel(Columns(selmaho_tables), style=Style(), title="selma'o")
 

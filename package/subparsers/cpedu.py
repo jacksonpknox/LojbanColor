@@ -62,9 +62,9 @@ def all_selmaho_big_panel(skari: dict, selmahos: dict, gismus: dict, args):
     return panel
     
 
-def selmaho_big_panel(skari: dict, selmahos: dict, gismus: dict, args):
+def selmaho_big_panel(skari: dict, cmavos: dict, selmahos: dict, gismus: dict, args):
     panel = karda.get_selmaho_tables_panel(
-        args.selmaho, selmahos, skari, squeeze=args.squeeze
+        args.selmaho, cmavos, selmahos, skari, squeeze=args.squeeze
     )
     return panel
     
@@ -139,6 +139,7 @@ def short_skari_big_panel(skari: dict, selmahos: dict, gismus: dict, args):
 
 
 def get_big_panels(args):
+    cmavos = plumbing.get_config("cmavo")
     skari = plumbing.get_config("skari")
     selmahos = plumbing.get_config("selmaho")
     gismus = plumbing.get_config("gismu")
@@ -164,7 +165,7 @@ def get_big_panels(args):
         renderables.append(panel)
 
     if args.selmaho:
-        panel = selmaho_big_panel(skari, selmahos, gismus, args)
+        panel = selmaho_big_panel(skari, cmavos, selmahos, gismus, args)
         renderables.append(panel)
 
     if args.all_selmaho:
